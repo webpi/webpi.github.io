@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: #444;
+    background: #f5f5f5;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#header {
+    color: #fff;
+    background: #00BCD4;
+
+    .top {
+        height: 160px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .intro {
+        position: relative;
+        padding-top: 90px;
+        padding-bottom: 60px;
+        font-size: 16px;
+        background: #00a5bb;
+
+        .intro-dsc {
+            .profile-image {
+                position: absolute;
+                top: -80px;
+                left: 50%;
+                width: 160px;
+                height: 160px;
+                margin-left: -80px;
+                border: 4px solid #fff;
+                border-radius: 100px;
+                box-sizing: border-box;
+            }
+
+            .name {
+                margin-bottom: 15px;
+                font-size: 48px;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .title {
+                margin-bottom: 30px;
+                font-size: 28px;
+                color: rgba(255,255,255,0.8);
+                font-weight: 300;
+                text-align: center;
+            }
+
+            .profile {
+                max-width: 800px;
+                margin: 0 auto;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+    }
+
+    .contact-info {
+        .info-list {
+            padding: 30px 0;
+            font-size: 0;
+            background: #008fa1;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 300;
+
+                svg {
+                    width: 1em;
+                    margin-right: 10px;
+                    vertical-align: -.125em;
+                }
+
+                a {
+                    color: rgba(255,255,255,0.8);
+                    text-decoration: none;
+                }
+
+                & + li {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    .skill {
+        .skill-list {
+            padding: 20px 0;
+            font-size: 0;
+            background: #007888;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                font-size: 14px;
+                color: rgba(255,255,255,0.6);
+
+                a {
+                    color: rgba(255,255,255,0.6);
+                    text-decoration: none;
+                }
+
+                & + li {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}
