@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/networking.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-networking">
+                <h2 class="ir">인맥</h2>
+
+                <div class="section-networking-top">
+                    <!-- 검색 -->
+                    <div class="cpn-local-search" include-html="/component/comm/cpn_local_search.html"></div>
+                    <!-- // 검색 -->
+
+                    <div class="networking-cnt">
+                        <div class="networking-cnt-in">인맥 <span>9,999,999</span> 명</div>
+                    </div> 
+                </div>
+
+                <div class="section-networking-main">
+                    <!-- left -->
+                    <div class="networking-wrap">
+                        <div class="networking-network">
+                            <h3 class="tit-h3">인맥신청관리</h3>
+
+                            <div class="cpn-tab-wrap">
+                                <ul>
+                                    <li><a href="#" class="active"><span>받은인맥신청</span></a></li>
+                                    <li><a href="#"><span>보낸인맥신청</span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="networking-network-list">
+                                <div class="networking-network-list-cnt"><span>32</span> 건</div>
+
+                                <div class="networking-network-list-box">
+                                    <!-- 인맥 -->
+                                    <article class="cpn-cardstyle-user horizon" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+                                    <!-- // 인맥 -->
+
+                                    <!-- 인맥 -->
+                                    <article class="cpn-cardstyle-user horizon" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+                                    <!-- // 인맥 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="networking-aside">
+                        <div class="lnb-list-nav" include-html="/component/networking/networking_aside_nav.html"></div>
+
+                        <div class="cpn-aside-profileupdate" include-html="/component/comm/aside/cpn_aside_networking_profileupdate.html"></div>
+                    </aside> 
+                    <!-- // right -->         
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

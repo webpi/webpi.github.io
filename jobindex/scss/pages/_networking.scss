@@ -1,0 +1,920 @@
+@charset "utf-8";
+
+.section-networking {
+    padding-top: 50px;
+
+    .section-networking-top {
+        @include flexbox();
+    }
+
+    .cpn-local-search {
+        @include col(16);
+        @include flex(none);
+    }
+
+    .networking-cnt {
+        padding-left: 30px;
+
+        @include col(6);
+        @include flex(none);
+        @include box-sizing();
+
+        .networking-cnt-in {
+            height: 44px;
+            padding: 8px 15px;
+            border: 1px solid #d6d9dc;
+            border-radius: 3px;
+            color: $fc3;
+            background: #f9f9f9;
+            line-height: 26px;
+            text-align: right;
+
+            @include fontSize(13px);
+            @include truncate();
+            @include box-sizing();
+
+            span {
+                color: $fc1;
+
+                @include fontSize(20px);
+            }                 
+        }
+    }
+
+    .section-networking-main {
+        margin-top: 25px;
+
+        @include flexbox();
+    }
+
+    .networking-wrap {
+        @include col(16);
+        @include flex(none);
+
+        .networking-chart {
+            margin-bottom: 25px;
+        }
+
+        // 인맥 리스트
+        .networking-list {
+            .networking-list-lookup {
+                margin-top: 25px;
+
+                .networking-list-lookup-head {
+                    margin-bottom: 12px;
+                    padding: 5px 0 3px;
+                    background: #f9f9f9;
+
+                    @include flexbox();
+                    @include align-items(flex-end);
+                    @include border-style(1px, 0, 1px, 0, solid, #dcdcdc transparent #eaeaea transparent);
+
+                    .ranknumber {
+                        display: block;
+                        width: 60px;
+                        padding: 2px 10px 0;
+                        color: $pc2;
+                        text-align: center;
+
+                        @include fontSize(20px);
+
+                        i {
+                            @include fontSize(14px);
+                        }
+
+                        &.up {
+                            color: $pc2;
+                        }
+
+                        &.down {
+                            color: $pc1;
+                        }
+                    }
+
+                    .date {
+                        padding-bottom: 1px;
+                        font-weight: 600;
+                        text-align: center;
+                        
+                        @include fontSize(13px);
+                    }
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+            .cpn-cardstyle-user-list {
+                .cpn-cardstyle-user {
+                    width: 25%;
+                }
+            }
+
+            .btn-more {
+                @include btn-more();
+            }
+        }
+
+        // 인맥 소식
+        .networking-news {
+            @include clear;
+
+            // 프로필 정보
+            .networking-profile {
+                float: left;
+                width: 220px;
+                margin-right: 20px;
+            }
+
+            // 소식
+            .networking-newslist {
+                overflow: hidden;
+
+                .networking-newslist-head {
+                    position: relative;
+
+                    .tit-h2 {
+                        padding: 4px 0 8px;
+                        border-bottom: 1px solid #ccc;
+
+                        @include fontSize(16px);
+
+                        span {
+                            color: $fc2;
+                            font-weight: normal;
+
+                            @include fontSize(14px);
+
+                        }
+                    }
+
+                    .btn-allread {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        padding: 5px;
+                        border: 1px solid #cecece;
+                        color: $fc2;
+                        background: #fff;
+
+                        @include fontSize(13px);
+
+                        &:hover {
+                            border-color: #333;
+                            color: #333;
+                        }
+                    }
+                }
+
+                .networking-newslist-body {
+                    margin-top: 15px;
+
+                    ul {
+                        li {
+                            padding: 10px;
+                            border-top: 1px solid #eaeaea;
+
+                            @include clear;
+
+                            .photo {
+                                overflow: hidden;
+                                float: left;
+                                margin-right: 10px;
+                                border-radius: 100px;
+
+                                @include size(34px);
+
+                                a {
+                                    display: block;
+                                }
+
+                                img {
+                                    max-width: 100%;
+                                }
+                            }
+
+                            .conts {
+                                overflow: hidden;
+                                color: #777;
+
+                                @include fontSize(15px);
+                                @include wordwrap();
+
+                                .name {
+                                    color: $pc1;
+                                    cursor: pointer;
+
+                                    @include fontSize(16px);
+                                }
+
+                                a {
+                                    color: #000;
+                                    font-weight: 600;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+
+                                .date {
+                                    display: block;
+                                    margin-top: 3px;
+                                    color: $fc3;
+                                    text-align: right;
+
+                                    @include fontSize(14px);
+                                }
+                            }
+
+                            &:first-child {
+                                border-top: 0;
+                            }
+                        }
+                    }
+
+                    .btn-more {
+                        @include btn-more();
+                    }
+                }
+            }
+        }
+
+        // 인맥 관리
+        .networking-manage {
+            @include clear;
+            
+            .networking-manage-folder {
+                float: left;
+                width: 220px;
+                margin-right: 20px;
+
+                .networking-manage-folder-top {
+                    font-size: 0;
+
+                    .istyle {
+                        width: calc(100% - 70px);
+                        height: 30px;
+                        padding: 3px 10px;
+                        border: 1px solid #cecece;
+                        vertical-align: top;
+
+                        @include box-sizing();
+                    }
+
+                    .btn-add-folder {
+                        width: 70px;
+                        height: 30px;
+                        border: 0;
+                        color: #fff;
+                        background: $pc1;
+                        vertical-align: top;
+
+                        @include fontSize(13px);
+
+                        &:hover {
+                            background: $pc1_hover;
+                        }
+                    }
+                }
+
+                .networking-manage-folder-list {
+                    [draggable] {
+                        -moz-user-select: none;
+                        -khtml-user-select: none;
+                        -webkit-user-select: none;
+                        user-select: none;
+                        /* Required to make elements draggable in old WebKit */
+                        -khtml-user-drag: element;
+                        -webkit-user-drag: element;
+                    }
+
+                    li {
+                        position: relative;
+                        height: 41px;
+                        padding-left: 26px;
+                        border-bottom: 1px dashed #cecece;
+                        cursor: move;
+
+                        @include box-sizing();
+                        @include flexbox();
+                        @include align-items(center);
+
+                        .icheck-custom {
+                            position: absolute;
+                            left: 5px;
+                            top: 50%;
+                            margin-top: -7px;
+                        }
+
+                        .name {
+                            display: block;
+                            max-height: 32px;
+                            margin-right: 70px;
+                            font-weight: 600;
+
+                            @include fontSize(14px);
+                            @include truncate2();
+                        }
+
+                        .cnt {
+                            position: absolute;
+                            right: 5px;
+                            top: 50%;
+                            padding: 2px 10px;
+                            border-radius: 20px;
+                            color: #fff;
+                            background: #72c02c;
+                            // line-height: normal;
+
+                            @include translate(0, -50%);
+                        }
+
+                        &.edit {
+                            cursor: default;
+
+                            .istyle {
+                                width: calc(100% - 70px);
+                                height: 30px;
+                                padding: 3px 5px;
+                                border: 1px solid #cecece;
+
+                                @include box-sizing();
+                            }
+                        }
+
+                        &.active {
+                            background: #f4f4f4;
+                        }
+
+                        &:last-child {
+                            border-bottom-color: transparent;
+                        }
+
+                        &:hover {
+                            background: #f9f9f9;
+                        }
+                    }
+                }
+
+                .networking-manage-folder-bot {
+                    padding-top: 5px;
+                    border-top: 1px solid #cacaca;
+                    font-size: 0;
+
+                    .btn {
+                        height: 30px;
+                        margin-right: 5px;
+                        padding: 0 10px;
+                        border: 1px solid #cecece;
+                        background: #fff;
+
+                        &:hover {
+                            border-color: $pc1;
+                            color: $pc1;
+                        }                        
+                    }
+                }
+            }
+
+            .networking-manage-list {
+                overflow: hidden;
+
+                .networking-manage-list-top {
+                    margin-bottom: 5px;
+
+                    @include clear;
+
+                    .btn-networking-manage-folder {
+                        display: none;
+                        border: 1px solid #cecece;
+                        color: $fc2;
+                        background: #fff;
+
+                        @include size(30px);
+                        @include fontSize(16px);
+
+                        .icon-folder-upload {
+                            display: none;
+                        }
+
+                        .icon-folder-download {
+                                display: inline;
+                            }
+
+                        &.on {
+                            border-color: $pc1;
+                            color: #fff;
+                            background: $pc1;
+
+                            .icon-folder-upload {
+                                display: inline;
+                            }
+                            
+                            .icon-folder-download {
+                                display: none;
+                            }
+                            
+                        }
+                    }
+
+                    .networking-manage-list-top-menu {
+                        float: right;
+
+                        @include flexbox();
+
+                        .btn {
+                            min-width: 75px;
+                            height: 30px;
+                            margin-left: 5px;
+                            padding: 4px 10px;
+                            border: 1px solid #cecece;
+                            color: $fc2;
+                            background: #fff;
+
+                            @include fontSize(13px);
+
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                        }
+
+                        .folder-move {
+                            position: relative;
+
+                            .btn-folder-move {
+                                &.on {
+                                    position: relative;
+                                    border-color: #333;
+                                    border-bottom: 0;
+                                    color: $pc1;
+                                    z-index: 4;
+                                }
+                            }
+
+                            .folder-move-list {
+                                display: none;
+                                position: absolute;
+                                top: 29px;
+                                right: -80px;
+                                padding: 10px;
+                                border: 1px solid #333;
+                                background: #fff;
+                                z-index: 3;
+                                white-space: nowrap;
+
+                                .slt {
+                                    display: block;
+                                    height: 30px;
+
+                                    @include fontSize(13px);
+                                }
+
+                                .btn-submit {
+                                    width: 100%;
+                                    margin-top: 5px;
+                                    border :0;
+                                    padding: 5px 10px;
+                                    color: #fff;
+                                    background: $pc1;
+
+                                     @include fontSize(14px);
+
+                                     &:hover {
+                                         background: $pc1_hover;
+                                     }
+                                }
+
+                                &.on {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cpn-cardstyle-user {
+                    width: calc(100% / 3);
+
+                    .icheck-custom {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        // 인맥신청관리
+        .networking-network {
+            .tit-h3 {
+                height: 24px;
+                padding: 10px 0;
+
+                @include fontSize(16px);
+            }
+
+            .networking-network-list {
+                .networking-network-list-cnt {
+                    padding: 10px;
+                    color: $fc2;
+
+                    span {
+                        color: $pc1;
+
+                        @include fontSize(14px);
+                    }
+                }
+
+                .cpn-cardstyle-user {
+                    .btn {
+                        .btn-mail,
+                        .btn-networking {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .networking-aside {
+        padding-left: 30px;
+
+        @include col(6);
+        @include box-sizing();
+        @include flex(none);
+
+        .lnb-list-nav {
+            .lnb-all {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                .btn-all {
+                    border: 1px solid #ccc;
+                    background: #fff;
+
+                    @include size(38px);
+
+                    i {
+                        @include fontSize(15px);
+                    }
+
+                    &.active {
+                        position: relative;
+                        height: 39px;
+                        padding-bottom: 1px;
+                        border-color: #333 #333 #fff;
+                        color: $pc1;
+                        z-index: 2;
+                    }
+                }
+
+                .lnb-all-list {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 38px;
+                    width: calc(100vw - 20px);
+                    // padding: 10px;
+                    border: 1px solid #cecece;
+                    background: #fff;
+                    z-index: 9;
+
+                    @include box-sizing();
+
+                    ul {
+                        padding: 10px 0;
+
+                        @include clear;
+
+                        li {
+                            float: left;
+                            width: calc(100% / 3);
+                            text-align: center;
+
+                            a {
+                                display: block;
+                                padding: 10px;
+                            }
+
+                            @include fontSize(16px);
+                        }
+                    }
+
+                    &.on {
+                        display: block;
+                        border-color: #333;
+                    }
+                }
+            }
+        }
+
+        .cpn-aside-profileupdate {
+            margin-top: 25px;
+        }
+    }
+}
+
+// 프로필 정보
+.networking-profile {
+    .networking-profile-box {
+        position: relative;
+        padding: 20px 15px 20px 15px;
+        border: 1px solid #cecece;
+        border-radius: 3px;
+        text-align: center;
+
+        .photo {
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 300px;
+            border: 10px solid #fff;
+
+            @include size(136px);
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .networking-profile-box-info {
+            margin-top: 15px;
+
+            .networking-profile-box-info-name {
+                @include fontSize(18px);
+            }
+
+            .networking-profile-box-info-detail {
+                margin-top: 10px;
+            }
+        }
+
+        .networking-profile-box-tag {
+            margin-top: 8px;
+            padding-top: 10px;
+            border-top: 1px dotted #dcdcdc;
+
+            @include fontSize(13px);
+            @include truncate();
+
+            a {
+                margin-left: 5px;
+                color: #888;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .networking-profile-box-grade {
+            margin-top: 20px;
+            font-size: 0;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                padding: 0 10px;
+
+                @include fontSize(15px);
+
+                .gold {
+                    color: $gold;
+                }
+
+                .silver {
+                    color: $silver;
+                }
+
+                .bronze {
+                    color: $bronze;
+                }
+            }
+        }
+
+        .btn-inmail {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            border :0;
+            color: #fff;
+            background: $pc1;
+
+            @include fontSize(15px);
+
+            &:hover {
+                background: $pc1_hover;
+            }
+        }
+    }
+}
+
+// 프로필 인포 레이어
+.layer-profileinfo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 320px;
+    width: 480px;
+    padding: 50px;
+    background: #fff;
+
+    @include translate(-50%, -60%);
+    @include rounded(8px, 8px, 8px, 8px);
+    @include box-sizing();
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    .section-networking {
+        padding-top: 25px;
+        
+        .cpn-local-search {
+            @include col(14);
+        }
+
+        .networking-cnt {
+            @include col(8);
+        }
+
+        .networking-wrap {
+            @include col(14);
+
+            .networking-list {
+                .cpn-cardstyle-user-list {
+                    .cpn-cardstyle-user {
+                        width: 50%;
+                    }
+                } 
+            }
+
+            // 인맥 소식
+            .networking-news {
+                .networking-profile {
+                    display: none;
+                }
+            }
+
+            // 인맥 관리
+            .networking-manage {
+                overflow: hidden;
+                position: relative;
+                
+                .networking-manage-folder {
+                    position: absolute;
+                    float: none;
+                    width: 100%;
+                    margin-right: 0;
+                    padding: 10px;
+                    border: 1px solid #cacaca;
+                    z-index: 2;
+                    background: #f9f9f9;
+
+                    @include transition(transform 0.2s ease-in-out);
+                    @include box-sizing();
+                    @include translate(0, -100%);
+
+                    form {
+                        padding: 15px;
+                        border: 1px solid #eaeaea;
+                        border-radius: 5px;
+                        background: #fff;
+                    }
+
+                    .networking-manage-folder-list {
+                        .edit {
+                            .istyle {
+                                @include fontSize(14px);
+                            }
+                        }
+                    }
+
+
+                    .networking-manage-folder-bot {
+                        .btn {
+                            @include fontSize(14px);
+                        }
+                    }
+
+                    &.on {
+                        @include translate(0, 35px);
+                    }
+                }
+
+                .networking-manage-list {
+                    .networking-manage-list-top {
+                        .btn-networking-manage-folder {
+                            display: initial;
+                        }
+                    }
+
+                    .cpn-cardstyle-user-list {
+                        .cpn-cardstyle-user {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .networking-aside {
+            @include col(8);
+        }
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    .section-networking {
+        .networking-cnt {
+            padding-left: 10px;
+
+            .networking-cnt-in {
+                padding: 10px;
+                
+                @include fontSize(13px);
+
+                span {
+                    @include fontSize(15px);
+                }
+            }
+
+        }
+
+        .section-networking-main {
+            margin-top: 20px;
+
+            @include flex-direction(column);
+        }
+
+        .networking-wrap {
+            order: 1;
+            width: auto;
+            margin-top: 25px;
+        }
+
+        .networking-aside {
+            order: 0;
+            width: auto;
+            padding-left: 0;
+
+            .lnb-list-nav {
+                position: relative;
+                padding-right: 43px;
+                background: #f4f4f4;
+
+                .lnb {
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    -webkit-overflow-scrolling: touch;
+                    background: #f4f4f4;
+
+                    ul {
+                        @include flexbox();
+
+                        li {
+                            white-space: nowrap;
+
+                            @include flex(none);
+
+                            a {
+                                padding: 10px 15px;
+                                border-top: 0;
+                                line-height: 18px;
+
+                                i {
+                                    display: none;
+                                }
+
+                                &.active {
+                                    border-top: 0;
+                                    // background: $pc2;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .lnb-all {
+                    display: block;
+                }
+            }
+
+            .cpn-aside-profileupdate {
+                display: none;
+            }
+        }
+    }
+
+    // 프로필 정보 레이어
+    .layer-profileinfo {
+        left: 10px;
+        right: 10px;
+        width: auto;
+        margin: 0;
+        padding: 50px 25px 25px;
+
+        @include translate(0, -50%);
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/recruiter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-recruiter column">
+                <h2 class="ir">리크루터 개인정보활용 동의서 관리</h2>
+
+                <div class="recruiter-main">
+                    <!-- left -->
+                    <div class="recruiter-wrap">
+                        <!-- 검색 -->
+                        <div class="cpn-local-search" include-html="/component/comm/cpn_local_search.html"></div>
+                        <!-- // 검색 -->
+
+                        <div class="recruiter-candidate">
+                            <div class="recruiter-candidate-privacy">
+                                <div class="recruiter-candidate-head">
+                                    <div class="cpn-tab-wrap">
+                                        <ul>
+                                            <li><a href="#" class="active"><span>전체</span></a></li>
+                                            <li><a href="#"><span>등록</span></a></li>
+                                            <li><a href="#"><span>미등록</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recruiter-candidate-body">
+                                    <table class="cpn-board-row">
+                                        <caption><span>후보자 동의서 리스트</span></caption>
+                                        <colgroup>
+                                            <col style="width:60px">
+                                            <col style="width:160px">
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">성명</th>
+                                            <th scope="col">기준일</th>
+                                            <th scope="col">기간</th>
+                                            <th scope="col" class="sort">마감일 <i class="icon-down-arrow"></i> <i class="icon-up-arrow"></i></th>
+                                            <th scope="col">동의서</th>
+                                            <th scope="col">이메일주소</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="no">9999</td>
+                                            <td class="name"><a href="/profile/profile_candidate.html">홍길동 홍길동</a></td>
+                                            <td class="date1">`2019.12.31</td>
+                                            <td class="date2">`2019.12.31 ~ `2019.12.31</td>
+                                            <td class="date3">`2019.12.31</td>
+                                            <td>
+                                                <ul class="td-list">
+                                                    <li><a href="#"><i class="icon-file-empty"></i> 파일1</a></li>
+                                                    <li><a href="#"><i class="icon-file-empty"></i> 파일2</a></li>
+                                                    <li><a href="#"><i class="icon-file-empty"></i> 파일3</a></li>
+                                                </ul>
+                                            </td>
+                                            <td><a href="emailto:aaaa@naver.com">aaaa@naver.com</a></td>
+                                        </tr>
+                                         <tr>
+                                            <td class="no">9999</td>
+                                            <td class="name"><a href="/profile/profile_candidate.html">홍길동 홍길동</a></td>
+                                            <td colspan="4">개인정보 활용 동의서 미등록</td>
+                                            <td><a href="emailto:aaaa@naver.com">aaaa@naver.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="7">
+                                                <div class="notfound">데이터가 없습니다.</div>
+                                            </td>
+                                        </tr>
+                                        </tbody> 
+                                    </table>
+
+                                    <!-- 페이징 -->
+                                    <div class="paging">
+                                        <a href="#" class="paging-btn btn-first">
+                                            <i class="icon-double-left-chevron"></i>
+                                            <span class="ir">처음</span>
+                                        </a>
+                                        <a href="#" class="paging-btn btn-prev">
+                                            <i class="icon-left-chevron"></i>
+                                            <span class="ir">이전</span>
+                                        </a>
+                                        <a href="#" class="paging-btn">1</a>
+                                        <a href="#" class="paging-btn active">2</a>
+                                        <a href="#" class="paging-btn">3</a>
+                                        <a href="#" class="paging-btn">4</a>
+                                        <a href="#" class="paging-btn">5</a>
+                                        <a href="#" class="paging-btn btn-next">
+                                            <i class="icon-right-chevron"></i>
+                                            <span class="ir">다음</span>
+                                        </a>
+                                        <a href="#" class="paging-btn btn-last">
+                                            <i class="icon-double-right-chevron"></i>
+                                            <span class="ir">마지막</span>
+                                        </a>
+                                    </div>
+                                    <!-- // 페이징 -->
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="recruiter-aside">
+                        <!-- lnb -->
+                        <div class="lnb-list-nav" include-html="/component/recruiter/candidate_aside_nav.html"></div>
+                        <!-- // lnb -->
+
+                        <!-- 후보자 현황 -->
+                        <div class="cpn-aside-recruiterstatus" include-html="/component/recruiter/cpn_aside_candidate.html"></div>
+                        <!-- // 후보자 현황 -->
+
+                        <!-- 광고 -->
+                        <div class="recruiter-aside-adv">
+                            광고
+                        </div>
+                        <!-- // 광고 -->
+                    </aside> 
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

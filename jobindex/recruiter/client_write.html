@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/recruiter.css">
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-recruiter column">
+                <div class="recruiter-main">
+                    <!-- left -->
+                    <div class="recruiter-wrap">
+                        <div class="recruiter-client">
+                            <div class="recruiter-client-head">
+                                <h2 class="tit-h2"><span>고객사 등록</span></h2>
+                            </div>
+
+                            <div class="recruiter-client-reg">
+                                <form>
+                                    <fieldset>
+                                        <legend><span>기본 정보 / 계약 정보 입력</span></legend>
+
+                                        <div class="recruiter-client-reg-item basic">
+                                            <h3 class="tit-h3">기본 정보</h3>
+
+                                            <table class="cpn-board-col">
+                                                <caption><span>기본 정보</span></caption>
+                                                <colgroup>
+                                                    <col style="width:90px">
+                                                    <col>               
+                                                </colgroup>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row"><label for="test-name">고객사명</label></th>
+                                                    <td>
+                                                        <input type="text" id="test-name" class="istyle">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-intro">회사개요</label></th>
+                                                    <td>
+                                                        <input type="text" id="test-intro" class="istyle">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><span>기업구분</span></th>
+                                                    <td>
+                                                        <div class="radio-group">
+                                                            <span class="radio-itm">
+                                                                <input type="radio" id="test-radio" name="test-radio">
+                                                                <label for="test-radio">
+                                                                    국내기업
+                                                                </label>
+                                                            </span>
+
+                                                            <span class="radio-itm">
+                                                                <input type="radio" id="test-radio2" name="test-radio">
+                                                                <label for="test-radio2">
+                                                                    외국계 기업
+                                                                </label>
+                                                            </span>
+
+                                                            <span class="radio-itm">
+                                                                <input type="radio" id="test-radio3" name="test-radio">
+                                                                <label for="test-radio3">
+                                                                    기타
+                                                                </label>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><span>키워드</span></th>
+                                                    <td include-html="/component/comm/cpn_jims.html"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-homepage">홈페이지</label></th>
+                                                    <td>
+                                                        <input type="url" id="test-homepage" placeholder="http://" class="istyle">
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="recruiter-client-reg-item">
+                                            <h3 class="tit-h3">계약 정보</h3>
+
+                                            <table class="cpn-board-col">
+                                                <caption><span>계약 정보</span></caption>
+                                                <colgroup>
+                                                    <col style="width:90px">
+                                                    <col>               
+                                                </colgroup>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row"><label for="test-subject">계약일</label></th>
+                                                    <td>
+                                                        <span class="icalendar">
+                                                            <input type="text" size="12" placeholder="계약일" title="계약일" class="icalendar-input">
+                                                            <button type="button" class="btn-icalendar"><i class="icon-calendar"></i><span class="ir">달력</span></button>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-number">수수료율</label></th>
+                                                    <td>
+                                                        <input type="number" id="test-number" class="istyle">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-subject">개런티기간</label></th>
+                                                    <td>
+                                                        <div class="icalendar-group">
+                                                            <span class="icalendar">
+                                                                <input type="text" size="12" title="기간 시작" class="icalendar-input">
+                                                                <button type="button" class="btn-icalendar"><i class="icon-calendar"></i><span class="ir">달력</span></button>
+                                                            </span>
+
+                                                            <span class="icalendar">
+                                                                <input type="text" size="12" title="기간 끝" class="icalendar-input">
+                                                                <button type="button" class="btn-icalendar"><i class="icon-calendar"></i><span class="ir">달력</span></button>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-file">계약서</label></th>
+                                                    <td include-html="/component/comm/cpn_filebox.html"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                         <div class="recruiter-client-reg-item">
+                                             <h3 class="tit-h3">기타</h3>
+
+                                             <table class="cpn-board-col">
+                                                <caption><span>기타 정보</span></caption>
+                                                <colgroup>
+                                                    <col style="width:90px">
+                                                    <col>               
+                                                </colgroup>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row"><label for="test-meno">내용</label></th>
+                                                    <td>
+                                                        <textarea cols="30" row="3" id="test-meno" class="itastyle"></textarea>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                         </div>
+
+                                        <div class="recruiter-client-reg-bot">
+                                            <button type="submit" class="btn-submit">등록하기</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="recruiter-aside">
+                        <!-- lnb -->
+                        <div class="lnb-list-nav" include-html="/component/recruiter/client_aside_nav.html"></div>
+                        <!-- // lnb -->
+
+                        <!-- 고객사 -->
+                        <div class="cpn-aside-recruiterstatus" include-html="/component/recruiter/cpn_aside_client.html"></div>
+                        <!-- // 고객사 -->
+                    </aside>
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

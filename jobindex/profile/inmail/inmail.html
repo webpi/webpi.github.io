@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-inmail">
+                <h2 class="tit-h2"><span>받은 인메일</span></h2>
+
+                <div class="inmail-main">
+                    <!-- left -->
+                    <div class="inmail-wrap">
+                        
+
+                        <div class="inmail-list">
+                            <div class="inmail-list-top">
+                                <!-- 검색 -->
+                                <div class="inmail-list-top-search">
+                                    <form>
+                                        <fieldset>
+                                            <legend><span>인메일 검색</span></legend>
+                                            <input type="search" placeholder="인메일 검색" title="인메일 검색" class="isearch">
+                                            <button type="submit" class="btn"><i class="icon-search"></i><span class="ir">검색</span></button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <!-- // 검색 -->
+
+                                <div class="inmail-list-top-btn">
+                                    <button type="button" class="btn btn-refresh">새로고침</button>
+                                    <button type="button" class="btn btn-mailbox">보관</button>
+                                    <button type="button" class="btn btn-del">삭제</button>
+                                </div>
+                            </div>
+
+                            <div class="inmail-list-board">
+                                <table class="board">
+                                    <caption><span>인메일 리스트</span></caption>
+                                    <colgroup>
+                                        <col style="width:40px">
+                                        <col style="width:26%">
+                                        <col>
+                                        <col style="width:120px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><span class="ir">선택</span></th>
+                                            <th scope="col">보낸사람</th>
+                                            <th scope="col">내용</th>
+                                            <th scope="col">날짜</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="icheck">
+                                                <input type="checkbox" id="test-chk" name="test-chk">
+                                                <label for="test-chk" class="ir">선택</label>
+                                            </span>
+                                        </td>
+                                        <td><a href="#">벤처피플(헌터X헌터)</a></td>
+                                        <td>
+                                            <div class="td-box"><a href="/comm/layer_inmail.html">테스트</a></div>
+                                        </td>
+                                        <td>`19.12.31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="icheck">
+                                                <input type="checkbox" id="test-chk" name="test-chk">
+                                                <label for="test-chk" class="ir">선택</label>
+                                            </span>
+                                        </td>
+                                        <td><a href="#">벤처피플(헌터X헌터)</a></td>
+                                        <td>
+                                            <div class="td-box"><a href="/comm/layer_inmail.html">re: 안녕하세요</a></div>
+                                        </td>
+                                        <td>`19.12.31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="icheck">
+                                                <input type="checkbox" id="test-chk" name="test-chk">
+                                                <label for="test-chk" class="ir">선택</label>
+                                            </span>
+                                        </td>
+                                        <td><a href="#">벤처피플(헌터X헌터)</a></td>
+                                        <td>
+                                            <div class="td-box">
+                                                <a href="/comm/layer_inmail.html">테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트</a>
+                                            </div>
+                                        </td>
+                                        <td>`19.12.31</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <button type="button" class="btn-more"><i class="icon-plus-sign-to-add"></i> 더보기</button>
+                        </div>
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="inmail-aside">
+                        <div class="inmail-aside-info">
+                            <button type="button" class="btn-inmail" onclick="location.href='/comm/layer_inmail_write.html'">인메일 쓰기</button>
+
+                            <div class="inmail-aside-info-mailbox">
+                                <h3 class="tit-h3">인메일 보관함</h3>
+
+                                <ul>
+                                    <li><a href="inmail.html" class="active">받은 인메일</a> <span>333</span></li>
+                                    <li><a href="#">보낸 인메일</a> <span>333</span></li>
+                                    <li><a href="#">보관된 인메일</a> <span>333</span></li>
+                                    <li><a href="#">초대 인메일</a> <span>333</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 광고 -->
+                        <div class="inmail-aside-adv">
+                            광고
+                        </div>
+                        <!-- // 광고 -->
+                    </aside>
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

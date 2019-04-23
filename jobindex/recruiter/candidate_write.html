@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/recruiter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-recruiter column">
+                <h2 class="ir">리크루터 후보자 등록</h2>
+
+                <div class="recruiter-main">
+                    <!-- left -->
+                    <div class="recruiter-wrap">
+                        <div class="recruiter-candidate">
+                            <div class="recruiter-candidate-write">
+                                <div class="recruiter-candidate-head">
+                                    <h2 class="tit-h2"><span>후보자 등록</span></h2>
+                                </div>
+
+                                <div class="recruiter-candidate-body">
+                                    <!-- form 전체 사용시 사용 / 내부 사용시 삭제-->
+                                    <form>
+                                        <fieldset>
+                                            <legend><span>후보자 상세</span></legend>
+                                            
+                                            <div class="recruiter-candidate-top">
+                                                <h3 class="tit-h3">기본 정보</h3>
+
+                                                <table class="cpn-board-col">
+                                                    <caption><span>기본 정보</span></caption>
+                                                    <colgroup>
+                                                        <col style="width:70px">
+                                                        <col>
+                                                        <col style="width:70px">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                    <tr>
+                                                        <th scope="row"><label for="test-name">성명</label></th>
+                                                        <td>
+                                                            <input type="text" id="test-name" class="istyle">
+                                                        </td>
+                                                        <th scope="row"><label for="test-birth">출생년도</label></th>
+                                                        <td>
+                                                            <input type="number" id="test-birth" class="istyle">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">성별</th>
+                                                        <td>
+                                                            <div class="radio-group">
+                                                                <span class="radio-itm">
+                                                                    <input type="radio" id="test-radio" name="test-radio">
+                                                                    <label for="test-radio">
+                                                                        남성
+                                                                    </label>
+                                                                </span>
+
+                                                                <span class="radio-itm">
+                                                                    <input type="radio" id="test-radio2" name="test-radio">
+                                                                    <label for="test-radio2">
+                                                                        여성
+                                                                    </label>
+                                                                </span>
+
+                                                                <span class="radio-itm">
+                                                                    <input type="radio" id="test-radio3" name="test-radio">
+                                                                    <label for="test-radio3">
+                                                                        기타
+                                                                    </label>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <th scope="row"><label for="test-g">학위</label></th>
+                                                        <td>
+                                                            <input type="text" id="test-g" class="istyle">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"><label for="test-ca">연락처</label></th>
+                                                        <td>
+                                                            <input type="tel" id="test-ca" class="istyle">
+                                                        </td>
+                                                        <th scope="row"><label for="test-cd">이메일</label></th>
+                                                        <td>
+                                                            <input type="email" id="test-cd" class="istyle">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">키워드</th>
+                                                        <td colspan="3" include-html="/component/comm/cpn_jims.html"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <article class="cpn-profile-info" include-html="/component/comm/cpn_profile_info.html"></article>
+
+                                            <!-- 전체 form 사용시 -->
+                                            <div class="recruiter-candidate-bot">
+                                                <button type="submit" class="btn-submit">등록하기</button>
+                                            </div>
+                                            <!-- // 전체 form 사용시 -->
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="recruiter-aside">
+                        <!-- lnb -->
+                        <div class="lnb-list-nav" include-html="/component/recruiter/candidate_aside_nav.html"></div>
+                        <!-- // lnb -->
+
+                        <!-- 후보자 현황 -->
+                        <div class="cpn-aside-recruiterstatus" include-html="/component/recruiter/cpn_aside_candidate.html"></div>
+                        <!-- // 후보자 현황 -->
+
+                        <!-- 광고 -->
+                        <div class="recruiter-aside-adv">
+                            광고
+                        </div>
+                        <!-- // 광고 -->
+                    </aside> 
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

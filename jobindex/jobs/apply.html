@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/jobs.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-jobs apply">
+                <div class="jobs-main">
+                    <div class="jobs-wrap">
+                        <div class="jobs-apply">
+                            <form>
+                                <fieldset>
+                                    <legend><span>지원 내용</span></legend>
+                                
+                                    <h2 class="tit-h2"><span>채용공고 지원</span></h2>
+
+                                    <div class="apply-form">
+                                        <h3 class="tit-h3">아래 정보로 지원합니다.</h3>
+
+                                        <div class="apply-form-top">
+                                            <table class="cpn-board-col">
+                                                <caption><span>지원 정보</span></caption>
+                                                <colgroup>
+                                                    <col style="width:90px">
+                                                    <col>
+                                                </colgroup>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">이름</th>
+                                                    <td>
+                                                        홍길동
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">이메일</th>
+                                                    <td>
+                                                        aaaa@naver.com
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">연락처</th>
+                                                    <td>
+                                                        010-1234-567
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">출생년도</th>
+                                                    <td>
+                                                        2011
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="vt"><label for="test-url">URL</label></th>
+                                                    <td>
+                                                        <ul class="td-list-view">
+                                                            <li><a href="#" target="_blank">https://www.jobindexworld.com/ko</a></li>
+                                                            <li><a href="#" target="_blank">https://www.jobindexworld.com/ko</a></li>
+                                                            <li><a href="#" target="_blank">https://www.jobindexworld.com/ko</a></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <!-- 수정시 -->
+                                            <table class="cpn-board-col">
+                                                <caption><span>기본 정보</span></caption>
+                                                <colgroup>
+                                                    <col style="width:90px">
+                                                    <col>
+                                                </colgroup>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row"><label for="test-name">이름</label></th>
+                                                    <td>
+                                                        <input type="text" id="test-name" class="istyle">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-cd">이메일</label></th>
+                                                    <td>
+                                                        <input type="email" id="test-cd" class="istyle">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-ca">연락처</label></th>
+                                                    <td>
+                                                        <input type="tel" id="test-ca" class="istyle">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-birth">출생년도</label></th>
+                                                    <td>
+                                                        <input type="number" id="test-birth" class="istyle">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="vt"><label for="test-url">URL</label></th>
+                                                    <td>
+                                                        <div class="td-list">
+                                                            <ul>
+                                                                <li>
+                                                                    <input type="url" id="test-url" class="istyle">
+
+                                                                    <button type="button" class="btn-list-del"><i class="icon-cross"></i><span class="ir">삭제</span></button>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="url" id="test-url" class="istyle">
+
+                                                                    <button type="button" class="btn-list-del"><i class="icon-cross"></i><span class="ir">삭제</span></button>
+                                                                </li>
+                                                            </ul>
+
+                                                            <button type="button" class="btn-list-add"><i class="icon-plus"></i><span class="ir">추가</span></button>
+                                                        </div>
+
+                                                        <p class="td-dsc">*이력서, 포트폴리오 기타 SNS 주소를 추가하실 수 있습니다.</p>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- // 수정시 -->
+
+                                            <button type="button" class="btn-apply-form">수정</button>
+                                        </div>
+
+                                        <div class="cpn-profile-info" include-html="/component/comm/cpn_profile_info.html"></div>
+                                    </div>
+
+                                    <div class="apply-bot">
+                                        <span class="icheck">
+                                            <input type="checkbox" id="test-check" name="test-check">
+                                            <label for="test-check">
+                                                개인정보 제공 및 활용에 동의합니다.
+                                            </label>
+                                        </span>
+                                    </div>
+
+                                    <div class="apply-btn">
+                                        <button type="submit" class="btn-submit">채용공고 지원완료하기</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="jobs-aside">
+                        <!-- lnb -->
+                        <div class="lnb-list-nav" include-html="/component/jobs/jobs_aside_nav.html"></div>
+                        <!-- // lnb -->
+
+                        <!-- 광고 -->
+                        <div class="jobs-aside-adv">
+                            광고
+                        </div>
+                        <!-- // 광고 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

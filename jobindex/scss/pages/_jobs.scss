@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+.section-jobs {
+    position: relative;
+    padding-top: 50px;
+
+    .section-jobs-top {
+        .tit-h2 {
+            border-bottom: 1px solid #ccc;
+
+            @include fontSize(24px);
+
+            span {
+                display: inline-block;
+                margin-bottom: -1px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $bc1;
+                vertical-align: top;
+            }
+        }
+
+        .section-jobs-dsc {
+            margin-top: 15px;
+            color: #888;
+            line-height: 1.4;
+
+            @include fontSize(15px);
+            @include wordwrap();
+        }
+    }
+
+    .jobs-main {
+        position: relative;
+        margin-top: 30px;
+
+        @include flexbox();
+    }
+
+    .jobs-wrap {
+        @include col(16);
+        @include flex(none);
+
+        .jobs-list {
+            .jobs-list-aside {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding-left: 30px;
+
+                @include col(6);
+                @include box-sizing();
+            }
+
+            // 내 관심분야
+            .cpn-aside-interest {
+                margin-top: 25px;
+            }
+
+            // 최근 검색조건
+            .cpn-aside-searchkeyword {
+                margin-top: 25px;
+            }
+
+            // 광고
+            .jobs-list-adv {
+                margin-top: 25px;
+            }
+
+            .btn-more {
+                @include btn-more();
+            }
+        }
+    }
+
+    .jobs-aside {
+        padding-left: 30px;
+
+        @include col(6);
+        @include box-sizing();
+        @include flex(none);
+
+        .jobs-aside-adv {
+            margin-top: 25px;
+        }
+    }
+
+    // 채용공고 지원
+    .jobs-apply {
+        .tit-h2 {
+            border-bottom: 1px solid #ccc;
+            
+            @include fontSize(24px);
+            
+            span {
+                display: inline-block;
+                margin-bottom: -1px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #333;
+                vertical-align: top;
+                line-height: 33px;
+            }
+        }
+
+        .apply-form {
+            position: relative;
+            margin-top: 30px;
+
+            .tit-h3 {
+                margin-bottom: 10px;
+
+                @include fontSize(16px);
+            }
+
+            .cpn-board-col {
+                td {
+                    .istyle {
+                        width: 100%;
+                    }
+
+                    .td-dsc {
+                        margin-top: 8px;
+                        color: $fc2;
+
+                        @include fontSize(13px);
+                    }
+                }
+            }
+
+            .btn-apply-form {
+                position: absolute;
+                right: 0;
+                top: -5px;
+                padding: 5px 15px;
+                border: 1px solid #cacaca;
+                color: $fc2;
+                background: #fff;
+
+                @include fontSize(14px);
+
+                &:hover {
+                    border-color: $pc1;
+                    color: $pc1;
+                }
+            }
+        }
+
+        .apply-bot {
+            margin-top: 25px;
+            text-align: center;
+
+            .icheck {
+                label {
+                    @include fontSize(15px);
+                }
+            }
+        }
+
+        .apply-btn {
+            margin-top: 40px;
+            text-align: center;
+
+            .btn-submit {
+                padding: 15px;
+                border: 0;
+                color: #fff;
+                font-weight: 600;
+                background: $pc1;
+
+                @include fontSize(18px);
+
+                &:hover {
+                    background: $pc1_hover;
+                }
+            }
+        }
+    }
+
+    &.apply {
+        .jobs-main {
+            margin-top: 0;
+        }
+    }
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    .section-jobs {
+        padding-top: 25px;
+
+        .jobs-wrap {
+            @include col(15);
+
+            .jobs-list {
+                .jobs-list-aside {
+                    @include col(7);
+                }
+            }
+        }
+
+        .jobs-aside {
+            @include col(7);
+        }
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    .section-jobs {
+        .jobs-main {
+            @include flex-direction(column);
+        }
+
+        .jobs-wrap {
+            width: auto;
+
+            // 검색
+            .cpn-jobs-search {
+                .jobs-search-body {
+                    padding: 0 0 10px 0;
+
+                    .jobs-search-form {
+                        border-width: 0 0 1px 0;
+                    }
+                }
+            }
+
+            .jobs-list {
+                .jobs-list-box {
+                    margin-top: 25px;
+                }
+
+                .jobs-list-aside {
+                    position: static;
+                    padding: 0;
+                    width: auto;
+
+                    @include flexbox();
+                    @include flex-direction(column);
+                }
+
+                // lnb
+                .lnb-list-nav {
+                    order:2;
+                    margin-top: 25px;
+                }
+
+                // 내 관심분야
+                .cpn-aside-interest {
+                    order: 1;
+                }
+
+                // 최근 검색조건
+                .cpn-aside-searchkeyword {
+                    order: 0;
+                    margin-top: 0;
+                }
+
+                // 광고
+                .jobs-list-adv {
+                    display: none;
+                }
+            }
+        }
+
+        &.apply {
+            .jobs-wrap {
+                order: 1;
+                margin-top: 25px;
+            }
+
+            .jobs-aside {
+                order: 0;
+                width: auto;
+                padding: 0;
+
+                .jobs-aside-adv {
+                    display: none;                    
+                }
+            }
+        }
+    }
+}

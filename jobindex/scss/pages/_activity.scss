@@ -1,0 +1,584 @@
+@charset "utf-8";
+
+.wrap-page {
+    padding-top: 50px;
+
+    .tit-h2 {
+        border-bottom: 1px solid #ccc;
+
+        @include fontSize(24px);
+
+        span {
+            display: inline-block;
+            margin-bottom: -1px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $bc1;
+            vertical-align: top;
+        }
+    }
+}
+
+// 상단 차트
+.section-chart {
+    margin-top: 30px;
+
+    .section-chart-list {
+        @include flexbox();
+
+        .chart-itm {
+            overflow: hidden;
+            margin-left: 10px;
+            border: 1px solid #cecece;
+
+            @include flex();
+            @include box-sizing();
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.section-activity {
+    margin-top: 25px;
+
+    @include flexbox();
+
+    .activity-wrap {
+        @include col(16);
+        @include flex(none);
+
+        .activity-box {
+            margin-top: 25px;
+
+            .activity-box-list {
+                // 알림
+                .activity-box-list-year {
+                    display: block;
+
+                    border-bottom: 1px solid #cecece;
+
+                    span {
+                        display: inline-block;
+                        width: 60px;
+                        margin: 0 30px -1px 0;
+                        padding: 0 5px 10px;
+                        // border-bottom: 2px solid $pc1;
+                        text-align: center;
+
+                        @include fontSize(15px);
+                    }
+
+                    strong {
+                        color: $pc1;
+                    }
+                }
+
+                .activity-box-list-conts {
+                    position: relative;
+                    margin-top: 10px;
+
+                    ul {
+                        li {
+                            margin-top: 5px;
+                            // border-top: 1px solid #ddd;
+                            // background: #fff;
+
+                            @include flexbox();
+
+                            .activity-box-list-conts-date {
+                                position: relative;
+                                width: 60px;
+                                margin-right: 60px;
+                                padding: 5px;
+                                border-radius: 3px;
+                                // color: #fff;
+                                // background: #ff891e;
+                                text-align: center;
+
+                                @include box-sizing();
+                                @include flex(none);
+
+                                .day,
+                                .time {
+                                    display: block;
+                                    padding: 3px 0;
+                                    text-align: right;
+                                }
+
+                                .day {
+                                    font-weight: 600;
+
+                                    @include fontSize(13px);
+                                }
+
+                                .time {
+                                    color: $fc3;
+
+                                    @include fontSize(16px);
+                                }
+
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    right: -29px;
+                                    top: 18px;
+                                    border-radius: 7px;
+                                    background: #eaeaea;
+
+                                    @include size(14px);
+                                }
+
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    right: -25px;
+                                    top: 22px;
+                                    border-radius: 3px;
+                                    background: $pc4;
+
+                                    @include size(6px);
+                                }
+                            }
+
+                            .activity-box-list-conts-noti {
+                                position: relative;
+                                background: #f7f7f7;
+
+                                @include flex();
+
+                                 dl {
+                                     padding: 15px 30px;
+
+                                     dt {
+                                        position: relative;
+                                        margin-bottom: 10px;
+                                        padding-bottom: 6px;
+                                        border-bottom: 1px solid #fff;
+                                        font-weight: 600;
+
+                                        @include fontSize(16px);
+
+                                        &:after {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: 0;
+                                            width: 100%;
+                                            height: 1px;
+                                            font-size: 0;
+                                            background: #dedede;
+                                            line-height: 0;
+                                        }
+                                     }
+
+                                     dd {
+                                        margin-top: 5px;
+
+                                        strong {
+                                            color: $pc1;
+
+                                            @include fontSize(15px);
+                                        }
+
+                                        span {
+                                            color: $pc3;
+                                            font-weight: 600;
+
+                                            @include fontSize(15px);
+                                        }
+
+                                        em {
+                                            color: $pc2;
+                                            font-weight: 600;
+
+                                            @include fontSize(15px);
+                                        }
+
+                                        &:first-child {
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    left: -15px;
+                                    top: 10px;
+
+                                    @include border-style(15px, 15px, 15px, 0, solid, transparent #f7f7f7 transparent transparent);
+                                }
+                            }
+
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 80px;
+                        top: 0;
+                        width: 3px;
+                        height: 100%;
+                        background: #f7f7f7;
+                    }
+                }
+
+                .btn-more {
+                    @include btn-more();
+                }
+
+                // 작성한 글
+                .activity-box-list-post {
+                    margin-top: 10px;
+                    .activity-box-list-post-top {
+                        border-bottom: 1px solid #eaeaea;
+                        font-size: 0;
+
+                        .btn {
+                            display: inline-block;
+                            height: 34px;
+                            margin-right: 25px;
+                            padding-top: 4px;
+                            vertical-align: top;
+
+                            @include fontSize(15px);
+                            @include box-sizing();
+
+                            &.active {
+                                border-bottom: 2px solid #418ded;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+                // 평판
+                .activity-box-list-repu {
+                    .activity-box-list-repu-top {
+                        ul {
+                            @include clear;
+
+                            li {
+                                float: left;
+                                padding: 0 10px 10px;
+
+                                strong {
+                                    margin-left: 5px;
+                                    @include fontSize(18px);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 태그
+                .activity-box-list-tag {
+                    .activity-box-list-tag-top {
+                        ul {
+                            @include clear;
+
+                            li {
+                                float: left;
+                                padding: 0 10px 10px;
+
+                                strong {
+                                    margin-left: 5px;
+                                    @include fontSize(18px);
+                                }
+                            }
+                        }
+                    }
+
+                    .activity-box-list-tag-main {
+                        border-top: 1px solid #dcdcdc;
+
+                        ul {
+                            @include clear;
+
+                            li {
+                                position: relative;
+                                float: left;
+                                width: calc(100% / 4);
+                                padding: 10px 5px 10px 20px;
+                                border-bottom: 1px dotted #eaeaea;
+
+                                @include box-sizing();
+                                @include flexbox();
+                                @include align-items(center);
+
+                                .rank {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 20px;
+                                    margin-top: -8px;
+                                    font-weight: 600;
+                                    line-height: 16px;
+                                    text-align: center;
+
+                                    &.gold {
+                                        color: $gold;
+                                    }
+
+                                    &.silver {
+                                        color: $silver;
+                                    }
+
+                                    &.bronze {
+                                        color: $bronze;
+                                    }                                    
+                                }
+
+                                strong {
+                                    display: inline-block;
+                                    margin-right: 6px;
+                                    padding: 5px 10px;
+                                    color: #39739d;
+                                    background-color: #E1ECF4;
+                                    white-space: nowrap;
+
+                                    @include fontSize(15px);
+
+                                    &:hover {
+                                        background: #cee0ed;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .activity-aside {
+        padding-left :30px;
+
+        @include col(6);
+        @include flex(none);
+        @include box-sizing();
+
+        .activity-noti {
+            ul {
+                padding-top: 4px;
+
+                li {
+                    position: relative;
+                    min-height: 41px;
+                    padding: 12px 10px;
+                    border-bottom: 1px dashed #cecece;
+
+                    @include box-sizing();
+
+                    span {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        padding: 2px 10px;
+                        border-radius: 20px;
+                        color: #fff;
+                        background: #72c02c;
+                        // line-height: normal;
+
+                        @include translate(0, -50%);
+
+                        i {
+                            line-height: inherit;
+
+                            @include fontSize(10px);
+                        }
+                    }
+
+                    .keyword {
+                        display: inline-block;
+                        padding: 5px 10px;
+                        color: #39739d;
+                        background: #e1ecf4;
+                        white-space: nowrap;
+                        line-height: 1;
+                        
+                        @include fontSize(14px);
+
+                        &:hover {
+                            background: #cee0ed;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 광고'
+        .activity-aside-adv {
+            margin-top: 25px;
+        }
+    }
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    .wrap-page {
+        padding-top: 25px;
+    }
+
+    .section-activity {
+        .activity-wrap {
+            @include col(15);
+
+            .activity-box {
+                .activity-box-list {
+                    // 태그
+                    .activity-box-list-tag {
+                        .activity-box-list-tag-main {
+                            ul {
+                                li {
+                                    width: calc(100% / 2);
+                                }
+                            }
+                        }
+                    }            
+                }
+            }
+        }
+
+        .activity-aside {
+            @include col(7);
+        }
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    // 차트
+    .section-chart {
+        overflow: hidden;
+        margin-top: 15px;
+
+        .section-chart-list {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+
+            .chart-itm {
+                width: 100%;
+                @include flex(none);
+
+            }
+        }
+    }
+
+    .section-activity {
+        @include flex-direction(column);
+
+        .activity-wrap {
+            order: 1;
+            width: 100%;
+            margin-top: 25px;
+
+            .activity-box {
+                .activity-box-list {
+                    // 알림
+                    .activity-box-list-conts {
+                        ul {
+                            li {
+                                .activity-box-list-conts-noti {
+                                    dl {
+                                        padding: 12px 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 평판
+                    .activity-box-list-repu {
+                        .activity-box-list-repu-top {
+                            ul {
+                                @include clear;
+
+                                li {
+                                    margin-right: 20px;
+                                    padding: 0 0 10px;
+
+                                    @include box-sizing();
+
+                                    strong {
+                                        display: block;
+                                        margin: 0;
+
+                                        @include fontSize(18px);
+                                    }
+
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 태그
+                    .activity-box-list-tag {
+                        .activity-box-list-tag-top {
+                            ul {
+                                @include clear;
+
+                                li {
+                                    margin-right: 20px;
+                                    padding: 0 0 10px;
+
+                                    @include box-sizing();
+
+                                    strong {
+                                        display: block;
+                                        margin: 0;
+
+                                        @include fontSize(18px);
+                                    }
+
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .activity-box-list-tag-main {
+                            ul {
+                                li {
+                                    width: 100%;
+                                    padding-top: 5px;
+                                    padding-bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .activity-aside {
+            order: 0;
+            width: 100%;
+            padding: 0;
+
+            .activity-noti {
+                border-top: 1px solid #cecece;
+
+                ul {
+                    padding-top: 0;
+                }
+            }
+
+            .activity-aside-adv {
+                display: none;
+            }
+        }
+    }
+}

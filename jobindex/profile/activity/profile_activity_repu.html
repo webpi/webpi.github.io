@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/activity.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <h2 class="tit-h2"><span>잡인덱스 활동</span></h2>
+
+            <!-- 차트 -->
+            <section class="section-chart">
+                <div class="section-chart-list">
+                    <article class="chart-itm">
+                        <canvas id="myChart"></canvas>
+                    </article>
+
+                    <article class="chart-itm">
+                        <canvas id="myChart2"></canvas>
+                    </article>
+
+                    <article class="chart-itm">
+                        <canvas id="myChart3"></canvas>
+                    </article>
+                </div>
+            </section>
+            <!-- // 차트 -->
+
+            <section class="section-activity">
+                <h3 class="ir">잡인덱스 활동 내역</h3>
+
+                <!-- left -->
+                <div class="activity-wrap">
+                    <div class="cpn-tab-wrap" include-html="/component/profile/activity/cpn_tab_wrap.html"></div>
+
+                    <div class="activity-box">
+                        <div class="activity-box-list">
+                            <div class="activity-box-list-repu">
+                                <div class="activity-box-list-repu-top">
+                                    <ul>
+                                        <li>Reputation(평판) <strong>123,456</strong></li>
+                                        <li>TOP <strong>1.2%</strong></li>
+                                        <li>Ranking <strong>#10</strong></li>
+                                    </ul>
+                                </div>
+
+                                <div class="activity-box-list-repu-main">
+                                    <article class="cpn-reputation">
+                                        <div class="cpn-reputation-head">
+                                            <strong class="ranknumber up"><i class="icon-caret-up"></i> 99</strong>
+
+                                            <span class="date">Today</span>
+                                        </div>
+
+                                        <ul class="cpn-reputation-body">
+                                            <li>
+                                                <span class="point">+5</span>
+
+                                                <dl>
+                                                    <dt>답변추천</dt>
+                                                    <dd>
+                                                        <a href="#">바람직하지 않은 활동 (광고, 도배, 욕설, 비방, 금전요구 등) 글에 대해서는 삭제처리 , 작성자는 활동정지 조치 됩니다.</a>
+                                                    </dd>
+                                                    <dd class="time">17:00</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <span class="point down">-25</span>
+
+                                                <dl>
+                                                    <dt>답변비추천</dt>
+                                                    <dd>
+                                                        <a href="#">바람직하지 않은 활동 (광고, 도배, 욕설, 비방, 금전요구 등) 글에 대해서는 삭제처리 , 작성자는 활동정지 조치 됩니다. 바람직하지 않은 활동 (광고, 도배, 욕설, 비방, 금전요구 등) 글에 대해서는 삭제처리 , 작성자는 활동정지 조치 됩니다.</a>
+                                                    </dd>
+                                                    <dd class="time">17:00</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <span class="point">+25</span>
+
+                                                <dl>
+                                                    <dt>답변비추천</dt>
+                                                    <dd>
+                                                        <a href="#">바람직하지 않은 활동</a>
+                                                    </dd>
+                                                    <dd class="time">17:00</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </article>
+
+                                     <article class="cpn-reputation">
+                                        <div class="cpn-reputation-head">
+                                            <strong class="ranknumber down"><i class="icon-caret-down"></i> 99</strong>
+
+                                            <span class="date">`19.12.31</span>
+                                        </div>
+
+                                        <ul class="cpn-reputation-body">
+                                            <li>
+                                                <span class="point">+5</span>
+
+                                                <dl>
+                                                    <dt>답변추천</dt>
+                                                    <dd>
+                                                        <a href="#">바람직하지 않은 활동 (광고, 도배, 욕설, 비방, 금전요구 등) 글에 대해서는 삭제처리 , 작성자는 활동정지 조치 됩니다.</a>
+                                                    </dd>
+                                                    <dd class="time">17:00</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <span class="point">+25</span>
+
+                                                <dl>
+                                                    <dt>답변비추천</dt>
+                                                    <dd>
+                                                        <a href="#">바람직하지 않은 활동 (광고, 도배, 욕설, 비방, 금전요구 등) 글에 대해서는 삭제처리 , 작성자는 활동정지 조치 됩니다. 바람직하지 않은 활동 (광고, 도배, 욕설, 비방, 금전요구 등) 글에 대해서는 삭제처리 , 작성자는 활동정지 조치 됩니다.</a>
+                                                    </dd>
+                                                    <dd class="time">17:00</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <span class="point">+25</span>
+
+                                                <dl>
+                                                    <dt>답변비추천</dt>
+                                                    <dd>
+                                                        <a href="#">바람직하지 않은 활동</a>
+                                                    </dd>
+                                                    <dd class="time">17:00</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <!-- // left -->
+
+                <!-- right -->
+                <aside class="activity-aside">
+                    <!-- 현황 -->
+                    <div class="activity-noti">
+                        <ul>
+                            <li>질문 <span>300</span></li>
+                            <li>답변 <span>1,500</span></li>
+                            <li>총 추천 <span>9,999</span></li>
+                            <li>채택 <span>99</span></li>
+                        </ul>
+                    </div>
+                    <!-- // 현황 -->
+
+                    <!-- 광고 -->
+                    <div class="activity-aside-adv">
+                        광고
+                    </div>
+                    <!-- // 광고 -->
+                </aside> 
+                <!-- // right -->               
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+
+<!-- Chart 샘플 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<script>
+var ctx2 = document.getElementById("myChart2").getContext('2d');
+var myChart2 = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<script>
+var ctx3 = document.getElementById("myChart3").getContext('2d');
+var myChart3 = new Chart(ctx3, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+<!-- // js -->
+</body>
+</html>

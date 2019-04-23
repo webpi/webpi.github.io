@@ -1,0 +1,1872 @@
+@charset "utf-8";
+
+// 프로필
+.section-profile {
+    position: relative;
+
+    @include flexbox();
+
+    .profile-wrap {
+        @include col(16);
+        @include flex(none);
+    }
+
+    .profile-aside {
+        padding: 697px 0 0 30px;
+
+        @include col(6);
+        @include flex(none);
+        @include box-sizing();
+    }
+}
+
+// 설정
+.section-manage {
+    .section-manage-top {
+        position: relative;
+        margin-bottom: 60px;
+
+        .tit-h2 {
+            border-bottom: 1px solid #ccc;
+
+            @include fontSize(24px);
+
+            span {
+                display: inline-block;
+                margin-bottom: -1px;
+                padding: 6px 0 10px;
+                border-bottom: 1px solid $bc1;
+                vertical-align: top;
+            }
+        }
+
+        .section-manage-dsc {
+            margin-top: 15px;
+            color: #888;
+            line-height: 1.4;
+
+            @include fontSize(15px);
+            @include wordwrap();
+        }
+    }
+
+    .manage-main {
+        @include flexbox();
+    }
+
+    .manage-wrap {
+        @include flex();
+    }
+
+    // 범위 설정
+    .manage-privacy {
+        margin-left: 20px;
+
+         .tit-h3 {
+            height: 42px;
+            border: 1px solid #cacaca;
+            background: #fff;
+            line-height: 42px;
+            text-align: center;
+
+            @include fontSize(16px);
+        }
+
+        .manage-privacy-box {
+            margin-top: 10px;
+            padding: 0 5px;
+            
+            ul {
+                li {
+                    padding: 6px 0;
+                    font-size: 0;
+                    line-height: 0;
+
+                    strong {
+                        display: inline-block;
+                        width: 120px;
+                        padding: 2px 0;
+                        line-height: normal;
+                        vertical-align: middle;
+
+                        @include fontSize(15px);
+                    }
+
+                    .icheck-switch {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+    .manage-aside {
+        padding-left: 30px;
+
+        @include col(6);
+        @include flex(none);
+        @include box-sizing();
+    }
+
+    .profile-manage {
+        @include flexbox();
+
+        .profile-manage-user {
+            width: 240px;
+            
+            @include flex(none);
+
+            .profile-manage-user-box {
+                position: relative;
+                padding: 20px 15px 20px 15px;
+                border: 1px solid #cecece;
+                border-radius: 3px;
+                text-align: center;
+
+                .photo {
+                    overflow: hidden;
+                    margin: 0 auto;
+                    border-radius: 300px;
+                    border: 10px solid #fff;
+
+                    @include size(136px);
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .profile-manage-user-box-info {
+                    margin-top: 15px;
+
+                    .profile-manage-user-box-info-name {
+                        @include fontSize(18px);
+                    }
+
+                    .profile-manage-user-box-info-detail {
+                        margin-top: 10px;
+                    }
+                }
+
+                .profile-manage-user-box-tag {
+                    margin-top: 15px;
+                    padding-top: 15px;
+                    border-top: 1px dotted #dcdcdc;
+
+                    @include fontSize(13px);
+                    @include truncate();
+
+                    a {
+                        margin-left: 5px;
+                        color: #888;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile-manage-conts {
+            margin-left: 30px;
+
+            @include flex();
+
+            .profile-manage-conts-box {
+                padding: 15px;
+                background: #f9f9f9;
+            }
+
+            ul {
+                padding: 15px;
+                background: #fff;
+
+                li {
+                    margin-top: 15px;
+                    font-size: 0;
+                    line-height: 0;
+
+                    label {
+                        display: inline-block;
+                        width: 120px;
+                        font-weight: 600;
+                        vertical-align: top;
+                        line-height: 50px;
+
+                        @include fontSize(15px);
+                    }
+
+                    .istyle{
+                        width: calc(100% - 120px);
+                        height: 50px;
+                        padding: 10px 10px;
+                        border: 1px solid #cecece;
+                        line-height: 28px;
+                        vertical-align: top;
+
+                        @include box-sizing();
+                        @include fontSize(16px);
+						@include rounded(4px, 4px, 4px, 4px);
+
+                        &:focus {
+                            border-color: $pc1;
+                        }
+                    }
+
+                    .slt {
+                        width: calc(100% - 120px);
+                        height: 50px;
+
+                        @include rounded(4px, 4px, 4px, 4px);
+                        @include fontSize(16px);
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .btn-submit {
+                width: 100%;
+                height: 40px;
+                margin-top: 15px;
+                border: 0;
+                color: #fff;
+                font-weight: 600;
+                background: $pc3;
+
+                @include fontSize(17px);
+
+                &:hover {
+                    background: $pc3_hover;
+                }
+            }
+        }
+    }
+
+    &.withdraw {
+        .profile-manage {
+            .profile-manage-conts {
+                .btn-submit {
+                    background: $pc2;
+
+                    &:hover {
+                        background: $pc2_hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-profile,
+.section-manage {
+    padding-top: 50px;
+
+    // 프로필 상단 내용
+    .profile-top {
+        .profile-top-box {
+            position: relative;
+            padding-top: 110px;
+
+            .profile-top-box-user {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 156px;
+                padding-top: 76px;
+
+                @include box-sizing();
+
+                .profile-top-box-user-head {
+                    position: absolute;
+                    left: 0;
+                    top: -5px;
+                    right: 0;
+                    width: 100%;
+                    padding-left: 50px;
+
+                    @include box-sizing();
+                    @include flexbox();
+                    @include align-items(center);
+
+                    .photo {
+                        overflow: hidden;
+                        position: relative;
+                        margin-right: 20px;
+                        border: solid 10px rgba(255, 255, 255, 0.9);
+                        // box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+
+                        @include size(136px);
+                        @include rounded(50%, 50%, 50%, 50%);
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+
+                    .btn-photo-edit {
+                        position: absolute;
+                        left: 190px;
+                        bottom: 10px;
+                        border: 0;
+                        color: $fc3;
+                        background: none;
+
+                        @include fontSize(17px);
+                        @include size(30px);
+                        @include flex(none);
+
+                        &:hover {
+                            color: $pc1_hover;
+                        }
+                    }
+
+                    .name {
+                        display: block;
+                        margin-right: 200px;
+
+                        @include fontSize(28px);
+                        @include flex();
+                        @include truncate2();
+                    }
+                }
+
+                .profile-top-box-user-bot {
+                    text-align: right;
+
+                    .btn {
+                        position: relative;
+                        display: inline-block;
+                        height: 30px;
+                        padding: 3px 8px;
+                        border: 1px solid #aaa;
+                        color: $fc2;
+                        background: #fff;
+                        line-height: 22px;
+                        vertical-align: top;
+
+                        @include fontSize(13px);
+                        @include box-sizing();
+
+                        i {
+                            line-height: inherit;
+                            vertical-align: -1px;
+                        }
+
+                        &.btn-follow {
+                            i {
+                                vertical-align: -2px;
+                            }
+                        }
+
+                        &:hover {
+                            border-color: $pc1_hover;
+                            color: $pc1_hover;
+                        }
+
+                        &.on {
+                            border-color: $pc1_hover;
+                            color: #fff;
+                            background: $pc1_hover;
+                        }
+                    }
+                }
+            }
+
+            .profile-top-box-career {
+                padding: 50px 30px 20px;
+                
+                @include border-style(3px, 1px, 1px, 1px, solid, $pc1 #cecece #cecece #cecece);
+                @include box-sizing();
+
+                .profile-top-box-career-list {
+                    margin-bottom: 30px;
+
+                    li {
+                        margin-top: 8px;
+
+                        @include fontSize(16px);
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                .profile-top-box-career-grade {
+                    @include flexbox();
+
+                    li {
+                        // height: 40px;
+                        // text-align: center;
+
+                        @include flex();
+
+                        span {
+                            display: block;
+                            margin-bottom: 5px;
+                            font-weight: 600;
+
+                            @include fontSize(15px);
+                        }
+
+                        strong {
+                            color: $pc1;
+
+                            @include fontSize(20px);
+                        }
+
+                        .gold {
+                            color: $gold;
+                        }
+
+                        .silver {
+                            color: $silver;
+                        }
+
+                        .bronze {
+                            color: $bronze;
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile-top-cnt {
+            margin-top: 15px;
+
+            @include clear;
+
+            li {
+                float: left;
+                width: calc(96% / 3);
+                margin-left: 2%;
+                padding: 20px;
+                border: 1px solid #cecece;
+                background: #f9f9f9;
+
+                @include box-sizing();
+
+                strong {
+                    display: block;
+                    margin-bottom: 10px;
+
+                    @include fontSize(15px);
+                }
+
+                span {
+                    display: block;
+                    color: $pc2;
+
+                    @include fontSize(20px);
+
+                    em {
+                        display: inline-block;
+                        width: 50%;
+                    }
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    span {
+                        font-size: 0;
+                        line-height: 0;
+
+                        em {
+                            line-height: 1.15;
+
+                            @include fontSize(20px);
+
+                            &:last-child {
+                                color: $fc3;
+
+                                @include fontSize(14px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // top tag
+    .profile-tag {
+        position: relative;
+        margin-top: 25px;
+
+        .tit-h3 {
+            height: 24px;
+            border-bottom: 1px solid #444;
+
+            @include fontSize(16px);
+
+            span {
+                color: $pc1;
+            }
+        }
+
+        ul {
+            margin-top: 10px;
+
+            @include clear;
+
+            li {
+                float: left;
+                width: calc(100% / 3);
+                padding: 5px;
+
+                @include box-sizing();
+                @include flexbox();
+                @include align-items(center);
+
+                strong {
+                    display: inline-block;
+                    margin-right: 6px;
+                    padding: 5px 10px;
+                    color: #39739d;
+                    background-color: #E1ECF4;
+
+                    @include fontSize(15px);
+
+                    &:hover {
+                        background: #cee0ed;
+                    }
+                }
+            }
+        }
+
+        .btn-more {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: $fc3;
+
+            @include fontSize(13px);
+
+            i {
+                @include fontSize(10px);
+            }
+
+            &:hover {
+                color: $pc1_hover;
+            }
+        }     
+    }
+
+    .profile-box {
+        position: absolute;
+        right: 0;
+        top: 160px;
+        padding-left: 30px;
+
+        @include col(6);
+        @include box-sizing();
+    }
+
+    // 활동 현황
+    .profile-status {
+        ul {
+            // padding: 5px 15px;
+            // background: #f9f9f9;
+
+            // @include border-style(3px, 1px, 1px, 1px, solid, #cecece);
+
+            li {
+                position: relative;
+                height: 41px;
+                padding: 12px 10px;
+                border-bottom: 1px dashed #cecece;
+
+                @include box-sizing();
+
+                span {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    padding: 12px 10px;
+
+                    i {
+                        line-height: inherit;
+
+                        @include fontSize(10px);
+                    }
+                }
+
+                .btn-more {
+                    color: $fc3;
+
+                    @include fontSize(13px);
+
+                    &:hover {
+                        color: $pc1_hover;
+                    }
+                }
+
+                &:first-child {
+                    height: 30px;
+                    padding-top: 0;
+                    border-bottom-style: solid;
+                    font-weight: 600;
+
+                    @include fontSize(16px);
+
+                    span {
+                        top: -1px;
+                        right: 10px;
+                        padding: 0;
+                    }
+
+                    .btn-more {
+                        font-weight: 400;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+
+                    span {
+                        top: 1px;
+
+                        @include fontSize(13px);
+                    }
+                }
+            }
+        }
+    }
+
+    // 팔로우 써클
+    .profile-followcircle {
+        position: relative;
+        margin-top: 25px;
+
+        .tit-h3 {
+            height: 24px;
+            border-bottom: 1px solid #444;
+
+            @include fontSize(16px);
+
+            span {
+                color: $pc1;
+            }
+        }
+
+        ul {
+            margin-top: 10px;
+
+            li {
+                padding: 5px 0;
+
+                @include box-sizing();
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(space-between);
+
+                strong {
+                    padding: 5px 10px;
+                    color: #39739d;
+                    background-color: #E1ECF4;
+
+                    @include fontSize(15px);
+
+                    &:hover {
+                        background: #cee0ed;
+                    }
+                }
+
+                span {
+
+                }
+            }
+        }
+
+        .btn-more {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: $fc3;
+
+            @include fontSize(13px);
+
+            i {
+                @include fontSize(10px);
+            }
+
+            &:hover {
+                color: $pc1_hover;
+            }
+        }
+    }
+
+    // 인맥 댓글
+    .profile-cmnt {
+        position: relative;
+        margin-top: 25px;
+
+        .tit-h3 {
+            height: 24px;
+            border-bottom: 1px solid #444;
+
+            @include fontSize(16px);
+
+            span {
+                color: $pc1;
+            }
+        }
+
+        .profile-cmnt-write {
+            padding: 25px 30px;
+            border-bottom: 1px solid #eaeaea;
+            background: #f9f9f9;
+
+            .istyle {
+                width: 100%;
+                height: 34px;
+                padding: 2px 10px;
+                border: 1px solid #ccc;
+
+                @include box-sizing();
+            }
+
+            .profile-cmnt-write-bot {
+                margin-top: 10px;
+                font-size: 0;
+                line-height: 0;
+                text-align: center;
+
+                .btn {
+                    margin-left: 5px;
+                    padding: 6px 15px;
+                    border: 0;
+                    background: none;
+
+                    @include fontSize(15px);
+
+                    &.btn-cmnt {
+                        border: 1px solid $pc1;
+                        color: #fff;
+                        background: $pc1;
+
+                        &:hover {
+                            background: $pc1_hover;
+                        }
+                    }
+
+                    &.btn-cncl {
+                        border: 1px solid $bc3;
+                        background: #fff;
+
+                        &:hover {
+                            background: #f9f9f9;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .profile-cmnt-list {
+            li {
+                padding: 10px;
+                border-top: 1px dashed #eaeaea;
+
+                .profile-cmnt-list-head {
+                    .name {
+                        margin-right: 15px;
+                        color: $pc4;
+
+                        @include fontSize(15px);
+                    }
+
+                    .date {
+                        color: $fc3;
+
+                        @include fontSize(13px);
+                    }
+                }
+
+                .profile-cmnt-list-body {
+                    margin-top: 4px;
+                    line-height: 1.3;
+                }
+
+                &:first-child {
+                    border-top: 0;
+                }
+            }
+        }
+
+        .btn-cmnt-write {
+            position: absolute;
+            right: 0;
+            top: -4px;
+            border: 0;
+            color: $fc3;
+            background: none;
+            vertical-align: top;
+            line-height: inherit;
+
+            @include size(28px);
+        }
+
+        .btn-more {
+            @include btn-more();
+        }
+    }
+
+    // 인맥
+    .profile-networking {
+        position: relative;
+
+        .tit-h3 {
+            position: relative;
+            height: 24px;
+            // border-bottom: 1px solid #444;
+
+            @include fontSize(16px);
+
+            span {
+                color: $pc1;
+            }
+
+            em {
+                position: absolute;
+                right: 0;
+                top: 1px;
+                color: $fc2;
+                font-weight: 400;
+
+                @include fontSize(14px);
+            }
+        }
+
+        .btn-more {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: $fc3;
+
+            @include fontSize(13px);
+
+            i {
+                @include fontSize(10px);
+            }
+
+            &:hover {
+                color: $pc1_hover;
+            }
+        }
+    }
+
+    // 포스팅 / 진행중인 채용 / 마감된 채용
+    .profile-jobs {
+        margin-top: 25px;
+
+        .profile-jobs-body {
+            margin-top: 15px;
+        }    
+    }
+
+    // 컨택 히스토리
+    .cpn-contact-history {
+        margin-top: 25px;
+    }
+
+    // 헤드헌터, 기업 로그인시
+    &.company {
+        .profile-top {
+            .profile-top-box {
+                padding-top: 65px;
+
+                .profile-top-box-user {
+                    height: auto;
+                    padding-top: 72px;
+                    
+                    .profile-top-box-user-head {
+                        top: 0;
+
+                        .photo {
+                            width: auto;
+                            max-width: 50%;
+                            height: 68px;
+                            padding: 15px 40px 13px;
+                            border: solid 3px $pc1;
+                            border-bottom: 0;
+                            background: #fff;
+
+                            @include flexbox();
+                            @include align-items(center);
+                            @include rounded(17px, 0, 0, 17px);
+                            @include box-sizing();
+
+                            img {
+                                max-height: 100%;
+                            }
+                        }
+
+                        .name {
+                            width: auto;
+                            margin-right: 0;
+                            padding-top: 2px;
+                            line-height: 1;
+
+                            @include flex();
+                        }
+
+                        .btn-photo-edit {
+                            left: 0;
+                            bottom: 7px;
+                        }
+                    }
+
+                    .profile-top-box-user-bot {
+                        padding-right: 5px;
+                    }
+                }
+
+                .profile-top-box-career {
+                    padding-top: 30px;
+                }
+            }
+        }
+
+        .profile-box {
+            top: 115px; // section-profile + profile-top-box padding-top + 
+        }
+
+        .profile-aside {
+            padding-top: 570px; // profile-status title + li height * length + profile-top-box padding top + common gap
+        }
+    }
+
+    // 후보자
+    &.candidate {
+        .profile-top {
+            .profile-top-box {
+                padding: 0;
+
+                .profile-top-box-user {
+                    position: static;
+                    height: auto;
+                    margin-bottom: 5px;
+                    padding: 0;
+
+                    .profile-top-box-user-head {
+                        position: static;
+                        margin-bottom: 10px;
+                        padding: 0;
+
+                        .name {
+                            margin: 0;
+                            padding: 0 30px;
+                        }
+                    }
+                }
+
+                .profile-top-box-career {
+                    padding-top: 20px
+                }
+            }
+        }
+
+        .profile-aside {
+            padding-top: 0;
+        }
+    }
+}
+
+// 프로필 등록 / 수정 레이어
+.layer-profile {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 320px;
+    max-width: 640px;
+    width: 640px;
+    padding: 50px;
+    background: #fff;
+
+    @include translate(-50%, -60%);
+    @include rounded(8px, 8px, 8px, 8px);
+    @include box-sizing();
+
+    .tit-h2 {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid $pc1;
+        text-align: center;
+
+        @include fontSize(28px);
+    }
+
+    .layer-profile-box {
+        .layer-profile-box-main {
+            li {
+                margin-top: 10px;
+
+                @include flexbox();
+                @include align-items(center);
+
+                label {
+                    width: 110px;
+                    padding-right: 15px;
+                    font-weight: 600;
+                    text-align: right;
+
+                    @include fontSize(15px);
+                    @include flex(none);
+                }
+
+                .istyle {
+                    width: 100%;
+                    height: 34px;
+                    padding: 2px 10px;
+                    border: 1px solid #ccc;
+
+                    @include fontSize(14px);
+                    @include box-sizing();
+                }
+
+                .slt {
+                    width: calc(100% - 200px);
+                    margin-right: -1px;
+
+                    &:focus {
+                        position: relative;
+                    }
+                }
+
+                .btn-add {
+                    width: 75px;
+                    height: 34px;
+                    border: 1px solid #ccc;
+                    padding: 2px 10px;
+                    background: #fff;
+
+                    @include fontSize(14px);
+
+                    &:hover {
+                        color: $pc1;
+                        border-color: $pc1;
+                    }
+                }
+
+                .itastyle {
+                    width: 100%;
+                }
+
+                &.tastyle {
+                    @include align-items();
+
+                    label {
+                        padding-top: 10px;
+                    }
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    // 이미지 수정
+    .layer-profile-photo {
+        .layer-profile-photo-stage {
+            min-height: 240px;
+        }
+    }
+}
+
+// 인메일
+.section-inmail {
+    padding-top: 50px;
+
+    .tit-h2 {
+        border-bottom: 1px solid #ccc;
+
+        @include fontSize(24px);
+
+        span {
+            display: inline-block;
+            margin-bottom: -1px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+            vertical-align: top;
+        }
+    }
+
+    .inmail-main {
+        margin-top: 30px;
+
+        @include flexbox();
+    }
+
+    .inmail-wrap {
+        position: relative;
+
+        @include col(16);
+        @include flex(none);
+    }
+
+    .inmail-list {
+        .inmail-list-top {
+            @include clear;
+
+            // 검색
+            .inmail-list-top-search {
+                position: relative;
+                float: right;
+
+                .isearch {
+                    width: 200px;
+                    height: 34px;
+                    padding: 4px 34px 4px 10px;
+                    border: 1px solid #cecece;
+
+                    @include box-sizing();
+
+                    &:focus {
+                        border-color: $pc1;
+                    }
+                }
+
+                .btn {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    border: 0;
+                    color: $fc2;
+                    background: none;
+
+                    @include size(34px);
+
+                    &:hover {
+                        color: $pc1;
+                    }
+                }
+            }
+
+            .inmail-list-top-btn {
+                float: left;
+                padding-top: 2px;
+                font-size: 0;
+
+                .btn {
+                    height: 30px;
+                    margin-right: 5px;
+                    padding: 6px 10px;
+                    border: 1px solid #cecece;
+                    color: #888;
+                    background: none;
+                    line-height: 16px;
+
+                    @include fontSize(14px);
+
+                    &:hover {
+                        border-color: $pc1;
+                        color: $pc1;
+                    }
+                }
+            }
+        }
+
+        .inmail-list-board {
+            margin-top: 10px;
+
+            .board {
+                width: 100%;
+
+                th {
+                    padding: 10px;
+                    border-bottom: 1px solid #888;
+                    font-weight: 600;
+                }
+
+                td {
+                    padding: 12px 10px;
+                    border-top: 1px solid #cecece;
+                    text-align: center;
+
+                    a {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .td-box {
+                        text-align: left;
+                    }
+
+                    .icheck {
+                        font-size: 1%;
+                        line-height: 1%;
+                        vertical-align: middle;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        &:first-child {
+                            td {
+                                border-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-more {
+            @include btn-more();
+        }
+    }
+
+    .inmail-aside {
+        padding-left: 30px;
+        
+        @include col(6);
+        @include flex(none);
+        @include box-sizing();
+
+        .inmail-aside-info {
+            .btn-inmail {
+                width: 100%;
+                height: 44px;
+                border: 0;
+                color: #fff;
+                font-weight: 600;
+                background: $pc1;
+
+                @include fontSize(18px);
+
+                &:hover {
+                    background: $pc1_hover;
+                }
+            }
+
+            .inmail-aside-info-mailbox {
+                margin-top: 25px;
+
+                .tit-h3 {
+                    height: 24px;
+                    border-bottom: 1px solid #444;
+                    
+                    @include fontSize(16px);
+                }
+
+                ul {
+                    li {
+                        position: relative;
+                        height: 41px;
+                        border-bottom: 1px dashed #cecece;
+
+                        @include box-sizing();
+
+                        a {
+                            display: block;
+                            padding: 12px 10px;
+
+                            &.active {
+                                font-weight: 600;
+                                background: #f9f9f9;
+                            }
+                        }
+
+                        span {
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            padding: 2px 10px;
+                            border-radius: 20px;
+                            color: #fff;
+                            background: #72c02c;
+                            // line-height: normal;
+
+                            @include translate(0, -50%);
+                        }
+
+                        &:hover {
+                            background: #f9f9f9;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 광고
+        .inmail-aside-adv {
+            margin-top: 25px;
+        }
+    }
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    // 프로필
+    .section-profile,
+    .section-manage {
+        padding-top: 25px;
+
+        .profile-wrap {
+            @include col(15);
+        }
+
+        .profile-aside {
+            @include col(7);
+        }
+
+        .profile-top {
+            .profile-top-box {
+                .profile-top-box-user {
+                    padding-top: 117px;
+
+                    .profile-top-box-user-head {
+                        padding-left: 25px;
+
+                        .photo {
+                            margin-right: 10px;
+                        }
+
+                        .btn-photo-edit {
+                            left: 165px;
+                        }
+
+                        .name {
+                            width: auto;
+                            margin-right: 0;
+
+                            // @include fontSize();
+                        }
+                    }
+
+                    .profile-top-box-user-bot {
+                        padding-right: 5px;
+                    }
+                }
+            }
+
+            .profile-top-cnt {
+                li {
+                    padding: 10px;
+
+                    strong {
+                       @include fontSize(11px);
+                    }
+
+                    span {
+                       @include fontSize(15px);
+                    }
+
+                    &:last-child {
+                        span {
+                            em {
+                                @include fontSize(15px);
+
+                                &:last-child {
+                                    @include fontSize(13px);
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+
+        // top tag
+        .profile-tag {
+            ul {
+                li {
+                    width: 50%;
+                }
+            }
+        }
+
+        .profile-box {
+            top: 135px;
+
+            @include col(7);
+        }
+
+        // 댓글
+        .profile-cmnt {
+            .profile-cmnt-write {
+                padding: 10px;
+            }
+        }
+
+        // 헤너드헌터, 기업 로그인시
+        &.company {
+            .profile-top {
+                .profile-top-box {
+                    .profile-top-box-user {
+                        .profile-top-box-user-head {
+                            padding-left: 30px;
+
+                            .photo {
+                                margin-right: 15px;
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .profile-box {
+                top: 90px;
+            }
+        }
+    }
+
+    // 프로필 등록 / 수정 레이어
+    .layer-profile {
+        width: auto;
+        left: 64px;
+        right: 64px;
+
+        @include translate(0, -60%);
+    }
+
+    // 설정
+    .section-manage {
+        padding-top: 25px;
+
+        .section-manage-top {
+            margin-bottom: 30px;
+        }
+
+        .manage-main {
+            @include flex-direction(column);
+        }
+
+        .manage-wrap {
+            order: 2;
+            width: auto;
+            margin-top: 25px;
+        }
+
+        .manage-privacy {
+            order: 1;
+            margin: 25px 0 0 0;
+
+            ul {
+                @include clear;
+                
+                li {
+                    float: left;
+                    width: calc(100% / 3);
+                }
+            }
+        }
+
+        .manage-aside {
+            order: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        .profile-manage {
+            .profile-manage-conts {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    // 인메일
+    .section-inmail {
+        padding-top: 25px;
+
+        .inmail-main {
+            @include flex-direction(column);
+        }
+
+        .inmail-wrap {
+            order: 1;
+            width: auto;
+            margin-top: 25px;
+        }
+
+        .inmail-aside {
+            order: 0;
+            width: auto;
+            padding: 0;
+
+            .inmail-aside-adv {
+                display: none;
+            }
+        }
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    // 프로필
+    .section-profile {
+        @include flex-direction(column);
+        
+        .profile-wrap {
+            width: 100%;
+
+            @include flex(none);
+        }
+
+        .profile-aside {
+            width: 100%;
+            margin-top: 25px;
+            padding: 0;
+
+            @include flex(none);
+            
+        }
+    }
+
+    // 프로필 등록 / 수정 레이어
+    .layer-profile {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        margin-bottom: 10px;
+        padding: 50px 25px;
+
+        @include translate(0, 0);
+
+        .layer-profile-box {
+            .layer-profile-box-main {
+                li {
+                    @include flex-wrap(wrap);
+                    // @include flex-direction(column);
+                    // @include align-items();
+
+                    label {
+                        width: 100%;
+                        padding: 0 0 5px 0;
+                        text-align: left;
+                    }
+
+                    .slt {
+                        width: calc(100% - 75px);
+                    }
+
+                    &.tastyle {
+                        label {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+
+            .layer-profile-box-bot {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    // 설정
+    .section-manage {
+        .profile-manage {
+            @include flex-direction(column);
+
+            .profile-manage-user {
+                width: auto;
+
+                .profile-manage-user-box {
+                    .profile-manage-user-box-info {
+                        .profile-manage-user-box-info-name {
+                            @include fontSize(21px);
+                        }
+
+                        .profile-manage-user-box-info-detail {
+                            @include fontSize(17px);
+                        }
+                    }
+
+                    .profile-manage-user-box-tag {
+                        @include fontSize(16px);
+                    }
+                }
+            }
+
+            .profile-manage-conts {
+                margin: 25px 0 0 0;
+
+                ul {
+                    li {
+                        label {
+                            position: relative;
+                            display: block;
+                            width: auto;
+                            margin-bottom: -8px;
+                            padding: 0 10px;
+                            line-height: normal;
+
+                            span {
+                                display: inline-block;
+                                padding: 0 8px;
+                                background: #fff;
+                            }
+                        }
+
+                        .istyle,
+                        .slt {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.password,
+        &.withdraw {
+            .profile-manage {
+                .profile-manage-user {
+                    display: none;
+                }
+
+                .profile-manage-conts {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .section-profile,
+    .section-manage {
+        // 프로필 상단 내용
+        .profile-top {
+            .profile-top-box {
+                padding-top: 80px;
+
+                .profile-top-box-user {
+                    padding-top: 87px;
+
+                    .profile-top-box-user-head {
+                        padding-left: 15px;
+
+                        .photo {
+                            border-width: 5px;
+                            @include size(102px);
+                        }
+
+                        .btn-photo-edit {
+                            left: 4px;
+                            bottom: -5px;
+                        }
+                    }
+                }
+
+                .profile-top-box-career {
+                    padding: 50px 15px 15px;
+
+                    .profile-top-box-career-grade {
+                        li {
+                            span {
+                                @include fontSize(12px);
+                            }
+
+                            strong {
+                                @include fontSize(15px);
+                            }                       
+                        }
+                    }
+                }
+            }
+        }
+
+        // top tag
+        .profile-tag {
+            ul {
+                li {
+                    float: none;
+                    width: auto;
+                    padding: 5px 0;
+
+                    &:nth-child(2n+0) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .profile-box {
+            position: static;
+            width: auto;
+            margin-top: 25px;
+            padding: 0;
+        }
+
+        // 활동 현황
+        .profile-status {
+            ul {
+                @include clear;
+
+                li {
+                    width: 50%;
+                    float: left;
+                    border-top: 1px dashed #cecece;
+                    border-bottom: 0;
+
+                    &:first-child {
+                        width: 100%;
+                        height: 24px;
+                        padding: 0;
+                        border-top: 0;
+                        border-bottom: 1px solid #444;
+
+                        @include fontSize(16px); 
+
+                        span {
+                            top: 1px;
+                            padding: 0;
+
+                            @include fontSize(13px); 
+                        }                      
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        border-top: 0;
+                    }
+                }
+            }
+        }
+
+        // 헤드헌터, 기업 로그인시
+        &.company {
+            .profile-top {
+                .profile-top-box {
+                    padding-top: 47px;
+
+                    .profile-top-box-user {
+                        padding-top: 54px;
+
+                        .profile-top-box-user-head {
+                            .photo {
+                                height: 50px;
+                                margin-right: 10px;
+                                padding: 10px 10px 7px;
+                            }
+
+                            .name {
+                                @include fontSize(22px);
+                            }
+                        }
+                    }
+
+                    .profile-top-box-career {
+                        padding-top: 45px;
+                    }
+                }
+            }
+
+            .profile-aside {
+                padding-top: 0;
+            }
+        }
+
+        &.candidate {
+            .profile-top {
+                .profile-top-box {
+                    .profile-top-box-user {
+                        .profile-top-box-user-head {
+                            .name {
+                                padding: 0 15px;
+                            }
+                        }
+                    }
+
+                    .profile-top-box-career {
+                        padding-top: 15px
+                    }
+                }
+            }
+        }
+    }
+
+    // 인메일
+    .section-inmail {
+        .inmail-list {
+            .inmail-list-top {
+                // 검색
+                .inmail-list-top-search {
+                    .isearch {
+                        width: 160px;
+                    }
+                }
+
+                .inmail-list-top-btn {
+                    padding-top: 0;
+
+                    .btn {
+                        height: 34px;
+                    }
+                }
+            }
+
+            .inmail-list-board {
+                .board {
+                    thead {
+                        visibility: hidden;
+                        position: absolute;
+                        overflow: hidden;
+                        width: 1%;
+                        height: 1%;
+                        font-size: 1%;
+                        line-height: 1%;
+                        z-index: -1;
+                    }
+
+                    tbody {
+                        tr {
+                            position: relative;
+                            display: block;
+                            padding: 5px 70px 5px 36px;
+                            border-top: 1px solid #cecece;
+                            
+                            @include clear;
+                        }
+                    }
+
+                    td {
+                        display: block;
+                        float: left;
+                        width: 100%;
+                        padding: 5px 0;
+                        border: 0;
+                        text-align: left;
+                        
+                        @include box-sizing();
+
+                        &:first-child {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: auto;
+                            padding: 10px;
+                        }
+
+                        &:last-child {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            width: 70px;
+                            padding: 10px 0;
+                            text-align: center;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

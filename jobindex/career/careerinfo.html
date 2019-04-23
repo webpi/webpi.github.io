@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/jobs.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-jobs">
+                <div class="section-jobs-top">
+                    <h2 class="tit-h2"><span>경력직 정보</span></h2>
+                </div>
+
+                <div class="jobs-main">
+                    <!-- left -->
+                    <div class="jobs-wrap">
+                        <!-- 검색 -->
+                        <div class="cpn-jobs-search" include-html="/component/comm/cpn_jobs_search.html"></div>
+
+                        <div class="jobs-list">
+                            <div class="jobs-list-aside">
+                                <!-- lnb -->
+                                <div class="lnb-list-nav" include-html="/component/career/career_aside_nav.html"></div>
+                                <!-- // lnb -->
+
+                                <!-- 내 관심분야 -->
+                                <div class="cpn-aside-interest" include-html="/component/comm/aside/cpn_aside_interest.html"></div>
+                                <!-- // 최근 관심분야 -->
+
+                                <!-- 최근 검색어 -->
+                                <div class="cpn-aside-searchkeyword" include-html="/component/comm/aside/cpn_aside_searchkeyword.html"></div>
+                                <!-- // 최근 검색어 -->
+                            </div>
+
+                            <div class="jobs-list-box">
+                                <div class="cpn-content-list">
+                                    <article class="cpn-content-list-item curation" include-html="/component/comm/cpn_content_list_item.html"></article>
+
+                                    <article class="cpn-content-list-item curation" include-html="/component/comm/cpn_content_list_item.html"></article>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn-more"><i class="icon-plus-sign-to-add"></i> 더보기</button>
+                        </div>
+                    </div>
+                    <!-- // left -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

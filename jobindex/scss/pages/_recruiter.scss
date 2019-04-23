@@ -1,0 +1,2397 @@
+@charset "utf-8";
+
+.section-recruiter {
+    padding-top: 50px;
+
+    @include flexbox();
+
+    // 상단 차트
+    .recruiter-chart {
+        margin-bottom: 25px;
+
+        .recruiter-chart-list {
+            @include flexbox();
+
+            .chart-itm {
+                overflow: hidden;
+                margin-left: 10px;
+                border: 1px solid #cecece;
+
+                @include flex();
+                @include box-sizing();
+
+                .tit-h3 {
+                    padding: 8px 10px;
+                    border-bottom: 1px solid #cecece;
+                    background: #f9f9f9;
+
+                    @include fontSize(15px);
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .recruiter-main {
+        @include flexbox();
+    }
+
+    .recruiter-wrap {
+        @include col(16);
+
+        .cpn-local-search {
+            margin-bottom: 25px;
+        }
+    }
+
+    // 대쉬보드
+    .recruiter-dashboard {
+        .recruiter-dashboard-chart {
+            margin-top: 25px;
+
+            @include clear;
+
+            .chart-itm {
+                float: left;
+                width: calc((100% - 10px) / 2);
+                margin-left: 10px;
+                border: 1px solid #cecece;
+
+                @include box-sizing();
+
+                .tit-h3 {
+                    padding: 8px 10px;
+                    border-bottom: 1px solid #cecece;
+                    background: #f9f9f9;
+
+                    @include fontSize(15px);
+                }
+
+                &.full {
+                    width: 100%;
+                    margin: 10px 0 0;
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            .chart-board {
+                width: 100%;
+
+                @include box-sizing();
+
+                th {
+                    padding: 10px;
+
+                    @include fontSize(14px);
+                    @include border-style(1px, 1px, 1px, 1px, solid, #cecece #cecece #888 #cecece);
+                }
+
+                td {
+                    padding: 10px;
+                    border: 1px solid #cecece;
+                    // color: #fff;
+                    text-align: center;
+
+                    @include fontSize(14px);
+
+                    &.d5 {
+                        color: #ED553B;
+                    }
+
+                    &.d4 {
+                        color: #F2B134;
+                    }
+
+                    &.d3 {
+                        color: #47AB6C;
+                    }
+
+                    &.d2 {
+                        color: #0894A1;
+                    }
+
+                    &.d1 {
+                        color: #112F41;
+                    }
+                }
+
+                &.fixed {
+                    table-layout: fixed;
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    // 고객사
+    .recruiter-client {
+        .recruiter-client-btn {
+            margin-bottom: 5px;
+            text-align: right;
+
+            .btn-client {
+                display: inline-block;
+                padding: 10px 20px;
+                color: #fff;
+                font-weight: 600;
+                background: $pc1;
+
+                @include fontSize(15px);
+
+                &:hover {
+                    background: $pc1_hover;
+                }
+            }
+        }
+
+        .recruiter-client-head {
+            .tit-h2 {
+                border-bottom: 1px solid #ccc;
+
+                @include fontSize(24px);
+
+                span {
+                    display: inline-block;
+                    margin-bottom: -1px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $bc1;
+                    vertical-align: top;
+                    line-height: 33px;
+                }
+            }
+
+            .cpn-list-sort {
+                margin-top: 10px;
+            }
+        }
+
+        .recruiter-client-body {
+            // 카드형 일때
+            .recruiter-client-list {
+                overflow: hidden;
+            }
+
+            .btn-more {
+                @include btn-more();
+            }
+        }
+
+        // 고객사 등록
+        .recruiter-client-reg {
+            margin-top: 30px;
+
+            .recruiter-client-reg-item {
+                margin-top: 25px;
+
+                .tit-h3 {
+                    margin-bottom: 10px;
+
+                    @include fontSize(16px);
+                }
+
+                &.basic {
+                    margin-top: 0;
+                }
+            }
+
+            .cpn-board-col {
+                td {
+                    .istyle {
+                        width: 100%;
+                    }
+
+                    .editor {
+                        min-height: 100px;
+                    }
+
+                    .itastyle {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .recruiter-client-reg-bot {
+                margin-top: 20px;
+                text-align: center;
+
+                .btn-submit {
+                    padding: 13px 20px;
+                    border: 0;
+                    color: #fff;
+                    font-weight: 600;
+                    background: $pc1;
+
+                    @include fontSize(16px);
+
+                    &:hover {
+                        background: $pc1_hover;
+                    }
+                }
+            }
+        }
+    }
+
+    // 프로젝트
+    .recruiter-project {
+        .recruiter-project-btn {
+            margin-bottom: 5px;
+            text-align: right;
+
+            .btn-project {
+                display: inline-block;
+                padding: 10px 20px;
+                color: #fff;
+                font-weight: 600;
+                background: $pc1;
+
+                @include fontSize(15px);
+
+                &:hover {
+                    background: $pc1_hover;
+                }
+            }
+        }
+
+        .recruiter-project-body {
+            margin-top: 10px;
+
+            .btn-more {
+                @include btn-more();
+            }
+        }
+
+        // 상세보기
+        .recruiter-project-view {
+            .project-view-head {
+                .tit-h3 {
+                    min-height: 44px;
+                    padding-bottom: 10px;
+                    font-weight: normal;
+
+                    @include fontSize(24px);
+                    @include box-sizing();
+                }
+            }
+
+            .project-view-info {
+                @include clear;
+
+                .view-info-lft {
+                    position: relative;
+                    float: left;
+                    
+                    @include col(16);
+                    @include box-sizing();
+
+                    .info-lft-main {
+                        position: relative;
+                        padding: 20px;
+                        border: 1px solid #cecece;
+                        border-radius: 3px;
+
+                        .tit-h4 {
+                            position: relative;
+                            margin-bottom: 15px;
+                            padding-bottom: 14px;
+                            color: $pc1;
+
+                            @include fontSize(18px);
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 60px;
+                                height: 1px;
+                                font-size: 0;
+                                background: #000;
+                                line-height: 0;
+                            }
+                        }
+
+                        .private {
+                            position: absolute;                        
+                            right: 20px;
+                            top: 20px;
+                            padding: 3px 5px;
+                            color: #fff;
+                            border-radius: 2px;
+
+                            @include fontSize(12px);
+
+                            &.open {
+                                background: $pc1;
+                            }
+
+                            &.close {
+                                background: $pc2;
+                            }
+                        }
+                    }
+
+                    .lft-main-board {
+                        .main-board {
+                            width: 100%;
+
+                            th {
+                                padding: 5px;
+                                text-align: right;
+
+                                @include fontSize(15px);
+
+                                &.vt {
+                                    vertical-align: top;
+                                }
+                            }
+
+                            td {
+                                padding: 5px 10px;
+                                color: $fc2;
+
+                                @include fontSize(15px);
+                                @include wordwrap();
+
+                                .list-wrap {
+                                    position: relative;
+                                    
+                                    .list {
+                                        li {
+                                            margin-top: 4px;
+
+                                            &:first-child {
+                                                margin-top: 0;
+                                            }
+                                        }
+                                    }
+
+                                    .btn-list-more {
+                                        position: absolute;
+                                        right: 0;
+                                        top: -4px;
+                                        height: 25px;
+                                        padding: 3px 5px;
+                                        border: 1px solid #cecece;
+                                        color: $fc2;
+                                        background: #fff;
+
+                                        @include fontSize(13px);
+                                    }
+
+                                    &.jd-list {
+                                        .list {
+                                            li {
+                                                display: none;
+
+                                                &:first-child {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 종료내역
+                    .info-lft-close {
+                        position: relative;
+                        margin-top: 10px;
+                        padding: 20px;
+                        border: 1px solid #cecece;
+                        border-radius: 3px;
+
+                        .tit-h4 {
+                            position: relative;
+
+                            @include fontSize(16px);
+                        }
+
+                        .lft-box-list {
+                            li {
+                                & + li {
+                                    margin-top: 8px;
+                                }
+                            }
+                        }
+
+                        .btn-close-more {
+                            position: absolute;
+                            right: 20px;
+                            top: 15px;
+                            border: 1px solid #cecece;
+                            color: $fc2;
+                            background: #fff;
+
+                            @include fontSize(14px);
+                            @include size(28px);
+                        }
+                    }
+
+                    // 빌링내역
+                    .info-lft-billing {
+                        position: relative;
+                        margin-top: 10px;
+                        padding: 20px;
+                        border: 1px solid #cecece;
+                        border-radius: 3px;
+
+                        .tit-h4 {
+                            background: #fff;
+
+                            @include fontSize(16px);
+                        }
+
+                        .cpn-board-row {
+                            td {
+                                .btn-billing {
+                                    padding: 3px;
+                                    border: 1px solid #cecece;
+                                    color: $fc2;
+                                    background: #fff;
+                                    
+                                    @include fontSize(13px);
+                                }
+                            }
+
+                            tbody tr:last-child td {
+                                border-bottom: 0;
+                            }
+                        }
+
+                        .btn-billing-more {
+                            position: absolute;
+                            right: 20px;
+                            top: 15px;
+                            border: 1px solid #cecece;
+                            color: $fc2;
+                            background: #fff;
+
+                            @include fontSize(14px);
+                            @include size(28px);
+                        }
+                    }
+
+                    .info-lft-box {
+                        display: none;
+                        margin-top: 15px;
+                    }
+
+                    .info-lft-btn {
+                        position: absolute;
+                        right: 0;
+                        top: -30px;
+                        font-size: 0;
+
+                        .btn {
+                            display: inline-block;
+                            padding: 5px 10px;
+                            border: 1px solid #cecece;
+                            color: $fc2;
+                            background: #fff;
+                            vertical-align: top;
+
+                            @include fontSize(14px);
+
+                            & + .btn {
+                                margin-left: 3px;
+                            }
+                        }
+                    }
+                }
+
+                .view-info-rgt {
+                    float: right;
+                    padding-left: 30px;
+
+                    @include col(6);
+                    @include box-sizing();
+
+                    .info-rgt-box {
+                        margin-top: 10px;
+                        padding: 20px 30px;
+                        border: 1px solid #cecece;
+                        border-radius: 3px;
+
+                        .rgt-box-cnt {
+                            li {
+                                position: relative;
+                                margin-top: 12px;
+
+                                @include fontSize(15px);
+
+                                span {
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    padding: 2px 6px;
+                                    border-radius: 100px;
+                                    color: #fff;
+                                    background: #72c02c;
+
+                                    @include translate(0, -50%);
+                                    @include fontSize(14px);
+                                }
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+
+                        .rgt-box-sum {
+                            li {
+                                margin-top: 20px;
+
+                                @include fontSize(15px);
+
+                                .bar-prgs {
+                                    position: relative;
+                                    height: 3px;
+                                    margin-top: 10px;
+                                    background: rgba(0, 0, 0, 0.1);
+
+                                   .bar-prgs-in{
+                                       display: inline-block;
+                                       height: 3px;
+                                       font-size: 0;
+                                       line-height: 0;
+                                       vertical-align: top;
+                                       background: #dc3545;
+
+                                       .t {
+                                           position: absolute;
+                                           right: 0;
+                                           top: -24px;
+                                           color: $fc2;
+                                           line-height: 1;
+
+                                           @include fontSize(14px);
+                                       }
+                                   }
+                                }
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+
+            .project-view-progress {
+                margin-top: 25px;
+                
+                .tit-h4 {
+                    @include fontSize(16px);
+                }
+
+                .view-progress-box {
+                    margin-top: 10px;
+
+                    @include flexbox();
+
+                    .progress-box-step {
+                        position: relative;
+                        margin-right: 10px;
+                        border: 1px solid #cecece;
+                        border-radius: 4px;
+
+                        @include box-sizing();
+                        @include flex();
+
+                        .box-step-in {
+                            padding: 20px 30px;
+                        }
+
+                        .tit-h5 {
+                            overflow: hidden;
+                            padding: 12px 20px 10px;
+                            border-bottom: 1px solid #eaeaea;
+                            font-weight: 600;
+                            background-image: linear-gradient(#fff,#fff 85%,#f2f2f2);
+                            border-radius: 4px 4px 0 0;
+
+                            @include fontSize(15px);
+                        }
+
+                        .box-step-list {
+                            li {
+                                margin-top: 5px;
+                                color: $fc2;
+
+                                @include fontSize(15px);
+
+                                .name {
+                                    color: $pc1;
+                                    font-weight: 600;
+                                }
+
+                                .badge {
+                                    // padding-bottom: 2px;
+                                    vertical-align: 1px;
+                                }
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+
+                        .right-arrow {
+                            position: absolute;
+                            right: -23px;
+                            top: 50%;
+                            margin-top: -18px;
+                            padding-top: 8px;
+                            border: 1px solid #cecece;
+                            border-radius: 100px;
+                            color: $fc3;
+                            background: #fff;
+                            text-align: center;
+                            z-index: 1;
+
+                            @include size(36px);
+                            @include box-sizing();
+
+                            i {
+                                @include fontSize(16px);
+                            }
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .project-view-history {
+                position: relative;
+                margin-top: 25px;
+
+                .view-history-top {
+
+                    @include flexbox();
+                    .cpn-tab-wrap {
+                        @include flex();
+                    }
+
+                    .btn-history {
+                        height: 45px;
+                        padding: 10px 20px;
+                        border: 0;
+                        color: #fff;
+                        font-weight: 600;
+                        background: $pc1;
+
+                        @include fontSize(16px);
+
+                        &:hover {
+                            background: $pc1_hover;
+                        }
+                    }
+                }
+
+                .view-history-main {
+                    margin-top: 30px;
+
+                    // 웹지원자
+                    .history-main-web {
+                        .main-web-board {
+                            width: 100%;
+
+                            th {
+                                padding: 10px;
+                                border-bottom: 1px solid #cecece;
+
+                                @include fontSize(14px);
+                            }
+
+                            td {
+                                padding: 10px;
+                                border-bottom: 1px solid #eaeaea;
+                                color: $fc2;
+                                text-align: center;
+
+                                @include fontSize(14px);
+
+                                .mo {
+                                    display: none;
+                                }
+                            }
+
+                            tr {
+                                &:last-child td {
+                                    border-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btn-more {
+                    @include btn-more();
+                }
+            }
+        }
+
+        // 프로젝트 등록
+        .recruiter-project-write {
+            .tit-h3 {
+                border-bottom: 1px solid #ccc;
+
+                @include fontSize(24px);
+
+                span {
+                    display: inline-block;
+                    margin-bottom: -1px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $bc1;
+                    vertical-align: top;
+                    line-height: 33px;
+                }
+            }
+
+            .project-write-top {
+                margin-top: 30px;
+
+                ol {
+                    @include flexbox();                   
+
+                    li {
+                        position: relative;
+                        height: 40px;
+                        margin-right: 5px;
+                        padding: 10px 10px 10px 30px;
+                        color: #fff;
+                        background: $bc1;
+                        line-height: 20px;
+
+                        @include box-sizing();
+                        @include fontSize(16px);
+                        @include flex();
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 20px 0 20px 10px;
+		                    border-color: transparent #fff transparent;
+                        }
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            right: -10px;
+                            top: 0;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 20px 0 20px 10px;
+		                    border-color: transparent $bc1 transparent;
+                            z-index: 1;
+                        }
+
+                        &:last-child {
+                            margin-right: 10px;
+                        }
+
+                        &.active {
+                            font-weight: 600;
+                            background: $pc2;
+
+                            &:after {
+                                border-color: transparent $pc2 transparent;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .project-write-main {
+                .write-main-dsc {
+                    margin-top: 25px;
+                    color: $pc1;
+
+                    @include fontSize(18px);
+                }
+
+                .write-main-box {
+                    margin-top: 15px;
+
+                    .cpn-board-col {
+                        td {
+                            .istyle {
+                                width: 100%;
+                                height: 34px;
+                                padding: 4px 10px;
+                                border: 1px solid #cecece;
+
+                                @include box-sizing();
+                                @include fontSize(15px);
+                            }
+
+                            .itastyle {
+                                display: block;
+                                width: 100%;
+                            }
+
+                            .icalendar-group {
+                                .icalendar {
+                                    vertical-align: middle;
+                                }
+
+                                .icheck {
+                                    margin-left: 15px;
+                                    vertical-align: middle;
+
+                                    label {
+                                        @include fontSize(14px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .tit-h5 {
+                        margin: 25px 0 10px;
+
+                        @include fontSize(15px);
+                    }
+
+                    .main-box-preview {
+                        .tit-h5 {
+                            margin: 0 0 10px;
+                        }
+
+                        .box-preview-jobs {
+                            overflow: hidden;
+                            position: relative;
+                            padding: 15px 30px;
+                            border: 1px solid #cacaca;
+                            border-radius: 4px;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                left: -25%;
+                                right: -25%;
+                                top: -25%;
+                                bottom: -25%;
+                                width: 150%;
+                                height: 150%;
+                                z-index: 1;
+                            }
+                        }
+                    }
+
+                    .main-box-product {
+                        margin-top: 25px;
+
+                        .tit-h5 {
+                            margin: 0 0 10px;
+                        }
+
+                        .box-product-list {
+                            @include flexbox();
+
+                            .product-list-item {
+                                overflow: hidden;
+                                position: relative;
+                                margin-right: 10px;
+                                background: #f4f4f4;
+                                text-align: center;
+
+                                @include flex();
+                                @include transition(transform .2s ease-in-out);
+
+                                dl {
+                                    dt {
+                                        padding: 10px;
+                                        color: rgba(255,255,255,0.8);
+                                        font-weight: 600;
+                                        // background: $pc1;
+                                        background: $bc3;
+
+                                        @include fontSize(15px);
+                                        @include rounded(4px, 0, 0, 4px);
+                                    }
+
+                                    dd {
+                                        padding: 0 20px 20px;
+                                        color: $fc2;
+                                        line-height: 1.5;
+
+                                        @include fontSize(14px);
+                                        @include wordwrap();
+
+                                        ul {
+                                            li {
+                                                &.price {
+                                                    padding: 15px 0;
+                                                    color: $pc4;
+
+                                                    @include fontSize(24px);
+
+                                                    small {
+                                                        font-family: 'Nanum Gothic',sans-serif,"나눔 고딕";
+                                                    }
+
+                                                    em {
+                                                        @include fontSize(12px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                [type=radio] {
+                                    position: absolute;
+                                    visibility: hidden;
+                                    z-index: -1;
+                                    
+                                    @include opacity(0);
+
+                                    &:checked ~ dl dt {
+                                        color: rgba(255,255,255,1);
+                                        background: $pc1;
+                                    }         
+                                }
+
+                                label {
+                                    position: absolute;
+                                    width: 150%;
+                                    height: 150%;
+                                    left: -25%;
+                                    top: -25%;
+                                    right: -25%;
+                                    bottom: -25%;
+                                    z-index: 1;
+                                }
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+
+                                &:hover,
+                                &:focus {
+                                    @include transform(scale(1.04));
+                                }
+                            }
+                        }
+
+                        .box-product-price {
+                            margin-top: 25px;
+                            padding: 25px 20px;
+                            background: #ecf3fd;
+
+                            @include flexbox();
+                            @include align-items(center);
+                            @include border-style(2px, 0, 2px, 0, solid, $pc1);
+
+                            .product-price-date {
+                                @include flex();
+                                @include clear;
+
+                                .t {
+                                    float: left;
+                                    margin-right: 15px;
+                                    font-weight: 600;
+                                    line-height: 34px;
+
+                                    @include fontSize(16px);
+                                }
+
+                                .icalendar {
+                                    float: left;
+                                }
+                            }
+
+                            .product-price-sum {
+                                @include fontSize(18px);
+
+                                .price-sum-product {
+                                    margin-bottom: 10px;
+                                    color: $fc2;
+                                    text-align: right;
+
+                                    @include fontSize(16px);
+
+                                    strong {
+                                        color: $pc1;
+                                    }
+                                }
+
+                                .day {
+                                    font-weight: 600;
+                                    color: $pc1;
+
+                                    // @include fontSize(24px);
+                                }
+
+                                .price {
+                                    margin-left: 15px;
+                                    color: $pc2;
+
+                                    @include fontSize(26px);
+
+                                    em {
+                                        color: $fc2;
+
+                                        @include fontSize(18px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .main-box-bot {
+                        margin-top: 20px;
+                        text-align: center;
+
+                        .btn-prev {
+                            min-width: 120px;
+                            padding: 12px 20px;
+                            border: 1px solid #ccc;
+                            font-weight: 600;
+                            color: $fc2;
+                            background: #fff;
+                            
+                            @include fontSize(16px);
+
+                            &:hover {
+                                background: #f9f9f9;
+                            }
+                        }
+
+                        .btn-submit {
+                            min-width: 120px;
+                            padding: 13px 20px;
+                            border: 0;
+                            color: #fff;
+                            font-weight: 600;
+                            background: #418ded;
+                            
+                            @include fontSize(16px);
+
+                            &:hover {
+                                background: $pc1_hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 후보자
+    .recruiter-candidate {
+        .recruiter-candidate-btn {
+            margin-bottom: 5px;
+            text-align: right;
+
+            .btn-candidate {
+                display: inline-block;
+                padding: 10px 20px;
+                color: #fff;
+                font-weight: 600;
+                background: $pc1;
+
+                @include fontSize(15px);
+
+                &:hover {
+                    background: $pc1_hover;
+                }
+            }
+        }
+
+        .recruiter-candidate-head {
+            .tit-h2 {
+                border-bottom: 1px solid #ccc;
+
+                @include fontSize(24px);
+
+                span {
+                    display: inline-block;
+                    margin-bottom: -1px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $bc1;
+                    vertical-align: top;
+                    line-height: 33px;
+                }
+            }
+
+            .cpn-list-sort {
+                margin-top: 10px;
+            }
+        }
+
+        .recruiter-candidate-body {
+            margin-top: 15px;
+        }
+
+        // 후보자 등록
+        .recruiter-candidate-write {
+            .recruiter-candidate-body {
+                margin-top: 30px;
+            }
+
+            .recruiter-candidate-top {
+                .tit-h3 {
+                    margin-bottom: 10px;
+
+                    @include fontSize(16px);
+                }
+
+                .cpn-board-col {
+                    td {
+                        .istyle {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .recruiter-candidate-bot {
+                margin-top: 20px;
+                text-align: center;
+
+                .btn-submit {
+                    padding: 13px 20px;
+                    border: 0;
+                    color: #fff;
+                    font-weight: 600;
+                    background: $pc1;
+
+                    @include fontSize(16px);
+
+                    &:hover {
+                        background: $pc1_hover;
+                    }
+                }
+            }
+        }
+
+        // 사전인터뷰관리
+        .recruiter-candidate-interview {
+            .recruiter-candidate-body {
+                .cpn-board-row {
+                    td {
+                        .date {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 사전인터뷰등록
+        .recruiter-interview-write {
+            .recruiter-candidate-body {
+                .cpn-board-col {
+                    td {
+                        .itastyle {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .recruiter-candidate-bot {
+                margin-top: 20px;
+                text-align: center;
+
+                .btn-submit {
+                    padding: 13px 20px;
+                    border: 0;
+                    color: #fff;
+                    font-weight: 600;
+                    background: $pc1;
+
+                    @include fontSize(16px);
+
+                    &:hover {
+                        background: $pc1_hover;
+                    }
+                }
+            }
+        }
+    }
+
+    // aside
+    .recruiter-aside {
+        padding-left: 30px;
+        
+        @include col(6);
+        @include box-sizing();
+
+        // 스케쥴
+        .recruiter-aside-schedule {
+            .tit-h3 {
+                height: 24px;
+                border-bottom: 1px solid #444;
+
+                @include fontSize(16px);
+            }
+
+            .recruiter-aside-schedule-list {
+                .recruiter-aside-schedule-list-dsc {
+                    padding: 10px 5px;
+                    color: $fc3;
+
+                    @include fontSize(13px);
+                }
+
+                ol {
+                    li {
+                        position: relative;
+                        padding: 8px 60px 8px 34px;
+                        border-top: 1px solid #eaeaea;
+                        line-height: 18px;
+
+                        .number {
+                            position: absolute;
+                            left: 0;
+                            top: 5px;
+                            border: 1px solid $bc1;
+                            background: #fff;
+                            text-align: center;
+                            line-height: 22px;
+
+                            @include size(24px);
+                            @include fontSize(13px);
+                            @include box-sizing();
+                        }
+
+                        .date {
+                            position: absolute;
+                            right: 5px;
+                            top: 5px;
+                            color: $fc3;
+                            line-height: 24px;
+
+                            @include fontSize(12px);
+                        }
+
+                        &:first-child {
+                            border-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 히스토리
+        .recruiter-aside-history {
+            margin-top: 25px;
+
+            .tit-h3 {
+                height: 24px;
+                border-bottom: 1px solid #444;
+
+                @include fontSize(16px);
+            }
+
+            .recruiter-aside-history-conts {
+                position: relative;
+                margin-top: 10px;
+
+                ul {
+                    li {
+                        margin-top: 5px;
+                        // border-top: 1px solid #ddd;
+                        // background: #fff;
+
+                        @include flexbox();
+
+                        .recruiter-aside-history-conts-date {
+                            position: relative;
+                            width: 75px;
+                            margin-right: 40px;
+                            padding: 5px;
+                            border-radius: 3px;
+                            // color: #fff;
+                            // background: #ff891e;
+                            text-align: center;
+
+                            @include box-sizing();
+                            @include flex(none);
+
+                            .time,
+                            .dsc {
+                                display: block;
+                                padding: 3px 0;
+                                text-align: right;
+                            }
+
+                            .time {
+                                font-weight: 600;
+
+                                @include fontSize(13px);
+                            }
+
+                            .dsc {
+                                color: $fc3;
+
+                                @include fontSize(12px);
+                            }
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                right: -19px;
+                                top: 18px;
+                                border-radius: 7px;
+                                background: #eaeaea;
+
+                                @include size(14px);
+                            }
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                right: -15px;
+                                top: 22px;
+                                border-radius: 3px;
+                                background: $pc3;
+
+                                @include size(6px);
+                            }
+                        }
+
+                        .recruiter-aside-history-conts-noti {
+                            position: relative;
+                            background: #f7f7f7;
+
+                            @include flex();
+
+                            dl {
+                                padding: 10px 15px;
+
+                                dt {
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    padding-bottom: 6px;
+                                    border-bottom: 1px solid #fff;
+                                    font-weight: 600;
+
+                                    @include fontSize(14px);
+
+                                    &:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                        height: 1px;
+                                        font-size: 0;
+                                        background: #dedede;
+                                        line-height: 0;
+                                    }
+                                }
+
+                                dd {
+                                    margin-top: 5px;
+
+                                    @include fontSize(13px);
+
+                                    strong {
+                                        color: $pc1;
+
+                                        @include fontSize(14px);
+                                    }
+
+                                    span {
+                                        color: $pc3;
+                                        font-weight: 600;
+
+                                        @include fontSize(14px);
+                                    }
+
+                                    em {
+                                        color: $pc2;
+                                        font-weight: 600;
+
+                                        @include fontSize(14px);
+                                    }
+
+                                    &:first-child {
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                left: -15px;
+                                top: 10px;
+
+                                @include border-style(15px, 15px, 15px, 0, solid, transparent #f7f7f7 transparent transparent);
+                            }
+                        }
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 85px;
+                    top: 0;
+                    width: 3px;
+                    height: 100%;
+                    background: #f7f7f7;
+                }
+            }
+        }
+
+        .recruiter-aside-contact {
+            position: relative;
+            margin-top: 25px;
+
+            .tit-h3 {
+                @include fontSize(16px);
+            }
+
+            .recruiter-aside-contact-list {
+                margin-top: 10px;
+            }
+
+            .btn-contact {
+                position: absolute;
+                right: 0;
+                top: -4px;
+                border: 1px solid #ccc;
+                color: $fc3;
+                background: #fff;
+
+                @include size(26px);
+
+                i {
+                    @include fontSize(11px);
+                }
+
+                &:hover {
+                    border-color: $pc1;
+                    color: $pc1;
+                }
+            }
+        }
+
+        // 광고
+        .recruiter-aside-adv {
+            margin-top: 25px;
+        }
+    }
+
+    // flex 세로정렬
+    &.column {
+        @include flex-direction(column);
+    }
+}
+
+.cpn-aside-recruiterstatus {
+    margin-top: 25px;
+
+    ul {
+        li {
+            position: relative;
+            height: 41px;
+            padding: 12px 10px;
+            border-bottom: 1px dashed #cecece;
+
+            @include box-sizing();
+
+            span {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                padding: 2px 10px;
+                border-radius: 20px;
+                color: #fff;
+                background: #72c02c;
+                // line-height: normal;
+
+                @include translate(0, -50%);
+
+                i {
+                    line-height: inherit;
+
+                    @include fontSize(10px);
+                }
+            }
+
+            &:first-child {
+                border-bottom: 1px solid #333;
+                font-weight: 600;
+                
+                @include fontSize(15px);
+
+                span {
+                    background: $pc4;
+
+                    @include fontSize(14px);
+                }
+            }
+        }
+    }
+}
+
+// 프로젝트 정보
+.cpn-aside-project {
+    ul {
+        li {
+            position: relative;
+            height: 41px;
+            padding: 12px 10px;
+            border-bottom: 1px dashed #cecece;
+
+            @include box-sizing();
+
+            span {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                padding: 2px 10px;
+                border-radius: 20px;
+                color: #fff;
+                background: #72c02c;
+                // line-height: normal;
+
+                @include translate(0, -50%);
+
+                i {
+                    line-height: inherit;
+
+                    @include fontSize(10px);
+                }
+            }
+
+            &:first-child {
+                border-bottom: 1px solid #333;
+                font-weight: 600;
+                
+                @include fontSize(15px);
+
+                span {
+                    background: $pc4;
+
+                    @include fontSize(14px);
+                }
+            }
+        }
+    }
+}
+
+// 빌링관리 레이어
+.layer-project-billing {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 320px;
+    max-width: 640px;
+    width: 640px;
+    padding: 50px;
+    background: #fff;
+
+    @include translate(-50%, -60%);
+    @include rounded(8px, 8px, 8px, 8px);
+    @include box-sizing();
+
+    .tit-h2 {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid $pc1;
+        text-align: center;
+
+        @include fontSize(28px);
+    }
+
+    .project-billing-box {
+        .billing-box-board {
+            width: 100%;
+
+            th {
+                padding: 5px 10px;
+                white-space: nowrap;
+                text-align: right;
+
+                @include fontSize(14px);
+            }
+
+            td {
+                padding: 5px 10px;
+
+                @include fontSize(14px);
+
+                .istyle {
+                    width: 100%;
+                    height: 34px;
+                    border: 1px solid #ccc;
+                    padding: 3px 10px;
+                    vertical-align: middle;
+
+                    @include box-sizing();
+
+                    &.flex {
+                        width: calc(100% - 34px);
+                        text-align: right;
+
+                        & + em {
+                            display: inline-block;
+                            color: $fc2;
+                            text-align: center;
+                            vertical-align: middle;
+                            line-height: 34px;
+
+                            @include size(34px);
+                            @include fontSize(13px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 프로젝트 종료 레이어
+.layer-project-close {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 320px;
+    max-width: 640px;
+    width: 640px;
+    padding: 50px;
+    background: #fff;
+
+    @include translate(-50%, -50%);
+    @include rounded(8px, 8px, 8px, 8px);
+    @include box-sizing();
+
+    .tit-h2 {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid $pc1;
+        text-align: center;
+
+        @include fontSize(28px);
+    }
+
+    .project-close-box {
+        .close-box-board {
+            width: 100%;
+
+            > tbody {
+                > tr {
+                    > th {
+                        padding: 10px;
+                        white-space: nowrap;
+                        text-align: right;
+
+                        @include fontSize(14px);
+
+                        &.vt {
+                            padding-top: 19px;
+                            vertical-align: top;
+                        }
+                    }
+
+                    > td {
+                        padding: 10px;
+
+                        @include fontSize(14px);
+
+                        .radio-group {
+                            padding: 9px 0;
+                        }
+
+                        .td-list {
+                            li {
+                                margin-top:5px;
+
+                                @include fontSize(13px);
+
+                                i {
+                                    margin-right: 3px;
+                                    vertical-align: middle;
+                                }
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+
+                        .itastyle {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .close-box-candidate-board {
+            width: 100%;
+            border: 1px solid #cacaca;
+
+            th {
+                padding: 10px;
+                border-bottom: 1px solid #cecece;
+                background: #f4f4f4;
+            }
+
+            td {
+                padding: 5px;
+                // border-bottom: 1px solid #cecece;
+                text-align: center;
+
+                .btn-del {
+                    padding: 5px;
+                    border: 1px solid #ccc;
+                    color: $fc2;
+                    background: #fff;
+
+                    @include fontSize(13px);
+                }
+            }
+
+            tr:last-child td {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    .section-recruiter {
+        padding-top: 25px;
+        
+        @include flex-direction(column);
+
+        .recruiter-wrap {
+            width: auto;
+        }
+
+        // aside
+        .recruiter-aside {
+            width: auto;
+            margin-top: 25px;
+            padding: 0;
+        }
+
+        .recruiter-main {
+            .recruiter-wrap {
+                @include col(15);
+
+                // 고객사
+                .cpn-recruiter-client-card {
+                    float: none;
+                    width: auto;
+                }
+            }
+
+            // aside
+            .recruiter-aside {
+                margin-top: 0;
+                padding-left :30px;
+
+                @include col(7);
+            }
+        }
+
+        // 프로젝트
+        .recruiter-project {
+            // 프로젝트 보기
+            .recruiter-project-view {
+                .project-view-info {
+                    .view-info-lft {
+                        @include col(15);
+                    }
+
+                    .view-info-rgt {
+                        @include col(7);
+                    }
+                }
+            }
+
+            // 프로젝트 등록
+            .recruiter-project-write {
+                .project-write-main {
+                    .write-main-box {
+                        .main-box-product {
+                            .box-product-list {
+                                @include flex-direction(column);
+
+                                .product-list-item {
+                                    margin: 0 0 10px 0;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+
+                            .box-product-price {
+                                .product-price-date {
+                                    .t {
+                                        float: none;
+                                        display: block;
+                                        margin: 0;
+                                    }
+
+                                    .icalendar-group {
+                                        .icalendar {
+                                            margin: 0 0 5px 0;
+
+                                            &:last-child {
+                                                margin: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 후보자
+        .recruiter-candidate {
+            .recruiter-candidate-privacy {
+                .cpn-board-row {
+                    thead {
+                        display: none;
+                    }
+
+                    tbody {
+                        display: block;
+                        // border-top: 1px solid #ccc;
+
+                        tr {
+                            display: block;
+
+                            td {
+                                display: block;
+                                padding: 3px 10px;
+                                border: 0;
+                                text-align: left;
+
+                                &.date1:before {
+                                    content: "기준일 : "
+                                }
+
+                                &.date2:before {
+                                    content: "기간 : "
+                                }
+
+                                &.date3:before {
+                                    content: "마감일 : "
+                                }
+
+                                &:first-child {
+                                    padding-top: 10px;
+                                }
+
+                                &:last-child {
+                                    padding-bottom: 10px;
+                                    border-bottom: 1px solid #cecece;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 프로젝트 빌링 레이어
+    .layer-project-billing {
+        width: auto;
+        left: 64px;
+        right: 64px;
+
+        @include translate(0, -50%);
+    }
+
+    // 프로젝트 종료 레이어
+    .layer-project-close {
+        width: auto;
+        left: 64px;
+        right: 64px;
+        padding: 50px 25px;
+
+        @include translate(0, -50%);
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    .section-recruiter {
+        // 상단 차트
+        .recruiter-chart {
+            overflow: hidden;
+
+            .recruiter-chart-list {
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+
+                .chart-itm {
+                    width: 100%;
+                    @include flex(none);
+
+                }
+            }
+        }
+
+         // 대쉬보드
+        .recruiter-dashboard {
+            .recruiter-dashboard-chart {
+                .chart-itm {
+                    float: none;
+                    width: 100%;
+                    margin: 10px 0 0 0;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        // aside
+        .recruiter-aside {
+            width: auto;
+            margin-top: 25px;
+            padding: 0;
+
+            // 광고
+            .recruiter-aside-adv {
+                display: none;
+            }
+        }
+
+        .recruiter-main {
+            @include flex-direction(column);
+
+            .recruiter-wrap {
+                order: 1;
+                width: auto;
+                margin-top: 25px;
+            }
+
+            // 고객사
+            .recruiter-client {
+                // 고객사 등록
+                .recruiter-client-reg {
+                    .cpn-board-col {
+                        td {
+                            // 날짜입력
+                            .icalendar-group {
+                                .icalendar {
+                                    display: block;
+                                    margin: 5px 0 0 0;
+
+                                    &:first-child {
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // aside
+            .recruiter-aside {
+                order: 0;
+                width: auto;
+                padding: 0;
+            }
+        }
+
+        // 프로젝트
+        .recruiter-project {
+            // 상세보기
+            .recruiter-project-view {
+                .project-view-info {
+                    .view-info-lft {
+                        float: none;
+                        width: auto;
+
+                        .info-lft-main {
+                            .lft-main-board {
+                                .main-board {
+                                    colgroup col {
+                                        width: auto !important;
+                                    }
+
+                                    th {
+                                        white-space: nowrap;
+                                    }
+
+                                    .jd-list {
+                                        li {
+                                            @include truncate();
+
+                                            &:first-child {
+                                                margin-right: 64px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .info-lft-btn {
+                            position: static;
+                            margin-top: 15px;
+                            text-align: center;
+
+                            .btn {
+                                padding: 10px 15px;
+                                line-height: 18px;
+
+                                @include fontSize(16px);
+                            }
+                        }
+                    }
+
+                    .view-info-rgt {
+                        float: none;
+                        width: auto;
+                        margin-top: 25px;
+                        padding: 0;
+                    }
+                }
+
+                // 프로젝트 진행현황
+                .project-view-progress {
+                    .view-progress-box {
+                        @include flex-direction(column);
+
+                        .progress-box-step {
+                            margin: 10px 0 0 0;
+
+                            .right-arrow {
+                                display: none;
+                            }
+
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+
+                // 프로젝트 히스토리
+                .project-view-history {
+                    .view-history-top {
+                        @include flex-direction(column);
+
+                        .cpn-tab-wrap {
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    .view-history-main {
+                        // 웹지원자
+                        .history-main-web {
+                            .main-web-board {
+                                thead {
+                                    overflow: hidden;
+                                    position: absolute;
+                                    visibility: hidden;
+                                    width: 1%;
+                                    height: 1%;
+                                    z-index: -10;
+
+                                    @include opacity(0);
+                                }
+
+                                tbody {
+                                    tr {
+                                        display: block;
+
+                                        td {
+                                            display: block;
+                                            padding: 5px 10px;
+                                            border-bottom: 0;
+                                            text-align: left;
+
+                                            .mo {
+                                                display: initial;
+                                            }
+
+                                            &:first-child {
+                                                padding-top: 10px;
+                                                border-top: 1px solid #eaeaea;
+                                            }
+
+                                            &:last-child {
+                                                padding-bottom: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 프로젝트 등록
+            .recruiter-project-write {
+                .project-write-top {
+                    ol {
+                        li {
+                            padding: 10px 5px 10px 15px;
+                            
+                            @include fontSize(13px);
+                        }
+                    }
+                }
+
+                .project-write-main {
+                    .write-main-box {
+                        .cpn-board-col {
+                            td {
+                                .icalendar-group {
+                                    &.period {
+                                        .icalendar {
+                                            display: block;
+                                            margin: 0 0 5px 0;
+                                        }
+
+                                        .icheck {
+                                            margin-left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .main-box-product {
+                            .box-product-price {
+                                @include flex-direction(column);
+
+                                .product-price-date {
+                                    width: 100%;
+
+                                    @include flex(none);
+
+                                    .t {
+                                        float: none;
+                                        display: block;
+                                        margin: 0;
+                                    }
+
+                                    .icalendar-group {
+                                        .icalendar {
+                                            width: calc((100% - 5px) / 2);
+                                            margin: 0 5px 0 0;
+
+                                            .icalendar-input {
+                                                width: calc(100% - 34px);
+                                            }
+
+                                            &:last-child {
+                                                margin: 0;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .product-price-sum {
+                                    width: 100%;
+                                    margin-top: 20px;
+                                    text-align: right;
+
+                                    @include flex(none);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 후보자
+        .recruiter-candidate {
+            // 후보자 등록
+            .recruiter-candidate-write {
+                .cpn-board-col {
+                    tr {
+                        @include flexbox();
+                        @include flex-wrap(wrap);
+
+                        th {
+                            width: 80px;
+                            line-height: 34px;
+
+                            @include box-sizing();
+                            @include flex(none);
+                        }
+
+                        td {
+                            width: calc(100% - 80px);
+
+                            @include box-sizing();
+                            // @include flex();
+                            
+                            .radio-group {
+                                padding: 9px 0;
+                            }
+
+
+                        }
+
+                        &:first-child {
+                            th:first-child,
+                            th:first-child + td {
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 사전인터뷰관리
+            .recruiter-candidate-interview {
+                .recruiter-candidate-body {
+                    .cpn-board-row {
+                        td {
+                            .date {
+                                display: inline;
+                            }
+
+                            &.date {
+                                &:before {
+                                    content: "인터뷰일자 : ";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 사전인터뷰등록
+            .recruiter-interview-write {
+                .recruiter-candidate-body {
+                    .cpn-board-col {
+                        td {
+                            .icalendar-group {
+                                .icalendar {
+                                    display: block;
+                                    margin: 5px 0 0 0;
+
+                                    &:first-child {
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 빌링 레이어
+    .layer-project-billing {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 50px 25px;
+        margin-bottom: 10px;
+
+        @include translate(0, 0);
+    }
+
+    // 프로젝트 종료 레이어
+    .layer-project-close {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        margin-bottom: 10px;
+        padding: 50px 25px;
+
+        @include translate(0, 0);
+
+        .project-close-box {
+            .close-box-candidate-board {
+                thead {
+                    display: none;
+                }
+
+                tbody {
+                    display: block;
+                    // border-top: 1px solid #ccc;
+
+                    tr {
+                        display: block;
+
+                        td {
+                            display: block;
+                            padding: 3px 10px;
+                            border: 0;
+                            text-align: left;
+
+                            &.t1:before {
+                                content: "입사자 : ";
+                            }
+
+                            &.t2:before {
+                                content: "입사일자 : ";
+                            }
+
+                            &.t3:before {
+                                content: "보증기간(개월) : ";
+                            }
+
+                            &:first-child {
+                                padding-top: 10px;
+                            }
+
+                            &:last-child {
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid #cecece;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

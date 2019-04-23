@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+#section-search {
+    padding-top: 50px;
+
+    @include clear;
+
+    .cpn-local-search {
+        float: left;
+        padding: 0 0 10px;
+
+        @include col(16);
+    }
+
+    .section-search-aside {
+        float: right;
+        padding-left: 30px;
+
+        @include col(6);
+        @include box-sizing();
+
+        // 광고
+        .search-aside-adv {
+            margin-top: 25px;
+        }
+    }
+    
+    // 검색결과
+    .section-search-body {
+        float: left;
+
+        @include col(16);
+
+        // 검색결과 분류
+        .section-search-body_head {
+            border-bottom: 1px solid #cecece;
+            
+            .btn {
+                display: inline-block;
+                height: 34px;
+                margin-right: 25px;
+                padding-top: 4px;
+                vertical-align: top;
+
+                @include fontSize(15px);
+                @include box-sizing();
+
+                &.active {
+                    border-bottom: 2px solid $pc1;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .section-search-body-result {
+            margin-top: 15px;
+
+            // 인맥 검색
+            .cpn-cardstyle-user-list {
+                .cpn-cardstyle-user {
+                    width: 25%;
+                }
+            }
+
+            // 태그 서클 일때
+            .cpn-tagcircle-list {
+                .cpn-tagcircle {
+                    width: calc(100% / 3);
+                }
+            }
+
+            // 서클일때            
+            // .cpn-circle {
+            //     .cpn-circle-list {
+            //         margin: 0 -5px -10px;
+
+            //         @include flex-wrap(wrap);
+
+            //         .cpn-circle-list-item {
+            //             width: calc(100% / 6);
+            //             margin-bottom: 10px;
+            //             padding: 0 5px;
+            //         }
+            //     }
+            // }
+        }
+    }
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    #section-search {
+        padding-top: 25px;
+
+        .cpn-local-search {
+            @include col(15);
+        }
+
+        .section-search-aside {
+            @include col(7);
+        }
+
+        .section-search-body {
+            @include col(15);
+            
+            .section-search-body_head {
+                margin: 0;
+            }
+
+            .section-search-body-result {
+                // 인맥 리스트
+                .cpn-cardstyle-user-list {
+                    .cpn-cardstyle-user {
+                        width: 50%;
+                    }
+                }
+
+                // 태그 서클 일때
+                .cpn-tagcircle-list {
+                    .cpn-tagcircle {
+                        width: 50%;
+                    }
+                }
+
+                // 서클일때
+                // .cpn-circle {
+                //     .cpn-circle-list {
+                //         .cpn-circle-list-item {
+                //             width: calc(100% / 4);
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    #section-search {
+        .cpn-local-search {
+            float: none;
+            width: auto;
+            padding: 0;
+        }
+        
+        .section-search-aside {
+            float: none;
+            width: auto;
+            margin-top: 25px;
+            padding: 0;
+
+            @include flexbox();
+            @include flex-direction(column);
+
+            .cpn-aside-searchkeyword {
+                order: 0;
+            }
+
+            // 광고
+            .search-aside-adv {
+                display: none;
+            }
+        }
+        
+        .section-search-body {
+            float: none;
+            width: auto;
+            margin-top: 25px;
+
+            .section-search-body-result {
+                // 태그 서클 일때
+                .cpn-tagcircle-list {
+                    .cpn-tagcircle {
+                        width: auto;
+                    }
+                }
+
+                // 서클일때 
+                // .cpn-circle {
+                //     .cpn-circle-list {
+                //         .cpn-circle-list-item {
+                //             width: calc(100% / 2);
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+}

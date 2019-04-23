@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/join.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-join">
+                <div class="join-box">
+                    <h2 class="tit-h2"><strong>리크루터</strong> 정보 입력</h2>
+
+                    <div class="join-box-form">
+                        <form>
+                            <fieldset>
+                                <legend><span>기본정보</span></legend>
+
+                                <ul class="join-box-form-input">
+                                    <li>
+                                        <input type="text" placeholder="리크루터 소속 회사명을 넣어주세요)" title="리크루터 소속" class="istyle">
+                                    </li>
+                                    <li>
+                                        <div class="join-box-form-input-box">
+                                            <div class="jobindex-multi-selecter">
+                                                <ul class="jobindex-multi-selecter-item">
+                                                    <li class="selecter-item">
+                                                        제조,생산,화학업 (업종)
+                                                        <button type="button" class="btn-del"><i class="icon-cross"></i><span class="ir">삭제</span></button>
+                                                    </li>
+                                                    <li class="selecter-insert">
+                                                        <input type="text" placeholder="주요 태그" value="" title="주요 태그" class="selecter-insert-input">	
+                                                    
+                                                        <ul class="selecter-insert-list">
+                                                            <li>홍길동</li>
+                                                            <li class="on">홍길동</li>
+                                                            <li>홍길동</li>
+                                                            <li>홍길동</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <p class="jobindex-multi-selecter-noti">원하시는 검색결과가 없을 경우 <strong>Enter키를 눌러 검색 키워드를 추가</strong>하세요.  (','는 사용하실 수 없습니다.)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <textarea cols="30" rows="5" class="itastyle" placeholder="경력 요약 및 강점" title="경력 요약 및 강점"></textarea>
+                                    </li>
+                                </ul>
+
+                                <div class="join-box-form-bot">
+                                    <button type="submit" class="btn-submit">리크루터 멤버로 등록!</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

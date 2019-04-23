@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/circle.css">
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-circle">
+                <div class="section-circle-top">
+                    <h2 class="tit-h2"><span>질문하기</span></h2>
+
+                    <p class="section-circle-dsc">같은 질문이 있는지 먼저 검색은 해보셨나요? 동일한 질문의 경우 이전 질문에 통합될 수 있습니다.</p>
+                </div>
+
+                <div class="circle-main">
+                    <!-- left -->
+                    <div class="circle-wrap">
+                        <div class="circle-conts">
+                            <div class="circle-conts-question">
+                                <form>
+                                    <fieldset>
+                                        <legend><span>질문 내용</span></legend>
+
+                                        <table class="cpn-board-col">
+                                            <caption><span>질문 입력</span></caption>
+                                            <colgroup>
+                                                <col style="width:60px">
+                                                <col>               
+                                            </colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row" class="vt"><label for="test-subject">제목</label></th>
+                                                <td>
+                                                    <input type="text" id="test-subject" placeholder="무엇이 궁금하신가요? 가능한 상세하게 적어주세요." class="istyle">
+
+                                                    <!-- 유사질문 -->
+                                                    <div class="conts-question-similar">
+                                                        <p class="tit">유사 질문 (좋은 답변이 이미 있을 수 있습니다.)</p>
+
+                                                        <div class="question-similar-list">
+                                                            <ul>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은? Googl Console 링크 분석에서 모바일 최적화 검증 방법은? Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은? Googl Console 링크 분석에서 모바일 최적화 검증 방법은? Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="vote">999</span>
+                                                                    <a href="#">Googl Console 링크 분석에서 모바일 최적화 검증 방법은? Googl Console 링크 분석에서 모바일 최적화 검증 방법은? Googl Console 링크 분석에서 모바일 최적화 검증 방법은?</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- // 유사질문 -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">내용</th>
+                                                <td>
+                                                    <div class="editor">
+                                                        <textarea cols="30" rows="5" title="답변" class="itastyle"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">태그</th>
+                                                <td include-html="/component/comm/cpn_jims.html"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="circle-conts-question-bot">
+                                            <button type="submit" class="btn-submit">질문 등록하기</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="circle-aside">
+                        <div class="circle-aside-cnt">
+                            <div class="circle-aside-cnt-in">질문 <span>9,999,999</span> 개</div>
+                        </div>
+
+                        <div class="lnb-list-nav" include-html="/component/circle/circle_aside_nav.html"></div>
+
+                        <!-- looking for a job -->
+                        <div class="cpn-aside-lookingjobs" include-html="/component/comm/aside/cpn_aside_lookingjobs.html"></div>
+                        <!-- // looking for a job -->
+                    </aside>
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

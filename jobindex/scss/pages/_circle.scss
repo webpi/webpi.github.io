@@ -1,0 +1,1337 @@
+@charset "utf-8";
+
+.section-circle {
+    position: relative;
+    padding-top: 50px;
+
+    .section-circle-top {
+        position: relative;
+        margin-bottom: 30px;
+
+        .tit-h2 {
+            padding-right: 120px;
+            border-bottom: 1px solid #ccc;
+
+            @include fontSize(24px);
+
+            span {
+                display: inline-block;
+                margin-bottom: -1px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $bc1;
+                vertical-align: top;
+                line-height: 28px;
+            }
+        }
+
+        .section-circle-dsc {
+            margin-top: 15px;
+            color: #888;
+            line-height: 1.4;
+
+            @include fontSize(15px);
+            @include wordwrap();
+        }
+
+         .btn-follow {
+             margin-top: 15px;
+            padding: 7px 15px;
+            border: 1px solid $fc3;
+            color: $fc2;
+            background: #fff;
+
+            @include fontSize(15px);
+
+            &:hover {
+                border-color: $pc1;
+                color: $pc1;
+            }
+
+            &.on {
+                border-color: $pc1;
+                color: #fff;
+                background: $pc1;
+
+                &:hover {
+                    background: $pc1_hover;
+                }
+            }
+        }
+    }
+    
+    .circle-main {
+        @include flexbox();
+    }
+
+    .circle-wrap {
+        @include col(16);
+
+        .cpn-local-search {
+            margin-bottom: 25px;
+        }
+
+        .circle-conts {
+            // 질문하기 버튼
+            .circle-conts-btn {
+                position: absolute;
+                right: 0;
+                top: 50px;
+
+                .btn {
+                    display: inline-block;
+                    height: 34px;
+                    padding: 3px 20px;
+                    border: 0;
+                    color: #fff;
+                    font-weight: 600;
+                    background: $pc1;
+                    line-height: 28px;
+
+                    @include fontSize(16px);
+                    @include box-sizing();
+
+                    &:hover {
+                        background: $pc1-hover;
+                    }
+                }
+            }
+            
+            .circle-conts-body {
+                margin-top: 10px;
+
+                .cpn-list-sort {
+                    margin-bottom: 10px;
+                }
+
+                .circle-conts-list {
+                    // 서클 리스트
+                    .cpn-tagcircle-list-box {
+                        .cpn-tagcircle {
+                            width: 25%;
+                        }
+                    }
+                }
+
+                .btn-more {
+                    @include btn-more();
+                }
+
+                // 서클정보
+                .circle-conts-info {
+                    padding: 15px 5px;
+                    line-height: 1.5;
+
+                    @include fontSize(15px);
+                    @include wordwrap();
+                }
+
+                .circle-conts-bot {
+                    margin-top: 20px;
+                    text-align: right;
+
+                    .btn-update {
+                        padding :10px;
+                        color: #fff;
+                        font-weight: 600;
+                        background: $pc3;
+
+                        @include fontSize(15px);
+
+                        &:hover {
+                            background: $pc3_hover;
+                        }
+                    }
+                }
+
+                // 자주 묻는 질문
+                .circle-conts-faq {
+                    margin-top: 25px;
+                    padding: 20px;
+                    border: 1px solid #ececec;
+                    background: #f9f9f9;
+
+                    .tit-h3 {
+                        @include fontSize(16px);
+                    }
+
+                    ul {
+                        margin-top: 15px;
+
+                        li {
+                            margin-top: 10px;
+                            padding-left: 15px;
+
+                            a:hover {
+                                text-decoration: underline;
+                            }
+
+                            &::first-letter {
+                                margin-left: -15px;                                
+                            }
+
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+
+                // 랭커
+                .circle-conts-ranker {
+                    padding: 15px 0;
+
+                    .circle-conts-ranker-top {
+                        margin-bottom: 25px;
+                        padding: 10px 20px;
+                        border: 1px solid #ececec;
+                        background: #f9f9f9;
+
+                        .ranker-board {
+                            width: 100%;
+
+                            th {
+                                padding: 10px;
+                                border-bottom: 1px solid #888;
+
+                                @include fontSize(15px);
+                            }
+
+                            td {
+                                padding: 10px;
+                                text-align: center;
+
+                                @include fontSize(15px);
+                            }
+                        }
+                    }
+
+                    .tagname {
+                        display: inline-block;
+                        margin-right: 10px;
+                        padding: 6px 10px;
+                        color: #39739d;
+                        background: #e1ecf4;
+                        vertical-align: 2px;
+                        
+                        @include fontSize(18px);
+
+                        &:hover {
+                            background: #cee0ed;
+                        }
+                    }
+
+                    .tit-h3 {
+                        padding-bottom: 5px;
+                        border-bottom: 1px solid #444;
+
+                        @include fontSize(16px);
+
+                        .tagname {
+                            @include fontSize(16px);
+                        }
+                    }
+
+                    .circle-conts-ranker-main {
+                        margin-top: 20px;
+
+                        @include clear;
+
+                        .tit-h4 {
+                            @include fontSize(15px);
+                        }
+
+                        .circle-conts-ranker-main-latest {
+                            float: left;
+                            width: 50%;
+                            padding-right: 10px;
+
+                            @include box-sizing();
+                        }
+
+                        .circle-conts-ranker-main-all {
+                            float: right;
+                            width: 50%;
+                            padding-left: 10px;
+
+                            @include box-sizing();
+                        }
+
+                        .circle-conts-ranker-box {
+                            margin-top: 10px;
+
+                            > li {
+                                padding: 5px 0;
+                                border-top: 1px solid #eaeaea;
+
+
+                                .circle-conts-ranker-box-info {
+                                    @include flexbox();
+                                    @include align-items(center);
+
+                                    > li {
+                                        padding: 10px;
+
+                                        @include clear;
+
+                                        .photo {
+                                            overflow: hidden;
+                                            float: left;
+                                            margin-right: 10px;
+                                            border-radius: 100px;
+
+                                            @include size(34px);
+
+                                            img {
+                                                max-width: 100%;
+                                            }
+                                        }
+                                        
+                                        .circle-conts-ranker-box-info-in {
+                                            overflow: hidden;
+
+                                            .name {
+                                                display: block;
+
+                                                @include truncate();
+
+                                                .rp {
+                                                    color: $fc2;
+                                                    font-weight: normal;
+
+                                                    @include fontSize(13px);
+                                                }
+                                            }
+
+                                            .score {
+                                                margin-top: 4px;
+
+                                                @include clear;
+                                                
+                                                li {
+                                                    float: left;
+                                                    margin-left: 5px;
+
+                                                    @include fontSize(13px);
+
+                                                    .g {
+                                                        color: $gold;
+                                                    }
+
+                                                    .s {
+                                                        color: $silver;
+                                                    }
+
+                                                    .b {
+                                                        color: $bronze;
+                                                    }
+
+                                                    &:first-child {
+                                                        margin-left: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        &.cnt {
+                                            min-width: 45px;
+                                            text-align: center;
+                                            
+                                            @include fontSize(15px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 질문하기
+            .circle-conts-question {
+                .cpn-board-col {
+                    td {
+                        .istyle {
+                            width: 100%;
+                        }
+
+                        .editor {
+                            min-height: 100px;
+
+                            .itastyle {
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+
+                        .conts-question-similar {
+                            margin-top: 10px;
+                            padding: 20px;
+                            background: #f9f9f9;
+
+                            .tit {
+                                font-weight: 600;
+                                color: $pc1;
+
+                                @include fontSize(15px);
+                            }
+
+                            .question-similar-list {
+                                overflow-x: hidden;
+                                overflow-y: auto;
+                                max-height: 300px;
+                                margin-top: 15px;
+                                -webkit-overflow-scrolling: touch;
+
+                                ul {
+                                    li {
+                                        margin-top: 4px;
+                                        font-size: 0;
+
+                                        @include flexbox();
+                                        @include align-items(flex-start);
+
+                                        .vote,
+                                        a {
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                        }
+
+                                        .vote {
+                                            min-width: 50px;
+                                            // margin-right: 10px;
+                                            padding: 4px 10px;
+                                            border: 1px solid #cecece;
+                                            background: #fff;
+                                            text-align: center;
+
+                                            @include box-sizing();
+                                            @include fontSize(15px);
+                                        }
+
+                                        a {
+                                            padding: 5px 10px;
+                                            color: $fc2;
+                                            line-height: 1.25;
+
+                                            @include fontSize(14px);
+                                            @include wordwrap();
+                                        }
+
+                                        &:first-child {
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .circle-conts-question-bot {
+                    margin-top: 20px;
+                    text-align: center;
+
+                    .btn-submit {
+                        padding: 13px 20px;
+                        border: 0;
+                        color: #fff;
+                        font-weight: 600;
+                        background: $pc1;
+
+                        @include fontSize(16px);
+
+                        &:hover {
+                            background: $pc1_hover;
+                        }
+                    }
+                }
+            }
+
+            // 질문 상세보기
+            .circle-conts-view {
+                .tit-h3 {
+                    min-height: 44px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #cacaca;
+                    font-weight: normal;
+
+                    @include fontSize(24px);
+                    @include box-sizing();
+                }
+
+                // 평가
+                .circle-conts-view-eval {
+                    float: left;
+                    margin-right: 15px;
+                    text-align: center;
+
+                    .eval {
+                        position: relative;
+                        width: 50px;
+                        padding: 34px 0;
+
+                        .score {
+                            display: block;
+                            color: $fc2;
+
+                            @include fontSize(18px);
+                        }
+
+                        .btn {
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -17px;
+                            border: 0;
+                            color: $fc3;
+                            background: none;
+
+                            @include size(34px);
+                            @include fontSize(20px);
+
+                            &.btn-up {
+                                top: 0;
+                            }
+
+                            &.btn-down {
+                                bottom: 0;
+                            }
+
+                            &:hover {
+                                color: $pc1;
+                            }
+                        }
+                    }
+
+                    .btn-scrap {
+                        border: 0;
+                        color: $fc3;
+                        background: none;
+
+                        @include size(34px);
+                        @include fontSize(20px);
+
+                        &.on {
+                            color: $pc4;
+                        }
+                    }
+                }
+
+                .circle-conts-view-btn {
+                    margin-top: 10px;
+                    font-size: 0;
+                    text-align: right;
+
+                    .btn {
+                        display: inline-block;
+                        margin-left: 4px;
+                        padding: 4px 5px;
+                        border: 0;
+                        color: $fc3;
+                        background: #fff;
+                        vertical-align: top;
+                        line-height: 16px;
+
+                        @include fontSize(13px);
+
+                        &:hover {
+                            color: $fc1;
+                        }
+                    }
+                }
+
+                // 질문
+                .circle-conts-view-main {
+                    margin-top: 25px;
+
+                    .circle-conts-view-main-conts {
+                        @include clear;
+
+                        .circle-conts-view-main-conts-box {
+                            overflow: hidden;
+
+                            .circle-conts-view-main-conts-box-question {
+                                line-height: 1.3;
+
+                                @include fontSize(17px);
+                                @include wordwrap();
+
+                                .question {
+                                    margin-right: 3px;
+                                    color: $pc2;
+                                    font-weight: 600;
+
+                                    @include fontSize(18px);
+                                }
+                            }
+
+                            .keyword-wrap {
+                                margin-top: 15px;
+                            }
+
+                            .circle-conts-view-main-conts-box-bot {
+                                margin-top: 10px;
+                                padding-top: 8px;
+                                border-top: 1px solid #ececec;
+
+                                @include clear;
+
+                                .date {
+                                    float: left;
+                                    // padding: 5px 5px 5px 0;
+                                    color: $fc3;
+                                    // line-height: 34px;
+                                }
+
+                                .writer {
+                                    float: right;
+                                    padding: 5px;
+                                    border-radius: 3px;
+                                    background: #f4f4f4;
+
+                                    a {
+                                        display: block;
+                                        font-size: 0;
+
+                                        .photo {
+                                            overflow: hidden;
+                                            display: inline-block;
+                                            margin-right: 10px;
+                                            vertical-align: middle;
+                                            border-radius: 100px;
+                                            
+                                            @include size(34px);
+
+                                            img {
+                                                max-width: 100%;
+                                            }
+                                        }
+
+                                        .name {
+                                            display: inline-block;
+                                            vertical-align: middle;
+
+                                            @include fontSize(14px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 질문 수정 제안
+                    .circle-conts-view-main-prop {
+                        position: relative;
+                        margin: 25px 0 0 65px;
+                        // border: 1px solid #dedede;
+                        border-radius: 3px;
+
+                        .tit-h4 {
+                            padding-bottom: 5px;
+                            border-bottom: 1px solid #dedede;
+
+                            @include fontSize(13px);
+                        }
+
+                        .btn-prop {
+                            position: absolute;
+                            right: 0;
+                            top: -3px;
+                            border: 0;
+                            color: $fc2;
+                            background: #fff;
+
+                            @include size(20px);
+                        }
+                        
+                        ul {
+                            li {
+                                padding: 6px;
+                                border-top: 1px solid #eaeaea;
+                                line-height: 1.3;
+
+                                @include fontSize(13px);
+
+                                .name {
+                                    display: inline-block;
+                                    margin-left: 5px;
+                                    padding: 1px 5px;
+                                    border-radius: 2px;
+                                    background: #efefef;
+                                    font-weight: 600;
+                                    // vertical-align: middle;
+                                }
+
+                                .date {
+                                    padding: 0 8px;
+                                    color: $fc3;
+                                }
+
+                                .btn {
+                                    margin: 0 1px;
+                                    padding: 1px 2px;
+                                    border: 1px solid #eaeaea;;
+                                    color: $fc3;
+                                    background: none;
+
+                                    @include fontSize(12px);
+
+                                    &:hover {
+                                        border-color: $bc1;
+                                        color: $bc1;
+                                    }
+                                }
+
+                                &:first-child {
+                                    border-top: 0;
+                                }
+                            }
+                        }
+
+                        // 제안 쓰기
+                        .circle-conts-view-main-prop-write {
+                            margin-top: 5px;
+                            border: 1px solid #cecece;
+                            background: #fff;
+                            // border-radius: 5px;
+
+                            .tastyle {
+                                display: block;
+                                width: 100%;
+                                padding: 8px;
+                                border: 0;
+                                background: none;
+
+                                @include box-sizing();
+                                @include fontSize(13px);
+                            }
+
+                            .circle-conts-view-main-prop-write-bot {
+                                margin-top: 3px;
+                                padding: 6px;
+                                border-top: 1px solid #eaeaea;
+                                background: #f9f9f9;
+                                
+                                font-size: 0;
+                                text-align: right;
+                            }
+
+                            .btn {
+                                min-width: 42px;
+                                height: 24px;
+                                margin-left: 3px;
+                                padding: 2px 5px;
+                                border: 0;
+                                vertical-align: top;
+
+                                @include fontSize(13px);
+                                @include box-sizing();
+                            }
+
+                            .btn-submit {
+                                color: #fff;
+                                background: $pc1;
+
+                                &:hover {
+                                    background: $pc1_hover;
+                                }
+                            }
+
+                            .btn-cncl {
+                                border: 1px solid #cecece;
+                                color: $fc2;
+                                background: #fff;
+
+                                &:hover {
+                                    border-color: $pc1;
+                                    color: $pc1;
+                                }
+                            }
+                        }
+
+                        // 제안 수정
+                        .circle-conts-view-main-prop-edit {
+                            margin-top: 5px;
+
+                            .itastyle {
+                                display: block;
+                                width: 100%;
+                                padding: 5px;
+                                line-height: normal;
+
+                                @include fontSize(13px);
+                            }
+
+                            .circle-conts-view-main-prop-edit-bot {
+                                margin-top: 3px;
+                                text-align: right;
+                            }
+
+                            .btn-submit {
+                                min-width: 42px;
+                                height: 24px;
+                                padding: 2px 5px;
+                                border: 0;
+                                color: #fff;
+                                background: $pc1;
+
+                                @include fontSize(13px);
+
+                                &:hover {
+                                    background: $pc1_hover;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 답변
+                .circle-conts-view-answer {
+                    margin-top: 25px;
+
+                    .circle-conts-view-answer-top {
+                        .circle-conts-view-answer-top-cnt {
+                            padding-bottom: 12px;
+                            border-bottom: 1px solid #dcdcdc;
+
+                            @include fontSize(19px);
+                        }
+
+                        .circle-conts-view-answer-top-sort {
+                            ul {
+                                padding: 10px 0;
+
+                                @include clear;
+
+                                li {
+                                    position: relative;
+                                    float: left;
+                                    margin-right: 10px;
+                                    padding-left:4px;
+                                    
+                                    .btn-sort {
+                                        padding: 2px 5px;
+                                        border: 0;
+                                        color: $fc3;
+                                        background: none;
+
+                                        @include fontSize(14px);
+
+                                        i {
+                                            margin-left: 5px;
+
+                                            @include fontSize(10px);
+                                        }
+
+                                        &.active {
+                                            color: $pc1;
+                                            font-weight: 600;
+                                        }
+
+                                        &:hover {
+                                            font-weight: 600;
+                                        }
+                                    }
+
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        top: 50%;
+                                        display: block;
+                                        width: 2px;
+                                        height: 2px;
+                                        margin-top: -1px;
+                                        background: #ccc;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .circle-conts-view-answer-conts {
+                        padding: 20px 0;
+                        border-top: 1px solid #ececec;
+
+                        @include clear;
+
+                        &:last-child {
+                            border-bottom: 1px solid #ececec;
+                        }
+                    }
+
+                    .circle-conts-view-answer-conts-box {
+                        overflow: hidden;
+
+                        .circle-conts-view-answer-conts-box-answer {
+                            line-height: 1.3;
+
+                            @include fontSize(17px);
+                            @include wordwrap();
+
+                            .answer {
+                                margin-right: 3px;
+                                color: $pc1;
+                                font-weight: 600;
+
+                                @include fontSize(18px);
+                            }
+                        }
+
+                        .circle-conts-view-answer-conts-box-bot {
+                            margin-top: 10px;
+                            padding-top: 8px;
+                            border-top: 1px solid #ececec;
+
+                            @include clear;
+
+                            .date {
+                                float: left;
+                                // padding: 5px 5px 5px 0;
+                                color: $fc3;
+                                // line-height: 34px;
+                            }
+
+                            .writer {
+                                float: right;
+                                padding: 5px;
+                                border-radius: 3px;
+                                background: #f4f4f4;
+
+                                a {
+                                    display: block;
+                                    font-size: 0;
+
+                                    .photo {
+                                        overflow: hidden;
+                                        display: inline-block;
+                                        margin-right: 10px;
+                                        vertical-align: middle;
+                                        border-radius: 100px;
+                                        
+                                        @include size(34px);
+
+                                        img {
+                                            max-width: 100%;
+                                        }
+                                    }
+
+                                    .writer-info {
+                                        display: inline-block;
+                                        vertical-align: middle;
+
+                                        @include fontSize(14px);
+
+                                        .rp {
+                                            color: $fc3;
+                                        }
+
+                                        .writer-info-grade {
+                                            display: inline-block;
+                                            margin-top: 3px;
+
+                                            @include fontSize(13px);
+
+                                            em {
+                                                margin: 0 2px 0 5px;
+
+                                                &:first-child {
+                                                    margin-left :0;
+                                                }
+                                            }
+
+                                            .gold {
+                                                color: $gold;
+                                            }
+
+                                            .silver {
+                                                color: $silver;
+                                            }
+
+                                            .bronze {
+                                                color: $bronze;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 답변 달기
+                .circle-conts-view-form {
+                    margin-top: 25px;
+
+                    .tit-h4 {
+                        margin-bottom: 15px;
+                        font-weight: normal;
+
+                        @include fontSize(19px);
+                    }
+
+                    .editor {
+                        .itastyle {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    .circle-conts-view-form-bot {
+                        margin-top: 20px;
+                        text-align: center;
+
+                        .btn-submit {
+                            padding: 13px 20px;
+                            border: 0;
+                            color: #fff;
+                            font-weight: 600;
+                            background: $pc1;
+
+                            @include fontSize(16px);
+
+                            &:hover {
+                                background: $pc1_hover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 정보수정
+            .circle-conts-edit {
+                .conts-edit-top {
+                    .tit-h2 {
+                        @include fontSize(24px);
+
+                        span {
+                            display: inline-block;
+                            margin-bottom: -1px;
+                            padding-bottom: 16px;
+                            border-bottom: 1px solid $bc1;
+                            vertical-align: top;
+                            line-height: 28px;
+                        }
+                    }
+
+                    .edit-top-conts {
+                        margin-top: 25px;
+
+                        .itastyle {
+                            display: block;
+                            width: 100%;
+
+                            @include fontSize(16px);
+                        }
+                    }
+
+                    .edit-top-bot {
+                        margin-top: 10px;
+                        text-align: right;
+
+                        .btn-submit {
+                            padding: 10px;
+                            border: 0;
+                            color: #fff;
+                            font-weight: 600;
+                            background: $pc1;
+
+                            &:hover {
+                                background: $pc1_hover;
+                            }
+
+                            @include fontSize(15px);
+                        }
+                    }
+                }
+                
+                .conts-edit-history {
+                    margin-top: 25px;
+
+                    .tit-h3 {
+                        @include fontSize(18px);
+                    }
+
+                    .edit-history-list {
+                        margin-top: 15px;
+
+                        .history-list-item {
+                            padding: 15px 0;
+                            border-top: 1px solid #eaeaea;
+
+                            .list-item-top {
+                                color: $fc3;
+
+                                @include fontSize(14px);
+
+                                .date {
+                                    margin-right: 15px;
+
+                                    @include fontSize(13px);
+                                }
+
+                                .by {
+                                    .name {
+                                        color: $fc1;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                            
+                            .list-item-conts {
+                                margin-top: 10px;
+                                color: $fc2;
+
+                                @include fontSize(14px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .circle-aside {
+        padding-left: 30px;
+
+        @include col(6);
+        @include box-sizing();
+
+        .circle-aside-cnt {
+            margin-bottom: 25px;
+
+            .circle-aside-cnt-in {
+                height: 44px;
+                padding: 8px 15px;
+                border: 1px solid #d6d9dc;
+                border-radius: 3px;
+                color: $fc3;
+                background: #f9f9f9;
+                line-height: 26px;
+                text-align: right;
+
+                
+                @include fontSize(13px);
+                @include truncate();
+                @include box-sizing();
+
+                span {
+                    color: $fc1;
+
+                    @include fontSize(20px);
+                }                
+            }
+        }
+
+        // 최근 검색
+        .cpn-aside-searchkeyword {
+            margin-top: 25px;
+        }
+
+        .circle-aside-noti {
+            margin-top: 25px;
+
+            ul {
+                li {
+                    position: relative;
+                    height: 41px;
+                    padding: 12px 10px;
+                    border-bottom: 1px dashed #cecece;
+
+                    @include box-sizing();
+
+                    span {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        padding: 2px 10px;
+                        border-radius: 20px;
+                        color: #fff;
+                        background: #72c02c;
+                        // line-height: normal;
+
+                        @include translate(0, -50%);
+
+                        i {
+                            line-height: inherit;
+
+                            @include fontSize(10px);
+                        }
+                    }
+
+                    &:first-child {
+                        height: auto;
+                        padding-top: 0;
+                        border-bottom: 1px solid #333;
+                        font-weight: 600;
+                        
+                        @include fontSize(15px);
+                    }
+                }
+            }
+        }
+
+        // 광고
+        .circle-aside-adv {
+            margin-top: 25px;
+        }
+    }
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    .section-circle {
+        padding-top: 25px;
+        
+        .circle-main {
+            @include flex-direction(column);
+        }
+
+        .circle-wrap {
+            order: 1;
+            width: 100%;
+            margin-top: 25px;
+
+            .circle-conts {
+                .circle-conts-btn {
+                    top: 25px;
+                }
+
+                .circle-conts-body {
+                    .circle-conts-list {
+                        .cpn-tagcircle-list-box {
+                            .cpn-tagcircle {
+                                width: calc(100% / 3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .circle-aside {
+            order: 0;
+            width: 100%;
+            padding: 0;
+
+            .circle-aside-cnt {
+                // display: none;
+                margin-bottom: 0;
+
+                .circle-aside-cnt-in {
+                    height: auto;
+                    padding: 5px;
+                    border: 0;
+                    background: none;
+                    line-height: normal;
+                }
+                
+            }
+
+            .cpn-aside-lookingjobs {
+                display: none;
+            }
+
+            .circle-aside-adv {
+                display: none;
+            }
+        }
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    .section-circle {
+        // position: relative;
+
+        .circle-wrap {
+            .circle-conts {
+                // .circle-conts-head {
+                //     .circle-conts-head-btn {
+                //         position: absolute;
+                //         right: 0;
+                //         top: 25px;
+                //     }
+                // }
+                
+                .circle-conts-body {
+                    // 자주 묻는 질문
+                    .circle-conts-faq {
+                        padding: 15px;
+                    }
+
+                    // 랭커
+                    .circle-conts-ranker {
+                        .circle-conts-ranker-top {
+                            padding: 10px;
+
+                            .ranker-board {
+                                thead,
+                                tbody {
+                                    float: left;
+                                    display: block;
+                                }
+
+                                thead {
+                                    width: 30%;
+                                }
+
+                                tbody {
+                                    width: 70%;
+                                }
+
+                                tr {
+                                    display: block;
+                                }
+
+                                th,
+                                td {
+                                    display: block;
+                                    height: auto;
+                                    padding: 10px 5px;
+                                    border-bottom: 1px solid #eaeaea;
+
+                                    @include box-sizing();
+
+                                    &:first-child {
+                                        padding: 5px;
+                                    }
+
+                                    &:last-child {
+                                        border-bottom: 0;
+                                    }
+                                }
+
+                                th {
+                                    padding-right: 30px;
+                                    text-align: right;
+
+                                    &:first-child {
+                                        padding-right: 30px;
+                                        line-height: 32px;
+                                    }
+                                }
+
+                                td {
+                                    text-align: left;                                   
+                                }
+                            }
+                        }
+
+                        .circle-conts-ranker-main {
+                            .circle-conts-ranker-main-latest,
+                            .circle-conts-ranker-main-all {
+                                float: none;
+                                width: auto;
+                                padding: 0;
+                            }
+
+                            .circle-conts-ranker-main-all {
+                                margin-top: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

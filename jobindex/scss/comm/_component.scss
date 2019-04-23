@@ -1,0 +1,5084 @@
+@charset "utf-8";
+
+// jobindex-multi-selecter
+.jobindex-multi-selecter {
+	cursor: pointer;
+
+	.jobindex-multi-selecter-item {
+		margin-bottom: -3px;
+
+		@include clear;
+
+		.selecter-item {
+            position: relative;
+			float: left;
+			height: 32px;
+			margin: 0 5px 3px 0;
+			padding: 4px 32px 4px 8px;
+			background: #e7e8e8;
+			line-height: 24px;
+
+			@include box-sizing();
+            @include fontSize(13px);
+			@include rounded(3px, 3px, 3px, 3px);
+
+			.btn-del {
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                margin-top: -11px;
+				border: 0;
+				color: $fc3;
+                line-height: normal;
+				background: none;
+                vertical-align: middle;
+
+				@include size(22px);
+                
+                i {
+                    @include fontSize(11px);
+                }
+
+				&:hover {
+					color: $pc2_hover;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.selecter-insert {
+			position: relative;
+			float: left;
+			margin-bottom: 3px;
+
+            .selecter-insert-box {
+                font-size: 0;
+
+                .btn-selecter-insert-search {
+                    height: 32px;
+                    margin-left: 4px;
+                    padding: 3px 8px;
+                    border: 1px solid #cecece;
+                    background: #fff;
+                    vertical-align: middle;
+
+                    @include fontSize(14px);
+
+                    &:hover {
+                        border-color: $pc1;
+                        color: $pc1;
+                    }
+                }
+            }
+
+			.selecter-insert-input {
+				// min-width: 120px;
+				height: 32px;
+				padding: 4px 8px;
+				border: 0;
+				background: transparent;
+                vertical-align: middle;
+
+				@include box-sizing();
+			}
+
+			.selecter-insert-list {
+				position: absolute;
+				top: 34px;
+				left: 0;
+				overflow: auto;
+				min-width: 120px;
+				max-height:302px;
+				border: 1px solid #ccc;
+				background: #fff;
+				box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+				z-index: 1;
+
+				@include box-sizing();
+
+				li {
+					padding: 4px 15px;
+					line-height: 21px;
+					cursor: pointer;
+					white-space: nowrap;
+
+                    @include fontSize(14px);
+
+					&.on {
+						background: #ddd;
+					}
+				}
+			}
+		}
+	}
+
+	.jobindex-multi-selecter-noti {
+		margin-top: 8px;
+		color: #888;
+        line-height: 1.15;
+
+        @include fontSize(12px);
+        @include wordwrap();
+
+		strong {
+			color: $pc2;
+		}
+	}
+}
+
+// 라디오 버튼 그룹
+.radio-group {
+	overflow: hidden;
+	margin-bottom: -5px;
+	font-size: 0;
+	line-height: 0;
+
+	.radio-itm {
+		display: inline-block;
+		margin: 0 14px 5px 0;
+		vertical-align: top;
+
+        .t {
+            line-height: normal;
+
+            @include fontSize(14px);
+        }
+
+		[type=radio] {
+            position: relative;
+            top: 2px;
+			vertical-align: top;
+		}
+
+		label {
+			display: inline-block;
+			margin-left: 5px;
+			vertical-align: top;
+			line-height: normal;
+
+            @include fontSize(14px);
+		}		
+	}
+}
+.iradio {
+    display: inline-block;
+
+	[type=radio] {
+		vertical-align: middle;
+	}
+
+	label {
+		display: inline-block;
+		margin-left: 5px;
+		vertical-align: middle;
+		line-height: normal;
+
+        @include fontSize(14px);
+	}		
+}
+
+// 체크박스 버튼 그룹
+.check-group {
+	font-size: 0;
+	line-height: 0;
+
+	.check-itm {
+		display: inline-block;
+		margin-right: 14px;
+		vertical-align: top;
+
+		[type=checkbox] {
+			vertical-align: top;
+		}
+
+		label {
+			display: inline-block;
+			margin-left: 5px;
+			vertical-align: top;
+			line-height: normal;
+
+            @include fontSize(14px);
+		}		
+	}
+}
+.icheck {
+	display: inline-block;
+
+	[type=checkbox] {
+		vertical-align: middle;
+	}
+
+	label {
+		display: inline-block;
+		margin-left: 5px;
+		vertical-align: middle;
+		line-height: normal;
+
+        @include fontSize(14px);
+	}		
+}
+
+// 체크박스 스위치
+.icheck-switch {
+    position: relative;
+    display: inline-block;
+
+    [type=checkbox] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:checked {
+            ~ label {
+                .icheck-switch-in {
+                    background: $pc1;
+
+                    &:before {
+                        content: attr(data-unchecked);
+                        left: 0;
+                    }
+
+                    &:after {
+                        content: attr(data-checked);
+                        color: $pc1;
+                        font-weight: 600;
+
+                        @include transform(translate3d(44px, 0, 0));
+                    }
+                }
+            }
+        }
+    }
+
+    label {
+        position: relative;
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .icheck-switch-in {
+        position: relative;
+        display: inline-block;
+        width: 90px;
+        height: 28px;
+        border-radius: 2px;
+        background: #848484;
+
+        @include transition(background-color 0.3s cubic-bezier(0, 1, 0.5, 1));
+
+        &:before {
+            content: attr(data-checked);
+            position: absolute;
+            top: 0;
+            left: 45px;
+            width: 45px;
+            height: 28px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 28px;
+            text-align: center;
+
+            @include fontSize(11px);
+            @include box-sizing();
+        }
+
+        &:after {
+            content: attr(data-unchecked);
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 44px;
+            height: 26px;
+            border-radius: 1px;
+            color: #777;
+            background: #fff;
+            line-height: 26px;
+            text-align: center;
+            z-index: 1;
+            
+            @include fontSize(11px);
+            @include box-sizing();
+            @include transition(transform 0.3s cubic-bezier(0, 1, 0.5, 1));
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+}
+
+// 체크박스 커스텀
+.icheck-custom {
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+
+    label {
+        display: inline-block;
+        height: 14px;
+        color: $fc2;
+        vertical-align: top;        
+
+        i {
+            opacity: 0.5;
+            color: $fc3;
+            line-height: 1;
+
+            @include fontSize(14px);
+        }
+    }
+
+    [type=checkbox] {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+
+        &:checked ~ label i {
+            opacity: 1;
+            color: $pc1;
+        }
+    }
+}
+
+// 키워드
+.keyword-wrap {
+    margin-bottom: -5px;
+    font-size: 0;
+
+    .keyword {
+        display: inline-block;
+        margin: 0 5px 5px 0;
+        padding: 5px 10px;
+        color: #39739d;
+        background: #e1ecf4;
+        white-space: nowrap;
+        line-height: 1;
+        
+        @include fontSize(14px);
+
+        &:hover {
+            background: #cee0ed;
+            text-decoration: none;
+        }
+    }
+}
+
+// paging
+.paging {
+	padding: 25px 0;
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+
+	.paging-btn {
+		display: inline-block;
+        // padding-top: 2px;
+		margin-left: 5px;
+		color: $fc2;
+        background: #fff;
+		text-align: center;
+		line-height: 28px;
+		vertical-align: top;
+
+		@include size(30px);
+		@include border-style(1px, 1px, 1px, 1px, solid, #ccc);
+        @include fontSize(14px);
+        @include box-sizing();
+
+		i {
+			line-height: inherit;
+
+            @include fontSize(12px);
+		}
+
+		&.btn-first,
+		&.btn-prev,
+		&.btn-next,
+		&.btn-last {
+			width: 40px;
+            padding-top: 0;
+			color: #888;
+            // line-height: 28px;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:hover {
+			border-color: $pc1;
+		}
+
+		&.active {
+			border-color: $pc1;
+			color: $pc1;
+			font-weight: 600;
+		}
+	}
+}
+
+// 달력 입력
+.icalendar-group {
+    font-size: 0;
+}
+.icalendar {
+	display: inline-block;
+    margin-right: 3px;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: top;
+	cursor: pointer;
+
+	.btn-icalendar {
+		margin-left: -1px;
+		border: 1px solid #ccc;
+		color: $fc2;
+		background: #fff;
+		vertical-align: top;
+        line-height: 1;
+
+		@include size(34px);
+        @include fontSize(16px);
+
+        i {
+            vertical-align: middle;            
+
+            &.icon-calendar {
+                margin-left: 2px;
+            }
+        }
+	}
+
+    .icalendar-input {
+		height: 34px;
+        padding: 2px 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+
+        @include box-sizing();
+        @include fontSize(14px);
+
+        &:disabled ~ .btn-icalendar {
+            background: #ebebe4;
+        }
+	}
+
+	&:hover {
+		.btn-icalendar {
+			color: $pc1;
+			background: #f3f3f3;
+		}
+
+        .icalendar-input {
+            &:disabled ~ .btn-icalendar {
+                color: $fc2;
+                cursor: default;
+            }
+        }
+	}
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+// 파일 업로드
+.cpn-filebox {
+	.filebox-btn{
+        overflow: hidden;
+		position: relative;
+        display: inline-block;
+        vertical-align: top;
+		cursor: pointer;
+
+		.ifile {
+			position: absolute;
+			left: -25%;
+			top: -25%;
+			right: -25%;
+			bottom: -25%;
+			width: 150%;
+			height: 150%;
+			opacity: 0;
+            cursor: pointer;
+		}
+
+		.btn-file-add {
+			display: block;
+			height: 34px;
+			padding: 5px 15px;
+            border: 0;
+            color: #fff;
+            background: $pc1;
+			cursor: pointer;
+
+            @include fontSize(14px);
+		}
+
+		&:hover {
+			.btn-file-add {
+				background: $pc1_hover;
+			}
+		}
+	}
+
+	.filebox-list {
+        margin-top: 5px;
+
+		.filebox-list-in {
+            @include clear;
+
+			li {
+				position: relative;
+                float: left;
+                min-height: 18px;
+                margin: 0 10px 0 0 !important;
+                padding: 5px 28px 5px 10px;
+                border: 1px solid #eaeaea;
+                line-height:18px;
+
+                @include fontSize(13px);
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                > i {
+                    margin-right: 3px;
+                    vertical-align: middle;
+
+                    @include fontSize(13px);
+                }
+				
+				.btn-del {
+					position: absolute;
+					right: 0;
+					top: 0;
+					border: 0;
+					color: $fc3;
+					background: none;
+
+					@include size(28px);
+
+                    i {
+                        @include fontSize(10px);
+                    }
+
+					&:hover {
+						color: $pc2_hover;
+					}
+				}
+
+				.date {
+					color: $fc3;
+
+                    @include fontSize(13px);
+				}
+
+                &:last-child {
+                    margin-right: 0;
+                }
+			}
+		}
+	}
+}
+
+// 메인 검색
+.cpn-search {
+    position: relative;
+    z-index: 1;
+
+    &.bg {
+        background: url(/assets/img/bg_index_search.jpg) no-repeat 50% 50%;
+        background-size: cover;
+    }
+
+    .cpn-search-wrapper {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 20px 20px 50px;
+
+        @include box-sizing();
+        @include transition(padding 0.3s ease-in-out);
+    }
+
+    .cpn-search-box {
+        min-width: 280px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.65);
+        
+        @include box-sizing();
+
+        .tit-h2 {
+            color: #fff;
+            font-size: calc(1.15rem + 1vw);
+            text-align: center;
+
+            // @include fontSize(28px);
+        }
+
+        .cpn-search-box-body {
+            margin-top: 40px;
+            @include transition(margin 0.3s ease-in-out);
+
+            .cpn-search-box-body-tab {
+                @include clear;
+
+                li {
+                    float: left;
+                    width: calc((100% - 60px) / 4);
+
+                    [type=radio] {
+                        position: absolute;
+                        visibility: hidden;
+                        opacity: 0;
+                        z-index: -1;
+                    }
+
+                    label {
+                        position: relative;
+                        display: block;
+                        height: 30px;
+                        color: #fff;
+                        text-align: center;
+
+                        @include fontSize(15px);
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            width: 0;
+                            background: #fff;
+                            height: 1px;
+
+                            @include transition(0.2s ease-in-out);
+                        }
+
+                        &:after {
+                            opacity: 0;
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            bottom: -10px;
+                            margin-left: -7px;
+
+                            @include triangle(down, 14px, 8px, #fff);
+                            @include transition(0.3s ease-in-out);
+                        }
+
+                        &:hover {
+                            &:after {
+                                opacity: 0.8;
+                                bottom: -8px;
+                                
+                            }
+                        }
+                    }
+
+                    [type=radio]:checked + label {
+                         &:before {
+                            opacity: 0.8;
+                            left: 0;
+                            width: 100%;
+                        }
+
+                        &:after {
+                            opacity: 0.8;
+                            bottom: -8px;
+                        }
+                    }
+                }
+            }
+
+            .cpn-search-box-body-main {
+                margin-top: 20px;
+                font-size: 0;
+                line-height: 0;
+
+                .input-search-insert {
+                    width: calc(100% - 60px);
+                    height: 44px;
+                    padding: 5px 10px;
+                    border :0;
+                    vertical-align: top;
+
+                    @include fontSize(16px);
+                }
+
+                .btn-search-submit {
+                    overflow: hidden;
+                    width: 60px;
+                    height: 44px;
+                    border: 0;
+                    color: #fff;
+                    background: $pc1;
+                    vertical-align: top;
+
+                    @include fontSize(18px);
+                    @include transition(background 0.3s ease-in-out);
+
+                    &:hover {
+                        background: $pc1_hover;
+                    }
+                }
+            }
+
+            .cpn-search-box-body-search {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+        }
+    }
+
+    .cpn-search-bot {
+        margin-top: 40px;
+        text-align: center;
+        @include transition(margin 0.3s ease-in-out);
+
+        .txt {
+            display: block;
+            margin-bottom: 16px;
+            color: #fff;
+            font-weight: 600;
+
+            @include fontSize(22px);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            color: #fff;
+            font-weight: 600;
+            background: $pc3;
+            vertical-align: top;
+
+            @include fontSize(14px);
+            @include transition(background 0.3s ease-in-out);
+
+            &:hover {
+                background: $pc3_hover;
+            }
+        }
+    }
+}
+
+// 채용 검색
+.cpn-jobs-search {
+    position: relative;
+    min-height: 6px;
+    margin-bottom: 25px;
+
+    .jobs-search-body {
+        padding: 15px 15px 20px;
+        border: 1px solid #cacaca;
+        background: #f9f9f9;
+    }
+
+    .jobs-search-form {
+        padding: 10px;
+        border: 1px solid #eaeaea;
+        background: #fff;
+    }
+
+    .jobs-search-bot {
+        margin-top: 15px;
+        text-align: center;
+
+        .btn-jobs-search {
+            padding: 9px 20px;
+            border: 0;
+            color: #fff;
+            font-weight: 600;
+            background: $pc1;
+
+            @include fontSize(15px);
+
+            &:hover {
+                background: $pc1_hover;
+            }
+        }
+    }
+
+    .jobs-search-aside {
+        position: absolute;
+        right: 16px;
+        top: -20px;
+        font-size: 0;
+        line-height: 0;
+
+        .btn {
+            margin-left: 3px;
+            border: 1px solid $bc3;
+            color: $fc2;
+            background: #fff;
+            line-height: inherit;
+            vertical-align: top;
+
+            @include fontSize(12px);
+            @include size(26px);
+
+            &.btn-open {
+                display: none;
+            }
+
+            &:hover {
+                border-color: $pc1_hover;                        
+                color: $pc1_hover;   
+            }
+        }
+    }
+
+    &.folding {
+        .jobs-search-aside {
+            .btn-open {
+                display: inline-block;
+            }
+
+            .btn-clse {
+                display: none;
+            }
+        }
+    }
+}
+
+// 로컬 검색
+.cpn-local-search {
+    .local-search-wrap {
+        @include flexbox();
+    }
+
+    .local-search-box {
+        border: 3px solid $pc1;
+        font-size: 0;
+
+        @include flex();
+
+        .isearch {
+            width: calc(100% - 38px);
+            height: 38px;
+            padding: 0 15px;
+            border: 0;
+            line-height: 38px;
+            vertical-align: top;
+
+            @include fontSize(17px);
+            @include box-sizing();
+        }
+
+        .btn-search-submit {
+            border: 0;
+            color: $pc1;
+            background: none;
+            
+            @include fontSize(19px);
+            @include size(38px);
+        }
+    }
+
+    .btn-detail {
+        height: 44px;
+        border: 0;
+        padding: 3px 8px 3px 5px;
+        color: #fff;
+        background: $pc1;
+
+        @include flex(none);
+        @include fontSize(14px);
+
+        &:hover {
+            background: $pc1_hover;
+        }
+    }
+
+    .local-search-detail {
+        display: none;
+        margin-top: 10px;
+        padding: 20px;
+        border: 1px solid #cacaca;
+
+        .search-detail-board {
+            width: 100%;
+            th {
+                padding: 5px;
+
+                @include fontSize(14px);
+            }
+
+            td {
+                padding: 5px;
+
+                @include fontSize(14px);
+
+                .istyle {
+                    width: 100%;
+                    height: 30px;
+                    padding: 3px 10px;
+                    border: 1px solid #ccc;
+
+                    @include box-sizing();
+                }
+            }
+        }
+
+        .search-detail-bot {
+            margin-top: 15px;
+            text-align: center;
+
+            .btn {
+                width: 90px;
+                height: 40px;
+                padding: 5px 10px;
+                font-weight: 600;
+
+                @include fontSize(16px);
+
+                &.btn-detail-submit {
+                    border: 0;
+                    color: #fff;
+                    background: $pc1;
+
+                    &:hover {
+                        background: $pc1_hover;
+                    }
+                }
+
+                &.btn-detail-cncl {
+                    border: 1px solid #ccc;
+                    color: $fc2;
+                    background: #fff;
+
+                    &:hover {
+                        background: #f9f9f9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 추천 채용
+.cpn-jobs {
+    padding-bottom: 1px;
+
+    @include flexbox();
+    @include flex-wrap(wrap);
+
+    .cpn-jobs-item {
+        position: relative;
+        width: calc(100% / 3);
+        height: 154px;
+        margin: 0 -1px -1px 0;
+        padding: 12px;
+        border: 1px solid #cecece;
+        background: #fff;
+        line-height: 1.3;
+
+        @include box-sizing();
+        
+        .cpn-jobs-item-a {
+            display: block;
+        }
+
+        .cpn-jobs-name {
+            display: block;
+
+            @include fontSize(16px);
+        }
+
+        .cpn-jobs-conts {
+            max-height: calc((15px * 2) * 1.3);
+            margin-top: 5px;
+            color: #444;
+
+            @include fontSize(15px);
+            @include wordwrap();
+            @include truncate2();
+        }
+
+        .cpn-jobs-tag {
+            max-height: calc((1rem * 2) * 1.3);
+            margin-top: 10px;
+            color: $fc2;
+            font-size: 0;
+            line-height: 0;
+
+            @include truncate2();
+
+            a {
+                margin-right: 10px;
+                line-height: 1.3;
+
+                @include wordwrap();
+                @include fontSize(14px);
+
+                &:last-child {
+                     margin-right: 0;
+                }
+            }
+        }
+
+        .btn-scrap {
+            position: absolute;
+            left: 7px;
+            bottom: 6px;
+            border: 0;
+            color: $fc3;
+            background: none;
+
+            @include size(28px);
+            @include fontSize(18px);
+
+            &.scrap {
+                i {
+                    color: $pc2;
+                    text-shadow: 0 0 #333;
+                }
+            }
+        }
+
+        .cpn-jobs-aside {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            font-size: 0;
+            line-height: 0;
+
+            .day {
+                display: inline-block;
+                color: $fc2;
+                line-height: normal;
+                vertical-align: middle;
+
+                @include fontSize(13px);
+            }
+
+            .label-s {
+                margin-left: 15px;
+                vertical-align: middle;
+            }
+        }
+
+        &.last {
+            padding: 3% 20px;
+
+            strong {
+                color: $pc1;
+
+                @include fontSize(16px);
+            }
+
+            .btn-cpn-jobs-item {
+                display: inline-block;
+                margin-top: 15px;
+                padding: 10px 15px;
+                color: #fff;
+                background: $pc1;
+
+                @include fontSize(15px);
+                 @include transition(background 0.3s ease-in-out);
+
+                &:hover {
+                    background: $pc1_hover;
+                }
+            }
+        }
+
+        &:hover {
+            border-color: $pc1_hover;
+            z-index: 1;
+
+            .cpn-jobs-conts {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// top tag
+.cpn-tag {
+    overflow: hidden;
+    
+    .cpn-tag-card {
+        margin: 0 -5px;
+
+        @include clear;
+
+        .cpn-tag-card-item {
+            float: left;
+            width: 25%;
+            padding: 0 5px;
+
+            @include box-sizing();
+
+            .cpn-tag-card-item-box {
+                border: 1px solid #cecece;
+                background: #fff;
+
+                @include box-sizing();
+
+                .cpn-tag-card-item-box-a {
+                    position: relative;
+                    display: block;
+
+                    .tit {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        color: #fff;
+                        font-size: calc(1rem + 0.88vw);
+                        z-index: 1;
+                        text-align: center;
+
+                        // @include fontSize(26px);
+                        @include responsive-ratio(16, 9);
+
+                        span {
+                            position: absolute;
+                            left: 4%;
+                            right: 4%;
+                            top: 48%;
+
+                            @include translate(0, -50%);
+                            @include wordwrap;
+                        }
+                    }
+
+                    .thumb {
+                        overflow: hidden;
+                        position: relative;
+                        display: block;
+                        
+                        @include responsive-ratio(16, 9);
+
+                        img {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            max-height: 120%;
+
+                            @include translate(-50%, -50%);
+                        }
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            background: rgba(0,0,0,0.7);
+                        }
+                    }
+
+                    .subject {
+                        overflow: hidden;
+                        display: block;
+                        height: calc(2.2rem * 1.2);
+                        padding: 10px 10px 0;
+                        line-height: 1.2;
+
+                        @include fontSize(15px);
+                        @include truncate2();
+                    }
+                }
+
+                .cpn-tag-card-item-box-info {
+                    padding: 10px;
+
+                    @include clear;
+
+                    li {
+                        float: left;
+                        margin-right: 12px;
+                        color: $fc2;
+
+                        @include fontSize(13px);
+                    }
+                }
+
+                .cpn-tag-card-item-box-user {
+                    padding: 8px 10px;
+                    border-top: 1px solid #cecece;
+                    font-size: 0;
+                    line-height: 0;
+
+                    a {
+                        display: block;
+
+                        @include flexbox();
+                        @include align-items(center);
+
+                        span {
+                            &.user-photo {
+                                overflow: hidden;
+                                margin-right: 10px;
+
+                                @include size(34px);
+                                @include rounded(50%, 50%, 50%, 50%);
+
+                                img {
+                                    max-width: 100%;
+                                }
+                            }
+
+                             &.user-name {
+                                 width: calc(100% - 44px);
+                                 max-height: 34px;
+                                 line-height: 1.3;
+
+                                 @include fontSize(13px);
+                                 @include truncate2();
+                             }
+                        }
+                    }
+                }
+
+                .cpn-tag-card-item-box-tag {
+                    padding: 10px;
+
+                     @include fontSize(13px);
+                }
+            }
+
+            &:hover {
+                .cpn-tag-card-item-box {
+                    border-color: $pc1_hover;
+                }
+            }
+        }
+    }
+
+    .cpn-tag-list {
+        margin-top: 15px;
+        font-size: 0;
+        line-height: 0;
+
+        @include truncate();
+
+        a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 3px 8px;
+            border: 1px solid #cecece;
+            background: #f9f9f9;
+            vertical-align: top;
+            line-height: normal;
+
+            @include fontSize(14px);
+            @include rounded(8px, 0, 8px, 0);
+
+            &:hover {
+                border-color: $pc1_hover;
+                color: $pc1_hover;
+            }
+        }
+    }
+}
+
+// star rating
+.cpn-grade {
+    .cpn-grade-rating {
+        width: 120px;
+
+        .cpn-grade-rating-star {
+            height: 22px;
+            background: url(/assets/img/rating_star.png) repeat-x 0 0;
+        }
+    }
+
+    .cpn-grade-user {
+        margin-top: 10px;
+
+        strong {
+            display: inline-block;
+            padding: 3px 10px;
+            border: 1px solid $pc4;
+            color: $pc4;
+            background: #fff;
+            vertical-align: top;
+
+            @include rounded(12.5px, 12.5px, 12.5px, 12.5px);
+        }
+       
+        // text-align: right;
+    }
+}
+
+// 프로필
+.cpn-profile-info {
+    margin-top: 40px;
+
+    .career-infobox {
+        position: relative;
+        margin-top: 10px;
+        // border: 1px solid #cecece;
+
+        @include border-style(3px, 1px, 1px, 1px, solid, $pc1 #cecece #cecece);
+
+        .tit-h4 {
+            padding: 13px;
+            border-bottom: 1px solid #cecece;
+            // background-image: linear-gradient(#fff, #fff 85%, #f2f2f2);
+
+            @include fontSize(15px);
+
+            span {
+                color: $fc2;
+
+                @include fontSize(13px);
+            }
+        }
+
+        .career-infobox-list {
+            background: #f9f9f9;
+        }
+
+        .btn-more {
+            width: 100%;
+            height: 34px;
+            background: none;
+
+            @include fontSize(13px);
+            @include border-style(1px, 0, 0, 0, solid, #cecece);
+
+            i {
+                @include fontSize(10px);
+            }
+
+            &:hover {
+                color: $pc1_hover;
+            }
+        }
+
+        .btn-add {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            border: 0;
+            color: $fc2;
+            background: none;
+
+            @include size(34px);
+
+            &:hover {
+                color: $pc1_hover;
+            }
+        }
+
+        .career-infobox-item {
+            position: relative;
+            padding: 20px;
+            border-top: 1px solid #dedede;
+            box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.03);
+
+            dl {
+                dt {
+                    margin-bottom: 8px;
+                    font-weight: 600;
+
+                    @include fontSize(15px);
+
+                    span {
+                        margin-left: 15px;
+                        color: $fc2;
+
+                        @include fontSize(13px);
+                    }
+                }
+
+                dd {
+                    padding: 2px 5px;
+                    @include fontSize(14px);
+                }
+            }
+
+            .career-infobox-item-txt {
+                margin-right: 40px;
+                line-height: 1.5;
+
+                @include wordwrap();
+
+                &[contenteditable=true] {
+                    padding: 10px;
+                    border: 1px solid #cecece;
+                    background: #fff;
+                }
+            }
+
+            .career-infobox-item-aside {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                font-size: 0;
+                line-height: 0;
+
+                .btn {
+                    border: 1px solid #ccc;
+                    color: $fc3;
+                    background: #fff;
+                    vertical-align: top;
+                    line-height: inherit;
+                    
+                    @include size(34px);
+                    @include fontSize(15px);
+
+                    &.btn-edit {
+                        &:hover {
+                            border-color: $pc1_hover;
+                            color: $pc1_hover;
+                        }
+                    }
+
+                    &.btn-del {
+                        margin-left: 3px;
+
+                        &:hover {
+                            border-color: $pc2_hover;
+                            color: $pc2_hover;
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                border-top: 0;
+            }
+        }
+
+        .career-infobox-form {
+            padding: 25px 30px;
+            border-bottom: 1px solid #cecece;
+            box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.03);
+
+            .itastyle {
+                display: block;
+                width: 100%;
+            }
+
+            ul {
+                li {
+                    margin-top: 5px;
+
+                    .istyle {
+                        width: 100%;
+                        height: 34px;
+                        padding: 2px 10px;
+                        border: 1px solid #ccc;
+
+                        @include box-sizing();
+                        @include fontSize(14px);
+                    }
+
+                    .slt {
+                        width: 100%;
+                    }
+
+                    .radio-group {
+                        padding: 10px 0;
+                    }
+
+                    .certifiedtest {
+                        margin-top: 5px;
+                        font-size: 0;
+                        line-height: 0;
+
+                        .istyle {
+                            width: calc(100% - 170px);
+                            margin-right: 10px;
+                        }
+
+                        .icalendar {
+                            .icalendar-input {
+                                width: 127px;
+                            }
+                        }
+                    }
+
+                    &.cal {
+                        font-size: 0;
+                        line-height: 0;
+
+                        .icalendar,
+                        .icheck,
+                        .slt {
+                            margin-right: 10px;
+                            vertical-align: middle;
+                        }
+
+                        .slt {
+                            width: auto;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .career-infobox-form-bot {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #eaeaea;
+                font-size: 0;
+                line-height: 0;
+                text-align: center;
+
+                .btn {
+                    margin-left: 5px;
+                    padding: 8px 20px;
+                    border: 1px solid;
+                    background: #fff;
+
+                    @include fontSize(15px);
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &.btn-reg {
+                        border-color: $pc1;
+                        color: #fff;
+                        background: $pc1;
+
+                        &:hover {
+                            background: $pc1_hover;
+                        }
+                    }
+
+                    &.btn-cncl {
+                        border-color: $bc3;
+                        color: $fc2;
+
+                        &:hover {
+                            background: #f9f9f9;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+// circle
+.cpn-circle {
+    overflow: hidden;
+    
+    .cpn-circle-list {
+        @include flexbox();
+        // @include justify-content(space-between);
+
+        .cpn-circle-list-item {
+            @include box-sizing();
+            @include flex(0, 0, auto);
+
+            .cpn-circle-list-in {
+                overflow: hidden;
+                border: 1px solid #cecece;
+                border-radius: 6px;
+
+                &:hover {
+                    border-color: #aaa;
+                }
+            }
+
+            .cpn-circle-list-item-a {
+                display: block;
+            }
+
+            .thumb {
+                overflow: hidden;
+                position: relative;
+                @include responsive-ratio(16, 10);
+
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    max-height: 120%;
+
+                    @include translate(-50%, -50%);          
+                }
+            }
+
+            .cpn-circle-list-name {
+                display: block;
+                padding: 10px;
+
+                @include truncate();
+                @include fontSize(15px);
+            }
+
+            .cpn-circle-list-info {
+                padding: 0 10px;
+
+                .cpn-circle-list-info-list {
+                    li {
+                        padding: 2px 0;
+                        color: $fc2;
+
+                        @include fontSize(13px);
+
+                        &.tags {
+                            margin-top: 20px;
+                            padding: 10px 0;
+                            border-top: 1px solid #cecece;
+
+                            @include truncate();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 섬네일 리스트 타입
+.cpn-content-list {
+    .cpn-content-list-item {
+        position: relative;
+        padding: 15px 0;
+        border-top: 1px solid #cecece;
+
+        .cpn-content-list-item-box {
+            @include clear;
+
+            &:hover {
+                .cpn-content-list-item-conts {
+                    .content-list-item-conts-subject {
+                        color: $pc1_hover;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .cpn-content-list-item-thumb {
+            display: none;
+            float: left;
+            margin-right: 15px;
+
+            @include col(4);
+
+            .thumb {
+                overflow: hidden;
+                position: relative;
+                display: block;
+
+                @include responsive-ratio(16, 10);             
+
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    max-height: 120%;
+
+                    @include translate(-50%, -50%);
+                }
+            }
+        }
+
+        .cpn-content-list-item-conts {
+            overflow: hidden;
+
+            .cpn-content-list-item-a {
+                display: block;
+            }
+
+            .content-list-item-conts-subject {
+                @include transition(0.15s ease-in-out);
+                @include fontSize(18px);
+            }
+
+            .content-list-item-conts-conts {
+                margin-top: 12px;
+                color: $fc2;
+
+                @include fontSize(16px);
+                @include truncate2();
+            }
+
+            .content-list-item-conts-date {
+                display: block;
+                margin-top: 15px;
+                color: $fc3;
+
+                @include fontSize(14px);
+            }
+        }
+
+        .cpn-content-list-item-tags {
+            margin: 15px 0 10px;
+            font-size: 0;
+            line-height: 0;
+
+            @include truncate();
+
+            a {
+                display: inline-block;
+                margin-right: 3px;
+                padding: 5px 10px;
+                color: #39739d;
+                background: #e1ecf4;
+                vertical-align: top;
+                line-height: normal;
+                @include transition(background 0.3s ease-in-out);
+
+                @include fontSize(14px);
+                // @include rounded(8px, 0, 8px, 0);
+
+                &:hover {
+                    background: #cee0ed;
+                }
+            }
+        }
+
+        .cpn-content-list-item-info {
+            padding-top: 5px;
+            border-top: 1px dashed #eaeaea;
+            // margin-left: 15px;
+
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(space-between);
+
+            .content-list-item-info-info {
+                @include col(15);
+                @include clear;
+
+                li {
+                    float: left;
+                    margin-right: 3px;
+                    padding: 4px 10px 3px;
+                    color: $fc2;
+                    // border: 1px solid #cecece;
+                    // text-align: center;
+
+                    @include fontSize(14px);
+                }
+            }
+
+            .content-list-item-info-user {
+                max-width: calc(100% * (7/22));
+
+                a {
+                    display: block;
+
+                    @include flexbox();
+                    @include align-items(center);
+                }
+
+                .photo {
+                    overflow: hidden;
+                    display: block;
+                    margin-right: 10px;
+
+                    @include rounded(17px, 17px, 17px, 17px);
+                    @include size(34px);
+                    @include flex(0, 0, auto);
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .name {
+                    display: block;
+                    color: $fc2;
+
+                    @include truncate();
+                    @include fontSize(13px);
+                }
+            }
+        }
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &.curation {
+            .cpn-content-list-item-thumb {
+                display: block;
+            }
+
+            .cpn-content-list-item-conts {
+                padding-bottom: 50px;
+
+                .cpn-content-list-item-tags {
+                    margin-bottom: 0;
+                }
+            }
+
+            .cpn-content-list-item-info {
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+                left: calc(100% * (4 / 22) + 15px);
+            }
+        }
+    }
+}
+
+// 카드형 유저
+.cpn-cardstyle-user {
+    position: relative;
+    text-align: center;
+    background: #fff;
+    
+    .headhunter {
+        position: absolute;
+        left: 5px;
+        top: 0;
+        padding: 2px 0;
+        font-family: tahoma;
+        color: #fff;
+        font-weight: 600;
+        background: blueviolet;
+        text-align: center;
+        line-height: 20px;
+
+        @include fontSize(12px);
+        @include size(20px);
+    }
+
+    .cpn-cardstyle-user-box {
+        border: 1px solid #cecece;
+
+        &:hover {
+            background: #f7fafe;
+
+            .info {
+                .info-name {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .cpn-cardstyle-user-a {
+        display: block;
+        padding: 20px 10px 8px;
+    }
+
+    .photo {
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+
+        @include rounded(50%, 50%, 50%, 50%);
+        @include size(68px);
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .info {
+        overflow: hidden;
+        margin-top: 10px;
+
+        .info-name {
+            display: block;
+
+            @include fontSize(15px);
+            @include truncate();
+        }
+
+        .info-detail {
+            height: 40px;
+            margin-top: 8px;
+
+            li {
+                color: $fc2;
+                line-height: 1.5;
+
+                @include fontSize(13px);
+                @include truncate();
+            }
+        }
+    }
+
+    .cpn-cardstyle-user-word {
+        margin: 0 10px;
+        padding: 10px 0;
+        border-top: 1px dashed #eaeaea;
+        font-size: 0;
+        text-align: center;
+
+        @include truncate();
+
+        li {
+            display: inline-block;
+            padding: 0 5px;
+            vertical-align: top;
+            text-align: center;
+
+            @include fontSize(13px);
+        }
+    }
+
+    .btn {
+        margin-top: -1px;
+        font-size: 0;
+        line-height: 0;
+        
+        @include flexbox();
+
+        .btn-button {
+            overflow: hidden;
+            // width: 50%;
+            height: 34px;
+            border: 1px solid #cecece;
+            color: $fc2;
+            background: none;
+            vertical-align: top;
+            line-height: 32px;
+            text-align: center;
+            white-space: nowrap;
+
+            @include fontSize(13px);
+            @include box-sizing();
+            @include flex();
+
+            i {
+                @include fontSize(12px);
+            }
+
+            &:hover {
+                position: relative;
+                border-color: #444;
+                color: $fc1;
+            }
+        }
+
+        .btn-mail {
+            // display: inline-block;
+            // width: calc(50% + 1px);
+            margin-right: -1px;
+            
+            i {
+                vertical-align: -1px;
+            }
+        }
+
+        .btn-networking {
+            i {
+                vertical-align: -2px;
+            }
+        }
+
+        .btn-refuse,
+        .btn-accept {
+            i {
+                vertical-align: middle;
+
+                @include fontSize(11px);
+            }
+        }
+
+        .btn-accept {
+            i {
+                @include fontSize(12px);
+            }
+        }
+    }
+
+    .icheck-custom {
+        display: none;
+        position: absolute;
+        right: 16px;
+        top: 11px;
+        height: 16px;
+        line-height: 16px;
+
+        label {
+            height: 16px;
+
+            i {
+                @include fontSize(16px);
+            }
+        }
+    }
+
+    // 기본 가로형일때
+    &.horizon {
+        float: none;
+        width: 100%;
+        // min-height: 84px;
+        padding: 0;
+        border-top: 1px solid #cecece;
+        text-align: left;
+
+        .headhunter {
+            top: -1px;
+        }
+
+        .cpn-cardstyle-user-box {
+            padding: 10px;
+            border :0;
+        }
+
+        .cpn-cardstyle-user-a {
+            padding: 0;
+
+            @include clear;
+        }
+
+        .photo {
+            float: left;
+            margin: 0 8px 0 0;
+
+            @include size(50px);
+        }
+
+        .info {
+            height: auto;
+            margin: 0;
+
+            .info-detail {
+                width: 70%;
+                height: 30px;
+                margin-top: 4px;
+
+                li {
+                    line-height: 1.15;
+                }
+            }
+        }
+
+        .cpn-cardstyle-user-word {
+            margin: 5px 0 0 58px;
+            padding: 5px 0 0 0;
+            text-align: left;
+
+            li {
+                padding-left: 10px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            margin-top: -19px;
+            z-index: 1;
+
+            .btn-button {
+                border: 0;
+                color: $pc1;
+                line-height: 38px;
+
+                @include size(38px);
+
+                i {
+                    line-height: inherit;
+                    @include fontSize(16px);
+                }
+
+                span {
+                    position: absolute;
+                    left: -9999px;
+                    top: -9999px;
+                    visibility: hidden;
+                }
+            }
+
+            .btn-refuse,
+            .btn-accept {
+                i {
+                    vertical-align: 1px;
+
+                    @include fontSize(13px);
+                }
+            }
+
+            .btn-refuse {
+                i {
+                    @include fontSize(12px);
+                }
+            }
+
+            .btn-accept {
+                i {
+                    @include fontSize(14px);
+                }
+            }
+        }
+
+        // 버튼 없을때
+        &.btnnone {
+            .btn {
+                display: none;
+            }
+
+            .info {
+                .info-detail {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.cpn-cardstyle-user-list {
+    overflow: hidden;
+
+    .in {
+        margin: 0 -5px -10px;
+
+        @include clear;
+    }
+
+    .cpn-cardstyle-user {
+        float: left;
+        padding: 0 5px 10px;
+
+        @include box-sizing();
+
+        .headhunter {
+            top: -1px;
+            left: 11px;
+        }
+    }
+}
+
+// 고객사 리스트 형태
+.cpn-recruiter-client-item {
+    position: relative;
+    border-top: 1px solid #eaeaea;
+
+    @include flexbox();
+    
+    dl {
+        padding: 15px 10px;
+        line-height: 22px;
+
+        @include clear;
+        @include box-sizing();
+        @include fontSize(15px);
+
+        dt {
+            float: left;
+            margin-right: 8px;
+            font-weight: 600;
+        }
+
+        dd {
+            position: relative;
+            float: left;
+            padding: 0 8px 0 9px;
+
+            ul {
+                padding-top: 3px;
+
+                @include clear;
+                @include fontSize(14px);
+
+                li {
+                    position: relative;
+                    float: left;
+                    padding: 0 8px 0 9px;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        width: 1px;
+                        height: 12px;
+                        font-size: 0;
+                        background: #ccc;
+                    }
+
+                    &:first-child,
+                    &:last-child {
+                        padding: 0 8px 0 0;
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 5px;
+                width: 1px;
+                height: 12px;
+                font-size: 0;
+                background: #ccc;
+            }
+
+            &:last-child {
+                padding: 0;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        .full {
+            width: 100%;
+        }
+    }
+
+    .recruiter-client-item-aside {
+        padding: 15px;
+
+        @include flex(none);
+        
+        // background: #f9f9f9;
+
+        li {
+            padding-left: 15px;
+            border-left: 1px solid #eaeaea;
+            color: #888;
+            line-height: 23px;
+
+            @include fontSize(13px);
+
+            span {
+                display: inline-block;
+                width: 45px;
+                text-align: left;
+
+                &:last-child {
+                    width: 30px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background: #f7fafe;
+
+        dl {
+            dt {
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &:first-child {
+        border-top: 0;
+    }
+}
+
+// 고객사 카드 형태
+.cpn-recruiter-client-card-wrap {
+    margin: 0 -5px -10px;
+
+    @include clear;
+}
+.cpn-recruiter-client-card {
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 0 5px;
+
+    @include box-sizing();
+
+    .recruiter-client-card-in {
+        padding: 15px 20px;
+        border: 1px solid #ccc;
+        background: #fff;
+
+        @include clear;
+    }
+
+    .recruiter-client-card-head {
+        float: left;
+        margin-right: 20px;
+
+        .recruiter-client-card-head-a {
+            display: block;
+        }
+
+        .ci {
+            overflow: hidden;
+            border-radius: 100px;
+
+            @include size(72px);
+            @include flexbox();
+            @include align-items(center);
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .name {
+            display: block;
+            margin-top: 5px;
+            text-align: center;
+
+            @include fontSize(15px);
+            @include truncate();
+
+            span {
+                display: block;
+                margin-top: 3px;
+                color: $fc3;
+                font-weight: 400;
+
+                @include fontSize(14px);
+            }
+        }
+    }
+
+    .recruiter-client-card-body {
+        overflow: hidden;
+
+        .recruiter-client-card-body-conts {
+            li {
+                line-height: 22px;
+            }
+        }
+
+        .recruiter-client-card-body-aside {
+            margin-top: 5px;
+            @include clear;
+
+            li {
+                float: left;
+                margin-left: 3px;
+                padding: 3px 6px;
+                border: 1px solid #eaeaea;
+                color: #888;
+
+                @include fontSize(13px);
+                
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .recruiter-client-card-in {
+            border-color: $pc1;
+        }
+    }
+}
+
+// 태그 서클
+.cpn-tagcircle {
+    @include box-sizing();
+
+    .cpn-tagcircle-a {
+        display: block;
+        border: 1px solid #cacaca;
+        // background: #f9f9f9;
+        background: #fff;
+        // box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.03);
+
+        &:hover {
+            border-color: $pc1;
+        }
+    }
+
+    .cpn-tagcircle-head {
+        height: 32px;
+        margin:  6px;
+        border: 1px solid #E1ECF4;
+        border-radius: 5px;
+        font-weight: 600;
+        color: #6873A7;
+        // color: #fff;
+        background: #E1ECF4;
+        // background: #d9534f;
+        line-height: 30px;
+        text-align: center;
+        
+        @include fontSize(14px);
+        @include box-sizing();
+        @include truncate();
+    }
+
+    .cpn-tagcircle-cnt {
+        margin: 6px;
+        padding: 6px 6px 5px;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        color: #888;
+        background: #fff;
+        text-align: center;
+
+        @include fontSize(12px);
+    }
+
+    .cpn-tagcircle-body {
+        padding: 5px 15px 10px;
+
+        .cpn-tagcircle-body-txt {
+            height: 32px;
+
+            @include box-sizing();
+            @include truncate2();
+        }
+
+        ul {
+            position: relative;
+            margin-top: 8px;
+            padding-top: 8px;
+            // margin-top: 8px;
+            border-top: 1px solid #dadada;
+
+            @include clear;
+
+            li {
+                float: left;
+                width: 50%;
+                color: #888;
+
+                @include fontSize(12px);
+                @include truncate();
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                border-top: 1px solid #ffffff;
+            }
+        }
+    }
+}
+.cpn-tagcircle-list {
+    overflow: hidden;
+
+    .cpn-tagcircle-list-box {
+        margin: 0 -5px -10px;
+
+        @include clear;
+    }
+
+    .cpn-tagcircle {
+        float: left;
+        margin-bottom: 10px; 
+        padding: 0 5px;
+    }
+}
+
+// 제목 박스
+.cpn-subjectbox {
+    padding: 0 5px 10px;
+
+    @include box-sizing();
+
+    .cpn-subjectbox-in {
+        border: 1px solid #cacaca;
+        background: #f9f9f9;
+    }
+
+    .cpn-subjectbox-subject{
+        position: relative;
+        padding: 10px 10px 8px 28px;
+        border-bottom: 1px solid #eaeaea;
+        font-weight: 600;
+        background: #fff;
+
+        @include fontSize(15px);
+
+        a {
+            display: block;
+            height: 35px;
+            @include truncate2();
+        }
+
+        .q {
+            position: absolute;
+            left: 10px;
+            top: 9px;
+            color: $pc2;
+
+            @include fontSize(16px);
+        }
+    }
+
+    .cpn-subjectbox-tags {
+        padding: 10px;
+        font-size: 0;
+        line-height: 0;
+
+        a {
+            margin-right: 5px;
+            color: $fc2;
+            line-height: 1.15;
+
+            @include fontSize(13px);
+
+            &:hover {
+                text-decoration: underline;
+            }                    
+        }
+    }
+
+    .cpn-subjectbox-info {
+        padding: 0 10px 10px;
+
+        @include clear;
+
+        li {
+            float: left;
+            margin-left: 12px;
+            color: $fc3;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &:hover {
+        border-color: $pc1_hover;
+    }
+}
+.cpn-subjectbox-wrap {
+    overflow: hidden;
+}
+.cpn-subjectbox-list {
+    margin: 0 -5px -10px;
+
+    @include flexbox();
+    @include flex-wrap(wrap);
+
+    .cpn-subjectbox {
+        width: calc(100% / 4);
+        @include flex(none);
+    }
+}
+
+// tab
+.cpn-tab-wrap {
+    ul {
+        border-top: 1px solid $pc1;
+        border-bottom: 1px solid #eaeaea;
+
+        @include flexbox();
+
+        li {
+            margin-bottom: -1px;
+
+            @include flex();
+
+            a {
+                position: relative;
+                display: block;
+                padding: 14px 10px 11px;
+                // color: $fc3;
+                text-align: center;
+                white-space: nowrap;
+
+                @include fontSize(16px);
+
+                span {
+                    position: relative;
+                    top: -2px;
+                }
+
+                &:before {
+                    content: "";
+                    display: none;
+                    position: absolute;
+                    width: 12px;
+                    height: 12px;
+                    left: 50%;
+                    bottom: -6px;
+                    margin-left: -6px;
+                    background: #fff;
+                    transform: rotate(45deg);
+                    box-shadow: inset 1px 1px 0 #cacaca;
+                }
+
+                &.active {
+                    border-bottom: 1px solid $pc1;
+                    color: $pc1;
+                    font-weight: 600;
+
+                    // &:hover {
+                    //     color: $pc1;
+                    // }
+
+                    &:before {
+                        display: block;
+                        box-shadow: inset 1px 1px 1px $pc1;
+                    }
+                }
+
+                // &:hover {
+                //     color: $fc2;
+                //     font-weight: 600;
+
+                //     &:before {
+                //         display: block;
+                //     }
+                // }
+            }
+        }
+    }
+}
+
+// 평판
+.cpn-reputation {
+    margin-top: 10px;
+
+    .cpn-reputation-head {
+        padding: 5px 0 3px;
+        background: #f9f9f9;
+
+        @include flexbox();
+        @include align-items(flex-end);
+        @include border-style(1px, 0, 1px, 0, solid, #dcdcdc transparent #eaeaea transparent);
+
+        .ranknumber {
+            display: block;
+            width: 60px;
+            padding: 2px 10px 0;
+            color: $pc2;
+            text-align: center;
+
+            @include fontSize(20px);
+
+            i {
+                @include fontSize(14px);
+            }
+
+            &.up {
+                color: $pc2;
+            }
+
+            &.down {
+                color: $pc1;
+            }
+        }
+
+        .date {
+            padding-bottom: 1px;
+            font-weight: 600;
+            text-align: center;
+            
+            @include fontSize(13px);
+        }
+    }
+
+    .cpn-reputation-body {
+        li {
+            padding: 12px 10px;
+            border-top: 1px solid #eaeaea;
+
+            @include flexbox();
+            @include align-items(center);
+
+            .point {
+                display: block;
+                width: 50px;
+                padding: 4px 10px;
+                border: 1px solid #cecece;
+                background: #f9f9f9;
+                text-align: center;
+                line-height: 1.4;
+
+                @include flex(none);
+                @include box-sizing();
+                @include fontSize(15px);
+
+                &.up {
+                    color: $pc2;
+                }
+
+                &.down {
+                    border: 1px solid $pc1;
+                    color: $pc1;
+                    background: #fff;
+                }
+            }
+
+            dl {
+                position: relative;
+                width: calc(100% - 60px);
+
+                @include flex(none);
+                @include clear;
+                @include box-sizing();
+
+                dt {
+                    float: left;
+                    width: 140px;
+                    padding: 0 10px;
+                    text-align: center;
+                    line-height: 1.4;
+
+                    @include fontSize(15px);
+                    @include flex(none);
+                    @include box-sizing();
+                }
+
+                dd {
+                    overflow: hidden;
+                    margin-right: 60px;
+                    line-height: 1.5;
+
+                    @include flex();
+
+                    a {
+                        display: block;
+
+                        @include truncate();
+                    }
+
+                    &.time {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        margin-right: 0;
+                        padding: 0;
+                        color: $fc3;
+
+                        @include fontSize(13px);
+                        @include translate(0, -50%);
+                    }
+                }
+            }
+
+            &:first-child {
+                border-top: 0;
+            }
+        }
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+// 컨텐츠 상세
+.cpn-content-view {
+    position: relative;
+    max-width: 1200px;
+    margin: 30px auto 50px;
+    padding: 80px 50px 60px;
+    background: #fff;
+
+    @include box-sizing();
+
+    .cpn-content-view-main {
+        @include flexbox();
+
+        .cpn-content-view-wrap {
+            position: relative;
+            padding-top: 40px;
+
+            @include col(16);
+
+            .cpn-content-view-head {
+                .tit-h3 {
+                    margin-bottom: 15px;
+                    line-height: 1;
+
+                    @include fontSize(28px);
+                    @include wordwrap();
+                }
+
+                .cpn-content-view-head-info {
+                    border-top: 2px solid $pc1;
+                    border-bottom: 1px solid #cacaca;
+
+                    .cpn-content-view-head-info-intro {
+                        padding: 12px 5px;
+                        border-bottom: 1px solid #eaeaea;
+
+                        li {
+                            padding: 5px 0;
+
+                            @include clear;
+                            @include fontSize(15px);
+
+                            .t {
+                                float: left;
+                                width: 80px;
+                            }
+
+                            .conts {
+                                overflow: hidden;
+
+                                @include wordwrap();
+                            }
+                        }
+                    }
+
+                    .cpn-content-view-head-info-box {
+                        padding: 6px 5px;
+
+                        @include flexbox();
+                        @include align-items(center);
+                        @include justify-content(space-between);
+
+                        .cpn-content-view-head-info-box-info {
+                            @include col(15);
+                            @include clear;
+
+                            li {
+                                float: left;
+                                margin-right: 3px;
+                                padding: 4px 10px 3px 0;
+                                color: $fc2;
+                                // border: 1px solid #cecece;
+                                // text-align: center;
+
+                                @include fontSize(14px);
+                            }
+                        }
+
+                        .cpn-content-view-head-info-box-user {
+                            max-width: calc(100% * (7/22));
+
+                            a {
+                                display: block;
+
+                                @include flexbox();
+                                @include align-items(center);
+                            }
+
+                            .photo {
+                                overflow: hidden;
+                                display: block;
+                                margin-right: 10px;
+
+                                @include rounded(17px, 17px, 17px, 17px);
+                                @include size(34px);
+                                @include flex(0, 0, auto);
+
+                                img {
+                                    max-width: 100%;
+                                }
+                            }
+
+                            .name {
+                                display: block;
+                                color: $fc2;
+
+                                @include truncate();
+                                @include fontSize(13px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cpn-content-view-body {
+                padding-top: 30px;
+                // border-top: 1px solid #cacaca;
+
+                .cpn-content-view-body-conts {
+                    line-height: 1.5;
+
+                    @include wordwrap();
+
+                    img {
+                        max-width: 100%;
+                    }
+
+                    .cpn-content-view-body-conts-item {
+                        margin-top: 25px;
+                        color: $fc2;
+
+                        .tit-h4 {
+                            margin-bottom: 5px;
+                            color: $fc1;
+                            line-height: normal;
+
+                            @include fontSize(16px);
+                        }
+
+                        .t {
+                            color: $fc1;
+
+                            @include fontSize(16px);
+                        }
+
+                        .item-dsc {
+                            margin-bottom: 5px;
+                        }
+
+                        .item-info {
+                            li {
+                                @include fontSize(14px);
+
+                                .dn {
+                                    color: $pc1;
+                                    white-space: nowrap;
+                                }
+
+                                .num {
+                                    color: $pc2;
+                                    font-weight: 600;
+                                }
+
+                                [class^=icon-] {
+                                    position: relative;
+                                    top: -1px;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+
+                        // .item-list {
+                        //     padding: 5px 15px;
+                        //     border: 1px solid #cecece;
+                        //     border-radius: 4px;
+                        //     background: #f9f9f9;
+
+                        //     .list-contact {
+                        //         padding: 10px 0;
+                        //         border-top: 1px solid #eaeaea;
+
+                        //         .contact-top {
+                        //             strong {
+                        //                 color: $fc1;
+                        //             }
+                        //         }
+
+                        //         .contact-conts {
+                        //             position: relative;
+                        //             padding-left: 18px;
+
+                        //             &:before {
+                        //                 content: "";
+                        //                 position: absolute;
+                        //                 left: 4px;
+                        //                 top: 2px;
+
+                        //                 @include border-style(0, 0, 1px, 1px, solid, #ccc);
+                        //                 @include size(8px);
+                        //             }
+                        //         }
+
+                        //         &:first-child {
+                        //             border-top: 0
+                        //         }
+                        //     }
+                        // }
+
+                        .lnk {
+                            margin-top: 10px;
+                            display: inline-block;
+                            padding: 3px 5px;
+                            color: #fff;
+                            background: $pc1;
+
+                            @include fontSize(12px);
+
+                            [class^=icon-] {
+                                margin-left: 4px;
+                                vertical-align: -3px;
+
+                                @include fontSize(16px);
+                            }
+
+                            &:hover {
+                                background: $pc1_hover;
+                            }
+                        }
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                .cpn-content-view-body-bot {
+                    margin-top: 30px;
+                    .btn-jobs {
+                        width: 100%;
+                        height: 50px;
+                        border: 0;
+                        color: #fff;
+                        font-weight: 600;
+                        background: $pc1;
+
+                        @include fontSize(18px);
+
+                        &:hover {
+                            background: $pc1_hover;
+                        }
+                    }
+                }                
+            }
+
+            .cpn-content-view-share {
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                ul {
+                    @include clear;
+
+                    li {
+                        overflow: hidden;
+                        float: left;
+                        height: 20px;
+                        margin-left: 3px;
+                        line-height: 20px;
+
+                        @include fontSize(13px);
+
+                        a {
+                            display: block;
+                            padding-right: 5px;
+                        }
+
+                        img {
+                            width: 20px;
+                            margin-right: 2px;
+                            vertical-align: -6px;
+                        }
+
+                        &.fb {
+                            color: #fff;
+                            background: #3a559f;
+
+                            img {
+                                background: #fff;
+                            }
+                        }
+
+                        &.linkedin {
+                            color: #fff;
+                            background: #0084b1;
+                        }
+
+                        &.kakao {
+                            background: #ffeb00;
+                        }
+
+                        &.line {
+                            color: #fff;
+                            background: #00c200;
+                        }
+
+                        &.email {
+                            padding: 0 2px 0 5px;
+                            color: #fff;
+                            background: $bc1;
+
+                            i {
+                                margin-right: 3px;
+                                vertical-align: -1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .cpn-content-view-aside {
+            padding-left: 30px;
+
+            @include col(6);
+            @include box-sizing();
+
+            .cpn-content-view-aside-career {
+                margin-top: 25px;
+
+                .tit-h4 {
+                    height: 24px;
+                    border-bottom: 1px solid #444;
+
+                    @include fontSize(16px);
+
+                    span {
+                        color: $pc1;
+                    }
+                }
+
+                .cpn-content-view-aside-career-list {
+                    .cpn-content-list-item {
+                        padding: 10px 0;
+
+                        .cpn-content-list-item-conts {
+                            .content-list-item-conts-subject {
+                                @include fontSize(15px);
+                            }
+
+                            .content-list-item-conts-date {
+                                display: none;
+                            }
+
+                            .content-list-item-conts-conts {
+                                margin-top: 6px;
+
+                                @include fontSize(14px);
+                            }
+                        }
+
+                        .cpn-content-list-item-tags {
+                            margin: 10px 0 0;
+                        }
+
+                        .cpn-content-list-item-info {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 고객사 뷰
+    &.clientview {
+        .cpn-content-view-main {
+            .cpn-content-view-wrap {
+                padding-top: 0;
+            }
+
+            .cpn-content-view-aside {
+                .cpn-aside-recruiterstatus {
+                    margin-top: 0;
+                }
+
+                .cpn-content-view-aside-adv {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+
+// 리스트 정렬
+.cpn-list-sort {
+    border-bottom: 1px solid #dcdcdc;
+    
+    ul {
+        padding: 10px 0;
+
+        @include clear;
+
+        li {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            padding-left:4px;
+            
+            .btn-sort {
+                padding: 2px 5px;
+                border: 0;
+                color: $fc3;
+                background: none;
+
+                @include fontSize(14px);
+
+                i {
+                    margin-left: 5px;
+
+                    @include fontSize(10px);
+                }
+
+                &.active {
+                    color: $pc1;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                display: block;
+                width: 2px;
+                height: 2px;
+                margin-top: -1px;
+                background: #ccc;
+            }
+        }
+    }
+}
+
+// lnb
+.lnb-list-nav {
+    .lnb {
+        ul {
+            li {
+                position: relative;
+
+                a {
+                    display: block;
+                    padding: 13px 15px;
+                    border-top: 1px solid #eaeaea;
+                    
+                    @include fontSize(15px);
+
+                    &.active {
+                        border-top: 1px solid $bc1;
+                        color: #fff;
+                        font-weight: 600;
+                        background: $bc1;
+
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                i {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    margin-top: -8px;
+                    color: $fc3;
+
+                    @include fontSize(16px);
+                }
+
+                &:hover {
+                    background: #f9f9f9;
+                }
+            }
+        }
+    }
+}
+
+// 서클 컨텐츠
+.cpn-circle-conts-item {
+    padding: 15px;
+    border-top: 1px solid #dedede;
+
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+    @include wordwrap();
+
+    .circle-conts-item-box {
+        .circle-conts-item-box-a {
+            display: block;
+        }
+
+        .subject {
+            @include fontSize(16px);
+        }
+
+        .date {
+            margin-left: 15px;
+            color: $fc3;
+            @include fontSize(13px);
+        }
+
+        .circle-conts-item-box-answer {
+            margin-top: 6px;
+            color: $fc2;
+
+            @include fontSize(14px);
+            @include truncate2();
+        }
+
+        a:hover {
+            .subject {
+                color: $pc1;
+            }
+        }
+
+        .circle-conts-item-box-tags {
+            margin-top: 10px;
+            font-size: 0;
+            line-height: 0;
+
+            @include truncate();
+
+            a {
+                display: inline-block;
+                margin-right: 3px;
+                padding: 5px 10px;
+                color: #39739d;
+                background: #e1ecf4;
+                white-space: nowrap;
+                line-height: 1;
+                        
+                @include transition(background 0.3s ease-in-out);
+                @include fontSize(14px);
+                // @include rounded(8px, 0, 8px, 0);
+
+                &:hover {
+                    background: #cee0ed;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .circle-conts-item-cnt {
+        @include flex(none);
+        @include clear;
+
+        ul {
+            li {
+                float: left;
+                min-width: 52px;
+                padding: 6px 5px 4px;
+                color: #888;
+                text-align: center;
+
+                @include fontSize(12px);
+                @include box-sizing();
+
+                span {
+                    display: block;
+                    margin-top: 7px;
+                    color: $fc2;
+
+                    @include fontSize(17px);
+                }
+
+                i {
+                    display: none;
+                }
+
+                &.answer {
+                    border-radius: 3px;
+                    color: #fff;
+                    background: $pc1;
+
+                    span {
+                        color: #fff;
+                    }
+                }
+
+                &.check {
+                    padding: 5px 5px 3px;
+                    border: 1px solid $pc1;
+                    border-radius: 3px;
+                    color: $pc1;
+
+                    span {
+                        color: $pc1;
+                    }
+                }
+            }
+        }
+    }
+
+    &:first-child {
+        border-top: 0;
+    }
+}
+
+// 히스토리
+.cpn-history {
+    .history-main-list {
+        position: relative;
+        // max-width: 800px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            bottom: 0;
+            width: 1px;
+            background: #e1e1e1;
+        }
+
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(flex-start);
+
+        .history-main-item {
+            position: relative;
+            padding: 24px;
+            width: calc(50% - 24px);
+
+            @include flex(none);
+            @include box-sizing();
+            @include border-style(2px, 1px, 1px, 1px, solid, $pc1 #eaeaea #eaeaea #eaeaea);
+            
+            > ul {
+                li {
+                    margin-top: 5px;
+                    padding-left: 10px;
+                    color: $fc2;
+                    line-height: 1.4;
+
+                    @include fontSize(14px);
+
+                    span {
+                        position: relative;
+                        margin-left: -10px;
+                        padding-left: 10px;
+                        color: $fc1;
+                        font-weight: 600;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            display: block;
+                            width: 2px;
+                            height: 2px;
+                            margin-top: -2px;
+                            background: #aaa;
+                        }
+                    }
+
+                    .name {
+                        color: $pc1;
+                        font-weight: 600;
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            // 댓글
+            .main-item-cmnt {
+                display: none;
+                position: relative;
+                margin-top: 25px;
+                // border: 1px solid #dedede;
+                border-radius: 3px;
+
+                .tit-h5 {
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #dedede;
+
+                    @include fontSize(14px);
+                }
+
+                .btn-prop {
+                    position: absolute;
+                    right: 0;
+                    top: -3px;
+                    border: 0;
+                    color: $fc2;
+                    background: #fff;
+
+                    @include size(20px);
+                }
+                
+                ul {
+                    li {
+                        padding: 6px;
+                        border-top: 1px solid #eaeaea;
+                        color: $fc2;
+                        line-height: 1.3;
+
+                        @include fontSize(13px);
+
+                        .name {
+                            display: inline-block;
+                            margin-right: 5px;
+                            padding: 1px 5px;
+                            border-radius: 2px;
+                            color: $fc1;
+                            background: #efefef;
+                            font-weight: 600;
+                            // vertical-align: middle;
+                        }
+
+                        .date {
+                            padding: 0 8px;
+                            color: $fc3;
+                        }
+
+                        .main-item-cmnt-bot {
+                            margin-top: 3px;
+                        }
+
+                        .btn {
+                            margin: 0 1px;
+                            padding: 1px 2px;
+                            border: 1px solid #eaeaea;;
+                            color: $fc3;
+                            background: none;
+
+                            @include fontSize(12px);
+
+                            &:hover {
+                                border-color: $bc1;
+                                color: $bc1;
+                            }
+                        }
+
+                        &:first-child {
+                            border-top: 0;
+                        }
+                    }
+                }
+
+                .main-item-cmnt-write {
+                    margin-top: 5px;
+                    border: 1px solid #cecece;
+                    background: #fff;
+                    // border-radius: 5px;
+
+                    .tastyle {
+                        display: block;
+                        width: 100%;
+                        padding: 8px;
+                        border: 0;
+                        background: none;
+
+                        @include box-sizing();
+                        @include fontSize(13px);
+                    }
+
+                    .main-item-cmnt-write-bot {
+                        margin-top: 3px;
+                        padding: 6px;
+                        border-top: 1px solid #eaeaea;
+                        background: #f9f9f9;
+                        
+                        font-size: 0;
+                        text-align: right;
+                    }
+
+                    .btn {
+                        min-width: 42px;
+                        height: 24px;
+                        margin-left: 3px;
+                        padding: 4px 5px;
+                        border: 0;
+                        vertical-align: top;
+
+                        @include fontSize(13px);
+                        @include box-sizing();
+                    }
+
+                    .btn-submit {
+                        color: #fff;
+                        background: $pc1;
+
+                        &:hover {
+                            background: $pc1_hover;
+                        }
+                    }
+
+                    .btn-cncl {
+                        border: 1px solid #cecece;
+                        color: $fc2;
+                        background: #fff;
+
+                        &:hover {
+                            border-color: $pc1;
+                            color: $pc1;
+                        }
+                    }
+                }
+
+                .main-item-cmnt-edit,
+                .main-item-cmnt-add {
+                    margin-top: 5px;
+
+                    .itastyle {
+                        display: block;
+                        width: 100%;
+                        padding: 5px;
+                        line-height: normal;
+
+                        @include fontSize(13px);
+                    }
+
+                    .main-item-cmnt-in-bot {
+                        margin-top: 3px;
+                        text-align: right;
+
+                        .btn-submit {
+                            min-width: 42px;
+                            height: 24px;
+                            padding: 4px 5px;
+                            border: 0;
+                            color: #fff;
+                            background: $pc1;
+                            vertical-align: top;
+
+                            @include fontSize(13px);
+
+                            &:hover {
+                                background: $pc1_hover;
+                            }
+                        }
+
+                        .btn-cncl {
+                            min-width: 42px;
+                            height: 24px;
+                            padding: 2px 5px;
+                            border: 1px solid #cecece;
+                            color: $fc2;
+                            background: #fff;
+                            vertical-align: top;
+
+                            &:hover {
+                                border-color: $pc1;
+                                color: $pc1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-item-bot {
+                margin-top: 10px;
+                font-size: 0;
+                text-align: right;
+
+                .btn {
+                    margin-left: 3px;
+                    padding: 5px 8px;
+                    border: 1px solid #cecece;
+                    color: $fc2;
+                    background: #fff;
+
+                    @include fontSize(13px);
+                }
+            }
+
+            .btn-edit {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                padding: 5px 8px;
+                border: 1px solid #cecece;
+                color: $fc2;
+                background: #fff;
+
+                @include fontSize(13px);
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 16px;
+                border: 2px solid $pc1;
+                border-radius: 100px;
+                background: #fff;
+                
+                @include size(20px);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: -10px;
+                top: 18px;
+            }
+
+            &:nth-child(odd) {
+                margin-top: 60px;
+
+                &:before {
+                    right: -38px;
+                }
+
+                &:after {
+                    right: -10px;
+
+                    @include triangle(right, 10px, 20px, #eaeaea);
+                }
+            }
+
+            &:nth-child(even) {
+                margin: 160px 0 -100px 48px;
+
+                &:before {
+                    left: -37px;
+                }
+
+                &:after {
+                    left: -10px;
+
+                    @include triangle(left, 10px, 20px, #eaeaea);
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .btn-more {
+        @include btn-more();
+    }
+}
+
+// 명함
+.cpn-client-card {
+    .cpn-client-card-box {
+        padding: 20px;
+        border: 1px solid #cacaca;
+        background: #fff;
+
+        &:hover {
+            border: 1px solid $pc1;
+            background: #f7fafe;
+        }
+    }
+
+    .name {
+        color: $pc1;
+
+        @include fontSize(17px);
+    }
+
+    .info-basic {
+        margin-top: 8px;
+
+        @include clear;
+
+        li {
+            float: left;
+            margin-right: 3px;
+            padding: 3px 5px;
+            border: 1px solid #cecece;
+            border-radius: 3px;
+            color: $fc2;
+            background: #fff;
+            white-space: nowrap;
+
+            @include fontSize(15px);
+        }
+    }
+
+    .info-contact {
+        height: 70px;
+        margin-top: 15px;
+
+        li {
+            margin-top: 8px;
+            color: $fc2;
+
+            @include fontSize(15px);
+
+            i {
+                position: relative;
+                top: -1px;
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .info-memo {
+        position: relative;
+        margin-top: 15px;
+
+        .btn-memo {
+            height: 18px;
+            border: 0;
+            color: $fc2;
+            background: none;
+
+            @include fontSize(14px);
+
+            i {
+                position: relative;
+                top: -1px;
+                vertical-align: middle;
+
+                @include fontSize(10px);
+            }
+
+            &:hover {
+                color: $pc1;
+            }
+        }
+
+        .info-memo-conts {
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            padding: 10px;
+            border: 1px solid #cecece;
+            color: $fc2;
+            background: #fff;
+            z-index: 1;
+
+            @include fontSize(13px);
+
+            .info-memo-conts-edit {
+                margin-top: 5px;
+
+                .itastyle {
+                    display: block;
+                    width: 100%;
+                    padding: 5px;
+                    line-height: normal;
+
+                    @include fontSize(13px);
+                }
+            }
+
+            .info-memo-btn {
+                margin-top: 5px;
+
+                .btn {
+                    padding: 2px;
+                    border: 1px solid #cecece;
+                    color: $fc2;
+                    background: #fff;
+
+                    @include fontSize(12px);
+                }
+            }
+
+            .btn-clse {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                padding: 2px;
+                border: 1px solid #cecece;
+                color: $fc2;
+                background: #fff;
+
+                @include fontSize(12px);
+            }
+        }
+    }
+}
+.cpn-client-card-wrap {
+    // overflow: hidden;
+
+    .cpn-client-card-list {
+        margin: 0 -5px -10px;
+        
+        @include clear;
+
+        .cpn-client-card {
+            float: left;
+            width: calc(100% / 3);
+            padding: 0 5px 10px;
+
+            @include box-sizing();
+        }
+    }
+}
+
+// 프로필 업데이트
+.cpn-aside-profileupdate {
+    padding: 20px;
+    border: 1px solid #cacaca;
+    background: #fff;
+    text-align: center;
+
+    @include wordwrap();
+
+    .t {
+        @include fontSize(16px);
+
+        span {
+            color: $pc1;
+        }
+    }
+
+    .conts {
+        margin-top: 5px;
+        padding: 10px 0 15px;
+        // color: $fc3;
+        line-height: 1.3;
+        // @include fontSize(14px);
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 18px;
+        color: #fff;
+        background: $pc2;
+
+        &:hover {
+            background: $pc2_hover;
+        }
+    }
+}
+
+// 최근 검색어
+.cpn-aside-searchkeyword {
+    .tit-h3 {
+        // padding-bottom: 5px;
+        // border-bottom: 1px solid #ccc;
+        @include fontSize(16px);
+    }
+
+    .search-aside-searchkeyword-list {
+        margin-top: 10px;
+        border: 1px solid #cacaca;
+        padding: 8px 10px;
+        border-radius: 3px;
+
+        ul {
+            li {
+                margin-top: 2px;
+
+                .search-keyword {
+                    padding: 5px;
+                    border :0;
+                    background: none;
+
+                    @include fontSize(13px);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+// 내 관심 뷴야
+.cpn-aside-interest {
+    margin-top: 25px;
+
+    .tit-h3 {
+        // padding-bottom: 5px;
+        // border-bottom: 1px solid #ccc;
+        @include fontSize(16px);
+    }
+
+    .cpn-aside-interest-list {
+        margin-top: 10px;
+        border: 1px solid #cacaca;
+        padding: 10px;
+        border-radius: 3px;
+    }
+}
+
+// looking jobs
+.cpn-aside-lookingjobs {
+    margin-top: 25px;
+    padding: 20px 15px 10px;
+    border: 1px solid #d6d9dc;
+    border-radius: 5px;
+
+    .tit-h3 {
+        @include fontSize(16px);
+    }
+
+    .cpn-content-list {
+        margin-top: 7px;
+    }
+
+    .cpn-content-list-item {
+        padding: 10px 0;
+        border-top: 1px solid #cacaca;
+
+        .cpn-content-list-item-conts {
+            .content-list-item-conts-subject {
+                display: block;
+
+                @include truncate();
+                @include fontSize(14px);
+            }
+
+            .content-list-item-conts-conts {
+                display: block;
+                margin-top: 6px;
+
+                @include truncate();
+                @include fontSize(13px);
+            }
+
+            .content-list-item-conts-date {
+                display: none;
+            }
+
+            .cpn-content-list-item-tags {
+                margin: 10px 0 0;
+
+                a {
+                    @include fontSize(13px);
+                }
+            }
+        }
+
+        .cpn-content-list-item-info {
+            display: none;
+        }
+
+        &:first-child {
+            border-top: 1px solid #cacaca;
+        }
+    }
+}
+
+// 사전 인터뷰 기록
+.cpn-profile-interview {
+    position: relative;
+
+    .tit-h3 {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #444;
+
+        @include fontSize(16px);
+    }
+
+    .profile-interview-box {
+        ul {
+            li {
+                position: relative;
+                padding: 10px 0;
+                border-bottom: 1px solid #eaeaea;
+                color: #444;
+                font-weight: 600;
+                
+                @include fontSize(15px);
+
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    color: $fc3;
+                    font-weight: 400;
+
+                    @include fontSize(13px);
+                }
+
+                .interview-box-btn {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    font-size: 0;
+                    
+                    @include translate(0, -50%);
+
+                    .btn {
+                        height: 24px;
+                        margin-left: 3px;
+                        padding: 3px;
+                        border: 1px solid #ccc;
+                        color: $fc2;
+                        background: #fff;
+
+                        @include fontSize(13px);
+                    }
+                }
+
+                &:first-child {
+                    border-top: 0;
+                }
+            }
+        }
+    }
+
+    .btn-add {
+        position: absolute;
+        right: 0;
+        top: -5px;
+        height: 28px;
+        padding: 3px 5px;
+        border: 1px solid #ccc;
+        color: $fc2;
+        background: #fff;
+
+        @include fontSize(14px);
+    }
+}
+
+// 컨택 히스토리
+.cpn-contact-history {
+    position: relative;
+
+    .tit-h3 {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #444;
+
+        @include fontSize(16px);
+    }
+
+    .contact-history-box {
+        .history-box-item {
+            position: relative;
+            padding: 10px 0;
+            border-bottom: 1px solid #eaeaea;
+
+            ul {
+                li {
+                    margin-top: 5px;
+                    color: $fc2;
+
+                    @include fontSize(14px);
+                    @include wordwrap();
+
+                    .badge {
+                        padding: 3px;
+                        vertical-align: middle;
+                    }
+
+                    .date {
+                        color: $fc2;
+
+                        @include fontSize(13px);
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .box-item-btn {
+                position: absolute;
+                right: 0;
+                top: 10px;
+
+                .btn {
+                    height: 24px;
+                    margin-left: 3px;
+                    padding: 3px;
+                    border: 1px solid #ccc;
+                    color: $fc2;
+                    background: #fff;
+
+                    @include fontSize(13px);
+                }
+            }
+        }
+    }
+
+    .btn-add {
+        position: absolute;
+        right: 0;
+        top: -5px;
+        height: 28px;
+        padding: 3px 5px;
+        border: 1px solid #ccc;
+        color: $fc2;
+        background: #fff;
+
+        @include fontSize(14px);
+    }
+}
+
+// 반응형 desktop
+@include respond-to(desktop) {
+    // tab style
+    .cpn-tab-wrap {
+        ul {
+            li {
+                a {
+                    &.active {
+                        &:hover {
+                            color: $pc1;
+                        }
+                    }
+
+                    &:hover {
+                        color: $fc2;
+                        font-weight: 600;
+
+                        &:before {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    // 라디오 그룹
+    .radio-group {
+        .radio-itm {
+            [type=radio] {
+                top: 0;
+            }
+        }
+    }
+
+    // 체크박스 스위치
+    .icheck-switch {
+        .icheck-switch-in {
+            &:before {
+                @include fontSize(13px);
+            }
+
+            &:after {
+                @include fontSize(13px);
+            }
+        }
+    }
+
+    // 파일 업로드
+    .cpn-filebox {
+        .filebox-list {
+            .filebox-list-in {
+                li {
+                    float: none;
+                    margin: 5px 0 0 0 !important;                  
+
+                    &:first-child {
+                        margin-top: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // index search
+    .cpn-search {
+        .cpn-search-wrapper {
+            padding-bottom: 25px;
+        }
+
+        .cpn-search-box {
+            .cpn-search-box-body {
+                position: relative;
+                margin-top: 20px;
+
+                .cpn-search-box-body-tab {
+                    display: none;
+                }
+
+                .cpn-search-box-body-main {
+                    margin: 0;
+                }
+
+                .cpn-search-box-body-search {
+                    display: block;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .cpn-search-bot {
+            margin-top: 20px;
+        }
+    }
+
+    // 추천 채용
+    .cpn-jobs {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        ::-webkit-scrollbar { 
+            display: none;
+            width: 0px;
+            background: transparent;
+        }
+
+        @include flex-wrap(nowrap);
+
+        .cpn-jobs-item {
+            width: calc(100vw / 2.2);
+            margin-left: 5px;
+
+            @include flex(0, 0, auto);
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.last {
+                width: auto;
+            }
+        }
+    }
+
+    // 섬네일 리스트 타입
+    .cpn-content-list {
+        .cpn-content-list-item {
+            padding: 12px 0;
+
+            &.curation {
+                .cpn-content-list-item-thumb {
+                    @include col(6);
+                }
+
+                .cpn-content-list-item-conts {
+                    padding-bottom: 50px;
+                }
+
+                .cpn-content-list-item-info {
+                    left: calc(100% * (6 / 22) + 15px);
+                    right: 0;
+
+                    .content-list-item-info-info {
+                        li {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 제목 박스
+    .cpn-subjectbox-list {
+        .cpn-subjectbox {
+            width: calc(100% / 2);
+        }
+    }
+
+    // 채용 상세
+    .cpn-content-view {
+        margin: auto;
+        padding: 60px 25px 30px;
+
+        .cpn-content-view-main {
+            .cpn-content-view-wrap {
+                padding-top: 50px;
+                
+                @include col(15);
+
+                .cpn-content-view-share {
+                    ul {
+                        li {
+                            line-height: 28px;
+
+                            @include size(28px);
+
+                            a {
+                                padding: 0;
+                            }
+
+                            img {
+                                width: 28px;
+                                margin: 0;
+                            }
+
+                            span {
+                                position: absolute;
+                                visibility: hidden;
+                                z-index: -1;
+                            }
+
+                            &.email {
+                                padding: 0;
+                                text-align: center;
+
+                                @include fontSize(15px);
+
+                                i {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cpn-content-view-aside {
+                @include col(7);
+            }
+        }
+    }
+
+    //lnb
+    .section-circle,
+    .section-manage {
+        .circle-aside,
+        .manage-aside {
+            // lnb
+            .lnb-list-nav {
+                .lnb {
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    -webkit-overflow-scrolling: touch;
+                    background: #f4f4f4;
+
+                    ul {
+                        @include flexbox();
+
+                        li {
+                            white-space: nowrap;
+                            text-align: center;
+
+                            @include flex();
+
+                            a {
+                                padding: 10px 15px;
+                                border-top: 0;
+                                line-height: 18px;
+
+                                i {
+                                    display: none;
+                                }
+
+                                &.active {
+                                    border-top: 0;
+                                    // background: $pc2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 명함
+    .cpn-client-card-wrap {
+        .cpn-client-card-list {
+            .cpn-client-card {
+                width: calc(100% / 2);
+            }
+        }
+    }
+
+    // 프로필
+    .cpn-profile-info {
+        .career-infobox  {
+            .career-infobox-form {
+                ul {
+                    li {
+                        .radio-group {
+                            .radio-itm {
+                                width: 100%;
+                                margin: 0 0 10px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    // index search
+    .cpn-search {
+        .cpn-search-wrapper {
+            padding: 10px 10px 25px;
+        }
+    }
+
+    // 로컬 검색
+    .cpn-local-search {
+        .local-search-wrap {
+            @include flexbox();
+        }
+
+        .local-search-box {
+            border: 3px solid $pc1;
+            font-size: 0;
+
+            @include flex();
+
+            .isearch {
+                width: calc(100% - 38px);
+                height: 38px;
+                padding: 0 15px;
+                border: 0;
+                line-height: 38px;
+                vertical-align: top;
+
+                @include fontSize(17px);
+                @include box-sizing();
+            }
+
+            .btn-search-submit {
+                border: 0;
+                color: $pc1;
+                background: none;
+                
+                @include fontSize(19px);
+                @include size(38px);
+            }
+        }
+
+        .btn-detail {
+            height: 44px;
+            border: 0;
+            padding: 3px 8px 3px 5px;
+            color: #fff;
+            background: $pc1;
+
+            @include flex(none);
+            @include fontSize(14px);
+
+            &:hover {
+                background: $pc1_hover;
+            }
+        }
+
+        .local-search-detail {
+            padding: 15px;
+            
+            .search-detail-board {
+                tr {
+                    display: block;
+
+                    @include clear;
+                }
+
+                th {
+                    float: left;
+                    width: 100px;
+                    line-height: 30px;
+
+                    @include box-sizing();
+                }
+
+                td {
+                    float: left;
+                    min-height: 40px;
+                    width: calc(100% - 100px);
+
+                    @include box-sizing();
+                    
+                    .radio-group {
+                        padding: 7px 0 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 추천 채용
+    .cpn-jobs {
+        .cpn-jobs-item {
+            width: calc(100vw / 1.2);
+
+            &.last {
+                padding-top: 8%;
+            }
+         }
+    }
+
+    // 섬네일 리스트 타입
+    .cpn-content-list {
+        .cpn-content-list-item {
+            padding: 10px 0;
+
+            .cpn-content-list-item-conts {
+                .content-list-item-conts-subject {
+                    display: block;
+                    @include truncate();
+                }
+
+                .content-list-item-conts-conts {
+                    margin-top: 5px;
+
+                    @include truncate2();
+                }
+
+                .content-list-item-conts-date {
+                    margin-top: 8px;
+                }
+            }
+
+            .cpn-content-list-item-info {
+                .content-list-item-info-info {
+                    li {
+                        margin-right: 0;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                }
+            }
+
+            &.curation {
+                .cpn-content-list-item-thumb {
+                    margin-right: 10px;
+                }
+
+                .cpn-content-list-item-conts {
+                    padding-bottom: 10px;
+                }
+
+                .cpn-content-list-item-info {
+                    position: static;
+
+                    .content-list-item-info-user {
+                        .photo {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 인맥 리스트
+    .cpn-cardstyle-user-list {
+        .in {
+            margin: 0;
+        }
+
+        .cpn-cardstyle-user {
+            float: none;
+            width: 100% !important;
+            // min-height: 84px;
+            padding: 0;
+            border-top: 1px solid #cecece;
+            text-align: left;
+
+            .headhunter {
+                left: 5px;
+            }
+
+            .cpn-cardstyle-user-box {
+                padding: 10px;
+                border: 0;
+            }
+
+            .cpn-cardstyle-user-a {
+                padding: 0;
+
+                @include clear;
+            }
+
+            .photo {
+                float: left;
+                margin: 0 8px 0 0;
+
+                @include size(50px);
+            }
+
+            .info {
+                height: auto;
+                margin: 0;
+
+                .info-detail {
+                    width: 70%;
+                    margin-top: 4px;
+                    height: 30px;
+
+                    li {
+                        line-height: 1.15;
+                    }
+                }
+            }
+
+            .cpn-cardstyle-user-word {
+                margin: 5px 0 0 58px;
+                padding: 5px 0 0 0;
+                text-align: left;
+
+                li {
+                    padding-left: 10px;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            .btn {
+                position: absolute;
+                right: 5px;
+                top: 28px;
+                // margin-top: -19px;
+                z-index: 1;
+
+                .btn-button {
+                    border: 0;
+                    color: $pc1;
+                    line-height: 38px;
+
+                    @include size(38px);
+
+                    i {
+                        @include fontSize(16px);
+                    }
+
+                    span {
+                        position: absolute;
+                        left: -9999px;
+                        top: -9999px;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    // 평판
+    .cpn-reputation {
+        .cpn-reputation-body {
+            li {
+                dl {
+                    dt {
+                        width: auto;
+                    }
+
+                    dd {
+                        margin-right: 40px;
+                    }
+                }
+            } 
+        }  
+    }
+
+    // 채용 상세
+    .cpn-content-view {
+        .cpn-content-view-main {
+            @include flex-direction(column);
+
+            .cpn-content-view-wrap {
+                width: 100%;
+
+                .cpn-content-view-head {
+                    .cpn-content-view-head-info {
+                        .cpn-content-view-head-info-box {
+                            .cpn-content-view-head-info-box-info {
+                                li {
+                                    padding-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cpn-content-view-aside {
+                width: 100%;
+                margin-top: 25px;
+                padding: 0;
+            }
+        }
+
+        // 고객사 뷰
+        &.clientview {
+            .cpn-content-view-main {
+                .cpn-content-view-wrap {
+                    padding-top: 0;
+                }
+
+                .cpn-content-view-aside {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // lnb
+    .lnb-list-nav {
+        .lnb {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            background: #f4f4f4;
+
+            ul {
+                @include flexbox();
+
+                li {
+                    white-space: nowrap;
+                    text-align: center;
+
+                    @include flex();
+
+                    a {
+                        padding: 10px 15px;
+                        border-top: 0;
+                        line-height: 18px;
+
+                        i {
+                            display: none;
+                        }
+
+                        &.active {
+                            border-top: 0;
+                            // background: $pc2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 탭
+    .cpn-tab-wrap {
+        ul {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            border-bottom: 0;
+
+            li {
+                margin-bottom: 0;
+
+                a {
+                    border-bottom: 1px solid #eaeaea;
+                }
+            }
+        }
+    }
+
+    // 서클 질문 리스트
+    .cpn-circle-conts-item {
+        padding: 15px 0;
+
+        @include flex-direction(column);
+        @include align-items();
+        @include justify-content();
+
+        .circle-conts-item-cnt {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed #eaeaea;
+
+            ul {
+                li {
+                    padding-top: 4px;
+
+                    span {
+                        display: inline;
+                        font-size: inherit;
+                    }
+
+                    i {
+                        display: inline;
+                        margin-right: 3px;
+                        vertical-align: middle;
+                    }
+
+                    em {
+                        position: absolute;
+                        visibility: hidden;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+
+    // 태그 서클
+    .cpn-tagcircle {
+        float: none !important;
+        width: 100% !important;
+
+        .cpn-tagcircle-a {
+            @include flexbox();
+            @include flex-wrap(wrap);
+
+            .cpn-tagcircle-head {
+                // width: 50%;
+
+                @include flex();
+            }
+
+            .cpn-tagcircle-cnt {
+                min-width: 80px;
+                margin: 6px 6px 6px 0;
+                line-height: 19px;
+
+                @include flex(none);
+                @include box-sizing();
+            }
+
+            .cpn-tagcircle-body {
+                width: 100%;
+                padding: 5px 10px 10px;
+
+                @include flex(none);
+                @include box-sizing();
+            }
+        }
+    }
+    .cpn-tagcircle-list {
+        overflow: visible;
+
+        .cpn-tagcircle-list-box {
+            margin: 0;
+
+            .cpn-tagcircle {
+                margin: 10px 0 0 0;
+                padding: 0;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    // 제목 박스
+    .cpn-subjectbox-list {
+        margin: 0;
+
+        @include flex-direction(column);
+
+        .cpn-subjectbox {
+            width: 100%;
+            padding: 0;
+
+            .cpn-subjectbox-in {
+                
+                margin: 0;
+                background: none;
+                
+                @include border-style(1px, 0, 0, 0, solid, #cecece);
+                @include box-sizing();
+                @include flex(none);
+            }
+
+            .cpn-subjectbox-subject {
+                border-bottom: 0;
+
+                a {
+                    height: auto;
+                }
+            }
+
+            .cpn-subjectbox-tags {
+                padding-top: 2px;
+            }
+
+            &:last-child {
+                border-bottom: 1px solid #cecece;
+            }
+        }
+    }
+
+    // 고객사 리스트 형태
+    .cpn-recruiter-client-item {
+        @include align-items(center);
+
+        dl {
+            @include flex();
+
+            dt,
+            dd {
+                float: none;
+            }
+
+            dd {
+                padding: 0;
+
+                ul {
+                    li {
+                        float: none;
+                        padding: 0 !important;
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // 히스토리
+    .cpn-history {
+        .history-main-list {
+            @include flex-direction(column);
+
+            &:before {
+                display: none;
+            }
+
+            .history-main-item {
+                width: 100%;
+                padding: 12px;
+
+                @include flex(none);
+
+                &:before {
+                    display: none !important;
+                }
+
+                &:after {
+                    display: none !important;
+                }
+
+                &:nth-child(odd) {
+                    margin: 10px 0 0 0;
+                }
+
+                &:nth-child(even) {
+                    margin: 10px 0 0 0;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }        
+    }
+
+    // 명함
+    .cpn-client-card-wrap {
+        .cpn-client-card-list {
+            margin: 0;
+
+            .cpn-client-card {
+                float: none;
+                width: auto;
+                margin-top: 10px;
+                padding: 0;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    // 프로필
+    .cpn-profile-info {
+        .career-infobox  {
+            .career-infobox-form {
+                padding: 10px 12px;
+
+                ul {
+                    li {
+                        &.cal {
+                            .icalendar {
+                                .icalendar-input {
+                                    width: 87px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

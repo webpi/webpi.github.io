@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/recruiter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-recruiter column">
+                <h2 class="ir">리크루터 후보자</h2>
+
+                <!-- 차트 -->
+                <div class="recruiter-chart">
+                    <div class="recruiter-chart-list">
+                        <article class="chart-itm">
+                            <h3 class="tit-h3">이력서데이터베이스입력</h3>
+
+                            <canvas id="myChart"></canvas>
+                        </article>
+
+                        <article class="chart-itm">
+                            <h3 class="tit-h3">DB주요키워드</h3>
+
+                            <canvas id="myChart2"></canvas>
+                        </article>
+
+                        <article class="chart-itm">
+                            <h3 class="tit-h3">DB 소스 분석</h3>
+
+                            <canvas id="myChart3"></canvas>
+                        </article>
+                    </div>
+                </div>
+                <!-- // 차트 -->
+
+                <div class="recruiter-main">
+                    <!-- left -->
+                    <div class="recruiter-wrap">
+                        <!-- 검색 -->
+                        <div class="cpn-local-search" include-html="/component/comm/cpn_local_search.html"></div>
+                        <!-- // 검색 -->
+
+                        <div class="recruiter-candidate">
+                            <div class="recruiter-candidate-btn">
+                                <a href="candidate_write.html" class="btn-candidate">후보자 등록</a>
+                            </div>
+
+                            <div class="recruiter-candidate-head">
+                                <div class="cpn-tab-wrap">
+                                    <ul>
+                                        <li><a href="#" class="active"><span>후보자</span></a></li>
+                                        <li><a href="#"><span>wark-in</span></a></li>
+                                     </ul>
+                                </div>
+                            </div>
+
+                            <div class="recruiter-candidate-body">
+                                <table class="cpn-board-row">
+                                    <caption><span>후보자 리스트</span></caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:160px">
+                                        <col>
+                                        <col>
+                                        <col style="width:150px">
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">성명(출생)</th>
+                                        <th scope="col">성별</th>
+                                        <th scope="col">학위</th>
+                                        <th scope="col">교육</th>
+                                        <th scope="col">전체직장</th>
+                                        <th scope="col">직무키워드</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="no">9999</td>
+                                        <td class="name"><a href="/profile/profile_candidate.html">홍길동 홍길동</a> (77)</td>
+                                        <td>남</td>
+                                        <td>학사</td>
+                                        <td>서울대학교 (경영학)</td>
+                                        <td>쿠팡 - 쿠팡 - 쿠팡</td>
+                                        <td>
+                                            <div class="keyword-wrap">
+                                                <a href="#" class="keyword">마케팅</a>
+                                                <a href="#" class="keyword">마케팅</a>
+                                                <a href="#" class="keyword">마케팅</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="no">9999</td>
+                                        <td class="name"><a href="#">홍길동</a> (77)</td>
+                                        <td>남</td>
+                                        <td>학사</td>
+                                        <td>서울대학교 MBA / 서울대학교(경영학)</td>
+                                        <td>아마존 – 알리바바 - 쿠팡 – 앙팡</td>
+                                        <td>
+                                            <div class="keyword-wrap">
+                                                <a href="#" class="keyword">마케팅</a>
+                                                <a href="#" class="keyword">마케팅</a>
+                                                <a href="#" class="keyword">마케팅</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody> 
+                                </table>
+
+                                <!-- 페이징 -->
+                                <div class="paging">
+                                    <a href="#" class="paging-btn btn-first">
+                                        <i class="icon-double-left-chevron"></i>
+                                        <span class="ir">처음</span>
+                                    </a>
+                                    <a href="#" class="paging-btn btn-prev">
+                                        <i class="icon-left-chevron"></i>
+                                        <span class="ir">이전</span>
+                                    </a>
+                                    <a href="#" class="paging-btn">1</a>
+                                    <a href="#" class="paging-btn active">2</a>
+                                    <a href="#" class="paging-btn">3</a>
+                                    <a href="#" class="paging-btn">4</a>
+                                    <a href="#" class="paging-btn">5</a>
+                                    <a href="#" class="paging-btn btn-next">
+                                        <i class="icon-right-chevron"></i>
+                                        <span class="ir">다음</span>
+                                    </a>
+                                    <a href="#" class="paging-btn btn-last">
+                                        <i class="icon-double-right-chevron"></i>
+                                        <span class="ir">마지막</span>
+                                    </a>
+                                </div>
+                                <!-- // 페이징 -->
+                            </div>
+                        </div>                    
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="recruiter-aside">
+                        <!-- lnb -->
+                        <div class="lnb-list-nav" include-html="/component/recruiter/candidate_aside_nav.html"></div>
+                        <!-- // lnb -->
+
+                        <!-- 후보자 현황 -->
+                        <div class="cpn-aside-recruiterstatus" include-html="/component/recruiter/cpn_aside_candidate.html"></div>
+                        <!-- // 후보자 현황 -->
+
+                        <!-- 광고 -->
+                        <div class="recruiter-aside-adv">
+                            광고
+                        </div>
+                        <!-- // 광고 -->
+                    </aside> 
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+
+<!-- Chart 샘플 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<script>
+var ctx2 = document.getElementById("myChart2").getContext('2d');
+var myChart2 = new Chart(ctx2, {
+    type: 'radar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<script>
+var ctx3 = document.getElementById("myChart3").getContext('2d');
+var myChart3 = new Chart(ctx3, {
+    type: 'line',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+<!-- // js -->
+</body>
+</html>

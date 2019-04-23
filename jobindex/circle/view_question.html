@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/circle.css">
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-circle">
+                <div class="section-circle-top" include-html="/component/circle/circle_info_top.html"></div>
+
+                <div class="circle-main">
+                    <!-- left -->
+                    <div class="circle-wrap">
+                        <div class="circle-conts">
+                            <div class="circle-conts-btn">
+                                <a href="write.html" class="btn">질문하기</a>
+                            </div>
+
+                            <div class="circle-conts-head">                                
+                                <div class="cpn-tab-wrap">
+                                    <ul>
+                                        <li><a href="/circle/view_question.html" class="active"><span>질문</span></a></li>
+                                        <li><a href="/circle/view_info.html"><span>써클정보</span></a></li>
+                                        <li><a href="/circle/view_ranker.html"><span>랭커</span></a></li>
+                                        <li><a href="/circle/view_jobs.html"><span>관련채용</span></a></li>
+                                     </ul>
+                                </div>
+                            </div>
+
+                            <div class="circle-conts-body">
+                                <div class="cpn-list-sort" include-html="/component/comm/cpn_list_sort.html"></div>
+
+                                <div class="circle-conts-list">
+                                    <article class="cpn-circle-conts-item" include-html="/component/comm/cpn_circle_conts_item.html"></article>
+
+                                     <article class="cpn-circle-conts-item" include-html="/component/comm/cpn_circle_conts_item.html"></article>
+
+                                     <article class="cpn-circle-conts-item" include-html="/component/comm/cpn_circle_conts_item.html"></article>
+                                </div>
+
+                                <button type="button" class="btn-more"><i class="icon-plus-sign-to-add"></i> 더보기</button>
+                            </div>
+                        </div>                                                                
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="circle-aside">
+                        <div class="circle-aside-cnt">
+                            <div class="circle-aside-cnt-in">질문 <span>9,999,999</span> 개</div>
+                        </div>
+
+                        <div class="lnb-list-nav" include-html="/component/circle/circle_aside_nav.html"></div>
+                    </aside>
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/networking.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-networking">
+                <h2 class="ir">인맥</h2>
+
+                <div class="section-networking-top">
+                   <!-- 검색 -->
+                    <div class="cpn-local-search" include-html="/component/comm/cpn_local_search.html"></div>
+
+                    <div class="networking-cnt">
+                        <div class="networking-cnt-in">인맥 <span>9,999,999</span> 명</div>
+                    </div> 
+                </div>
+                <!-- // 검색 -->
+
+                <div class="section-networking-main">
+                    <!-- left -->
+                    <div class="networking-wrap">
+                        <div class="networking-manage">
+                            <!-- 폴더 구조 -->
+                            <div class="networking-manage-folder">
+                                <form>
+                                    <fieldset>
+                                        <legend><span>인맥 폴더 관리</span></legend>
+                                        <div class="networking-manage-folder-top">
+                                            <input type="text" placeholder="폴더명" title="폴더명" class="istyle">
+
+                                            <button type="button" class="btn-add-folder">폴더추가</button>
+                                        </div>
+
+                                        <ul class="networking-manage-folder-list">
+                                            <li draggable="true">
+                                                <span class="icheck-custom">
+                                                    <input type="checkbox" id="test-chk" name="test-chk">
+                                                    <label for="test-chk">
+                                                        <span class="ir">선택</span>
+                                                        
+                                                        <i class="icon-check-box"></i>
+                                                    </label>
+                                                </span>
+                                                
+                                                <span class="name">전체 인맥</span>
+
+                                                <span class="cnt">9999</span>
+                                            </li>
+                                            <li draggable="true" class="active">
+                                                <span class="icheck-custom">
+                                                    <input type="checkbox" id="test-chk2" name="test-chk2">
+                                                    <label for="test-chk2">
+                                                        <span class="ir">선택</span>
+                                                        
+                                                        <i class="icon-check-box"></i>
+                                                    </label>
+                                                </span>
+                                                
+                                                <span class="name">분류 없음</span>
+                                                
+                                                <span class="cnt">9999</span>
+                                            </li>
+                                            <li draggable="true">
+                                                <span class="icheck-custom">
+                                                    <input type="checkbox" id="test-chk3" name="test-chk3">
+                                                    <label for="test-chk3">
+                                                        <span class="ir">선택</span>
+                                                        
+                                                        <i class="icon-check-box"></i>
+                                                    </label>
+                                                </span>
+                                                
+                                                <span class="name">백앤드 후보자</span>
+                                                
+                                                <span class="cnt">9999</span>
+                                            </li>
+                                            <li draggable="true">
+                                                <span class="icheck-custom">
+                                                    <input type="checkbox" id="test-chk4" name="test-chk4">
+                                                    <label for="test-chk4">
+                                                        <span class="ir">선택</span>
+                                                        
+                                                        <i class="icon-check-box"></i>
+                                                    </label>
+                                                </span>
+                                                
+                                                <span class="name">전략기획 후보자 전략기획 후보자 전략기획 후보자</span>
+                                                
+                                                <span class="cnt">9999</span>
+                                            </li>
+                                            <li draggable="true">
+                                                <span class="icheck-custom">
+                                                    <input type="checkbox" id="test-chk5" name="test-chk5">
+                                                    <label for="test-chk5">
+                                                        <span class="ir">선택</span>
+                                                        
+                                                        <i class="icon-check-box"></i>
+                                                    </label>
+                                                </span>
+                                                
+                                                <span class="name">임원급후보자</span>
+                                                
+                                                <span class="cnt">9999</span>
+                                            </li>
+                                            <!-- 수정 -->
+                                            <li class="edit">
+                                                <span class="icheck-custom">
+                                                    <input type="checkbox" id="test-chk5" name="test-chk5">
+                                                    <label for="test-chk5">
+                                                        <span class="ir">선택</span>
+                                                        
+                                                        <i class="icon-check-box"></i>
+                                                    </label>
+                                                </span>
+
+                                                <input type="text" value="임원급후보자" class="istyle">
+
+                                                <span class="cnt">9999</span>
+                                            </li>
+                                            <!-- // 수정 -->
+                                        </ul>
+
+                                        <div class="networking-manage-folder-bot">
+                                            <button type="button" class="btn">수정</button>
+                                            <button type="button" class="btn">삭제</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <!-- // 폴더 구조 -->
+
+                            <!-- 인맥 리스트 -->
+                            <div class="networking-manage-list">
+                                <div class="networking-manage-list-top">
+                                    <!-- 폴더 구조 버튼 -->
+                                    <button type="butotn" class="btn-networking-manage-folder">
+                                        <i class="icon-folder-download"></i>
+                                        <i class="icon-folder-upload"></i>
+                                        <span class="ir">폴더보기</span>
+                                    </button>
+                                    <!-- // 폴더 구조 버튼 -->
+
+                                    <div class="networking-manage-list-top-menu">
+                                        <div class="folder-move">
+                                            <button type="button" class="btn btn-folder-move">폴더이동</button>
+                                            
+                                            <div class="folder-move-list">
+                                                <select class="slt" title="폴더명">
+                                                    <option>분류없음</option>
+                                                    <option>백앤드 후보자</option>
+                                                    <option>전략기획 후보자 전략기획 후보자</option>
+                                                    <option>임원급 후보자</option>
+                                                </select>
+
+                                                <button type="button" class="btn-submit">확인</button>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="btn btn-networking-cncl">선택삭제</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="cpn-cardstyle-user-list">
+                                    <div class="in">
+                                        <!-- 인맥 -->
+                                        <article class="cpn-cardstyle-user" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+                                        <!-- // 인맥 -->
+
+                                        <!-- 인맥 -->
+                                        <article class="cpn-cardstyle-user" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+                                        <!-- // 인맥 -->
+
+                                        <!-- 인맥 -->
+                                        <article class="cpn-cardstyle-user" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+                                        <!-- // 인맥 -->
+
+                                        <!-- 인맥 -->
+                                        <article class="cpn-cardstyle-user" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+                                        <!-- // 인맥 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 인맥 리스트 -->
+                        </div>
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="networking-aside">
+                        <div class="lnb-list-nav" include-html="/component/networking/networking_aside_nav.html"></div>
+
+                        <div class="cpn-aside-profileupdate" include-html="/component/comm/aside/cpn_aside_networking_profileupdate.html"></div>
+                    </aside> 
+                    <!-- // right -->         
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/recruiter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 종료 레이어 -->
+<div class="layer-pop">
+    <div class="layer-pop-wrap">
+        <div class="layer-project-close">
+            <div class="project-close-box">
+                <form>
+                    <fieldset>
+                        <legend><span>프로젝트 종료</span></legend>
+
+                        <h2 class="tit-h2">프로젝트 종료</h2>
+
+                        <table class="close-box-board">
+                            <caption><span>종료 내역</span></caption>
+                            <colgroup>
+                                <col style="width: 80px">
+                                <col>                            
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">구분</th>
+                                <td>
+                                    <div class="radio-group">
+                                        <span class="radio-itm">
+                                            <input type="radio" id="test-radio" name="test-radio">
+                                            <label for="test-radio">
+                                                성공
+                                            </label>
+                                        </span>
+
+                                        <span class="radio-itm">
+                                            <input type="radio" id="test-radio2" name="test-radio">
+                                            <label for="test-radio2">
+                                                실패
+                                            </label>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="vt">종료일자</th>
+                                <td>
+                                    <span class="icalendar">
+                                        <input type="text" size="12" placeholder="날짜" title="날짜" class="icalendar-input">
+                                        <button type="button" class="btn-icalendar"><i class="icon-calendar"></i><span class="ir">달력</span></button>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="vt">후보자</th>
+                                <td>
+                                    <table class="close-box-candidate-board">
+                                        <caption><span>후보자</span></caption>
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">입사자</th>
+                                            <th scope="col">입사일자</th>
+                                            <th scope="col">보증기간(개월)</th>
+                                            <th scope="col">삭제</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="t1"><a href="#">홍길동</a></td>
+                                            <td class="t2">`2019.12.31</td>
+                                            <td class="t3">3 (`2019.12.31)</td>
+                                            <td>
+                                                <button type="button" class="btn-del">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t1"><a href="#">홍길동</a></td>
+                                            <td class="t2">`2019.12.31</td>
+                                            <td class="t3">3 (`2019.12.31)</td>
+                                            <td>
+                                                <button type="button" class="btn-del">삭제</button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="vt">내용</th>
+                                <td>
+                                    <ul class="td-list">
+                                        <li>기간 : D+45일</li>
+                                        <li>총컨택 : 55건</li>
+                                        <li>사전면접 : 10명</li>
+                                        <li>추천 : 8명</li>
+                                        <li>1차면접 5명 (추천 대비 면접진행율 : 60%)</li>
+                                        <li>2차면접 : 2명 (2차면접 진행 비율 40%)</li>
+                                        <li>추가면접 : 0</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="vt"><label for="test-memo">메모</label></th>
+                                <td>
+                                    <textarea cols="30" rows="3" id="test-memo" class="itastyle"></textarea>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="layer-pop-bot">
+                            <button type="button" class="btn btn-layer-submit">확인</button>
+                            <button type="button" class="btn btn-layer-cncl">취소</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <button type="button" class="btn-layer-clse"><i class="icon-cross"></i><span class="ir">닫기</span></button>
+        </div>
+    </div>
+</div>
+<!-- // 종료 레이어 -->
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

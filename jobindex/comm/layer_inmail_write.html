@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/jobs.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 인메일 보기 레이어 -->
+<div class="layer-pop">
+    <div class="layer-pop-wrap">
+        <div class="layer-inmailbox">
+            <form>
+                <fieldset>
+                    <legend><span>인메일 쓰기</span></legend>
+
+                    <div class="layer-inmailbox-box">
+                        <div class="layer-inmailbox-box-head">
+                            <ul class="write">
+                                <li>
+                                    <span class="t">받는사람</span>
+                                    
+                                    <div class="jims">
+                                        <div class="jobindex-multi-selecter">
+                                            <ul class="jobindex-multi-selecter-item">
+                                                <li class="selecter-item">
+                                                    홍길동
+                                                    <button type="button" class="btn-del"><i class="icon-cross"></i><span class="ir">삭제</span></button>
+                                                </li>
+                                                <li class="selecter-insert">
+                                                    <input type="text" placeholder="받는사람" value="" title="받는사람" class="selecter-insert-input">	
+                                                
+                                                    <ul class="selecter-insert-list">
+                                                        <li>홍길동</li>
+                                                        <li class="on">홍길동</li>
+                                                        <li>홍길동</li>
+                                                        <li>홍길동</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="test-inname" class="t">제목</label>
+                                    
+                                    <input type="text" id="test-inname" class="istyle">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="layer-inmailbox-box-body">
+                            <textarea cols="30" rows="5" placeholder="내용" class="tastyle"></textarea>
+                        </div>
+
+                        <div class="layer-inmailbox-box-foot">
+                            원본
+                            <div class="layer-inmailbox-box-foot-ogn">
+                                신성장 동력을 발굴하고 지속 가능한 성장 기반을 확보하며 국내 LPG 산업의 경쟁력을 강화할 뿐만 아니라 해외 사업을 적극적으로 개척하고 확대하기 위해 노력하는 등 미래지향적인 전략을 구축하며 늘 전진하기 위해 노력하고 있습니다. 이를 통해 궁극적으로는 친환경 에너지 사업의 세계적인 리더로 성장하고자 합니다.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layer-inmailbox-bot">
+                        <button type="button" class="btn btn-inmail-reply">확인</button>
+                        <button type="button" class="btn btn-inmail-cncl">취소</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <button type="button" class="btn-layer-clse"><i class="icon-cross"></i><span class="ir">닫기</span></button>
+        </div>
+    </div>        
+</div>
+<!-- // 인메일 보기 레이어 -->
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/recruiter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 빌링 레이어 -->
+<div class="layer-pop">
+    <div class="layer-pop-wrap">
+        <div class="layer-project-billing">
+            <div class="project-billing-box">
+                <form>
+                    <fieldset>
+                        <legend><span>빌링</span></legend>
+
+                        <h2 class="tit-h2">빌링(금액관리)</h2>
+
+                        <table class="billing-box-board">
+                            <caption><span>빌링 입력</span></caption>
+                            <tbody>
+                            <tr>
+                                <th scope="row">입사자</th>
+                                <td include-html="/component/comm/cpn_jims.html"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="test-pay">연봉</label></th>
+                                <td>
+                                    <input type="number" id="test-pay" class="istyle flex"><em>원</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="test-vat">수수료율</label></th>
+                                <td>
+                                    <input type="number" id="test-vat" class="istyle flex"><em>%</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">빌링일자</th>
+                                <td>
+                                    <span class="icalendar">
+                                        <input type="text" size="12" placeholder="날짜" title="날짜" class="icalendar-input">
+                                        <button type="button" class="btn-icalendar"><i class="icon-calendar"></i><span class="ir">달력</span></button>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="test-price">빌링액</label></th>
+                                <td>
+                                    <input type="number" id="test-price" class="istyle flex"><em>원</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="test-price2">입금액</label></th>
+                                <td>
+                                    <input type="number" id="test-price2" class="istyle flex"><em>원</em>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="layer-pop-bot">
+                            <button type="button" class="btn btn-layer-submit">확인</button>
+                            <button type="button" class="btn btn-layer-cncl">취소</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <button type="button" class="btn-layer-clse"><i class="icon-cross"></i><span class="ir">닫기</span></button>
+        </div>
+    </div>
+</div>
+<!-- // 빌링 레이어 -->
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

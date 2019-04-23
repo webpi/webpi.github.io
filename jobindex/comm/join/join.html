@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/join.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-join">
+                <div class="join-box">
+                    <h2 class="tit-h2"><strong>회원가입</strong>하고<br>다양한 혜택을 누려보세요!</h2>
+
+                    <div class="join-box-form">
+                        <form action="join_success.html">
+                            <fieldset>
+                                <legend><span>기본정보</span></legend>
+
+                                <ul class="join-box-form-input">
+                                    <li>
+                                        <input type="email" placeholder="아이디(이메일)" title="아이디(이메일)" class="istyle">
+                                    </li>
+                                    <li>
+                                        <input type="password" placeholder="비밀번호 (숫자, 영문, 기호를 조합한 6자리 이상)" title="비밀번호" class="istyle">
+                                    </li>
+                                    <li>
+                                        <input type="password" placeholder="비밀번호 확인" title="비밀번호 확인" class="istyle">
+                                    </li>
+                                    <li class="name-year">
+                                        <input type="text" placeholder="성명" title="성명" class="istyle">
+
+                                        <select title="출생연도" class="slt">
+                                            <option>출생연도</option>
+                                            <option>19999년생</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <input type="tel" placeholder="010-1234-5678" title="휴대전화" class="istyle">
+                                    </li>
+                                </ul>
+
+                                <div class="join-box-form-policy">
+                                    <ul>
+                                        <li class="all">
+                                            <input type="checkbox" id="test-chk" name="test-chk" class="policycheckall">
+                                            <label for="test-chk">
+                                                전체동의
+                                                
+                                                <i class="icon-check-box"></i>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="test-chk1" name="test-chk1" class="policycheck">
+                                            <label for="test-chk1">
+                                                <em>*</em> 이용약관
+                                                
+                                                <i class="icon-check-box"></i>
+                                            </label>
+
+                                            <button type="button" class="btn-detail">약관보기 <i class="icon-down-arrow"></i></button>
+
+                                            <div class="policybox">
+                                                주식회사 잡인덱스(이하 “회사”)는 이용자의 개인정보 보호 문제를 아주 중요하게 생각하며, ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률'(이하 “정보통신망법”) 및 ‘개인정보 보호법’ 등 관련 법령 및 지침상의 개인정보 보호규정을 준수하고 있습니다. 이에 회사는 개인정보 보호에 만전을 기하고 있으며, 이용자님들께서 회사의 모든 서비스를 안심하고 이용하실 수 있도록 최선을 다하고 있습니다.
+
+                                                회사는 아래와 같이 개인정보 취급방침을 명시하여 이용자의 개인정보가 어떤 용도와 방식으로 이용되고 있으며 회사가 이용자의 개인정보 보호를 위해 어떤 조치를 취하는지 알려드립니다.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="test-chk2" name="test-chk2" class="policycheck">
+                                            <label for="test-chk2">
+                                                <em>*</em> 개인정보취급방침
+
+                                                <i class="icon-check-box"></i>
+                                            </label>
+
+                                            <button type="button" class="btn-detail">약관보기 <i class="icon-down-arrow"></i></button>
+
+                                            <div class="policybox">
+                                                주식회사 잡인덱스(이하 “회사”)는 이용자의 개인정보 보호 문제를 아주 중요하게 생각하며, ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률'(이하 “정보통신망법”) 및 ‘개인정보 보호법’ 등 관련 법령 및 지침상의 개인정보 보호규정을 준수하고 있습니다. 이에 회사는 개인정보 보호에 만전을 기하고 있으며, 이용자님들께서 회사의 모든 서비스를 안심하고 이용하실 수 있도록 최선을 다하고 있습니다.
+
+                                                회사는 아래와 같이 개인정보 취급방침을 명시하여 이용자의 개인정보가 어떤 용도와 방식으로 이용되고 있으며 회사가 이용자의 개인정보 보호를 위해 어떤 조치를 취하는지 알려드립니다.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="test-chk3" name="test-chk3" class="policycheck">
+                                            <label for="test-chk3">
+                                                <span>이메일</span> 수신동의 (선택)
+
+                                                <i class="icon-check-box"></i>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="test-chk4" name="test-chk4" class="policycheck">
+                                            <label for="test-chk4">
+                                                <span>SMS/MMS</span> 수신동의 (선택)
+
+                                                <i class="icon-check-box"></i>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="join-box-form-bot">
+                                    <button type="submit" class="btn-submit">회원가입</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="join-box-sns">
+                        <strong class="t"><span>소셜로 간편하고 빠르게<br>로그인하세요</span></strong>
+
+                        <ul>
+                            <li><a href="#" class="btn fb"><i class="icon-facebook2"></i> 페이스북 가입</a></li>
+                            <li><a href="#" class="btn lin"><i class="icon-linkedin"></i> 링크드인 가입</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="join-box-company">
+                        <a href="#">기업에서 사용할 ID가 필요하세요?</a>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

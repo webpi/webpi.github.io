@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/circle.css">
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-circle">
+                <div class="circle-main">
+                    <!-- left -->
+                    <div class="circle-wrap">
+                        <!-- 검색 -->
+                        <div class="cpn-local-search" include-html="/component/comm/cpn_local_search.html"></div>
+                        <!-- // 검색 -->
+
+                        <div class="circle-conts">
+                            <div class="circle-conts-body">
+                                <div class="cpn-list-sort" include-html="/component/comm/cpn_list_sort.html"></div>
+
+                                <div class="circle-conts-list">
+                                    <article class="cpn-circle-conts-item" include-html="/component/comm/cpn_circle_conts_item.html"></article>
+
+                                     <article class="cpn-circle-conts-item" include-html="/component/comm/cpn_circle_conts_item.html"></article>
+
+                                     <article class="cpn-circle-conts-item" include-html="/component/comm/cpn_circle_conts_item.html"></article>
+                                </div>
+
+                                <button type="button" class="btn-more"><i class="icon-plus-sign-to-add"></i> 더보기</button>
+                            </div>
+                        </div>                                                                
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="circle-aside">
+                        <div class="lnb-list-nav" include-html="/component/circle/circle_aside_nav.html"></div>
+
+                        <div class="circle-aside-noti">
+                            <ul>
+                                <li><strong class="fc-pc2">3,011</strong>개 결과</li>
+                                <li>써클질문 <span>333</span></li>
+                                <li>써클답변 <span>333</span></li>
+                                <li>잡포스팅 <span>333</span></li>
+                                <li>일반글 <span>333</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- 최근 검색어 -->
+                        <div class="cpn-aside-searchkeyword" include-html="/component/comm/aside/cpn_aside_searchkeyword.html"></div>
+                        <!-- // 최근 검색어 -->
+
+                        <div class="circle-aside-adv">
+                            광고
+                        </div>
+
+                        <!-- looking for a job -->
+                        <div class="cpn-aside-lookingjobs" include-html="/component/comm/aside/cpn_aside_lookingjobs.html"></div>
+                        <!-- // looking for a job -->
+                    </aside>
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

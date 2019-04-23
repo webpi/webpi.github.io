@@ -1,0 +1,112 @@
+                    <form>
+                        <fieldset>
+                            <legend><span>검색</span></legend>
+
+                            <div class="local-search-wrap">
+                                <div class="local-search-box">
+                                    <input type="search" placeholder="Job Title, Keywords, or Company" title="검색어" class="isearch">
+
+                                    <button type="submit" class="btn-search-submit">
+                                        <i class="icon-search"></i>
+                                        <span class="ir">검색</span>
+                                    </button>
+                                </div>
+
+                                <!-- 상세검색 필요시 추가 그외 삭제 -->
+                                <button type="button" class="btn-detail">상세검색</button>
+                                <!-- // 상세검색 필요시 -->
+                            </div>
+
+                            <!-- 상세검색 입력 -->
+                            <div class="local-search-detail">
+                                <table class="search-detail-board">
+                                    <caption><span>상세검색</span></caption>
+                                    <colgroup>
+                                        <col style="width:100px">
+                                        <col style="">
+                                        <col style="width:100px">
+                                        <col style="">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row"><label for="test-name">성명</label></th>
+                                        <td>
+                                            <input type="text" id="test-name" class="istyle">
+                                        </td>
+                                        <th scope="row"><label for="test-birth">출생년도</label></th>
+                                        <td>
+                                            <input type="number" id="test-birth" class="istyle">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">성별</th>
+                                        <td>
+                                            <div class="radio-group">
+                                                <span class="radio-itm">
+                                                    <input type="radio" id="test-radio" name="test-radio">
+                                                    <label for="test-radio">
+                                                        남성
+                                                    </label>
+                                                </span>
+
+                                                <span class="radio-itm">
+                                                    <input type="radio" id="test-radio2" name="test-radio">
+                                                    <label for="test-radio2">
+                                                        여성
+                                                    </label>
+                                                </span>
+
+                                                <span class="radio-itm">
+                                                    <input type="radio" id="test-radio3" name="test-radio">
+                                                    <label for="test-radio3">
+                                                        기타
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <th scope="row"><label for="test-sch">학교</label></th>
+                                        <td>
+                                            <input type="text" id="test-sch" class="istyle">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="test-g">학위</label></th>
+                                        <td>
+                                            <input type="text" id="test-g" class="istyle">
+                                        </td>
+                                        <th scope="row"><label for="test-co">직장</label></th>
+                                        <td>
+                                            <input type="text" id="test-co" class="istyle">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="test-ca">경력</label></th>
+                                        <td>
+                                            <input type="text" id="test-ca" class="istyle">
+                                        </td>
+                                        <th scope="row"><label for="test-cd">출처</label></th>
+                                        <td>
+                                            <input type="text" id="test-cd" class="istyle">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">키워드</th>
+                                        <td colspan="3" include-html="/component/comm/cpn_jims.html"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><label for="test-re">결과내 재검색</label></th>
+                                        <td colspan="3">
+                                            <input type="text" id="test-re" class="istyle">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="search-detail-bot">
+                                    <button type="submit" class="btn btn-detail-submit">상세검색</button>
+                                    <button type="button" class="btn btn-detail-cncl">취소</button>
+                                </div>
+                            </div>
+                            <!-- // 상세검색 입력 -->
+                        </fieldset>
+                    </form>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-manage">
+                <h2 class="ir">프로필 개인정보설정</h2>
+
+                <div class="manage-main">
+                    <!-- left -->
+                    <div class="manage-wrap">
+                        <div class="profile-manage">
+                            <div class="profile-manage-user" include-html="/component/profile/manage/profile_manage_user.html"></div>
+
+                            <div class="profile-manage-conts">
+                                <div class="profile-manage-conts-box">
+                                    <form>
+                                        <fieldset>
+                                            <legend><span>개인정보</span></legend>
+
+                                            <ul>
+                                                <li>
+                                                    <label for="test-email"><span>이메일(아이디)</span></label>
+                                                    <input type="email" id="test-email" value="aaaafdsfs@naver.com" class="istyle">
+                                                </li>
+                                                <li>
+                                                    <label for="test-name"><span>이름</span></label>
+                                                    <input type="text" id="test-name" value="홍길동" class="istyle">
+                                                </li>
+                                                <li>
+                                                    <label for="test-tel"><span>연락처</span></label>
+                                                    <input type="text" id="test-tel" value="010-1111-1234" class="istyle">
+                                                </li>
+                                                <li>
+                                                    <label for="test-birth"><span>출생년도</span></label>
+                                                    <select id="test-birth" class="slt">
+                                                        <option>2019</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+
+                                            <button type="submit" class="btn-submit">수정완료</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="manage-aside">
+                        <div class="lnb-list-nav" include-html="/component/profile/manage/manage_aside_nav.html"></div>
+                    </aside>
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

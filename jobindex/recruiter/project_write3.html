@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/recruiter.css">
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-recruiter column">
+                <h2 class="ir">리크루터 프로젝트</h2>
+
+                <!-- 차트 -->
+                <div class="recruiter-chart">
+                    <div class="recruiter-chart-list">
+                        <article class="chart-itm">
+                            <h3 class="tit-h3">프로젝트 성공률</h3>
+
+                            <canvas id="myChart"></canvas>
+                        </article>
+
+                        <article class="chart-itm">
+                            <h3 class="tit-h3">추천 &amp; 면접</h3>
+
+                            <canvas id="myChart2"></canvas>
+                        </article>
+
+                        <article class="chart-itm">
+                            <h3 class="tit-h3">프로젝트 주요 키워드</h3>
+
+                            <canvas id="myChart3"></canvas>
+                        </article>
+                    </div>
+                </div>
+                <!-- // 차트 -->
+
+                <div class="recruiter-main">
+                    <!-- left -->
+                    <div class="recruiter-wrap">
+                        <div class="recruiter-project">
+                            <div class="recruiter-project-write">
+                                <h3 class="tit-h3"><span>프로젝트 등록</span></h3>
+
+                                <div class="project-write-top">
+                                    <ol>
+                                        <li>1. 필수정보입력</li>
+                                        <li>2. 추가정보입력</li>
+                                        <li class="active">3. 옵션선택</li>
+                                    </ol>
+                                </div>
+
+                                <div class="project-write-main">
+                                    <h4 class="ir">3. 옵션선택</h4>
+                                    <p class="write-main-dsc">지금 만드는 채용공고의 효율성을 높여보세요!</p>
+
+                                    <div class="write-main-box">
+                                        <!-- 미리보기 -->
+                                        <div class="main-box-preview">
+                                            <h5 class="tit-h5">채용공고 미리보기</h5>
+
+                                            <div class="box-preview-jobs">
+                                                <div class="cpn-content-list">
+                                                    <article class="cpn-content-list-item" include-html="/component/comm/cpn_content_list_item.html"></article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- // 미리보기 -->
+
+                                        <div class="main-box-product">
+                                            <h5 class="tit-h5">채용프로젝트 광고 선택</h5>
+
+                                            <form>
+                                                <fieldset>
+                                                    <legend><span>결제 상품</span></legend>
+
+                                                    <div class="box-product-list">
+                                                        <!-- 상품 -->
+                                                        <div class="product-list-item">
+                                                            <input type="radio" id="test-p1" name="test-rdo">
+                                                            <label for="test-p1">선택</label>
+
+                                                            <dl>
+                                                                <dt>일반</dt>
+                                                                <dd>
+                                                                    <ul>
+                                                                        <li class="price">무료</li>
+                                                                        <li>예상도달<br>1 ~ 1,000명</li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <!-- // 상품 -->
+
+                                                        <!-- 상품 -->
+                                                        <div class="product-list-item">
+                                                            <input type="radio" id="test-p2" name="test-rdo">
+                                                            <label for="test-p2">선택</label>
+
+                                                            <dl>
+                                                                <dt>베이직</dt>
+                                                                <dd>
+                                                                    <ul>
+                                                                        <li class="price"><small><sup>\</sup></small>11,000<em>/일</em></li>
+                                                                        <li>예상도달<br>1,000 ~ 4,000명</li>
+                                                                        <li>상위업데이트  3회 제공</li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <!-- // 상품 -->
+
+                                                        <!-- 상품 -->
+                                                        <div class="product-list-item">
+                                                            <input type="radio" id="test-p3" name="test-rdo">
+                                                            <label for="test-p3">선택</label>
+
+                                                            <dl>
+                                                                <dt>프리미엄</dt>
+                                                                <dd>
+                                                                    <ul>
+                                                                        <li class="price"><small><sup>\</sup></small>22,000<em>/일</em></li>
+                                                                        <li>예상도달<br>3,000 ~ 6,000명</li>
+                                                                        <li>상위업데이트 5회</li>
+                                                                        <li>SNS업로드</li>
+                                                                        <li>제휴처 업로드</li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <!-- // 상품 -->
+
+                                                        <!-- 상품 -->
+                                                        <div class="product-list-item">
+                                                            <input type="radio" id="test-p4" name="test-rdo">
+                                                            <label for="test-p4">선택</label>
+
+                                                            <dl>
+                                                                <dt>로얄</dt>
+                                                                <dd>
+                                                                    <ul>
+                                                                        <li class="price"><small><sup>\</sup></small>55,000<em>/일</em></li>
+                                                                        <li>예상도달<br>5,000 ~ 10,000명</li>
+                                                                        <li>상위업데이트 7회</li>
+                                                                        <li>SNS업로드</li>
+                                                                        <li>제휴처 업로드</li>
+                                                                        <li>자체 DB 메일링</li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <!-- // 상품 -->
+
+                                                        <!-- 상품 -->
+                                                        <div class="product-list-item">
+                                                            <input type="radio" id="test-p5" name="test-rdo">
+                                                            <label for="test-p5">선택</label>
+
+                                                            <dl>
+                                                                <dt>특</dt>
+                                                                <dd>
+                                                                    <ul>
+                                                                        <li class="price"><small><sup>\</sup></small>110,000<em>/일</em></li>
+                                                                        <li>예상도달<br>7,000 ~ 15,000명</li>
+                                                                        <li>상위업데이트 10회</li>
+                                                                        <li>SNS업로드</li>
+                                                                        <li>제휴처 업로드</li>
+                                                                        <li>자체 DB 개별메일링</li>
+                                                                    </ul>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <!-- // 상품 -->
+                                                    </div>
+
+                                                    <div class="box-product-price">
+                                                        <div class="product-price-date">
+                                                            <span class="t">기간 :</span>  
+
+                                                            <div class="icalendar-group">
+                                                                <span class="icalendar">
+                                                                    <input type="text" size="12" title="기간 시작" class="icalendar-input">
+                                                                    <button type="button" class="btn-icalendar"><i class="icon-calendar"></i><span class="ir">달력</span></button>
+                                                                </span>
+
+                                                                <span class="icalendar">
+                                                                    <input type="text" size="12" title="기간 끝" class="icalendar-input">
+                                                                    <button type="button" class="btn-icalendar"><i class="icon-calendar"></i><span class="ir">달력</span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="product-price-sum">
+                                                            <div class="price-sum-product">선택한 광고 : <strong>프리미엄</strong></div>
+
+                                                            총 <span class="day">2</span>일간 <strong class="price">1,000,000<em>원</em></strong>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="main-box-bot">
+                                                        <button type="button" class="btn-prev">이전</button>
+                                                        <button type="submit" class="btn-submit">등록</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="recruiter-aside">
+                        <!-- 프로젝트 현황 -->
+                        <div class="cpn-aside-project" include-html="/component/recruiter/cpn_aside_project.html"></div>
+                        <!-- // 프로젝트 현황 -->
+
+                        <!-- 광고 -->
+                        <div class="recruiter-aside-adv">광고</div>
+                        <!-- // 광고 -->
+                    </aside> 
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/js/jobindex.js"></script>
+
+<!-- Chart 샘플 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<script>
+var ctx2 = document.getElementById("myChart2").getContext('2d');
+var myChart2 = new Chart(ctx2, {
+    type: 'radar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<script>
+var ctx3 = document.getElementById("myChart3").getContext('2d');
+var myChart3 = new Chart(ctx3, {
+    type: 'line',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+<!-- // js -->
+</body>
+</html>

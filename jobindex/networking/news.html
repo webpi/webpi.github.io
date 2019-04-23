@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/networking.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-networking">
+                <h2 class="ir">인맥</h2>
+
+                <div class="section-networking-top">
+                    <!-- 검색 -->
+                    <div class="cpn-local-search" include-html="/component/comm/cpn_local_search.html"></div>
+                    <!-- // 검색 -->
+
+                    <div class="networking-cnt">
+                        <div class="networking-cnt-in">인맥 <span>9,999,999</span> 명</div>
+                    </div> 
+                </div>
+
+                <div class="section-networking-main">
+                    <!-- left -->
+                    <div class="networking-wrap">
+                        <div class="networking-news">
+                            <!-- 프로필 정보 -->
+                            <div class="networking-profile" include-html="/component/networking/cpn_networking_profile.html"></div>
+                            <!-- // 프로필 정보 -->
+
+                            <!-- 인맥 소식 -->
+                            <div class="networking-newslist">
+                                <div class="networking-newslist-head">
+                                    <h2 class="tit-h2">인맥소식 <span>999</span></h2>
+
+                                    <button type="butotn" class="btn-allread">모두읽음처리</button>
+                                </div>
+
+                                <div class="networking-newslist-body">
+                                    <ul>
+                                        <li>
+                                            <span class="photo"><a href="layer_news_profile.html"><img src="/assets/img/profile.jpg" alt="홍길동"></a></span>
+
+                                            <div class="conts">
+                                                <strong class="name" title="프로필 보기">홍길동</strong> 님이 <a href="#">“재무담당 임원/ 자금유치”</a> 채용공고를 추천하였습니다.
+                                                <span class="date">3분전</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="photo"><a href="#"><img src="/assets/img/profile.jpg" alt="홍길동"></a></span>
+
+                                            <div class="conts">
+                                                <strong class="name" title="프로필 보기">홍길동</strong> 님이 <strong class="name" title="프로필 보기">홍길동</strong> 님과 인맥을 맺으셨습니다.
+                                                <span class="date">`19.12.31</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="photo"><a href="#"><img src="/assets/img/profile.jpg" alt="홍길동"></a></span>
+
+                                            <div class="conts">
+                                                <strong class="name" title="프로필 보기">홍길동</strong> 님이 <a href="#">“재무담당 임원/ 자금유치 무담당 임원/ 자금유치 무담당 임원/ 자금유치 무담당 임원/ 자금유치 무담당 임원/ 자금유치”</a> 채용공고를 추천하였습니다.
+                                                <span class="date">3분전</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <button type="button" class="btn-more"><i class="icon-plus-sign-to-add"></i> 더보기</button>
+                                </div>
+                            </div>
+                            <!-- // 인맥 소식 -->
+                        </div>
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="networking-aside">
+                        <div class="lnb-list-nav" include-html="/component/networking/networking_aside_nav.html"></div>
+
+                        <div class="cpn-aside-profileupdate" include-html="/component/comm/aside/cpn_aside_networking_profileupdate.html"></div>
+                    </aside> 
+                    <!-- // right -->         
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/recruiter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-recruiter column">
+                <h2 class="ir">리크루터 후보자 등록</h2>
+
+                <div class="recruiter-main">
+                    <!-- left -->
+                    <div class="recruiter-wrap">
+                        <div class="recruiter-candidate">
+                            <div class="recruiter-interview-write">
+                                <div class="recruiter-candidate-head">
+                                    <h2 class="tit-h2"><span>사전인터뷰등록</span></h2>
+                                </div>
+
+                                <div class="recruiter-candidate-body">
+                                    <form>
+                                        <fieldset>
+                                            <legend><span>사전인터뷰등록 상세</span></legend>
+                                            
+                                            <table class="cpn-board-col">
+                                                <caption><span>기본 정보</span></caption>
+                                                <colgroup>
+                                                    <col style="width:100px">
+                                                    <col>
+                                                </colgroup>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">성명</th>
+                                                    <td>
+                                                        <a href="#">홍길동</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">직장</th>
+                                                    <td>
+                                                        <a href="#">잡인덱스 코리아</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">직무</th>
+                                                    <td>
+                                                        온라인 마케팅
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">인터뷰일자</th>
+                                                    <td>
+                                                        <div class="icalendar-group">
+                                                            <span class="icalendar">
+                                                                <input type="text" size="10" title="날짜" class="icalendar-input">
+                                                                <button type="button" class="btn-icalendar"><i class="icon-calendar"></i><span class="ir">달력</span></button>
+                                                            </span>
+
+                                                            <span class="icalendar">
+                                                                <input type="text" size="10" title="시간" class="icalendar-input">
+                                                                <button type="button" class="btn-icalendar"><i class="icon-alarm"></i><span class="ir">시간</span></button>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><label for="test-ta">평가 및 기타</label></th>
+                                                    <td>
+                                                        <textarea cols="30" rows="3" id="test-ta" class="itastyle"></textarea>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="recruiter-candidate-bot">
+                                                <button type="submit" class="btn-submit">확인</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                    <!-- // left -->
+
+                    <!-- right -->
+                    <aside class="recruiter-aside">
+                        <!-- lnb -->
+                        <div class="lnb-list-nav" include-html="/component/recruiter/candidate_aside_nav.html"></div>
+                        <!-- // lnb -->
+
+                        <!-- 후보자 현황 -->
+                        <div class="cpn-aside-recruiterstatus" include-html="/component/recruiter/cpn_aside_candidate.html"></div>
+                        <!-- // 후보자 현황 -->
+
+                        <!-- 광고 -->
+                        <div class="recruiter-aside-adv">
+                            광고
+                        </div>
+                        <!-- // 광고 -->
+                    </aside> 
+                    <!-- // right -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>

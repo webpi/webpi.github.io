@@ -1,0 +1,1381 @@
+@charset "utf-8";
+
+// 공통
+.blind {
+	display: none !important;
+}
+
+.visible {
+	visibility: hidden;
+}
+
+.ir {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	width: 1%;
+	height: 1%;
+	margin: 0;
+	padding: 0;
+	font-size: 1%;
+	line-height: 1%;
+}
+
+// label 
+.label-s {
+    display: inline-block;
+    padding: 2px 4px 1px;
+    border-width: 1px;
+    border-style: solid;
+    line-height: normal;
+    
+    @include fontSize(11px);
+
+    &.supp1 {
+        border-color: $pc4;
+        color: $pc4;
+    }
+}
+
+// form element
+.istyle {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+
+    &:focus {
+        border-color: $pc1 !important;
+    }
+
+    // &:valid {
+    //     background-color: $pc1;
+    // }
+
+    // &:invalid {
+    //     border-color: $pc2 !important;
+    //     background: #ffdddd;
+    // }
+}
+
+.slt {
+    min-width: 100px;
+    height: 34px;
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+
+    @include box-sizing();
+    @include fontSize(14px);
+}
+
+.itastyle {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+
+    @include fontSize(14px);
+    @include box-sizing();
+
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+
+    &:focus {
+        border-color: $pc1 !important;
+    }
+}
+
+// button 
+.btn-like {
+    cursor: pointer;
+
+    &:hover {
+        color: $pc3;
+    }
+
+    &.on {
+        color: $pc3;
+    }
+}
+
+.btn-scrap {
+    cursor: pointer;
+
+    &:hover {
+        color: $pc4;
+    }
+
+    &.on {
+        color: $pc4;
+    }
+}
+
+// font color
+.fc-fc1 {
+	color: $fc1 !important;
+}
+
+.fc-fc2 {
+	color: $fc2 !important;
+}
+
+.fc-fc3 {
+	color: $fc3 !important;
+}
+
+.fc-pc1 {
+	color: $pc1 !important;
+}
+
+.fc-pc2 {
+	color: $pc2 !important;
+}
+
+.fc-pc3 {
+	color: $pc3 !important;
+}
+
+.fc-pc4 {
+	color: $pc4 !important;
+}
+
+// 뱃지
+em.badge {
+    display: inline-block;
+    padding: 1px 4px;
+    border-radius: 2px;
+
+    @include fontSize(12px);
+
+    &.clr1 {
+        color: #fff;
+        background: #e81c62;
+    }
+
+    &.clr2 {
+        color: #fff;
+        background: #EC7568;
+    }
+
+    &.clr3 {
+        color: #fff;
+        background: #B48FD8;
+    }
+
+    &.clr4 {
+        color: #fff;
+        background: #57DFEB;
+    }
+
+    &.clr5 {
+        color: #fff;
+        background: #0AE4FF;
+    }
+
+    &.clr6 {
+        color: #fff;
+        background: #B09980;
+    }
+
+    &.clr7 {
+        color: #fff;
+        background: $bc1;
+    }
+
+    &.clr8 {
+        color: #fff;
+        background: #D01337;
+    }
+
+    &.clr9 {
+        color: #fff;
+        background: #ED4A82;
+    }
+
+    &.clr10 {
+        color: #fff;
+        background: $pc3;
+    }
+
+    &.clr11 {
+        color: #fff;
+        background: $pc4;
+    }
+
+    &.clr12 {
+        color: #fff;
+        background: $pc2
+    }
+
+    &.clr13 {
+        color: #fff;
+        background: $pc1;
+    }
+
+    &.clr14 {
+        color: #fff;
+        background: $bc2;
+    }
+
+    &.clr15 {
+        color: #fff;
+        background: $bc3;
+    }
+}
+
+// 내용없음 공통
+.notfound {
+    line-height: 1.3;
+    
+    @include not-found(); // (padding: 30px 0, text-align: center)
+    @include fontSize(16px);
+
+    span,
+    strong {
+        color: $pc1;
+    }
+}
+
+// 페이지 로딩
+.loading {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.8);
+	z-index: 999;
+
+	@include size(100%);
+
+	.loading-spinner {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -24px 0 0 -24px;
+		border: 6px solid #ddd;
+		border-top: 6px solid $pc1;
+		border-radius: 50%;
+		animation: spin 0.8s linear infinite;
+
+		@include size(36px);
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg); 
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+// 부분 로딩
+.loading-s {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.8);
+	z-index: 99;
+
+	@include size(100%);
+
+	.loading-spinner {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -10px 0 0 -10px;
+		border: 4px solid #ddd;
+		border-top-color: $pc1;
+		border-radius: 50%;
+		animation: spin 0.8s linear infinite;
+
+		@include size(12px);
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg); 
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+// 상단 박스
+.wrap-noti {
+    position: relative;
+    padding: 25px 0;
+    background: #f4f4f4;
+
+    // 정보 추가 입력
+    .wrap-noti-myinfo {
+        font-size: 0;
+        text-align: center;
+
+        @include default_width;
+
+        .tit {
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+
+            @include fontSize(16px);
+        }
+
+        .istyle {
+            height: 34px;
+            margin-right: 5px;
+            padding: 3px 10px;
+            border: 1px solid #cacaca;
+            vertical-align: middle;
+
+            @include box-sizing();
+            @include fontSize(14px);
+        }
+
+        .slt {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .btn-submit {
+            height: 34px;
+            padding: 3px 15px;
+            vertical-align: middle;
+
+            border: 0;
+            color: #fff;
+            background: $pc4;
+
+            @include fontSize(14px);
+        }
+    }
+
+    .btn-clse {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        border: 0;
+        color: $fc3;
+        background: none;
+
+        @include size(40px);
+        @include fontSize(18px);
+
+        &:hover {
+            color: $pc2;
+        }
+    }
+
+    &.bdr-top {
+        border-top: 1px solid #e3e3e3;
+    }
+
+    &.bdr-bot {
+        border-bottom: 1px solid #e3e3e3;
+    }
+}
+
+// layout
+#wrap {
+    min-width: 320px;
+
+    .wrap-page {
+        @include default_width;
+    }
+}
+
+// container
+#container {
+    min-height: calc(100vh - (111px + 107px));
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 70px;
+
+    @include box-sizing();
+}
+
+// footer
+#footer {
+    padding: 20px 0 30px;
+    border-top: 1px solid #e3e3e3;
+    background: #fff;
+    
+    // 모바일용 하단 버튼
+    .footer-btn {
+        display: none;
+        margin-bottom: 15px;
+
+        .btn-footer-btn {
+            width: 100px;
+            height: 30px;
+            margin-left: 5px;
+            border: 1px solid #cecece;
+            background: #fff;
+            line-height: 28px;
+            vertical-align: top;
+
+            @include box-sizing();
+            @include fontSize(14px);
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        .btn-jobindex-app {
+            display: inline-block;
+        }
+    }
+
+    .footer-menu {
+        ul {
+            font-size: 0;
+            line-height: 0;
+            text-align: center;
+
+            li {
+                position: relative;
+                display: inline-block;
+                padding: 0 10px 0 11px;
+                line-height: normal;
+
+                @include fontSize(14px);
+
+                a {
+                    color: $fc2;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 1px;
+                    height: 10px;
+                    margin-top: -5px;
+                    background: #cecece;
+                }
+
+                &:first-child {
+                    padding-left: 10px;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 25px;
+        color: $fc3;
+        text-align: center;
+
+        @include fontSize(12px);
+
+        strong {
+            color: $fc1;
+
+            @include fontSize(13px);
+        }
+    }
+}
+
+// login
+#login {
+    min-width: 320px;
+
+    .login-box {
+        width: 480px;
+        margin: 0 auto;
+        padding: 50px;
+        border: 1px solid #cecece;
+        box-shadow: 0 20px 25px -12px rgba(0,0,0,.09);
+        background: #fff;
+
+        @include box-sizing();
+        @include rounded(8px, 8px, 8px, 8px);
+
+        .tit-h2 {
+            margin-bottom: 30px;
+            text-align: center;
+
+            @include fontSize(20px);
+
+            strong {
+                color: $pc1;
+
+                @include fontSize(24px);
+            }
+        }
+
+        .login-box-form {
+			.login-box-form-body {
+				.iform {
+					position: relative;
+					margin-top: 15px;
+
+					label {
+						position: absolute;
+						left: 0;
+						top: 0;
+						display: block;
+						padding: 13px 12px;
+						color: #888;
+                        line-height: 24px;
+
+                        @include fontSize(16px);
+						@include box-sizing();
+						@include transition(transform 0.15s ease-in-out);
+
+						&.active {
+							padding: 0 12px;
+							color: $pc1;
+							font-weight: 600;
+							background: #fff;
+							line-height: normal;
+
+							@include transform(scale(0.8) translate(0, -10px));
+						}
+					}
+
+					.istyle {
+						width: 100%;
+						height: 50px;
+						padding: 10px 10px;
+                        border: 1px solid #cecece;
+						line-height: 28px;
+
+                        @include box-sizing();
+                        @include fontSize(16px);
+						@include rounded(4px, 4px, 4px, 4px);
+
+                        &:focus {
+                            border-color: $pc1;
+                        }
+					}
+
+                    .iform-info {
+                        text-align: center;
+                        cursor: pointer;
+
+                        .iform-info-in {
+                            display: inline-block;
+                            padding: 4px;
+                            border: 1px solid #cecece;
+                            font-size: 0;
+                            background: #fff;
+                            line-height: 0;
+                            vertical-align: top;
+
+                            @include rounded(22px, 22px, 22px, 22px);
+
+                            .info {
+                                color: $pc1;
+                            }
+                        }
+                    }
+
+                    .photo {
+                        overflow: hidden;
+                        display: inline-block;
+                        margin-right: 5px;
+                        vertical-align: top;
+
+                        @include size(34px);
+                        @include rounded(17px, 17px, 17px, 17px);
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+
+                    .info {
+                        overflow: hidden;
+                        position: relative;
+                        display: inline-block;
+                        height: 34px;
+                        padding-right: 24px;
+                        vertical-align: top;
+                        line-height: 34px;
+
+                        @include fontSize(15px);
+
+                        i {
+                            position: absolute;
+                            right: 4px;
+                            top: 50%;
+                            margin-top: -6px;
+                            color: $fc3;
+
+                            @include fontSize(12px);
+                        }
+                    }
+
+                    .iform-infolist {
+                        position: absolute;
+                        top: 46px;
+                        left: 50%;
+                        padding: 5px;
+                        border: 1px solid #cecece;
+                        background: #fff;
+                        z-index: 1;
+
+                        @include rounded(10px, 10px, 10px, 10px);
+                        @include translate(-50%, 0);
+
+                        ul {
+                            li {
+                                padding: 5px;
+                                color: $fc3;
+                                white-space: nowrap;
+                                cursor: pointer;
+
+                                .info {
+                                    padding-right: 0;
+
+                                    @include fontSize(13px);
+                                }
+
+                                &:hover {
+                                    color: $fc1;
+                                    background: #f9f9f9;
+                                }
+                            }
+                        }
+                    }
+
+					&.iblur {
+						label,
+						.istyle {
+						 	color: $fc3;
+						}
+					}
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+
+			.login-box-form-foot {
+                margin-top: 15px;
+
+                .login-box-form-foot-top {
+                    position: relative;
+                    text-align: right;
+
+                    .find-pw {
+                        position: absolute;
+                        top: 50%;
+                        left: 5px;
+                        color: $fc2;
+                        text-align: left;
+
+                        @include fontSize(13px);
+                        @include translate(0, -50%);
+                    }
+                   
+                    .btn-login {
+                        width: 120px;
+                        height: 40px;
+                        border: 0;
+                        color: #fff;
+                        font-weight: 600;
+                        background: $pc1;
+                        text-align: center;
+                        
+                        @include fontSize(15px);
+                        @include rounded(3px, 3px, 3px, 3px);
+
+                        &:hover {
+                            background: $pc1_hover;
+                        }
+                    }
+                }
+
+                .login-box-form-foot-bot {
+                    margin-top: 20px;
+
+                    .t {
+                        position: relative;
+                        display: block;
+                        padding-top: 0.5px;
+                        color: $fc2;
+                        text-align: center;
+
+                        @include fontSize(14px);
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 80%;
+                            height: 1px;
+                            font-size: 0;
+                            background: #bbb;
+                            line-height: 0;
+                            z-index: -1;
+
+                            @include translate(-50%, 0);
+                        }
+
+                        span {
+                            display: inline-block;
+                            padding: 0 24px;
+                            background: #fff;
+                        }
+                    }
+
+                    ul {
+                        margin-top: 20px;
+
+                        @include clear;
+
+                        li {
+                            float: left;
+                            width: 50%;
+
+                            @include box-sizing();
+
+                            .btn {
+                                display: block;
+                                height: 40px;
+                                color: #fff;
+                                line-height: 38px;
+                                text-align: center;
+
+                                @include rounded(4px, 4px, 4px, 4px);
+                                @include fontSize(14px);
+                                @include transition(background 0.15s ease-in-out);
+
+                                i {
+                                    line-height: inherit;
+                                }
+
+                                &.fb {
+                                    margin-right: 2px;
+                                    background: #3b5998;
+                                    // border: 1px solid #3b5998;
+                                    // color: #3b5998;
+
+                                    &:hover {
+                                        background: #4c70ba;
+                                    }
+                                }
+
+                                &.lin {
+                                    margin-left: 2px;
+                                    background: #0077b5;
+                                    // border: 1px solid #0077b5;
+                                    // color: #0077b5;
+
+                                    &:hover {
+                                        background: #038cd4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+		}
+
+        .login-box-bot {
+            margin-top: 20px;
+            padding-top: 8px;
+            border-top: 1px solid #cecece;
+
+            @include clear;
+
+            .slt {
+                float:left;
+                height: 18px;
+                border: 0;
+                color: $fc2;
+                background: none;
+                
+                @include fontSize(12px);
+            }
+
+            ul {
+                float: right;
+
+                li {
+                    float: left;
+                    margin-left: 8px;
+                    color: $fc2;
+                    line-height: 18px;
+
+                    @include fontSize(12px);
+                }
+            }
+        }
+
+        &.layer-login {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: 0;
+            background: #fff;
+
+            @include translate(-50%, -50%);
+        }
+    }
+}
+.section-login {
+    padding: 50px 0 70px;
+    background: #f9f9f9;
+}
+
+// layer-pop
+.layer-pop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    
+    &:before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .layer-pop-wrap {
+        overflow: auto;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        -webkit-overflow-scrolling: touch;
+
+        @include box-sizing();
+    }
+
+    .layer-pop-bot {
+        margin-top: 30px;
+        border-top: 1px solid #cecece;
+        padding-top: 20px;
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+
+        .btn {
+            min-width: 120px;
+            height: 40px;
+            margin-right: 5px;
+            padding: 4px 15px;
+            border: 0;
+            font-weight: 600;
+            background: #fff;
+            
+            @include fontSize(15px);
+
+            &.btn-layer-submit {
+                color: #fff;
+                background: $pc1;
+
+                &:hover {
+                    background: $pc1_hover;
+                }
+            }
+
+            &.btn-layer-cncl {
+                border: 1px solid $bc2;
+
+                &:hover {
+                    background: #f9f9f9;
+                }                                   
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .btn-layer-clse {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        border: 0;
+        color: $fc2;
+        background: none;
+
+        @include size(40px);
+        @include fontSize(15px);
+
+        &:hover {
+            color: $pc2;
+        }
+    }
+}
+
+// 기본 레이어
+.layer-template {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 640px;
+    min-width: 320px;
+    width: 640px;
+    padding: 50px;
+    background: #fff;
+
+    @include translate(-50%, -60%);
+    @include rounded(8px, 8px, 8px, 8px);
+    @include box-sizing();
+
+    .tit-h2 {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid $pc1;
+        text-align: center;
+
+        @include fontSize(28px);
+    }
+}
+
+// 인메일 레이어
+.layer-inmailbox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 320px;
+    width: 640px;
+    padding: 50px;
+    background: #fff;
+
+    @include translate(-50%, -60%);
+    @include rounded(8px, 8px, 8px, 8px);
+    @include box-sizing();
+
+    .layer-inmailbox-box {
+        .layer-inmailbox-box-head {
+            > ul {
+                >  li {
+                    padding: 10px 5px;
+                    border-top: 1px solid #dcdcdc;
+
+                    @include clear;
+                    @include fontSize(15px);
+
+                    .t {
+                        float: left;
+                        width: 80px;
+
+                        &.to {
+                            line-height: 34px;
+                        }
+                        
+                    }
+
+                    .name,
+                    .subject,
+                    .date {
+                        overflow: hidden;
+                        display: block;
+                    }
+
+                    .name {
+                        a {
+                            display: inline-block;
+                        }
+
+                        .photo{
+                            overflow: hidden;
+                            display:inline-block;
+                            margin-right: 6px;
+                            border-radius: 100px;
+                            vertical-align: middle;
+
+                            @include size(34px);
+
+                            img {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: 1px solid #dcdcdc;
+                    }
+                }
+
+                &.write {
+                    li {
+                        .t {
+                            line-height: 32px;
+                        }
+
+                        .jims {
+                            float: left;
+                            width: calc(100% - 80px);
+                        }
+
+                        .istyle {
+                            width: calc(100% - 80px);
+                            height: 32px;
+                            padding: 4px 10px;
+                            border: 1px solid #cecece;                 
+
+                            @include box-sizing();
+                            @include fontSize(15px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .layer-inmailbox-box-body {
+            margin-top: 10px;
+
+            .tastyle {
+                display: block;
+                width: 100%;
+                padding: 15px;
+                border-color: #dcdcdc;
+
+                @include box-sizing();
+                @include fontSize(15px);
+            }
+        }
+
+       .layer-inmailbox-box-foot {
+            margin-top: 25px;
+            border: 1px dashed #dcdcdc;
+            padding: 15px;
+            background: #f4f4f4;
+
+            @include fontSize(13px);
+
+           .layer-inmailbox-box-foot-ogn {
+               margin-top: 8px;
+                padding-top: 8px;
+                border-top: 1px solid #dcdcdc;
+                line-height: 1.4;
+           }
+        }
+
+        .layer-inmailbox-box-conts {
+            margin-top: 20px;
+            line-height: 1.4;
+
+            @include fontSize(16px);
+            @include wordwrap();
+        }
+    }
+
+    .layer-inmailbox-bot {
+        margin-top: 40px;
+        font-size: 0;
+        text-align: center;
+
+        .btn {
+            margin-left: 5px;
+            padding: 8px 15px;
+            border: 1px solid #cecece;
+            background: #f4f4f4;
+
+            @include fontSize(15px);
+
+            &.btn-inmail-reply {
+                border: 0;
+                color: #fff;
+                background: #3b5998;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// 히스토리 레이어
+.layer-history {
+    position: relative;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #fff;
+
+    // @include translate(-50%, 0);
+    @include rounded(8px, 8px, 8px, 8px);
+    @include box-sizing();
+
+    .tit-h2 {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid $pc1;
+        text-align: center;
+
+        @include fontSize(28px);
+    }
+}
+
+// 히스토리 입력 레이어
+.layer-historywrite {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 320px;
+    max-width: 640px;
+    width: 640px;
+    padding: 50px;
+    background: #fff;
+
+    @include translate(-50%, -60%);
+    @include rounded(8px, 8px, 8px, 8px);
+    @include box-sizing();
+
+    .tit-h2 {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid $pc1;
+        text-align: center;
+
+        @include fontSize(28px);
+    }
+
+    .layer-historywrite-box {
+        .historywrite-box-board {
+            width: 100%;
+
+            th {
+                padding: 5px 10px;
+                white-space: nowrap;
+                text-align: right;
+
+                @include fontSize(14px);
+            }
+
+            td {
+                padding: 5px 10px;
+
+                .project-name {
+                    display: block;
+                    padding: 8px 0;
+
+                    @include fontSize(15px);
+                }
+
+                .slt {
+                    width: 100%;
+                }
+
+                .itastyle {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// 반응형 max 768
+@include respond-to(mobiles) {
+    #wrap {
+        //container
+        #container {
+            min-height: calc(100vh - (94px + 151px));
+            padding-bottom: 35px;
+        }
+
+        // footer
+        #footer {
+            // 모바일용 하단 버튼
+            .footer-btn {
+                display: block;
+                font-size: 0;
+                text-align: center;
+                line-height: 0;
+            }
+        }
+    }
+
+    // 페이지 알림
+    .wrap-noti {
+        // 추가정보 입력
+        .wrap-noti-myinfo {
+            .tit {
+                display: block;
+                margin-bottom: 10px;           
+            }
+        }
+    }
+
+    // 로그인
+    .section-login {
+        padding: 25px 0 35px;
+    }
+
+    // 템플릿 레이어
+    .layer-template {
+        width: auto;
+        left: 64px;
+        right: 64px;
+
+        @include translate(0, -60%);
+    }
+
+    // 인메일 레이어
+    .layer-inmailbox {
+        left: 10px;
+        right: 10px;
+        width: auto;
+
+        @include translate(0, -60%);
+    }
+
+    // 히스토리 입력 레이어
+    .layer-historywrite {
+        width: auto;
+        left: 64px;
+        right: 64px;
+
+        @include translate(0, -60%);
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    // common
+    .slt {
+        padding: 0 25px 0 10px;
+        -webkit-appearance: none;
+        background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==) no-repeat right center;
+    }
+
+    #container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    // 로그인
+    #login {
+        .login-box {
+            width: auto;
+            margin: 0 10px;
+            padding: 25px;
+            
+            &.layer-login {
+                left: 10px;
+                right: 10px;
+                margin: 0;
+
+                @include translate(0, -50%);
+            }
+        }
+    }
+
+    // 페이지 알림
+    .wrap-noti {
+        padding: 15px 0;
+
+        .wrap-noti-myinfo {
+            padding: 0 25px;
+
+            .tit {
+                margin-right: 0;
+            }
+
+            .istyle {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 5px;
+
+                &.i2 {
+                    margin-left: 5px;
+                }
+
+                &.i1,
+                &.i2 {
+                    width: calc((100% - 5px) / 2);
+                }
+            }
+
+            .slt {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .btn-submit {
+                width: 100%;
+            }
+        }
+
+        .btn-clse {
+            top: 0;
+            right: 0;
+        }
+    }
+
+    // 히스토리 레이어
+    .layer-template {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        margin-bottom: 10px;
+        padding: 50px 25px;
+
+        @include translate(0, 0);
+    }
+
+    // 인메일 레이어
+    .layer-inmailbox {
+        top: 10px;
+        bottom: 10px;
+        overflow-y: auto;
+        max-height: calc(100vh - 20px);
+        padding: 50px 25px;
+        -webkit-overflow-scrolling: touch;
+
+        @include translate(0, 0);
+    }
+
+    // 히스토리 레이어
+    .layer-history {
+        padding: 50px 25px;
+    }
+
+    // 히스토리 입력 레이어
+    .layer-historywrite {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        margin-bottom: 10px;
+        padding: 50px 25px;
+
+        @include translate(0, 0);
+
+        .historywrite-box-board {
+            .icalendar-group {
+                .icalendar {
+                    display: block;
+                    margin-top: 5px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

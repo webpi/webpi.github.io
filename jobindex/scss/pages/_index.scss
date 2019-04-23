@@ -1,0 +1,739 @@
+@charset "utf-8";
+
+#wrap {
+    .wrap-page {
+        position: relative;
+    }
+}
+
+#container {
+    padding-top: 25px;
+}
+
+[class^=section-] {
+    .tit-h2 {
+        height: 32px;
+
+        @include fontSize(18px);
+
+        span {
+            color: $pc1;
+        }
+    }
+}
+
+// 추천채용
+.section-jobs {
+    @include col(15);
+}
+
+// 실시간 랭킹
+.realtime-ranking {
+    position: absolute;
+    right: 0;
+    top: 0;
+    // width: 30%;
+    padding: 32px 0 0 10px;
+
+    @include col(7);
+    @include box-sizing();
+    @include transition(none);
+
+    .realtime-ranking-box {
+        height: 307px;
+        padding: 12px 20px;
+        border: 1px solid #cecece;
+        background: #fff;
+
+        @include box-sizing();
+
+        .tit-h2 {
+            height: 32px;
+
+            @include fontSize(18px);
+        }
+
+        .realtime-ranking-box-in {
+            margin-top: 10px;
+        }
+
+        ol {
+            li {
+                position: relative;
+                margin-top: 14px;
+                padding-left: 25px;
+
+                @include clear();
+
+                a {
+                    display: block;
+                }
+
+                .rank {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: #fff;
+                    background: $bc3;
+                    text-align: center;
+                    line-height: 1.28571rem;
+
+                    @include fontSize(11px);
+                    @include size(18px);
+                }
+
+                .photo {
+                    display: none;
+                    overflow: hidden;
+                    float: left;
+                    width: 100px;
+                    height: 75px;
+                    margin-right: 10px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .subject {
+                    display: block;
+                    line-height: 1.28571rem;
+
+                    @include fontSize(14px);
+                    @include wordwrap();
+                    @include truncate();
+                }
+
+                .info {
+                    overflow: hidden;
+
+                    .info-box {
+                        display: none;
+                        margin-top: 6px;
+                        font-size: 0;
+                        line-height: 0;
+
+                        span {
+                            display: inline-block;
+                            margin-right: 2px;
+                            padding: 1px 5px;
+                            border: 1px solid #cecece;
+                            vertical-align: top;
+                            line-height: normal;
+
+                            @include fontSize(12px);
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+
+                a:hover .subject {
+                    text-decoration: underline;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+
+                    .rank {
+                        background: $pc2;
+                    }
+                    
+                    .photo {
+                         display: block;
+                    }
+                    
+                    .subject {
+                        max-height: calc(1.28rem * 3);
+                        text-overflow: clip;
+                        white-space: pre-wrap;
+
+                        @include truncate2(null,3);
+                    }
+
+                    .info {
+                        height: 75px;
+
+                        .info-box {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 인기 태그 서클
+.section-tagcircle {
+    position: relative;
+    margin-top: 40px;
+
+    .btn-more {
+        position: absolute;
+        right: 0;
+        top: 3px;
+
+        @include fontSize(13px);
+
+        i {
+            @include fontSize(10px);
+
+        }
+
+        &:hover {
+            color: $pc1_hover;
+        }
+    }
+
+    .cpn-tagcircle-list {
+        .cpn-tagcircle {
+            width: 20%;
+        }
+    }
+}
+
+// 이슈 질문
+.section-issuequstion {
+    position: relative;
+    margin-top: 40px;
+
+    .btn-more {
+        position: absolute;
+        right: 0;
+        top: 3px;
+
+        @include fontSize(13px);
+
+        i {
+            @include fontSize(10px);
+
+        }
+
+        &:hover {
+            color: $pc1_hover;
+        }
+    }
+}
+
+// top tag
+// .section-tag {
+//     margin-top: 40px;
+// }
+
+// 이슈 인맥
+.section-networking {
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+
+    .networking-box {
+        margin: 0 -5px -10px;
+
+        @include flexbox();
+        @include flex-wrap(wrap);
+
+        .networking-box-item {
+            width: calc(100% / 3);
+            margin-bottom: 10px;
+            padding: 0 5px;
+
+            @include box-sizing();
+
+            .networking-box-item-wrap {
+                position: relative;
+                padding: 10px;
+                border: 1px solid #cecece;
+                background: #fff;
+
+                @include flexbox();
+                @include align-items(center);
+
+                &:hover {
+                    border-color: $pc1;
+                }
+            }
+
+            .networking-box-item-user {
+                position: relative;
+                padding: 10px;
+
+                @include box-sizing();
+                @include flex();
+
+                .headhunter {
+                    position: absolute;
+                    left: -5px;
+                    top: -11px;
+                    padding: 2px 0;
+                    font-family: tahoma;
+                    color: #fff;
+                    font-weight: 600;
+                    background: blueviolet;
+                    text-align: center;
+                    line-height: 20px;
+
+                    @include fontSize(12px);
+                    @include size(20px);
+                }
+
+                .networking-box-item-user-a {
+                    display: block;
+
+                    &:hover {
+                        .info-name {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .photo {
+                    overflow: hidden;
+                    display:block;
+                    margin: 0 auto;
+
+                    @include rounded(50%, 50%, 50%, 50%);
+                    @include size(68px);
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .info {
+                    overflow: hidden;
+                    margin-top: 10px;
+                    text-align: center;
+
+                    .info-name {
+                        display: block;
+
+                        @include fontSize(15px);
+                        @include truncate();
+                    }
+
+                    .info-detail {
+                        overflow: hidden;
+                        height: calc((13px * 1.4) * 2);
+                        margin-top: 5px;
+
+                        li {
+                            color: $fc2;
+                            line-height: 1.4;
+
+                            @include fontSize(13px);
+                            @include truncate();
+                        }
+                    }
+                }
+
+                // .btn {
+                //     display: none;
+                //     margin-top: -1px;
+                //     font-size: 0;
+                //     line-height: 0;
+
+                //     .btn-button {
+                //         width: 50%;
+                //         height: 34px;
+                //         border: 1px solid #cecece;
+                //         color: $fc2;
+                //         vertical-align: top;
+                //         line-height: 32px;
+                //         text-align: center;
+
+                //         @include fontSize(13px);
+                //         @include box-sizing();
+
+                //         i {
+                //             vertical-align: -1px;
+
+                //             @include fontSize(12px);
+                //         }
+
+                //         &:hover {
+                //             position: relative;
+                //             border-color: #444;
+                //             color: $fc1;
+                //         }
+                //     }
+
+                //     .btn-mail {
+                //         display: inline-block;
+                //         width: calc(50% + 1px);
+                //         margin-right: -1px;
+                //     }
+
+                //     .btn-networking {
+                //         background: none;
+                //     }
+                // }
+
+                .tag {
+                    margin-top: 10px;
+                    padding-top: 8px;
+                    border-top: 1px dotted #dcdcdc;
+                    color: #888;
+                    text-align: center;
+
+                    @include fontSize(13px);
+                    @include truncate();
+
+                    a {
+                        margin-left: 5px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .networking-box-item-info {
+                padding: 10px;
+
+                @include box-sizing();
+                // @include flex(none);
+
+                .rank {
+                    display: block;
+                    padding: 6px 15px;
+                    border: 1px solid $pc4;
+                    color: $pc4;
+
+                    @include fontSize(15px);
+                }
+
+                .count {
+                    margin-top: 10px;
+
+                    li {
+                        padding: 4px 0;
+
+                        @include fontSize(13px);
+
+                        strong {
+                            color: $pc1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-more {
+        position: absolute;
+        right: 0;
+        top: 3px;
+
+        @include fontSize(13px);
+
+        i {
+            @include fontSize(10px);
+
+        }
+
+        &:hover {
+            color: $pc1_hover;
+        }
+    }
+}
+
+// 인기 서클
+// .section-circle {
+//     margin-top: 40px;
+
+//     .cpn-circle {
+//         .cpn-circle-list {
+//             margin: 0 -5px;
+
+//             .cpn-circle-list-item {
+//                 width: calc(100% / 6);
+//                 padding: 0 5px;
+//             }
+//         }
+//     }
+// }
+    
+// 반응형 max 768
+@include respond-to(mobiles) {
+    #wrap {
+        .wrap-page {
+            position: static;
+        }
+    }
+
+    #container {
+        position: relative;
+    }
+
+    // 검색
+    .cpn-search {
+        margin-top: 38px;
+    }
+
+    // 추천 채용
+    .section-jobs {
+        width: auto;
+    }
+
+    // 실시간 순위
+    .realtime-ranking {
+        left: 0;
+        right: 0;
+        top: -310px;
+        width: 100%;
+        height: 38px;
+        padding: 0;
+
+        .realtime-ranking-box {
+            height: auto;
+            margin: 0;
+            padding: 0 10px;
+            border :0;
+
+            .tit-h2 {
+                height: 38px;
+                line-height: 38px;
+
+                @include fontSize(14px);
+
+                span {
+                    position: absolute;
+                    visibility: hidden;
+                }
+            }
+
+            .realtime-ranking-box-in {
+                overflow: hidden;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                max-width: 60%;
+                height: 18px;
+                padding: 5px 0;
+                margin: 0;
+            }
+
+            ol {
+                li {
+                    &:first-child {
+                        .photo {
+                            display: none;
+                        }
+
+                        .info {
+                            height: auto;
+
+                            .subject {
+                                max-height: calc(1.28rem);
+
+                                @include truncate();
+                            }
+
+                            .info-box {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // top tag
+    // .section-tag {
+    //     margin-top: 20px;
+    // }
+
+    // 인기 태그 서클
+    .section-tagcircle {
+        margin-top: 20px;
+
+        .cpn-tagcircle-list {
+            .cpn-tagcircle {
+                width: calc(100% / 3);
+            }
+        }
+    }
+
+    // 이슈 인맥
+    .section-networking {
+        margin-top: 20px;
+
+        .networking-box {
+            .networking-box-item {
+                width: 50%;
+
+                .networking-box-item-user {
+                    padding: 0 5px;
+                }
+
+                .networking-box-item-info {
+                    padding: 0 5px;
+                }
+            }
+        //     padding: 3px;
+        //     // border: 0;
+        //     // background: none;
+
+        //      .networking-box-item {
+        //         // float: none;
+        //         width: 50%;
+        //         height: auto;
+        //         padding: 3px;
+        //         margin-bottom: -1px;
+
+        //         @include box-sizing();
+
+        //         .networking-box-item-user {
+        //             border: 1px solid #cecece;
+        //             background: #fff;
+
+        //             .rank {
+        //                 top: -3px;
+        //                 left: -3px;
+        //             }
+
+        //             .networking-box-item-user-a {
+        //                 padding-top: 10px;
+        //             }
+
+        //             .photo {
+        //                 @include size(50px);
+        //             }
+
+        //             .info {
+        //                 .info-detail {
+        //                     li {
+        //                         line-height: 1.3;
+        //                     }
+        //                 }
+        //             }
+        //         }
+
+        //         &:first-child {
+        //             width: 100%;
+        //             margin-right: 0;
+        //             border-right: 0;
+
+        //             .networking-box-item-user {
+        //                 border: 0;
+        //                 text-align: left;
+
+        //                 @include col(15);
+
+        //                 .networking-box-item-user-a {
+        //                     padding: 15px 20px;
+
+        //                     @include clear;
+        //                 }
+
+        //                 .photo {
+        //                     float: left;
+        //                     margin-right: 15px;
+        //                 }
+
+        //                 .info {
+        //                     margin-top: 0;
+        //                 }
+        //             }
+
+        //             .networking-box-item-info {
+        //                 padding: 5px;
+
+        //                 @include col(6);
+
+        //                 .count {
+        //                     margin-top: 10px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        }
+    }
+
+    // 서클
+    // .section-circle {
+    //     margin-top: 20px;
+
+    //     .cpn-circle {
+    //         .cpn-circle-list {
+    //             overflow-x: auto;
+    //             overflow-y: hidden;
+    //             -webkit-overflow-scrolling: touch;
+                
+    //             ::-webkit-scrollbar { 
+    //                 display: none;
+    //                 width: 0px;
+    //                 background: transparent;
+    //             }
+
+    //             .cpn-circle-list-item {
+    //                 width: calc(100vw / 4.2);
+    //             }
+    //         }
+    //     }
+    // }
+    
+    // 이슈 질문
+    .section-issuequstion {
+        margin-top: 20px;
+    }
+}
+
+// 반응형 max 480
+@include respond-to(small_mobiles) {
+    // 인기 태그 서클
+    .section-tagcircle {
+        .cpn-tagcircle-list {
+            .cpn-tagcircle {
+                &:nth-child(n+5) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // 실시간 순위
+     .realtime-ranking {
+        top: -296px;
+     }
+
+    // 이슈 인맥
+    .section-networking {
+        .networking-box {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            margin: 0;
+
+            @include flex-wrap(nowrap);
+
+            .networking-box-item {
+                width: 90%;
+                margin: 0 10px 0 0;
+                padding: 0;
+                
+                @include flex(none);
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    // 서클
+    // .section-circle {
+    //     .cpn-circle {
+    //         .cpn-circle-list {
+    //             .cpn-circle-list-item {
+    //                 width: calc(100vw / 2.2);
+    //             }
+    //         }
+    //     }
+    // }
+}

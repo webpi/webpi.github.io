@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>JobIndex - 잡인덱스</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="잡인덱스">
+    <meta name="description" content="잡인덱스">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" include-html="/component/comm/header.html"></header>
+    <!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <div class="wrap-page">
+            <section class="section-profile company">
+                <h2 class="ir">프로필</h2>
+
+                <!-- left -->
+                <div class="profile-wrap">
+                    <!--상세 -->
+                    <article class="profile-top" include-html="/component/profile/profile_top_company.html"></article>
+                    <!--// 상세 -->
+
+                    <!-- top tag -->
+                    <article class="profile-tag" include-html="/component/profile/profile_tag.html"></article>
+                    <!-- // top tag -->
+
+                    <div class="profile-box">
+                        <!-- 활동 내역 -->
+                        <article class="profile-status" include-html="/component/profile/profile_status_company.html"></article>
+                        <!-- //활동 내역 -->
+
+                        <!-- 팔로우 써클 -->
+                        <article class="profile-followcircle" include-html="/component/profile/profile_followcircle.html"></article>
+                        <!-- // 팔로우 써클 -->
+                    </div>
+
+                    <!-- 포스팅 / 진행중인 채용 / 마감된 채용 -->
+                    <div class="profile-jobs">
+                        <div class="profile-jobs-head">
+                            <div class="cpn-tab-wrap">
+                                <ul>
+                                    <li><a href="#" class="active"><span>포스팅</span></a></li>
+                                    <li><a href="#"><span>진행중인 채용</span></a></li>
+                                    <li><a href="#"><span>마감된 채용</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="profile-jobs-body">
+                            <!-- 포스팅 -->
+                            <div class="cpn-content-list">
+                                <article class="cpn-content-list-item curation" include-html="/component/comm/cpn_content_list_item.html"></article>
+
+                                <article class="cpn-content-list-item curation" include-html="/component/comm/cpn_content_list_item.html"></article>
+                            </div>
+                            <!-- // 포스팅 -->
+
+                            <!-- 채용  -->
+                            <div class="cpn-content-list">
+                                <article class="cpn-content-list-item" include-html="/component/comm/cpn_content_list_item.html"></article>
+
+                                <article class="cpn-content-list-item" include-html="/component/comm/cpn_content_list_item.html"></article>
+                            </div>
+                            <!-- // 채용 -->
+                        </div>
+                    </div>
+                    <!-- // 포스팅 / 진행중인 채용 / 마감된 채용 -->               
+                </div>
+                <!-- // left -->
+
+                <!-- right -->
+                <aside class="profile-aside">
+                    <!-- 페이지 팔로워 -->
+                    <article class="profile-networking">
+                        <h3 class="tit-h3">페이지 <span>팔로워</span> <em>1,999,999 명</em></h3>
+
+                        <div class="profile-networking-list">
+                            <article class="cpn-cardstyle-user horizon btnnone" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+
+                            <article class="cpn-cardstyle-user horizon btnnone" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+
+                            <article class="cpn-cardstyle-user horizon btnnone" include-html="/component/comm/cpn_cardstyle_user.html"></article>
+                        </div>
+                    </article>
+                    <!-- // 페이지 팔로워 -->
+                </aside> 
+                <!-- // right -->               
+            </section>
+        </div>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+    <footer id="footer" include-html="/component/comm/footer.html"></footer>
+    <!-- // footer -->
+</div>
+
+<!-- js -->
+<script src="/assets/js/jobindex.js"></script>
+<!-- // js -->
+</body>
+</html>
