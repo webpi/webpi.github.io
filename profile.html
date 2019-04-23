@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Chongarrr.com</title>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,300">
+<link rel="stylesheet" type="text/css" href="/assets/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/chongarrr.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+<script src="/assets/js/jquery-1.11.3.min.js"></script>
+<script src="/assets/js/chongarrr.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+<script type="text/javascript">
+WebFont.load({
+    custom: {
+        families: ['Nanum Gothic'],
+        urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+    }
+});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+	<header>
+		<div class="fix-size section-header">
+			<h1 class="tit-h1"><a href="/">CHONGARRR</a></h1>
+			<!-- gnb -->
+			<nav class="gnb">
+				<span class="btn-mobile-gnb"><em class="ir">GNB 보기</em></span>
+				<ul>
+					<li><a href="list_games.html">GAME SALES</a></li>
+					<li><a href="list_sales.html">SALES</a></li>
+					<li><a href="view_infomation.html">INFOMATION</a></li>
+					<li><a href="list_forum.html">FORUM</a></li>
+					<li><a href="view_board.html">COMMUNITY</a></li>
+				</ul>
+			</nav>
+			<!-- // gnb -->
+
+			<!-- user-box -->
+			<div id="user-box" class="clear">
+				<img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+				<div class="info">
+					<span class="name" title="홍길동홍길동 홍길동홍길동 홍길동홍길동">홍길동홍길동...</span>
+					<span class="grade">Silver Spoon</span>
+				</div>
+
+				<div class="side-pannel">
+					<span class="btn-user-menu" title="메뉴보기"><em class="ir">내메뉴</em></span>
+
+					<div class="pannel">
+						<ul>
+							<li><a href="post.html" class="btn-post">Post</a></li>
+							<li><a href="profile.html" class="btn"><i class="fa fa-user fa-fw"></i> Profile</a></li>
+							<li><span class="btn btn-logout"><i class="fa fa-sign-out fa-fw"></i> Logout</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // user-box -->
+		</div>
+
+		<!-- search -->
+		<section id="search">
+			<form>
+				<fieldset>
+					<legend><span>검색하기</span></legend>
+					<div class="fix-size search-area">
+						<label for="id-search"><i class="fa fa-search fa-2x"></i><span class="ir">전체검색</span></label><input type="search" id="id-search" placeholder="Search">
+						<button type="submit" class="btn-search-submit">검색</button>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		<!-- // search -->
+	</header>
+	<!-- // header -->
+	
+	<!-- container -->
+	<div id="container" role="profile">
+		<!-- section-profile -->
+		<section id="section-profile">
+			<!-- profile-area -->
+			<article class="profile-area">
+				<div class="profile-body">
+					<h2 class="tit-h2">Profile</h2>
+					<form>
+						<fieldset>
+							<legend><span>내정보</span></legend>	
+							<div class="clear in">
+								<div class="box my-photo">
+									<div class="thumb">
+										<span class="picture"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="홍길동"></span>
+
+										<p class="update-photo">
+											<span class="btn-update-photo"><i class="fa fa-camera"></i> <em>사진변경</em></span>
+											<input type="file" title="사진변경" class="ifile">
+										</p>
+									</div>
+
+									<p class="name">모야메룽다 다메요</p>
+
+									<ul class="etc-info">
+										<li>&raquo; Level : <span>GOD (관리자)</span></li>
+										<li>&raquo; HEADSHOT : <span>999,999,999</span></li>
+										<li>&raquo; 출석률 : <span>369 / 738 = 50%</span></li>
+										<li>&raquo; 가입일 : <span>2015. 12. 25</span></li>
+										<li>&raquo; 최근 로그인 : <span>2015. 12. 25</span></li>
+										<li>&raquo; Facebook : <span>연결중</span> <a href="#" class="sns-cancel">[연결해지]</a></li>
+									</ul>
+								</div>
+
+								<div class="box my-info">
+									<ul>
+										<li>
+											<label for="id-email">Email</label>
+											<input type="email" id="id-email" class="istyle" value="abcdefgj@chongarrr.com" readonly="readonly">
+											<p class="email-auth">
+												<span><i class="fa fa-plug"></i> 인증완료</span>
+												<span class="btn-auth"><i class="fa fa-retweet"></i> 인증하기</span>
+											</p>
+										</li>
+										<li>
+											<label for="id-pass">Password</label>
+											<input type="password" id="id-pass" placeholder="비밀번호" class="istyle">
+										</li>
+										<li>
+											<label for="id-new-pass">New Password</label>
+											<input type="password" id="id-new-pass" placeholder="새로운 비밀번호" class="istyle">
+										</li>
+										<li>
+											<label for="id-re-new-pass">Re-type new Password</label>
+											<input type="password" id="id-re-new-pass" placeholder="새로운 비밀번호 확인" class="istyle">
+										</li>
+										<li>
+											<label for="id-name"> Name</label>
+											<input type="text" id="id-name" class="istyle" value="모야메룽다 다메요" placeholder="변경할 이름을 입력해 주세요">
+										</li>
+									</ul>
+
+									<span class="my-info-footer">
+										<button type="submit" class="btn-register-submint">EDIT</button>
+									</span>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</article>
+			<!-- // profile-area -->
+
+			<p class="chongarrr-out">CHONGARRR.COM을 더이상 사용하지 않는다면 <a href="#"><strong>회원탈퇴 바로가기</strong> <i class="fa fa-external-link"></i></a></p>
+		</section>
+		<!-- // section-profile -->
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<footer>
+		<div class="fix-size">
+			<div class="clear footer-head">
+				<p class="copyright">&copy; 2015 Chongarrr.com All rights reserved.</p>
+
+				<ul class="clear menu">
+					<li><a href="#">Chongarrr.com 소개</a></li>
+					<li><a href="privacy_policy_terms.html">이용약관</a></li>
+					<li><a href="privacy_policy_terms.html"><strong>개인정보취급방침</strong></a></li>			
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+
+			<div class="clear footer-nav">
+				<div class="box-colm">
+					<h4 class="tit-h4">GAME SALES</h4>
+					<ul>
+						<li><a href="#">Steam</a></li>
+						<li><a href="#">Origin</a></li>
+						<li><a href="#">Directg</a></li>
+						<li><a href="#">Amazon</a></li>
+						<li><a href="#">GreenmanGaming</a></li>
+						<li><a href="#">GOG</a></li>
+						<li><a href="#">G2A</a></li>
+						<li><a href="#">기타</a></li>
+					</ul>
+				</div>
+
+				<div class="box-colm">
+					<h4 class="tit-h4">SALES</h4>
+					<ul>
+						<li><a href="#">가전</a></li>
+						<li><a href="#">의류 / 잡화</a></li>
+						<li><a href="#">Digital</a></li>
+						<li><a href="#">컴퓨터</a></li>
+						<li><a href="#">음식</a></li>
+						<li><a href="#">기타</a></li>
+					</ul>
+				</div>
+
+				<div class="box-colm">
+					<h4 class="tit-h4">INFOMATION</h4>
+					<ul>
+						<li><a href="#">생활 Info</a></li>
+						<li><a href="#">기타 Info</a></li>
+						<li><a href="#">사용 Review</a></li>
+						<li><a href="#">구입 Review</a></li>
+						<li><a href="#">게임 Review</a></li>
+					</ul>
+				</div>
+
+				<div class="box-colm">
+					<h4 class="tit-h4">COMMUNITY</h4>
+					<ul>
+						<li><a href="#">자유게시판</a></li>
+						<li><a href="#">질문 / 답변</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- // footer -->
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Chongarrr.com</title>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,300">
+<link rel="stylesheet" type="text/css" href="/assets/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/chongarrr.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+<script src="/assets/js/jquery-1.11.3.min.js"></script>
+<script src="/assets/js/chongarrr.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+<script type="text/javascript">
+WebFont.load({
+    custom: {
+        families: ['Nanum Gothic'],
+        urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+    }
+});
+</script>
+</head>
+
+<body>
+<!-- 회원가입 레이어 -->
+<div id="join" class="">
+	<section class="animated bounceInDown join-body">
+		<div class="clear in">
+			<!-- social-join -->
+			<article class="social-join">
+				<h2 class="tit-h2"><span>Log in</span> Socially</h2>
+				<ul>
+					<li><a href="#" class="btn-width-facebook"><span class="ir">facebook</span></a></li>
+				</ul>
+			</article>
+			<!-- // social-join -->
+
+			<!-- email-join -->
+			<article class="email-join">
+				<h2 class="tit-h2"><span>Log in</span> Email</h2>
+				
+				<div class="ijoin">
+					<form>
+						<fieldset>
+							<legend><span>로그인</span></legend>	
+					
+							<span class="row placeholder">
+								<label for="id-email">Email</label>
+								<input type="email" id="id-email" placeholder="이메일" class="istyle" required>
+							</span>
+							
+							<span class="row placeholder">
+								<label for="id-pass">Password</label>
+								<input type="password" id="id-pass" placeholder="비밀번호" class="istyle" required>
+							</span>
+
+							<span class="login-keep">
+								<input type="checkbox" id="id-login-keep"><label for="id-login-keep">로그인 상태 유지</label>
+							</span>
+
+							<span class="email-join-footer">
+								<button type="submit" class="btn-sign-submint">LOGIN</button>
+							</span>
+						</fieldset>
+					</form>
+				</div>
+
+				<p class="forgot-info"><a href="#">로그인 정보를 잊으셨나요?</a></p>
+			</article>
+			<!-- // email-join -->
+		</div>
+
+		<div class="join-body-footer">
+			<span>계정이 없으신가요?</span> <a href="register.html">가입하기 <i class="fa fa-external-link"></i></a></a>
+		</div>
+
+		<span class="btn-layer-clse"><i class="fa fa fa-times fa-3x"></i></i><em class="ir">닫기</em></span>
+	</section>
+</div>
+<!-- // 회원가입 레이어 -->
+</body>
+</html>

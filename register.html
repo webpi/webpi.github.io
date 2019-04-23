@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Chongarrr.com</title>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,300">
+<link rel="stylesheet" type="text/css" href="/assets/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/chongarrr.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+<script src="/assets/js/jquery-1.11.3.min.js"></script>
+<script src="/assets/js/chongarrr.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+<script type="text/javascript">
+WebFont.load({
+    custom: {
+        families: ['Nanum Gothic'],
+        urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+    }
+});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+	<header>
+		<div class="fix-size section-header">
+			<h1 class="tit-h1"><a href="/">CHONGARRR</a></h1>
+			<!-- gnb -->
+			<nav class="gnb">
+				<span class="btn-mobile-gnb"><em class="ir">GNB 보기</em></span>
+				<ul>
+					<li><a href="list.html">GAME SALES</a></li>
+					<li><a href="list.html">SALES</a></li>
+					<li><a href="view_infomation.html">INFOMATION</a></li>
+					<li><a href="list_forum.html">FORUM</a></li>
+					<li><a href="view_board.html">COMMUNITY</a></li>
+				</ul>
+			</nav>
+			<!-- // gnb -->
+
+			<ul id="log" class="clear">
+				<li><a href="#join" class="btn-login"><i class="fa fa-sign-in"></i> 로그인</a></li>
+				<li><a href="register.html" class="btn-register">회원가입</a></li>
+			</ul>
+		</div>
+
+		<!-- search -->
+		<section id="search">
+			<form>
+				<fieldset>
+					<legend><span>검색하기</span></legend>
+					<div class="fix-size search-area">
+						<label for="id-search"><i class="fa fa-search fa-2x"></i><span class="ir">전체검색</span></label><input type="search" id="id-search" placeholder="Search">
+						<button type="submit" class="btn-search-submit">검색</button>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		<!-- // search -->
+	</header>
+	<!-- // header -->
+	
+	<!-- container -->
+	<div id="container" role="register">
+		<!-- section-register -->
+		<section id="section-register">
+			<!-- register-area -->
+			<article class="register-area">
+				<div class="join-body">
+					<div class="clear in">
+						<!-- social-join -->
+						<article class="social-join">
+							<h2 class="tit-h2"><span>Register in</span> Socially</h2>
+							<ul>
+								<li><a href="#" class="btn-width-facebook"><span class="ir">facebook</span></a></li>
+							</ul>
+						</article>
+						<!-- // social-join -->
+
+						<!-- email-join -->
+						<article class="email-join">
+							<h2 class="tit-h2"><span>Register in</span> Email</h2>
+
+							<div class="ijoin">
+								<form>
+									<fieldset>
+										<legend><span>회원가입</span></legend>	
+								
+										<span class="row placeholder">
+											<label for="id-email">Email</label>
+											<input type="email" id="id-email" placeholder="이메일" class="istyle" required>
+										</span>
+										
+										<span class="row placeholder">
+											<label for="id-pass">Password</label>
+											<input type="password" id="id-pass" placeholder="비밀번호" class="istyle" required>
+										</span>
+
+										<span class="row placeholder">
+											<label for="id-name"> Name</label>
+											<input type="text" id="id-name" placeholder="사용자 이름을 입력해 주세요." class="istyle" maxlength="7" required>
+										</span>
+
+										<span class="email-join-footer">
+											<button type="submit" class="btn-register-submint">REGISTER</button>
+										</span>
+
+										<p class="term">REGISTER 버튼을 클릭하면 <a href="privacy_policy_terms.html"><strong>약관</strong></a>에 동의하며 <a href="privacy_policy_terms.html"><strong>쿠키 사용</strong></a>을 포함한 데이터 정책을 읽고 이해하신 것으로 간주됩니다.</p>
+									</fieldset>
+								</form>
+							</div>
+						</article>
+						<!-- // email-join -->
+					</div>
+
+					<div class="join-body-footer">
+						<span>계정이 있으신가요?</span> <a href="join.html">로그인 <i class="fa fa-external-link"></i></a></a>
+					</div>
+				</div>
+			</article>
+			<!-- // register-area -->
+		</section>
+		<!-- // section-register -->
+	</div>
+	<!-- // container -->
+</div>
+</body>
+</html>

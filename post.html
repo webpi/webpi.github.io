@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Chongarrr.com</title>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,300">
+<link rel="stylesheet" type="text/css" href="/assets/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/chongarrr.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+<script src="/assets/js/jquery-1.11.3.min.js"></script>
+<script src="/assets/js/chongarrr.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+<script type="text/javascript">
+WebFont.load({
+    custom: {
+        families: ['Nanum Gothic'],
+        urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+    }
+});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+	<header>
+		<div class="fix-size section-header">
+			<h1 class="tit-h1"><a href="/">CHONGARRR</a></h1>
+			<!-- gnb -->
+			<nav class="gnb">
+				<span class="btn-mobile-gnb"><em class="ir">GNB 보기</em></span>
+				<ul>
+					<li><a href="list_games.html">GAME SALES</a></li>
+					<li><a href="list_sales.html">SALES</a></li>
+					<li><a href="view_infomation.html">INFOMATION</a></li>
+					<li><a href="list_forum.html">FORUM</a></li>
+					<li><a href="view_board.html">COMMUNITY</a></li>
+				</ul>
+			</nav>
+			<!-- // gnb -->
+
+			<!-- user-box -->
+			<div id="user-box" class="clear">
+				<img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+				<div class="info">
+					<span class="name">홍길동</span>
+					<span class="grade">Silver Spoon</span>
+				</div>
+
+				<div class="side-pannel">
+					<span class="btn-user-menu" title="메뉴보기"><em class="ir">내메뉴</em></span>
+
+					<div class="pannel">
+						<ul>
+							<li><a href="post.html" class="btn-post">Post</a></li>
+							<li><a href="profile.html" class="btn"><i class="fa fa-user fa-fw"></i> Profile</a></li>
+							<li><span class="btn btn-logout"><i class="fa fa-sign-out fa-fw"></i> Logout</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // user-box -->
+		</div>
+
+		<!-- search -->
+		<section id="search">
+			<form>
+				<fieldset>
+					<legend><span>검색하기</span></legend>
+					<div class="fix-size search-area">
+						<label for="id-search"><i class="fa fa-search fa-2x"></i><span class="ir">전체검색</span></label><input type="search" id="id-search" placeholder="Search">
+						<button type="submit" class="btn-search-submit">검색</button>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		<!-- // search -->
+	</header>
+	<!-- // header -->
+	
+	<!-- container -->
+	<div id="container" role="post">
+		<!-- section-post -->
+		<section id="section-post">
+			<!-- post-area -->
+			<article class="post-area fix-size">
+				<div class="list-head">
+					<h2 class="tit-h2"><span>POST</span></h2>
+
+					<div class="editor">
+						<form>
+							<fieldset>
+								<legend><span>글쓰기</span></legend>
+								<!-- 상단 post는 전체, 카테고리 post는 해당 카테고리만 나열 -->			
+								<!-- url은 sales 항목만 필수, 할인율은 game만 보임 -->
+								<ul class="ipost-item">
+									<li class="out">
+										<select class="sstyle tit" title="카테고리 선택">
+											<option value="">카테고리 선택</option>
+											<optgroup label="HOT SPOT">
+												<option value="">┗ PC</option>
+												<option value="">┗ PS4</option>
+												<option value="">┗ XBOX</option>
+												<option value="">┗ wii</option>
+											</optgroup>
+											<optgroup label="GAME SALES">
+												<option value="Steam">┗ Steam</option>
+												<option>┗ Origin</option>
+												<option>┗ Directg</option>
+												<option>┗ Amazon</option>
+												<option>┗ GreenmanGaming</option>
+												<option>┗ GOG</option>
+												<option>┗ G2A</option>
+												<option>┗ 기타</option>
+											</optgroup>
+											<optgroup label="SALES">
+												<option>┗ 가전</option>
+												<option>┗ 의류 / 잡화</option>
+												<option>┗ Digital</option>
+												<option>┗ 컴퓨터</option>
+												<option>┗ 음식</option>
+												<option>┗ 기타</option>
+											</optgroup>
+											<optgroup label="INFOMATION">
+												<option>┗ 생활 Info</option>
+												<option>┗ 기타 Info</option>
+												<option>┗ 사용 Review</option>
+												<option>┗ 구입 Review</option>
+												<option>┗ 게임 Review</option>
+											</optgroup>
+											<optgroup label="FORUM">
+												<option>┗ 게임</option>
+												<option>┗ 컴퓨터</option>
+												<option>┗ 가전</option>
+												<option>┗ 부동산</option>
+												<option>┗ 직장뒷담화</option>
+												<option>┗ 스포츠</option>
+												<option>┗ 취미</option>
+												<option>┗ 연애</option>
+												<option>┗ 연예인</option>
+												<option>┗ 영화</option>
+												<option>┗ 음악</option>
+											</optgroup>
+											<optgroup label="COMMUNITY">
+												<option>┗ 자유게시판</option>
+												<option>┗ 질문 / 답변</option>
+											</optgroup>
+										</select>
+
+										<label for="id-post-subject" class="ir"><span>제목 입력</span></label>
+										<input type="text" id="id-post-subject" placeholder="제목을 입력해 주세요." class="istyle" required style="width:100%">
+									</li>
+									<li class="out">
+										<label for="id-post-url" class="tit">URL</label>
+										<input type="url" id="id-post-url" class="istyle" placeholder="Url을 입력해 주세요." required style="width:100%">
+									</li>
+									<li>
+										<label for="id-post-sales" class="tit">할인율</label>
+										<input type="number" id="id-post-sales" class="istyle" placeholder="ex : 99" required style="width:100%">
+									</li>
+									<li>
+										<label for="id-post-price" class="tit">판매가</label>
+										<input type="number" id="id-post-price" class="istyle" placeholder="ex : 39,800" required style="width:100%">
+									</li>
+									<li>
+										<label for="id-post-charge" class="tit">배송료</label>
+										<span class="radio-group">
+											<input type="number" class="istyle" placeholder="ex : 2500" title="직접입력" style="width:90px">
+										</span>
+										
+										<span class="radio-group">
+											<input type="checkbox" id="id-post-charge2" title="배송료 선택">
+											<label for="id-post-charge2">무료</label>
+										</span>
+									</li>
+									<li>
+										<label for="id-post-tag" class="tit">TAG</label>
+										<input type="text" id="id-post-tag" class="istyle" placeholder="&quot;,&quot; 로 구분해주세요" required style="width:100%">
+									</li>
+								</ul>
+
+								<p class="editor-noti">입력한 글을 <strong>드래그</strong> 하면 <strong>편집</strong>을 할 수 있습니다.</p>
+								
+								<div class="editor-body">
+									<div class="editable"></div>
+									
+									<!-- mobile용 -->
+									<div class="editable-mobile">
+										<textarea cols="30" rows="5"></textarea>
+									</div>
+									<!-- // mobile용 -->
+								</div>
+
+								<!-- mobile용 이미지 첨부 -->
+								<div class="editable-mobile-img">
+									<ul>
+										<li>
+											<input type="file" title="파일선택">
+											<span class="btn-w btn-img-del"><i class="fa fa-trash-o"></i><em class="ir">삭제</em></span>
+										</li>
+										<li>
+											<input type="file" title="파일선택">
+											<span class="btn-w btn-img-del"><i class="fa fa-trash-o"></i><em class="ir">삭제</em></span>
+										</li>
+									</ul>
+									<span class="btn-file-add">+ 파일 추가</span>
+								</div>
+								<!-- // mobile용 이미지 첨부 -->
+
+								<div class="editor-footer">
+									<button type="submit" class="btn-post-submit">Post</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</article>
+			<!-- // post-area -->
+		</section>
+		<!-- // section-post -->
+	</div>
+	<!-- // container -->
+	
+	<!-- footer -->
+	<footer>
+		<div class="fix-size">
+			<div class="clear footer-head">
+				<p class="copyright">&copy; 2015 Chongarrr.com All rights reserved.</p>
+
+				<ul class="clear menu">
+					<li><a href="#">Chongarrr.com 소개</a></li>
+					<li><a href="privacy_policy_terms.html">이용약관</a></li>
+					<li><a href="privacy_policy_terms.html"><strong>개인정보취급방침</strong></a></li>			
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+
+			<div class="clear footer-nav">
+				<div class="box-colm">
+					<h4 class="tit-h4">GAME SALES</h4>
+					<ul>
+						<li><a href="#">Steam</a></li>
+						<li><a href="#">Origin</a></li>
+						<li><a href="#">Directg</a></li>
+						<li><a href="#">Amazon</a></li>
+						<li><a href="#">GreenmanGaming</a></li>
+						<li><a href="#">GOG</a></li>
+						<li><a href="#">G2A</a></li>
+						<li><a href="#">기타</a></li>
+					</ul>
+				</div>
+
+				<div class="box-colm">
+					<h4 class="tit-h4">SALES</h4>
+					<ul>
+						<li><a href="#">가전</a></li>
+						<li><a href="#">의류 / 잡화</a></li>
+						<li><a href="#">Digital</a></li>
+						<li><a href="#">컴퓨터</a></li>
+						<li><a href="#">음식</a></li>
+						<li><a href="#">기타</a></li>
+					</ul>
+				</div>
+
+				<div class="box-colm">
+					<h4 class="tit-h4">INFOMATION</h4>
+					<ul>
+						<li><a href="#">생활 Info</a></li>
+						<li><a href="#">기타 Info</a></li>
+						<li><a href="#">사용 Review</a></li>
+						<li><a href="#">구입 Review</a></li>
+						<li><a href="#">게임 Review</a></li>
+					</ul>
+				</div>
+
+				<div class="box-colm">
+					<h4 class="tit-h4">COMMUNITY</h4>
+					<ul>
+						<li><a href="#">자유게시판</a></li>
+						<li><a href="#">질문 / 답변</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- // footer -->
+</div>
+
+<!-- editor -->
+<script src="/assets/js/medium-editor-master/medium-editor.js"></script>
+<script src="/assets/js/medium-editor-master/jquery.ui.widget.js"></script>
+<script src="/assets/js/medium-editor-master/handlebars-v4.0.4.js"></script>
+<script src="/assets/js/medium-editor-master/medium-editor-insert-plugin.min.js"></script>
+<script src="/assets/js/medium-editor-master/jquery-sortable-min.js"></script>
+<script src="/assets/js/medium-editor-master/jquery.fileupload.js"></script>
+<script src="/assets/js/editor.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/js/medium-editor-master/css/medium-editor.css">
+<link rel="stylesheet" type="text/css" href="/assets/js/medium-editor-master/css/themes/default.css">
+<link rel="stylesheet" type="text/css" href="/assets/js/medium-editor-master/css/medium-editor-insert-plugin.min.css">
+</body>
+</html>
