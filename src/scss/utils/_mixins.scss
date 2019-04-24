@@ -1,0 +1,687 @@
+@charset "utf-8";
+
+// Responsive
+@mixin respond-to($media) {
+	$desktop: '(min-width:1201px)';
+	// $small_desktop: '(max-width:1200px)';
+	$mobiles: '(max-width:480px)';
+	// retina
+	$retina: '(-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)';
+
+	@if $media == desktop {
+		@media only screen and #{$desktop} {
+			@content;
+		}
+	}
+	// @else if $media == small_desktop {
+	// 	@media only screen and #{$small_desktop} {
+	// 		@content;
+	// 	}
+	// }
+	@else if $media == mobiles {
+		@media only screen and #{$mobiles} {
+			@content;
+		}
+	}
+	@else if $media == retina {
+		@media only screen and #{$retina} {
+			@content;
+		}
+	}
+}
+
+// 비율
+@mixin responsive-ratio($x, $y, $pseudo:false) {
+	$padding: unquote(($y / $x) * 100 + '%');
+
+	@if $pseudo {
+		&:before {
+			@include pseudo($pos: relative);
+			width: 100%;
+			padding-top: $padding;
+		}
+
+	}
+
+	@else {
+		padding-top: $padding;
+	}
+
+}
+
+// grid 
+// @mixin grid-cols($col, $gap:null) {
+// 	width: percentage(1 / $col);
+// 	padding-left: $gap;
+// 	padding-right: $gap;
+// 	box-sizing: border-box;
+// }
+
+// grid
+@mixin col($col, $sum:22) {
+  	width: percentage($col/$sum);
+}
+
+// float clear
+@mixin clear {
+	*zoom: 1;
+
+	&:after {
+		display: block;
+		clear: both;
+		height: 0;
+		font-size: 0;
+		line-height: 0;
+		content: '';
+	}
+}
+
+// 사각형
+@mixin size($width, $height:$width) {
+	width: $width;
+	height: $height;
+}
+
+// border radius
+@mixin rounded($tr, $br, $bl, $tl) {
+	-webkit-border-top-right-radius: $tr;
+	-moz-border-top-right-radius: $tr;
+	border-top-right-radius: $tr;
+	
+	-webkit-border-bottom-right-radius: $br;
+	-moz-border-bottom-right-radius: $br;
+	border-bottom-right-radius: $br;
+
+	-webkit-border-bottom-left-radius: $bl;
+	-moz-border-bottom-left-radius: $bl;
+	border-bottom-left-radius: $bl;
+
+	-webkit-border-top-left-radius: $tl;
+	-moz-border-top-left-radius: $tl;
+	border-top-left-radius: $tl;
+}
+
+// 줄바꿈
+@mixin wordwrap($wordwrap:break-word,$wordbreak:keep-all) {
+	word-wrap: $wordwrap;
+	word-break: $wordbreak;
+	-ms-word-break: break-all;
+	overflow-wrap: break-word;
+} 
+
+// 말줄임
+@mixin truncate($truncation-boundary:null) {
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// 말줄임 여러줄
+@mixin truncate2($truncation-boundary:null, $line-clamp:2) {
+	display: -webkit-box;
+	display: -ms-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line-clamp;
+	overflow: hidden;
+	max-width: $truncation-boundary;
+	word-wrap: break-word;
+	word-break: keep-all;
+	text-overflow: ellipsis;
+}
+
+// 내용없음
+@mixin not-found($padding:30px 0, $align:center) {
+	padding: $padding;
+	text-align: $align;
+}
+
+// generic transform
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//transform origin
+@mixin transform-origin ($origin) {
+	moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+@mixin transition($transition...) {
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transition-property($property...) {
+	-moz-transition-property: $property;
+	-o-transition-property: $property;
+	-webkit-transition-property: $property;
+	transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+	-moz-transition-property: $duration;
+	-o-transition-property: $duration;
+	-webkit-transition-property: $duration;
+	transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+	-moz-transition-timing-function: $timing;
+	-o-transition-timing-function: $timing;
+	-webkit-transition-timing-function: $timing;
+	transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+	-moz-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	-webkit-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin calc($property, $expression) {
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+@mixin box-shadow($param) {
+	-webkit-box-shadow: $param;
+	-moz-box-shadow: $param;
+	box-shadow: $param;
+}
+
+@mixin box-sizing($type:border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	-o-box-sizing: $type;
+	-ms-box-sizing: $type;
+	box-sizing: $type;
+}
+
+@mixin opacity($value:0) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$value+")";
+	filter: alpha(opacity=$value);
+	-moz-opacity: $value*0.01;
+	-khtml-opacity: $value*0.01;
+	opacity: $value*0.01;
+}
+
+@mixin linearGradient($from, $to) {
+	background: $to;
+	background: -moz-linear-gradient(top, $from 0%, $to 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $from), color-stop(100%, $to));
+	background: -webkit-linear-gradient(top, $from 0%, $to 100%);
+	background: -o-linear-gradient(top, $from 0%, $to 100%);
+	background: -ms-linear-gradient(top, $from 0%, $to 100%);
+	background: linear-gradient(to bottom, $from 0%, $to 100%);
+}
+
+@mixin triangle($direction, $width, $height, $color) {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	height: 0;
+	border-style: solid;
+
+	@if $direction == up {
+		border-width: 0 $width*0.5 $height $width*0.5;
+		border-color: transparent transparent $color;
+	}
+
+	@else if $direction == down {
+		border-width: $height $width*0.5 0 $width*0.5;
+		border-color: $color transparent transparent;
+	}
+
+	@else if $direction == left {
+		border-width: $width $height*0.5 $height*0.5 0;
+		border-color: transparent $color transparent;
+	}
+
+	@else if $direction == right {
+		border-width: $width 0 $height*0.5 $height*0.5;
+		border-color: transparent $color transparent;
+	}
+
+}
+
+@function black($opacity) {
+	@return rgba(0, 0, 0, $opacity);
+}
+
+@function white($opacity) {
+	@return rgba(255, 255, 255, $opacity);
+}
+
+// Flexbox Containers
+
+// The 'flex' value causes an element to generate a block-level flex
+// container box.
+
+// The 'inline-flex' value causes an element to generate a inline-level
+// flex container box.
+
+// display:flex | inline-flex
+
+// http://w3.org/tr/css3-flexbox/#flex-containers
+
+// (Placeholder selectors for each type, for those who rather @extend)
+
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+%flexbox {
+	@include flexbox;
+}
+
+@mixin inline-flex {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+%inline-flex {
+	@include inline-flex;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Direction
+
+// The 'flex-direction' property specifies how flex items are placed in
+// the flex container, by setting the direction of the flex container's
+// main axis. This determines the direction that flex items are laid out in.
+
+// Values:row | row-reverse | column | column-reverse
+// Default:row
+
+// http://w3.org/tr/css3-flexbox/#flex-direction-property
+
+@mixin flex-direction($value:row) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	}
+
+	@else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	}
+
+	@else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	}
+
+	@else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+// Shorter version
+@mixin flex-dir($args...) {
+	@include flex-direction($args...);
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Wrap
+
+// The 'flex-wrap' property controls whether the flex container is single-line
+// or multi-line, and the direction of the cross-axis, which determines
+// the direction new lines are stacked in.
+
+// Values:nowrap | wrap | wrap-reverse
+// Default:nowrap
+
+// http://w3.org/tr/css3-flexbox/#flex-wrap-property
+
+@mixin flex-wrap($value:nowrap) {
+	// No Webkit Box fallback.
+	-webkit-flex-wrap: $value;
+	-moz-flex-wrap: $value;
+
+	@if $value == nowrap {
+		-ms-flex-wrap: none;
+	}
+
+	@else {
+		-ms-flex-wrap: $value;
+	}
+
+	flex-wrap: $value;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Flow (shorthand)
+
+// The 'flex-flow' property is a shorthand for setting the 'flex-direction'
+// and 'flex-wrap' properties, which together define the flex container's
+// main and cross axes.
+
+// Values:<flex-direction> | <flex-wrap>
+// Default:row nowrap
+
+// http://w3.org/tr/css3-flexbox/#flex-flow-property
+
+@mixin flex-flow($values:(row nowrap)) {
+	// No Webkit Box fallback.
+	-webkit-flex-flow: $values;
+	-moz-flex-flow: $values;
+	-ms-flex-flow: $values;
+	flex-flow: $values;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Order
+
+// The 'order' property controls the order in which flex items appear within
+// their flex container, by assigning them to ordinal groups.
+
+// Default:0
+
+// http://w3.org/tr/css3-flexbox/#order-property
+
+@mixin order($int:0) {
+	-webkit-box-ordinal-group: $int + 1;
+	-webkit-order: $int;
+	-moz-order: $int;
+	-ms-flex-order: $int;
+	order: $int;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Grow
+
+// The 'flex-grow' property sets the flex grow factor. Negative numbers
+// are invalid.
+
+// Default:0
+
+// http://w3.org/tr/css3-flexbox/#flex-grow-property
+
+@mixin flex-grow($int:0) {
+	-webkit-box-flex: $int;
+	-webkit-flex-grow: $int;
+	-moz-flex-grow: $int;
+	-ms-flex-positive: $int;
+	flex-grow: $int;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Shrink
+
+// The 'flex-shrink' property sets the flex shrink factor. Negative numbers
+// are invalid.
+
+// Default:1
+
+// http://w3.org/tr/css3-flexbox/#flex-shrink-property
+
+@mixin flex-shrink($int:1) {
+	-webkit-flex-shrink: $int;
+	-moz-flex-shrink: $int;
+	-ms-flex-negative: $int;
+	flex-shrink: $int;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Basis
+
+// The 'flex-basis' property sets the flex basis. Negative lengths are invalid.
+
+// Values:Like "width"
+// Default:auto
+
+// http://www.w3.org/TR/css3-flexbox/#flex-basis-property
+
+@mixin flex-basis($value:auto) {
+	-webkit-flex-basis: $value;
+	-moz-flex-basis: $value;
+	-ms-flex-preferred-size: $value;
+	flex-basis: $value;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox "Flex" (shorthand)
+
+// The 'flex' property specifies the components of a flexible length:the
+// flex grow factor and flex shrink factor, and the flex basis. When an
+// element is a flex item, 'flex' is consulted instead of the main size
+// property to determine the main size of the element. If an element is
+// not a flex item, 'flex' has no effect.
+
+// Values:none | <flex-grow> <flex-shrink> || <flex-basis>
+// Default:See individual properties (1 1 0).
+
+// http://w3.org/tr/css3-flexbox/#flex-property
+
+@mixin flex($fg:1, $fs:null, $fb:null) {
+	// Set a variable to be used by box-flex properties
+	$fg-boxflex: $fg;
+
+	// Box-Flex only supports a flex-grow value so let's grab the
+	// first item in the list and just return that.
+	@if type-of($fg) == 'list' {
+		$fg-boxflex: nth($fg, 1);
+	}
+
+	-webkit-box-flex: $fg-boxflex;
+	-webkit-flex: $fg $fs $fb;
+	-moz-box-flex: $fg-boxflex;
+	-moz-flex: $fg $fs $fb;
+	-ms-flex: $fg $fs $fb;
+	flex: $fg $fs $fb;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Justify Content
+
+// The 'justify-content' property aligns flex items along the main axis
+// of the current line of the flex container. This is done after any flexible
+// lengths and any auto margins have been resolved. Typically it helps distribute
+// extra free space leftover when either all the flex items on a line are
+// inflexible, or are flexible but have reached their maximum size. It also
+// exerts some control over the alignment of items when they overflow the line.
+
+// Note:'space-*' values not supported in older syntaxes.
+
+// Values:flex-start | flex-end | center | space-between | space-around
+// Default:flex-start
+
+// http://w3.org/tr/css3-flexbox/#justify-content-property
+
+@mixin justify-content($value:flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	}
+
+	@else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	}
+
+	@else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	}
+
+	@else if $value == space-around {
+		-ms-flex-pack: distribute;
+	}
+
+	@else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+// Shorter version
+@mixin flex-just($args...) {
+	@include justify-content($args...);
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Align Items
+
+// Flex items can be aligned in the cross axis of the current line of the
+// flex container, similar to 'justify-content' but in the perpendicular
+// direction. 'align-items' sets the default alignment for all of the flex
+// container's items, including anonymous flex items. 'align-self' allows
+// this default alignment to be overridden for individual flex items. (For
+// anonymous flex items, 'align-self' always matches the value of 'align-items'
+// on their associated flex container.)
+
+// Values:flex-start | flex-end | center | baseline | stretch
+// Default:stretch
+
+// http://w3.org/tr/css3-flexbox/#align-items-property
+
+@mixin align-items($value:stretch) {
+	@if $value == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	}
+
+	@else if $value == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	}
+
+	@else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
+}
+
+// ----------------------------------
+// Flexbox Align Self
+
+// Values:auto | flex-start | flex-end | center | baseline | stretch
+// Default:auto
+
+@mixin align-self($value:auto) {
+	// No Webkit Box Fallback.
+	-webkit-align-self: $value;
+	-moz-align-self: $value;
+
+	@if $value == flex-start {
+		-ms-flex-item-align: start;
+	}
+
+	@else if $value == flex-end {
+		-ms-flex-item-align: end;
+	}
+
+	@else {
+		-ms-flex-item-align: $value;
+	}
+
+	align-self: $value;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Align Content
+
+// The 'align-content' property aligns a flex container's lines within the
+// flex container when there is extra space in the cross-axis, similar to
+// how 'justify-content' aligns individual items within the main-axis. Note,
+// this property has no effect when the flexbox has only a single line.
+
+// Values:flex-start | flex-end | center | space-between | space-around | stretch
+// Default:stretch
+
+// http://w3.org/tr/css3-flexbox/#align-content-property
+
+@mixin align-content($value:stretch) {
+	// No Webkit Box Fallback.
+	-webkit-align-content: $value;
+	-moz-align-content: $value;
+
+	@if $value == flex-start {
+		-ms-flex-line-pack: start;
+	}
+
+	@else if $value == flex-end {
+		-ms-flex-line-pack: end;
+	}
+
+	@else {
+		-ms-flex-line-pack: $value;
+	}
+
+	align-content: $value;
+}
+
+// modal
+@mixin modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+
+	&:before {
+		content: "";
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.7);
+		z-index: 101;
+	}
+}

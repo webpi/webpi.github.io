@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+html {
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: #444;
+    background: #f5f5f5;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+blockquote,
+button,
+code,
+div,
+dl,
+dt,
+dd,
+figure,
+fieldset,
+form,
+p,
+pre,
+input,
+select,
+textarea,
+table,
+th,
+td,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+li {
+	vertical-align: top;
+}
+
+fieldset,
+img {
+	border: 0 none;
+}
+
+address,
+em {
+	font-style: normal;
+}
+
+label {
+	cursor: pointer;
+}
+
+select {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	text-transform: none;
+}
+
+option {
+	padding-right: 6px;
+}
+
+caption span,
+legend span {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+}
+
+table,
+td,
+tr {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a,
+a:active,
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+strong {
+	font-weight: 600;
+}
+
+hr {
+	height: 0;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+button,
+input,
+textarea {
+	overflow: visible;
+	line-height: normal;
+	outline: 0 none !important;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button[disabled],
+[type='button'][disabled],
+[type='reset'][disabled],
+[type='submit'][disabled] {
+  cursor: default;
+}
+
+// Remove the inner border and padding in Firefox.
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+textarea {
+	overflow: auto;
+	-webkit-border-radius:0; 
+    border-radius: 0;
+	resize: vertical;
+	-webkit-appearance: none;
+}
+
+input[type=button] {
+	overflow: visible;
+	border-radius: 0;
+	box-sizing: content-box;
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+[type=text],
+[type=password],
+[type=tel],
+[type=number],
+[type=search],
+[type=email],
+[type=url] {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+// Correct the odd appearance in Chrome and Safari.
+// Correct the outline style in Safari.
+[type='search'] {
+  	// -webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+// Remove the inner padding in Chrome and Safari on macOS.
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  	height: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+	width: 13px;
+	height: 13px;
+  	padding: 0;
+	box-sizing: border-box;
+}
+
+[readonly],
+[readonly='readonly'] {
+	background: #ebebe4;
+}
+
+// Fix placeholder font properties inheritance.
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+::-ms-input-placeholder,
+::placeholder {
+  font: inherit;
+}
+
+// Add the correct display in IE 10.
+[hidden] {
+  display: none;
+}
+
+// retina
+@include respond-to(retina) {
+	body {
+		font-family: 'AppleGothicNeoSD', 'Apple SD 산돌고딕 Neo', 'Nanum Gothic', "나눔 고딕", 'Droid sans', sans-serif;
+	}
+}
+
+// 반응형 max 480
+@include respond-to(mobiles) {
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 3px;
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.1);
+    }
+}
