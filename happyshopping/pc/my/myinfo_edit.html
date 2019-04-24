@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>회원정보 수정 | 행복쇼핑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="행복쇼핑, 행복, 쇼핑, 컴퓨터, PC, 조립PC, 조립컴퓨터, 노트북, 태블릿, 상품 추천, 가격비교, 가격비교사이트, 가격비교 싸이트, 가격 검색, 최저가, 추천, 인터넷쇼핑, 온라인쇼핑, 쇼핑, 쇼핑몰, 싸게 파는 곳, 싸게 살 수 있는 곳" />
+    <meta name="description" content="행복쇼핑은 컴퓨터, 조립PC에 특화된 온라인 견적 가격비교 사이트 입니다. 안전구매시스템(전자보증,에스크로)을 갖춘 쇼핑몰, 미니샵의 최저 가격 정보를 보여드립니다. 쇼핑의 행복! 행복쇼핑" />
+    <link rel="shortcut icon" type="image/x-icon" href="//img.happyshopping.kr/img_static/img/_v3/pping.ico" />
+
+    <link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/comm.css" />
+    <link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/forms.css" />
+    <link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/buttons.css" />
+    <link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/board.css" />
+    <link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/header.css" />
+    <link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/footer.css" />
+    <link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/my.css" />
+
+    <!-- <link rel="stylesheet" href="../../assets/css/comm.css" />
+    <link rel="stylesheet" href="../../assets/css/buttons.css" />
+    <link rel="stylesheet" href="../../assets/css/forms.css" />
+    <link rel="stylesheet" href="../../assets/css/board.css" />
+    <link rel="stylesheet" href="../../assets/css/header.css" />
+    <link rel="stylesheet" href="../../assets/css/footer.css" />
+    <link rel="stylesheet" href="../../assets/css/my.css" /> -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+	<header id="header-m">
+		<div class="header-m_body">
+			<h1 class="tit-h1">
+				<a href="https://www.pping.kr/"><img src="https://img.happyshopping.kr/img_static/img_pres/_v3/logo_happyshopping.png" alt="행복쇼핑" /></a>
+			</h1>
+
+			<a href="https://www.pping.kr/" class="icon-home2 btn-home"><span class="ir">홈바로가기</span></a>
+
+			<div class="header-m_body_aside">
+				<a href="#" class="icon-paper btn-estimate"><span class="ir">상품견적</span><span>99</span></a>
+				<a href="#" class="icon-cart btn-cart"><span class="ir">장바구니</span><span>99</span></a>
+			</div>
+		</div>
+	</header>
+	<!-- // header -->
+
+    <!-- container -->
+    <div id="container">
+        <section class="my-body">
+        	<div class="my-body_edit">
+        		<div class="my-body_edit_step2">
+        			<h2 class="tit-h2">회원정보 수정</h2>
+
+        			<form>
+        				<fieldset>
+        					<legend><span>회원정보 상세 수정</span></legend>
+			            	<div class="my-body_edit_step2_info">
+			            		<h3 class="tit-h3">기본 정보</h3>
+
+			            		<div class="box-board">
+			            			<table class="board thead-lft-my">
+			            				<caption><span>기본 정보 리스트</span></caption>
+			            				<colgroup>
+			            					<col style="width:81px" />
+			            					<col />
+			            				</colgroup>
+			            				<tbody>
+			            				<tr>
+			            					<th scope="row"><span>아이디</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<span class="ls0">fklsjdlfkjsdklfj</span>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt"><label for="id-pw">새 비밀번호</label></th>
+			            					<td>
+			            						<div class="box-td-input">
+			            							<input type="password" id="id-pw" placeholder="새 비밀번호를 입력해 주세요" class="istyle" style="width:100%" />
+
+			            							<span class="icon_pwc s1"><i class="icon-member_pass"></i></span>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt"><label for="id-pw">재입력</label></th>
+			            					<td>
+			            						<div class="box-td-input">
+			            							<input type="password" title="비밀번호 확인" placeholder="새 비밀번호를 한번 더 입력해 주세요" class="istyle pw_re" style="width:100%" />
+
+			            							<span class="icon_pwc s1"><i class="icon-member_pass"></i></span>
+
+			            							<span class="alert-msg fail">비밀번호가 맞지 않습니다.</span>
+
+			            							<span class="alert-msg fail">6~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span>
+
+			            							<span class="alert-msg fail">비밀번호를 한 번 더 입력해 주세요.</span>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row"><span>이름</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							홍길동
+
+			            							<button type="button" class="btn_change">변경</button>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt"><label for="id-name">이름</label></th>
+			            					<td>
+			            						<div class="box-td-input">
+			            							<div class="change_name">
+			            								<input id="id-name" type="text" placeholder="이름을 입력해 주세요" class="istyle" style="width:80%" />
+
+			            								<span class="alert-msg fail">이름을 입력해 주세요.</span>
+
+			            								<span class="alert-msg fail"> 이미 사용중인 이름 입니다.</span>
+
+			            								<button type="button" class="btn_change">취소</button>
+			            							</div>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row"><span>별명</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							홍길동
+
+			            							<button type="button" class="btn_change">변경</button>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt"><label for="id-nick">별명</label></th>
+			            					<td>
+			            						<div class="box-td-input">
+			            							<div class="change_nickname">
+				            							<input type="text" id="id-nick" placeholder="별명을 입력해 주세요" class="istyle" style="width:80%" />
+
+				            							<span class="alert-msg fail">별명을 입력해 주세요.</span>
+
+				            							<span class="alert-msg fail">6~10자의 한글, 영문 대소문자, 숫자를 사용해주세요.</span>
+
+				            							<span class="alert-msg fail">이미 사용중인 별명 입니다.</span>
+
+				            							<button type="button" class="btn_change">취소</button>
+				            						</div>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row"><span>휴대전화</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<span class="ls0">010-62929-2204</span>
+
+			            							<button type="button" class="btn_change">변경</button>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt"><label for="id-phone">휴대전화</label></th>
+			            					<td>
+			            						<div class="box-td-input">
+			            							<div class="change_phone">
+			            								<div class="change_phone_input">
+				            								<select id="id-phone" class="sstyle" style="width:77px">
+				            									<option value="">010</option>
+				            								</select>
+				            								<em class="dash">-</em>
+				            								<input type="text" title="휴대전화 뒷자리" class="istyle" style="width:32%" />
+				            								<button type="button" class="btn_auth">인증</button>
+
+				            								<span class="alert-msg fail">휴대전화 번호를 입력해 주세요.</span>
+
+				            								<span class="alert-msg fail">휴대전화 번호를 확인해 주세요.</span>
+
+				            								<span class="alert-msg fail">이미 사용중인 휴대전화 번호 입니다.</span>
+				            							</div>
+
+			            								<div class="change_phone_authnumber">
+				            								<input type="text" title="인증번호" placeholder="인증번호 입력" class="istyle" />
+				            								<button type="button" class="btn_apply">확인</button>
+
+				            								<div class="change_authnumber_noti">
+				            									<p>
+				            										<span>휴대전화 번호로 인증번호가 발송되었습니다.</span><br />
+																	인증번호는 발송 후 1시간 내에만 유효합니다.
+																</p>
+
+																<strong>인증 유효시간 : <em>2분54초</em></strong>
+				            								</div>
+
+				            								<span class="alert-msg fail">인증번호가 올바르지 않습니다.</span>
+				            							</div>
+
+			            								<button type="button" class="btn_change">취소</button>
+			            							</div>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row"><span>이메일</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<span class="ls0">dskjfksdjf@sdfsdf.com</span>
+
+			            							<button type="button" class="btn_change">변경</button>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt"><label for="id-email">이메일</label></th>
+			            					<td>
+			            						<div class="box-td-input">
+			            							<div class="change_email">
+			            								<input type="text" id="id-email" placeholder="이메일" class="istyle" style="width: 166px" />
+			            								@
+			            								<div class="change_email_input">
+			            									<input type="text" title="이메일 주소" placeholder="이메일 주소" class="istyle" />
+
+			            									<select title="이메일 선택" class="sstyle" style="width: 116px">
+			            										<option value="">직접입력</option>
+			            									</select>
+
+			            									<button type="button" class="btn_apply">확인</button>
+			            								</div>
+
+			            								<span class="alert-msg fail">이메일을 확인해 주세요.</span>
+
+			            								<span class="alert-msg fail">이메일을 입력해 주세요.</span>
+
+			            								<span class="alert-msg fail">이미 사용중인 이메일 입니다.</span>
+
+			            								<div class="change_email_auth">
+			            									<input type="text" title="인증번호" placeholder="인증번호 입력" class="istyle" />
+				            								<button type="button" class="btn_apply">확인</button>
+
+				            								<div class="change_authnumber_noti">
+				            									<p>
+				            										<span>이메일 주소로 인증번호가 발송되었습니다.</span><br />
+																	인증번호는 발송 후 1시간 내에만 유효합니다.
+																</p>
+
+																<strong>인증 유효시간 : <em>2분54초</em></strong>
+				            								</div>
+
+				            								<span class="alert-msg fail">인증번호가 올바르지 않습니다.</span>
+			            								</div>
+
+			            								<button type="button" class="btn_change">취소</button>
+			            							</div>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt-pt15"><span>수신설정</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<strong class="acceptance_t">할인쿠폰, 특가상품, 이벤트 소식 받기 수신동의</strong>
+
+			            							<ul class="igroup">
+			            								<li>
+			            									<span class="icheck">
+																<input type="checkbox" id="id-a1" name="a1" />
+																<label for="id-a1"><em>수신안함</em></label>
+															</span>
+			            								</li>
+			            								<li>
+			            									<span class="icheck">
+																<input type="checkbox" id="id-a2" name="a2" />
+																<label for="id-a2"><em>이메일</em></label>
+															</span>
+			            								</li>
+			            								<li>
+			            									<span class="icheck">
+																<input type="checkbox" id="id-a3" name="a3" />
+																<label for="id-a3"><em>SMS</em></label>
+															</span>
+			            								</li>
+			            							</ul>
+
+			            							<p class="acceptance_dsc">
+			            								<span>행복쇼핑에서 제공하는 다양한 소식을 받을 수 있습니다.</span><br />
+			            								수신에 동의하지 않아도 회원정보, 구매정보 및 서비스 주요<br />
+			            								정책 관련 내용은 발송됩니다.
+			            							</p>
+			            						</div>
+			            					</td>
+			            				</tr>
+
+			            				<tr>
+			            					<th scope="row"><span>개인정보<br />유효기간</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<ul class="igroup">
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-p1" name="p1" />
+																<label for="id-p1"><em>1년</em></label>
+															</span>
+			            								</li>
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-p2" name="p1" />
+																<label for="id-p2"><em>3년</em></label>
+															</span>
+			            								</li>
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-p3" name="p1" />
+																<label for="id-p3"><em>탈퇴 시 파기</em></label>
+															</span>
+			            								</li>
+			            							</ul>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row"><span>성별<br / >(선택)</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<ul class="igroup">
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-c1" name="c1" />
+																<label for="id-c1"><em>남자</em></label>
+															</span>
+			            								</li>
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-c2" name="c1" />
+																<label for="id-c2"><em>여자</em></label>
+															</span>
+			            								</li>
+			            							</ul>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row"><span>생일<br / >(선택)</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<ul class="igroup">
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-b1" name="b1" />
+																<label for="id-b1"><em>양력</em></label>
+															</span>
+			            								</li>
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-b2" name="b1" />
+																<label for="id-b2"><em>음력</em></label>
+															</span>
+			            								</li>
+			            								<li class="birthday">
+			            									<strong>1985. 08. 15</strong>
+			            									<button type="button" class="btn_change">변경</button>
+			            								</li>
+			            							</ul>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt-pt15"><span>생일<br / >(선택)</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<div class="change_birth">
+				            							<ul class="igroup">
+				            								<li>
+				            									<span class="iradio">
+																	<input type="radio" id="id-b1" name="b1" />
+																	<label for="id-b1"><em>양력</em></label>
+																</span>
+				            								</li>
+				            								<li>
+				            									<span class="iradio">
+																	<input type="radio" id="id-b2" name="b1" />
+																	<label for="id-b2"><em>음력</em></label>
+																</span>
+				            								</li>
+				            							</ul>
+
+				            							<div class="yyyymmdd">
+				            								<span>
+					            								<label for="id-year">년</label>
+					            								<select id="id-year" class="sstyle">
+					            									<option value="">1999</option>
+					            								</select>
+					            							</span>
+
+					            							<span>
+					            								<label for="id-month">월</label>
+					            								<select id="id-month" class="sstyle">
+					            									<option value="">1</option>
+					            								</select>
+					            							</span>
+
+					            							<span>
+					            								<label for="id-day">일</label>
+					            								<select id="id-day" class="sstyle">
+					            									<option value="">1</option>
+					            								</select>
+					            							</span>
+				            							</div>
+
+				            							<span class="alert-msg fail">생년월일을 입력해 주세요.</span>
+
+				            							<span class="alert-msg fail">생년월일을 확인해 주세요.</span>
+
+				            							<button type="button" class="btn_change">취소</button>
+				            						</div>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<th scope="row" class="vt-pt15"><span>결혼기념일<br />(선택)</span></th>
+			            					<td>
+			            						<div class="box-td">
+			            							<ul class="igroup">
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-m1" name="m1" />
+																<label for="id-m1"><em>미혼</em></label>
+															</span>
+			            								</li>
+			            								<li>
+			            									<span class="iradio">
+																<input type="radio" id="id-m2" name="m1" />
+																<label for="id-m2"><em>기혼</em></label>
+															</span>
+			            								</li>
+			            							</ul>
+
+			            							<div class="yyyymmdd">
+			            								<span>
+				            								<label for="id-year">년</label>
+				            								<select id="id-year" class="sstyle">
+				            									<option value="">1999</option>
+				            								</select>
+				            							</span>
+
+				            							<span>
+				            								<label for="id-month">월</label>
+				            								<select id="id-month" class="sstyle">
+				            									<option value="">1</option>
+				            								</select>
+				            							</span>
+
+				            							<span>
+				            								<label for="id-day">일</label>
+				            								<select id="id-day" class="sstyle">
+				            									<option value="">1</option>
+				            								</select>
+				            							</span>
+				            							</div>
+
+			            							<span class="alert-msg fail">결혼기념일을 입력해 주세요.</span>
+
+			            							<span class="alert-msg fail">결혼기념일을 확인해 주세요.</span>
+
+
+			            							<p class="acceptance_dsc">
+			            								<span>행복쇼핑에서 제공하는 다양한 소식을 받을 수 있습니다.</span><br />
+			            								수신에 동의하지 않아도 회원정보, 구매정보 및 서비스 주요<br />
+			            								정책 관련 내용은 발송됩니다.
+			            							</p>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				</tbody>
+			            			</table>
+			            		</div>
+			            	</div>
+
+			            	<div class="my-body_edit_step2_info">
+			            		<h3 class="tit-h3">환불 정보</h3>
+
+			            		<div class="box-board">
+			            			<table class="board thead-lft-my">
+			            				<caption><span>환불 계좌</span></caption>
+			            				<colgroup>
+			            					<col style="width:81px" />
+			            					<col />
+			            				</colgroup>
+			            				<tbody>
+			            				<tr>
+			            					<th scope="row" class="vt-pt15">
+			            						<span>
+			            							환불계좌
+			            							<br />
+			            							<button type="button" class="btn_refund">초기화</button>
+			            						</span>
+			            					</th>
+			            					<td>
+			            						<div class="box-td">
+			            							<ul class="refund_info">
+			            								<li>ㆍ예금주명 : <strong>진종석</strong></li>
+			            								<li>ㆍ은행 : <strong>신한은행</strong></li>
+			            								<li>ㆍ계좌번호 : <strong class="ls0">110-216-259010</strong></li>
+			            							</ul>
+
+			            							<div class="refund_reset">
+			            								<span>환불계좌를 초기화 하시겠습니까?</span>
+
+			            								<button type="button" class="btn_reset_apply">예</button>
+			            								<em class="bar">|</em>
+			            								<button type="button" class="btn_reset_cncl">아니오</button>
+			            							</div>
+			            						</div>
+			            					</td>
+			            				</tr>
+
+			            				<tr>
+			            					<th scope="row" class="vt-pt15 wordwrap">
+			            						<span>
+			            							환불계좌
+			            						</span>
+			            					</th>
+			            					<td>
+			            						<div class="box-td-input">
+			            							<!-- 초기화 -->
+			            							<div class="refund_info">
+			            								<div class="refund_info_owner">
+				            								<input type="text" title="예금주명" placeholder="예금주명" class="istyle" />
+
+				            								<select title="은행" class="sstyle">
+				            									<option value="">은행선택</option>
+				            								</select>
+				            							</div>
+
+				            							<div class="refund_info_number">
+				            								<input type="text" title="계좌번호" placeholder="계좌번호 입력" class="istyle ls0" />
+				            								
+				            								<button type="button" class="btn_account_auth">계좌인증</button>
+				            							</div>
+
+				            							<span class="icheck">
+															<input type="checkbox" id="id-rf" name="rf">
+															<label for="id-rf"><em>본계좌를 환불계좌로 설정하는데 동의합니다.</em></label>
+														</span>
+			            							</div>
+			            							<!-- // 초기화 -->
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<!-- 계좌 없을시 -->
+			            				<tr>
+			            					<th scope="row" class="vt-pt15 wordwrap">
+			            						<span>
+			            							환불계좌
+			            							<br />
+			            						</span>
+			            					</th>
+			            					<td>
+			            						<div class="box-td-input">
+			            							<!-- 초기화 -->
+			            							<div class="refund_info">
+			            								<div class="refund_info_owner">
+				            								<input type="text" title="예금주명" placeholder="예금주명" class="istyle" />
+
+				            								<select title="은행" class="sstyle">
+				            									<option value="">은행선택</option>
+				            								</select>
+				            							</div>
+
+				            							<div class="refund_info_number">
+				            								<input type="text" title="계좌번호" placeholder="계좌번호 입력" class="istyle ls0" />
+				            								
+				            								<button type="button" class="btn_account_auth">계좌인증</button>
+				            							</div>
+
+				            							<span class="icheck">
+															<input type="checkbox" id="id-rf" name="rf">
+															<label for="id-rf"><em>본계좌를 환불계좌로 설정하는데 동의합니다.</em></label>
+														</span>
+			            							</div>
+			            							<!-- // 초기화 -->
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				</tbody>
+			            			</table>
+			            		</div>
+			            	</div>
+
+			            	<div class="my-body_edit_step2_info">
+			            		<h3 class="tit-h3">SNS 계정 연동관리</h3>
+
+			            		<div class="box-board">
+			            			<table class="board thead-top-my">
+			            				<caption><span>SNS 계정 연동상태</span></caption>
+			            				<colgroup>
+			            					<col style="width:90px" />
+			            					<col />
+			            					<col style="width:70px" />
+			            				</colgroup>
+			            				<thead>
+			            				<tr>
+			            					<th scope="col">SNS 구분</th>
+			            					<th scope="col">연동정보</th>
+			            					<th scope="col">연결</th>
+			            				</tr>
+			            				</thead>
+			            				<tbody>
+			            				<tr>
+			            					<td><img src="//img.happyshopping.kr/img_static/img_mobile/comm/icon_connect_naver.png" alt="NAVER"></td>
+			            					<td>
+			            						<div class="box-td">
+			            							<ul>
+			            								<li>ㆍ연결 : <strong>2017/05/11 11:12:00 완료</strong></li>
+			            								<li>ㆍ이름 : <strong>진종석</strong></li>
+			            								<li>ㆍ이메일 : <strong class="ls0">jinjongsuk@naver.com</strong></li>
+			            							</ul>
+			            						</div>
+			            					</td>
+			            					<td>
+			            						<div class="box-td">
+			            							<button type="button" class="btn_disconnect">해제</button>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<td><img src="//img.happyshopping.kr/img_static/img_mobile/comm/icon_connect_fb.png" alt="facebook"></td>
+			            					<td>
+			            						<div class="box-td">
+			            							연결된 정보가 없습니다.
+			            						</div>
+			            					</td>
+			            					<td>
+			            						<div class="box-td">
+			            							<button type="button" class="btn_connect">연결</button>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<td><img src="//img.happyshopping.kr/img_static/img_mobile/comm/icon_connect_kakao.png" alt="kakao"></td>
+			            					<td>
+			            						<div class="box-td">
+			            							연결된 정보가 없습니다.
+			            						</div>
+			            					</td>
+			            					<td>
+			            						<div class="box-td">
+			            							<button type="button" class="btn_connect">연결</button>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				<tr>
+			            					<td><img src="//img.happyshopping.kr/img_static/img_mobile/comm/icon_connect_insta.png" alt="instagram"></td>
+			            					<td>
+			            						<div class="box-td">
+			            							연결된 정보가 없습니다.
+			            						</div>
+			            					</td>
+			            					<td>
+			            						<div class="box-td">
+			            							<button type="button" class="btn_connect">연결</button>
+			            						</div>
+			            					</td>
+			            				</tr>
+			            				</tbody>
+			            			</table>
+			            		</div>
+			            	</div>
+
+			            	<div class="secession"><a href="secession.html">회원탈퇴 신청</a></div>
+
+			            	<div class="button-group ctr">
+			            		<button type="button" class="btn_cncl">취소</button>
+			            		<button type="button" class="btn_submit">변경</button>
+			            	</div>
+			            </fieldset>
+			        </form>
+	            </div>
+            </div>
+        </section>
+    </div>
+    <!-- // container -->
+
+    <!-- footer -->
+	<footer id="footer-m">
+		<div class="footer-m_body">
+			<ul class="footer-m_body_menu">
+				<li><a href="//www.pping.co/" target="_blank">회사소개</a></li>
+				<li><a href="//www.pping.co/recruit/apply" target="_blank">인재채용</a></li>
+				<li><a href="//help.minishop.pping.kr/main/faq_write/?cat=14" target="_blank">입점제휴문의</a></li>
+				<li><a href="//pping.kr/policy" target="_blank">이용약관</a></li>
+			</ul>
+			<p class="copyright">Copyright&copy;HappyShopping Inc. All Right Reserved.</p>
+		</div>
+	</footer>
+	<!-- // footer -->
+</div>
+
+<!-- test react 적용시 제거 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(".btn_secession_cncl").click(function() {
+		$(".layer-pop_secession").show();
+	});
+	$(".layer-pop_secession .btn_layer-pop_clse").click(function() {
+		$(".layer-pop_secession").hide();
+	});
+});
+</script>
+</body>
+</html>

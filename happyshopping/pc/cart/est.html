@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>장바구니 / 견적비교 | 행복쇼핑</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="행복쇼핑, 행복, 쇼핑, 컴퓨터, PC, 조립PC, 조립컴퓨터, 노트북, 태블릿, 상품 추천, 가격비교, 가격비교사이트, 가격비교 싸이트, 가격 검색, 최저가, 추천, 인터넷쇼핑, 온라인쇼핑, 쇼핑, 쇼핑몰, 싸게 파는 곳, 싸게 살 수 있는 곳" />
+	<meta name="description" content="행복쇼핑은 컴퓨터, 조립PC에 특화된 온라인 견적 가격비교 사이트 입니다. 안전구매시스템(전자보증,에스크로)을 갖춘 쇼핑몰, 미니샵의 최저 가격 정보를 보여드립니다. 쇼핑의 행복! 행복쇼핑" />
+	<link rel="shortcut icon" type="image/x-icon" href="//img.happyshopping.kr/img_static/img/_v3/pping.ico" />
+
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/comm.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/buttons.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/forms.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/board.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/layers.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/minishop.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/header.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/footer.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/cart.css" />
+	
+	<!-- <link rel="stylesheet" href="../../assets/css/pc/comm.css" />
+    <link rel="stylesheet" href="../../assets/css/pc/forms.css" />
+	<link rel="stylesheet" href="../../assets/css/pc/layers.css" />
+	<link rel="stylesheet" href="../../assets/css/pc/minishop.css" />
+    <link rel="stylesheet" href="../../assets/css/buttons.css" />
+    <link rel="stylesheet" href="../../assets/css/board.css" />
+	<link rel="stylesheet" href="../../assets/css/header.css" />
+	<link rel="stylesheet" href="../../assets/css/footer.css" />
+	<link rel="stylesheet" href="../../assets/css/pc/cart.css" /> -->
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+    <header id="header-mini">
+        <div class="header-mini_body">
+            <h1 class="tit-h1"><a href="https://www.pping.kr/"><img src="https://img.happyshopping.kr/img_static/img_pres/_v3/logo_happyshopping.png" alt="행복쇼핑" /></a></h1>
+        </div>
+    </header>
+    <!-- // header -->
+
+	<!-- container -->
+	<div id="container">
+		<section class="cart-body">
+            <div class="column-wrap width-fixed">
+                <div class="column-main">
+                    <form>
+                        <fieldset>
+                            <legend><span>상품견적 상품</span></legend>
+                            <div class="cart-body_top">
+                                <h2 class="tit-h2">상품견적</h2>
+                                <button type="button" class="icon-trash-o btn-cart-empty"><span>전체삭제</span></button>
+
+                                <!-- 삭제 레이어 -->
+                                <div class="layer-pop" style="display: none">
+                                    <div class="layer-pop_comm_confirm">
+                                        <strong class="pop_comm_confirm_msg">상품견적 전체를 삭제하시겠습니까?</strong>
+
+                                        <div class="button-group ctr">
+                                            <button type="button" class="btn_border">취소</button>
+                                            <button type="button" class="btn_flat">삭제</button>
+                                        </div>
+
+                                        <button type="button" class="icon-close btn-layer-pop_clse"><span class="ir">닫기</span></button>
+                                    </div>
+                                </div>
+                                <!-- // 삭제 레이어 -->
+
+                                <ol>
+                                    <li><strong><span>01</span> 상품견적</strong></li>
+                                    <li><span>02</span> 주문/결제</li>
+                                    <li><span>03</span> 결제완료</li>
+                                </ol>
+                            </div>
+
+                            <div class="cart-body_menu">
+                                <a href="cart.html" class="btn-cart-body_cart">장바구니 (13)</a>
+                                <a href="est.html" class="btn-cart-body_compare active">상품견적 (3)</a>
+                            </div>
+
+                            <!-- 상품견적 -->
+                            <div class="cart-body_compare estimate_compare">
+                                <!-- 없음 -->
+                                <div class="cart-body_notfound">
+                                    상품견적에 담긴 상품이 없습니다.
+                                    <a href="#" class="btn_shopping">상품견적 바로가기</a>
+                                </div>
+                                <!-- // 없음 -->
+
+                                <!-- 로그인전 -->
+                                <div class="cart-body_notfound">
+                                    상품견적에 담긴 상품이 없습니다.
+                                    <p>로그인 후 상품견적에 담긴 상품을 확인할 수 있습니다.</p>
+                                    <a href="#" class="btn_shopping">로그인 하기</a>
+                                </div>
+                                <!-- // 로그인전 -->
+
+                                <div class="box-board">
+                                    <table class="board thead-top_noline">
+                                        <caption><span>견적 상품</span></caption>
+                                        <colgroup>
+                                            <col style="width:40px" />
+                                            <col style="width:120px" />
+                                            <col />
+                                            <col style="width:100px" />
+                                            <col style="width:77px" />
+                                            <col style="width:100px" />
+                                            <col style="width:50px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <span class="icheck">
+                                                        <input type="checkbox" id="id-allcheck3" name="name-allcheck3" />
+                                                        <label for="id-allcheck3"><span class="ir">전체선택</span></label>
+                                                    </span>
+                                                </th>
+                                                <th scope="col">분류</th>
+                                                <th scope="col">상품명</th>
+                                                <th scope="col">판매가격</th>
+                                                <th scope="col">수량</th>
+                                                <th colspan="2" scope="col">견적금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="icheck">
+                                                        <input type="checkbox" id="id-c1" name="name-c1" />
+                                                        <label for="id-c1"><span class="ir">선택</span></label>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="category">CPU</span>
+                                                </td>
+                                                <td>
+                                                    <div class="box-td">
+                                                        <div class="productname">
+                                                            <span class="mark-event"><a href="#">이벤트</a></span> <a href="#" class="name"><strong>GIGABYTE GA-B150M-DS3H 듀러블에디션 피씨디렉트</strong></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="item_price">254,000원</span>
+                                                </td>
+                                                <td>
+                                                    <div class="cnt-change_number">
+                                                        <input type="text" class="istyle" title="개수" value="9" />
+                                                        <button type="button" class="icon-angle-up up"><em class="ir">추가</em></button>
+                                                        <button type="button" class="icon-angle-down dn"><em class="ir">삭제</em></button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <strong class="compare_price"><span>254,000</span>원</strong>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn-compare-del"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/btn_compare_del.gif" alt="삭제" /></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="icheck">
+                                                        <input type="checkbox" id="id-c2" name="name-c2" />
+                                                        <label for="id-c2"><span class="ir">선택</span></label>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="category">메인보드</span>
+                                                </td>
+                                                <td>
+                                                    <div class="box-td">
+                                                        <div class="productname">
+                                                            <span class="mark-hotdeal"><a href="#">행복핫딜</a></span> <span class="mark-event"><a href="#">이벤트</a></span> <a href="#" class="name"><strong>GIGABYTE GA-B150M-DS3H 듀러블에디션 피씨디렉트</strong></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="item_price">254,000원</span>
+                                                </td>
+                                                <td>
+                                                    <div class="cnt-change_number">
+                                                        <input type="text" class="istyle" title="개수" value="9" />
+                                                        <button type="button" class="icon-angle-up up"><em class="ir">추가</em></button>
+                                                        <button type="button" class="icon-angle-down dn"><em class="ir">삭제</em></button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <strong class="compare_price"><span>254,000</span>원</strong>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn-compare-del"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/btn_compare_del.gif" alt="삭제" /></button>
+                                                </td>
+                                            </tr>
+                                            <!-- 부가 -->
+                                            <tr>
+                                                <td colspan="7">
+                                                    <div class="box-tr">
+                                                        <div class="box-tr_top">
+                                                            <strong>견적 상품의 <span>개수가 변경</span>되었습니다.</strong>
+
+                                                            <a href="#" class="btn-continue-shopping">견적 계속 담기 <i class="icon-angle-right"></i></a>
+                                                        </div>
+
+                                                        <div class="box-tr_bot">
+                                                            <ul>
+                                                                <li class="box-tr_bot_hotdeal">
+                                                                    <img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_hotdeal.jpg" alt="행복핫딜" /> <strong>294,000,000<span>원</span></strong>
+                                                                </li>
+                                                                <li class="box-tr_bot_mediumguide">
+                                                                    <img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_mediumguide.jpg" alt="미디엄가이드" />
+                                                                    <a href="#">
+                                                                        <span>라이젠 초기의 메인보드 부족은 B350 기반의 메인보드와 X370 기반 제품 다수가 시장에 출시되며 현재는 해소된 상태이다. 라이젠 초기의 메인보드 부족은 B350 기반의 메인보드와 X370 기반 제품 다수가 시장에 출시되며 현재는 해소된 상태이다.</span> <em>더보기 <i class="icon-triangle-right"></i></em>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="box-tr_bot_stdpc">
+                                                                    <img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_stdpc.jpg" alt="행쇼표준PC" />
+                                                                    <div class="box-tr_bot_stdpc_conts">
+                                                                        <strong class="t">선택된 상품이 포함된 행쇼 표준PC를 추천합니다.</strong>
+
+                                                                        <a href="#">홈ㆍ오피스 > <strong>행복쇼핑 인텔 카비레이크 최저가 PC</strong> <span>203,000원</span> <em>더보기 <i class="icon-triangle-right"></i></em></a>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <button type="button" class="btn_box-tr_clse"><i class="icon-close"></i><span class="ir">닫기</span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- // 부가 -->
+                                            <tr>
+                                                <td>
+                                                    <span class="icheck">
+                                                        <input type="checkbox" id="id-c3" name="name-c3" />
+                                                        <label for="id-c3"><span class="ir">선택</span></label>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="category">그래픽카드</span>
+                                                </td>
+                                                <td>
+                                                    <div class="box-td">
+                                                        <div class="productname">
+                                                            <a href="#" class="name"><strong>GIGABYTE GA-B150M-DS3H 듀러블에디션 피씨디렉트</strong></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="item_price">254,000원</span>
+                                                </td>
+                                                <td>
+                                                    <div class="cnt-change_number">
+                                                        <input type="text" class="istyle" title="개수" value="9" />
+                                                        <button type="button" class="icon-angle-up up"><em class="ir">추가</em></button>
+                                                        <button type="button" class="icon-angle-down dn"><em class="ir">삭제</em></button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <strong class="compare_price"><span>254,000</span>원</strong>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn-compare-del"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/btn_compare_del.gif" alt="삭제" /></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 추가 서비스 -->
+                                <div class="compare_add_service">
+                                    <div class="assembly_service">
+                                        <h3 class="tit-h3">전문가 조립 서비스</h3>
+                                        <ul>
+                                            <li>
+                                                전문가 조립(1대분) 서비스
+
+                                                <button type="button" class="btn-add btn-assembly active"><i class="icon-remove_circle"></i><span>15,000원</span></button>
+                                            </li>
+                                            <li>
+                                                조립+1년 전국 출장 A/S(1대분) 서비스
+                                                
+                                                <button type="button" class="btn-add btn-as"><i class="icon-add_circle"></i><span>15,000원</span></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="os_service">
+                                        <h3 class="tit-h3">정품 운영체제 설치 서비스</h3>
+                                        <ul>
+                                            <li>
+                                                정품 운영체제 구매
+                                                
+                                                <button type="button" class="btn-add btn-osbuy active"><i class="icon-remove_circle"></i><span>구매하기</span></button>
+                                            </li>
+                                            <li>
+                                                운영체제 설치 서비스
+                                                
+                                                <button type="button" class="btn-add btn-osset alert"><i class="icon-remove_circle"></i><span>20,000원</span></button>
+                                            </li>
+                                        </ul>
+
+                                        <span class="alert-msg fail">먼저 전문가 조립 서비스를 선택해셔야 합니다.</span>
+                                        <span class="alert-msg fail">먼저 정품 운영체제를 구매하셔야 합니다.</span>
+                                    </div>
+
+                                    <div class="tip">
+                                        <ol>
+                                            <li>행복쇼핑을 이용하시는 고객님들께 <span>전문가 조립<br />및 정품 운영체제 설치 서비스를 권장</span>합니다. </li>
+                                            <li>행복쇼핑은 가격비교 견적 사이트입니다. <span>구매관련<br />모든 문의는 입점 미니샵을 통해 진행</span>해 주세요.</li>
+                                        </ol>
+                                        <a href="#" target="_blank" class="btn-powerseller">파워셀러 보기 <i class="icon-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <!-- // 추가 서비스 -->
+
+                                <div class="cart-body_compare_sum">
+                                    <h3 class="tit-h3">총 견적금액</h3>
+
+                                    <div class="cart-body_compare_sum_price">
+                                        <span class="iradio">
+                                            <input type="radio" id="id-m1" name="name-m" checked="checked" />
+                                            <label for="id-m1">일반전문몰</label>
+                                        </span>
+                                        <span class="iradio">
+                                            <input type="radio" id="id-m2" name="name-m" />
+                                            <label for="id-m2">카드전문몰</label>
+                                        </span>
+
+                                        <strong class="price"><span>2,241,900</span>원</strong>
+                                    </div>
+                                </div>
+
+                                <div class="button-group ctr">
+                                    <a href="#" class="btn-continue-shopping">견적 계속 담기</a>
+                                    <input type="submit" value="견적비교 바로 구매하기" class="btn-buy-submit" />
+                                </div>
+
+                                <div class="cart-body_compare_other">
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <span>선택한 <em>견적의 호환성</em>이 궁금하다면</span>
+                                                <strong>PC견적 온라인</strong>
+                                                <button type="button">상담하기</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>좀 더 <em>저렴한 구매</em>를 원하시면</span>
+                                                <strong>PC견적</strong>
+                                                <button type="button">입찰하기</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>선택한 견적으로 <em>튜닝/오버클럭</em>을 원하시면</span>
+                                                <strong>튜닝/오버클럭</strong>
+                                                <a href="#">상담ㆍ구매하기</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // 상품견적 -->
+                        </fieldset>
+                    </form>
+                </div>
+
+                <aside class="column-aside">
+                    <div class="aside-medium">
+                        <h2 class="tit-h2"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/tit_medium_aside.png" alt="미디엄"></h2>
+
+                        <article class="aside-medium_box">
+                            <h3 class="tit-h3"><a href="#">미디엄 가이드<br><span>구매의 기준을 바꾸다!</span></a></h3>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">노트북</h4>
+                                <p><a href="#">노트북 상반기 시장의 키워드는 ‘온종일 컴퓨팅’ 그리고 ‘카비레이크’</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">표준PC</h4>
+                                <p><a href="#">간편하게 고민없이 PC를 구입하고 싶을 땐! 행복쇼핑 표준PC</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">CPU</h4>
+                                <p><a href="#">라이젠(RYZEN)이냐 카비레이크(Kaby Lake)냐, 이것이 문제로다!</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">메인보드</h4>
+                                <p><a href="#">신제품으로 박빙인 CPU의 열기, 메인보드에도 전해진다</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">메모리</h4>
+                                <p><a href="#">컴퓨터 시장 키워드 ‘LED’ ··· 메모리, LED로 화려함 더하다</a></p>
+                            </div>
+
+                            <div class="commercial_break">
+                                <span>무얼 살지 고민된다면</span><br>미디엄 가이드부터 읽자!
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">SSD</h4>
+                                <p><a href="#">뜨는 3D NAND, 그리고 NVMe SSD</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">HDD</h4>
+                                <p><a href="#">4K 영상, VR 시대를 대비하는 합리적 선택이 필요할 때</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">그래픽카드</h4>
+                                <p><a href="#">GTX1050부터 GTX1080까지, 선택지가 많으므로 더욱 신중하게...</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">케이스</h4>
+                                <p><a href="#">시스템 전체의 디자인과 편의성을 결정한다, PC 케이스</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">파워</h4>
+                                <p><a href="#">새로운 프로세서,  파워 서플라이 선택도 신중하게</a></p>
+                            </div>
+
+                            <div class="aside-medium_box_cate">
+                                <h4 class="tit-h4">모니터</h4>
+                                <p><a href="#">좋은 모니터’가 아닌 ‘내게 필요한 모니터’ 선택하세요</a></p>
+                            </div>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- 견적 공유 -->
+            <div class="cart-body_compare_share">
+                <div class="in">
+                    <h5 class="tit-h5">내 견적 공유</h5>
+                    <button type="button" class="btn-facebook"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/btn_facebook_38.jpg" alt="facebook" /></button>
+                    <button type="button" class="btn-kakaotalk"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/btn_kakaotalk_38.jpg" alt="kakaotalk" /></button>
+                    <button type="button" class="btn-email"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/btn_email_38.jpg" alt="email" /></button>
+                    <button type="button" class="btn-link"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/btn_link_38.jpg" alt="link" /></button>
+                    <button type="button" class="btn-print"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/btn_print_38.jpg" alt="print" /></button>
+                </div>
+
+                <!-- 링크 공유 레이어 -->
+                <div class="layer-pop" style="display: none">
+                    <div class="layer-pop_share_link">
+                        <h4 class="tit-h4">링크 URL 복사</h4>
+
+                        <div class="pop_share_link_body">
+                            <ul>
+                                <li>견적서를 인쇄하면 견적서가 자동 저장됩니다.</li>
+                                <li>저장된 견적은 마이페이지 > <a href="#">찜한견적</a>에서 확인 가능합니다.</li>
+                            </ul>
+
+                            <div class="pop_share_link_body_url">
+                                <input type="text" value="https://shopping.pping.kr/1010100000/" readonly="readonly" />
+                                <button type="button" class="btn_copy_url">복사하기</button>
+
+                                <span class="copymsg">URL이 복사되었습니다.</span>
+                            </div>
+
+                            <div class="button-group ctr">
+                                <button type="button" class="btn_apply">확인</button>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn-layer-pop_clse skylight-close-button"><img src="http://img.happyshopping.kr/img_static/img_pres/_v3/btn_layer_pop_clse.png" alt="닫기"></button>
+                    </div>                    
+                </div>
+                <!-- // 링크 공유 레이어 -->
+            </div>
+            <!-- // 견적 공유 -->
+		</section>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="footer-body">
+			<a href="#wrap" class="btn-top-scroll">TOP</a>
+
+			<ul class="footer-body_lnb">
+				<li><a href="http://www.pping.co/" target="_blank">회사소개</a></li>
+				<li><a href="http://www.pping.co/recruit/apply" target="_blank">인재채용</a></li>
+				<li><a href="http://help.minishop.pping.kr/main/faq_write/?cat=14" target="_blank">입점제휴문의</a></li>
+				<li><a href="http://pping.kr/policy" target="_blank">이용약관</a></li>
+				<li><a href="http://pping.kr/privacypolicy" target="_blank">개인정보취급방침</a></li>
+				<li><a href="http://pping.kr/youthpolicy" target="_blank">청소년 보호 정책</a></li>
+				<li><a href="http://pping.kr/notice" target="_blank">법적고지</a></li>
+			</ul>
+
+			<div class="footer-body_conts">
+				<a href="/" class="footer-body_conts_logo"><em class="ir">행복쇼핑</em></a>
+				<div class="footer-body_conts_info">
+					<ul>
+						<li>행복쇼핑 주식회사 <span class="bar">대표이사 : 강공승</span> <span class="bar">개인정보관리책임자 : 김기범(<a href="mailto:purity@pping.kr" class="email">purity@pping.kr</a>)</span></li>
+						<li>사업자 등록번호 : 105-87-89183 <span class="bar">통신판매업신고번호 : 제 2015-서울용산-00997 호</span> <a href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2015302015030200996&area1=&area2=&currpage=1&searchKey=01&searchVal=%C7%E0%BA%B9%BC%EE%C7%CE%20%C1%D6%BD%C4%C8%B8%BB%E7&stdate=&enddate="
+							  target="_blank" class="btn-corp-confirm">사업자정보확인</a></li>
+					</ul>
+					<address>주소 : 04373 서울시 용산구 청파로 46, 7층(한강로3가, 한통빌딩) <span class="bar">팩스 : 0505-300-4602</span></address>
+					<p class="copyright">Copyright ⓒ HappyShopping Inc. All Right Reserved.</p>
+
+					<div class="footer-body_conts_info_sns">
+						<ul>
+							<li><a href="http://blog.naver.com/happyshopping" title="행복쇼핑 블로그" target="_blank"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_blog.png" alt="행복쇼핑 블로그"></a></li>
+							<li><a href="http://post.naver.com/happyshopping" title="행복쇼핑 네이버" target="_blank"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_naver.png" alt="행복쇼핑 네이버"></a></li>
+							<li><a href="https://www.facebook.com/%ED%96%89%EB%B3%B5%EC%87%BC%ED%95%91-%EC%9D%B4%EB%B2%A4%ED%8A%B8-412433962424632/?fref=ts" title="행복쇼핑 페이스북" target="_blank"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_facebook.png" alt="행복쇼핑 페이스북"></a></li>
+							<li><a href="https://www.instagram.com/pping.kr/" title="행복쇼핑 인스타그램" target="_blank"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_instagram.png" alt="행복쇼핑 인스타그램"></a></li>
+							<li><a href="https://www.slideshare.net/happyshopping" title="행복쇼핑 슬라이드쉐어" target="_blank"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_slideshare.png" alt="행복쇼핑 슬라이드쉐어"></a></li>
+						</ul>
+
+						<div class="footer-body_conts_info_sns_happytree">
+							<h3 class="tit-h3">해피트리 사업부</h3>
+							<ul>
+								<li><a href="http://blog.naver.com/happyshopping" title="해피트리 블로그 새창열기" target="_blank"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_blog.png" alt="해피트리 블로그"></a></li>
+								<li><a href="https://www.facebook.com/%ED%95%B4%ED%94%BC%ED%8A%B8%EB%A6%AC-1640141842958558/" title="해피트리 페이스북 새창열기" target="_blank"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_facebook.png" alt="해피트리 페이스북"></a></li>
+								<li><a href="https://www.slideshare.net/happytreeio" title="해피트리 슬라이드쉐어 새창열기" target="_blank"><img src="//img.happyshopping.kr/img_static/img_pres/_v3/icon_slideshare.png" alt="해피트리 슬라이드쉐어"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer-body_conts_service">
+					<div class="question-helpservice">
+						<h3 class="tit-h3"><span>1:1 문의를 이용하시면</span><br>신속한 상담이 가능합니다!</h3>
+						<a href="//help.minishop.pping.kr/main/faq_write" target="_blank" class="btn-q">1:1 문의하기</a>
+						<div class="question-helpservice_callnumber">
+							<strong class="callnumber">1600-4602</strong>
+							<div class="ars">
+								<a href="http://help.minishop.pping.kr/main/faq_write" target="_blank" class="btn-ars">전화전 클릭</a>
+								<button type="button" class="btn-ars-guide">
+                                <em>ARS</em>안내<img src="http://img.happyshopping.kr/img_static/img_pres/_v3/ico_question.png" alt="안내 보기">
+                            </button>
+
+								<!-- ARS 문의안내 팝업 -->
+								<div class="layer-pop-ars blind">
+									<div class="pop-ars_body">
+										<div class="pop-ars_body_guide">
+											행복쇼핑 <strong>ARS(1600-4602)</strong> 안내
+											<p>유선 상담이 몰리는 경우 상담직원 연결이 늦을 수 있습니다.<br><strong>행복쇼핑 고객센터 게시판을 통해 문의하시면<br>좀 더 빠른 상담이 가능합니다.</strong></p>
+
+											<div class="button-group ctr">
+												<a href="http://help.minishop.pping.kr/">고객센터 게시판 바로가기 </a>
+											</div>
+										</div>
+										<div class="pop-ars_body_number">
+											<table class="board">
+												<caption><span>행복쇼핑 ARS 안내</span></caption>
+												<colgroup>
+													<col style="width:80px" />
+													<col />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">ARS번호</th>
+														<th scope="col">내용</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><span class="number">1</span></td>
+														<td>
+															<div class="box-td">상품 주문, 입금 확인 및 배송</div>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="number">2</span></td>
+														<td>
+															<div class="box-td">현금 영수증 및 세금계산서</div>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="number">3</span></td>
+														<td>
+															<div class="box-td">협력사/미니샵 입점·운영 및 광고 문의</div>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="number">4</span></td>
+														<td>
+															<div class="box-td">홍보·마케팅·제휴, 표준PC, 이벤트·기획전, 콘텐츠(기사) 및 미디엄 문의</div>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="number">5</span></td>
+														<td>
+															<div class="box-td">e브로셔·모바일 상품정보·상세페이지 등 디자인 전문 서비스, 해피트리</div>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="number">6</span></td>
+														<td>
+															<div class="box-td">상품 등록, 상품 정보/이미지 오류 신고 등 상품 등록 정보 문의</div>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="number">7</span></td>
+														<td>
+															<div class="box-td">기업부설연구소 및 기술 문의</div>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="number">0</span></td>
+														<td>
+															<div class="box-td">고객센터</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									<button type="button" class="btn-layer-pop_clse"><span class="ir">닫기</span></button>
+								</div>
+								<!-- // ARS 문의안내 팝업 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 보증 -->
+			<div class="footer-body_aside">
+				<dl class="sgi">
+					<dt>소비자피해보상보험 <span><em class="ir">SGI 서울보증</em></span></dt>
+					<dd>
+						고객님은 안전거래를 위해 현금 결제시 저희 쇼핑몰이<br>가입한 <strong>소비자피해보상보험</strong>서비스를 이용하실 수 있습니다.<br>보상대상 : <span>미배송/반품,환불 거부/쇼핑몰 부도</span><br>
+						<a href="http://minishop.pping.kr/partner" target="_blank" class="btn">서비스 가입사실 확인하기</a>
+					</dd>
+				</dl>
+
+				<dl class="escrow">
+					<dt>나이스페이 에스크로</dt>
+					<dd>고객님이 현금 결제한 금액에 대해 소비자피해보상보험 또는 에스크로를 통하여 안전거래를<br>보장하고 있습니다. 행복쇼핑은 통신판매중개자로서 통신판매의 당사자가 아니며,<br><strong>상품의 주문, 배송 및 환불의 의무와 책임은 각 판매업체에 있습니다.</strong></dd>
+				</dl>
+			</div>
+			<!-- // 보증 -->
+		</div>
+	</footer>
+	<!-- // footer -->
+</div>
+</body>
+
+</html>
