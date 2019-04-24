@@ -1,0 +1,1622 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 팝업모음</title>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+<style>
+.pop{position:relative;margin-top:10px}
+</style>
+</head>
+
+<body style="padding-bottom:100px">
+<!-- modal -->
+<div class="modal"></div>
+<!-- // modal -->
+
+<!-- 저작권자 신청하기 레이어 -->
+<div class="pop pop-copyrighter">
+	<div class="in">
+		<p class="t-pop"><strong>저작권자 신청하기</strong></p>
+
+		<p class="h-pop">정보입력</p>
+
+		<form>
+			<fieldset>
+				<legend><span>저작권자 정보 입력</span></legend>
+				<div class="user-info">
+					<span><label for="lb-name">이름</label><input type="text" id="lb-name" style="width:313px"></span>
+					<span>
+						<label for="lb-number">주민번호</label><input type="text" id="lb-number" style="width:136px"><em>-</em><input type="password" title="주민번호 뒷자리" style="width:136px">
+					</span>
+				</div>
+
+				<ul class="agr">
+					<li><label for="lb-agr">이용약관 동의</label><input type="checkbox" id="lb-agr" checked="checked"></li>
+					<li><label for="lb-agr2">개인정보 수집 및 이용에 대한 동의</label><input type="checkbox" id="lb-agr2" checked="checked"></li>
+				</ul>
+
+				<p class="form-button">
+					<span class="btn-cncl"><img src="/img/btn_cncl.png" alt="취소"></span>
+					<input type="button" value="완료" class="btn-ok">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!-- // 저작권자 신청하기 레이어 -->
+
+<!-- 글 퍼트리기 레이어 -->
+<div class="pop pop-share">
+	<div class="in">
+		<p class="t-pop"><strong>글 퍼트리기</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>친구검색 및 선택, 퍼트리기</span></legend>
+				<!-- main -->
+				<div class="clear main">
+					<!-- 친구검색 -->
+					<div class="frnd-search">
+						<p class="h-pop"><strong>친구검색</strong></p>
+
+						<div class="box">
+							<p class="s-pop">지역</p>
+							<ul class="clear area-group">
+								<li class="on"><input type="radio" id="lb-areaAll" name="area-lst" checked="checked"><label for="lb-areaAll">전국</label></li>
+								<li><input type="radio" id="lb-area1" name="area-lst"><label for="lb-area1">서울</label></li>
+								<li><input type="radio" id="lb-area2" name="area-lst"><label for="lb-area2">경기</label></li>
+								<li><input type="radio" id="lb-area3" name="area-lst"><label for="lb-area3">인천</label></li>
+								<li><input type="radio" id="lb-area4" name="area-lst"><label for="lb-area4">부산</label></li>
+								<li><input type="radio" id="lb-area5" name="area-lst"><label for="lb-area5">대구</label></li>
+								<li><input type="radio" id="lb-area6" name="area-lst"><label for="lb-area6">광주</label></li>
+								<li><input type="radio" id="lb-area7" name="area-lst"><label for="lb-area7">대전</label></li>
+								<li><input type="radio" id="lb-area8" name="area-lst"><label for="lb-area8">울산</label></li>
+								<li><input type="radio" id="lb-area9" name="area-lst"><label for="lb-area9">강원</label></li>
+								<li><input type="radio" id="lb-area10" name="area-lst"><label for="lb-area10">충북</label></li>
+								<li><input type="radio" id="lb-area11" name="area-lst"><label for="lb-area11">충남</label></li>
+								<li><input type="radio" id="lb-area12" name="area-lst"><label for="lb-area12">경북</label></li>
+								<li><input type="radio" id="lb-area13" name="area-lst"><label for="lb-area13">경남</label></li>
+								<li><input type="radio" id="lb-area14" name="area-lst"><label for="lb-area14">전북</label></li>
+								<li><input type="radio" id="lb-area15" name="area-lst"><label for="lb-area15">전남</label></li>
+								<li><input type="radio" id="lb-area16" name="area-lst"><label for="lb-area16">제주</label></li>
+							</ul>
+						</div>
+
+						<div class="box">
+							<p class="s-pop">관심대상</p>
+							<span class="gender">
+								<label for="lb-woman" class="woman on">여성</label><input type="radio" id="lb-woman" name="gen"><!--
+								--><label for="lb-man" class="man">남성</label><input type="radio" id="lb-man" name="gen"><!--
+								--><label for="lb-w-m" class="w-m">전체</label><input type="radio" id="lb-w-m" name="gen">
+							</span>
+						</div>
+
+						<div class="box">
+							<p class="s-pop">나이</p>
+							<span class="age">
+								<input type="text" id="lb-age" style="width:40px" title="최소 나이"><em>~</em><input type="text" title="최대 나이" style="width:40px">
+							</span>
+						</div>
+
+						<div class="box">
+							<p class="s-pop">관심사</p>
+							<ul class="clear concern-group">
+								<li class="on"><input type="checkbox" id="lb-concern"><label for="lb-concern">친목/모임</label></li>
+								<li><input type="checkbox" id="lb-concern2"><label for="lb-concern2">여행</label></li>
+								<li><input type="checkbox" id="lb-concern3"><label for="lb-concern3">취미</label></li>
+								<li><input type="checkbox" id="lb-concern4"><label for="lb-concern4">유머/수다</label></li>
+								<li><input type="checkbox" id="lb-concern5"><label for="lb-concern5">방송/연예</label></li>
+								<li><input type="checkbox" id="lb-concern6"><label for="lb-concern6">재테크</label></li>
+								<li><input type="checkbox" id="lb-concern7"><label for="lb-concern7">육아</label></li>
+								<li><input type="checkbox" id="lb-concern8"><label for="lb-concern8">쇼핑</label></li>
+								<li><input type="checkbox" id="lb-concern9"><label for="lb-concern9">스포츠/레저</label></li>
+							</ul>
+						</div>
+
+						<p class="form-button"><input type="button" value="검색" class="btn-search"></p>
+					</div>
+					<!-- // 친구검색 -->
+
+					<!-- 친구선택 / 발송목록 -->
+					<div class="frnd-lst">
+						<div class="clear frnd-result">
+							<!-- 친구선택 활성화 on-->
+							<div class="lst myLst on">
+								<span class="h-tab">친구선택</span>
+
+								<!-- tab-box -->
+								<div class="tab-box">
+									<!-- 내친구 -->
+									<div class="user">
+										<span class="counter">
+											<input type="checkbox" id="lb-myFrnd"><label for="lb-myFrnd">내친구 258명</label>
+										</span>
+										<ul>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-myFrnd1"><!--
+													--><label for="lb-myFrnd1">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-myFrnd2"><!--
+													--><label for="lb-myFrnd2">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-myFrnd3"><!--
+													--><label for="lb-myFrnd3">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-myFrnd4"><!--
+													--><label for="lb-myFrnd4">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-myFrnd5"><!--
+													--><label for="lb-myFrnd5">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- // 내친구 -->
+
+									<!-- 검색결과 -->
+									<div class="user">
+										<p class="counter">
+											<input type="checkbox" id="lb-rslt"><label for="lb-rslt">검색결과 <span>82명</span></label>
+										</p>
+										<ul>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-rslt1"><!--
+													--><label for="lb-rslt1">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-rslt2"><!--
+													--><label for="lb-rslt2">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-rslt3"><!--
+													--><label for="lb-rslt3">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-rslt4"><!--
+													--><label for="lb-rslt4">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- // 검색결과 -->
+								</div>
+								<!-- // tab-box -->
+							</div>
+							<!-- // 친구선택 -->
+
+							<!-- 발송 목록 활성화 on-->
+							<div class="lst sendLst">
+								<span class="h-tab">발송목록</span>
+
+								<!-- tab-box -->
+								<div class="tab-box">
+									<!-- 발송 목록 -->
+									<div class="user">
+										<div class="clear sort">
+											<span><input type="radio" id="lb-sendSort1" name="send-sort" checked="checked"><label for="lb-sendSort1">전체목록</label></span><!--
+											--><span><input type="radio" id="lb-sendSort2" name="send-sort"><label for="lb-sendSort2">읽음</label></span><!--
+											--><span><input type="radio" id="lb-sendSort3" name="send-sort"><label for="lb-sendSort3">읽지않음</label></span><!--
+											--><span class="cnt">258명</span>
+										</div>
+										<ul>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-sendLst1"><!--
+													--><label for="lb-sendLst1">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-sendLst2"><!--
+													--><label for="lb-sendLst2">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-sendLst3"><!--
+													--><label for="lb-sendLst3">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-sendLst4"><!--
+													--><label for="lb-sendLst4">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="row">
+													<input type="checkbox" id="lb-sendLst5"><!--
+													--><label for="lb-sendLst5">
+														<span class="photo"><img src="/img/bg_user_photo.gif" alt="홍길동"></span><!--
+														--><span class="nick-name">닉네임</span>
+														<span class="donut-cnt">10도넛</span>
+														<span class="stat">읽음(2014.08.20  17:12)</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- // 발송 목록 -->
+						</div>
+					</div>
+					<!-- // 친구선택 / 발송목록 -->
+				</div>
+				<!-- // main -->
+
+				<div class="clear result">
+					<span class="donut-sum">선택한 친구 340명 X <input type="text" title="도넛 입력"><em>도넛</em></span>
+
+					<span class="donut-cnt">
+						<em>34000</em>
+						<input type="button" value="도넛받어" class="btn-donut-send">
+					</span>
+				</div>
+			</fieldset>
+		</form>
+
+		<p class="noti">※ 내가 퍼트린 글을 친구가 읽지 않으면 도넛이 차감되지 않습니다.</p>
+
+		<!-- 닫기 -->
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+		<!-- // 닫기 -->
+	</div>
+</div>
+<!-- // 글 퍼트리기 레이어 -->
+
+<!-- 친구신청 -->
+<div class="pop pop-noti">
+	<div class="in">
+		<p class="t-pop"><strong>친구신청</strong></p>
+
+		<div class="main">
+			<strong>OOOO</strong> 님에게 친구신청 하시겠습니까?
+		</div>
+
+		<p class="form-button">
+			<span class="btn-cncl"><img src="/img/btn_cncl.png" alt="취소"></span>
+			<span class="btn-subscribe"><img src="/img/btn_subscribe3.png" alt="구독하기"></span>
+		</p>
+
+		<!-- 닫기 -->
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse2.gif" alt="닫기"></span>
+		<!-- // 닫기 -->
+	</div>
+</div>
+<!-- // 친구신청 -->
+
+<!-- 사진 올리기 -->
+<div class="pop pop-photoup">
+	<div class="in">
+		<p class="t-pop"><strong>사진 올리기</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>소셜픽 사진 올리기</span></legend>
+				<div class="main">
+					<div class="photo">
+						<img src="http://dummyimage.com/431x266/000/fff" alt="사진이름">
+						<input type="file" title="사진 입력">
+					</div>
+					<span class="photo-name"><label for="lb-photoname">사진명</label><input type="text" id="lb-photoname"></span>
+
+					<dl class=" clear copyrighter-set">
+						<dt>저작권설정</dt>
+						<dd>
+							<span class="radio-group">
+								<span><input type="radio" id="lb-perm" name="perm" checked="checked"><label for="lb-perm">펌 허용</label></span><!--
+								--><span><input type="radio" id="lb-perm2" name="perm"><label for="lb-perm2">펌 허용안함</label></span>
+							</span>
+							<span class="noti">다른 사람이 당신의 글을 ‘펌’할 수 있도록 설정합니다.</span>
+
+							<!-- 펌허용시 -->
+							<div class="donut-price">
+								<ul>
+									<li>
+										<label for="lb-donut">-개인소장용
+											<span class="tooltip">
+												<img src="/img/ico_noti.png" alt="알림">
+												<!-- 툴팁 -->
+												<span class="tooltip-board">
+													<strong>소장용</strong>은 개인적 목적으로 사용가능 (개인문서 용도로만 사용 가능)
+												</span>
+												<!-- // 툴팁 -->
+											</span>
+										</label><!--
+										--><input type="text" id="lb-donut" style="width:73px"> 도넛
+									</li>
+									<li>
+										<label for="lb-donut2">-범용라이센스
+											<span class="tooltip">
+												<img src="/img/ico_noti.png" alt="알림">
+												<!-- 툴팁 -->
+												<span class="tooltip-board">
+													<strong>범용라이센스</strong>는 모든 홍보 및 제작물(웹사이트,인쇄디자인 등) 사용<br>가능 하지만, <em>재판매는 불가</em>합니다.
+												</span>
+												<!-- // 툴팁 -->
+											</span>
+										</label><!--
+										--><input type="text" id="lb-donut2" style="width:73px"> 도넛
+									</li>
+								</ul>
+							</div>
+							<!-- // 펌허용시 -->
+						</dd>
+					</dl>
+
+					<p class="form-button">
+						<span class="btn-cncl"><img src="/img/btn_cncl.png" alt="취소"></span>
+						<input type="button" class="btn-upload" value="올리기">
+					</p>
+				</div>
+			</fieldset>
+		</form>
+
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+	</div>
+</div>
+<!-- // 사진 올리기 -->
+
+<!-- 내마켓 사진 올리기 -->
+<div class="pop pop-item-photoup">
+	<div class="in">
+		<p class="t-pop"><strong>사진 올리기</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>사진 올리기</span></legend>
+				<div class="main">
+					<div class="photo">	
+						<input type="file" title="사진 선택">
+					</div>
+
+					<p class="form-button">
+						<span class="btn-cncl"><img src="/img/btn_cncl.png" alt="취소"></span>
+						<input type="button" class="btn-upload" value="올리기">
+					</p>
+				</div>
+			</fieldset>
+		</form>
+
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+	</div>
+</div>
+<!-- // 내마켓 사진 올리기 -->
+
+<!-- 내마켓 사진 올리기 -->
+<div class="pop pop-item-photoup">
+	<div class="in">
+		<p class="t-pop"><strong>사진 올리기</strong></p>
+		<form>
+			<fieldset>
+				<legend><span>사진 올리기</span></legend>
+				<div class="main">
+					<div class="photo">	
+						<input type="file" title="사진 선택">
+					</div>
+
+					<span class="my-album"><input type="checkbox" id="lb-myalbum"> <label for="lb-myalbum">내앨범에 담기</label></span>
+
+					<p class="form-button">
+						<span class="btn-cncl"><img src="/img/btn_cncl.png" alt="취소"></span>
+						<input type="button" class="btn-upload" value="올리기">
+					</p>
+				</div>
+			</fieldset>
+		</form>
+
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+	</div>
+</div>
+<!-- // 내마켓 사진 올리기 -->
+
+<!-- 내마켓 글 올리기 -->
+<div class="pop pop-item-txt">
+	<div class="in">
+		<p class="t-pop"><strong>글 올리기</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>글 올리기</span></legend>
+				<div class="main">
+					<span class="item-subject">
+						<label for="lb-subject">제목</label><input type="text" id="lb-subject" class="istyle" style="width:371px">
+					</span>
+					<div class="itext">
+						<textarea cols="30" roes="5"></textarea>
+					</div>
+
+					<p class="form-button">
+						<span class="btn-cncl"><img src="/img/btn_cncl.png" alt="취소"></span>
+						<input type="button" class="btn-upload" value="올리기">
+					</p>
+				</div>
+			</fieldset>
+		</form>
+
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+	</div>
+</div>
+<!-- // 내마켓 글 올리기 -->
+
+<!-- 내마켓 포스트 올리기 -->
+<div class="pop pop-postup">
+	<div class="in">
+		<p class="t-pop"><strong>내마켓 올리기</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>내마켓 올리기</span></legend>
+				<div class="main">
+					<ul class="market-item-lst">
+						<li class="on">
+							<div class="clear box">
+								<span class="thumb"><img src="/img/img_conts.png" alt="주식 투자전략 &amp; 주식투자 노하우"></span>
+								<div class="info">
+									<p class="subject">주식 투자전략 & 주식투자 노하우 주식 투자전략 & 주식투자 노하우</p>
+									<span class="txt">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 & 주식</span>
+								</div>
+							</div>
+						</li>
+						<li class="">
+							<div class="clear box">
+								<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span>
+								<div class="info">
+									<p class="subject">주식 투자전략 & 주식투자 노하우 주식 투자전략 & 주식투자 노하우</p>
+									<span class="txt">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 & 주식</span>
+								</div>
+							</div>
+						</li>
+						<li class="">
+							<div class="clear box">
+								<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span>
+								<div class="info">
+									<p class="subject">주식 투자전략 & 주식투자 노하우 주식 투자전략 & 주식투자 노하우</p>
+									<span class="txt">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 & 주식</span>
+								</div>
+							</div>
+						</li>
+						<li class="">
+							<div class="clear box">
+								<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span>
+								<div class="info">
+									<p class="subject">주식 투자전략 & 주식투자 노하우 주식 투자전략 & 주식투자 노하우</p>
+									<span class="txt">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 & 주식</span>
+								</div>
+							</div>
+						</li>
+						<li class="">
+							<div class="clear box">
+								<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span>
+								<div class="info">
+									<p class="subject">주식 투자전략 & 주식투자 노하우 주식 투자전략 & 주식투자 노하우</p>
+									<span class="txt">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 & 주식</span>
+								</div>
+							</div>
+						</li>						
+					</ul>
+
+					<p class="form-button">
+						<span class="btn-cncl"><img src="/img/btn_cncl.png" alt="취소"></span>
+						<input type="button" class="btn-upload" value="올리기">
+					</p>
+				</div>
+			</fieldset>
+		</form>
+
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+	</div>
+</div>
+<!-- // 내마켓 포스트 올리기 -->
+
+<!-- 계정정보 수정 -->
+<div class="pop pop-account">
+	<div class="in">
+		<p class="t-pop"><strong>계정 정보</strong></p>
+
+		<div class="board-box">
+			<form>
+				<fieldset>
+					<legend><span>계정정보 수정 입력</span></legend>
+					<table class="board">
+						<caption><span>계정정보 수정하기</span></caption>
+						<colgroup>
+							<col style="width:126px">
+							<col>
+						</colgroup>
+						<tr>
+							<th scope="row">이름</th>
+							<td><span class="name">강대욱</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="lb-hp">휴대폰</label></th>
+							<td>
+								<ul class="hp-verif">
+									<li>
+										<select class="sstyle" style="width:250px" title="국가선택">
+											<option>대한민국</option>
+										</select>
+										<input type="text" id="lb-hp" class="istyle" style="width:228px">
+										<input type="button" value="인증번호 발송" class="btn-verif-code">
+									</li>
+									<li>
+										<span class="verif-code">
+											<label for="lb-verif">인증번호</label>
+											<input type="text" id="lb-verif" class="istyle2">
+										</span><!--
+										--><input type="button" value="인증" class="btn-verif">
+										<input type="button" value="인증번호 재발송(30초)" class="btn-reverif-code">
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="lb-email">이메일</label></th>
+							<td>
+								<span class="noti mail">변경하실 이메일 주소를 입력하세요</span>
+								<ul class="hp-verif">
+									<li>
+										<input type="text" id="lb-email" class="istyle" style="width:228px">
+										<input type="button" value="인증번호 발송" class="btn-verif-code">
+									</li>
+									<li>
+										<span class="verif-code">
+											<label for="lb-verif2">인증번호</label>
+											<input type="text" id="lb-verif2" class="istyle2" style="width:148px">
+										</span><!--
+										--><input type="button" value="인증" class="btn-verif">
+										<input type="button" value="인증번호 재발송(30초)" class="btn-reverif-code">
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="lb-blogurl">블로그url</label></th>
+							<td>
+								<span class="blog-url">
+									www.doble.net/ <input type="text" id="lb-blogurl" class="istyle3" style="width:58px"><input type="button" value="중복확인" class="btn-url-dup">
+								</span>
+								<span class="noti blogurl">5~10자 영문 소문자만 사용 가능 합니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">비밀번호 변경</th>
+							<td>
+								<span class="noti passwrd">4~10자 이내 영문,숫자</span>
+								<ul class="pw-change">
+									<li><label for="lb-pw">현재 비밀번호</label><input type="password" id="lb-pw" class="istyle2" style="width:148px"></li>
+									<li><label for="lb-newpw">새 비밀번호</label><input type="password" id="lb-newpw" class="istyle2" style="width:148px"></li>
+									<li><label for="lb-newpw2">새 비밀번호 확인</label><input type="password" id="lb-newpw2" class="istyle2" style="width:148px"></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+
+					<span class="b-group">
+						<input type="button" class="btn-cncl" value="취소"><!--
+						--><input type="button" class="btn-save" value="저장">
+					</span>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- // 계정정보 수정 -->
+
+<!-- 구독하기 -->
+<div class="pop pop-subscribe">
+	<p class="pop-head"><span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span>도넛블로그</p>
+	<div class="in">
+		<p class="tt">구독하기<span>구독하실 카테고리를 선택해주세요.</span></p>
+
+		<form>
+			<fieldset>
+				<legend><span>구독할 카테고리 선택</span></legend>
+				<div class="lst-scroll">
+					<table class="board2">
+						<caption><span>카테고리 리스트</span></caption>
+						<colgroup>
+							<col style="width:40px">
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<tr>
+							<th scope="col">알림</th>
+							<th scope="col">카테고리명</th>
+							<th scope="col">내 카테고리</th>
+							<th scope="col">구독보관일</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="lb-c1"></td>
+							<td>
+								<div class="cate">
+									<label for="lb-c1">카테고리명 1</label> (215)
+								</div>
+							</td>
+							<td>
+								<div class="my-cate">
+									<select title="내 카테고리명 선택">
+										<option>빅데이터</option>
+									</select>
+								</div>
+							</td>
+							<td>
+								<div class="subscribe-set">
+									<select title="보관일 선택">
+										<option>7일</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="lb-c1"></td>
+							<td>
+								<div class="cate">
+									<label for="lb-c1">카테고리명 1</label> (215)
+								</div>
+							</td>
+							<td>
+								<div class="my-cate">
+									<select title="내 카테고리명 선택">
+										<option>빅데이터</option>
+									</select>
+								</div>
+							</td>
+							<td>
+								<div class="subscribe-set">
+									<select title="보관일 선택">
+										<option>7일</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="lb-c1"></td>
+							<td>
+								<div class="cate">
+									<label for="lb-c1">카테고리명 1</label> (215)
+								</div>
+							</td>
+							<td>
+								<div class="my-cate">
+									<select title="내 카테고리명 선택">
+										<option>빅데이터</option>
+									</select>
+								</div>
+							</td>
+							<td>
+								<div class="subscribe-set">
+									<select title="보관일 선택">
+										<option>7일</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="lb-c1"></td>
+							<td>
+								<div class="cate">
+									<label for="lb-c1">카테고리명 1 카테고리명 1 카테고리명 1 카테고리명 1</label> (215)
+								</div>
+							</td>
+							<td>
+								<div class="my-cate">
+									<select title="내 카테고리명 선택">
+										<option>빅데이터</option>
+									</select>
+								</div>
+							</td>
+							<td>
+								<div class="subscribe-set">
+									<select title="보관일 선택">
+										<option>7일</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="lb-c1"></td>
+							<td>
+								<div class="cate">
+									<label for="lb-c1">카테고리명 1 카테고리명 1 카테고리명 1 카테고리명 1</label> (215)
+								</div>
+							</td>
+							<td>
+								<div class="my-cate">
+									<select title="내 카테고리명 선택">
+										<option>빅데이터</option>
+									</select>
+								</div>
+							</td>
+							<td>
+								<div class="subscribe-set">
+									<select title="보관일 선택">
+										<option>7일</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<p class="form-button">
+				<span class="btn-cncl">취소</span><!--
+				--><input type="button" class="btn-subscribe" value="구독하기">
+				</p>
+			</fieldset>
+		</form>
+
+		<span class="clse btn-pop-clse"><img src="/img/btn_pop_clse3.png" alt="닫기"></span>
+	</div>
+</div>
+<!-- // 구독하기 -->
+
+<!-- 도넛먹어 조회 -->
+<div class="pop pop-donutLst">
+	<p class="pop-head">도넛먹어 조회</p>
+	<div class="in">
+		<p class="tt clear">도넛먹어 조회<span class="cnt">515,000</span></p>
+
+		<table class="board2">
+			<caption><span>도넛먹어 리스트</span></caption>
+			<colgroup>
+				<col style="width:50px">
+				<col>
+				<col style="width:90px">
+				<col style="width:90px">
+				<col style="width:110px">
+			</colgroup>
+			<tr>
+				<th scope="col">NO</th>
+				<th scope="col">닉네임</th>
+				<th scope="col">구분</th>
+				<th scope="col">도넛</th>
+				<th scope="col">날짜</th>
+			</tr>
+			<tr>
+				<td>20</td>
+				<td><span class="cate">카테고리명 1</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>19</td>
+				<td><span class="cate">카테고리명 2</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>18</td>
+				<td><span class="cate">카테고리명 3</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>17</td>
+				<td><span class="cate">카테고리명 4</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>16</td>
+				<td><span class="cate">카테고리명 5</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>15</td>
+				<td><span class="cate">카테고리명 6</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>14</td>
+				<td><span class="cate">카테고리명 7</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td><span class="cate">카테고리명 8</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>12</td>
+				<td><span class="cate">카테고리명 9</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+			<tr>
+				<td>11</td>
+				<td><span class="cate">카테고리명 10</span></td>
+				<td>펌</td>
+				<td><span class="cnt2">215</span></td>
+				<td><span class="date">2014.08.30</span></td>
+			</tr>
+		</table>
+
+		<!-- paging -->
+		<div class="paging">
+			<a href="#" class="btn-first"><img src="/img/btn_paging_first.gif" alt="처음"></a>
+			<a href="#" class="btn-prev"><img src="/img/btn_paging_prev.gif" alt="이전"></a>
+			<span><a href="#">1</a></span>
+			<span class="on"><a href="#">2</a></span>
+			<span><a href="#">3</a></span>
+			<span><a href="#">4</a></span>
+			<span><a href="#">5</a></span>
+			<a href="#" class="btn-next"><img src="/img/btn_paging_next.gif" alt="다음"></a>
+			<a href="#" class="btn-last"><img src="/img/btn_paging_last.gif" alt="마지막"></a>
+		</div>
+		<!-- // paging -->
+
+		<span class="clse btn-pop-clse"><img src="/img/btn_pop_clse3.png" alt="닫기"></span>
+	</div>
+</div>
+<!-- // 도넛먹어 조회 -->
+
+<!-- 소셜픽 만들기 -->
+<div class="pop pop-socialPic-edit">
+	<div class="in">
+		<p class="t-pop"><strong>소셜픽 만들기</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>소셜픽 만들기 입력</span></legend>
+				<ul class="edit-article">
+					<li>
+						<label for="lb-subject">제목</label>
+						<input type="text" id="lb-subject" class="istyle">
+					</li>
+					<li>
+						<label for="lb-slt1">공동작업</label>
+						<select id="lb-slt1" style="width:280px">
+							<option>누구나 등록가능</option>
+							<option>친구만 등록가능</option>
+							<option>나만 등록 가능</option>
+						</select>
+					</li>
+					<li>
+						<label for="lb-slt2">공개여부</label>
+						<select id="lb-slt2" style="width:280px">
+							<option>전체공개</option>
+							<option>친구만</option>
+							<option>비공개</option>
+						</select>
+					</li>
+				</ul>
+
+				<div class="form-button">
+					<span class="btn-cncl">취소</span><!--
+					--><input type="button" class="btn-make" value="만들기">
+				</div>
+			</fieldset>
+		</form>
+
+		<ul class="tip">
+			<li>소셜픽은 친구들과 함께 만드는 사진앨범입니다.</li>
+			<li>주제에 맞는 사진앨범을 함께 만들어 보세요.</li>
+			<li>사진에 저작권료를 설정하면 판매 수익을 얻을 수 있어요.</li>
+		</ul>
+
+		<p class="sales-profit-guide">* 판매수익 안내</p>
+		<table class="sales-profit">
+			<caption><span>판매수익</span></caption>
+			<colgroup>
+				<col style="width:50%">
+				<col>
+			</colgroup>
+			<tr>
+				<th scope="col" class="b_n">소셜픽 개설자</th>
+				<th scope="col" class="b_n2">사진 등록자</th>
+			</tr>
+			<tr>
+				<td class="b_n">10%</td>
+				<td class="b_n2">90%</td>
+			</tr>
+		</table>
+
+		<p class="alert">★ 본인의 저작물이 아닐 경우 판매하실 수 없으며, 저작권 침해에 대한 책임은 본인에게 있습니다.</p>
+
+		<!-- 닫기 -->
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+		<!-- // 닫기 -->
+	</div>
+</div>
+<!-- // 소셜픽 만들기 -->
+
+<!-- 소셜픽 수정 -->
+<div class="pop pop-socialPic-edit">
+	<div class="in">
+		<p class="t-pop"><strong>소셜픽 수정</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>소셜픽 수정하기</span></legend>
+				<ul class="edit-article">
+					<li>
+						<label for="lb-subject">제목</label>
+						<input type="text" id="lb-subject" class="istyle">
+					</li>
+					<li>
+						<label for="lb-slt1">공동작업</label>
+						<select id="lb-slt1" style="width:280px">
+							<option>누구나 등록가능</option>
+							<option>친구만 등록가능</option>
+							<option>나만 등록 가능</option>
+						</select>
+					</li>
+					<li>
+						<label for="lb-slt2">공개여부</label>
+						<select id="lb-slt2" style="width:280px">
+							<option>전체공개</option>
+							<option>친구만</option>
+							<option>비공개</option>
+						</select>
+					</li>
+				</ul>
+
+				<div class="form-button">
+					<span class="btn-del">삭제</span><!--
+					--><span class="btn-cncl">취소</span><!--
+					--><input type="button" class="btn-edit" value="수정">
+				</div>
+			</fieldset>
+		</form>
+
+		<ul class="tip">
+			<li>소셜픽은 친구들과 함께 만드는 사진앨범입니다.</li>
+			<li>주제에 맞는 사진앨범을 함께 만들어 보세요.</li>
+			<li>사진에 저작권료를 설정하면 판매 수익을 얻을 수 있어요.</li>
+		</ul>
+
+		<p class="sales-profit-guide">* 판매수익 안내</p>
+		<table class="sales-profit">
+			<caption><span>판매수익</span></caption>
+			<colgroup>
+				<col style="width:50%">
+				<col>
+			</colgroup>
+			<tr>
+				<th scope="col" class="b_n">소셜픽 개설자</th>
+				<th scope="col" class="b_n2">사진 등록자</th>
+			</tr>
+			<tr>
+				<td class="b_n">10%</td>
+				<td class="b_n2">90%</td>
+			</tr>
+		</table>
+
+		<p class="alert">★ 본인의 저작물이 아닐 경우 판매하실 수 없으며, 저작권 침해에 대한 책임은 본인에게 있습니다.</p>
+
+		<!-- 닫기 -->
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+		<!-- // 닫기 -->
+	</div>
+</div>
+<!-- // 소셜픽 수정 -->
+
+<!-- 도넛 주기 -->
+<div class="pop pop-give-donut">
+	<div class="in">
+		<p class="t-pop2"><strong>닉네임</strong>(받는사람)</p>
+
+		<form>
+			<fieldset>
+				<legend><span>도넛 주기</span></legend>
+				<div class="give-donut">
+					<input type="text" title="도넛 입력"> 도넛
+				</div>
+
+				<p class="form-button">
+					<span class="btn-cncl">취소</span><!--
+					--><input type="button" class="btn-give-donut" value="도넛먹어">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!-- // 도넛 주기 -->
+
+<!-- 도넛 주기 -->
+<div class="pop pop-give-donut">
+	<div class="in">
+		<p class="t-pop2"><strong>닉네임</strong>(받는사람)</p>
+
+		<form>
+			<fieldset>
+				<legend><span>도넛 주기</span></legend>
+				<div class="give-donut">
+					<select class="sstyle" title="도넛 선택">
+						<option>300</option>
+						<option>500</option>
+						<option>1000</option>
+					</select> 도넛
+				</div>
+
+				<p class="form-button">
+					<span class="btn-cncl">취소</span><!--
+					--><input type="button" class="btn-give-donut" value="도넛먹어">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!-- // 도넛 주기 -->
+
+<!-- 친구 추천 -->
+<div class="pop pop-recm-frnd">
+	<div class="in">
+		<p class="t-pop2"><strong>친구추천</strong></p>
+
+		<ul class="recm-frnd-lst">
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-request">친구추천</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-request">친구추천</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-request">친구추천</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-request">친구추천</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-request">친구추천</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-request">친구추천</span>
+					</p>
+				</div>
+			</li>
+		</ul>
+
+		<!-- 닫기 -->
+		<span class="clse2 btn-pop-clse"><img src="/img/btn_pop_clse2.gif" alt="닫기"></span>
+		<!-- // 닫기 -->
+	</div>
+</div>
+<!-- // 친구 추천 -->
+
+<!-- 친구 추천 -->
+<div class="pop pop-blockFrnd">
+	<div class="in">
+		<p class="t-pop2"><strong>차단한 친구 56명</strong></p>
+
+		<ul class="block-frnd-lst">
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-del">삭제</span><!--
+						--><span class="btn-block-cncl">해제</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-del">삭제</span><!--
+						--><span class="btn-block-cncl">해제</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-del">삭제</span><!--
+						--><span class="btn-block-cncl">해제</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-del">삭제</span><!--
+						--><span class="btn-block-cncl">해제</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-del">삭제</span><!--
+						--><span class="btn-block-cncl">해제</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="box">
+					<a href="#">
+						<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span><!--
+						--><span class="name">
+							닉네임명
+						</span>
+					</a>
+
+					<p class="b-group">
+						<span class="btn-frnd-del">삭제</span><!--
+						--><span class="btn-block-cncl">해제</span>
+					</p>
+				</div>
+			</li>
+		</ul>
+
+		<!-- 닫기 -->
+		<span class="clse2 btn-pop-clse"><img src="/img/btn_pop_clse2.gif" alt="닫기"></span>
+		<!-- // 닫기 -->
+	</div>
+</div>
+<!-- // 친구 추천 -->
+
+<!-- 친구 차단 -->
+<div class="pop pop-block-frnd">
+	<div class="in">
+		<p class="t-pop2"><strong>친구차단</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>도넛 주기</span></legend>
+				<div class="block-frnd">
+					<strong>ㅇㅇㅇㅇ</strong> 님을 차단 하시겠습니까?
+				</div>
+
+				<p class="form-button">
+					<span class="btn-cncl">취소</span><!--
+					--><input type="button" class="btn-acc-frnd" value="확인">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!-- // 친구 차단 -->
+
+<!-- 카테고리 추가 -->
+<div class="pop pop-category-add">
+	<div class="in">
+		<p class="t-pop2"><strong>카테고리 추가</strong></p>
+
+		<form>
+			<fieldset>
+				<legend><span>카테고리 추가하기</span></legend>
+				
+				<div class="cate-set">
+					<select class="sstyle" title="카테고리 공개 설정">
+						<option>공개설정</option>
+					</select>
+
+					<div class="icate">
+						<label for="lb-cate-name">새 카테고리명을 입력해주세요</label>
+						<input type="text" id="lb-cate-name">
+					</div>
+				</div>
+
+				<p class="form-button">
+					<span class="btn-add-cncl">취소</span><!--
+					--><input type="button" class="btn-add-save" value="저장">
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!-- // 카테고리 추가 -->
+
+<!-- 포스트 미리보기 레이어 -->
+<div class="pop pop-post-preview">
+	<div class="in">
+		<p class="t-pop"><strong>미리보기</strong></p>
+
+		<div class="box-preview">
+			<ul class="clear tab-box">
+				<li class="on"><a href="#post-intro-preview">소개글</a></li>
+				<li><a href="#post-write-preview">작성글</a></li>
+			</ul>
+			
+			<!-- 소개글 미리보기 -->
+			<div id="post-intro-preview" class="blind">
+				<div class="view">
+					<div class="view-head">
+						<h2><a href="#">꿈과 미래를 위해 달려갑니다.</a></h2>
+						<p class="info">
+							<span class="name">by  <em>강대욱</em></span><!--
+							--><span>재테크</span><!--
+							--><span> 2014.12.22  오후 1:22</span>
+						</p>
+
+						<span class="post-public"><img src="/img/img_post_close.png" alt="비공개" title="비공개 글"></span>
+						<!-- 전체공개 img_post_public.png / 친구공개 img_post_frnd.png / alt와 title 텍스트 같이 변경 -->
+					</div>
+
+					<!-- preview -->
+					<div class="preview">
+						<div class="clear">
+							<span class="thumb"><a href="#"><img src="/img/img_photo2.jpg" alt="사진이름"></a></span>
+							<div class="intro">
+								<h3>소개글</h3>
+								<p>
+									<a href="#">주식시장에서.. 수익내기 차~암 힘들죠??아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각합니다.이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.<br>
+									시세의 강도는 코스닥&gt;코스피보다 강하므로 종목을 주식시장에서.. 수익내기 차~암 힘들죠?? 아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각합니다.이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.</a>
+								</p>
+								<span class="att-file">Filename.jpg, Filename.jpg :<strong>첨부파일</strong></span>
+							</div>
+						</div>
+					</div>
+					<!-- // preview -->
+				</div>
+			</div>
+			<!-- // 소개글 미리보기 -->
+
+			<!-- 작성글 미리보기 -->
+			<div id="post-write-preview">
+				<div class="view">
+					<div class="view-head">
+						<h2>꿈과 미래를 위해 달려갑니다.</h2>
+						<p class="info">
+							<span class="name">by  <em>강대욱</em></span><!--
+							--><span>재테크</span><!--
+							--><span> 2014.12.22  오후 1:22</span>
+						</p>
+
+						<span class="post-public"><img src="/img/img_post_close.png" alt="비공개" title="비공개 글"></span>
+						<!-- 전체공개 img_post_public.png / 친구공개 img_post_frnd.png / alt와 title 텍스트 같이 변경 -->
+					</div>
+
+					<div class="conts">
+						<p class="att_file_name"><strong>첨부파일</strong> : Filename.jpg, Filename.jpg</p>
+
+						<div class="media">
+							<img src="http://dummyimage.com/558x558/000/fff" alt="사진이름">
+						</div>
+
+						<div class="txt">
+							<p>주식시장에서.. 수익내기 차~암 힘들죠??아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각합니다.이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.<br>
+							시세의 강도는 코스닥&gt;코스피보다 강하므로 종목을 주식시장에서.. 수익내기 차~암 힘들죠?? 아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각  합니다. 이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.</p>
+							<p>주식시장에서.. 수익내기 차~암 힘들죠??아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각합니다.이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.<br>
+							시세의 강도는 코스닥&gt;코스피보다 강하므로 종목을 주식시장에서.. 수익내기 차~암 힘들죠?? 아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각  합니다. 이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.</p>
+							<p>주식시장에서.. 수익내기 차~암 힘들죠??아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각합니다.이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.<br>
+							시세의 강도는 코스닥&gt;코스피보다 강하므로 종목을 주식시장에서.. 수익내기 차~암 힘들죠?? 아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각  합니다. 이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.</p>
+							<p>주식시장에서.. 수익내기 차~암 힘들죠??아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각합니다.이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.<br>
+							시세의 강도는 코스닥&gt;코스피보다 강하므로 종목을 주식시장에서.. 수익내기 차~암 힘들죠?? 아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각  합니다. 이상으로.. 주식투자 전략 &amp; 주식투자 노하우 [정책편]이였습니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 작성글 미리보기 -->
+		</div>
+
+		<!-- 닫기 -->
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+		<!-- // 닫기 -->
+	</div>
+</div>
+<!-- // 포스트 미리보기 레이어 -->
+
+<!-- 포스트 타입 선택 -->
+<div class="pop pop-post-type">
+	<div class="in">
+		<p class="t-pop"><strong>본문유형 선택</strong></p>
+		
+		<div class="post-type">
+			<form>
+				<fieldset>
+					<legend><span>포스트 타입 선택</span></legend>
+					<ul class="clear">
+						<li>
+							<input type="radio" id="lb-atype" name="ab-type" checked="checked"><label for="lb-atype">타입A<img src="/img/img_pop_post-type_a.png" alt="타입A"></label>
+						</li>
+						<li><input type="radio" id="lb-btype" name="ab-type"><label for="lb-btype">타입B<img src="/img/img_pop_post-type_b.png" alt="타입B"></label></li>
+					</ul>
+
+					<p class="form-button">
+						<span class="btn-cncl">취소</span><!--
+						--><input type="button" class="btn-confirm" value="확인">
+					</p>
+				</fieldset>
+			</form>
+		</div>
+
+		<!-- 닫기 -->
+		<span class="btn-pop-clse"><img src="/img/btn_pop_clse.png" alt="닫기"></span>
+		<!-- // 닫기 -->
+	</div>
+</div>
+<!-- // 포스트 타입 선택 -->
+
+<!-- 내앨범 팝업 -->
+<div class="pop pop-myalbum-view">
+	<div class="view-head">
+		<h2>꿈과 미래를 위해 달려갑니다.</h2>
+		<p class="info">
+			<span class="name">by  <em>강대욱</em></span><!--
+			--><span>재테크</span><!--
+			--><span> 2014.12.22  오후 1:22</span>
+		</p>
+	</div>
+
+	<div class="photo">
+		<img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지">
+	</div>
+
+	<div class="thumb-wrap">
+		<!-- slider -->
+		<div class="slider">
+			<!-- 선택된 이미지 li active 클래스 추가 -->
+			<ul class="clear thumb-list" style="width:200%">
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li class="active">
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<span class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></span>
+						<i></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- // slider -->
+
+		<span class="btn-prev"><em class="ir">이전</em></span>
+		<span class="btn-next"><em class="ir">다음</em></span>
+	</div>
+	
+	<a href="#" class="btn-qucik-post">포스트 바로가기</a>
+
+	<!-- 닫기 -->
+	<span class="btn-pop-clse"><img src="/img/btn_pop_clse4.png" alt="닫기"></span>
+	<!-- // 닫기 -->
+</div>
+<!-- // 내앨범 팝업 -->
+</body>
+</html>

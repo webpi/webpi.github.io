@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 정보 거래현황</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/ui.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container" class="bgc">
+		<div class="clear section-manage2">
+			<div id="lnb">
+				<!-- 사진 -->
+				<div class="photo-area">
+					<span class="photo">
+						<img src="/img/lnb_photo.jpg" alt="홍길동">
+					</span>
+
+					<span class="edit">
+						<a href="#"><em>사진변경</em></a>
+					</span>
+				</div>
+				<!-- // 사진 -->
+
+				<div class="my-area">
+					<span class="name"><strong>도넛 블로그</strong></span>
+					<span class="tit"><img src="/img/img_doma_chef.png" alt="DOMA CHEF"></span>
+
+					<p class="btn">
+						<span class="btn-frnd_app">친구신청</span><!--
+						--><span class="btn-subscribe">구독하기</span>
+					</p>
+				</div>
+
+				<!-- Blog Menu -->
+				<div class="blogMenu-area">
+					<h2>Blog Menu</h2>
+					<!-- 해당 메뉴 on -->
+					<ul class="default">
+						<li class="on">
+							<span class="market"><a href="#">내마켓</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="social"><a href="#">소셜픽</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="friend"><a href="#">친구</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="subscribe"><a href="#">구독</a></span>
+							<span class="cnt">224</span>
+						</li>
+					</ul>
+
+					<h3 class="stat"><span>통계</span></h3>
+					<ul class="menu">
+						<li>
+							<span>도넛</span>
+							<span class="cnt cnt1">224</span>
+						</li>
+						<li>
+							<span>내글열람</span>
+							<span class="cnt cnt2">224</span>
+						</li>
+						<li>
+							<span>내글 펌</span>
+							<span class="cnt cnt3">224</span>
+						</li>
+					</ul>
+
+					<h3 class="manage"><span>관리</span></h3>
+					<ul class="menu">
+						<li><span><a href="#">내마켓 관리</a></span></li>
+						<li><span><a href="#">거래현황</a></span></li>
+						<li><span><a href="#">계정 정보</a></span></li>
+					</ul>
+				</div>
+				<!-- // Blog Menu-->
+
+				<!-- 내친구 -->
+				<div class="myFrnd-area">
+					<h3>내친구</h3>
+					<span class="cnt">264명</span>
+
+					<ul>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state"><img src="/img/ico_blu_circle.png" alt="접속중"></span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">13분</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">13분</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">1시간</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">12시간</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- // 내친구 -->
+			</div>
+			<span class="btn-lnb-view"><img src="/img/btn_lnb_open.png" alt="왼쪽 메뉴 보이기/감추기"></span>
+			
+			<!-- 공통 상단 -->
+			<div class="sub-nav">
+				<div class="main-area">
+					<ul class="clear">
+						<li class="on"><h2><a href="#">프로필</a></h2></li>
+						<li><h2><a href="#">알림</a></h2></li>
+						<li><h2><a href="#">구독</a></h2></li>
+						<li><h2><a href="#">내도넛</a></h2></li>
+						<li><h2><a href="#">거래현황</a></h2></li>
+						<li><h2><a href="#">카테고리 관리</a></h2></li>
+					</ul>
+				</div>
+			</div>
+			<!-- // 공통 상단 -->
+
+			<div id="main">
+				<!-- 정보거래현황 -->
+				<div class="trading-area">
+					<!-- 해당 메뉴 on -->
+					<div class="clear post-manage-top">
+						<h2 class="on"><a href="#">정보 거래현황</a></h2>
+						<span class="bar">|</span>
+						<h2><a href="#">소셜픽 거래현황</a></h2>
+					</div>
+
+					<!-- 해당 메뉴 on -->
+					<div class="clear sell-buy-post">
+						<h3 class=""><a href="#">내가 판매한 포스팅</a></h3>
+						<span class="bar">|</span>
+						<h3 class="on"><a href="#">내가 구매한 포스팅</a></h3>
+					</div>
+
+					<div class="trading-box">
+						<h4 class="ir">내가 구매한 포스팅</h4>
+						<!-- 검색 -->
+						<div class="search">
+							<form>
+								<fieldset>
+									<legend><span>포스팅 검색</span></legend>
+									<div class="search-top">
+										<select title="검색방법 선택">
+											<option>제목</option>
+											<option>저작자</option>
+										</select><!--
+										--><input type="text" class="istyle" title="검색어 입력" style="width:162px"><!--
+										--><input type="button" value="검색하기" class="btn-search"><!--
+										--><span class="btn-detail-search on">상세검색</span>
+									</div>
+
+									<!-- 상세검색 -->
+									<div class="detail-search">
+										<div class="in">
+											<div class="clear">
+												<p>
+													<span class="tt">기간</span>
+													<input type="text" class="calendar" title="기간 시작"> ~ <input type="text" class="calendar" title="기간 끝">
+												</p>
+												<ul class="clear period">
+													<li>오늘</li>
+													<li>1주일</li>
+													<li>1개월</li>
+													<li class="on">3개월</li>
+													<li>전체</li>
+												</ul>
+											</div>
+
+											<div class="clear">
+												<p>
+													<span class="tt">카테고리</span>
+													<span>
+														<select title="카테고리 상세 선택">
+															<option>대카테고리</option>
+														</select>
+														<select title="카테고리 상세 선택2">
+															<option>중카테고리</option>
+														</select>
+													</span>
+													<span>
+
+													</span>
+												</p>
+												<p class="cell">
+													<span class="tt">거래구분</span>
+													<select title="거래 형태 선택">
+														<option>열람</option>
+													</select>
+												</p>
+												<p class="cell2">
+													<span class="tt">유료/무료</span>
+													<select title="지불방법 선택">
+														<option>전체</option>
+														<option>유료</option>
+														<option>무료</option>
+													</select>
+												</p>
+											</div>
+
+											<!-- 내가 구매한 포스팅일때 안나옴 -->
+											<div class="clear blind">
+												<p>
+													<span class="tt">저작자</span>
+													<select title="저자권 선택">
+														<option>전체</option>
+														<option>내포스팅</option>
+														<option>펌한 포스팅</option>
+													</select>
+												</p>
+												<p class="cell3">
+													<span class="tt">상태</span>
+													<select title="글 상태 선택">
+														<option>게제중</option>
+													</select>
+												</p>
+											</div>
+
+											<input type="button" class="btn-search" value="검색">
+										</div>
+									</div>
+									<!-- // 상세검색 -->
+								</fieldset>
+							</form>
+						</div>
+						<!-- // 검색 -->
+
+						<!-- trade board -->
+						<div class="trade-board">
+							<div class="in">
+								<!-- 공통 결과 없음 -->
+								<p class="not"><em>내용</em>이 없습니다.</p>
+								<!-- // 공통 결과 없음 -->
+
+								<!-- 해당 정렬 th span on -->
+								<table class="board">
+									<caption><span>구매한 현황 리스트</span></caption>
+									<colgroup>
+										<col>
+										<col style="width:120px">
+										<col style="width:120px">
+										<col style="width:120px">
+										<col style="width:160px">
+									</colgroup>
+									<tr>
+										<th scope="col">카테고리/제목</th>
+										<th scope="col"><span>저작자</span></th>
+										<th scope="col"><span>열람 / 펌</span></th>
+										<th scope="col"><span>구매비용</span></th>
+										<th scope="col"><span class="on">구매일자</span></th>
+									</tr>
+									<tr>
+										<td>
+											<span>생활·건강·노하우 &gt; 육아/결혼</span><span class="subject"><a href="#">21C 男女는 백팩을 맨다</a></span>
+										</td>
+										<td>한별<br>(dfiafk11)</td>
+										<td>열람</td>
+										<td>100도넛</td>
+										<td>2013/12/12 18:59</td>
+									</tr>
+
+								</table>
+							</div>
+						</div>
+						<!-- // trade board -->
+
+						<!-- paging -->
+						<div class="paging">
+							<a href="#" class="btn-first"><img src="/img/btn_paging_first.gif" alt="처음"></a>
+							<a href="#" class="btn-prev"><img src="/img/btn_paging_prev.gif" alt="이전"></a>
+							<span><a href="#">1</a></span>
+							<span class="on"><a href="#">2</a></span>
+							<span><a href="#">3</a></span>
+							<span><a href="#">4</a></span>
+							<span><a href="#">5</a></span>
+							<a href="#" class="btn-next"><img src="/img/btn_paging_next.gif" alt="다음"></a>
+							<a href="#" class="btn-last"><img src="/img/btn_paging_last.gif" alt="마지막"></a>
+						</div>
+						<!-- // paging -->
+					</div>
+				</div>
+				<!-- // 정보거래현황 -->
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="copy">&copy; 2015 <strong>DONUT Blog</strong> all Right reserved.</span>
+			<ul>
+				<li><a href="#">서비스소개</a></li>
+				<li><a href="#">도움말</a></li>
+				<li><a href="#">제휴문의</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

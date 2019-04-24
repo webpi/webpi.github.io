@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+@font-face {
+font-family:NanumGothicWeb;
+font-style:normal;
+font-weight:normal;
+src:url(../font/NanumGothic.eot); /* IE9 Compat Modes */
+src:url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+url(../font/NanumGothic.ttf) format('truetype'), /* Modern Browsers */
+url(../font/NanumGothic.woff) format('woff'); /* Safari, Android, iOS */
+}
+
+body{margin:0;padding:0;font-family:"맑은 고딕",malgun gothic,"굴림",Gulim,sans-serif;font-size:12px;color:#000;background:#fff;letter-spacing:-1px}
+h1,h2,h3,h4,h5,h6,div,p,ul,ol,li,dl,dt,dd,input,textarea,pre,code,form,fieldset,blockquote,th,td,select,button,code{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:12px;line-height:100%}
+ul,ol,li{list-style:none}
+img,fieldset{border:0 none}
+em{font-style:normal}
+input:focus{outline:0 none !important}
+input[type="radio"],
+input[type="checkbox"]{width:13px;height:13px;vertical-align:middle}
+option{padding-right:6px}
+button,label{cursor:pointer}
+button img{vertical-align:top}
+input,select{margin:0;padding:0}
+button[disabled=disabled]{cursor:pointer;outline:none}
+legend{visibility:hidden;overflow:hidden;clear:both;position:absolute;top:0;left:0;width:1%;height:1%;margin:0;padding:0;font-size:1%;line-height:1%}
+caption span{visibility:hidden;overflow:hidden;position:absolute;nwidth:1%;height:1%;margin:0;padding:0;font-size:1%;line-height:1%}
+table,
+tr,
+td{margin:0;padding:0;border-collapse:collapse;border-spacing:0}
+a,a:link,a:active,a:hover,a:visited{text-decoration:none}
+a:focus{outline:thin dotted}
+a:active,
+a:hover{outline:0}
+strong{font-weight:bold}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,
+sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+button,
+input,
+select,
+textarea{font-family:inherit;font-size:100%}
+button,
+input{line-height:normal}
+input[type="button"]{cursor:pointer}
+button,
+select{text-transform:none}
+textarea{overflow:auto}
+object{display:block}
+
+/* CSS Common */
+.blind{display:none}
+.visible{visibility:hidden}
+.clear{*zoom:1}
+.clear:after{display:block;clear:both;content:''}
+.ir{visibility:hidden;overflow:hidden;position:absolute;width:1%;height:1%;margin:0;padding:0;font-size:1%;line-height:1%}
+
+#wrap img{vertical-align:top}
+#header{position:relative;padding-bottom:7px;background:url(../img/bg_head_shadow.png) repeat-x 0 100%;z-index:2}
+#header .top{width:1000px;height:100px;margin:0 auto;background:url(../img/bg_head_top.png) no-repeat 316px 14px}
+#header h1{float:left;padding:19px 0 0 12px}
+#header .dec{float:right;padding:36px 49px 0 0}
+
+#gnb{position:relative;background:url(../img/bg_gnb.png) repeat-x 0 0}
+#gnb .menu{position:relative;width:1002px;margin:0 auto;background:url(../img/bg_gnbmenu.png) repeat-x 0 0;z-index:3}
+#gnb .menu > li{position:relative;float:left;background:url(../img/btn_gnb_bar.png) no-repeat 0 50%}
+#gnb .menu > li:first-child{background:none}
+#gnb .menu > li > a{display:block;width:200px;height:50px;background-repeat:no-repeat;background-position:50% 50%}
+#gnb .m1{background-image:url(../img/btn_gnb01_nor.png)}
+#gnb .m2{background-image:url(../img/btn_gnb02_nor.png)}
+#gnb .m3{background-image:url(../img/btn_gnb03_nor.png)}
+#gnb .m4{background-image:url(../img/btn_gnb04_nor.png)}
+#gnb .m5{background-image:url(../img/btn_gnb05_nor.png)}
+
+#gnb .menu .sub{position:absolute;left:0;top:66px;width:100%}
+#gnb .menu .sub li{font-size:13px;color:#333}
+#gnb .menu .sub li a{display:inline-block;height:21px;padding:4px 8px 0;font-family:NanumGothicWeb;color:#333}
+#gnb .menu .sub li a:hover{color:#fff;font-weight:600;background:#016ec0}
+#gnb .menu .btn1 .sub{width:110px;left:50%;margin-left:-55px}
+#gnb .menu .btn2 .sub{text-align:center}
+#gnb .menu .btn3 .sub{width:82px;left:50%;margin-left:-41px}
+#gnb .menu .btn4 .sub{width:82px;left:50%;margin-left:-41px}
+#gnb .menu .btn5 .sub{width:70px;left:50%;margin-left:-35px}
+
+#gnb #subbg{position:absolute;top:50px;left:0;width:100%;height:179px;border-bottom:1px solid #f2f2f2;background:url(../img/bg_submenu.png) repeat-x;z-index:1}
+
+#container{margin-top:-7px}
+
+.client{width:1000px;margin:20px auto 0}
+.client h2{float:left;padding:18px 20px 0 10px}
+.client .client-view{float:left;position:relative;padding: 0 28px}
+.client .client-view .slide-box{overflow:hidden;width:830px;height:52px}
+.client .client-view .slide-box .client-slider{*width:1000%}
+.client .client-view li{float:left;*margin-right:10px}
+.client .client-view .prev,
+.client .client-view .next{position:absolute;top:50%;margin-top:-9px;cursor:pointer}
+.client .client-view .prev{left:0}
+.client .client-view .next{right:0}
+.client .client-view .prev em,
+.client .client-view .next em{position:absolute;display:none;*position:static;*display:block}
+
+#footer{width:1000px;margin:20px auto 0;padding-bottom:30px}
+#footer .fnb{padding:8px 0 8px 162px;background:#f4f4f4;text-align:center}
+#footer .fnb li{float:left;margin-left:17px;padding-left:17px;background:url(../img/btn_fnb_bar.jpg) no-repeat 0 50%;line-height:12px}
+#footer .fnb li:first-child{margin-left:0;padding-left:0;background:none}
+
+#footer .quick-lnk{margin-top:23px;padding-left:36px}
+#footer .quick-lnk li{float:left;margin-left:14px}
+#footer .quick-lnk li:first-child{margin-left:0}
+
+#footer .foot-bot{margin-top:24px;border-top:2px solid #a9aca7}
+#footer .foot-bot .logo{float:left;padding:14px 62px 0 53px}
+#footer .foot-bot ul{float:left;padding-top:20px}
+#footer .foot-bot li{margin-top:4px}
+#footer .foot-bot li:first-child{margin-top:0}
+#footer .foot-bot li a{margin-right:9px}
+
+.page{font-size:0;line-height:0;text-align:center}
+.page a{display:inline-block;width:20px;margin-left:4px;font-family:NanumGothicWeb;font-size:11px;color:#666;background:url(../img/bg_page_a.jpg) no-repeat 0 0;line-height:20px;text-align:center;vertical-align:top}
+.page a:first-child{margin-left:0}
+.page .on{color:#fff;background:#1c9a19}

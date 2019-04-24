@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1000">
+<title>부동산 관리자 - 내 확정배정현황</title>
+<link rel="stylesheet" href="css/admin.css" type="text/css">
+</head>
+<body class="bgc">
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="clear main-box">
+			<h1><a href="/"><img src="img/head_ci.png" alt="부동산 플래너"></a></h1>
+				
+			<!-- user info -->
+			<div class="usr-info">
+				<p class="usr">
+					<span class="name"><strong>홍길동</strong> 님</span>
+					<span class="btn-log">로그아웃</span>
+					<a href="#" class="btn-myedit">내정보 수정</a>
+				</p>
+				<ul class="clear card">
+					<li class="grn">그린카드 : 20</li>
+					<li class="ylw">옐로카드 : 20</li>
+					<li class="red">레드카드 : 20</li>
+				</ul>
+			</div>
+			<!-- // user info -->
+			
+			<!-- gnb -->
+			<div id="gnb">
+				<ul class="clear btn-group">
+					<!-- 마우스 오버시 클래스 on 추가  -->
+					<li class="btn-gnb1">
+						<a href="#" class="btn"><span>마이페이지</span></a>
+						<ul class="clear snb sub1">
+							<li class=""><a href="#">내 확정배정현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">정보변경</a></li>
+							<li class=""><a href="#">주 취급 지역 및 부동산 종류</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb2">
+						<a href="#" class="btn"><span>배정관리</span></a>
+						<ul class="clear snb sub2">
+							<li class=""><a href="#">전체의뢰현황</a></li>
+							<li class=""><a href="#">신규의뢰현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">확정배정현황</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb3">
+						<a href="#" class="btn"><span>의뢰관리</span></a>
+						<ul class="clear snb sub3">
+							<li class=""><a href="#">의뢰입력</a></li>
+							<li class=""><a href="#">전체의뢰현황</a></li>
+							<li class=""><a href="#">신규의회현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">확정배정현황</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb4">
+						<a href="#" class="btn"><span>계정관리</span></a>
+					</li>
+				</ul>
+			</div>
+			<!-- // gnb -->
+		</div>
+	</div>
+	<!-- // header -->
+	
+	<!-- container -->
+	<div id="container">
+		 <div class="main-box">
+		 	<!-- 검색 -->
+		 	<div class="section-search">
+		 		<form>
+		 			<fieldset>
+		 				<legend>검색</legend>
+		 				<ul class="clear">
+		 					<li>
+		 						<label for="sr1" class="tt"><strong>유입경로</strong>(제휴사명)</label>
+		 						<select id="sr1">
+		 							<option>IBKPB</option>
+		 						</select>
+		 					</li>
+		 					<li>
+		 						<strong class="tt">의뢰종류</strong>
+		 						<span><input type="radio" id="sr2" name="name1" checked="checked"><label for="sr2">컨설팅</label></span>
+		 						<span class="rdo"><input type="radio" id="sr3" name="name1"><label for="sr3">중개</label></span>
+		 						<select title="중개 선택">
+		 							<option>구함-매입</option>
+		 						</select>
+		 					</li>
+		 					<li>
+		 						<label for="sr4" class="tt"><strong>상담종류</strong></label>
+		 						<select id="sr4">
+		 							<option>정기상담</option>
+		 						</select>
+		 					</li>
+		 					<li>
+		 						<strong class="tt">부동산종류</strong>
+		 						<select title="선택1">
+		 							<option>주거용</option>
+		 						</select>
+		 						<select title="선택2">
+		 							<option>아파트</option>
+		 						</select>
+		 					</li>
+		 					<li class="cl">
+		 						<strong class="tt">주소 구분</strong>
+		 						<span><input type="radio" id="sr5" name="name2" checked="checked"><label for="sr5">지번 검색</label></span>
+		 						<span class="rdo"><input type="radio" id="sr6" name="name2"><label for="sr6">도로명 검색</label></span>
+		 						<select title="주소 구분1">
+		 							<option>시/도</option>
+		 						</select>
+		 						<select title="주소 구분2">
+		 							<option>시/군/구</option>
+		 						</select>
+		 						<select title="주소 구분3">
+		 							<option>읍/면/동</option>
+		 						</select>
+		 						<input type="text" title="상세입력" style="width:165px">
+		 					</li>
+		 					<li class="cl">
+		 						<strong class="tt">프로세스 구분</strong>
+		 						<select title="구분1">
+		 							<option>컨설팅</option>
+		 						</select>
+		 						<select title="구분2">
+		 							<option>물건 조사정보 취합 및 분석</option>
+		 						</select>
+		 					</li>
+		 					<li>
+		 						<label for="sr7" class="tt"><strong>진행 구분</strong></label>
+		 						<select id="sr7">
+		 							<option>보류(지속관리)</option>
+		 						</select>
+		 					</li>
+		 					<li>
+		 						<strong class="tt">제휴소속 구분</strong>
+		 						<select title="분류1">
+		 							<option>대분류</option>
+		 						</select>
+		 						<select title="분류2">
+		 							<option>중분류</option>
+		 						</select>
+		 					</li>
+		 					<li class="cl">
+		 						<strong class="tt">담당자 구분</strong>
+		 						<select title="분류">
+		 							<option>대분류</option>
+		 						</select>
+		 						<input type="text" title="입력" style="width:166px">
+		 					</li>
+		 					<li>
+		 						<label for="sr8" class="tt"><strong>고객명</strong></label>
+		 						<input type="text" id="sr8" style="width:166px">
+		 					</li>
+		 					<li class="cl">
+		 						<label for="sr9" class="tt"><strong>내용</strong></label>
+		 						<input type="text" id="sr9" style="width:246px">
+		 					</li>
+		 					<li class="day">
+		 						<strong class="tt">접수일자</strong>
+		 						<span><input type="text" title="시작일자 선택"></span>
+		 						<em>~</em>
+		 						<span><input type="text" title="마지막일자 선택"></span>
+		 					</li>
+		 					<li>
+		 						<label for="sr10" class="tt"><strong>답변일</strong></label>
+		 						<select id="sr10">
+		 							<option>그린카드(7일 이내 답변)</option>
+		 						</select>
+		 					</li>
+		 				</ul>
+		 				<input type="button" alt="검색" class="btn-search">
+		 			</fieldset>
+		 		</form>
+		 	</div>
+		 	<p class="card-tt">
+		 		<span class="grn">그린카드(7일 이내 답변)</span>
+		 		<span class="ylw">옐로카드(7일 초과 ~ 14일 이내 답변)</span>
+		 		<span class="red">레드카드(14일 초과 답변)</span>
+		 	</p>
+		 	<!-- // 검색 -->
+		 	
+		 	<!-- section-result -->
+		 	<div class="section-result">
+		 		<h2 class="ir">마이페이지</h2>
+		 		<h3 class="h-style3">내 확정배정현황</h3>
+		 		
+		 		<table class="t-style">
+		 			<caption><span>내 확정배정현황 리스트</span></caption>
+		 			<colgroup>
+			 			<col style="">
+			 			<col style="width:64px">
+			 			<col style="width:70px">
+			 			<col style="width:70px">
+			 			<col style="">
+			 			<col style="width:80px">
+			 			<col style="width:60px">
+			 			<col style="width:90px">
+			 			<col style="width:100px">
+			 			<col style="width:90px">
+			 			<col style="width:76px">
+			 			<col style="width:70px">
+		 			</colgroup>
+		 			<tr>
+		 				<th scope="col">접수번호</th>
+		 				<th scope="col">매물번호</th>
+		 				<th scope="col">의뢰종류</th>
+		 				<th scope="col">부동산종류</th>
+		 				<th scope="col">의뢰부동산주소/의뢰제목</th>
+		 				<th scope="col">제휴고객담당</th>
+		 				<th scope="col">고객명</th>
+		 				<th scope="col">진행구분</th>
+		 				<th scope="col">프로세스구분</th>
+		 				<th scope="col">확정배정일</th>
+		 				<th scope="col">최근답변일</th>
+		 				<th scope="col">자동매칭수</th>
+		 			</tr>
+		 			<tr>
+		 				<td class="num">
+		 					<p class="code">
+		 						<span>PB-1735</span>
+		 						<span>14.07.05</span>
+		 					</p>
+		 				</td>
+		 				<td class="num">B-0011<span>14.07.24</span></td>
+		 				<td>중개<span>구함-매입</span></td>
+		 				<td>주거용<br>아파트</td>
+		 				<td>
+		 					<p class="tl"><a href="#">서울시 강남구 서초3동 296번지 102-1003 인테리어 잘된 아파트 원합니다~</a></p>
+		 				</td>
+		 				<td>홍길동</td>
+		 				<td>김동산</td>
+		 				<td>완료(컨설팅)</td>
+		 				<td>컨설팅<br>일반 상담</td>
+		 				<td class="num">2014/09/14</td>
+		 				<td class="fc-grn"><span class="num">2011/5/15</span><span>그린카드</span></td>
+		 				<td class="num">3</td>
+		 			</tr>
+		 			<tr class="l-c">
+		 				<td class="num">
+		 					<p class="code">
+		 						<span>PB-1735</span>
+		 						<span>14.07.05</span>
+		 					</p>
+		 				</td>
+		 				<td class="num">B-0011<span>14.07.24</span></td>
+		 				<td>중개<span>구함-매입</span></td>
+		 				<td>주거용<br>아파트</td>
+		 				<td>
+		 					<p class="tl"><a href="#">서울시 강남구 서초3동 296번지 102-1003 인테리어 잘된 아파트 원합니다~</a></p>
+		 				</td>
+		 				<td>홍길동</td>
+		 				<td>김동산</td>
+		 				<td>완료(컨설팅)</td>
+		 				<td>컨설팅<br>일반 상담</td>
+		 				<td class="num">2014/09/14</td>
+		 				<td class="fc-ylw"><span class="num">2011/5/15</span><span>옐로카드</span></td>
+		 				<td class="num">3</td>
+		 			</tr>
+		 			<tr>
+		 				<td class="num">
+		 					<p class="code">
+		 						<span>PB-1735</span>
+		 						<span>14.07.05</span>
+		 					</p>
+		 				</td>
+		 				<td class="num">B-0011<span>14.07.24</span></td>
+		 				<td>중개<span>구함-매입</span></td>
+		 				<td>주거용<br>아파트</td>
+		 				<td>
+		 					<p class="tl"><a href="#">서울시 강남구 서초3동 296번지 102-1003 인테리어 잘된 아파트 원합니다~</a></p>
+		 				</td>
+		 				<td>홍길동</td>
+		 				<td>김동산</td>
+		 				<td>완료(컨설팅)</td>
+		 				<td>컨설팅<br>일반 상담</td>
+		 				<td class="num">2014/09/14</td>
+		 				<td class="fc-red"><span class="num">2011/5/15</span><span>레드카드</span></td>
+		 				<td class="num">3</td>
+		 			</tr>
+		 			<tr class="l-c">
+		 				<td class="num">
+		 					<p class="code">
+		 						<span>PB-1735</span>
+		 						<span>14.07.05</span>
+		 					</p>
+		 				</td>
+		 				<td class="num">B-0011<span>14.07.24</span></td>
+		 				<td>중개<span>구함-매입</span></td>
+		 				<td>주거용<br>아파트</td>
+		 				<td>
+		 					<p class="tl"><a href="#">서울시 강남구 서초3동 296번지 102-1003 인테리어 잘된 아파트 원합니다~</a></p>
+		 				</td>
+		 				<td>홍길동</td>
+		 				<td>김동산</td>
+		 				<td>완료(컨설팅)</td>
+		 				<td>컨설팅<br>일반 상담</td>
+		 				<td class="num">2014/09/14</td>
+		 				<td class="fc-grn"><span class="num">2011/5/15</span><span>그린카드</span></td>
+		 				<td class="num">3</td>
+		 			</tr>
+		 			<tr>
+		 				<td class="num">
+		 					<p class="code">
+		 						<span>PB-1735</span>
+		 						<span>14.07.05</span>
+		 					</p>
+		 				</td>
+		 				<td class="num">B-0011<span>14.07.24</span></td>
+		 				<td>중개<span>구함-매입</span></td>
+		 				<td>주거용<br>아파트</td>
+		 				<td>
+		 					<p class="tl"><a href="#">서울시 강남구 서초3동 296번지 102-1003 인테리어 잘된 아파트 원합니다~</a></p>
+		 				</td>
+		 				<td>홍길동</td>
+		 				<td>김동산</td>
+		 				<td>완료(컨설팅)</td>
+		 				<td>컨설팅<br>일반 상담</td>
+		 				<td class="num">2014/09/14</td>
+		 				<td class="fc-grn"><span class="num">2011/5/15</span><span>그린카드</span></td>
+		 				<td class="num">3</td>
+		 			</tr>
+		 		</table>
+		 		
+		 		<!-- paging -->
+		 		<div class="paging">
+		 			<a href="#" class="first"><img src="img/btn_page_first.png" alt="처음"></a>
+		 			<a href="#" class="prev"><img src="img/btn_page_prev.png" alt="이전"></a>
+		 			<a href="#" class="on">1</a>
+		 			<a href="#">2</a>
+		 			<a href="#">3</a>
+		 			<a href="#">4</a>
+		 			<a href="#">5</a>
+		 			<a href="#">6</a>
+		 			<a href="#" class="next"><img src="img/btn_page_next.png" alt="다음"></a>
+		 			<a href="#" class="last"><img src="img/btn_page_last.png" alt="마지막"></a>
+		 		</div>
+		 		<!-- // paging -->
+		 	</div>
+		 	<!-- // section-result -->
+		 </div>		
+	</div>
+	<!-- // container -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<div class="clear foot-section">
+			<span class="ci"><img src="img/foot_ci.png" alt="부동산 플래너"></span>
+			<div class="area-box">
+				<ul class="clear top">
+					<li>상호 : (주)부동산플래너<em class="bar">|</em></li>
+					<li>대표 : 송명희<em class="bar">|</em></li>
+					<li>사업자등록번호 : 114-86-49816<em class="bar">|</em></li>
+					<li>통신판매업신고 : 제 2009-서울서초-0176호</li>
+				</ul>
+				
+				<address>
+					주소 : 서울특별시 서초구 서초대로88, 2층 (방배동 938-7 유니온빌딩)<!--
+					--><em class="bar">|</em><span>전화 : 1544-8923</span><!--
+					--><em class="bar">|</em><span>팩스 : 02-549-1898</span>
+				</address>
+				
+				<p class="foot-area bot">
+					이메일 : <a href="mailto:master@vuple.co.kr">master@vuple.co.kr</a><!--
+					--><span class="copy">Copyright &copy; Real Estate Planner Co., Ltd. All Right Reserved.</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

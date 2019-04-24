@@ -1,0 +1,98 @@
+nav.powerlistmenu{
+	position: relative;
+	width: 100%; /* width of menu. Percentage value accepted */
+    height: 100%;
+	min-height: 600px; /* height of menu */
+	overflow: hidden;
+	float:left; 
+}
+
+nav.powerlistmenu div.loadingscreen{ /* DIV that temporarily covers menu while Ajax content being fetched */
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+/*	height: 100%;*/
+	background: black;
+	color: white;
+	font-weight: bold;
+	opacity: 0.7;
+	text-align: center;
+	vertical-align: middle;
+}
+
+nav.powerlistmenu div.loadingscreen > *{ /* center any text/ image inside this DIV */
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+nav.powerlistmenu div.drawer{ /* DIV that surrounds each UL after being flattened */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow-y: auto; /* set y overflow to scroll if needed */
+	left: 0;
+	top: 0;
+	background: white;
+	font-weight: bold;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+nav.powerlistmenu div.drawer.submenu{ /* Targets all but top level UL menu */
+	line-height:1.1rem
+}
+
+nav.powerlistmenu div.drawer div.breadcrumb{ /* Breadcrumb DIV that gets added to top of each sub level UL menu */
+  position: relative;
+  background: #FFF;
+  font-weight: bold;
+  cursor: pointer;
+  margin:20px 0 10px 19%;
+  color:#999
+}
+
+nav.powerlistmenu div.drawer div.breadcrumb span.left{ /* SPAN inside breadcrumb containing "left" arrow markup */
+	position:absolute;
+	top:0;left:-20%;
+	margin-left:20px;
+	font-weight: bold;
+	font-size: 1.1rem;
+	border-right:none;
+	color: #999;
+}
+
+nav div.drawer ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav.powerlistmenu div.drawer ul li{
+	padding:15px 25px;
+	position:relative
+}
+
+
+nav.powerlistmenu div.drawer ul li a{
+  text-decoration: none;
+  display: block;
+  color: #363636;
+}
+
+nav.powerlistmenu div.drawer ul li a:hover{
+  
+}
+
+nav.powerlistmenu div.drawer ul li a span.right{ /* SPAN inside LI headers containing "right" arrow markup */
+	position: absolute;
+	top:15px; left:90%;
+	font-weight: bold;
+	font-size: 1.1rem;
+	border-left:none;
+	width:20px; height:30px
+}

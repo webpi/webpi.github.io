@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1000">
+<title>부동산 관리자 - 의뢰입력</title>
+<link rel="stylesheet" href="css/admin.css" type="text/css">
+</head>
+<body class="bgc">
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="clear main-box">
+			<h1><a href="/"><img src="img/head_ci.png" alt="부동산 플래너"></a></h1>
+				
+			<!-- user info -->
+			<div class="usr-info">
+				<p class="usr">
+					<span class="name"><strong>홍길동</strong> 님</span>
+					<span class="btn-log">로그아웃</span>
+					<a href="#" class="btn-myedit">내정보 수정</a>
+				</p>
+				<ul class="clear card">
+					<li class="grn">그린카드 : 20</li>
+					<li class="ylw">옐로카드 : 20</li>
+					<li class="red">레드카드 : 20</li>
+				</ul>
+			</div>
+			<!-- // user info -->
+			
+			<!-- gnb -->
+			<div id="gnb">
+				<ul class="clear btn-group">
+					<!-- 마우스 오버시 클래스 on 추가  -->
+					<li class="btn-gnb1">
+						<a href="#" class="btn"><span>마이페이지</span></a>
+						<ul class="clear snb sub1">
+							<li class=""><a href="#">확정배정현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">정보변경</a></li>
+							<li class=""><a href="#">주 취급 지역 및 부동산 종류</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb2">
+						<a href="#" class="btn"><span>배정관리</span></a>
+						<ul class="clear snb sub2">
+							<li class=""><a href="#">전체의뢰현황</a></li>
+							<li class=""><a href="#">신규의뢰현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">확정배정현황</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb3 on">
+						<a href="#" class="btn"><span>의뢰관리</span></a>
+						<ul class="clear snb sub3">
+							<li class="on"><a href="#">의뢰입력</a></li>
+							<li class=""><a href="#">전체의뢰현황</a></li>
+							<li class=""><a href="#">신규의회현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">확정배정현황</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb4">
+						<a href="#" class="btn"><span>계정관리</span></a>
+					</li>
+				</ul>
+			</div>
+			<!-- // gnb -->
+		</div>
+	</div>
+	<!-- // header -->
+	
+	<!-- container -->
+	<div id="container">
+		 <div class="main-box">
+		 	<h2 class="ir">의뢰관리</h2>
+		 	<h3 class="h-style3">의뢰입력</h3>
+		 	
+		 	<div class="section-edit">
+		 		<form>
+		 			<fieldset>
+		 				<legend><span>의뢰입력 내용</span></legend>
+		 				<div class="basic">
+			 				<table class="t-style4">
+			 					<caption><span>의뢰입력 상세</span></caption>
+			 					<colgroup>
+			 						<col style="width:120px">
+			 						<col style="width:400px">
+			 						<col style="width:120px">
+			 						<col style="width:">
+			 					</colgroup>
+			 					<tr>
+			 						<th scope="row">접수번호</th>
+			 						<td>PB-0001</td>
+			 						<th scope="row">접수일자</th>
+			 						<td>14.06.23 (년/월/일)</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row"><label for="rm1">유입경로(제휴사명)</label></th>
+			 						<td>
+			 							<select id="rm1">
+			 								<option>IBKPB</option>
+			 							</select>
+			 						</td>
+			 						<th scope="row"></th>
+			 						<td></td>
+			 					</tr>
+			 				</table>
+			 			</div>
+			 			
+			 			<div class="basic2">
+			 				<h4 class="h-style4">제휴고객 담당 정보</h4>
+			 				<table class="t-style4">
+			 					<caption><span>제휴고객 담당 정보 상세</span></caption>
+			 					<colgroup>
+			 						<col style="width:120px">
+			 						<col style="width:400px">
+			 						<col style="width:120px">
+			 						<col style="width:">
+			 					</colgroup>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="rm2">본부명</label>
+			 						</th>
+			 						<td>
+			 							<select id="rm2">
+			 								<option>선택</option>
+			 							</select>
+			 						</td>
+			 						<th scope="row">
+			 							<label for="rm3">지점명</label>
+			 						</th>
+			 						<td>
+			 							<select id="rm3">
+			 								<option>선택</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="rm4">담당자명</label>
+			 						</th>
+			 						<td>
+			 							<input type="text" id="rm4" style="width:164px">
+			 						</td>
+			 						<th scope="row">
+			 							<label for="rm5">직책</label>
+			 						</th>
+			 						<td>
+			 							<select id="rm5">
+			 								<option>차장</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">일반전화</th>
+			 						<td>
+			 							<select title="첫번호">
+			 								<option>02</option>
+			 							</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 							<span class="dir">
+			 								<label for="rm6">(직통)</label>
+			 								<input type="text" id="rm6" style="width:38px">
+			 							</span>
+			 						</td>
+			 						<th scope="row">휴대전화</th>
+			 						<td>
+			 							<select title="첫번호">
+			 								<option>010</option>
+			 							</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">이메일</th>
+			 						<td>
+			 							<input type="text" title="주소명" style="width:90px">
+			 							@
+			 							<input type="text" title="호스트명" style="width:90px">
+			 							<select title="선택">
+			 								<option>NAVER.COM</option>
+			 								<option>직접입력</option>
+			 							</select>
+			 						</td>
+			 						<th scope="row"></th>
+			 						<td></td>
+			 					</tr>
+			 				</table>
+			 				<span class="btn-ctm-cont2"><img src="img/btn_ctm_cont2.png" alt="제휴고객 담당정보 불러오기"></span>
+			 			</div>
+			 			
+			 			<div class="basic2">
+			 				<h4 class="h-style4">제휴사고객 또는 일반고객 정보</h4>
+			 				<table class="t-style4">
+			 					<caption><span>제휴고객 담당 정보 상세</span></caption>
+			 					<colgroup>
+			 						<col style="width:120px">
+			 						<col style="width:400px">
+			 						<col style="width:120px">
+			 						<col style="width:">
+			 					</colgroup>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="rm7">고객구분</label>
+			 						</th>
+			 						<td>
+			 							<select id="rm7">
+			 								<option>선택</option>
+			 							</select>
+			 						</td>
+			 						<th scope="row">
+			 							<label for="rm8">기업명</label>
+			 						</th>
+			 						<td>
+			 							<select id="rm8">
+			 								<option>선택</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="rm9">당점총수신액</label>
+			 						</th>
+			 						<td>
+			 							<input type="text" id="rm9" style="width:164px">
+			 						</td>
+			 						<th scope="row"></th>
+			 						<td></td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row"><label for="rm10">고객명</label></th>
+			 						<td>
+			 							<input type="text" id="rm10" style="width:164px">
+			 						</td>
+			 						<th scope="row"><label for="rm11">직책</label></th>
+			 						<td>
+			 							<select id="rm11">
+			 								<option>선택</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">일반전화</th>
+			 						<td>
+			 							<select title="첫번호">
+			 								<option>02</option>
+			 							</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 							<span class="dir">
+			 								<label for="rm12">(직통)</label>
+			 								<input type="text" id="rm12" style="width:38px">
+			 							</span>
+			 						</td>
+			 						<th scope="row">휴대전화</th>
+			 						<td>
+			 							<select title="첫번호">
+			 								<option>010</option>
+			 							</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">이메일</th>
+			 						<td>
+			 							<input type="text" title="주소명" style="width:90px">
+			 							@
+			 							<input type="text" title="호스트명" style="width:90px">
+			 							<select title="선택">
+			 								<option>NAVER.COM</option>
+			 								<option>직접입력</option>
+			 							</select>
+			 						</td>
+			 						<th scope="row"></th>
+			 						<td></td>
+			 					</tr>
+			 				</table>
+			 				<span class="btn-ctm-info2"><img src="img/btn_ctm_info2.png" alt="제휴사 고객정보 불러오기"></span>
+			 			</div>
+			 			
+			 			<div class="basic2">
+			 				<h4 class="h-style4">의뢰정보</h4>
+			 				<table class="t-style4">
+			 					<caption><span>의뢰정보 상세</span></caption>
+			 					<colgroup>
+			 						<col style="width:120px">
+			 						<col style="">
+			 					</colgroup>
+			 					<tr>
+			 						<th scope="row">의뢰 종류</th>
+			 						<td class="rqst">
+			 							<span><input type="radio" id="rm13" name="r-type"><label for="rm13">컨설팅</label></span>
+			 							<span><input type="radio" id="rm14" name="r-type"><label for="rm14">중개</label></span>
+			 							<select title="의뢰 선택">
+			 								<option>구함-매입</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row"><label for="do1">상담 종류</label></th>
+			 						<td>
+			 							<select id="do1">
+			 								<option>정기 상담</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row" class="vt">상담 희망지역</th>
+			 						<td>
+			 							<ul class="hopearea">
+			 								<li>
+			 									1순위
+			 									<span><input type="radio" id="do2" name="rd"><label for="do2">지번</label></span>
+					 							<span><input type="radio" id="do3" name="rd"><label for="do3">도로명</label></span>
+					 							<select title="분류선택1">
+					 								<option>대분류</option>
+					 							</select>
+					 							<select title="분류선택2">
+					 								<option>중분류</option>
+					 							</select>
+					 							<select title="분류선택3">
+					 								<option>소분류</option>
+					 							</select>
+			 								</li>
+			 								<li>
+			 									2순위
+			 									<span><input type="radio" id="do4" name="rd2"><label for="do4">지번</label></span>
+					 							<span><input type="radio" id="do5" name="rd2"><label for="do5">도로명</label></span>
+					 							<select title="분류선택1">
+					 								<option>대분류</option>
+					 							</select>
+					 							<select title="분류선택2">
+					 								<option>중분류</option>
+					 							</select>
+					 							<select title="분류선택3">
+					 								<option>소분류</option>
+					 							</select>
+			 								</li>
+			 								<li>
+			 									3순위
+			 									<span><input type="radio" id="do6" name="rd3"><label for="do6">지번</label></span>
+					 							<span><input type="radio" id="do7" name="rd3"><label for="do7">도로명</label></span>
+					 							<select title="분류선택1">
+					 								<option>대분류</option>
+					 							</select>
+					 							<select title="분류선택2">
+					 								<option>중분류</option>
+					 							</select>
+					 							<select title="분류선택3">
+					 								<option>소분류</option>
+					 							</select>
+			 								</li>
+			 							</ul>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">상담 희망시간</th>
+			 						<td>
+			 							<select title="시간선택1">
+			 								<option>오전</option>
+			 							</select>
+			 							<select title="시간 선택2">
+			 								<option>00:00</option>
+			 							</select>
+			 							~
+			 							<select title="시간 선택3">
+			 								<option>오전</option>
+			 							</select>
+			 							<select title="시간 선택4">
+			 								<option>00:00</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row" class="vt">의뢰부동산 주소</th>
+			 						<td>
+			 							<ul class="adrs">
+			 								<li>
+			 									<span class="t">지번 주소</span>
+			 									<select title="시/도 선택">
+			 										<option>시/도</option>
+			 									</select>
+			 									<select title="시/군/구 선택">
+			 										<option>시/군/구</option>
+			 									</select>
+			 									<select title="읍/면/동 선택">
+			 										<option>읍/면/동</option>
+			 									</select>
+			 									<input type="text" title="상세주소" style="width:174px">
+			 								</li>
+			 								<li>
+			 									<span class="t">도로명 주소</span>
+			 									<select title="시/도 선택">
+			 										<option>시/도</option>
+			 									</select>
+			 									<select title="시/군/구 선택">
+			 										<option>시/군/구</option>
+			 									</select>
+			 									<select title="읍/면/동 선택">
+			 										<option>읍/면/동</option>
+			 									</select>
+			 									<input type="text" title="상세주소" style="width:174px">
+			 								</li>
+			 							</ul>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row"><label for="rm15">의뢰 제목</label></th>
+			 						<td><input type="text" id="rm15" style="width:625px"></td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row" class="vt"><label for="rm16">의뢰 상세내용</label></th>
+			 						<td><textarea rows="8" cols="40" id="rm16" class="irqst"></textarea></td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row" class="vt">첨부 파일</th>
+			 						<td>
+			 							<div class="file-box">
+				 							<ul class="file-lst">
+				 								<li>
+						 							<div class="file-up">
+														<span class="file-name">2014아파트매매정보.doc</span>
+														<span class="btn-file-del"><img src="img/btn_tb_del.png" alt="삭제"></span>
+													</div>
+												</li>
+												<li>
+						 							<div class="file-up">
+														<span class="file-name">2014아파트매매정보.doc</span>
+														<img src="img/btn_file_find.png" alt="찾기">
+														<input type="file" id="reg5" title="파일찾기">
+													</div>
+												</li>
+											</ul>
+											<span class="file-add"><img src="img/btn_add_tb.png" alt="추가"></span>
+										</div>
+			 						</td>
+			 					</tr>
+			 				</table>
+			 			</div>
+			 			
+			 			<p class="button">
+			 				<input type="button" alt="등록" class="btn-myedit-reg"><!--
+			 				--><input type="reset" alt="재입력" value="" class="btn-myedit-reset">
+			 			</p>
+		 			</fieldset>
+		 		</form>
+		 		
+		 		<!-- 제휴고객 담당정보 불러오기 레이어 -->
+ 				<div class="layer ctm-cont2">
+ 					<p class="t"><strong>제휴고객 담당정보</strong></p>
+ 					<div class="in">
+ 						<div class="srch-top">
+ 							<form>
+ 								<fieldset>
+ 									<legend>검색하기</legend>
+		 							<select title="검색필터">
+		 								<option>담당자 이름</option>
+		 							</select>
+		 							<input type="text" title="검색어">
+		 							<input type="button" class="btn-m-srch" alt="검색">
+		 						</fieldset>
+		 					</form>
+ 						</div>
+
+						<table class="t-style">
+							<caption><span>검색정보리스트</span></caption>
+							<colgroup>
+								<col style="width:90px">
+								<col style="width:90px">
+								<col style="width:54px">
+								<col style="width:100px">
+								<col style="">
+								<col style="width:50px">
+							</colgroup>
+							<tr>
+								<th>제휴사명</th>
+								<th>부서명(지점명)</th>
+								<th>이름</th>
+								<th>휴대전화</th>
+								<th>이메일</th>
+								<th>&nbsp;</th>
+							</tr>
+							<tr>
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+							<tr class="l-c">
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+							<tr>
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+							<tr class="l-c">
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+							<tr>
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+						</table>
+ 					</div>
+ 					<span class="btn-clse"><img src="img/btn_memo_clse.png" alt="닫기"></span>
+ 				</div>
+ 				<!-- // 제휴고객 담당정보 불러오기 레이어 -->
+ 				
+ 				<!-- 제휴사고객 또는 일반고객 정보 레이어 -->
+ 				<div class="layer ctm-info2">
+ 					<p class="t"><strong>제휴사고객 또는 일반고객 정보</strong></p>
+ 					<div class="in">
+ 						<div class="srch-top">
+ 							<form>
+ 								<fieldset>
+ 									<legend>검색하기</legend>
+		 							<select title="검색필터">
+		 								<option>고객 이름</option>
+		 							</select>
+		 							<input type="text" title="검색어">
+		 							<input type="button" class="btn-m-srch" alt="검색">
+		 						</fieldset>
+		 					</form>
+ 						</div>
+
+						<table class="t-style">
+							<caption><span>검색정보리스트</span></caption>
+							<colgroup>
+								<col style="width:90px">
+								<col style="width:90px">
+								<col style="width:54px">
+								<col style="width:100px">
+								<col style="">
+								<col style="width:50px">
+							</colgroup>
+							<tr>
+								<th>제휴사명</th>
+								<th>부서명(지점명)</th>
+								<th>이름</th>
+								<th>휴대전화</th>
+								<th>이메일</th>
+								<th>&nbsp;</th>
+							</tr>
+							<tr>
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+							<tr class="l-c">
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+							<tr>
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+							<tr class="l-c">
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+							<tr>
+								<td>삼성생명</td>
+								<td>서초지점</td>
+								<td>김기수</td>
+								<td class="num">010-1234-1111</td>
+								<td class="num">gisu@naver.com</td>
+								<td><span class="btn-slt"><img src="img/btn_slt.png" alt="선택"></span></td>
+							</tr>
+						</table>
+ 					</div>
+ 					<span class="btn-clse"><img src="img/btn_memo_clse.png" alt="닫기"></span>
+ 				</div>
+ 				<!-- // 제휴사고객 또는 일반고객 정보 레이어 -->
+		 	</div>
+		 </div>		
+	</div>
+	<!-- // container -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<div class="clear foot-section">
+			<span class="ci"><img src="img/foot_ci.png" alt="부동산 플래너"></span>
+			<div class="area-box">
+				<ul class="clear top">
+					<li>상호 : (주)부동산플래너<em class="bar">|</em></li>
+					<li>대표 : 송명희<em class="bar">|</em></li>
+					<li>사업자등록번호 : 114-86-49816<em class="bar">|</em></li>
+					<li>통신판매업신고 : 제 2009-서울서초-0176호</li>
+				</ul>
+				
+				<address>
+					주소 : 서울특별시 서초구 서초대로88, 2층 (방배동 938-7 유니온빌딩)<!--
+					--><em class="bar">|</em><span>전화 : 1544-8923</span><!--
+					--><em class="bar">|</em><span>팩스 : 02-549-1898</span>
+				</address>
+				
+				<p class="foot-area bot">
+					이메일 : <a href="mailto:master@vuple.co.kr">master@vuple.co.kr</a><!--
+					--><span class="copy">Copyright &copy; Real Estate Planner Co., Ltd. All Right Reserved.</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

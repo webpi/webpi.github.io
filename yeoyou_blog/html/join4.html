@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 내 소개 입력</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/ui.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="section-join">
+			<div class="contract-area">
+				<div class="join3">
+					<h2><span>내 소개 입력</span></h2>
+
+					<div class="page">
+						<form>
+							<fieldset>
+								<legend><span>내 소개</span></legend>
+								<div class="contract">
+									<p class="noti">당신을 소개해 주세요.<span><em>1000</em>을 드립니다.</span></p>
+
+									<div class="chk-lst">
+										<div class="lst-box">
+											<h3><span>연예 및 결혼 여부</span></h3>
+											<ul class="clear">
+												<li><input type="checkbox" id="lb-l1"><label for="lb-l1">싱글</label></li>
+												<li><input type="checkbox" id="lb-l2"><label for="lb-l2">연애중</label></li>
+												<li><input type="checkbox" id="lb-l3"><label for="lb-l3">기혼</label></li>
+												<li><input type="checkbox" id="lb-l4"><label for="lb-l4">돌싱</label></li>
+											</ul>
+										</div>
+
+										<div class="lst-box">
+											<h3><span>나의 직업</span></h3>
+											<div class="slt-box">
+												<select title="직업 선택">
+													<option>회사원</option>
+													<option>프리랜서</option>
+													<option>사업</option>
+													<option>자영업</option>
+													<option>공무원</option>
+													<option>전문직</option>
+													<option>학생</option>
+													<option>대학(원)생</option>
+													<option>주부</option>
+													<option>기타</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="lst-box">
+											<h3><span>직장은 어디신가요?</span></h3>
+											<div class="slt-box">
+												<select title="직장 주소 시 선택">
+													<option>서울시</option>
+												</select><!--
+												--><select title="직장 주소 구 선택">
+													<option>강남구</option>
+												</select><!--
+												--><select title="직장 주소 동 선택">
+													<option>삼성동</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="lst-box">
+											<h3><span>학교 소재지는?</span></h3>
+											<div class="slt-box">
+												<select title="학교 주소 시 선택">
+													<option>서울시</option>
+												</select><!--
+												--><select title="학교 주소 구 선택">
+													<option>강남구</option>
+												</select><!--
+												--><select title="학교 주소 동 선택">
+													<option>삼성동</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="lst-box">
+											<h3><span>도넛블로그를 알게 된 경로는?</span></h3>
+											<ul class="clear hn">
+												<li><input type="checkbox" id="lb-hn1"><label for="lb-hn1">지인소개</label></li>
+												<li><input type="checkbox" id="lb-hn2"><label for="lb-hn2">여유포털</label></li>
+												<li><input type="checkbox" id="lb-hn3"><label for="lb-hn3">인터넷검색</label></li>
+												<li><input type="checkbox" id="lb-hn4"><label for="lb-hn4">광고</label></li>
+												<li><input type="checkbox" id="lb-hn5"><label for="lb-hn5">기타경로</label></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<p class="b-group">
+									<span class="btn-donut">
+										<em>500 받기</em>
+										<input type="button" value="500 받기">
+									</span><!--
+									--><span class="btn-jump">건너뛰기</span>
+								</p>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 02. 포스트 작성</title>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container" class="bgc">
+		<div class="section-post">
+			<ol class="clear title">
+				<li><h2><img src="/img/t_post_step1.png" alt="01. 포스트 설정"></h2></li>
+				<li><h2><strong><img src="/img/t_post_step2_on.png" alt="02. 포스트 작성"></strong></h2></li>
+				<li><h2><img src="/img/t_post_step3.png" alt="03. 소개글 작성"></h2></li>
+			</ol>
+
+			<!-- post-area -->
+			<div class="post-area">
+				<form>
+					<fieldset>
+						<legend><span>02. 포스트 작성</span></legend>
+						<!-- 고정형 -->
+						<div class="type-fixed">
+							<table class="tb-post">
+								<caption><span>상세 작성</span></caption>
+								<colgroup>
+									<col style="width:248px">
+									<col>
+								</colgroup>
+								<tr>
+									<th scope="row"><img src="/img/th_post2_step1.png" alt="1 본문 업로드 할 내용의 본문을 작성해 주세요"></th>
+									<td>
+										<div class="box">
+											<!-- 타입 A -->
+											<div class="post-type-a">
+												<div class="clear thumb-reg">
+													<div class="thumb-view">
+														<span class="thumb">
+															<img src="/img/bg_intro2.jpg" alt="">
+															<input type="file" title="파일찾기">
+														</span>
+														
+														<p class="clear thumb-view-bot">
+															<span class="noti">JPG, GIF, PNG, BMP / <em>10MB</em> 이내</span>
+															<span class="btn-post-thumb-del"><img src="/img/btn_post_thumb_del.png" alt="삭제"></span>
+														</p>
+													</div>
+												</div>
+												
+												<div class="itext">
+													<textarea rows="4" cols="40" title="내용" style="height:190px"></textarea>
+												</div>
+
+												<div class="button-type">
+													<span class="btn-post-type-del"><img src="/img/btn_post_type_del.png" alt="삭제"></span>
+												</div>
+											</div>
+											<!-- // 타입 A -->
+
+											<!-- 타입 B -->
+											<div class="post-type-b">
+												<div class="clear thumb-reg">
+													<div class="thumb-view">
+														<span class="thumb">
+															<img src="/img/bg_intro2.jpg" alt="">
+															<input type="file" title="파일찾기">
+														</span>
+
+														<p class="clear thumb-view-bot">
+															<span class="noti">JPG, GIF, PNG, BMP / <em>10MB</em> 이내</span>
+															<span class="btn-post-thumb-del"><img src="/img/btn_post_thumb_del.png" alt="삭제"></span>
+														</p>
+													</div>
+													<div class="thumb-view">
+														<span class="thumb">
+															<img src="/img/bg_intro2.jpg" alt="">
+															<input type="file" title="파일찾기">
+														</span>
+
+														<p class="clear thumb-view-bot">
+															<span class="noti">JPG, GIF, PNG, BMP / <em>10MB</em> 이내</span>
+															<span class="btn-post-thumb-del"><img src="/img/btn_post_thumb_del.png" alt="삭제"></span>
+														</p>
+													</div>
+												</div>
+												
+												<div class="itext">
+													<textarea rows="4" cols="40" title="내용" style="height:190px"></textarea>
+												</div>
+												
+												<div class="button-type">
+													<span class="btn-post-type-del"><img src="/img/btn_post_type_del.png" alt="삭제"></span>
+												</div>
+											</div>
+											<!-- // 타입 B -->
+
+											<span class="btn-post-type-add"><img src="/img/btn_post_type_add.png" alt="추가"></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="lb-tag"><img src="/img/th_post3_step2.png" alt=" 2 태그 태그의 구분은 쉽표입니다.ex)여행,제주도"></label></th>
+									<td>
+										<div class="box">
+											<input type="text" id="lb-tag" class="istyle" style="width:886px" value="재태크, 주식, 부동산">
+										</div>
+									</td>
+								</tr>
+								<tr class="last">
+									<th scope="row"><label for="lb-file"><img src="/img/th_post2_step3.png" alt="4 파일첨부 첨부할 파일을 선택해 주세요."></label></th>
+									<td>
+										<div class="box">
+											<p class="file-att">
+												<span class="btn-find-file">
+													<img src="/img/btn_find_file.png" alt="파일찾기">
+													<input type="file" id="lb-file">
+												</span>
+												<span class="noti">파일은 <strong>5개</strong>까지 등록 가능하며, 파일당 최대 <strong>200M까지</strong> 등록 가능합니다.</span>
+											</p>
+
+											<div class="att-lst">
+												<h4>첨부파일 목록</h4>
+												<ul>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- // 고정형 -->
+
+						<!-- 자유형 -->
+						<div class="type-free">
+							<table class="tb-post">
+								<caption><span>상세 작성</span></caption>
+								<colgroup>
+									<col style="width:248px">
+									<col>
+								</colgroup>
+								<tr>
+									<th scope="row"><img src="/img/th_post2_step1.png" alt="1 본문 업로드 할 내용의 본문을 작성해 주세요"></th>
+									<td>
+										<!-- 에디터 -->
+										<div class="editor">
+										<!-- width:906px height:334px -->
+											<img src="/img/img_editor.jpg" alt="">
+										</div>
+										<!-- // 에디터 -->
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="lb-tag"><img src="/img/th_post3_step2.png" alt=" 2 태그 태그의 구분은 쉽표입니다.ex)여행,제주도"></label></th>
+									<td>
+										<div class="box">
+											<input type="text" id="lb-tag" class="istyle" style="width:886px" value="재태크, 주식, 부동산">
+										</div>
+									</td>
+								</tr>
+								<tr class="last">
+									<th scope="row"><label for="lb-file"><img src="/img/th_post2_step3.png" alt="4 파일첨부 첨부할 파일을 선택해 주세요."></label></th>
+									<td>
+										<div class="box">
+											<p class="file-att">
+												<span class="btn-find-file">
+													<img src="/img/btn_find_file.png" alt="파일찾기">
+													<input type="file" id="lb-file">
+												</span>
+												<span class="noti">파일은 <strong>5개</strong>까지 등록 가능하며, 파일당 최대 <strong>200M까지</strong> 등록 가능합니다.</span>
+											</p>
+
+											<div class="att-lst">
+												<h4>첨부파일 목록</h4>
+												<ul>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+													<li>
+														<div class="clear row">
+															<span class="file-name">파일첨부</span>
+															<span class="file-info">
+																<span>22.8KB</span><!--
+																--><span class="btn-del"><img src="/img/btn_del.gif" alt="삭제"></span>
+															</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- // 자유형 -->
+
+						<div class="btn">
+							<a href="" class="btn-page-prev"><img src="/img/btn_page_prev.png" alt="뒤로"></a>
+							<input type="button" value="임시저장" class="btn-temp-save">
+							<input type="button" value="미리보기" class="btn-post-preview">
+							<input type="button" value="다음" class="btn-page-next">
+						</div>
+
+						<!-- b-group -->
+						<ul class="clear b-group blind">
+							<li><a href=""><img src="/img/btn_post_preview.png" alt="미리보기"></a></li>
+							<li><input type="button" value="임시저장" class="btn-temp-save"></li>
+							<li><input type="button" value="등록하기" class="btn-post-reg"></li>
+						</ul>
+						<!-- // b-group -->
+					</fieldset>
+				</form>
+			</div>
+			<!-- // post-area -->
+		</div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="copy">&copy; 2015 <strong>DONUT Blog</strong> all Right reserved.</span>
+			<ul>
+				<li><a href="#">서비스소개</a></li>
+				<li><a href="#">도움말</a></li>
+				<li><a href="#">제휴문의</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

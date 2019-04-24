@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 02 썸네일 등록</title>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container" class="bgc">
+		<div class="section-post">
+			<ol class="clear title">
+				<li><h2><img src="/img/t_post_step1.png" alt="01. 포스트 설정"></h2></li>
+				<li><h2><strong><img src="/img/t_post_step2_on.png" alt="02. 포스트 작성"></strong></h2></li>
+				<li><h2><img src="/img/t_post_step3.png" alt="03. 소개글 작성"></h2></li>
+			</ol>
+
+			<!-- post-area -->
+			<div class="post-area">
+				<form>
+					<fieldset>
+						<legend><span>01. 포스팅 작성하기</span></legend>
+						<!-- 고정형 -->
+						<div class="">
+							<ol class="thumb-reg">
+								<li>
+									<div class="clear box">
+										<h3><img src="/img/th_post2_step1.png" alt="1 이미지 등록 리스트와 미리보기에서 보여질 이미지를 등록합니다."></h3>
+										<div class="clear thumb-view">
+											<span class="thumb">
+												<!-- 샘플 이미지 개발시 주석 지워주세요-->
+												<img src="http://blog.dev.snsdoma.net/files/uploads/a/anis/post/10/intro/intro_Tulips_1422343666.jpg" alt="크롭된 사진">
+											</span>
+											<p class="file-att">
+												<span class="btn-find-file">
+													<img src="/img/btn_find_file.png" alt="파일찾기">
+													<input type="file" id="lb-file">
+												</span>
+
+												<span class="noti">JPG, GIF, BMP / <em>10MB</em> 이내<br>최적화 이미지 사이즈는 <em>600X400</em> 입니다.</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="clear box">
+										<h3><img src="/img/th_post2_step2.png" alt="2 이미지 크롭 썸네일 이미지로 보여질 영역을 조절하여 폅집합니다."></h3>
+										<!-- 이미지 크롭 -->
+										<div class="img-crop">
+											<div class="cropbox">
+											<!-- 샘플 이미지 개발시 주석 지워주세요-->
+												<img src="http://blog.dev.snsdoma.net/files/uploads/a/anis/post/10/intro/intro_Tulips_1422343666.jpg" alt="크롭할 사진">
+											</div>
+										</div>
+										<!-- // 이미지 크롭 -->
+									</div>
+								</li>
+							</ol>
+						</div>
+						<!-- // 고정형 -->
+
+						<div class="btn">
+							<input type="button" value="임시저장" class="btn-temp-save">
+							<input type="button" value="미리보기" class="btn-post-preview">
+							<input type="button" value="다음" class="btn-page-next">
+						</div>
+
+						<!-- b-group -->
+						<ul class="clear b-group blind">
+							<li><a href=""><img src="/img/btn_post_preview.png" alt="미리보기"></a></li>
+							<li><input type="button" value="임시저장" class="btn-temp-save"></li>
+							<li><input type="button" value="등록하기" class="btn-post-reg"></li>
+						</ul>
+						<!-- // b-group -->
+					</fieldset>
+				</form>
+			</div>
+			<!-- // post-area -->
+		</div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="copy">&copy; 2015 <strong>DONUT Blog</strong> all Right reserved.</span>
+			<ul>
+				<li><a href="#">서비스소개</a></li>
+				<li><a href="#">도움말</a></li>
+				<li><a href="#">제휴문의</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

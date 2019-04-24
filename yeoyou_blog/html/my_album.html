@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="apple-mobile-web-app-title" content="Donut Blog">
+<title>Donut Blog - 내앨범</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="stylesheet" href="/js/jquery.mCustomScrollbar.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu blind">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container" class="bgc">
+		<div class="clear section section-my">
+			<div id="lnb">
+				<!-- 사진 -->
+				<div class="photo-area">
+					<span class="photo">
+						<img src="/img/lnb_photo.jpg" alt="홍길동">
+					</span>
+
+					<span class="edit">
+						<a href="#"><em>프로필 변경</em></a>
+					</span>
+				</div>
+				<!-- // 사진 -->
+
+				<div class="my-area">
+					<span class="name"><strong>도넛 블로그</strong></span>
+					<span class="tit"><img src="/img/img_doma_chef.png" alt="DOMA CHEF"></span>
+
+					<p class="btn">
+						<span class="btn-frnd_app">친구신청</span><!--
+						--><span class="btn-subscribe">구독하기</span>
+					</p>
+				</div>
+
+				<!-- Blog Menu -->
+				<div class="blogMenu-area">
+					<h2>Blog Menu</h2>
+					<!-- 해당 메뉴 on -->
+					<ul class="default">
+						<li class="on">
+							<span class="market"><a href="#">내마켓</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="social"><a href="#">소셜픽</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="friend"><a href="#">친구</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="subscribe"><a href="#">구독</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="myalbum"><a href="#">내앨범</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="manage"><a href="#">카테고리 관리</a></span>
+						</li>
+					</ul>
+
+					<h3 class="stat"><span>통계</span></h3>
+					<ul class="menu">
+						<li>
+							<span>도넛</span>
+							<span class="cnt cnt1">224</span>
+						</li>
+						<li>
+							<span>내글열람</span>
+							<span class="cnt cnt2">224</span>
+						</li>
+						<li>
+							<span>내글 펌</span>
+							<span class="cnt cnt3">224</span>
+						</li>
+					</ul>
+				</div>
+				<!-- // Blog Menu-->
+
+				<!-- 내친구 -->
+				<div class="myFrnd-area">
+					<h3>내친구</h3>
+					<span class="cnt">264명</span>
+
+					<ul>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state"><img src="/img/ico_blu_circle.png" alt="접속중"></span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">13분</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">13분</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">1시간</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">12시간</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- // 내친구 -->
+			</div>
+
+			<div id="main">
+				<div class="main-area">
+					<div class="myalbum-area">
+						<div class="album-main">
+							<h4 class="t-h4">내 앨범</h4>
+
+							<form>
+								<fieldset>
+									<legend><span>내앨범 이미지</span></legend>
+									<ul class="clear album-list">
+										<li>
+											<div class="box">
+												<a href="#" class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%EC%86%8D%EB%8F%84%EC%A0%9C%ED%95%9C-%EA%B7%9C%EC%A0%95-%EC%86%8D%EB%8F%84-40km-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></a>
+												
+												<div class="subject">
+													<i></i>
+													<span>e커머스 시장 '배송경쟁' 드론까지</span>
+												</div>
+												
+												<!-- 클릭시 클래스 on 추가 -->
+												<span class="btn-select on">
+													<label for="lb-slt"><span class="ir">선택</span></label>
+													<input type="checkbox" id="lb-slt" class="visible">
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="box">
+												<a href="#" class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%EB%8F%BC%EC%A7%80-%EA%BB%8D%EB%8D%B0%EA%B8%B0-%EA%B5%AC%EC%9D%B4-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></a>
+												
+												<div class="subject">
+													<i></i>
+													<span>e커머스 시장 '배송경쟁' 드론까지</span>
+												</div>
+
+												<span class="btn-select">
+													<label for="lb-slt2"><span class="ir">선택</span></label>
+													<input type="checkbox" id="lb-slt2" class="visible">
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="box">
+												<a href="#" class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%86%B5%EB%82%98%EB%AC%B4-%EC%95%8C%EB%A1%9D%EB%8B%AC%EB%A1%9D%ED%95%9C-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></a>
+												
+												<div class="subject">
+													<i></i>
+													<span>e커머스 시장 '배송경쟁' 드론까지 e커머스 시장 '배송경쟁' 드론까지</span>
+												</div>
+
+												<span class="btn-select on">
+													<label for="lb-slt3"><span class="ir">선택</span></label>
+													<input type="checkbox" id="lb-slt3" class="visible">
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="box">
+												<a href="#" class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%EC%9E%90%EB%8F%99%EC%B0%A8-%EC%8B%A4%EB%82%B4-%ED%95%B8%EB%93%A4-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></a>
+												
+												<div class="subject">
+													<i></i>
+													<span>e커머스 시장 '배송경쟁' 드론까지</span>
+												</div>
+
+												<span class="btn-select">
+													<label for="lb-slt4"><span class="ir">선택</span></label>
+													<input type="checkbox" id="lb-slt4" class="visible">
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="box">
+												<a href="#" class="thumb"><img src="http://cc0photo.com/wp-content/uploads/edd/2015/07/%ED%8C%8C%EB%9E%80%ED%95%98%EB%8A%98-%ED%8C%8C%EB%9E%80%EC%9E%90%EC%A0%84%EA%B1%B0-%EC%82%AC%EC%A7%84-CC0photo-1560x1040.jpg" alt="e커머스 시장 '배송경쟁' 드론까지"></a>
+												
+												<div class="subject">
+													<i></i>
+													<span>e커머스 시장 '배송경쟁' 드론까지 e커머스 시장 '배송경쟁' 드론까지</span>
+												</div>
+
+												<span class="btn-select">
+													<label for="lb-slt5"><span class="ir">선택</span></label>
+													<input type="checkbox" id="lb-slt5" class="visible">
+												</span>
+											</div>
+										</li>
+									</ul>
+
+									<span class="btn-album-del">선택삭제</span>
+								</fieldset>
+							</form>
+
+							<div class="paging">
+								<a href="#" class="btn-first"><img src="/img/btn_paging_first.gif" alt="처음"></a>
+								<a href="#" class="btn-prev"><img src="/img/btn_paging_prev.gif" alt="이전"></a>
+								<span><a href="#">1</a></span>
+								<span class="on"><a href="#">2</a></span>
+								<span><a href="#">3</a></span>
+								<span><a href="#">4</a></span>
+								<span><a href="#">5</a></span>
+								<a href="#" class="btn-next"><img src="/img/btn_paging_next.gif" alt="다음"></a>
+								<a href="#" class="btn-last"><img src="/img/btn_paging_last.gif" alt="마지막"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="copy">&copy; 2015 <strong>DONUT Blog</strong> all Right reserved.</span>
+			<ul>
+				<li><a href="#">서비스소개</a></li>
+				<li><a href="#">도움말</a></li>
+				<li><a href="#">제휴문의</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+
+<script src="/js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 포스팅 보기</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+<script src="/js/ui.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container" class="bgc">
+		<div class="section-post">
+			<div class="postView-area">
+				<!-- aside -->
+				<div class="aside">
+					<!-- user -->
+					<div class="owner-box">
+						<p class="clear box-top">
+							<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span>
+							<span class="info">
+								<span class="name">바람소리</span>
+								<span class="adrs">서울시 강남구</span>
+							</span>
+						</p>
+
+						<p class="btn2">
+							<span class="btn-frnd_app"><img src="/img/btn_frnd_app2.png" alt="친구신청"></span><!--
+							--><span class="btn-subscribe"><img src="/img/btn_subscribe2.png" alt="구독하기"></span>
+						</p>
+					</div>
+					<!-- // user -->
+
+					<!-- 정보 -->
+					<ul class="stat-cnt">
+						<li>
+							<span class="tt cnt1">도넛먹어</span>
+							<span class="cnt dnt">515,000</span>
+						</li>
+						<li>
+							<span class="tt cnt2">펌</span>
+							<span class="cnt">100</span>
+						</li>
+						<li>
+							<span class="tt cnt3">열람</span>
+							<span class="cnt">51</span>
+						</li>
+					</ul>
+					<!-- // 정보 -->
+
+					<div class="tags">
+						<p>Tags</p>
+						<ul class="cleart">
+							<li><span class="tag"><span>Tag 1</span></span></li>
+							<li><span class="tag"><span>Tag 1</span></span></li>
+							<li><span class="tag"><span>가나다라마바사아자차카</span></span></li>
+							<li><span class="tag"><span>Tag 1</span></span></li>
+							<li><span class="tag"><span>Tag 1</span></span></li>
+						</ul>
+					</div>
+
+					<span class="btn-share"><img src="/img/btn_share2.png" alt="글 퍼트리기"></span>
+				</div>
+				<!-- // aside -->
+
+				<!-- view -->
+				<div class="view">
+					<div class="view-head">
+						<h2>꿈과 미래를 위해 달려갑니다.</h2>
+						<p class="info">
+							<span class="name">by  <em>강대욱</em></span><!--
+							--><span>재테크</span><!--
+							--><span> 2014.12.22  오후 1:22</span>
+						</p>
+						<p class="modify">
+							<span class="btn-edit"><img src="/img/btn_viewHead_edit.gif" alt="수정"></span><!--
+							--><span class="btn-del"><img src="/img/btn_viewHead_del.gif" alt="삭제"></span>
+						</p>
+						<span class="post-public"><img src="/img/img_post_close.png" alt="비공개" title="비공개 글"></span>
+						<!-- 전체공개 img_post_public.png / 친구공개 img_post_frnd.png / alt와 title 텍스트 같이 변경 -->
+					</div>
+
+					<div class="conts">
+						<p class="att_file_name"><strong>첨부파일</strong> : Filename.jpg, Filename.jpg</p>
+
+						<div class="media">
+							
+						</div>
+
+						<div class="txt">
+							<p>주식시장에서.. 수익내기 차~암 힘들죠??아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각합니다.이상으로.. 주식투자 전략 & 주식투자 노하우 [정책편]이였습니다.<br>
+							시세의 강도는 코스닥>코스피보다 강하므로 종목을 주식시장에서.. 수익내기 차~암 힘들죠?? 아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각  합니다. 이상으로.. 주식투자 전략 & 주식투자 노하우 [정책편]이였습니다.</p>
+							<p>주식시장에서.. 수익내기 차~암 힘들죠??아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각합니다.이상으로.. 주식투자 전략 & 주식투자 노하우 [정책편]이였습니다.<br>
+							시세의 강도는 코스닥>코스피보다 강하므로 종목을 주식시장에서.. 수익내기 차~암 힘들죠?? 아마.. 대부분... 누구나 수익을 거둘 수 있다고 생각  합니다. 이상으로.. 주식투자 전략 & 주식투자 노하우 [정책편]이였습니다.</p>
+						</div>
+						
+						<div class="lately-edit">
+							<span>최근수정 : 2017.07.21</span>
+							<ul class="blind">
+								<li>2017.07.21</li>
+								<li>2017.07.21</li>
+								<li>2017.07.21</li>
+								<li>2017.07.21</li>
+							</ul>
+						</div>
+
+						<div class="button-group">
+							<span class="btn-donut-send"><span>도넛먹어</span></span>
+						</div>
+					</div>
+
+					<!-- view-tail -->
+					<div class="clear view-tail">
+						<!-- 평점 -->
+						<div class="clear grade">
+							<div class="star">
+								<span class="tt">평점</span><!--
+								--><span class="star-score">
+									<span class="star-score-in" style="width:40%"><em class="ir">2</em></span>
+								</span>
+							</div>
+							<span class="average">9.16 <em>(34명)</em></span>
+						</div>
+						<!-- // 평점 -->
+
+						<!-- // 추천 / 비추천 -->
+						<div class="recmm">
+							<span class="btn-rec on"><span><em class="ir">추천</em>82229</span></span><!--
+							--><span class="btn-non on"><span><em class="ir">비추천</em>8</span></span>
+						</div>
+						<!-- // 추천 / 비추천 -->
+					</div>
+					<!-- // view-tail -->
+				</div>
+				<!-- // view -->
+
+				<!-- 리뷰 / 댓글 -->
+				<div class="review-n-cmnt">
+					<!-- 활성화 on -->
+					<ul class="clear tab">
+						<li class="on"><h3>리뷰 <span>5</span></h3></li>
+						<li class=""><h3>댓글 <span>5</span></h3></li>
+					</ul>
+
+					<!-- 리뷰 -->
+					<div class="tab-review">
+						<h4 class="ir">리뷰 보기</h4>
+
+						<!-- cmnt -->
+						<div class="cmnt">
+							<h4 class="ir">댓글</h4>
+							<p class="cnt">
+								<span>5 COMMENTS</span>
+							</p>
+							<!-- 댓글 쓰기 -->
+							<div class="icmnt">
+								<form>
+									<fieldset>
+										<legend><span>댓글 쓰기</span></legend>
+										<div class="icmnt-box">
+											<!-- 사진 -->
+											<span class="photo"></span>
+											<!-- // 사진 -->
+
+											<!-- ifield -->
+											<div class="ifield igrade">
+												<!-- 평점 -->
+												<div class="grade">
+													<span class="star-score">
+														<!-- 0 20 40 60 80 100 별 갯수 -->
+														<span class="star-score-in" style="width:40%">
+															<em class="score">2</em>
+														</span>
+
+														<!-- 별 클릭 -->
+														<span class="star btn-score1"><em class="ir">별1</em></span>
+														<span class="star btn-score2"><em class="ir">별2</em></span>
+														<span class="star btn-score3"><em class="ir">별3</em></span>
+														<span class="star btn-score4"><em class="ir">별4</em></span>
+														<span class="star btn-score5"><em class="ir">별5</em></span>
+														<!-- // 별 클릭 -->
+													</span>
+												</div>
+												<!-- // 평점 -->
+
+												<span class="itext"><textarea cols="40" rows="4" title="쓰기"></textarea></span>
+												<span class="word-chk">0/1000자</span>
+											</div>
+											<!-- // ifield -->
+
+											<input type="button" class="btn-cmnt-reg" value="등록">
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<!-- // 댓글 쓰기 -->
+
+							<ul class="cmnt-lst">
+								<li>
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="star-score">
+													<!-- 0 20 40 60 80 100 별 갯수 -->
+													<span class="star-score-in" style="width:40%">
+														<em class="score">2</em>
+													</span>
+												</span>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+											<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글" title="답글쓰기"></span><!--
+											--><span class="btn-cmnt-edit"><img src="/img/btn_cmnt_edit.png" alt="수정" title="수정하기"></span><!--
+											--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제" title="삭제하기"></span>
+										</span>
+									</div>
+								</li>
+								<li>
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="star-score">
+													<!-- 0 20 40 60 80 100 별 갯수 -->
+													<span class="star-score-in" style="width:40%">
+														<em class="score">2</em>
+													</span>
+												</span>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+											<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글" title="답글쓰기"></span><!--
+											--><span class="btn-cmnt-cncl"><img src="/img/btn_cmnt_cncl.png" alt="수정취소" title="수정취소"></span><!--
+											--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+										</span>
+									</div>
+								</li>
+								<li class="reply">
+									<!-- 답글은 li reply 추가 -->
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="star-score">
+													<!-- 0 20 40 60 80 100 별 갯수 -->
+													<span class="star-score-in" style="width:40%">
+														<em class="score">2</em>
+													</span>
+												</span>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+											<p class="txt">
+												<span class="reply-name">홍길동2</span>우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후
+											</p>
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글" title="답글쓰기"></span><!--
+											--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+										</span>
+									</div>
+								</li>
+								<li>
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="star-score">
+													<!-- 0 20 40 60 80 100 별 갯수 -->
+													<span class="star-score-in" style="width:40%">
+														<em class="score">2</em>
+													</span>
+												</span>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+											<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글" title="답글쓰기"></span><!--
+											--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+										</span>
+									</div>
+								</li>
+								<li>
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+
+											<!-- 댓글 쓰기 -->
+											<div class="icmnt">
+												<form>
+													<fieldset>
+														<legend><span>댓글 쓰기</span></legend>
+														<div class="icmnt-box">
+															<!-- ifield -->
+															<div class="ifield igrade">
+																<!-- 평점 -->
+																<div class="grade">
+																	<span class="star-score">
+																		<!-- 0 20 40 60 80 100 별 갯수 -->
+																		<span class="star-score-in" style="width:40%">
+																			<em class="score">2</em>
+																		</span>
+
+																		<!-- 별 클릭 -->
+																		<span class="star btn-score1"><em class="ir">별1</em></span>
+																		<span class="star btn-score2"><em class="ir">별2</em></span>
+																		<span class="star btn-score3"><em class="ir">별3</em></span>
+																		<span class="star btn-score4"><em class="ir">별4</em></span>
+																		<span class="star btn-score5"><em class="ir">별5</em></span>
+																		<!-- // 별 클릭 -->
+																	</span>
+																</div>
+																<!-- // 평점 -->
+
+																<span class="itext"><textarea cols="40" rows="4" title="쓰기"></textarea></span>
+																<span class="word-chk">0/1000자</span>
+															</div>
+															<!-- // ifield -->
+
+															<input type="button" class="btn-cmnt-reg" value="등록">
+														</div>
+													</fieldset>
+												</form>
+											</div>
+											<!-- // 댓글 쓰기 -->
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn_cmnt_add_cncl"><img src="/img/btn_cmnt_add_cncl.png" alt="답글취소" title="답글취소"></span>
+										</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- // cmnt -->
+					</div>
+					<!-- // 리뷰 -->
+
+					<!-- 댓글 -->
+					<div class="tab-cmnt">
+						<h4 class="ir">댓글보기</h4>
+
+						<!-- cmnt -->
+						<div class="cmnt">
+							<h4 class="ir">댓글</h4>
+							<p class="cnt">
+								<span>5 COMMENTS</span>
+							</p>
+							<!-- 댓글 쓰기 -->
+							<div class="icmnt">
+								<form>
+									<fieldset>
+										<legend><span>댓글 쓰기</span></legend>
+										<div class="icmnt-box">
+											<!-- 사진 -->
+											<span class="photo"></span>
+											<!-- // 사진 -->
+
+											<!-- ifield -->
+											<div class="ifield">
+												<span class="itext"><textarea cols="40" rows="4" title="쓰기"></textarea></span>
+												<span class="word-chk">0/1000자</span>
+											</div>
+											<!-- // ifield -->
+
+											<input type="button" class="btn-cmnt-reg" value="등록">
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<!-- // 댓글 쓰기 -->
+
+							<ul class="cmnt-lst">
+								<li>
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+											<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글" title="답글쓰기"></span><!--
+											--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+										</span>
+									</div>
+								</li>
+								<li>
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+											<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글" title="답글쓰기"></span><!--
+											--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+										</span>
+									</div>
+								</li>
+								<li class="reply">
+									<!-- 답글은 li reply 추가 -->
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+											<p class="txt">
+												<span class="reply-name">홍길동2</span>우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후
+											</p>
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글" title="답글쓰기"></span><!--
+											--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+										</span>
+									</div>
+								</li>
+								<li>
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+											<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글" title="답글쓰기"></span><!--
+											--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+										</span>
+									</div>
+								</li>
+								<li>
+									<div class="clear cmnt-box">
+										<!-- 사진 -->
+										<span class="photo"></span>
+										<!-- // 사진 -->
+										<div class="conts">
+											<p>
+												<span class="name">홍길동</span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</p>
+
+											<!-- 댓글 쓰기 -->
+											<div class="icmnt">
+												<form>
+													<fieldset>
+														<legend><span>댓글 쓰기</span></legend>
+														<div class="icmnt-box">
+															<!-- ifield -->
+															<div class="ifield">
+																<span class="itext"><textarea cols="40" rows="4" title="쓰기"></textarea></span>
+																<span class="word-chk">0/1000자</span>
+															</div>
+															<!-- // ifield -->
+
+															<input type="button" class="btn-cmnt-reg" value="등록">
+														</div>
+													</fieldset>
+												</form>
+											</div>
+											<!-- // 댓글 쓰기 -->
+										</div>
+
+										<span class="b-cmnt">
+											<span class="btn_cmnt_add_cncl"><img src="/img/btn_cmnt_add_cncl.png" alt="답글취소" title="답글취소"></span>
+										</span>
+										</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- // cmnt -->
+					</div>
+					<!-- // 댓글 -->
+				</div>
+				<!-- // 리뷰 / 댓글 -->
+
+				<!-- 뒤로 가기 -->
+				<span class="btn-location-prev">
+					<a href="#"><img src="/img/btn_location_prev.png" alt="뒤로"></a>
+				</span>
+				<!-- // 뒤로 가기 -->
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="copy">&copy; 2015 <strong>DONUT Blog</strong> all Right reserved.</span>
+			<ul>
+				<li><a href="#">서비스소개</a></li>
+				<li><a href="#">도움말</a></li>
+				<li><a href="#">제휴문의</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

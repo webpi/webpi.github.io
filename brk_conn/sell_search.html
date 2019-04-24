@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>KOREN 새대한부동산중개망 매물관리 - 내 매물</title>
+<link rel="stylesheet" href="css/comm.css" type="text/css">
+<link rel="stylesheet" href="css/sub.css" type="text/css">
+</head>
+<body class="bgc">
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="clear head">
+			<h1><a href="/"><img src="img/h1_ci.png" alt="KOREN 새대한부동산중개망"></a></h1>
+			<div class="clear usr-box">
+				<ul class="clear info">
+					<li class="welcome"><strong>홍길동</strong>님 환영합니다!</li>
+					<li>이번달 쪽지: <span>50</span>/200개</li>
+					<li>이번달 문자: <span>30</span>/300개</li>
+				</ul>
+				
+				<ul class="clear btn-group">
+					<li><span class="btn-logout"><img src="img/btn_head_logout.png" alt="로그아웃"></span></li>
+					<li><a href="#"><img src="img/btn_head_my.png" alt="내정보 수정"></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="clear nav">
+			<!-- gnb -->
+			<div id="gnb">
+				<ul class="clear menu">
+					<li class="active">
+						<a href="#" class="btn-gnb1"><span>매물관리</span></a>
+						<!-- snb -->
+						<div class="snb snb1">
+							<ul class="clear">
+								<li class="on"><a href="#"><span>내 매물</span></a></li>
+								<li><a href="#"><span>관심매물</span></a></li>
+								<li><a href="#"><span>정보망매물</span></a></li>
+								<li><a href="#"><span>동호회매물</span></a></li>
+							</ul>
+							<i></i>
+						</div>
+						<!-- // snb -->
+					</li>
+					<li>
+						<a href="#" class="btn-gnb2"><span>구함관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn-gnb3"><span>고객관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn-gnb4"><span>일정관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn-gnb5"><span>커뮤니티</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn-gnb6"><span>계약관리</span></a>
+					</li>
+					<li class="">
+						<a href="#" class="btn-gnb7"><span>내정보관리</span></a>
+						<!-- snb -->
+						<div class="snb snb7">
+							<ul class="clear">
+								<li class="on"><a href="#"><span>중개사무소 정보</span></a></li>
+								<li><a href="#"><span>주거래지역설정</span></a></li>
+								<li><a href="#"><span>주거래매물설정</span></a></li>
+								<li><a href="#"><span>알림설정</span></a></li>
+								<li><a href="#"><span>비공개설정</span></a></li>
+								<li><a href="#"><span>사업자서류관리</span></a></li>
+								<li><a href="#"><span>동호회 관리</span></a></li>
+							</ul>
+							<i></i>
+						</div>
+						<!-- // snb -->
+					</li>
+				</ul>
+			</div>
+			<!-- // gnb -->
+			
+			<!-- anb -->
+			<ul class="anb">
+				<li><a href="#">쪽지</a></li>
+				<li><a href="#">문자</a></li>
+				<li><a href="#">현금영수증</a></li>
+				<li><a href="#">메물공개기준</a></li>
+				<li class="useful-site">
+					<span>유용한 사이트</span>
+					<ul class="">
+						<li><a href="#">aaa.com</a></li>
+						<li><a href="#">aaa.com</a></li>
+						<li><a href="#">aaa.com</a></li>
+						<li><a href="#">aaa.com</a></li>
+						<li><a href="#">aaa.com</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- anb -->
+		</div>
+	</div>
+	<!-- // header -->
+	
+	<!-- container -->
+	<div id="container">
+		<div class="main">
+			<h2 class="ir">매물관리</h2>
+			<!-- section-search -->
+			<div class="section-search">
+				<div class="search-box">
+					<form>
+						<fieldset>
+							<legend>매물 검색</legend>
+							<span class="cell cell-1">
+								<span><input type="radio" id="rdo1" name="rdo-group"><label for="rdo1">전체</label></span>
+								<span><input type="radio" id="rdo2" name="rdo-group"><label for="rdo2">매매</label></span>
+								<span><input type="radio" id="rdo3" name="rdo-group"><label for="rdo3">전세</label></span>
+								<span><input type="radio" id="rdo4" name="rdo-group"><label for="rdo4">월세</label></span>
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c1">부동산종류</label><!--
+								--><input type="text" id="lb-c1" value="아파트" readonly="readonly" class="istyle" style="width:135px"><!--
+								--><span class="btn-slt"><img src="img/btn_chk.png" alt="선택"></span>
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c2">테마선택</label><!--
+								--><input type="text" id="lb-c2" value="신축5년이내" readonly="readonly" class="istyle" style="width:174px"><!--
+								--><span class="btn-slt"><img src="img/btn_chk.png" alt="선택"></span>
+							</span>
+							
+							<span class="cell cell-3">
+								<span><input type="checkbox" id="lb-c3"><label for="lb-c3">비공개</label></span><!--
+								--><span><input type="checkbox" id="lb-c4"><label for="lb-c4">추천</label></span>
+							</span>
+							<br>
+							
+							<span class="cell cell-2">
+								<label for="lb-c5">물건성격</label><!--
+								--><select id="lb-c5" class="sstyle">
+									<option>진행중</option>
+								</select>
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c6">매물확인일</label><!--
+								--><select id="lb-c6" class="sstyle">
+									<option>10일 이내</option>
+								</select>
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c7">주소</label><!--
+								--><select id="lb-c7" class="sstyle">
+									<option>시/도 전체</option>
+								</select><!--
+								--><select title="시/군/구 선택" class="sstyle">
+									<option>시/군/구 전체</option>
+								</select><!--
+								--><select title="읍/면/동 선택" class="sstyle">
+									<option>읍/면/동 전체</option>
+								</select>
+							</span>
+							
+							<span class="cell cell-3">
+								<span><input type="checkbox" id="lb-c8"><label for="lb-c8">주거래지역</label></span>
+							</span>
+							<br>
+							
+							<span class="cell cell-4">
+								<select title="선택" class="sstyle">
+									<option>전용면적</option>
+								</select><!--
+								--><input type="text" class="istyle tel" style="width:38px" title="최소">
+								~
+								<input type="text" class="istyle tel" style="width:38px" title="최대"><em>m<sup>2</sup></em>
+							</span>
+							
+							<span class="cell cell-4">
+								<select title="선택" class="sstyle">
+									<option>매매가</option>
+								</select><!--
+								--><input type="text" class="istyle tel" style="width:48px" title="최소">
+								~
+								<input type="text" class="istyle tel" style="width:48px" title="최대"><em>만원</em>
+							</span>
+							
+							<span class="cell cell-4">
+								<select title="선택" class="sstyle">
+									<option>단지명</option>
+								</select><!--
+								--><input type="text" class="istyle tel" style="width:140px" title="단지명 입력">
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-9">방수</label>
+								<input type="text" id="lb-c9" class="istyle tel" style="width:38px" title="최소"> 개
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c10">옵션</label><!--
+								--><select id="lb-c10" class="sstyle">
+									<option>풀옵션</option>
+								</select>
+							</span>
+							
+							<input type="button" class="btn-search" alt="검색">
+						</fieldset>
+					</form>
+				</div>
+				
+				<!-- 부동산 종류 -->
+				<div class="pop real-estate">
+					<p class="pop-sj">부동산 종류</p>
+					<form>
+						<fieldset>
+							<legend>부동산 종류 선택 리스트</legend>
+							<div class="estate-box">					
+								<ul class="out-ul">
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-es1"><label for="lb-es1">아파트</label></li>
+											<li><input type="checkbox" id="lb-es2"><label for="lb-es2">아파트분양권</label></li>
+											<li><input type="checkbox" id="lb-es3"><label for="lb-es3">주상복합</label></li>
+											<li><input type="checkbox" id="lb-es4"><label for="lb-es4">주상복합분양권</label></li>
+											<li><input type="checkbox" id="lb-es5"><label for="lb-es5">연립</label></li>
+											<li><input type="checkbox" id="lb-es6"><label for="lb-es6">빌라</label></li>
+											<li><input type="checkbox" id="lb-es7"><label for="lb-es7">다세대</label></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-es8"><label for="lb-es8">오피스텔</label></li>
+											<li><input type="checkbox" id="lb-es9"><label for="lb-es9">오피스텔분양권</label></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-es10"><label for="lb-es10">단독</label></li>
+											<li><input type="checkbox" id="lb-es11"><label for="lb-es11">다가구</label></li>
+											<li><input type="checkbox" id="lb-es12"><label for="lb-es12">상가주택</label></li>
+											<li><input type="checkbox" id="lb-es13"><label for="lb-es13">원룸</label></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-es14"><label for="lb-es14">상가점포</label></li>
+											<li><input type="checkbox" id="lb-es15"><label for="lb-es15">사무실</label></li>
+										</ul>
+									</li>
+									<li>
+										<input type="checkbox" id="lb-es16"><label for="lb-es16">빌딩</label>
+									</li>
+									<li><input type="checkbox" id="lb-es17"><label for="lb-es17">토지</label></li>
+									<li><input type="checkbox" id="lb-es18"><label for="lb-es18">재개발</label></li>
+									<li><input type="checkbox" id="lb-es19"><label for="lb-es19">숙박</label></li>
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-es20"><label for="lb-es20">펜션</label></li>
+											<li><input type="checkbox" id="lb-es21"><label for="lb-es21">전원주택</label></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-es22"><label for="lb-es22">공장</label></li>
+											<li><input type="checkbox" id="lb-es23"><label for="lb-es23">아파트형공장</label></li>
+											<li><input type="checkbox" id="lb-es24"><label for="lb-es24">창고</label></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<p class="button"><input type="button" class="btn-ok" alt="확인"></p>
+						</fieldset>
+					</form>
+					
+					<span class="clse"><img src="img/btn_pop_clse.png" alt="닫기"></span>
+				</div>
+				<!-- // 부동산 종류 -->
+				
+				<!-- 테마 선택 -->
+				<div class="pop theme">
+					<p class="pop-sj">테마 선택</p>
+					<form>
+						<fieldset>
+							<legend>테마 선택 리스트</legend>
+							<div class="theme-box">					
+								<ul class="clear out-ul">
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-tm1"><label for="lb-tm1">신축5년이내</label></li>
+											<li><input type="checkbox" id="lb-tm2"><label for="lb-tm2">신축3년이내</label></li>
+											<li><input type="checkbox" id="lb-tm3"><label for="lb-tm3">신축1년이내</label></li>
+											<li><input type="checkbox" id="lb-tm4"><label for="lb-tm4">신축 첫 입주</label></li>
+											<li><input type="checkbox" id="lb-tm5"><label for="lb-tm5">입주3개월미만 남음</label></li>
+											<li><input type="checkbox" id="lb-tm6"><label for="lb-tm6">1000가구이상 대단지</label></li>
+											<li><input type="checkbox" id="lb-tm7"><label for="lb-tm7">관리비 저렴</label></li>
+											<li><input type="checkbox" id="lb-tm8"><label for="lb-tm8">전철역 도보5분이내</label></li>
+											<li><input type="checkbox" id="lb-tm9"><label for="lb-tm9">전철역 도보10분이내</label></li>
+											<li><input type="checkbox" id="lb-tm10"><label for="lb-tm10">전철역 도보15분이내</label></li>
+											<li><input type="checkbox" id="lb-tm11"><label for="lb-tm11">경전철 도보5분이내</label></li>
+											<li><input type="checkbox" id="lb-tm12"><label for="lb-tm12">경전철 도보10분이내</label></li>
+											<li><input type="checkbox" id="lb-tm13"><label for="lb-tm13">경전철 도보15분이내</label></li>
+											<li><input type="checkbox" id="lb-tm14"><label for="lb-tm14">로얄층</label></li>
+											<li><input type="checkbox" id="lb-tm15"><label for="lb-tm15">로얄동</label></li>
+											<li><input type="checkbox" id="lb-tm16"><label for="lb-tm16">전매가능</label></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-tm17"><label for="lb-tm17">시세보다 저렴</label></li>
+											<li><input type="checkbox" id="lb-tm18"><label for="lb-tm18">양도소득세 면제</label></li>
+											<li><input type="checkbox" id="lb-tm19"><label for="lb-tm19">대지지분 넓음</label></li>
+											<li><input type="checkbox" id="lb-tm20"><label for="lb-tm420">동절기일조5시간이상</label></li>
+											<li><input type="checkbox" id="lb-tm21"><label for="lb-tm21">동절기일조3시간이상</label></li>
+											<li><input type="checkbox" id="lb-tm22"><label for="lb-tm22">공동현관문 CCTV</label></li>
+											<li><input type="checkbox" id="lb-tm23"><label for="lb-tm23">공동현관문 카드키</label></li>
+											<li><input type="checkbox" id="lb-tm24"><label for="lb-tm24">골목길 CCTV</label></li>
+											<li><input type="checkbox" id="lb-tm25"><label for="lb-tm25">평지</label></li>
+											<li><input type="checkbox" id="lb-tm26"><label for="lb-tm26">경사지</label></li>
+											<li><input type="checkbox" id="lb-tm27"><label for="lb-tm27">정원있음</label></li>
+											<li><input type="checkbox" id="lb-tm28"><label for="lb-tm28">주차장</label></li>
+											<li><input type="checkbox" id="lb-tm29"><label for="lb-tm29">어린이공원 근접</label></li>
+											<li><input type="checkbox" id="lb-tm30"><label for="lb-tm30">공원 근접</label></li>
+											<li><input type="checkbox" id="lb-tm31"><label for="lb-tm31">산책로 근접</label></li>
+											<li><input type="checkbox" id="lb-tm32"><label for="lb-tm32">산 근접</label></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-tm33"><label for="lb-tm33">시5m도로 접함</label></li>
+											<li><input type="checkbox" id="lb-tm34"><label for="lb-tm34">6m도로 접함</label></li>
+											<li><input type="checkbox" id="lb-tm35"><label for="lb-tm35">9m도로 접함</label></li>
+											<li><input type="checkbox" id="lb-tm36"><label for="lb-tm36">12m도로 접함</label></li>
+											<li><input type="checkbox" id="lb-tm37"><label for="lb-tm37">15m도로 접함</label></li>
+											<li><input type="checkbox" id="lb-tm38"><label for="lb-tm38">18m도로 접함</label></li>
+											<li><input type="checkbox" id="lb-tm39"><label for="lb-tm39">24m도로 접함</label></li>
+											<li><input type="checkbox" id="lb-tm40"><label for="lb-tm40">수리됨 CCTV</label></li>
+											<li><input type="checkbox" id="lb-tm41"><label for="lb-tm41">아이키우기 좋음</label></li>
+											<li><input type="checkbox" id="lb-tm42"><label for="lb-tm42">교육환경 좋음</label></li>
+											<li><input type="checkbox" id="lb-tm43"><label for="lb-tm43">노인정 근접</label></li>
+											<li><input type="checkbox" id="lb-tm44"><label for="lb-tm44">보건소 근접</label></li>
+											<li><input type="checkbox" id="lb-tm45"><label for="lb-tm45">스포츠센터 근접</label></li>
+											<li><input type="checkbox" id="lb-tm46"><label for="lb-tm46">솔로 편의시설 다양</label></li>
+											<li><input type="checkbox" id="lb-tm47"><label for="lb-tm47">생활 편의시설 다양</label></li>
+											<li><input type="checkbox" id="lb-tm48"><label for="lb-tm48">유흥가 근접</label></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="clear">
+											<li><input type="checkbox" id="lb-tm49"><label for="lb-tm49">유흥가 없는</label></li>
+											<li><input type="checkbox" id="lb-tm50"><label for="lb-tm50">재래시장 근접</label></li>
+											<li><input type="checkbox" id="lb-tm51"><label for="lb-tm51">대형마트 근접</label></li>
+											<li><input type="checkbox" id="lb-tm52"><label for="lb-tm52">중소형마트 근접</label></li>
+											<li><input type="checkbox" id="lb-tm53"><label for="lb-tm53">중심상권 근접</label></li>
+											<li><input type="checkbox" id="lb-tm54"><label for="lb-tm54">먹자골목 근접</label></li>
+											<li><input type="checkbox" id="lb-tm55"><label for="lb-tm55">쇼핑센터 근접</label></li>
+											<li><input type="checkbox" id="lb-tm56"><label for="lb-tm56">신도시 근접</label></li>
+											<li><input type="checkbox" id="lb-tm57"><label for="lb-tm57">뉴타운 근접</label></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<p class="button"><input type="button" class="btn-ok" alt="확인"></p>
+						</fieldset>
+					</form>
+					
+					<span class="clse"><img src="img/btn_pop_clse.png" alt="닫기"></span>
+				</div>
+				<!-- // 테마 선택 -->
+			</div>
+			<!-- // section-search -->
+			
+			<!-- section-lst -->
+			<div class="section-lst">
+				<h3 class="t2-h3">내 매물</h3>
+				<div class="clear top-menu">
+					<!-- 버튼이 링크일 경우 span을 a태그로 수정 -->
+					<span class="btn-fav-sell"><img src="img/btn_fav_sell.png" alt="관심매물지정"></span>
+					<span class="btn-day-edit"><img src="img/btn_day_edit.png" alt="확인일수정"></span>
+					<span class="btn-mk-prnt"><img src="img/btn_mk_prnt.png" alt="홍보물인쇄"></span>
+					<span class="btn-del"><img src="img/btn_del.png" alt="삭제"></span>				
+					<span class="btn-sell-reg"><img src="img/btn_sell_reg.png" alt="매물등록"></span>
+				</div>
+				
+				<table class="tb2">
+					<caption><span>아파트, 아파트 분양권, 주상복합, 주상복합 분양권 전체 검색결과</span></caption>
+					<colgroup>
+						<col style="width:30px">
+						<col style="width:34px">
+						<col style="width:42px">
+						<col style="width:42px">
+						<col style="width:70px">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:70px">
+						<col style="width:70px">
+						<col style="width:50px">			
+					</colgroup>
+					<tr>
+						<th scope="col"><input type="checkbox" title="전체선택"></th>
+						<th scope="col">공개</th>
+						<th scope="col">상태</th>
+						<th scope="col">구분</th>
+						<th scope="col">부동산종류</th>
+						<th scope="col">공급</th>
+						<th scope="col">전용</th>
+						<th scope="col">읍면동리</th>
+						<th scope="col">단지명</th>
+						<th scope="col">동</th>
+						<th scope="col">호</th>
+						<th scope="col">층</th>
+						<th scope="col">매매가</th>
+						<th scope="col">보증금</th>
+						<th scope="col">월세</th>
+						<th scope="col">융자금</th>
+						<th scope="col">룸수</th>
+						<th scope="col">욕실수</th>
+						<th scope="col">매물확인일</th>
+						<th scope="col">등록일</th>
+						<th scope="col"></th>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택"></td>
+						<td><img src="img/ico_public.png" alt="공개"></td>
+						<td>일반</td>
+						<td>매매</td>
+						<td>아파트</td>
+						<td>1355</td>
+						<td>418</td>
+						<td>방배1동</td>
+						<td>신동아3차</td>
+						<td>103</td>
+						<td>104</td>
+						<td>2/20</td>
+						<td>4억</td>
+						<td>3000만</td>
+						<td>100만</td>
+						<td>1억</td>
+						<td>3</td>
+						<td>1</td>
+						<td>14-09-25</td>
+						<td>14-09-25</td>
+						<td><a href="#"><img src="img/btn_edit.png" alt="수정"></a></td>
+					</tr>
+				</table>
+				
+				<!-- paging -->
+		 		<div class="paging">
+		 			<a href="#" class="prev"><img src="img/btn_page_prev.png" alt="이전"></a>
+		 			<a href="#" class="on">1</a>
+		 			<a href="#">2</a>
+		 			<a href="#">3</a>
+		 			<a href="#">4</a>
+		 			<a href="#">5</a>
+		 			<a href="#">6</a>
+		 			<a href="#" class="next"><img src="img/btn_page_next.png" alt="다음"></a>
+		 		</div>
+		 		<!-- // paging -->
+			</div>
+			<!-- // section-lst -->
+		</div>
+	</div>
+	<!-- // container -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<div class="clear">
+			<span class="foot-ci"><img src="img/foot_ci.png" alt="새대한공인중개사협회"></span>
+			<div class="section-foot">
+				<ul class="clear">
+					<li><strong>법인명</strong>: (사)새대한공인중개사협회</li>
+					<li><strong>사업자등록번호</strong>: 214-82-14185</li>
+					<li><strong>대표자</strong>: 최용일</li>
+					<li><strong>주소</strong>: 서울특별시 구로구 공원로 81, B01호 (구로동, 엘림빌딩) <a href="#" class="foot-map"><img src="img/btn_foot_map.png" alt="지도보기"></a></li>
+					<li class="clear-lft"><strong>개인정보관리책임자</strong>: 새대한공인중개사협회 중앙회</li>
+					<li><strong>대표번호</strong>: 02)585-4210</li>
+					<li><strong>팩스</strong>: 02)585-4250</li>
+					<li><strong>협회홈페이지</strong>: <a href="http://www.lak.or.kr/" target="_blank">http://www.lak.or.kr/</a></li>
+				</ul>
+				<p class="copy">Copyright&copy; (사)새대한공인중개사협회. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 소셜픽 사진보기</title>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<a href="#"><img src="/img/btn_login.png" alt="로그인"></a>
+			</div>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container" class="bgc">
+		<div class="section-socialPic">
+			<!-- 사진 보기 -->
+			<div class="photo-area">
+				<div class="blog-photo">
+					<!-- 사진 리스트 -->
+					<div class="clear blog-photoLst">
+						<h2>도넛블로그 도넛블로그</h2>
+
+						<div class="photo-lst">
+							<div class="slide">
+								<!-- 선택된 li on -->
+								<ul class="clear" style="width:200%">
+									<li class="on"><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+									<li><img src="/img/img_photo.jpg" alt="사진이름"></li>
+								</ul>
+							</div>
+							<span class="btn-prev"><img src="/img/btn_photoLst_prev.gif" alt="이전"></span>
+							<span class="btn-next"><img src="/img/btn_photoLst_next.gif" alt="다음"></span>
+
+							<span class="cnt">1/20</span>
+						</div>
+					</div>
+					<!-- // 사진 리스트 -->
+
+					<!-- photo-main -->
+					<div class="clear photo-main">
+						<!-- 사진 원본 -->
+						<div class="photo-box">
+							<div class="photo-ogn">
+								<div class="photo">
+									<img src="/img/img_photo.jpg" alt="사진이름">
+								</div>
+
+								<span class="btn-prev"><img src="/img/btn_photoBox_prev.png" alt="이전"></span>
+								<span class="btn-next"><img src="/img/btn_photoBox_next.png" alt="다음"></span>
+							</div>
+
+							<!-- cmnt -->
+							<div class="cmnt">
+								<p class="cnt">
+									<span>5 COMMENTS</span>
+								</p>
+
+								<!-- 댓글 쓰기 -->
+								<div class="icmnt">
+									<form>
+										<fieldset>
+											<legend><span>댓글 쓰기</span></legend>
+											<div class="icmnt-box">
+												<!-- 사진 -->
+												<span class="photo"></span>
+												<!-- // 사진 -->
+
+												<!-- ifield -->
+												<div class="ifield">
+													<span class="itext"><textarea cols="40" rows="4" title="쓰기"></textarea></span>
+													<span class="word-chk">0/1000자</span>
+												</div>
+												<!-- // ifield -->
+
+												<input type="button" class="btn-cmnt-reg" value="등록">
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<!-- // 댓글 쓰기 -->
+
+								<ul class="cmnt-lst">
+									<li>
+										<div class="clear cmnt-box">
+											<!-- 사진 -->
+											<span class="photo"></span>
+											<!-- // 사진 -->
+											<div class="conts">
+												<p>
+													<span class="name">홍길동</span><!--
+													--><span class="date">2014.12.22  오후 1:22</span>
+												</p>
+												<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+											</div>
+
+											<span class="b-cmnt">
+												<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글"></span><!--
+												--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+											</span>
+										</div>
+									</li>
+									<li class="reply">
+										<!-- 답글은 li reply 추가 -->
+										<div class="clear cmnt-box">
+											<!-- 사진 -->
+											<span class="photo"></span>
+											<!-- // 사진 -->
+											<div class="conts">
+												<p>
+													<span class="name">홍길동</span><!--
+													--><span class="date">2014.12.22  오후 1:22</span>
+												</p>
+												<p class="txt">
+													<span class="reply-name">홍길동2</span>우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후
+												</p>
+											</div>
+
+											<span class="b-cmnt">
+												<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글"></span><!--
+												--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+											</span>
+										</div>
+									</li>
+									<li class="reply">
+										<!-- 답글은 li reply 추가 -->
+										<div class="clear cmnt-box">
+											<!-- 사진 -->
+											<span class="photo"></span>
+											<!-- // 사진 -->
+											<div class="conts">
+												<p>
+													<span class="name">홍길동</span><!--
+													--><span class="date">2014.12.22  오후 1:22</span>
+												</p>
+												<p class="txt">
+													<span class="reply-name">홍길동2</span>우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후
+												</p>
+											</div>
+
+											<span class="b-cmnt">
+												<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글"></span><!--
+												--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="clear cmnt-box">
+											<!-- 사진 -->
+											<span class="photo"></span>
+											<!-- // 사진 -->
+											<div class="conts">
+												<p>
+													<span class="name">홍길동</span><!--
+													--><span class="date">2014.12.22  오후 1:22</span>
+												</p>
+												<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+											</div>
+
+											<span class="b-cmnt">
+												<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글"></span><!--
+												--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="clear cmnt-box">
+											<!-- 사진 -->
+											<span class="photo"></span>
+											<!-- // 사진 -->
+											<div class="conts">
+												<p>
+													<span class="name">홍길동</span><!--
+													--><span class="date">2014.12.22  오후 1:22</span>
+												</p>
+												<p class="txt">우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후 우리 아가들의 '먹고, 삶고, 사랑하고'를 위한 아가사랑 플러스의 3가지 삶음 코스를 영상으로 확인 후</p>
+											</div>
+
+											<span class="b-cmnt">
+												<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글"></span><!--
+												--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="clear cmnt-box">
+											<!-- 사진 -->
+											<span class="photo"></span>
+											<!-- // 사진 -->
+											<div class="conts">
+												<p>
+													<span class="name">홍길동</span><!--
+													--><span class="date">2014.12.22  오후 1:22</span>
+												</p>
+
+												<!-- 댓글 쓰기 -->
+												<div class="icmnt">
+													<form>
+														<fieldset>
+															<legend><span>댓글 쓰기</span></legend>
+															<div class="icmnt-box">
+																<!-- ifield -->
+																<div class="ifield">
+																	<span class="itext"><textarea cols="40" rows="4" title="쓰기"></textarea></span>
+																	<span class="word-chk">0/1000자</span>
+																</div>
+																<!-- // ifield -->
+
+																<input type="button" class="btn-cmnt-reg" value="등록">
+															</div>
+														</fieldset>
+													</form>
+												</div>
+												<!-- // 댓글 쓰기 -->
+											</div>
+
+											<span class="b-cmnt">
+												<span class="btn-cmnt-add"><img src="/img/btn_cmnt_add.png" alt="답글"></span><!--
+												--><span class="btn-del"><img src="/img/btn_cmnt_del.png" alt="삭제"></span>
+											</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- // cmnt -->
+						</div>
+						<!-- // 사진 원본 -->
+
+						<!-- aside -->
+						<div class="aside">
+							<div class="owner-box">
+								<p class="clear box-top">
+									<span class="thumb"><img src="/img/lnb_photo.jpg" alt="홍길동"></span>
+									<span class="info">
+										<span class="name">금강 휴게소에서...</span>
+										<span class="date">by 강대욱 <em>2014.12.22</em></span>
+									</span>
+								</p>
+							</div>
+
+							<div class="photo-info">
+								<span class="tt">Photo Info</span>
+								<span class="info">2350 x 1872 PX,<em class="bar">|</em>549KB<em class="bar">|</em>jpeg</span>
+							</div>
+
+							<ul class="stat-cnt">
+								<li>
+									<span class="tt cnt1">도넛먹어</span>
+									<span class="cnt dnt">515,000</span>
+								</li>
+								<li>
+									<span class="tt cnt2">펌</span>
+									<span class="cnt">100</span>
+								</li>
+								<li>
+									<span class="tt cnt3">열람</span>
+									<span class="cnt">51</span>
+								</li>
+							</ul>
+
+							<div class="donut-cnt">
+								<ul>
+									<li>
+										<span class="tt cnt1">개인소장용</span>
+										<span class="cnt">200</span>
+									</li>
+									<li>
+										<span class="tt cnt2">전체공개</span>
+										<span class="cnt">2,200</span>
+									</li>
+								</ul>
+
+								<span class="btn-donut-buy"><a href="#"><img src="/img/btn_donut_buy.png" alt="구매하기"></a></span>
+							</div>
+
+							<div class="tags">
+								<span class="tt">Tags</span>
+								<span class="lst">산, 하늘, 강</span>
+							</div>
+						</div>
+						<!-- // aside -->
+					</div>
+					<!-- // photo-main -->
+				</div>
+			</div>
+			<!-- // 사진 보기 -->
+		</div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="copy">&copy; 2015 <strong>DONUT Blog</strong> all Right reserved.</span>
+			<ul>
+				<li><a href="#">서비스소개</a></li>
+				<li><a href="#">도움말</a></li>
+				<li><a href="#">제휴문의</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

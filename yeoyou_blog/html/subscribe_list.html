@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="apple-mobile-web-app-title" content="Donut Blog">
+<title>Donut Blog - 구독 포스트 리스트</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container" class="bgc">
+		<div class="clear section section-my">
+			<div id="lnb">
+				<!-- 사진 -->
+				<div class="photo-area">
+					<span class="photo">
+						<img src="/img/lnb_photo.jpg" alt="홍길동">
+					</span>
+
+					<span class="edit">
+						<a href="#"><em>프로필 변경</em></a>
+					</span>
+				</div>
+				<!-- // 사진 -->
+
+				<div class="my-area">
+					<span class="name"><strong>도넛 블로그</strong></span>
+					<span class="tit"><img src="/img/img_doma_chef.png" alt="DOMA CHEF"></span>
+
+					<p class="btn">
+						<span class="btn-frnd_app">친구신청</span><!--
+						--><span class="btn-subscribe">구독하기</span>
+					</p>
+				</div>
+
+				<!-- Blog Menu -->
+				<div class="blogMenu-area">
+					<h2>Blog Menu</h2>
+					<!-- 해당 메뉴 on -->
+					<ul class="default">
+						<li class="on">
+							<span class="market"><a href="#">내마켓</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="social"><a href="#">소셜픽</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="friend"><a href="#">친구</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="subscribe"><a href="#">구독</a></span>
+							<span class="cnt">224</span>
+						</li>
+						<li>
+							<span class="manage"><a href="#">카테고리 관리</a></span>
+						</li>
+					</ul>
+
+					<h3 class="stat"><span>통계</span></h3>
+					<ul class="menu">
+						<li>
+							<span>도넛</span>
+							<span class="cnt cnt1">224</span>
+						</li>
+						<li>
+							<span>내글열람</span>
+							<span class="cnt cnt2">224</span>
+						</li>
+						<li>
+							<span>내글 펌</span>
+							<span class="cnt cnt3">224</span>
+						</li>
+					</ul>
+				</div>
+				<!-- // Blog Menu-->
+
+				<!-- 내친구 -->
+				<div class="myFrnd-area">
+					<h3>내친구</h3>
+					<span class="cnt">264명</span>
+
+					<ul>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state"><img src="/img/ico_blu_circle.png" alt="접속중"></span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">13분</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">13분</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">1시간</span>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<span class="photo"><img src="/img/lnb_photo2.jpg" alt="홍길동"></span><!--
+								--><span class="name">홍길동</span>
+								<span class="link-state">12시간</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- // 내친구 -->
+			</div>
+
+			<div id="main">
+				<div class="main-area">
+					<!-- 카테고리 -->
+					<div class="my-category my-subscribe">
+						<div class="clear conts-lst-top">
+							<div class="lst-search">
+								<select title="정렬순서">
+									<option>최근순</option>
+									<option>추천순</option>
+									<option>댓글순</option>
+									<option>평점순</option>
+									<option>도넛먹어 높은순</option>
+									<option>도넛먹어 낮은순</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 리스트 -->
+						<div class="conts-lst">
+							<!-- 공통 결과 없음 -->
+							<p class="not"><em>구독 내용</em>이 없습니다.</p>
+							<!-- // 공통 결과 없음 -->
+
+							<ul class="clear">
+								<li>
+									<div class="box">
+										<div class="top">
+											<a href="#">
+												<span class="thumb">
+													<img src="/img/img_conts.png" alt="주식 투자전략 &amp; 주식투자 노하우">
+												</span>
+												<span class="clear info">
+													<span class="rema-days">6일남음</span>
+													<span class="pub">친구공개</span>
+												</span>
+											</a>
+										</div>
+
+										<div class="conts">
+											<div class="conts-in">
+												<h4><a href="#">주식 투자전략 &amp; 주식투자 노하우 주식 투자전략 &amp; 주식투자 노하우</a></h4>
+												<p class="txt"><a href="#">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 &amp; 주식</a></p>
+											</div>
+
+											<div class="writer">
+												<span class="photo">
+													<img src="/img/lnb_photo2.jpg" alt="홍길동">
+												</span><!--
+												--><span class="name"><a href="#">by 홍길동</a></span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</div>
+										</div>
+
+										<div class="conts-info">
+											<ul class="clear">
+												<li><em class="ir">도넛</em><span class="cnt1">2316</span></li>
+												<li><em class="ir">추천</em><span class="cnt2">37</span></li>
+												<li><em class="ir">댓글</em><span class="cnt3">4</span></li>
+												<li><em class="ir">구독</em><span class="cnt4">426</span></li>
+											</ul>
+											<span class="ct">재테크</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="box">
+										<div class="top">
+											<a href="#">
+												<span class="thumb">
+													<img src="/img/img_conts.png" alt="주식 투자전략 &amp; 주식투자 노하우">
+												</span>
+												<span class="clear info">
+													<span class="rema-days">6일남음</span>
+													<span class="pub">친구공개</span>
+												</span>
+											</a>
+										</div>
+
+										<div class="conts">
+											<div class="conts-in">
+												<h4><a href="#">주식 투자전략 &amp; 주식투자 노하우</a></h4>
+												<p class="txt"><a href="#">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 &amp; 주식 >주식시장에서.. 수익내기 차~암 힘들죠?</a></p>
+											</div>
+
+											<div class="writer">
+												<span class="photo">
+													<img src="/img/lnb_photo2.jpg" alt="홍길동">
+												</span><!--
+												--><span class="name"><a href="#">by 홍길동</a></span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</div>
+										</div>
+
+										<div class="conts-info">
+											<ul class="clear">
+												<li><em class="ir">도넛</em><span class="cnt1">2316</span></li>
+												<li><em class="ir">추천</em><span class="cnt2">37</span></li>
+												<li><em class="ir">댓글</em><span class="cnt3">4</span></li>
+												<li><em class="ir">구독</em><span class="cnt4">426</span></li>
+											</ul>
+											<span class="ct">재테크</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="box">
+										<div class="top">
+											<a href="#">
+												<span class="thumb">
+													<img src="/img/img_conts.png" alt="주식 투자전략 &amp; 주식투자 노하우">
+												</span>
+												<span class="clear info">
+													<span class="rema-days">6일남음</span>
+													<span class="pub">친구공개</span>
+												</span>
+											</a>
+										</div>
+
+										<div class="conts">
+											<div class="conts-in">
+												<h4><a href="#">주식 투자전략 &amp; 주식투자 노하우 주식 투자전략 &amp; 주식투자 노하우</a></h4>
+												<p class="txt"><a href="#">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 &amp; 주식</a></p>
+											</div>
+
+											<div class="writer">
+												<span class="photo">
+													<img src="/img/lnb_photo2.jpg" alt="홍길동">
+												</span><!--
+												--><span class="name"><a href="#">by 홍길동</a></span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</div>
+										</div>
+
+										<div class="conts-info">
+											<ul class="clear">
+												<li><em class="ir">도넛</em><span class="cnt1">2316</span></li>
+												<li><em class="ir">추천</em><span class="cnt2">37</span></li>
+												<li><em class="ir">댓글</em><span class="cnt3">4</span></li>
+												<li><em class="ir">구독</em><span class="cnt4">426</span></li>
+											</ul>
+											<span class="ct">재테크</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="box">
+										<div class="top">
+											<a href="#">
+												<span class="thumb">
+													<img src="/img/img_conts.png" alt="주식 투자전략 &amp; 주식투자 노하우">
+												</span>
+												<span class="clear info">
+													<span class="rema-days">6일남음</span>
+													<span class="pub">친구공개</span>
+												</span>
+											</a>
+										</div>
+
+										<div class="conts">
+											<div class="conts-in">
+												<h4><a href="#">주식 투자전략 &amp; 주식투자 노하우</a></h4>
+												<p class="txt"><a href="#">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 &amp; 주식 >주식시장에서.. 수익내기 차~암 힘들죠?</a></p>
+											</div>
+
+											<div class="writer">
+												<span class="photo">
+													<img src="/img/lnb_photo2.jpg" alt="홍길동">
+												</span><!--
+												--><span class="name"><a href="#">by 홍길동</a></span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</div>
+										</div>
+
+										<div class="conts-info">
+											<ul class="clear">
+												<li><em class="ir">도넛</em><span class="cnt1">2316</span></li>
+												<li><em class="ir">추천</em><span class="cnt2">37</span></li>
+												<li><em class="ir">댓글</em><span class="cnt3">4</span></li>
+												<li><em class="ir">구독</em><span class="cnt4">426</span></li>
+											</ul>
+											<span class="ct">재테크</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="box">
+										<div class="top">
+											<a href="#">
+												<span class="thumb">
+													<img src="/img/img_conts.png" alt="주식 투자전략 &amp; 주식투자 노하우">
+												</span>
+												<span class="clear info">
+													<span class="rema-days">6일남음</span>
+													<span class="pub">친구공개</span>
+												</span>
+											</a>
+										</div>
+
+										<div class="conts">
+											<div class="conts-in">
+												<h4><a href="#">주식 투자전략 &amp; 주식투자 노하우 주식 투자전략 &amp; 주식투자 노하우</a></h4>
+												<p class="txt"><a href="#">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 &amp; 주식</a></p>
+											</div>
+
+											<div class="writer">
+												<span class="photo">
+													<img src="/img/lnb_photo2.jpg" alt="홍길동">
+												</span><!--
+												--><span class="name"><a href="#">by 홍길동</a></span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</div>
+										</div>
+
+										<div class="conts-info">
+											<ul class="clear">
+												<li><em class="ir">도넛</em><span class="cnt1">2316</span></li>
+												<li><em class="ir">추천</em><span class="cnt2">37</span></li>
+												<li><em class="ir">댓글</em><span class="cnt3">4</span></li>
+												<li><em class="ir">구독</em><span class="cnt4">426</span></li>
+											</ul>
+											<span class="ct">재테크</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="box">
+										<div class="top">
+											<a href="#">
+												<span class="thumb">
+													<img src="/img/img_conts.png" alt="주식 투자전략 &amp; 주식투자 노하우">
+												</span>
+												<span class="clear info">
+													<span class="rema-days">6일남음</span>
+													<span class="pub">친구공개</span>
+												</span>
+											</a>
+										</div>
+
+										<div class="conts">
+											<div class="conts-in">
+												<h4><a href="#">주식 투자전략 &amp; 주식투자 노하우</a></h4>
+												<p class="txt"><a href="#">주식시장에서.. 수익내기 차~암 힘들죠? 아마,대부분... 누구나 수익을 주식투자 전략 &amp; 주식 >주식시장에서.. 수익내기 차~암 힘들죠?</a></p>
+											</div>
+
+											<div class="writer">
+												<span class="photo">
+													<img src="/img/lnb_photo2.jpg" alt="홍길동">
+												</span><!--
+												--><span class="name"><a href="#">by 홍길동</a></span><!--
+												--><span class="date">2014.12.22  오후 1:22</span>
+											</div>
+										</div>
+
+										<div class="conts-info">
+											<ul class="clear">
+												<li><em class="ir">도넛</em><span class="cnt1">2316</span></li>
+												<li><em class="ir">추천</em><span class="cnt2">37</span></li>
+												<li><em class="ir">댓글</em><span class="cnt3">4</span></li>
+												<li><em class="ir">구독</em><span class="cnt4">426</span></li>
+											</ul>
+											<span class="ct">재테크</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- // 리스트 -->
+
+						<!-- 더보기 -->
+						<span class="btn-more-lst">
+							<span><img src="/img/img_more_lst.png" alt="더보기"></span>
+						</span>
+						<!-- // 더보기 -->
+
+						<!-- top 바로가기 / 자동 더보기 -->
+						<div class="side-sky-wrap">
+							<div class="sky-wrap">
+								<div class="side-sky">
+									<span class="btn-top"><em>TOP</em></span>
+									<span class="auto-view">
+										<input type="checkbox" id="lb-auto"><label for="lb-auto">자동 더보기</label>
+									</span>
+								</div>
+							</div>
+						</div>
+						<!-- // top 바로가기 / 자동 더보기 -->
+					</div>
+					<!-- // 카테고리 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="copy">&copy; 2015 <strong>DONUT Blog</strong> all Right reserved.</span>
+			<ul>
+				<li><a href="#">서비스소개</a></li>
+				<li><a href="#">도움말</a></li>
+				<li><a href="#">제휴문의</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+
+<script src="/js/ui.js"></script>
+</body>
+</html>

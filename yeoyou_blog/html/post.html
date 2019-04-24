@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 01. 포스트 설정하기</title>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/donut.css">
+<link rel="stylesheet" type="text/css" href="/css/manager.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container" class="bgc">
+		<div class="section-post">
+			<ol class="clear title">
+				<li><h2><strong><img src="/img/t_post_step1_on.png" alt="01. 포스트 설정"></strong></h2></li>
+				<li><h2><img src="/img/t_post_step2.png" alt="02. 포스트 작성"></h2></li>
+				<li><h2><img src="/img/t_post_step3.png" alt="03. 소개글 작성"></h2></li>
+			</ol>
+
+			<!-- post-area -->
+			<div class="post-area">
+				<form>
+					<fieldset>
+						<legend><span>01. 포스트 설정하기</span></legend>
+						<table class="tb-post">
+							<caption><span>상세 작성</span></caption>
+							<colgroup>
+								<col style="width:248px">
+								<col>
+							</colgroup>
+							<tr>
+								<th scope="row"><label for="lb-sj"><img src="/img/th_post1_step1.png" alt="1 제목 작성할 내용의 카테고리와 제목을 작성해주세요."></label></th>
+								<td>
+									<div class="box">
+										<p class="show-first"><input type="checkbox" id="lb-s-f"> <label for="lb-s-f">우선 게시 <span>(른 사람이 당신의 글을‘)</label></p>
+
+										<select class="sstyle s-ca" title="카테고리 선택" style="width:181px">
+											<option value="">내 카테고리</option>
+										</select><!--
+										--><input type="text" id="lb-sj" class="istyle i-sj" style="width:696px">
+										<span class="word-limit">0/30자</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="lb-sc"><img src="/img/th_post1_step2_subject.png" alt="2 주제선택 작성할 내용의 주제를 선택해 주세요."></label></th>
+								<td>
+									<div class="box">
+										<div class="sj-form">
+											<span class="sj-choice">
+												<input type="text" id="lb-sc" class="istyle" style="width:159px" value="공통주제">
+												<em><img src="/img/ico_menu_on.png" alt="주제선택메뉴"></em>
+											</span>
+
+											<!-- 주제선택 레이어 -->
+											<div class="sj-lst blind">
+												<p class="not-choice"><input type="radio" id="lb-lst" name="comm-sj" checked="checked"><label for="lb-lst">선택안함</label></p>
+
+												<div class="clear lst-box">
+													<div class="lst">
+														<p class="t-cate"><strong>생활·건강·노하우</strong></p>
+														<ul>
+															<li><input type="radio" id="lb-lst2" name="comm-sj"><label for="lb-lst2">일상/좋은글/생각</label></li>
+															<li><input type="radio" id="lb-lst3" name="comm-sj"><label for="lb-lst3">요리/레시피</label></li>
+															<li><input type="radio" id="lb-lst4" name="comm-sj"><label for="lb-lst4">육아/결혼</label></li>
+															<li><input type="radio" id="lb-lst5" name="comm-sj"><label for="lb-lst5">패션/뷰티</label></li>
+															<li><input type="radio" id="lb-lst6" name="comm-sj"><label for="lb-lst6">건강/의학</label></li>
+															<li><input type="radio" id="lb-lst7" name="comm-sj"><label for="lb-lst7">반려동물</label></li>
+															<li><input type="radio" id="lb-lst8" name="comm-sj"><label for="lb-lst8">인테리어/DIY</label></li>
+															<li><input type="radio" id="lb-lst9" name="comm-sj"><label for="lb-lst9">상품리뷰</label></li>
+														</ul>
+													</div>
+
+													<div class="lst">
+														<p class="t-cate"><strong>취미·여가·여행</strong></p>
+														<ul>
+															<li><input type="radio" id="lb-lst10" name="comm-sj"><label for="lb-lst10">여행</label></li>
+															<li><input type="radio" id="lb-lst11" name="comm-sj"><label for="lb-lst11">맛집</label></li>
+															<li><input type="radio" id="lb-lst12" name="comm-sj"><label for="lb-lst12">사진</label></li>
+															<li><input type="radio" id="lb-lst13" name="comm-sj"><label for="lb-lst13">스포츠</label></li>
+															<li><input type="radio" id="lb-lst14" name="comm-sj"><label for="lb-lst14">자동차</label></li>
+															<li><input type="radio" id="lb-lst15" name="comm-sj"><label for="lb-lst15">취미</label></li>
+															<li><input type="radio" id="lb-lst16" name="comm-sj"><label for="lb-lst16">게임</label></li>
+														</ul>
+													</div>
+
+													<div class="lst">
+														<p class="t-cate"><strong>문화·엔터테인먼트</strong></p>
+														<ul>
+															<li><input type="radio" id="lb-lst17" name="comm-sj"><label for="lb-lst17">영화</label></li>
+															<li><input type="radio" id="lb-lst18" name="comm-sj"><label for="lb-lst18">음악</label></li>
+															<li><input type="radio" id="lb-lst19" name="comm-sj"><label for="lb-lst19">문화/예술</label></li>
+															<li><input type="radio" id="lb-lst20" name="comm-sj"><label for="lb-lst20">방송/연예</label></li>
+															<li><input type="radio" id="lb-lst21" name="comm-sj"><label for="lb-lst21">스타</label></li>
+															<li><input type="radio" id="lb-lst22" name="comm-sj"><label for="lb-lst22">만화/애니</label></li>
+														</ul>
+													</div>
+
+													<div class="lst">
+														<p class="t-cate"><strong>정보·시사</strong></p>
+														<ul>
+															<li><input type="radio" id="lb-lst23" name="comm-sj"><label for="lb-lst23">IT/Tech</label></li>
+															<li><input type="radio" id="lb-lst24" name="comm-sj"><label for="lb-lst24">사회/경제/정치</label></li>
+															<li><input type="radio" id="lb-lst25" name="comm-sj"><label for="lb-lst25">교육/학문/어학</label></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<!-- // 주제선택 -->
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr class="align">
+								<th scope="row"><img src="/img/th_post3_step3.png" alt="3 공개설정"></th>
+								<td>
+									<div class="box radio-group">
+										<span><input type="radio" id="lb-pbc" name="public-set" checked="checked"><label for="lb-pbc">전체공개</label></span><!--
+										--><span><input type="radio" id="lb-frnd" name="public-set"><label for="lb-frnd">친구만공개</label></span><!--
+										--><span><input type="radio" id="lb-clse" name="public-set"><label for="lb-clse">비공개</label></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><img src="/img/th_post3_step4.png" alt="4 저작권설 업로드할 내용의 본문을 작생해 주세요."></th>
+								<td>
+									<div class="box">
+										<ul class="copyrighter">
+											<li>
+												<span class="cell">
+													<span class="btn-copyrighter-app"><img src="/img/btn_copyrighter_app.png" alt="저작권자 신청하기"></span>
+												</span>
+												<span class="noti">콘텐츠를 판매하시려면 저작권자 신청을 하셔야 합니다.</span>
+											</li>
+											<li>
+												<span class="cell radio-group">
+													<span><input type="radio" id="lb-perm" name="perm" checked="checked"><label for="lb-perm">펌 허용</label></span><!--
+													--><span><input type="radio" id="lb-perm2" name="perm"><label for="lb-perm2">펌 허용안함</label></span>
+												</span>
+												<span class="noti">다른 사람이 당신의 글을 ‘펌’할 수 있도록 설정합니다.</span>
+
+												<!-- 펌허용시 -->
+												<div class="donut-price">
+													<ul>
+														<li>
+														<span class="cell">
+															<label for="lb-donut">펌료</label><input type="text" id="lb-donut" style="width:96px"> 도넛
+														</span>
+														<span class="noti">다른사람이 이글을 펌할 경우 필요한 도넛(금액)입니다.</span>
+													</li>
+													<li>
+														<span class="cell">
+															<label for="lb-donut2">열람료</label><input type="text" id="lb-donut2" style="width:96px"> 도넛
+														</span>
+														<span class="noti">다른사람이 이글을 열람할 경우 필요한 도넛(금액)입니다.</span>
+													</li>
+												</div>
+												<!-- // 펌허용시 -->
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<!-- 4번일때 이미지명 th_post1_step4_type --><img src="/img/th_post1_step5_type.png" alt="포스트 타입 작성할 포스트의 타입을 선택해 주세요">
+								</th>
+								<td>
+									<div class="box">
+										<ul class="clear post-type-select">
+											<li>
+												<input type="radio" id="lb-atype" name="ab-type" checked="checked"><label for="lb-atype">고정형<img src="/img/img_post_type_ab.png" alt="타입A, 타입B"></label>
+											</li>
+											<li><input type="radio" id="lb-btype" name="ab-type"><label for="lb-btype">자유형<img src="/img/img_post_type_free.png" alt="타입A, 타입B"></label></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</table>
+
+						<div class="btn">
+							<input type="button" value="임시저장" class="btn-temp-save">
+							<input type="button" value="미리보기" class="btn-post-preview">
+							<input type="button" value="다음" class="btn-page-next">
+						</div>
+
+						<!-- b-group -->
+						<ul class="clear b-group blind">
+							<li><a href=""><img src="/img/btn_post_preview.png" alt="미리보기"></a></li>
+							<li><input type="button" value="임시저장" class="btn-temp-save"></li>
+							<li><input type="button" value="등록하기" class="btn-post-reg"></li>
+						</ul>
+						<!-- // b-group -->
+					</fieldset>
+				</form>
+			</div>
+			<!-- // post-area -->
+		</div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="copy">&copy; 2015 <strong>DONUT Blog</strong> all Right reserved.</span>
+			<ul>
+				<li><a href="#">서비스소개</a></li>
+				<li><a href="#">도움말</a></li>
+				<li><a href="#">제휴문의</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

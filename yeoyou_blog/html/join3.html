@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 내 소개 입력</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/ui.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico?1">
+</head>
+
+<body>
+<div id="wrap">
+	<!-- head -->
+	<div id="head" class="clear">
+		<h1><a href="/"><img src="/img/img_blog_donut.png" alt="Donut Blog 도넛블로그"></a></h1>
+
+		<div class="clear log-box">
+			<div class="user">
+				<span class="photo">
+					<em class="frame"></em>
+					<img src="http://dummyimage.com/26x26/000/fff" alt="홍길동">
+					<em class="ico-menu"></em>
+				</span>
+
+				<a href="#" class="btn-post"><span class="ir">업로드</span></a>
+
+				<!-- 유저메뉴 -->
+				<div class="user-menu">
+					<ul>
+						<li><a href="#">프로필</a></li>
+						<li><a href="#">계정정보</a></li>
+						<li><span class="btn-log-out">로그아웃</span></li>
+					</ul>
+				</div>
+				<!-- // 유저메뉴 -->
+			</div>
+		</div>
+
+		<div class="badge">
+			<span>12</span>
+		</div>
+
+		<!-- 검색 -->
+		<div id="top-search">
+			<form>
+				<fieldset>
+					<legend><span>상단검색</span></legend>
+					<!-- 레이블과 연결된 id는 임시값입니다 변경시 for와 id값만 동일하게 해주세요 -->
+					<input type="text" id="lb-search"><label for="lb-search">검색</label>
+					<input type="button" value="검색" class="btn-search">
+				</fieldset>
+			</form>
+		</div>
+		<!-- // 검색 -->
+
+		<div class="nav">
+			<ul class="clear">
+				<li><a href="">정보마켓</a></li>
+				<li><a href="">쇼핑마켓</a></li>
+				<li><a href="">광고마켓</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- // head -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="section-join">
+			<div class="contract-area">
+				<div class="join3">
+					<h2><span>내 소개 입력</span></h2>
+
+					<div class="page">
+						<form>
+							<fieldset>
+								<legend><span>내 소개</span></legend>
+								<div class="contract">
+									<p class="noti">당신을 소개해 주세요.<span><em>1000</em>을 드립니다.</span></p>
+
+									<div class="chk-lst">
+										<div class="lst-box">
+											<h3><span>관심사<em>3개이상 체크해 주세요</em></span></h3>
+											<ul class="clear">
+												<li><input type="checkbox" id="lb-i1"><label for="lb-i1">푸드/카페</label></li>
+												<li><input type="checkbox" id="lb-i2"><label for="lb-i2">쇼핑/뷰</label></li>
+												<li><input type="checkbox" id="lb-i3"><label for="lb-i3">여행/레저</label></li>
+												<li><input type="checkbox" id="lb-i4"><label for="lb-i4">영화/음악/책</label></li>
+												<li><input type="checkbox" id="lb-i5"><label for="lb-i5">문화/공연</label></li>
+												<li><input type="checkbox" id="lb-i6"><label for="lb-i6">의료/건강</label></li>
+												<li><input type="checkbox" id="lb-i7"><label for="lb-i7">제품</label></li>
+												<li><input type="checkbox" id="lb-i8"><label for="lb-i8">인테리어</label></li>
+												<li><input type="checkbox" id="lb-i9"><label for="lb-i9">재테크</label></li>
+												<li><input type="checkbox" id="lb-i10"><label for="lb-i10">지식/정보</label></li>
+												<li><input type="checkbox" id="lb-i11"><label for="lb-i11">키즈/교육</label></li>
+												<li><input type="checkbox" id="lb-i12"><label for="lb-i12">자동차</label></li>
+												<li><input type="checkbox" id="lb-i13"><label for="lb-i13">스포츠</label></li>
+												<li><input type="checkbox" id="lb-i14"><label for="lb-i14">반려동물</label></li>
+												<li><input type="checkbox" id="lb-i15"><label for="lb-i15">게임</label></li>
+											</ul>
+										</div>
+
+										<div class="lst-box">
+											<h3><span>좋아하는 음식<em>2개이상 체크해 주세요</em></span></h3>
+											<ul class="clear">
+												<li><input type="checkbox" id="lb-f1"><label for="lb-f1">한식</label></li>
+												<li><input type="checkbox" id="lb-f2"><label for="lb-f2">중식</label></li>
+												<li><input type="checkbox" id="lb-f3"><label for="lb-f3">일식</label></li>
+												<li><input type="checkbox" id="lb-f4"><label for="lb-f4">치킨</label></li>
+												<li><input type="checkbox" id="lb-f5"><label for="lb-f5">피자</label></li>
+												<li><input type="checkbox" id="lb-f6"><label for="lb-f6">패스트푸드</label></li>
+												<li><input type="checkbox" id="lb-f7"><label for="lb-f7">야식</label></li>
+												<li><input type="checkbox" id="lb-f8"><label for="lb-f8">분식</label></li>
+											</ul>
+										</div>
+
+										<div class="lst-box">
+											<h3><span>자주 이용하는 어플(APP)<em>2개이상 체크해 주세요</em></span></h3>
+											<ul class="clear">
+												<li><input type="checkbox" id="lb-a1"><label for="lb-a1">채팅</label></li>
+												<li><input type="checkbox" id="lb-a2"><label for="lb-a2">게임</label></li>
+												<li><input type="checkbox" id="lb-a3"><label for="lb-a3">쇼핑</label></li>
+												<li><input type="checkbox" id="lb-a4"><label for="lb-a4">뉴스</label></li>
+												<li><input type="checkbox" id="lb-a5"><label for="lb-a5">정보</label></li>
+												<li><input type="checkbox" id="lb-a6"><label for="lb-a6">사진</label></li>
+												<li><input type="checkbox" id="lb-a7"><label for="lb-a7">SNS</label></li>
+												<li><input type="checkbox" id="lb-a8"><label for="lb-a8">음악</label></li>
+												<li><input type="checkbox" id="lb-a9"><label for="lb-a9">금융</label></li>
+												<li><input type="checkbox" id="lb-a10"><label for="lb-a10">교육</label></li>
+												<li><input type="checkbox" id="lb-a11"><label for="lb-a11">미디어/동영상</label></li>
+												<li><input type="checkbox" id="lb-a12"><label for="lb-a12">기타</label></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<p class="b-group">
+									<span class="btn-donut">
+										<em>500 받기</em>
+										<input type="button" value="500 받기">
+									</span><!--
+									--><span class="btn-jump">건너뛰기</span>
+								</p>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+</div>
+</body>
+</html>

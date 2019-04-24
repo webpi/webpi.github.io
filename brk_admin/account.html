@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1000">
+<title>부동산 관리자 - 계정관리</title>
+<link rel="stylesheet" href="css/admin.css" type="text/css">
+</head>
+<body class="bgc">
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="clear main-box">
+			<h1><a href="/"><img src="img/head_ci.png" alt="부동산 플래너"></a></h1>
+				
+			<!-- user info -->
+			<div class="usr-info">
+				<p class="usr">
+					<span class="name"><strong>홍길동</strong> 님</span>
+					<span class="btn-log">로그아웃</span>
+					<a href="#" class="btn-myedit">내정보 수정</a>
+				</p>
+				<ul class="clear card">
+					<li class="grn">그린카드 : 20</li>
+					<li class="ylw">옐로카드 : 20</li>
+					<li class="red">레드카드 : 20</li>
+				</ul>
+			</div>
+			<!-- // user info -->
+			
+			<!-- gnb -->
+			<div id="gnb">
+				<ul class="clear btn-group">
+					<!-- 마우스 오버시 클래스 on 추가  -->
+					<li class="btn-gnb1">
+						<a href="#" class="btn"><span>마이페이지</span></a>
+						<ul class="clear snb sub1">
+							<li class=""><a href="#">확정배정현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">정보변경</a></li>
+							<li class=""><a href="#">주 취급 지역 및 부동산 종류</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb2">
+						<a href="#" class="btn"><span>배정관리</span></a>
+						<ul class="clear snb sub2">
+							<li class=""><a href="#">전체의뢰현황</a></li>
+							<li class=""><a href="#">신규의뢰현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">확정배정현황</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb3">
+						<a href="#" class="btn"><span>의뢰관리</span></a>
+						<ul class="clear snb sub3">
+							<li class=""><a href="#">의뢰입력</a></li>
+							<li class=""><a href="#">전체의뢰현황</a></li>
+							<li class=""><a href="#">신규의회현황</a></li>
+							<li class=""><a href="#">가배정현황</a></li>
+							<li class=""><a href="#">확정배정현황</a></li>
+						</ul>
+					</li>
+					<li class="btn-gnb4 on">
+						<a href="#" class="btn"><span>계정관리</span></a>
+					</li>
+				</ul>
+			</div>
+			<!-- // gnb -->
+		</div>
+	</div>
+	<!-- // header -->
+	
+	<!-- container -->
+	<div id="container">
+		 <div class="main-box">
+		 	<h2 class="ir">계정관리</h2>
+		 	<h3 class="h-style3">계정관리</h3>
+		 	
+		 	<div class="section-edit">
+		 		<form>
+		 			<fieldset>
+		 				<legend><span>내정보 상세</span></legend>
+		 				<div class="basic">
+			 				<table class="t-style4">
+			 					<caption><span>내 정보 상세 보기</span></caption>
+			 					<colgroup>
+			 						<col style="width:120px">
+			 						<col style="width:336px">
+			 						<col style="width:120px">
+			 						<col style="width:">
+			 					</colgroup>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="l-name">이 름</label>
+			 						</th>
+			 						<td>
+			 							<input type="text" id="l-name" style="width:228px">
+			 						</td>
+			 						<th scope="row">
+			 							<label for="l-id">아이디</label>
+			 						</th>
+			 						<td>
+			 							<input type="text" id="l-id" style="width:228px">
+			 							<span class="btn-dup-chk"><img src="img/btn_dup_chk.png" alt="중복확인"></span>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="l-pw">비밀번호</label>
+			 						</th>
+			 						<td>
+			 							<input type="password" id="l-pw" style="width:228px">
+			 						</td>
+			 						<th scope="row">
+			 							<label for="l-pw2">비밀번호 확인</label>
+			 						</th>
+			 						<td>
+			 							<input type="password" id="l-pw2" style="width:228px">
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="l-cs">직함</label>
+			 						</th>
+			 						<td>
+			 							<select id="l-cs">
+			 								<option>이사</option>
+			 							</select>
+			 						</td>
+			 						<th scope="row">
+			 							<label for="l-cs2">중계사 구분</label>
+			 						</th>
+			 						<td>
+			 							<select id="l-cs2">
+			 								<option>대표공인중개사</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">휴대폰</th>
+			 						<td>
+			 							<select title="첫번호">
+			 								<option>010</option>
+			 							</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 						</td>
+			 						<th scope="row">이메일</th>
+			 						<td>
+			 							<input type="text" title="주소명" style="width:90px">
+			 							@
+			 							<input type="text" title="호스트명" style="width:90px">
+			 							<select title="선택">
+			 								<option>NAVER.COM</option>
+			 								<option>직접입력</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">생년월일</th>
+			 						<td>
+			 							<select title="연도">
+			 								<option>1900</option>
+			 							</select><span class="tm">년</span>
+			 							<select title="월">
+			 								<option>12</option>
+			 							</select><span class="tm">월</span>
+			 							<select title="일">
+			 								<option>31</option>
+			 							</select><span class="tm">일</span>
+			 						</td>
+			 						<th scope="row">성별</th>
+			 						<td>
+			 							<span><input type="radio" id="male" name="sex"> <label for="male">남</label></span>
+			 							<span class="ml"><input type="radio" id="female" name="sex"> <label for="female">여</label></span>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="l-cs3">중개업소명</label>
+			 						</th>
+			 						<td colspan="3">
+			 							<input type="text" id="l-cs3" style="width:228px">
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row" class="vt">중개업소 주소</th>
+			 						<td colspan="3">
+			 							<ul class="adrs">
+			 								<li>
+			 									<span class="t">지번 주소</span>
+			 									<select title="시/도 선택">
+			 										<option>시/도</option>
+			 									</select>
+			 									<select title="시/군/구 선택">
+			 										<option>시/군/구</option>
+			 									</select>
+			 									<select title="읍/면/동 선택">
+			 										<option>읍/면/동</option>
+			 									</select>
+			 									<input type="text" title="상세주소" style="width:174px">
+			 								</li>
+			 								<li>
+			 									<span class="t">도로명 주소</span>
+			 									<select title="시/도 선택">
+			 										<option>시/도</option>
+			 									</select>
+			 									<select title="시/군/구 선택">
+			 										<option>시/군/구</option>
+			 									</select>
+			 									<select title="읍/면/동 선택">
+			 										<option>읍/면/동</option>
+			 									</select>
+			 									<input type="text" title="상세주소" style="width:174px">
+			 								</li>
+			 							</ul>
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">대표전화</th>
+			 						<td>
+			 							<select title="첫번호">
+			 								<option>010</option>
+			 							</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 						</td>
+			 						<th scope="row">팩스</th>
+			 						<td>
+			 							<select title="첫번호">
+			 								<option>010</option>
+			 							</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="l-cs4">개설등록번호</label>
+			 						</th>
+			 						<td>
+			 							<input type="text" id="l-cs4" style="width:228px">
+			 						</td>
+			 						<th scope="row">
+			 							<label for="l-cs5">사업자등록번호</label>
+			 						</th>
+			 						<td>
+			 							<input type="text" id="l-cs5" style="width:228px">
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">
+			 							<label for="l-cs6">회원구분</label>
+			 						</th>
+			 						<td>
+			 							<select id="l-cs6">
+			 								<option>네잎</option>
+			 							</select>
+			 						</td>
+			 						<th scope="row">
+			 							<label for="l-cs7">가입일</label>
+			 						</th>
+			 						<td class="sign-day">
+			 							<span><input type="text" id="l-cs7" style="width:70px"></span>
+			 						</td>
+			 					</tr>
+			 				</table>
+			 			</div>
+		 				
+		 				<div class="add">
+			 				<table class="t-style4">
+			 					<caption><span>담당자 정보</span></caption>
+			 					<colgroup>
+			 						<col style="width:120px">
+			 						<col style="width:336px">
+			 						<col style="width:120px">
+			 						<col style="width:">
+			 					</colgroup>
+			 					<tr>
+			 						<th scope="row">담당자</th>
+			 						<td colspan="3">
+			 							<input type="text" title="담당자 입력" style="width:228px">
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">전화번호</th>
+			 						<td>
+			 							<select title="첫번호">
+		 									<option>010</option>
+		 								</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 						</td>
+			 						<th scope="row">이메일</th>
+			 						<td>
+			 							<input type="text" title="주소명" style="width:90px">
+			 							@
+			 							<input type="text" title="호스트명" style="width:90px">
+			 							<select title="선택">
+			 								<option>NAVER.COM</option>
+			 								<option>직접입력</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 				</table>
+			 				
+			 				<span class="btn-add-tb"><img src="img/btn_add_tb.png" alt="추가"></span>
+			 			</div>
+			 			
+			 			<!-- 추가 테이블 -->
+		 				<div class="add">
+			 				<table class="t-style4">
+			 					<caption><span>담당자 정보</span></caption>
+			 					<colgroup>
+			 						<col style="width:120px">
+			 						<col style="width:336px">
+			 						<col style="width:120px">
+			 						<col style="width:">
+			 					</colgroup>
+			 					<tr>
+			 						<th scope="row">담당자</th>
+			 						<td colspan="3">
+			 							<input type="text" title="담당자 입력" style="width:228px">
+			 						</td>
+			 					</tr>
+			 					<tr>
+			 						<th scope="row">전화번호</th>
+			 						<td>
+			 							<select title="첫번호">
+		 									<option>010</option>
+		 								</select>
+			 							-
+			 							<input type="text" title="중간번호" style="width:38px">
+			 							-
+			 							<input type="text" title="끝자리" style="width:38px">
+			 						</td>
+			 						<th scope="row">이메일</th>
+			 						<td>
+			 							<input type="text" title="주소명" style="width:90px">
+			 							@
+			 							<input type="text" title="호스트명" style="width:90px">
+			 							<select title="선택">
+			 								<option>NAVER.COM</option>
+			 								<option>직접입력</option>
+			 							</select>
+			 						</td>
+			 					</tr>
+			 				</table>
+			 				
+			 				<span class="btn-add-tb"><img src="img/btn_tb_del.png" alt="삭제"></span>
+			 			</div>
+			 			<!-- // 추가 테이블 -->
+			 			
+			 			<p class="button">
+			 				<input type="button" alt="등록" class="btn-myedit-reg"><!--
+			 				--><input type="reset" alt="재입력" value="" class="btn-myedit-reset">
+			 			</p>
+		 			</fieldset>
+		 		</form>
+		 	</div>
+		 </div>		
+	</div>
+	<!-- // container -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<div class="clear foot-section">
+			<span class="ci"><img src="img/foot_ci.png" alt="부동산 플래너"></span>
+			<div class="area-box">
+				<ul class="clear top">
+					<li>상호 : (주)부동산플래너<em class="bar">|</em></li>
+					<li>대표 : 송명희<em class="bar">|</em></li>
+					<li>사업자등록번호 : 114-86-49816<em class="bar">|</em></li>
+					<li>통신판매업신고 : 제 2009-서울서초-0176호</li>
+				</ul>
+				
+				<address>
+					주소 : 서울특별시 서초구 서초대로88, 2층 (방배동 938-7 유니온빌딩)<!--
+					--><em class="bar">|</em><span>전화 : 1544-8923</span><!--
+					--><em class="bar">|</em><span>팩스 : 02-549-1898</span>
+				</address>
+				
+				<p class="foot-area bot">
+					이메일 : <a href="mailto:master@vuple.co.kr">master@vuple.co.kr</a><!--
+					--><span class="copy">Copyright &copy; Real Estate Planner Co., Ltd. All Right Reserved.</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

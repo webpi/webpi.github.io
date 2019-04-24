@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1100">
+<title>KOREN 새대한부동산중개망 매물관리 - 내 매물</title>
+<link rel="stylesheet" href="css/comm.css" type="text/css">
+<link rel="stylesheet" href="css/sub.css" type="text/css">
+</head>
+<body class="bgc">
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<div class="clear head">
+			<h1><a href="/"><img src="img/h1_ci.png" alt="KOREN 새대한부동산중개망"></a></h1>
+			<div class="clear usr-box">
+				<ul class="clear info">
+					<li class="welcome"><strong>홍길동</strong>님 환영합니다!</li>
+					<li>이번달 쪽지: <span>50</span>/200개</li>
+					<li>이번달 문자: <span>30</span>/300개</li>
+				</ul>
+				
+				<ul class="clear btn-group">
+					<li><span class="btn-logout"><img src="img/btn_head_logout.png" alt="로그아웃"></span></li>
+					<li><a href="#"><img src="img/btn_head_my.png" alt="내정보 수정"></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="clear nav">
+			<!-- gnb -->
+			<div id="gnb">
+				<ul class="clear menu">
+					<li class="active">
+						<a href="#" class="btn-gnb1"><span>매물관리</span></a>
+						<!-- snb -->
+						<div class="snb snb1">
+							<ul class="clear">
+								<li class="on"><a href="#"><span>내 매물</span></a></li>
+								<li><a href="#"><span>관심매물</span></a></li>
+								<li><a href="#"><span>정보망매물</span></a></li>
+								<li><a href="#"><span>동호회매물</span></a></li>
+							</ul>
+							<i></i>
+						</div>
+						<!-- // snb -->
+					</li>
+					<li>
+						<a href="#" class="btn-gnb2"><span>구함관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn-gnb3"><span>고객관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn-gnb4"><span>일정관리</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn-gnb5"><span>커뮤니티</span></a>
+					</li>
+					<li>
+						<a href="#" class="btn-gnb6"><span>계약관리</span></a>
+					</li>
+					<li class="">
+						<a href="#" class="btn-gnb7"><span>내정보관리</span></a>
+						<!-- snb -->
+						<div class="snb snb7">
+							<ul class="clear">
+								<li class="on"><a href="#"><span>중개사무소 정보</span></a></li>
+								<li><a href="#"><span>주거래지역설정</span></a></li>
+								<li><a href="#"><span>주거래매물설정</span></a></li>
+								<li><a href="#"><span>알림설정</span></a></li>
+								<li><a href="#"><span>비공개설정</span></a></li>
+								<li><a href="#"><span>사업자서류관리</span></a></li>
+								<li><a href="#"><span>동호회 관리</span></a></li>
+							</ul>
+							<i></i>
+						</div>
+						<!-- // snb -->
+					</li>
+				</ul>
+			</div>
+			<!-- // gnb -->
+			
+			<!-- anb -->
+			<ul class="anb">
+				<li><a href="#">쪽지</a></li>
+				<li><a href="#">문자</a></li>
+				<li><a href="#">현금영수증</a></li>
+				<li><a href="#">메물공개기준</a></li>
+				<li class="useful-site">
+					<span>유용한 사이트</span>
+					<ul class="">
+						<li><a href="#">aaa.com</a></li>
+						<li><a href="#">aaa.com</a></li>
+						<li><a href="#">aaa.com</a></li>
+						<li><a href="#">aaa.com</a></li>
+						<li><a href="#">aaa.com</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- anb -->
+		</div>
+	</div>
+	<!-- // header -->
+	
+	<!-- container -->
+	<div id="container">
+		<div class="main">
+			<h2 class="ir">매물관리</h2>
+			<!-- section-search -->
+			<div class="section-search">
+				<div class="search-box">
+					<form>
+						<fieldset>
+							<legend>매물 검색</legend>
+							<span class="cell cell-1">
+								<span><input type="radio" id="rdo1" name="rdo-group"><label for="rdo1">전체</label></span>
+								<span><input type="radio" id="rdo2" name="rdo-group"><label for="rdo2">매매</label></span>
+								<span><input type="radio" id="rdo3" name="rdo-group"><label for="rdo3">전세</label></span>
+								<span><input type="radio" id="rdo4" name="rdo-group"><label for="rdo4">월세</label></span>
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c1">부동산종류</label><!--
+								--><input type="text" id="lb-c1" value="아파트" readonly="readonly" class="istyle" style="width:135px"><!--
+								--><span class="btn-slt"><img src="img/btn_chk.png" alt="선택"></span>
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c2">테마선택</label><!--
+								--><input type="text" id="lb-c2" value="신축5년이내" readonly="readonly" class="istyle" style="width:174px"><!--
+								--><span class="btn-slt"><img src="img/btn_chk.png" alt="선택"></span>
+							</span>
+							
+							<span class="cell cell-3">
+								<span><input type="checkbox" id="lb-c3"><label for="lb-c3">비공개</label></span><!--
+								--><span><input type="checkbox" id="lb-c4"><label for="lb-c4">추천</label></span>
+							</span>
+							<br>
+							
+							<span class="cell cell-2">
+								<label for="lb-c5">물건성격</label><!--
+								--><select id="lb-c5" class="sstyle">
+									<option>진행중</option>
+								</select>
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c6">매물확인일</label><!--
+								--><select id="lb-c6" class="sstyle">
+									<option>10일 이내</option>
+								</select>
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c7">주소</label><!--
+								--><select id="lb-c7" class="sstyle">
+									<option>시/도 전체</option>
+								</select><!--
+								--><select title="시/군/구 선택" class="sstyle">
+									<option>시/군/구 전체</option>
+								</select><!--
+								--><select title="읍/면/동 선택" class="sstyle">
+									<option>읍/면/동 전체</option>
+								</select>
+							</span>
+							
+							<span class="cell cell-3">
+								<span><input type="checkbox" id="lb-c8"><label for="lb-c8">주거래지역</label></span>
+							</span>
+							<br>
+							
+							<span class="cell cell-4">
+								<select title="선택" class="sstyle">
+									<option>전용면적</option>
+								</select><!--
+								--><input type="text" class="istyle tel" style="width:38px" title="최소">
+								~
+								<input type="text" class="istyle tel" style="width:38px" title="최대"><em>m<sup>2</sup></em>
+							</span>
+							
+							<span class="cell cell-4">
+								<select title="선택" class="sstyle">
+									<option>매매가</option>
+								</select><!--
+								--><input type="text" class="istyle tel" style="width:48px" title="최소">
+								~
+								<input type="text" class="istyle tel" style="width:48px" title="최대"><em>만원</em>
+							</span>
+							
+							<span class="cell cell-4">
+								<select title="선택" class="sstyle">
+									<option>단지명</option>
+								</select><!--
+								--><input type="text" class="istyle tel" style="width:140px" title="단지명 입력">
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-9">방수</label>
+								<input type="text" id="lb-c9" class="istyle tel" style="width:38px" title="최소"> 개
+							</span>
+							
+							<span class="cell cell-2">
+								<label for="lb-c10">옵션</label><!--
+								--><select id="lb-c10" class="sstyle">
+									<option>풀옵션</option>
+								</select>
+							</span>
+							
+							<input type="button" class="btn-search" alt="검색">
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<!-- // section-search -->
+			
+			<!-- section-lst -->
+			<div class="section-lst">
+				<h3 class="t2-h3">내 매물</h3>
+				<div class="clear top-menu">
+					<!-- 버튼이 링크일 경우 span을 a태그로 수정 -->
+					<span class="btn-fav-sell"><img src="img/btn_fav_sell.png" alt="관심매물지정"></span>
+					<span class="btn-day-edit"><img src="img/btn_day_edit.png" alt="확인일수정"></span>
+					<span class="btn-mk-prnt"><img src="img/btn_mk_prnt.png" alt="홍보물인쇄"></span>
+					<span class="btn-del"><img src="img/btn_del.png" alt="삭제"></span>				
+					<span class="btn-sell-reg"><img src="img/btn_sell_reg.png" alt="매물등록"></span>
+				</div>
+				
+				<!-- 매물등록 -->
+				<div class="pop sell-reg">
+					<p class="pop-sj">매물등록</p>
+					<span class="b-group-top">
+						<a href="#"><img src="img/btn_day_edit.png" alt="확인일 수정"></a>
+						<a href="#"><img src="img/btn_copy_reg.png" alt="복사 및 추가등록"></a>
+					</span>
+					<div class="reg-area">
+						<form>
+							<fieldset>
+								<legend>매물 상세 등록하기</legend>
+								<!-- reg-head -->
+								<div class="clear reg-head">
+									<p class="fl">
+										<select class="sstyle" title="부동산 종류">
+											<option>빌딩</option>
+										</select><!--
+										--><span>
+											<select class="sstyle" title="구분 선택">
+												<option>매매</option>
+												<option>전세</option>
+												<option>월새</option>
+											</select>
+											<input type="text" class="istyle" title="건평" style="width:44px">
+										</span><!--
+										
+										--><label for="lb-reg1">담당자</label>
+										<select id="lb-reg1" class="sstyle">
+											<option>홍길동 대표중개사</option>
+										</select>
+									</p>
+									<p class="fr">
+										<span>등록일: 2014-09-12</span>
+										<span>확인일: <strong>2014-10-13</strong></span>
+									</p>
+								</div>
+								<!-- // reg-head -->
+								
+								<div class="clear iadrs">
+									<p>
+										<select class="sstyle" title="상태 선택">
+											<option>일반</option>
+										</select>
+										<span><input type="checkbox" id="lb-rec"> <label for="lb-rec">추천</label></span>
+									</p>
+									<ul>
+										<li>
+											<span class="t">지번 주소</span>
+											<select class="sstyle" title="시/도 선택" style="width:117px">
+												<option>시/도</option>
+											</select><!--
+											--><select class="sstyle" title="시/군/구 선택" style="width:117px">
+												<option>시/군/구</option>
+											</select><!--
+											--><select class="sstyle" title="읍/면/동 선택" style="width:117px">
+												<option>읍/면/동</option>
+											</select><!--
+											--><select class="sstyle" title="선택" style="width:67px">
+												<option>일반</option>
+											</select>
+											<input type="text" value="(본번)" class="istyle tel" style="width:35px" title="우편번호 앞자리">
+											-
+											<input type="text" value="(부번)" class="istyle tel" style="width:35px" title="우편번호 뒷자리">
+											<span class="btn-road-match"><img src="img/btn_road_match.png" alt="도로명매칭"></span>
+										</li>
+										<li>
+											<span class="t">도로명 주소</span>
+											<select class="sstyle" title="시/도 선택" style="width:117px">
+												<option>시/도</option>
+											</select><!--
+											--><select class="sstyle" title="시/군/구 선택" style="width:117px">
+												<option>시/군/구</option>
+											</select><!--
+											--><input type="text" class="istyle ml5" value="(도로명검색 입력)" title="도로명 검색어 입력" style="width:105px"><!--
+											--><span class="btn-road-srch"><img src="img/btn_road_srch.png" alt="도로명검색"></span>
+											<input type="text" value="(본번)" class="istyle tel" style="width:35px" title="우편번호 앞자리">
+											-
+											<input type="text" value="(부번)" class="istyle tel" style="width:35px" title="우편번호 뒷자리">
+										</li>
+									</ul>
+								</div>
+								
+								<ul class="clear bd-name">
+									<li class="li-style s1"><label for="lb-bname1">(건물명)</label><input type="text" id="lb-bname1" class="istyle" style="width:330px"></li>
+									<li><label for="lb-bname">위치</label><input type="text" id="lb-bname" class="istyle" style="width:338px"></li>
+								</ul>
+								
+								<!-- imain -->
+								<div class="imain">
+									<div class="reg-tbbox">
+										<table class="reg-tb1">
+											<caption><span>매물 상세 등록 정보1</span></caption>
+											<colgroup>
+												<col style="width:77px">
+												<col style="width:318px">
+												<col style="width:77px">
+												<col style="width:">
+											</colgroup>	
+											<tr>
+												<th scope="row"><label for="lb-sreg1">매매가</label></th>
+												<td><input type="text" id="lb-sreg1" class="istyle tel" style="width:48px"> 만원</td>
+												<th scope="row"><label for="lb-sreg2">현보증금</label></th>
+												<td><input type="text" id="lb-sreg2" class="istyle tel" style="width:48px"> 만원</td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="lb-sreg3">현월세금</label></th>
+												<td><input type="text" id="lb-sreg3" class="istyle tel" style="width:48px"> 만원</td>
+												<th scope="row"><label for="lb-sreg4">융자금</label></th>
+												<td><input type="text" id="lb-sreg4" class="istyle tel" style="width:48px"> 만원</td>
+											</tr>
+										</table>
+									</div>
+									
+									<div class="reg-tbbox">
+										<table class="reg-tb1">
+											<caption><span>매물 상세 등록 정보2</span></caption>
+											<colgroup>
+												<col style="width:77px">
+												<col style="width:91px">
+												<col style="width:86px">
+												<col style="width:170px">
+												<col style="width:76px">
+												<col style="width:122px">
+												<col style="width:76px">
+												<col style="width:">
+											</colgroup>	
+											<tr>
+												<th scope="row"><label for="lb-sreg5">건축면적</label></th>
+												<td><input type="text" id="lb-sreg5" class="istyle tel" style="width:48px"> m<sup>2</sup></td>
+												<th scope="row"><label for="lb-sreg6">건축년도</label></th>
+												<td>
+													<select id="lb-sreg6" class="sstyle" style="width:160px">
+														<option>1999 년</option>
+													</select>
+												</td>
+												<th scope="row"><label for="lb-sreg7">지상</label></th>
+												<td>
+													<select id="lb-sreg7" class="sstyle" style="width:87px">
+														<option>4</option>
+													</select>
+												</td>
+												<th scope="row"><label for="lb-sreg8">승강기</label></th>
+												<td>
+													<select id="lb-sreg8" class="sstyle" style="width:87px">
+														<option>없음</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="lb-sreg9">연면적</label></th>
+												<td><input type="text" id="lb-sreg9" class="istyle tel" style="width:48px"> m<sup>2</sup></td>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"><label for="lb-sreg11">지하</label></th>
+												<td>
+													<select id="lb-sreg11" class="sstyle" style="width:87px">
+														<option>B2</option>
+													</select>
+												</td>
+												<th scope="row"><label for="lb-sreg12">욕실</label></th>
+												<td>
+													<select id="lb-sreg12" class="sstyle" style="width:87px">
+														<option>1 개</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="lb-sreg13">대지면적</label></th>
+												<td><input type="text" id="lb-sreg13" class="istyle tel" style="width:48px"> m<sup>2</sup></td>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"><label for="lb-sreg15">층</label></th>
+												<td>
+													<select id="lb-sreg15" class="sstyle" style="width:87px">
+														<option>1 층</option>
+													</select>
+												</td>
+												<th scope="row"><label for="lb-sreg16">방수</label></th>
+												<td>
+													<select id="lb-sreg16" class="sstyle" style="width:87px">
+														<option>1 개</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="lb-sreg17">공급면적</label></th>
+												<td><input type="text" id="lb-sreg17" class="istyle tel" style="width:48px"> m<sup>2</sup></td>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"><label for="lb-sreg19">총층</label></th>
+												<td>
+													<select id="lb-sreg19" class="sstyle" style="width:87px">
+														<option>1 층</option>
+													</select>
+												</td>
+												<th scope="row"><label for="lb-sreg20">1방수</label></th>
+												<td>
+													<select id="lb-sreg20" class="sstyle" style="width:87px">
+														<option>1</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="lb-sreg21">전용면적</label></th>
+												<td><input type="text" id="lb-sreg21" class="istyle tel" style="width:48px"> m<sup>2</sup></td>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"><label for="lb-sreg22">주차</label></th>
+												<td>
+													<select id="lb-sreg22" class="sstyle" style="width:87px">
+														<option>불가</option>
+													</select>
+												</td>
+												<th scope="row"><label for="lb-sreg23">2방수</label></th>
+												<td>
+													<select id="lb-sreg23" class="sstyle" style="width:87px">
+														<option>1</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"><label for="lb-sreg24">방향</label></th>
+												<td>
+													<select id="lb-sreg24" class="sstyle" style="width:87px">
+														<option>남서</option>
+													</select>
+												</td>
+												<th scope="row"><label for="lb-sreg25">3방수</label></th>
+												<td>
+													<select id="lb-sreg25" class="sstyle" style="width:87px">
+														<option>3</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<th scope="row"></th>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"><label for="lb-sreg26">4방이상</label></th>
+												<td>
+													<select id="lb-sreg26" class="sstyle" style="width:87px">
+														<option>1</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<th scope="row"></th>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"><label for="lb-sreg27">난방방식</label></th>
+												<td>
+													<select id="lb-sreg27" class="sstyle" style="width:87px">
+														<option>개별난방</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<th scope="row"></th>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"></th>
+												<td></td>
+												<th scope="row"><label for="lb-sreg28">난방연료</label></th>
+												<td>
+													<select id="lb-sreg28" class="sstyle" style="width:87px">
+														<option>도시가스</option>
+													</select>
+												</td>
+											</tr>
+										</table>
+									</div>
+									
+									<div class="reg-tbbox">
+										<table class="reg-tb1">
+											<caption><span>매물 상세 등록 정보2</span></caption>
+											<colgroup>
+												<col style="width:77px">
+												<col style="">
+											</colgroup>	
+											<tr>
+												<th scope="row" class="th-top"><label for="lb-sreg29">주요사항</label></th>
+												<td><span class="itext"><textarea id="lb-sreg29" rows="8" cols="40"></textarea></span></td>
+											</tr>
+											<tr>
+												<th scope="row"><label for="lb-sreg30">입주</label></th>
+												<td>
+													<span class="movein"><input type="text" id="lb-sreg30" class="istyle tel" style="width:25px"> 개월</span><!--
+													--><span class="movein">
+														<select class="sstyle" title="입주 선택">
+															<option>즉시입주</option>
+														</select>
+													</span><!--
+													--><span class="movein"><input type="checkbox" id="lb-sreg31"> <label for="lb-sreg31">협의</label></span>
+												</td>
+											</tr>
+										</table>
+									</div>
+									
+									<div class="reg-tbbox">
+										<ul class="clear theme-subway">
+											<li>
+												<label for="lb-sreg32"><img src="img/img_theme.png" alt="테마지정"></label><!--
+												--><input type="text" id="lb-sreg32" class="istyle" style="width:295px">
+											</li>
+											<li>
+												<label for="lb-sreg33"><img src="img/img_subway.png" alt="지하철정보"></label><!--
+												--><input type="text" id="lb-sreg33" class="istyle" style="width:295px">
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- // imain -->
+								
+								<div class="cus-match">
+									<ul class="clear">
+										<li><input type="checkbox" id="lb-sreg34"> <label for="lb-sreg34">비공개</label></li>
+										<li><input type="checkbox" id="lb-sreg35"> <label for="lb-sreg35">동호회</label></li>
+										<li><input type="checkbox" id="lb-sreg36"> <label for="lb-sreg36">지역</label></li>
+										<li>
+											<input type="checkbox" id="lb-sreg37"> <label for="lb-sreg37">네이버(0/15)</label><!--
+											--><span class="btn-naver-chk"><img src="img/btn_naver_chk.png" alt="NAVER 확인"></span>
+										<li>
+											<input type="checkbox" id="lb-sreg38"> <label for="lb-sreg38">다음(0/15)</label><!--
+											--><span class="btn-daum-chk"><img src="img/btn_daum_chk.png" alt="DAUM 확인"></span>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="clear seller-hirer">
+									<div class="seller">
+										<p class="t">매도인
+											<span class="btn-clnt"><img src="img/btn_clnt.png" alt="고객선택"></span><!--
+											--><span class="btn-new-cus"><img src="img/btn_new_cus.png" alt="신규고객추가"></span>
+										</p>
+										<ul>
+											<li>
+												<span>
+													<label for="lb-sel1">(성명입력)</label>
+													<input type="text" id="lb-sel1" class="istyle" style="width:105px">
+												</span><!--
+												--><span>
+													<label for="lb-sel2">(전화번호입력)</label>
+													<input type="text" id="lb-sel2" class="istyle" style="width:147px">
+												</span><!--
+												--><span class="btn-modify"><img src="img/btn_edit2.png" alt="수정"></span><!--
+												--><span class="btn-att"><img src="img/btn_att.png" alt="추가"></span>
+											</li>
+											<li>
+												<span>
+													<label for="lb-s-att1">(성명입력)</label>
+													<input type="text" id="lb-s-att1" class="istyle" style="width:105px">
+												</span><!--
+												--><span>
+													<label for="lb-s-att2">(전화번호입력)</label>
+													<input type="text" id="lb-s-att2" class="istyle" style="width:147px">
+												</span><!--
+												--><span class="btn-modify"><img src="img/btn_edit2.png" alt="수정"></span><!--
+												--><span class="btn-del"><img src="img/btn_del.png" alt="삭제"></span>
+											</li>
+											<li>
+												<span>
+													<label for="lb-s-att3">(성명입력)</label>
+													<input type="text" id="lb-s-att3" class="istyle" style="width:105px">
+												</span><!--
+												--><span>
+													<label for="lb-s-att4">(전화번호입력)</label>
+													<input type="text" id="lb-s-att4" class="istyle" style="width:147px">
+												</span><!--
+												--><span class="btn-modify"><img src="img/btn_edit2.png" alt="수정"></span><!--
+												--><span class="btn-del"><img src="img/btn_del.png" alt="삭제"></span>
+											</li>
+										</ul>
+									</div>
+									
+									<div class="hirer">
+										<p class="t">임차인
+											<span class="btn-clnt"><img src="img/btn_clnt.png" alt="고객선택"></span><!--
+											--><span class="btn-new-cus"><img src="img/btn_new_cus.png" alt="신규고객추가"></span>
+										</p>
+										<ul>
+											<li>
+												<span>
+													<label for="lb-hir1">(성명입력)</label>
+													<input type="text" id="lb-hir1" class="istyle" style="width:105px">
+												</span><!--
+												--><span>
+													<label for="lb-hir2">(전화번호입력)</label>
+													<input type="text" id="lb-hir2" class="istyle" style="width:147px">
+												</span><!--
+												--><span class="btn-modify"><img src="img/btn_edit2.png" alt="수정"></span><!--
+												--><span class="btn-att"><img src="img/btn_att.png" alt="추가"></span>
+											</li>
+											<li>
+												<span>
+													<label for="lb-h-att1">(성명입력)</label>
+													<input type="text" id="lb-h-att1" class="istyle" style="width:105px">
+												</span><!--
+												--><span>
+													<label for="lb-h-att2">(전화번호입력)</label>
+													<input type="text" id="lb-h-att2" class="istyle" style="width:147px">
+												</span><!--
+												--><span class="btn-modify"><img src="img/btn_edit2.png" alt="수정"></span><!--
+												--><span class="btn-del"><img src="img/btn_del.png" alt="삭제"></span>
+											</li>
+											<li>
+												<span>
+													<label for="lb-h-att3">(성명입력)</label>
+													<input type="text" id="lb-h-att3" class="istyle" style="width:105px">
+												</span><!--
+												--><span>
+													<label for="lb-h-att4">(전화번호입력)</label>
+													<input type="text" id="lb-h-att4" class="istyle" style="width:147px">
+												</span><!--
+												--><span class="btn-modify"><img src="img/btn_edit2.png" alt="수정"></span><!--
+												--><span class="btn-del"><img src="img/btn_del.png" alt="삭제"></span>
+											</li>
+										</ul>
+									</div>
+								</div>								
+								
+								<!-- 사진 등록 -->
+								<div class="photo-area">
+									<ul class="clear">
+										<li>
+											<div class="p-box">
+												<p class="sj">대표자</p>
+												<span class="thumb"><img src="" alt="대표자"></span>
+												<p class="btn-group">
+													<span class="btn-photo-up"><img src="img/btn_photo_up.png" alt="사진등록"></span>
+													<span class="btn-photo-del"><img src="img/btn_photo_del.png" alt="사진삭제"></span>
+												</p>
+											</div>
+										</li>
+										<li>
+											<div class="p-box">
+												<p class="sj">사진제목</p>
+												<span class="thumb"><img src="" alt="사진제목"></span>
+												<p class="btn-group">
+													<span class="btn-photo-up"><img src="img/btn_photo_up.png" alt="사진등록"></span>
+													<span class="btn-photo-del"><img src="img/btn_photo_del.png" alt="사진삭제"></span>
+												</p>
+											</div>
+										</li>
+										<li>
+											<div class="p-box">
+												<p class="sj">사진제목</p>
+												<span class="thumb"><img src="" alt="사진제목"></span>
+												<p class="btn-group">
+													<span class="btn-photo-up"><img src="img/btn_photo_up.png" alt="사진등록"></span>
+													<span class="btn-photo-del"><img src="img/btn_photo_del.png" alt="사진삭제"></span>
+												</p>
+											</div>
+										</li>
+										<li>
+											<div class="p-box">
+												<p class="sj">사진제목</p>
+												<span class="thumb"><img src="" alt="사진제목"></span>
+												<p class="btn-group">
+													<span class="btn-photo-up"><img src="img/btn_photo_up.png" alt="사진등록"></span>
+													<span class="btn-photo-del"><img src="img/btn_photo_del.png" alt="사진삭제"></span>
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- // 사진 등록 -->
+								
+								<div class="clear reg-aside">
+									<p class="file-name">
+										<span>첨부자료</span>
+										<span class="fileup">
+											<span class="istyle">사업자등록증.jpg</span><!--
+											--><input type="file" id="lb-doc2" title="파일찾기"><!--
+											--><img src="img/btn_file_find.png" alt="찾기" class="vm">
+										</span>
+									</p>
+									<p class="b-group">
+										<a href="#"><img src="img/btn_day_edit.png" alt="확인일 수정"></a>
+										<a href="#"><img src="img/btn_copy_reg.png" alt="복사 및 추가등록"></a>
+									</p>
+								</div>
+								
+								<p class="button">
+									<input type="button" alt="등록" class="btn-doc-add"><!--
+									--><input type="reset" value="" alt="재입력" class="btn-info-re">									
+								</p>
+							</fieldset>
+						</form>
+					</div>
+					
+					<span class="clse"><img src="img/btn_pop_clse.png" alt="닫기"></span>
+				</div>
+				<!-- // 매물등록 -->
+				
+				<table class="tb2">
+					<caption><span>아파트, 아파트 분양권, 주상복합, 주상복합 분양권 전체 검색결과</span></caption>
+					<colgroup>
+						<col style="width:30px">
+						<col style="width:34px">
+						<col style="width:42px">
+						<col style="width:42px">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:70px">
+						<col style="width:70px">
+						<col style="width:50px">			
+					</colgroup>
+					<tr>
+						<th scope="col"><input type="checkbox" title="전체선택"></th>
+						<th scope="col">공개</th>
+						<th scope="col">상태</th>
+						<th scope="col">구분</th>
+						<th scope="col">부동산종류</th>
+						<th scope="col">공급</th>
+						<th scope="col">전용</th>
+						<th scope="col">읍면동리</th>
+						<th scope="col">단지명</th>
+						<th scope="col">동</th>
+						<th scope="col">호</th>
+						<th scope="col">층</th>
+						<th scope="col">매매가</th>
+						<th scope="col">보증금</th>
+						<th scope="col">월세</th>
+						<th scope="col">융자금</th>
+						<th scope="col">룸수</th>
+						<th scope="col">욕실수</th>
+						<th scope="col">매물확인일</th>
+						<th scope="col">등록일</th>
+						<th scope="col"></th>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택"></td>
+						<td><img src="img/ico_public.png" alt="공개"></td>
+						<td>일반</td>
+						<td>매매</td>
+						<td>아파트</td>
+						<td>1355</td>
+						<td>418</td>
+						<td>방배1동</td>
+						<td>신동아3차</td>
+						<td>103</td>
+						<td>104</td>
+						<td>2/20</td>
+						<td>4억</td>
+						<td>3000만</td>
+						<td>100만</td>
+						<td>1억</td>
+						<td>3</td>
+						<td>1</td>
+						<td>14-09-25</td>
+						<td>14-09-25</td>
+						<td><a href="#"><img src="img/btn_edit.png" alt="수정"></a></td>
+					</tr>
+				</table>
+				
+				<!-- paging -->
+		 		<div class="paging">
+		 			<a href="#" class="prev"><img src="img/btn_page_prev.png" alt="이전"></a>
+		 			<a href="#" class="on">1</a>
+		 			<a href="#">2</a>
+		 			<a href="#">3</a>
+		 			<a href="#">4</a>
+		 			<a href="#">5</a>
+		 			<a href="#">6</a>
+		 			<a href="#" class="next"><img src="img/btn_page_next.png" alt="다음"></a>
+		 		</div>
+		 		<!-- // paging -->
+			</div>
+			<!-- // section-lst -->
+		</div>
+	</div>
+	<!-- // container -->
+	
+	<!-- footer -->
+	<div id="footer">
+		<div class="clear">
+			<span class="foot-ci"><img src="img/foot_ci.png" alt="새대한공인중개사협회"></span>
+			<div class="section-foot">
+				<ul class="clear">
+					<li><strong>법인명</strong>: (사)새대한공인중개사협회</li>
+					<li><strong>사업자등록번호</strong>: 214-82-14185</li>
+					<li><strong>대표자</strong>: 최용일</li>
+					<li><strong>주소</strong>: 서울특별시 구로구 공원로 81, B01호 (구로동, 엘림빌딩) <a href="#" class="foot-map"><img src="img/btn_foot_map.png" alt="지도보기"></a></li>
+					<li class="clear-lft"><strong>개인정보관리책임자</strong>: 새대한공인중개사협회 중앙회</li>
+					<li><strong>대표번호</strong>: 02)585-4210</li>
+					<li><strong>팩스</strong>: 02)585-4250</li>
+					<li><strong>협회홈페이지</strong>: <a href="http://www.lak.or.kr/" target="_blank">http://www.lak.or.kr/</a></li>
+				</ul>
+				<p class="copy">Copyright&copy; (사)새대한공인중개사협회. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=900">
+    <title>YEOYOU 텔레콤 - 이메일 청구서</title>
+    <!--[if IE 8]>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+	<script type="text/javascript">
+	WebFont.load({
+	    custom: {
+	        families: ['Nanum Gothic'],
+	        urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+	    }
+	});
+	</script>
+	<![endif]-->
+    <style>
+	body{margin:0;padding:0;background:#fff;font-family:'맑은 고딕','malgun gothic','돋움',Dotum,sans-serif;font-size:12px;color:#333;background:#fff;letter-spacing:-1px}
+	h1,h2,h3,h4,h5,h6,div,p,ul,ol,li,dl,dt,dd,input,textarea,pre,code,form,fieldset,blockquote,th,td,select,button,code{margin:0;padding:0}
+	ul,ol,li{list-style:none}
+	li{vertical-align:top}
+	img{border:0 none}
+	em{font-style:normal}
+	legend span,caption span{visibility:hidden;overflow:hidden;position:absolute}
+	table,tr,td{margin:0;padding:0;border-collapse:collapse;border-spacing:0}
+	a,a:link,a:active,a:hover,a:visited{text-decoration:none}
+	a:focus{outline:thin dotted}
+	a:active,a:hover{outline:0}
+	b,strong{font-weight:bold}
+	@media \0screen{
+	body{font-family:'Nanum Gothic','맑은 고딕','malgun gothic','돋움',Dotum,sans-serif}
+	} /* ie8 hack */
+	
+	.clear:after{display:block;clear:both;height:0;font-size:0;line-height:0;content:''}
+	.ir{visibility:hidden;overflow:hidden;position:absolute;margin:0;padding:0}
+	
+	/* table */
+	.box-board{border-top:2px solid #515358}
+	.board{width:100%}
+	.board th{padding:10px 0;border-left:1px solid #e8e8e8;font-size:12px;background:#f9f9f9;text-align:left}
+	.board th:first-child{border-left:0}
+	.board td{padding:6px 0}
+	.board th,
+	.board td{border-bottom:1px solid #e8e8e8}
+	.board td{border-left:1px solid #e8e8e8}
+	.board th span{display:block;padding-left:20px}
+	td .box-td{padding:0 10px;text-align:left}
+
+	.board2{width:100%}
+	.board2 > thead > tr > th{padding:18px 0;border-left:1px solid #ececec;border-bottom:1px solid #c2c3cc;background:#fff;font-size:13px;line-height:14px}
+	.board2 > tbody > tr > td{padding:12px 0 11px;border-left:1px solid #ececec;border-bottom:1px solid #ececec;letter-spacing:0;text-align:center}
+	.board2 > thead > tr > th:first-child,
+	.board2 > tbody > tr > td:first-child{border-left:0}
+	.board2 .even td{background:#f9f9f9}
+	.board2 .even td:first-child{font-weight:bold}
+
+	.board3{width:100%}
+	.board3 th{height:40px;background:#f9f9f9}
+	.board3 td{height:40px;text-align:center}
+	.board3 th:first-child{border-left:0}
+	.board3 th,
+	.board3 td{border-width:0 0 1px 1px;border-style:solid;border-color:#e8e8e8}
+
+	.board4{width:100%;border-top:1px solid #f22850}
+	.board4 th,
+	.board4 td{height:40px;border-width:0 0 1px 1px;border-style:solid;border-color:#e8e8e8}
+	.board4 td{color:#555;text-align:center;letter-spacing:0}
+	.board4 th span,
+	.board4 td span{display:block;padding-left:10px;text-align:left}
+	.board4 th:first-child,
+	.board4 td:first-child{border-left:0}
+
+	/* footer */
+	#footer{width:837px;margin-top:70px;padding-left:32px}
+	#footer .section-footer{position:relative;padding:20px 0 30px 148px;border-top:1px solid #bfbfbf;font-family:'돋움',Dotum}
+	#footer .footer-bi{position:absolute;top:27px;left:0}
+	#footer .conts-area{position:relative;font-size:11px;line-height:18px;color:#9d9ea0;letter-spacing:0}
+	#footer .conts-area address{position:absolute;top:0;left:0;font-style:normal}
+	#footer .conts-area li{float:left;margin-left:9px;padding-left:10px;background:url(/email/bar_footer_conts.gif) no-repeat 0 3px}
+	#footer .conts-area li:first-child{margin-left:350px}
+	#footer .conts-area .clear-left{clear:left;margin-left:0;padding-left:0;background:none}
+	#footer .copyright{font-size:11px;line-height:18px;color:#9d9ea0;letter-spacing:0}
+
+	@-moz-document url-prefix(){
+		#footer .conts-area li{background-position:0 4px}
+	} /* ff hack */
+	
+	/* common */
+	.section-email{position:relative;width:747px;margin:10px 0 0 30px;padding-top:15px;background:url(http://www.yytelecom.co.kr/email/bg_email_body.png) no-repeat 0 0}
+	.email-area{padding:0 50px 77px 42px;background:url(http://www.yytelecom.co.kr/email/bg_email_body.png) no-repeat 100% 100%}
+	.email-area .bill-date{font-size:14px;color:#888;letter-spacing:0}
+	.email-area .bill-date span{position:absolute;right:51px;top:17px}
+	.email-area .tit-h1{margin-top:70px;padding-bottom:20px;border-bottom:2px solid #ed2949;font-size:32px;color:#111;font-weight:500;line-height:32px}
+
+	.email-area .nav{position:absolute;top:107px;right:-92px;z-index:9}
+	.email-area .nav a{display:block;width:96px;height:45px;padding:0 4px 5px 0;color:#fff;background:url(http://www.yytelecom.co.kr/email/bg_nav.png) no-repeat 0 0;text-align:center}
+	.email-area .nav i,.email-area .nav span{display:inline-block;vertical-align:middle}
+	.email-area .nav i{width:0;height:45px}
+	.email-area .nav .active{background-position:0 -50px}
+
+	.section-email .btn-email-print{position:absolute;top:108px;right:51px;cursor:pointer}
+
+	/* 청구요약 */
+	.email-area .conts{margin-top:24px}
+	.email-area .conts .dsc{font-size:14px;color:#999;font-weight:bold;text-align:center}
+	.email-area .conts .dsc span{color:#f22850}
+	.email-area .conts .total{overflow:hidden;margin-top:70px}
+	.email-area .conts .total .sum{margin-left:-11px}
+	.email-area .conts .total .sum li{float:left;margin-left:11px;font-size:14px;font-weight:bold;;color:#555;text-align:center}
+	.email-area .conts .total .sum span{display:block}
+	.email-area .conts .total .sum li > span{width:211px;margin-top:10px;border-bottom:3px solid #f3f3f3}
+	.email-area .conts .total .sum span span{border-width:2px 1px 1px;border-style:solid;border-color:#515358 #d9d9db #d9d9db;font-size:24px;color:#000;font-weight:normal;line-height:65px}
+	.email-area .conts .total .sum span strong{font-family:tahoma;font-size:33px;font-weight:500}
+	.email-area .conts .total .sum .result,.email-area .conts .total .sum .result span{color:#f22850}
+
+	.email-area .conts .noti-caution{margin-top:36px}
+	.email-area .conts .noti-caution .noti{float:left;color:#888;line-height:18px}
+	.email-area .conts .noti-caution .caution{float:right;width:200px;padding:0 5px;font-weight:bold}
+	.email-area .conts .noti-caution .caution span{font-size:14px;text-decoration:underline}
+	.email-area .conts .noti-caution .caution p{margin-top:10px;color:#888;font-weight:normal;line-height:18px}
+	.email-area .conts .noti-caution .caution p strong{color:#666}
+
+	.email-area .conts .classified-table{overflow:hidden;margin-top:70px}
+	.email-area .conts .classified-table .classified{margin:15px 0 0 -3px}
+	.email-area .conts .classified-table .classified li{position:relative;float:left;width:326px;height:47px;margin:2px 0 0 3px;background:url(http://www.yytelecom.co.kr/email/bg_classified_table.jpg) no-repeat 0 -60px;line-height:47px}
+	.email-area .conts .classified-table .classified li:first-child{width:100%;height:60px;margin-top:0;background-position:0 0;line-height:60px}
+	.email-area .conts .classified-table .classified li strong{display:inline-block;margin-left:15px;padding-left:20px;font-size:14px;color:#555;background:url(http://www.yytelecom.co.kr/email/bul_circle.png) no-repeat 0 0;line-height:19px}
+	.email-area .conts .classified-table .classified li span{position:absolute;top:0;right:15px;font-size:16px;color:#888}
+	.email-area .conts .classified-table .classified li span em{font-family:tahoma;font-size:20px;color:#000}
+	.email-area .conts .classified-table .classified li:first-child strong{font-size:18px;color:#f22850;line-height:20px}
+	.email-area .conts .classified-table .classified li:first-child span em{font-size:24px}
+	.email-area .conts .classified-table .classified .num1{background-position:0 3px}
+	.email-area .conts .classified-table .classified .num2{background-position:0 -28px}
+	.email-area .conts .classified-table .classified .num3{background-position:0 -58px}
+	.email-area .conts .classified-table .classified .num4{background-position:0 -88px}
+	.email-area .conts .classified-table .classified .num5{background-position:0 -118px}
+
+	.email-area .conts .classified-table .noti{margin-top:26px;color:#888;line-height:18px}
+
+	/* 청구내역 */
+	.email-area .conts2{margin-top:30px}
+	.email-area .conts2 .sum{margin-bottom:27px;border-bottom:3px solid #f3f3f3}
+	.email-area .conts2 .sum .in{height:116px;border-width:2px 1px 1px;border-style:solid;border-color:#515358 #d9d9db #d9d9db}
+	.email-area .conts2 .month{float:left;padding:26px 0 0 55px}
+	.email-area .conts2 .month span{display:block;margin-bottom:5px;font-size:24px}
+	.email-area .conts2 .month strong{display:inline-block;font-size:55px;font-weight:normal;line-height:55px;color:#f22850;vertical-align:bottom}
+	.email-area .conts2 .sum .in p{padding-top:30px;font-size:24px;line-height:24px;text-align:center}
+	.email-area .conts2 .sum .in p span{display:inline-block;text-align:left;vertical-align:top}
+	.email-area .conts2 .sum .in p strong{font-weight:normal;color:#ee279c}
+	.email-area .conts2 .sum .in p .date{margin-top:15px;font-size:13px;line-height:13px}
+	.email-area .conts2 .sum .in p .date em{font-weight:bold}
+
+	.email-area .conts2 .this-month-bill{margin-top:50px}
+	.email-area .conts2 .this-month-bill .tit-h2{margin-bottom:12px;font-size:12px;line-height:12px}
+	.email-area .conts2 .board2 td span{display:block;padding:0 20px;text-align:right}
+	.email-area .conts2 .board2 td:first-child span{text-align:left}
+	.email-area .conts2 .board2 .bill-btm td,
+	.email-area .conts2 .board2 .bill-btm ~ tr td{font-weight:bold;background:#f9f9f9}
+	.email-area .conts2 .board2 .line td,
+	.email-area .conts2 .board2 .bill-btm + tr + tr td{border-bottom-color:#555658}
+	.email-area .conts2 .board2 .bill-btm td strong,
+	.email-area .conts2 .board2 .bill-btm ~ tr td strong{color:#c00051}
+	.email-area .conts2 .board2 .bill-btm td:first-child strong,
+	.email-area .conts2 .board2 .bill-btm + tr td:first-child strong{color:#333}
+
+	.email-area .conts2 .this-month-discount{margin-top:50px}
+	.email-area .conts2 .this-month-discount .tit-h2{margin-bottom:12px;font-size:12px;line-height:12px}
+	.email-area .conts2 .this-month-discount .board2 .line td,
+	.email-area .conts2 .this-month-discount .board2 .line + tr td{border-bottom-width:2px;border-bottom-color:#555658}
+	.email-area .conts2 .this-month-discount .board2 .line + tr td strong{color:#c00051}
+
+	/* 서비스별 상세내역 */
+	.email-area .conts3{margin-top:30px}
+	.email-area .conts3 .tit-h2{margin-bottom:14px;font-size:12px}
+	.email-area .conts3 .board3 tbody tr:first-child td:first-child{border-bottom-color:#c2c3cc;background:#f9f9f9}
+	.email-area .conts3 .board3 .last td{border-bottom-color:#c2c3cc}
+
+	.email-area .conts3 .detail-history{margin-top:50px}
+	.email-area .conts3 .noti{margin-top:10px;color:#555;letter-spacing:0}
+
+	/* 청구서 / 영수증 */
+	.email-area .conts4{margin-top:30px}
+	.email-area .conts4 .tit-h2{margin-bottom:12px;font-size:12px;line-height:12px}
+	.email-area .conts4 .bill-table,
+	.email-area .conts4 .receipt-table{position:relative;width:269px;height:638px;padding:30px 25px 0;background:url(http://www.yytelecom.co.kr/email/bg_bill_receipt.jpg) no-repeat}
+	.email-area .conts4 .bill-table{float:left;background-position:0 0}
+
+	.email-area .conts4 .receipt-table{float:right;background-position:100% 0}
+	.email-area .conts4 .tit-h3{margin-bottom:20px;font-size:14px;text-align:center;line-height:14px}
+	.email-area .conts4 .tit-h3 span{color:#ed2949}
+	.email-area .conts4 .payment{margin-top:20px}
+	.email-area .conts4 .total th{color:#c00051;background:#e5e5e5}
+	.email-area .conts4 .bi{position:absolute;left:0;bottom:40px;width:100%;text-align:center}
+    </style>
+</head>
+<body>
+<div id="wrap">
+	<div class="section-email">
+		<div class="email-area">
+			<p class="bill-date">
+				<strong>2015. 09 이메일 청구서</strong>
+				<span><a href="http://www.yytelecom.co.kr/" target="_blank"><img src="http://www.yytelecom.co.kr/email/img_email_yeoyou.png" alt="YEOYOU Telecom"></a></span>
+			</p>
+			
+			<!-- nav : 해당 탭 a태그 active class 추가, 탭 내용 id와 북마크 연결 -->
+			<ul class="nav">
+				<li><a href="#bill" class="active"><i></i><span>청구요약</span></a></li>
+				<li><a href="#bill2"><i></i><span>청구내역</span></a></li>
+				<li><a href="#bill3"><i></i><span>서비스별<br>상세내역</span></a></li>
+				<li><a href="#bill4"><i></i><span>청구서<br>/영수증</span></a></li>
+			</ul>
+			<!-- // nav -->
+
+			<h1 class="tit-h1">홍길동 고객님의 2015년 09월 청구서</h1>
+
+			<!-- 청구요약 -->
+			<div id="bill" class="box-bill conts" style="display:">
+				<p class="dsc">이번달 요금은 <span>08</span>월 24일부터 <span>기업은행</span> 계좌에서 출금될 예정입니다.</p>
+
+				<div class="total">
+					<ul class="clear sum">
+						<li>
+							총 이용하신 금액
+							<span>
+								<span><strong>54,300</strong> 원</span>
+							</span>
+						</li>
+						<li>
+							할인받으신 금액
+							<span>
+								<span><strong>54,300</strong> 원</span>
+							</span>
+						</li>
+						<li class="result">
+							납부하실 금액
+							<span>
+								<span><strong>54,300</strong> 원</span>
+							</span>
+						</li>
+					</ul>
+					
+					<div class="clear noti-caution">
+						<ul class="noti">
+							<li>- 당사 통신요금은 후불제 (전월 이용요금)입니다.</li>
+							<li>- 납부하실 금액은 미납요구 및 부가세(VAT) 포함한 금액입니다.</li>
+							<li>- 자세한 요금내역은  “청구내역” 을 참조하시기 바랍니다.</li>
+						</ul>
+
+						<div class="caution">
+							<span>납기일 2015년 08 31일</span>
+							<p>※ 납기일이 지나서 요금을 납부하시면<br><strong>2% 연체가산금</strong>이 <strong>다음달 요금에<br> 추가되어 청구</strong>됩니다.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="classified-table">
+					<h2 class="tit-h2"><img src="http://www.yytelecom.co.kr/email/img_classified_table.png" alt="납부하실 금액 분류표"></h2>
+
+					<ol class="clear classified">
+						<li><strong class="num1">통신서비스 요금</strong> <span><em>26,000</em> 원</span></li>
+						<li><strong class="num2">컨텐츠&amp;부가사용 요금</strong> <span><em>26,000</em> 원</span></li>
+						<li><strong class="num3">단말기 할부금</strong> <span><em>10,000</em> 원</span></li>
+						<li><strong class="num4">부가가치세</strong> <span><em>800</em> 원</span></li>
+						<li><strong class="num5">미납요금</strong> <span><em>0</em> 원</span></li>
+					</ol>
+
+					<ol class="noti">
+						<li>① 통신서비스 요금 : 기본료, 통화료(음성/데이터), 문자이용료, 할인요금 등 순수 통신비 관련 이용하신 요금입니다.</li>
+						<li>② 컨텐츠&amp;부가사용 요금 : 컨텐츠 이용료, 부가서비스 이용료, 위약금 등 부가적으로 이용하신 요금입니다.</li>
+						<li>③ 단말기 할부금 : 단말기 할부금, 가입비, USIM 카드비용, 단말기할부 지원금(단말할인 포함)등 단말기와 관련된 금액입니다.</li>
+						<li>④ 부가가치세 : 청구내역(별도표기)의 (*)표시가 없는 요금항목에 부과되는 세금(10%) 합계액입니다.</li>
+					</ol>
+				</div>
+
+				<!-- 인쇄하기 -->
+				<span class="btn-email-print"><img src="http://www.yytelecom.co.kr/email/btn_email_print.jpg" alt="인쇄하기"></span>
+				<!-- // 인쇄하기 -->
+			</div>
+			<!-- // 청구요약 -->
+
+			<!-- 청구내역 -->
+			<div id="bill2" class="box-bill conts2" style="display:">
+				<div class="sum">
+                    <div class="clear in">
+                        <div class="month">
+                           <span><strong>9</strong>월</span>
+                        </div>
+
+                        <p>
+                            <span>
+                                이번달 납부하실 금액은 <strong>00,000원</strong> 입니다.<br>
+                                <span class="date"><em>조회기간 :</em> 2015.01.01~ 2015.01,.31</span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box-board">
+                    <table class="board">
+                        <caption><span>요금납부 정보</span></caption>
+                        <colgroup>
+                            <col style="width:120px">
+                            <col style="width:200px">
+                            <col style="width:120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                         <tr>
+                            <th scope="row"><span>고객명</span></th>
+                            <td>
+                                <div class="box-td">
+                                    홍길동
+                                </div>
+                            </td>
+                            <th scope="row"><span>요금제</span></th>
+                            <td>
+                                <div class="box-td">
+                                    여유LTE42
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><span>휴대폰번호</span></th>
+                            <td>
+                                <div class="box-td">
+                                    010-**37-3065
+                                </div>
+                            </td>
+                            <th scope="row"><span>이용기간</span></th>
+                            <td>
+                                <div class="box-td">
+                                    2015년 08월 01일 ~ 2015년 08월 31일
+                                </div>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row"><span>납기일</span></th>
+                            <td>
+                                <div class="box-td">
+                                    2015년 09월 31일
+                                </div>
+                            </td>
+                            <th scope="row"><span>출금일</span></th>
+                            <td>
+                                <div class="box-td">
+                                   9월 24일
+                                </div>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row"><span>납부방법</span></th>
+                            <td>
+                                <div class="box-td">
+                                    은행자동이체
+                                </div>
+                            </td>
+                            <th scope="row"><span>금융기관</span></th>
+                            <td>
+                                <div class="box-td">
+                                    기업은행
+                                </div>
+                            </td>
+                        </tr>
+                         <tr>
+                            <th scope="row"><span>카드/계좌번호</span></th>
+                            <td>
+                                <div class="box-td">
+                                   307********5
+                                </div>
+                            </td>
+                            <th scope="row"><span>예금주명</span></th>
+                            <td>
+                                <div class="box-td">
+                                   홍길동
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="this-month-bill">
+                	<h2 class="tit-h2"><img src="http://www.yytelecom.co.kr/email/img_this_month_bill.png" alt="이번달 요금 청구내역"></h2>
+
+                	<div class="box-board">
+               			<table class="board2">
+               				<caption><span>청구내역 안내</span></caption>
+               				<colgroup>
+               					<col style="width:210px">
+               					<col>
+               				</colgroup>
+               				<thead>
+               				<tr>
+               					<th scope="col">청구내역</th>
+               					<th scope="col">금액</th>
+               				</tr>
+               				</thead>
+               				<tbody>
+               				<tr class="even">
+               					<td><span>통신요금</span></td>
+               					<td><span>36,800원</span></td>
+               				</tr>
+               				<tr>
+               					<td><span>기본료</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr class="even">
+               					<td><span>기타요금</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr>
+               					<td><span>-SK텔레콤(이전통신사)</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr class="even">
+               					<td><span>초과사용료</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr>
+               					<td><span>단말기할부금</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr class="even">
+               					<td><span>USIM 카드</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr class="line">
+               					<td><span>부가가치세</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr class="bill-btm">
+               					<td><span><strong>이번달 요금</strong></span></td>
+               					<td><span><strong>16,800원</strong></span></td>
+               				</tr>
+               				<tr>
+               					<td><span><strong>미납요금</strong></span></td>
+               					<td><span><strong>16,800원</strong></span></td>
+               				</tr>
+               				<tr>
+               					<td><span><strong>총 납부하실 금액</strong></span></td>
+               					<td><span><strong>16,800원</strong></span></td>
+               				</tr>
+               				</tbody>
+               			</table>
+               		</div>
+                </div>
+
+                <div class="this-month-discount">
+                	<h2 class="tit-h2"><img src="http://www.yytelecom.co.kr/email/img_this_month_discount.png" alt="이번달 할인 상세내역"></h2>
+
+                	<div class="box-board">
+               			<table class="board2">
+               				<caption><span>할인내역 안내</span></caption>
+               				<colgroup>
+               					<col style="width:210px">
+               					<col>
+               				</colgroup>
+               				<thead>
+               				<tr>
+               					<th scope="col">할인내역</th>
+               					<th scope="col">금액</th>
+               				</tr>
+               				</thead>
+               				<tbody>
+               				<tr class="even">
+               					<td><span>여유 50%할인</span></td>
+               					<td><span>36,800원</span></td>
+               				</tr>
+               				<tr>
+               					<td><span>도넛할인</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr class="even line">
+               					<td><span>10원미만 할인</span></td>
+               					<td><span>16,800원</span></td>
+               				</tr>
+               				<tr>
+               					<td><span><strong>총계</strong></span></td>
+               					<td><span><strong>16,800원</strong></span></td>
+               				</tr>
+               				</tbody>
+               			</table>
+               		</div>
+                </div>
+
+                <!-- 인쇄하기 -->
+				<span class="btn-email-print"><img src="http://www.yytelecom.co.kr/email/btn_email_print.jpg" alt="인쇄하기"></span>
+				<!-- // 인쇄하기 -->
+			</div>
+			<!-- // 청구내역 -->
+
+			<!-- 서비스별 상세내역 -->
+			<div id="bill3" class="box-bill conts3" style="display:">
+				<div class="use-history">
+					<h2 class="tit-h2"><img src="http://www.yytelecom.co.kr/email/img_use_history.png" alt="사용내역"></h2>
+
+					<div class="box-board">
+               			<table class="board3">
+               				<caption><span>사용내역 안내</span></caption>
+               				<colgroup>
+               					<col style="width:120px">
+               					<col style="width:106px">
+               					<col style="width:106px">
+               					<col style="width:106px">
+               					<col style="width:106px">
+               					<col>
+               				</colgroup>
+               				<thead>
+               				<tr>
+               					<th scope="col">구분</th>
+               					<th scope="col">서비스</th>
+               					<th scope="col">2015.05</th>
+               					<th scope="col">2015.06</th>
+               					<th scope="col">2015.07</th>
+               					<th scope="col">평균이용량</th>
+               				</tr>
+               				</thead>
+               				<tbody>
+               				<tr>
+               					<td rowspan="3">010-**34-5678</td>
+               					<td>국내통화</td>
+               					<td>0분 00초</td>
+               					<td>0분 00초</td>
+               					<td>69분 29초</td>
+               					<td>69분 29초</td>
+               				</tr>
+               				<tr>
+               					<td>문자 (MMS포함)</td>
+               					<td>0건</td>
+               					<td>0건</td>
+               					<td>0건</td>
+               					<td>0건</td>
+               				</tr>
+               				<tr class="last">
+               					<td>데이터</td>
+               					<td>0MB (0GB)</td>
+               					<td>0MB (0GB)</td>
+               					<td>0MB (0GB)</td>
+               					<td>0MB (0GB)</td>
+               				</tr>
+               				</tbody>
+               			</table>
+               		</div>
+
+               		<p class="noti">※ 데이터 1GB는 1,024MB 환산됩니다.</p>
+				</div>
+
+				<div class="detail-history">
+					<h2 class="tit-h2"><img src="http://www.yytelecom.co.kr/email/img_detail_history.png" alt="상세내역서"></h2>
+
+					<div class="box-board">
+               			<table class="board3">
+               				<caption><span>상세내역 안내</span></caption>
+               				<colgroup>
+               					<col style="width:120px">
+               					<col style="width:106px">
+               					<col style="width:106px">
+               					<col style="width:106px">
+               					<col style="width:106px">
+               					<col>
+               				</colgroup>
+               				<thead>
+               				<tr>
+               					<th scope="col">구분</th>
+               					<th scope="col">서비스</th>
+               					<th scope="col">2015.05</th>
+               					<th scope="col">2015.06</th>
+               					<th scope="col">2015.07</th>
+               					<th scope="col">평균이용량</th>
+               				</tr>
+               				</thead>
+               				<tbody>
+               				<tr class="last">
+               					<td>010-**34-5678</td>
+               					<td>국내통화</td>
+               					<td>0분 00초</td>
+               					<td>0분 00초</td>
+               					<td>69분 29초</td>
+               					<td>69분 29초</td>
+               				</tr>
+               				</tbody>
+               			</table>
+               		</div>
+
+					<p class="noti">※ 데이터 1GB는 1,024MB 환산됩니다.</p>
+				</div>
+
+				<!-- 인쇄하기 -->
+				<span class="btn-email-print"><img src="http://www.yytelecom.co.kr/email/btn_email_print.jpg" alt="인쇄하기"></span>
+				<!-- // 인쇄하기 -->
+			</div>
+			<!-- // 서비스별 상세내역 -->
+
+			<!-- 청구서 / 영수증 -->
+			<div id="bill4" class="box-bill conts4" style="display:">
+				<h2 class="tit-h2"><img src="http://www.yytelecom.co.kr/email/img_bill_receipt.png" alt="청구서 및 영수증"></h2>
+
+				<div class="clear">
+					<!-- 청구서 -->
+					<div class="bill-table">
+						<h3 class="tit-h3"><span>2015년 08월</span> 청구서</h3>
+						<table class="board4">
+							<caption><span>청구서 내용</span></caption>
+							<colgroup>
+								<col style="width:108px">
+								<col>
+							</colgroup>
+							<tbody>
+							<tr>
+								<th><span>고객명</span></th>
+								<td><span>홍길동</span></td>
+							</tr>
+							<tr>
+								<th><span>요금제</span></th>
+								<td><span>여유LTE42</span></td>
+							</tr>
+							<tr>
+								<th><span>휴대폰번호</span></th>
+								<td><span>010-**34-5678</span></td>
+							</tr>
+							<tr>
+								<th><span>이용기간</span></th>
+								<td><span>2015-07-01~2015-07-31</span></td>
+							</tr>
+							<tr>
+								<th><span>납기일</span></th>
+								<td><span>2015-08-24</span></td>
+							</tr>
+							<tr>
+								<th><span>출금일</span></th>
+								<td><span>2015-08-24</span></td>
+							</tr>
+							<tr>
+								<th><span>금융기관</span></th>
+								<td><span>기업은행</span></td>
+							</tr>
+							<tr>
+								<th><span>예금주명</span></th>
+								<td><span>홍길동</span></td>
+							</tr>
+							<tr>
+								<th><span>계좌 / 카드번호</span></th>
+								<td><span>202**********</span></td>
+							</tr>
+							<tr>
+								<th><span>이번달요금①</span></th>
+								<td><span>36,000원</span></td>
+							</tr>
+							<tr>
+								<th><span>미납요금②</span></th>
+								<td><span>0원</span></td>
+							</tr>
+							<tr>
+								<th><span>이번달 납부<br>금액(①+②)</span></th>
+								<td><span>36,000원</span></td>
+							</tr>
+							</tbody>
+						</table>
+
+						<span class="bi"><img src="http://www.yytelecom.co.kr/email/img_email_yeoyou2.png" alt="YEOYOU Telecom"></span>
+					</div>
+					<!-- // 청구서 -->
+
+					<!-- 영수증 -->
+					<div class="receipt-table">
+						<h3 class="tit-h3"><span>전월</span> 납부영수증</h3>
+
+						<table class="board4">
+							<caption><span>영수증 내용</span></caption>
+							<colgroup>
+								<col style="width:100px">
+								<col>
+							</colgroup>
+							<tbody>
+							<tr>
+								<th><span>고객명</span></th>
+								<td><span>홍길동</span></td>
+							</tr>
+							<tr>
+								<th><span>요금제</span></th>
+								<td><span>여유LTE42</span></td>
+							</tr>
+							<tr>
+								<th><span>휴대폰번호</span></th>
+								<td><span>010-**34-5678</span></td>
+							</tr>
+							<tr>
+								<th><span>금융기관</span></th>
+								<td><span>기업은행</span></td>
+							</tr>
+							<tr>
+								<th><span>계좌 / 카드번호</span></th>
+								<td><span>202**********</span></td>
+							</tr>
+							</tbody>
+						</table>
+
+						<table class="board4 payment">
+							<caption><span>납부 내용</span></caption>
+							<colgroup>
+								<col style="width:33%">
+								<col style="width:33%">
+								<col>
+							</colgroup>
+							<thead>
+							<tr>
+								<th>납부일자</th>
+								<th>영수금액</th>
+								<th>납부방법</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>2015-08-31</td>
+								<td>36,800원</td>
+								<td>무통장 입금</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<table class="board4 total">
+							<caption><span>납부금액 합계</span></caption>
+							<colgroup>
+								<col style="width:33%">
+								<col>
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>합계</th>
+								<td><span>36,800원</span></td>
+							</tr>
+							</tbody>
+						</table>
+
+						<span class="bi"><img src="http://www.yytelecom.co.kr/email/img_email_yeoyou2.png" alt="YEOYOU Telecom"></span>
+					</div>
+					<!-- // 영수증 -->
+				</div>
+
+				<!-- 인쇄하기 -->
+				<span class="btn-email-print"><img src="http://www.yytelecom.co.kr/email/btn_email_print.jpg" alt="인쇄하기"></span>
+				<!-- // 인쇄하기 -->
+			</div>
+			<!-- // 청구서 / 영수증 -->
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="section-footer">
+			<span class="footer-bi"><img src="http://www.yytelecom.co.kr/assets/img/img_footer_bi.jpg" alt="YEOYOU Telecom"></span>
+
+			<div class="conts-area">
+				<address>경기도 성남시 분당구 판교역로 230(삼평동) 삼환하이펙스 B동 903호</address>
+				<ul class="clear">
+					<li>회사명: 주식회사 와이엘랜드</li>
+					<li>대표자명: 천해환</li>
+					<li class="clear-left">고객센터: 1644-5646</li>
+					<li>Fax: 0505-999-5646</li>
+					<li>사업자등록번호: 104-86-21733</li>
+					<li>통신판매신고번호: 제2014-경기성남-1694호</li>
+				</ul>
+			</div>
+			<p class="copyright">Copyright &copy; 2015 여유텔레콤 All Right Reserved.</p>
+		</div>
+	</div>
+	<!-- // footer -->
+</div>
+</body>
+</html>

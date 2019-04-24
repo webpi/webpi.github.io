@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Donut Blog - 사진</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/comm.css">
+<link rel="stylesheet" type="text/css" href="/css/pop.css">
+<link rel="stylesheet" href="/js/jquery.mCustomScrollbar.css" />
+</head>
+
+<body>
+<!-- 에디터 사진 올리기 740 x 670 -->
+<div class="pop editor-photoup">
+	<form>
+		<fieldset>
+			<legend><span>사진 올리기</span></legend>
+			<!-- editor-photoup-top -->
+			<div class="clear editor-photoup-top">
+				<!-- 활성화 on -->
+				<ul class="clear">
+					<li class="on"><span class="btn-fileup"><span>바로올리기</span></span></li>
+					<li class=""><span class="btn-photo-edit"><span>편집하기</span></span></li>
+				</ul>
+
+				<span class="btn-all-del">전체삭제</span>
+			</div>
+			<!-- // editor-photoup-top -->
+
+			<div class="clear editor-fileup">
+				<span class="btn-fileup">파일첨부<input type="file"></span>
+				<input type="button" class="btn-photoup" value="이미지올리기">
+			</div>
+
+			<!-- 이미지 리스트 -->
+			<div class="section-photoLst">
+				<div class="clear photo-area-top">
+					<span class="rotation">
+						<span class="t">회전</span><!--
+						--><span class="b-group">
+							<span class="btn-left"><em class="ir">왼쪽 회전</em></span>
+							<span class="btn-right"><em class="ir">오른쪽 회전</em></span>
+						</span>
+					</span>
+
+					<span class="cnt"><strong>0장</strong> / 50장</span>
+				</div>
+
+				<div class="photo-lst">
+					<!-- 선택 on -->
+					<ul class="clear">
+						<li class="on">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"><img src="/img/lnb_photo.jpg" alt="이미지1"></span>
+								<div class="bot">
+									<input type="checkbox" title="선택">
+									<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+								</div>
+							</div>							
+						</li>
+						<li class="">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"><img src="/img/lnb_photo.jpg" alt="이미지1"></span>
+								<div class="bot">
+									<input type="checkbox" title="선택">
+									<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+								</div>
+							</div>							
+						</li>
+						<li class="">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"><img src="/img/lnb_photo.jpg" alt="이미지1"></span>
+								<div class="bot">
+									<input type="checkbox" title="선택">
+									<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+								</div>
+							</div>							
+						</li>
+						<li class="">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"><img src="/img/lnb_photo.jpg" alt="이미지1"></span>
+								<div class="bot">
+									<input type="checkbox" title="선택">
+									<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+								</div>
+							</div>							
+						</li>
+						<li class="">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"><img src="/img/lnb_photo.jpg" alt="이미지1"></span>
+								<div class="bot">
+									<input type="checkbox" title="선택">
+									<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+								</div>
+							</div>							
+						</li>
+						<li class="">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"><img src="/img/lnb_photo.jpg" alt="이미지1"></span>
+								<div class="bot">
+									<input type="checkbox" title="선택">
+									<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+								</div>
+							</div>							
+						</li>
+						<li class="">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"><img src="/img/lnb_photo.jpg" alt="이미지1"></span>
+								<div class="bot">
+									<input type="checkbox" title="선택">
+									<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+								</div>
+							</div>							
+						</li>
+						<li class="">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"></span>
+								
+							</div>							
+						</li>
+						<li class="">
+							<div class="box">
+								<span class="number">1</span>
+								<span class="img"><img src="/img/lnb_photo.jpg" alt="이미지1"></span>
+								<div class="bot">
+									<input type="checkbox" title="선택">
+									<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+								</div>
+							</div>							
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // 이미지 리스트 -->
+
+			<!-- 편집하기 -->
+			<div class="section-photoEdit">
+				<div class="photo-area-top">
+					<div class="clear edit1">
+						<span class="rotation">
+							<span class="t">회전</span><!--
+							--><span class="b-group">
+								<span class="btn-left"><em class="ir">왼쪽 회전</em></span><!--
+								--><span class="btn-right"><em class="ir">오른쪽 회전</em></span>
+							</span>
+						</span>
+
+						<span class="photo-size">
+							<span class="t">사진크기</span><span class="photo-w"> <em>W</em>500</span><span class="photo-h"> <em>H</em>600</span><!--`
+							--><select title="선택">
+								<option>가로크기 변경</option>
+								<option>320px</option>
+								<option>400px</option>
+								<option>480px</option>
+								<option>550px</option>
+								<option>650px</option>
+								<option>740px</option>
+								<option>900px</option>
+								<option>원본크기</option>
+							</select>
+						</span>
+
+						<span class="watermark">
+							<label for="lb-watermark" class="t">워터마크 넣기</label><input type="checkbox" id="lb-watermark">
+						</span>
+
+						<span class="cnt"><strong>0장</strong> / 50장</span>
+					</div>
+
+					<div class="edit2">
+						<span class="t">보정</span>
+						<!-- 밝기 -->
+						<span class="slide-graph bright">
+							<span class="stat">밝기 <em>-100</em></span>
+							<span class="graph">
+								<span style="width:50%">
+									<span class="btn-slide"><img src="/img/btn_graph_slide.jpg" alt="이동버튼"></span>
+								</span>
+							</span>
+
+							<span class="btn-plus"><img src="/img/btn_graph_minus.jpg" alt="내림"></span>
+							<span class="btn-minus"><img src="/img/btn_graph_plus.jpg" alt="올림"></span>
+						</span>
+						<!-- // 밝기 -->
+
+						<!-- 채도 -->
+						<span class="slide-graph chroma">
+							<span class="stat">채도 <em>-100</em></span>
+							<span class="graph">
+								<span style="width:50%">
+									<span class="btn-slide"><img src="/img/btn_graph_slide.jpg" alt="이동버튼"></span>
+								</span>
+							</span>
+
+							<span class="btn-plus"><img src="/img/btn_graph_minus.jpg" alt="내림"></span>
+							<span class="btn-minus"><img src="/img/btn_graph_plus.jpg" alt="올림"></span>
+						</span>
+						<!-- // 채도 -->
+
+						<!-- 색상 -->
+						<span class="slide-graph color">
+							<span class="stat">색상 <em>-100</em></span>
+							<span class="graph">
+								<span style="width:50%">
+									<span class="btn-slide"><img src="/img/btn_graph_slide.jpg" alt="이동버튼"></span>
+								</span>
+							</span>
+
+							<span class="btn-plus"><img src="/img/btn_graph_minus.jpg" alt="내림"></span>
+							<span class="btn-minus"><img src="/img/btn_graph_plus.jpg" alt="올림"></span>
+						</span>
+						<!-- // 색상 -->
+
+						<!-- 선명 -->
+						<span class="slide-graph sharp">
+							<span class="stat">선명 <em>-100</em></span>
+							<span class="graph">
+								<span style="width:50%">
+									<span class="btn-slide"><img src="/img/btn_graph_slide.jpg" alt="이동버튼"></span>
+								</span>
+							</span>
+
+							<span class="btn-plus"><img src="/img/btn_graph_minus.jpg" alt="내림"></span>
+							<span class="btn-minus"><img src="/img/btn_graph_plus.jpg" alt="올림"></span>
+						</span>
+						<!-- // 선명 -->
+					</div>
+				</div>
+
+				<div class="clear photo-area">
+					<div class="edit-box">
+						<!-- 사진있을때 보이기 -->
+						<div class="edit-img">
+							<img src="http://dummyimage.com/800x1000/000/fff" alt="">
+						</div>
+
+						<!-- spinner -->
+						<div class="loading">
+							<img src="/img/spinner.gif" alt="진행중">
+						</div>
+						<!-- // spinner -->
+					</div>
+
+					<div class="photoup-lst">
+						<div class="photo-lst mCustomScrollbar">
+							<ol>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="on">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="on">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="on">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+								<li class="">
+									<div class="box">
+										<span class="number">1</span>
+										<span class="img"></span>
+										<span class="btn-del"><img src="/img/btn_editor_photolst_del.png" alt="삭제"></span>
+									</div>
+									<div class="bot">
+										<input type="checkbox" title="선택">
+									</div>
+								</li>
+							</ol>
+						</div>
+
+						<span class="btn-up"><em class="ir">이전</em></span>
+						<span class="btn-dn"><em class="ir">다음</em></span>
+					</div>
+				</div>
+			</div>
+			<!-- // 편집하기 -->
+
+			<!-- 이미지 태그 입력 -->
+			<div class="editor-photoup-tag">
+				<label for="lb-tag">태그</label><!--
+				--><input type="text" id="lb-tag" class="istyle" style="width:500px">
+
+				<span class="my-album"><input type="checkbox" id="lb-myalbum"> <label for="lb-myalbum">내앨범에 담기</label></span>
+			</div>
+			<!-- // 이미지 태그 입력 -->
+		</fieldset>
+	</form>
+
+	<!-- editor-photoup-foot -->
+	<p class="editor-photoup-foot">저작권 및 타인의 권리 침해, 명예를 훼손하는 이미지는 이용약관 및 관련 법률에 의해 제재받으실 수 있습니다.</p>
+	<!-- // editor-photoup-foot -->
+</div>
+<!-- // 에디터 사진 올리기 -->
+
+<script>
+$(document).ready(function(){
+	$(".photo-lst").mCustomScrollbar({
+	    scrollbarPosition: "outside",
+	    theme: "minimal-dark"
+	});
+});
+</script>
+</body>
+</html>

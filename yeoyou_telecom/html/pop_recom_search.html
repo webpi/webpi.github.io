@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>YEOYOU 텔레콤 - 추천인 검색</title>
+    <!--[if IE 8]>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+	<script type="text/javascript">
+	WebFont.load({
+	    custom: {
+	        families: ['Nanum Gothic'],
+	        urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+	    }
+	});
+	</script>
+	<![endif]-->
+    <link rel="stylesheet" href="/assets/css/comm.css">
+    <link rel="stylesheet" href="/assets/css/telecom.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico?1">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script>
+	function selectRecommandWindow(t, id, nm, nick){
+		if(confirm("선택하신 추천인을 등록하시겠습니까?")){
+			opener.document.getElementById("recommend").value = id;
+			opener.document.getElementById("recommend2").value = id+"|"+nm+"|"+nick;
+			window.close();
+		}else{
+			t.checked = false;
+		}
+	}
+	</script>
+</head>
+<body>
+<div id="wrap-pop">
+	<?php 
+		echo $this->Form->create("TeleProductCtrl", array("name" => "searchRecommandForm", "action" => "SearchRecommand", "method" => "post", "inputDefaults" => array("label" => false, "div" => false)));
+	?>
+	
+	<!-- width 670px height 320px -->
+	<div class="pop-recom-search">
+		<div class="recom-search-head">
+			<h1 class="tit-h1">추천인 검색</h1>
+
+			<div class="search">
+				<?php echo $this->Form->text("txt", array("value" => $txt, "class" => "istyle", "style" => "width:158px", "title" => "검색어 입력"))?><!--
+				--><span class="btn btn-gray9" onClick="javascript:document.searchRecommandForm.submit()">검색</span>
+			</div>
+		</div>
+		
+		<div class="box-board">
+			<table class="board">
+				<caption><span>추천인 검색 결과</span></caption>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:20%">
+					<col style="width:20%">
+					<col style="width:20%">
+					<col>
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">선택</th>
+					<th scope="col">아이디</th>
+					<th scope="col">이름</th>
+					<th scope="col">닉네임</th>
+					<th scope="col">핸드폰</th>
+				</tr>
+				</thead>
+				<tbody>
+				<?php 
+					if(empty($txt)){
+				?>
+				<tr>
+					<td colspan="5">추천인을 검색하시기 바랍니다.</td>
+				</tr>
+				<?php 
+					}else{
+						if(empty($uList)){
+				?>
+				<tr>
+					<td colspan="5">검색결과가 없습니다.</td>
+				</tr>
+				<?php 
+						}else{
+							foreach($uList AS $k => $v){
+								$cFirstLen = strpos($v['cell'], "-");
+								$cLastLen = strrpos($v['cell'], "-");
+								
+				?>
+				<tr>
+					<td><input type="radio" onClick="javascript:selectRecommandWindow(this, '<?php echo $k ?>', '<?php echo $v['name']?>', '<?php echo $v['nickname']?>')" title="선택"></td>
+					<td><?php echo $k?></td>
+					<td><?php echo $v['name']?></td>
+					<td><?php echo $v['nickname']?></td>
+					<td><?php echo substr($v['cell'], 0, $cFirstLen)."-****".substr($v['cell'], $cLastLen); ?></td>
+				</tr>
+				<?php 
+							}
+						}
+					}
+				?>
+				</tbody>
+			</table>
+			<?php 
+				echo $this->Form->end();
+			?>
+		</div>
+	</div>
+</div>
+</body>
+</html>
