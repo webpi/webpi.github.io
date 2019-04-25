@@ -181,7 +181,7 @@ $(document).ready(function() {
         {
             cntNum = 1;
         }
-        $(".section-intro .intro1").find(".img img").attr("src", "/img/img_intro1_box"+cntNum+".png");
+        $(".section-intro .intro1").find(".img img").attr("src", "../img/img_intro1_box"+cntNum+".png");
         cntNum+=1;
     }
 
