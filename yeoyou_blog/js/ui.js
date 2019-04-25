@@ -42,7 +42,7 @@ $(document).ready(function() {
         }, 300);
 
         // lnb 슬라이드 버튼 변경
-        var src = ($(this).find("img").attr("src") === "/img/btn_lnb_open.png") ? "/img/btn_lnb_clse.png" : "/img/btn_lnb_open.png";
+        var src = ($(this).find("img").attr("src") === "../img/btn_lnb_open.png") ? "../img/btn_lnb_clse.png" : "../img/btn_lnb_open.png";
         $(this).find("img").attr("src", src);
     });
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
     // 글 추천 애니메이션
     $(".section-post").find(".btn-rec").click(function() {
-        $(this).append("<em class='ani-recm'><img src='/img/img_recm.png' alt='추천'></em>");
+        $(this).append("<em class='ani-recm'><img src='../img/img_recm.png' alt='추천'></em>");
         $(this).find(".ani-recm").animate({
             bottom: "70px",
             opacity: 0
@@ -90,7 +90,7 @@ $(document).ready(function() {
     });
     // 글 비추천 애니메이션
     $(".section-post").find(".btn-non").click(function() {
-        $(this).append("<em class='ani-non'><img src='/img/img_recm2.png' alt='비추천'></em>");
+        $(this).append("<em class='ani-non'><img src='../img/img_recm2.png' alt='비추천'></em>");
         $(this).find(".ani-non").animate({
             bottom: "20px",
             opacity: 0
