@@ -1,0 +1,1110 @@
+@charset "utf-8";
+
+// color
+$base_color1: #333;
+$base_color2: #666;
+$base_color3: #999;
+$point_color1: #418ded;
+$point_color1_over: #3281ed;
+$point_color2: #f34522;
+$point_color2_over: #e5310c;
+
+// Responsive
+$desktop: '(min-width:721px)';
+$small_desktop: '(max-width:1209px)';
+$responsive_break_width: 700px;
+$responsive_break_minwidth: 350px;
+$size320: '(max-width: 320px)';
+$size480: '(max-width: 480px)';
+$size640: '(min-width: 481px)';
+$size960: '(min-width: 961px)';
+
+@mixin respond-to($media) {
+	@media only screen and #{$media} {
+		@content;
+	}
+}
+
+// @include respond-to($desktop) {
+	//   height: 100px;
+	//
+// }
+
+@mixin default_width {
+	max-width: 1190px;
+	min-width: 950px;
+	margin: 0 auto;
+}
+
+// 비율
+@mixin responsive-ratio($x, $y, $pseudo:false) {
+	$padding: unquote(($y / $x) * 100 + '%');
+
+	@if $pseudo {
+		&:before {
+			@include pseudo($pos: relative);
+			width: 100%;
+			padding-top: $padding;
+		}
+
+	}
+
+	@else {
+		padding-top: $padding;
+	}
+
+}
+
+// div {
+	//     @include responsive-ratio(16, 9);
+	//
+// }
+
+// grid 
+@mixin grid-cols($col, $gap) {
+	width: percentage(1 / $col);
+	padding-left: $gap;
+	padding-right: $gap;
+	box-sizing: border-box;
+}
+
+// float clear
+@mixin clear {
+	*zoom: 1;
+
+	&:after {
+		display: block;
+		clear: both;
+		height: 0;
+		font-size: 0;
+		line-height: 0;
+		content: '';
+	}
+
+}
+
+// 정사각형
+@mixin size($width, $height:$width) {
+	width: $width;
+	height: $height;
+}
+
+// 상품 해피트리 팝업 버튼
+@mixin btn_happytree {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 29px;
+	height: 29px;
+	margin-left: -14.5px;
+	border: 0;
+	background: url('//img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -297px -146px;
+	z-index: 2;
+
+	&:hover {
+		background-position: -297px -175px;
+	}
+}
+
+// 말줄임
+@mixin truncate($truncation-boundary:null) {
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// 말줄임 여러줄
+@mixin truncate2($truncation-boundary:null, $line-clamp:2) {
+	display: -webkit-box;
+	display: -ms-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line-clamp;
+	overflow: hidden;
+	max-width: $truncation-boundary;
+	word-wrap: break-word;
+	word-break: keep-all;
+	text-overflow: ellipsis;
+}
+
+// icon
+// @mixin icon($word, $font_size:null, $direction:"before", $color:null) {
+// 	@if $direction == "before" {
+// 		&:before {
+// 			font-family: 'icomoon';
+// 			content: $word;
+// 			font-size: $font_size;
+// 			color: $color;
+// 		}
+// 	}
+
+// 	@else if $direction == "after" {
+// 		&:after {
+// 			font-family: 'icomoon';
+// 			content: $word;
+// 			font-size: $font_size;
+// 			color: $color;
+// 		}
+// 	}
+// }
+
+@mixin btn($width, $height, $border:null, $font_color:null, $background_color:null, $text_align:null, $line_height:null) {
+	width: $width;
+	height: $height;
+	border: $border;
+	color: $font_color;
+	background-color: $background_color;
+	text-align: $text_align;
+	line-height: $line_height;
+	vertical-align: middle;
+	letter-spacing: 0;
+	cursor: pointer;
+	@include box-sizing;
+
+	&:disabled {
+		cursor: default;
+	}
+}
+
+@mixin notfound($height, $padding:null, $line_height:null, $text_align:center) {
+	height: $height;
+	padding: $padding;
+	line-height: $line_height;
+	text-align: $text_align;
+}
+
+@mixin mark_badge($clr) {
+	display: inline-block;
+	height: 15px;
+	padding: 1px 3px 0;
+	border: 1px solid $clr;
+	font-family: "돋움", Dotum;
+	font-size: 11px;
+	color: $clr;
+	font-weight: normal;
+	background: #fff;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 15px;
+
+	a {
+		color: $clr;
+	}
+
+	&.m {
+		min-width: 38px;
+		height: 16px;
+		padding-top: 2px;
+		line-height: 16px;
+	}
+
+}
+
+@mixin badge_coupon($clr) {
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	padding: 2px 0 0;
+	border: 1px solid $clr;
+	font-size: 11px;
+	color: $clr;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 16px;
+	@include box-sizing();
+}
+
+@mixin loadIcon($icon:null, $fontsize:null, $color:null) {
+	&:before {
+		font-family: 'ppingkr_v4' !important;
+		speak: none;
+		font-style: normal;
+		// font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;	
+		// Better Font Rendering
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: $icon;
+		font-size: $fontsize;
+		color: $color;
+	}
+
+}
+
+// 바로구매 
+@mixin btn_direct_buy($size, $icon_size, $font_size, $valign) {
+	overflow: hidden;
+	position: relative;
+	@include btn($size, $size, 0, #fff, $point_color1);
+	vertical-align: $valign;
+
+	[class^="icon-"] {
+		font-size: $icon_size;
+		line-height: normal;
+	}
+
+	span {
+		visibility: hidden;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: $size;
+		padding: 0 10px;
+		font-size: $font_size;
+		color: #fff;
+		background: $point_color1;
+		line-height: $size;
+		white-space: nowrap;
+
+		[class^="icon-"] {
+			margin-right: 5px;
+		}
+	}
+
+	&:hover {
+		overflow: visible;
+
+		span {
+			visibility: visible;
+		}
+	}
+}
+
+// general mixin
+// generic transform
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//transform origin
+@mixin transform-origin ($origin) {
+	moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+@mixin transition($transition...) {
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transition-property($property...) {
+	-moz-transition-property: $property;
+	-o-transition-property: $property;
+	-webkit-transition-property: $property;
+	transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+	-moz-transition-property: $duration;
+	-o-transition-property: $duration;
+	-webkit-transition-property: $duration;
+	transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+	-moz-transition-timing-function: $timing;
+	-o-transition-timing-function: $timing;
+	-webkit-transition-timing-function: $timing;
+	transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+	-moz-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	-webkit-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin calc($property, $expression) {
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+@mixin rounded($radius:0.5em) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($param) {
+	-webkit-box-shadow: $param;
+	-moz-box-shadow: $param;
+	box-shadow: $param;
+}
+
+@mixin box-sizing($type:border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+}
+
+@mixin opacity($value:0) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$value+")";
+	filter: alpha(opacity=$value);
+	-moz-opacity: $value*0.01;
+	-khtml-opacity: $value*0.01;
+	opacity: $value*0.01;
+}
+
+@mixin linearGradient($from, $to) {
+	background: $to;
+	background: -moz-linear-gradient(top, $from 0%, $to 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $from), color-stop(100%, $to));
+	background: -webkit-linear-gradient(top, $from 0%, $to 100%);
+	background: -o-linear-gradient(top, $from 0%, $to 100%);
+	background: -ms-linear-gradient(top, $from 0%, $to 100%);
+	background: linear-gradient(to bottom, $from 0%, $to 100%);
+}
+
+@mixin triangle($direction, $width, $height, $color) {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	height: 0;
+	border-style: solid;
+
+	@if $direction == up {
+		border-width: 0 $width*0.5 $height $width*0.5;
+		border-color: transparent transparent $color;
+	}
+
+	@else if $direction == down {
+		border-width: $height $width*0.5 0 $width*0.5;
+		border-color: $color transparent transparent;
+	}
+
+	@else if $direction == left {
+		border-width: $width $height*0.5 $height*0.5 0;
+		border-color: transparent $color transparent;
+	}
+
+	@else if $direction == right {
+		border-width: $width 0 $height*0.5 $height*0.5;
+		border-color: transparent $color transparent;
+	}
+
+}
+
+@function black($opacity) {
+	@return rgba(0, 0, 0, $opacity);
+}
+
+@function white($opacity) {
+	@return rgba(255, 255, 255, $opacity);
+}
+
+// Flexbox Containers
+
+// The 'flex' value causes an element to generate a block-level flex
+// container box.
+
+// The 'inline-flex' value causes an element to generate a inline-level
+// flex container box.
+
+// display:flex | inline-flex
+
+// http://w3.org/tr/css3-flexbox/#flex-containers
+
+// (Placeholder selectors for each type, for those who rather @extend)
+
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+%flexbox {
+	@include flexbox;
+}
+
+@mixin inline-flex {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+%inline-flex {
+	@include inline-flex;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Direction
+
+// The 'flex-direction' property specifies how flex items are placed in
+// the flex container, by setting the direction of the flex container's
+// main axis. This determines the direction that flex items are laid out in.
+
+// Values:row | row-reverse | column | column-reverse
+// Default:row
+
+// http://w3.org/tr/css3-flexbox/#flex-direction-property
+
+@mixin flex-direction($value:row) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	}
+
+	@else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	}
+
+	@else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	}
+
+	@else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+// Shorter version
+@mixin flex-dir($args...) {
+	@include flex-direction($args...);
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Wrap
+
+// The 'flex-wrap' property controls whether the flex container is single-line
+// or multi-line, and the direction of the cross-axis, which determines
+// the direction new lines are stacked in.
+
+// Values:nowrap | wrap | wrap-reverse
+// Default:nowrap
+
+// http://w3.org/tr/css3-flexbox/#flex-wrap-property
+
+@mixin flex-wrap($value:nowrap) {
+	// No Webkit Box fallback.
+	-webkit-flex-wrap: $value;
+	-moz-flex-wrap: $value;
+
+	@if $value == nowrap {
+		-ms-flex-wrap: none;
+	}
+
+	@else {
+		-ms-flex-wrap: $value;
+	}
+
+	flex-wrap: $value;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Flow (shorthand)
+
+// The 'flex-flow' property is a shorthand for setting the 'flex-direction'
+// and 'flex-wrap' properties, which together define the flex container's
+// main and cross axes.
+
+// Values:<flex-direction> | <flex-wrap>
+// Default:row nowrap
+
+// http://w3.org/tr/css3-flexbox/#flex-flow-property
+
+@mixin flex-flow($values:(row nowrap)) {
+	// No Webkit Box fallback.
+	-webkit-flex-flow: $values;
+	-moz-flex-flow: $values;
+	-ms-flex-flow: $values;
+	flex-flow: $values;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Order
+
+// The 'order' property controls the order in which flex items appear within
+// their flex container, by assigning them to ordinal groups.
+
+// Default:0
+
+// http://w3.org/tr/css3-flexbox/#order-property
+
+@mixin order($int:0) {
+	-webkit-box-ordinal-group: $int + 1;
+	-webkit-order: $int;
+	-moz-order: $int;
+	-ms-flex-order: $int;
+	order: $int;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Grow
+
+// The 'flex-grow' property sets the flex grow factor. Negative numbers
+// are invalid.
+
+// Default:0
+
+// http://w3.org/tr/css3-flexbox/#flex-grow-property
+
+@mixin flex-grow($int:0) {
+	-webkit-box-flex: $int;
+	-webkit-flex-grow: $int;
+	-moz-flex-grow: $int;
+	-ms-flex-positive: $int;
+	flex-grow: $int;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Shrink
+
+// The 'flex-shrink' property sets the flex shrink factor. Negative numbers
+// are invalid.
+
+// Default:1
+
+// http://w3.org/tr/css3-flexbox/#flex-shrink-property
+
+@mixin flex-shrink($int:1) {
+	-webkit-flex-shrink: $int;
+	-moz-flex-shrink: $int;
+	-ms-flex-negative: $int;
+	flex-shrink: $int;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Basis
+
+// The 'flex-basis' property sets the flex basis. Negative lengths are invalid.
+
+// Values:Like "width"
+// Default:auto
+
+// http://www.w3.org/TR/css3-flexbox/#flex-basis-property
+
+@mixin flex-basis($value:auto) {
+	-webkit-flex-basis: $value;
+	-moz-flex-basis: $value;
+	-ms-flex-preferred-size: $value;
+	flex-basis: $value;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox "Flex" (shorthand)
+
+// The 'flex' property specifies the components of a flexible length:the
+// flex grow factor and flex shrink factor, and the flex basis. When an
+// element is a flex item, 'flex' is consulted instead of the main size
+// property to determine the main size of the element. If an element is
+// not a flex item, 'flex' has no effect.
+
+// Values:none | <flex-grow> <flex-shrink> || <flex-basis>
+// Default:See individual properties (1 1 0).
+
+// http://w3.org/tr/css3-flexbox/#flex-property
+
+@mixin flex($fg:1, $fs:null, $fb:null) {
+	// Set a variable to be used by box-flex properties
+	$fg-boxflex: $fg;
+
+	// Box-Flex only supports a flex-grow value so let's grab the
+	// first item in the list and just return that.
+	@if type-of($fg) == 'list' {
+		$fg-boxflex: nth($fg, 1);
+	}
+
+	-webkit-box-flex: $fg-boxflex;
+	-webkit-flex: $fg $fs $fb;
+	-moz-box-flex: $fg-boxflex;
+	-moz-flex: $fg $fs $fb;
+	-ms-flex: $fg $fs $fb;
+	flex: $fg $fs $fb;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Justify Content
+
+// The 'justify-content' property aligns flex items along the main axis
+// of the current line of the flex container. This is done after any flexible
+// lengths and any auto margins have been resolved. Typically it helps distribute
+// extra free space leftover when either all the flex items on a line are
+// inflexible, or are flexible but have reached their maximum size. It also
+// exerts some control over the alignment of items when they overflow the line.
+
+// Note:'space-*' values not supported in older syntaxes.
+
+// Values:flex-start | flex-end | center | space-between | space-around
+// Default:flex-start
+
+// http://w3.org/tr/css3-flexbox/#justify-content-property
+
+@mixin justify-content($value:flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	}
+
+	@else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	}
+
+	@else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	}
+
+	@else if $value == space-around {
+		-ms-flex-pack: distribute;
+	}
+
+	@else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+// Shorter version
+@mixin flex-just($args...) {
+	@include justify-content($args...);
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Align Items
+
+// Flex items can be aligned in the cross axis of the current line of the
+// flex container, similar to 'justify-content' but in the perpendicular
+// direction. 'align-items' sets the default alignment for all of the flex
+// container's items, including anonymous flex items. 'align-self' allows
+// this default alignment to be overridden for individual flex items. (For
+// anonymous flex items, 'align-self' always matches the value of 'align-items'
+// on their associated flex container.)
+
+// Values:flex-start | flex-end | center | baseline | stretch
+// Default:stretch
+
+// http://w3.org/tr/css3-flexbox/#align-items-property
+
+@mixin align-items($value:stretch) {
+	@if $value == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	}
+
+	@else if $value == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	}
+
+	@else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
+}
+
+// ----------------------------------
+// Flexbox Align Self
+
+// Values:auto | flex-start | flex-end | center | baseline | stretch
+// Default:auto
+
+@mixin align-self($value:auto) {
+	// No Webkit Box Fallback.
+	-webkit-align-self: $value;
+	-moz-align-self: $value;
+
+	@if $value == flex-start {
+		-ms-flex-item-align: start;
+	}
+
+	@else if $value == flex-end {
+		-ms-flex-item-align: end;
+	}
+
+	@else {
+		-ms-flex-item-align: $value;
+	}
+
+	align-self: $value;
+}
+
+// ----------------------------------------------------------------------
+// Flexbox Align Content
+
+// The 'align-content' property aligns a flex container's lines within the
+// flex container when there is extra space in the cross-axis, similar to
+// how 'justify-content' aligns individual items within the main-axis. Note,
+// this property has no effect when the flexbox has only a single line.
+
+// Values:flex-start | flex-end | center | space-between | space-around | stretch
+// Default:stretch
+
+// http://w3.org/tr/css3-flexbox/#align-content-property
+
+@mixin align-content($value:stretch) {
+	// No Webkit Box Fallback.
+	-webkit-align-content: $value;
+	-moz-align-content: $value;
+
+	@if $value == flex-start {
+		-ms-flex-line-pack: start;
+	}
+
+	@else if $value == flex-end {
+		-ms-flex-line-pack: end;
+	}
+
+	@else {
+		-ms-flex-line-pack: $value;
+	}
+
+	align-content: $value;
+}
+
+// icons
+// 컴퓨터 주변부품
+$btn_cpu: -1px -46px;
+$btn_cpu_on: -250px -46px;
+
+$btn_mainboard: -1px -90px;
+$btn_mainboard_on: -250px -90px;
+
+$btn_memory: -1px -134px;
+$btn_memory_on: -250px -134px;
+
+$btn_hdd: -1px -266px;
+$btn_hdd_on: -250px -266px;
+
+$btn_ssd: -1px -222px;
+$btn_ssd_on: -250px -222px;
+
+$btn_graphic: -1px -179px;
+$btn_graphic_on: -250px -179px;
+
+$btn_odd: -1px -309px;
+$btn_odd_on: -250px -309px;
+
+$btn_case: -1px -353px;
+$btn_case_on: -250px -353px;
+
+$btn_power: -1px -398px;
+$btn_power_on: -250px -398px;
+
+$btn_cooler: -1px -442px;
+$btn_cooler_on: -250px -442px;
+
+$btn_keyboard: -1px -484px;
+$btn_keyboard_on: -250px -484px;
+
+$btn_mouse: -1px -528px;
+$btn_mouse_on: -250px -528px;
+
+$btn_tablet: -1px -570px;
+$btn_tablet_on: -250px -570px;
+
+
+// 컴퓨터 주변기기
+$btn_monitor: -51px -48px;
+$btn_monitor_on: -301px -48px;
+
+$btn_speaker: -51px -90px;
+$btn_speaker_on: -301px -90px;
+
+$btn_headset: -51px -134px;
+$btn_headset_on: -301px -134px;
+
+$btn_sound: -51px -177px;
+$btn_sound_on: -301px -177px;
+
+$btn_printer: -51px -309px;
+$btn_printer_on: -301px -309px;
+
+$btn_combo: -51px -266px;
+$btn_combo_on: -301px -266px;
+
+$btn_scaner: -51px -220px;
+$btn_scaner_on: -301px -220px;
+
+$btn_cam: -51px -354px;
+$btn_cam_on: -301px -354px;
+
+$btn_cctv: -51px -398px;
+$btn_cctv_on: -301px -398px;
+
+$btn_wifi: -51px -442px;
+$btn_wifi_on: -301px -442px;
+
+$btn_network: -52px -483px;
+$btn_network_on: -302px -483px;
+
+$btn_usb: -51px -527px;
+$btn_usb_on: -301px -527px;
+
+$btn_exthdd: -53px -571px;
+$btn_exthdd_on: -303px -571px;
+
+$btn_nas: -51px -616px;
+$btn_nas_on: -301px -616px;
+
+$btn_cable: -51px -660px;
+$btn_cable_on: -301px -660px;
+
+$btn_controller: -51px -704px;
+$btn_controller_on: -301px -704px;
+
+$btn_dvi: -50px -747px;
+$btn_dvi_on: -300px -747px;
+
+$btn_usbhub: -51px -791px;
+$btn_usbhub_on: -301px -791px;
+
+// 소프트웨어/전산소모품
+$btn_soft: -100px -47px;
+$btn_soft_on: -350px -47px;
+
+$btn_emptymedia: -100px -91px;
+$btn_emptymedia_on: -350px -91px;
+
+$btn_paper: -100px -134px;
+$btn_paper_on: -350px -134px;
+
+$btn_exp: -100px -178px;
+$btn_exp_on: -350px -178px;
+
+$btn_ink: -100px -222px;
+$btn_ink_on: -350px -222px;
+
+$btn_toner: -100px -267px;
+$btn_toner_on: -350px -267px;
+
+// DSLR/디카/캠코더
+$btn_memorycard: -150px -48px;
+$btn_memorycard_on: -400px -48px;
+
+$btn_reader: -150px -91px;
+$btn_reader_on: -400px -91px;
+
+// 디지털 완제품
+$btn_notebook: -202px -48px;
+$btn_notebook_on: -452px -48px;
+
+$btn_tabletpc: -201px -92px;
+$btn_tabletpc_on: -451px -92px;
+
+$btn_adapter: -201px -311px;
+$btn_adapter_on: -451px -311px;
+
+$btn_battery: -200px -354px;
+$btn_battery_on: -450px -354px;
+
+$btn_notebookskin: -200px -399px;
+$btn_notebookskin_on: -450px -399px;
+
+$btn_keyboardskin: -200px -442px;
+$btn_keyboardskin_on: -450px -442px;
+
+$btn_protectfilm: -200px -487px;
+$btn_protectfilm_on: -450px -487px;
+
+$btn_notebookbag: -200px -531px;
+$btn_notebookbag_on: -450px -531px;
+
+$btn_protect: -200px -572px;
+$btn_protect_on: -450px -572px;
+
+$btn_cooler: -200px -616px;
+$btn_cooler_on: -450px -616px;
+
+$btn_coolpad: -200px -662px;
+$btn_coolpad_on: -450px -662px;
+
+$btn_stand: -200px -705px;
+$btn_stand_on: -450px -705px;
+
+$btn_doking: -200px -750px;
+$btn_doking_on: -450px -750px;
+
+$btn_multiboost: -200px -792px;
+$btn_multiboost_on: -450px -792px;
+
+$btn_portlink: -200px -835px;
+$btn_portlink_on: -450px -835px;
+
+$btn_tabletcase: -200px -878px;
+$btn_tabletcase_on: -450px -878px;
+
+$btn_tabletfilm: -200px -921px;
+$btn_tabletfilm_on: -450px -921px;
+
+$btn_minipc: -201px -224px;
+$btn_minipc_on: -451px -224px;
+
+$btn_brandpc: -202px -268px;
+$btn_brandpc_on: -452px -268px;
+
+// 표준PC
+$btn_planpc: -198px -962px;
+$btn_planpc_on:  -448px -962px;
+
+//  icons variables 
+$icomoon-font-path: "fonts" !default;
+$icon-angle-double-down: "\e900";
+$icon-angle-double-left: "\e901";
+$icon-angle-double-right: "\e902";
+$icon-angle-double-up: "\e903";
+$icon-angle-down: "\e904";
+$icon-angle-left: "\e905";
+$icon-angle-right: "\e906";
+$icon-angle-up: "\e907";
+$icon-arrow-down: "\e908";
+$icon-arrow-up: "\e909";
+$icon-calendar: "\e90a";
+$icon-caret-down: "\e90b";
+$icon-caret-left: "\e90c";
+$icon-caret-right: "\e90d";
+$icon-caret-up: "\e90e";
+$icon-chat: "\e90f";
+$icon-chat_bubble: "\e910";
+$icon-check: "\e911";
+$icon-chevron-left: "\e912";
+$icon-chevron-right: "\e913";
+$icon-chevron-thin-left: "\e914";
+$icon-chevron-thin-right: "\e915";
+$icon-close: "\e916";
+$icon-done: "\e917";
+$icon-favorite: "\e918";
+$icon-favorite_border: "\e919";
+$icon-fiber_manual_record: "\e91a";
+$icon-get_app: "\e91b";
+$icon-home: "\e946";
+$icon-in: "\e91d";
+$icon-lens: "\e91e";
+$icon-member_id: "\e91f";
+$icon-member_pass: "\e920";
+$icon-microphone: "\e921";
+$icon-out: "\e922";
+$icon-remove_circle: "\e923";
+$icon-repeat: "\e924";
+$icon-search: "\e925";
+$icon-shop: "\e926";
+$icon-shopping-cart: "\e927";
+$icon-text3:"\e928";
+$icon-th-large: "\e929";
+$icon-th-list: "\e92a";
+$icon-th-menu: "\e92b";
+$icon-th-small: "\e92c";
+$icon-triangle-down: "\e92d";
+$icon-triangle-left: "\e92e";
+$icon-triangle-right: "\e92f";
+$icon-triangle-up: "\e930";
+$icon-typing: "\e931";
+$icon-unread: "\e932";
+$icon-user: "\e933";
+$icon-zoomlens: "\e934";
+$icon-trash-o: "\e935";
+$icon-add_circle: "\e936";
+$icon-remove_circle: "\e923";
+$icon-check-square: "\e942";
+$icon-expand: "\e93b";
+$icon-collapse: "\e938";
+$icon-cashmall_icon: "\e937";
+$icon-credit-card: "\e93a";
+$icon-home2:"\e91c";
+$icon-paper: "\e944";
+$icon-cart: "\e945";
+$icon-arrow_upward: "\e943";
+$icon-redo: "\e947";
+$icon-bar_arrow_up: "\e94a";
+$icon-bottom_home: "\e94b";
+$icon-bottom_menu: "\e94c";
+$icon-bottom_phone: "\e94d";
+$icon-bottom_user: "\e94e";
+$icon-bottom_zoomlens: "\e94f";
+$icon-d_menu_01:"\e950";
+$icon-d_menu_02:"\e951";
+$icon-d_menu_03:"\e952";
+$icon-d_menu_04:"\e953";
+$icon-d_menu_05:"\e954";
+$icon-skip_previous: "\e955";
+$icon-add: "\e956";
+$icon-arrow_forward: "\e957";
+$icon-primitive-dot: "\e958";
+$icon-arrow_back: "\e959";
+$icon-phone: "\e95a";
+$icon-share: "\e95b";
+$icon-truck: "\e95c";
+$icon-remove: "\e95d";
+$icon-printer: "\e93e";
+$icon-mail: "\e93d";
+$icon-box: "\e965";
+$icon-building: "\e964";
+$icon-gear: "\e963";
+$icon-man: "\e962";
+$icon-transfer_within_a_station: "\e961";
+$icon-win_setup: "\e960";
+$icon-windows: "\e95f";
+$icon-wrench: "\e95e";
+$icon-cart_B: "\e96a";
+$icon-hand_like: "\e96b";
+$icon-hand_unlike: "\e96c";
+$icon-bell2: "\e969";
+$icon-sound: "\e96e";
+$icon-menu3line: "\e96f";
+$icon-zoom-in: "\e970";
+$icon-info-circle: "\e971";
+$icon-headset_mic: "\e972";
+$icon-cloud-download: "\e973";
+$icon-clipboard: "\e974";
+$icon-dots-three-vertical: "\e975";
+$icon-main_product: "\e976";
+$icon-menu3line_b: "\e977";
+$icon-user2: "\e978";
+$icon-headphones: "\e979";
+$icon-ask: "\e97a";
+$icon-truck2: "\e97b";

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>배송방법 선택 | 행복쇼핑</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="행복쇼핑, 행복, 쇼핑, 컴퓨터, PC, 조립PC, 조립컴퓨터, 노트북, 태블릿, 상품 추천, 가격비교, 가격비교사이트, 가격비교 싸이트, 가격 검색, 최저가, 추천, 인터넷쇼핑, 온라인쇼핑, 쇼핑, 쇼핑몰, 싸게 파는 곳, 싸게 살 수 있는 곳" />
+	<meta name="description" content="행복쇼핑은 컴퓨터, 조립PC에 특화된 온라인 견적 가격비교 사이트 입니다. 안전구매시스템(전자보증,에스크로)을 갖춘 쇼핑몰, 미니샵의 최저 가격 정보를 보여드립니다. 쇼핑의 행복! 행복쇼핑" />
+
+	<!-- 웹폰트용 -->
+    <script src="https://ajax.pping.kr/font/js/hpping.webfont.js"></script>
+    <script>
+        const hpping = new hppingFont();
+        hpping.init({
+            href: 'https://ajax.pping.kr/font/css/hpping.webfont.css'
+        });
+    </script>
+    <!-- // 웹폰트용 -->
+
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_comm.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/buttons.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/board.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_forms.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_layers.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/header.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/footer.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_order.css" />
+
+	<!-- <link rel="stylesheet" href="../../../assets/css/mobile_comm.css" />
+	<link rel="stylesheet" href="../../../assets/css/buttons.css" />
+	<link rel="stylesheet" href="../../../assets/css/board.css" />
+	<link rel="stylesheet" href="../../../assets/css/mobile_forms.css" />
+	<link rel="stylesheet" href="../../../assets/css/mobile_layers.css" />
+	<link rel="stylesheet" href="../../../assets/css/header.css" />
+	<link rel="stylesheet" href="../../../assets/css/footer.css" />
+	<link rel="stylesheet" href="../../../assets/css/mobile_order.css" /> -->
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+	<header class="header-m-page">
+		<div class="header-m-page_body">
+			<h1 class="tit-h1">
+				배송방법 선택
+			</h1>
+
+			<a href="#" class="btn_page_prev"><i class="icon-arrow_back"></i> <span class="ir">이전</span></a>
+		</div>
+	</header>
+	<!-- // header -->
+
+	<div id="container">
+		<div class="container_order">
+			<section class="order_delivery">
+				<form>
+					<fieldset>
+						<legend><span>배송방법 선택</span></legend>
+						<div class="order_delivery_method">
+							<ul>
+								<li>
+									<span class="iradio">
+										<input type="radio" id="id-radiotest1" name="name-radiotest1" />
+										<label for="id-radiotest1"><span>택배</span></label>
+									</span>
+
+									<button type="button" class="btn_tooltip"><span class="ir">정보</span></button>
+
+									<!-- 택배 레이어 -->
+									<div class="layer_order_delivery" style="display: none">
+										<div class="layer_order_delivery_head">
+											<strong>택배</strong>
+										</div>
+
+										<div class="layer_order_delivery_body">
+											<strong class="tit">택배 진행 순서</strong>
+
+											<ol>
+												<li>
+													<strong class="t"><span>1</span>상품 주문 및 결제</strong>
+													<table class="board layout-fixed">
+														<caption><span>상세</span></caption>
+														<thead>
+														<tr>
+															<th scope="col">당일발송 가능 결제시간</th>
+															<th scope="col">※ 조립PC의 경우</th>
+														</tr>
+														</thead>
+														<tbody>
+														<tr>
+															<td>
+																<div class="box-td">
+																	평일 : 오전 10:00~오후 4:00<br />
+																	토요일 : 오전 10:00~오후 4:00
+																</div>
+															</td>
+															<td>
+																<div class="box-td">
+																	평일 : 오전 10:00~오후 4:00
+																	토요일 : 오전 10:00~오후 11:00
+																</div>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>
+													<strong class="t"><span>2</span>상품 준비 및 포장</strong>
+													<table class="board layout-fixed">
+														<caption><span>상세</span></caption>
+														<tbody>
+														<tr>
+															<th scope="row">부품일 경우 소요시간</th>
+															<td>
+																<div class="box-td">
+																	결제 확인 후 2시간 소요
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">조립PC의 경우 소요시간</th>
+															<td>
+																<div class="box-td">
+																	결제 확인 후 3시간 소요
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2" class="wide">
+																<div class="box-td">결제 확인 후 상품 준비 및 포장</div>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>
+													<strong class="t"><span>3</span>택배 발송</strong>
+													<p class="conts">발송 후 송장번호 문자메시지가 발송 됩니다.</p>
+												</li>
+												<li>
+													<strong class="t"><span>4</span>배송 완료</strong>
+													<p class="conts">고객님이 선택한 배송지로 안전하게 배송됩니다.</p>
+												</li>
+											</ol>
+
+											<div class="guide">
+												<strong class="tit">이용안내</strong>
+												택배추적은 제품 발송일 다음날 오전부터 택배사 홈페이지에서 확인 가능 합니다.<br />
+												배송기간은 제품 발송 후 1~2일 이내에 받으실 수 있습니다.
+											</div>											
+										</div>
+
+										<div class="button-group ctr">
+											<button type="button" class="btn_apply">확인</button>
+										</div>
+
+										<button type="button" class="btn_layer_clse"><i class="icon-close"></i><span class="ir">닫기</span></button>
+									</div>
+									<!-- // 택배 레이어 -->
+								</li>
+								<li>
+									<span class="iradio">
+										<input type="radio" id="id-radiotest2" name="name-radiotest1" />
+										<label for="id-radiotest2"><span>퀵서비스</span></label>
+									</span>
+
+									<!-- 퀵서비스 레이어 -->
+									<div class="layer_order_delivery" style="display: none">
+										<div class="layer_order_delivery_head">
+											<strong>퀵서비스</strong>
+										</div>
+
+										<div class="layer_order_delivery_body">
+											<strong class="tit">퀵서비스 진행 순서</strong>
+
+											<ol>
+												<li>
+													<strong class="t"><span>1</span>상품 주문 및 결제</strong>
+													<table class="board layout-fixed">
+														<caption><span>상세</span></caption>
+														<thead>
+														<tr>
+															<th scope="col">당일발송 퀵서비스 가능 결제시간</th>
+															<th scope="col">※ 조립PC의 경우</th>
+														</tr>
+														</thead>
+														<tbody>
+														<tr>
+															<td>
+																<div class="box-td">
+																	평일 : 오전 10:00~오후 4:00<br />
+																	토요일 : 오전 10:00~오후 4:00
+																</div>
+															</td>
+															<td>
+																<div class="box-td">
+																	평일 : 오전 10:00~오후 4:00
+																	토요일 : 오전 10:00~오후 11:00
+																</div>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>
+													<strong class="t"><span>2</span>상품 준비 및 포장</strong>
+													<table class="board layout-fixed">
+														<caption><span>상세</span></caption>
+														<tbody>
+														<tr>
+															<th scope="row">부품일 경우 소요시간</th>
+															<td>
+																<div class="box-td">
+																	결제 확인 후 4시간 소요
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">조립PC의 경우 소요시간</th>
+															<td>
+																<div class="box-td">
+																	결제 확인 후 5시간 소요
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2" class="wide">
+																<div class="box-td">결제 확인 후 상품 준비 및 포장</div>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>
+													<strong class="t"><span>3</span>택배 발송</strong>
+													<p class="conts">퀵서비스 발송완료 후 문자메시지가 발송됩니다.</p>
+												</li>
+												<li>
+													<strong class="t"><span>4</span>배송 완료</strong>
+													<p class="conts">고객님이 선택한 배송지로 안전하게 배송됩니다.</p>
+												</li>
+											</ol>
+
+											<div class="guide">
+												<strong class="tit">이용안내</strong>
+												배송 지연 상품 / 대량구매상품 / 조립PC 수량
+												주문은 준비시간이 지연될 수 있으니 담당자와
+												통화하여 상품 준비 소요시간을 꼭 확인하시기
+												바랍니다.<br />
+												입금마감시간 이후에 결제확인이 된 주문건은
+												익일 수령이 가능합니다. (단, 주말/공휴일 제외)
+											</div>											
+										</div>
+
+										<div class="button-group ctr">
+											<button type="button" class="btn_apply">확인</button>
+										</div>
+
+										<button type="button" class="btn_layer_clse"><i class="icon-close"></i><span class="ir">닫기</span></button>
+									</div>
+									<!-- // 퀵서비스 레이어 -->
+
+									<button type="button" class="btn_tooltip"><span class="ir">정보</span></button>
+								</li>
+								<li>
+									<span class="iradio">
+										<input type="radio" id="id-radiotest3" name="name-radiotest1" />
+										<label for="id-radiotest3"><span>화물</span></label>
+									</span>
+
+									<!-- 화물 레이어 -->
+									<div class="layer_order_delivery" style="display: none">
+										<div class="layer_order_delivery_head">
+											<strong>화물</strong>
+										</div>
+
+										<div class="layer_order_delivery_body">
+											<strong class="tit">경동화물 진행 순서</strong>
+
+											<ol>
+												<li>
+													<strong class="t"><span>1</span>상품 주문 및 결제</strong>
+													<table class="board layout-fixed">
+														<caption><span>상세</span></caption>
+														<thead>
+														<tr>
+															<th scope="col">당일발송 가능 결제시간</th>
+															<th scope="col">※ 조립PC의 경우 당일발송 없이</th>
+														</tr>
+														</thead>
+														<tbody>
+														<tr>
+															<td>
+																<div class="box-td">
+																	평일/토요일 휴무
+																</div>
+															</td>
+															<td>
+																<div class="box-td">
+																	다음날 발송됩됩니다.
+																</div>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>
+													<strong class="t"><span>2</span>상품 준비 및 포장</strong>
+													<table class="board layout-fixed">
+														<caption><span>상세</span></caption>
+														<tbody>
+														<tr>
+															<th scope="row">부품일 경우 소요시간</th>
+															<td>
+																<div class="box-td">
+																	결제 확인 후 0시간 소요
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">조립PC의 경우 소요시간</th>
+															<td>
+																<div class="box-td">
+																	결제 확인 후 0시간 소요
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2" class="wide">
+																<div class="box-td">결제 확인 후 상품 준비 및 포장</div>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>
+													<strong class="t"><span>3</span>경동화물 발송</strong>
+													<p class="conts">경동화물 상품 발송 후 송장번호 문자메시지가 발송됩니다.</p>
+												</li>
+												<li>
+													<strong class="t"><span>4</span>배송 완료</strong>
+													<p class="conts">고객님이 선택한 영업소로 방문하셔서 직접 상품 수령하시면 됩니다.</p>
+												</li>
+											</ol>
+
+											<div class="guide">
+												<strong class="tit">이용안내</strong>
+												경동화물은 고객님께서 선택하신 영업소로 방문하여 상품을 수령해야 합니다.
+											</div>											
+										</div>
+
+										<div class="button-group ctr">
+											<button type="button" class="btn_apply">확인</button>
+										</div>
+
+										<button type="button" class="btn_layer_clse"><i class="icon-close"></i><span class="ir">닫기</span></button>
+									</div>
+									<!-- // 화물 레이어 -->
+
+									<button type="button" class="btn_tooltip"><span class="ir">정보</span></button>
+								</li>
+								<li>
+									<span class="iradio">
+										<input type="radio" id="id-radiotest4" name="name-radiotest1" />
+										<label for="id-radiotest4"><span>직접수령</span></label>
+									</span>
+
+									<!-- 직접수령 레이어 -->
+									<div class="layer_order_delivery" style="display: none">
+										<div class="layer_order_delivery_head">
+											<strong>직접수령</strong>
+										</div>
+
+										<div class="layer_order_delivery_body">
+											<strong class="tit">직접수령 진행 순서</strong>
+
+											<ol>
+												<li>
+													<strong class="t"><span>1</span>상품 주문 및 결제</strong>
+													<table class="board layout-fixed">
+														<caption><span>상세</span></caption>
+														<thead>
+														<tr>
+															<th scope="col">당일발송 가능 결제시간</th>
+															<th scope="col">※ 조립PC의 경우</th>
+														</tr>
+														</thead>
+														<tbody>
+														<tr>
+															<td>
+																<div class="box-td">
+																	평일 : 오전 10:30~오후 4:00<br />
+																	토요일 : 오전 10:30~오후 11:00
+																</div>
+															</td>
+															<td>
+																<div class="box-td">
+																	평일 : 오전 10:30~오후 4:00
+																	토요일 : 오전 10:30~오후 11:00
+																</div>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>
+													<strong class="t"><span>2</span>상품 준비 및 포장</strong>
+													<table class="board layout-fixed">
+														<caption><span>상세</span></caption>
+														<tbody>
+														<tr>
+															<th scope="row">부품일 경우 소요시간</th>
+															<td>
+																<div class="box-td">
+																	결제 확인 후 4시간 소요
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">조립PC의 경우 소요시간</th>
+															<td>
+																<div class="box-td">
+																	결제 확인 후 5시간 소요
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2" class="wide">
+																<div class="box-td">결제 확인 후 상품 준비 및 포장</div>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>
+													<strong class="t"><span>3</span>포장 완료</strong>
+													<p class="conts">포장완료 후 직접수령 가능 문자메시지가 발송됩니다.</p>
+												</li>
+												<li>
+													<strong class="t"><span>4</span>배송 완료</strong>
+													<div class="conts">
+														매장에 방문하여 상품을 수령합니다.<br />
+														상품 수령 가능시간<br />
+														ㆍ평일 오전 10:30 ~ 오후 07:00<br />
+														ㆍ토요일 오전 10:30 ~ 오후 03:00
+													</div>
+												</li>
+											</ol>
+
+											<div class="guide">
+												<strong class="tit">이용안내</strong>
+												배송 지연 상품 / 대량구매상품 / 조립PC 수량 주문은 준비시간이 지연될 수 있으니 담당자와 통화하여 상품 준비 소요시간을 꼭 확인
+											</div>											
+										</div>
+
+										<div class="button-group ctr">
+											<button type="button" class="btn_apply">확인</button>
+										</div>
+
+										<button type="button" class="btn_layer_clse"><i class="icon-close"></i><span class="ir">닫기</span></button>
+									</div>
+									<!-- // 직접수령 레이어 -->
+
+									<button type="button" class="btn_tooltip"><span class="ir">정보</span></button>
+								</li>
+							</ul>
+						</div>
+
+						<div class="order_fixed_footer">
+							<div class="button-group ctr">
+								<button type="button" class="btn_border">취소</button>
+								<button type="button" class="btn_flat">변경</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</section>
+		</div>
+	</div>
+</div>
+</body>
+</html>

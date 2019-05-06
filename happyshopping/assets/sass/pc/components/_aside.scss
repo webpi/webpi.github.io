@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+// 미디엄
+.aside-medium {
+	width: 220px;
+	height: 100%;
+	background: #f6f6f8;
+
+	&:before {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 220px;
+		background: #f6f6f8;
+		z-index: 11;
+	}
+
+	.tit-h2 {
+		position: relative;
+		height: 44px;
+		padding-top: 4px;
+		border-bottom: 2px solid #000;
+		background: #fff;
+		z-index: 12;
+		@include box-sizing();
+	}
+
+	.aside-medium_box {
+		position: relative;
+		padding: 10px;
+		z-index: 12;
+
+		.tit-h3 {
+			height: 63px;
+			padding-top: 15px;
+			border: 1px solid #ccc;
+			font-size: 28px;
+			color: #06457a;
+			background :#fff;
+			text-align: center;
+			line-height: 1;
+			letter-spacing: -2px;
+
+			span {
+				position: relative;
+				top: -7px;
+				font-size: 14px;
+				color: $base_color3;
+			}
+
+			a {
+				color: #06457a;
+			}
+		}
+
+		.aside-medium_box_cate {
+			margin-top: 15px;
+			padding: 0 10px;
+
+			.tit-h4 {
+				font-size: 14px;
+				color: #000;
+			}
+
+			p {
+				font-size: 12px;
+				color: $base_color3;
+				line-height: 18px;
+
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.commercial_break {
+			margin: 30px 10px 0;
+			padding: 17px 10px;
+			border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			font-size: 14px;
+			color: $base_color3;
+			font-weight: bold;
+			line-height: 20px;
+
+			span {
+				display:inline-block;
+				position: relative;
+
+				&:after {
+					content:"";
+					position: absolute;
+					right: -48px;
+					bottom: 5px;
+					width: 41px;
+					height: 40px;
+					background:url('//img.happyshopping.kr/img_static/img_pres/_v3/ico_commercial_break.png') no-repeat 0 0;
+				}
+			}
+		}
+
+		.commercial_break + .bnr_medium_article {
+			margin-top: 30px;
+		}
+	}
+}

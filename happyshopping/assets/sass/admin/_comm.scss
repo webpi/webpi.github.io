@@ -1,0 +1,1861 @@
+@charset "utf-8";
+
+html {
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Spoqa Han Sans', "맑은 고딕", "Malgun Gothic", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "NanumGothic", Dotum, "돋움", Helvetica, sans-serif;
+	background: #fff;
+	color: $base_color1;
+	line-height: 1;
+}
+
+blockquote,
+button,
+code,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+}
+
+li,
+ol,
+ul {
+	list-style: none;
+}
+
+li {
+	vertical-align: top;
+}
+
+fieldset,
+img {
+	border: 0 none;
+}
+
+em {
+	font-style: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	width: 13px;
+	height: 13px;
+	vertical-align: middle;
+}
+
+option {
+	padding-right: 6px;
+}
+
+button,
+label {
+	cursor: pointer;
+}
+
+button img {
+	vertical-align: top;
+}
+
+button[disabled=disabled] {
+	cursor: pointer;
+	outline: none;
+}
+
+caption span,
+legend span {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+}
+
+table,
+td,
+tr {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	&:active,
+	&:hover,
+	&:link,
+	&:visited {
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+hr {
+	height: 0;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+}
+
+button,
+input,
+textarea {
+	line-height: normal;
+	outline: 0 none !important;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+	border-radius: 0;
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+textarea {
+	overflow: auto;
+	resize: none;
+}
+
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+// common class
+.blind {
+	display: none;
+}
+
+.visible {
+	visibility: hidden;
+}
+
+.ir {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	width: 1%;
+	height: 1%;
+	margin: 0;
+	padding: 0;
+	font-size: 1%;
+	line-height: 1%;
+}
+
+// layout
+#wrap {
+	min-width: 320px;
+	padding-top: 50px;
+	@include box-sizing;
+
+	img {
+		max-width: 100%;
+		vertical-align: top;
+	}
+
+	&.modal:before {
+		content: "";
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(32, 41, 52, 0.5);
+		z-index: 21;
+
+		@include respond-to($desktop) {
+			display: none;
+		}
+
+	}
+
+}
+
+// header
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 50px;
+	background: $point_color1;
+	z-index: 40;
+
+	.header_shortcuts {
+		width: 112px;
+		margin: 0 auto;
+		padding-top: 2.5px;
+
+		.btn_shortcuts {
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.header_shortcuts_list {
+			overflow: hidden;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			right: 0;
+			padding: 30px;
+			background: #fff;
+
+			.t {
+				display: none;
+			}
+
+			ul {
+				margin: -15px 0 0 -15px;
+				font-size: 0;
+				text-align: center;
+
+				li {
+					display: inline-block;
+					margin: 15px 0 0 15px;
+
+					a {
+						display: block;
+						@include size(90px);
+
+						span {
+							display: none;
+							font-size: 12px;
+							color: $base_color1;
+							font-weight: bold;
+						}
+
+					}
+
+				}
+
+			}
+
+			@include respond-to($desktop) {
+				width: 178px;
+				left: inherit;
+				right: 0;
+				padding: 0;
+				border: 1px solid $base_color1;
+				box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+				.t {
+					display: block;
+					height: 29px;
+					padding-left: 10px;
+					font-size: 12px;
+					line-height: 29px;
+				}
+
+				ul {
+					margin: 0;
+					text-align: left;
+
+					li {
+						display: block;
+						float: none;
+						height: 36px;
+						margin: 0;
+						border-top: 1px solid #ececec;
+
+						a {
+							width: auto;
+							height: 28px;
+							padding: 8px 0 0 20px;
+
+							> img {
+								display: none;
+							}
+
+							span {
+								display: block;
+
+								img {
+									margin: -1px 10px 0 0;
+									vertical-align: middle;
+								}
+
+							}
+
+							&:hover {
+								background: #f2f2f2;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		@include respond-to($desktop) {
+			position: relative;
+			width: 300px;
+			margin: 0;
+
+			.btn_shortcuts {
+				width: 112px;
+				margin: 0 auto;
+			}
+
+		}
+
+	}
+
+	.header_main {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		z-index: 30;
+
+		.btn_floating {
+			position: relative;
+			background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_gnb.png') no-repeat 50% 50%;
+			background-size: 25px auto;
+			@include btn(50px, 50px, 0, null, transparent);
+
+			&.active {
+				background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_gnb_reverse.png');
+			}
+
+			&.icon_new:after {
+				right: 10px;
+				top: 5px;
+			}
+
+			@include respond-to($desktop) {
+				&:hover {
+					background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_gnb_on.png');
+				}
+
+				&.active:hover {
+					background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_gnb_reverse_on.png');
+				}
+
+			}
+
+		}
+
+	}
+
+	.header_aside {
+		position: absolute;
+		right: 0;
+		top: 0;
+		@include clear;
+
+		.search {
+			float: left;
+
+			.btn_search {
+				@include btn(50px, 50px, 0, null, transparent);
+
+				img {
+					width: 25px;
+				}
+
+			}
+
+			.search_form {
+				display: none;
+			}
+
+			@include respond-to($desktop) {
+				.btn_search {
+					display: none;
+				}
+
+				.search_form {
+					display: block;
+					position: relative;
+					margin-top: 9px;
+					width: 218px;
+					height: 32px;
+					margin-right: 10px;
+					padding-right: 32px;
+					background: #fff;
+
+					input[type=search] {
+						width: 100%;
+						height: 32px;
+						padding: 0 10px;
+						border: 0;
+						font-size: 12px;
+						line-height: 32px;
+						@include box-sizing;
+					}
+
+					.btn_search_submit {
+						position: absolute;
+						right: 0;
+						top: 0;
+						background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_magnifyingglass.png') no-repeat 50% 50%;
+						text-indent: -9999px;
+						@include btn(32px, 32px, 0, null, transparent);
+					}
+
+				}
+
+			}
+
+		}
+
+		.header_aside_menu {
+			float: right;
+
+			.header_aside_menu_my {
+				position: relative;
+
+				.btn_my_menu {
+					@include btn(50px, 50px, 0, null, transparent);
+
+					.btn_my_menu_mobile {
+						img {
+							height: 24px;
+						}
+
+					}
+
+					.btn_my_menu_desktop {
+						display: none;
+					}
+
+				}
+
+				.header_aside_menu_my_list {
+					position: absolute;
+					right: 0;
+					top: 50px;
+					width: 180px;
+					background: #fff;
+
+					li {
+						height: 35px;
+						border-top: 1px solid #ececec;
+
+						&:first-child {
+							border-top: 0;
+						}
+
+						&:hover {
+							background: #f8f8f8;
+						}
+
+						a {
+							display: block;
+							height: 35px;
+							padding-left: 35px;
+							font-size: 12px;
+							color: $base_color1;
+							font-weight: bold;
+							line-height: 35px;
+							background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_human.png') no-repeat 15px 50%;
+							background-size: 15px auto;
+
+							&.profile {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_human.png');
+							}
+
+							&.mypage {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_trophy.png');
+							}
+
+							&.noti {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_comment.png');
+							}
+
+							&.message {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_letter.png');
+							}
+
+							&.set {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gear.png');
+							}
+
+							&.logout {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_out.png');
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+			.header_aside_menu_desktop {
+				display: none;
+			}
+
+			@include respond-to($desktop) {
+				padding-right: 30px;
+				@include clear;
+
+				.header_aside_menu_my {
+					float: left;
+
+					.btn_my_menu .btn_my_menu_mobile {
+						display: none;
+					}
+
+					.btn_my_menu .btn_my_menu_desktop {
+						display: inline-block;
+						overflow: hidden;
+						border-radius: 15px;
+						@include size(30px);
+					}
+
+					.header_aside_menu_my_list {
+						right: 10px;
+						width: 118px;
+						border: 1px solid $base_color1;
+						box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+						li {
+							height: 30px;
+
+							a {
+								height: 30px;
+								line-height: 30px;
+								background-position-x: 10px;
+							}
+
+						}
+
+					}
+
+				}
+
+				.header_aside_menu_desktop {
+					display: block;
+					float: left;
+					padding-top: 10px;
+					@include clear;
+
+					li {
+						position: relative;
+						float: left;
+						margin-left: 15px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+
+						a {
+							position: relative;
+							display: block;
+						}
+
+						.btn_noti {
+							margin: 3px 0;
+							background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_comment_sprite.png') no-repeat 0 0;
+							@include btn(24px, 24px, 0, null, transparent);
+
+							.new_cnt {
+								position: absolute;
+								right: -9px;
+								top: -7px;
+								margin: 0;
+							}
+
+							&:hover {
+								background-position: 0 -24px;
+							}
+
+						}
+
+						.btn_msg {
+							margin: 6px 0;
+							background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_msg_sprite.png') no-repeat 0 0;
+							@include btn(24px, 18px, 0, null, transparent);
+
+							.new_cnt {
+								position: absolute;
+								right: -9px;
+								top: -7px;
+								margin: 0;
+							}
+
+							&:hover {
+								background-position: 0 -18px;
+							}
+
+						}
+
+						.list {
+							position: absolute;
+							right: 0;
+							top: 40px;
+							width: 298px;
+							border: 1px solid $base_color1;
+							background: #fff;
+							box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+							.tit {
+								display: block;
+								height: 30px;
+								padding-left: 10px;
+								border-bottom: 1px solid #ececec;
+								font-size: 12px;
+								line-height: 30px;
+							}
+
+							.list_scroll {
+								overflow-y: auto;
+								max-height: 378px;
+								border-bottom: 1px solid $base_color1;
+							}
+
+							&.noti_list .list_box {
+								&:before {
+									content: "";
+									position: absolute;
+									left: 18px;
+									top: 50%;
+									margin-top: -12px;
+									background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_comment_sprite.png') no-repeat 0 0;
+									@include size(24px);
+								}
+
+								a {
+									padding: 10px 40px 10px 60px;
+								}
+
+								&.type_order {
+									.t {
+										color: #339900;
+									}
+
+									&:before {
+										background-position: 0 -72px;
+									}
+
+								}
+
+								&.type_update {
+									.t {
+										color: #2a94db;
+									}
+
+									&:before {
+										background-position: 0 -48px;
+									}
+
+								}
+
+								&.type_event {
+									.t {
+										color: #f47300;
+									}
+
+									&:before {
+										background-position: 0 -96px;
+									}
+
+								}
+
+							}
+
+							&.msg_list .list_box {
+								a {
+									padding: 15px 40px 15px 60px;
+								}
+
+								.photo {
+									overflow: hidden;
+									position: absolute;
+									left: 10px;
+									top: 50%;
+									margin-top: -20px;
+									border-radius: 20px;
+									@include size(40px);
+								}
+
+								.conts {
+									line-height: 18px;
+									@include truncate(100%);
+								}
+
+							}
+
+							.list_box {
+								position: relative;
+								border-top: 1px solid #ececec;
+								font-size: 12px;
+								@include clear;
+
+								&:first-child {
+									border-top: 0;
+								}
+
+								a {
+									display: block;
+									min-height: 70px;
+									@include box-sizing;
+								}
+
+								.t {
+									display: block;
+									height: 18px;
+								}
+
+								.conts {
+									color: $base_color1;
+									font-weight: bold;
+								}
+
+								.date {
+									display: block;
+									margin-top: 6px;
+									font-size: 12px;
+									color: $base_color3;
+
+									em {
+										letter-spacing: 0;
+									}
+
+								}
+
+								.btn_favo {
+									position: absolute;
+									right: 10px;
+									top: 50%;
+									margin-top: -7.5px;
+									background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_favo_star.png') no-repeat 0 0;
+									@include btn(16px, 15px, 0, null, transparent);
+
+									&.on {
+										background-position: 0 100%;
+									}
+
+								}
+
+								&:hover {
+									background: #f8f8f8;
+								}
+
+							}
+
+							.btn_all_view {
+								font-size: 12px;
+								font-weight: bold;
+								line-height: 32px;
+								text-align: center;
+								@include btn(100%, 32px, 0, $base_color1, #fff);
+
+								&:hover {
+									background: #f8f8f8;
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+// flat
+.flat {
+	.flat_body {
+		position: fixed;
+		width: 270px;
+		height: 100vh;
+		background: #fff;
+		z-index: 30;
+		transform: translate3D(-100%, 0, 0);
+		-moz-transform: translate3D(-100%, 0, 0);
+		-webkit-transform: translate3D(-100%, 0, 0);
+		transform: translate(-100%, 0);
+		-moz-transform: translate(-100%, 0);
+		-ms-transform: translate(-100%, 0);
+		-o-transform: translate(-100%, 0);
+		transition: transform .3s ease-in-out;
+		-moz-transition: -moz-transform .3s ease-in-out;
+		-webkit-transition: -webkit-transform .3s ease-in-out;
+
+		@include respond-to($desktop) {
+			width: 300px;
+			height: calc(100vh - 50px);
+			transform: translate3D(-100%, 0, 0);
+			-moz-transform: translate3D(-100%, 0, 0);
+			-webkit-transform: translate3D(-100%, 0, 0);
+			transform: translate(-100%, 0);
+			-moz-transform: translate(-100%, 0);
+			-ms-transform: translate(-100%, 0);
+			-o-transform: translate(-100%, 0);
+		}
+
+		.btn_floating {
+			display: none;
+		}
+
+	}
+
+	&.on {
+		@include respond-to($desktop) {
+			float: left;
+		}
+
+		.flat_body {
+			transform: translate3D(0, 0, 0);
+			-moz-transform: translate3D(0, 0, 0);
+			-webkit-transform: translate3D(0, 0, 0);
+			transform: translate(0, 0);
+			-moz-transform: translate(0, 0);
+			-ms-transform: translate(0, 0);
+			-o-transform: translate(0, 0);
+
+			.btn_floating {
+				display: block;
+			}
+
+			@include respond-to($desktop) {
+				position: relative;
+			}
+
+		}
+
+		&:before {
+			content: "";
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(32, 41, 52, 0.5);
+			z-index: 29;
+
+			@include respond-to($desktop) {
+				display: none;
+			}
+
+		}
+
+	}
+
+	.user {
+		position: relative;
+		height: 50px;
+		padding: 25px 15px;
+		background: #202934;
+		@include clear;
+
+		.photo {
+			overflow: hidden;
+			float: left;
+			margin-right: 10px;
+			border-radius: 25px;
+			@include size(50px);
+		}
+
+		.user_info {
+			overflow: hidden;
+
+			.name {
+				display: block;
+				height: 24px;
+				font-size: 14px;
+				color: #bac6d5;
+				letter-spacing: 0;
+			}
+
+			.user_menu {
+				font-size: 0;
+
+				.btn_favo,
+				.btn_deposit,
+				.btn_logout {
+					margin-left: 3px;
+					font-size: 10px;
+					font-weight: bold;
+					@include btn (55px, 25px, 1px solid #535a62, #bac6d5, transparent);
+
+					&:first-child {
+						margin-left: 0;
+					}
+
+					&:hover {
+						border-color: #bac6d5;
+					}
+
+				}
+
+			}
+
+		}
+
+		.user_aside {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 0;
+
+			.btn_user_set,
+			.btn_user_clse {
+				margin-left: 9px;
+				@include btn(20px, 20px, 0, null, transparent);
+			}
+
+			.btn_user_set {
+				background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_set.png') no-repeat 50% 50%;
+				background-size: 20px auto;
+
+				&:hover {
+					background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_set_on.png');
+				}
+
+			}
+
+			.btn_user_clse {
+				background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_clse.png') no-repeat 50% 50%;
+				background-size: 20px auto;
+
+				&:hover {
+					background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_clse_on.png');
+				}
+
+			}
+
+		}
+
+	}
+
+	.nav {
+		height: calc(100% - 100px);
+		@include box-sizing;
+
+		@include respond-to($desktop) {
+			border-right: 1px solid #ccc;
+		}
+
+		.nav_head {
+			@include clear;
+
+			li {
+				float: left;
+				width: 33.3%;
+				border-bottom: 3px solid #ececec;
+
+				&:first-child {
+					width: 33.4%;
+				}
+
+				.btn_gnb,
+				.btn_noti,
+				.btn_set {
+					position: relative;
+					@include btn(100%, 50px, 0, null, #fff);
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						display: block;
+						background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_nav_sprite.png') no-repeat;
+						background-size: 85px 50px;
+					}
+
+					&.icon_new:after {
+						top: 50%;
+						left: 50%;
+						margin: -16px 0 0 8px;
+					}
+
+				}
+
+				.btn_gnb:before {
+					width: 25px;
+					height: 20.5px;
+					margin: -10.25px 0 0 -12.5px;
+					background-position: 0 0;
+				}
+
+				.btn_noti:before {
+					width: 25px;
+					height: 25px;
+					margin: -12.5px 0 0 -12.5px;
+					background-position: -30px 0;
+				}
+
+				.btn_set:before {
+					width: 25px;
+					height: 25px;
+					margin: -12.5px 0 0 -12.5px;
+					background-position: -60px 0;
+				}
+
+				&.active {
+					border-color: $point_color1;
+
+					.btn_gnb:before,
+					.btn_noti:before,
+					.btn_set:before {
+						background-position-y: -25px;
+					}
+
+				}
+
+			}
+
+		}
+
+		.nav_body {
+			overflow-y: auto;
+			height: calc(100% - 53px);
+			-webkit-overflow-scrolling: touch;
+
+			.gnb {
+				.gnb_one {
+					li {
+						border-top: 1px solid #ececec;
+
+						.tit-h2 {
+							position: relative;
+							height: 35px;
+							font-size: 12px;
+
+							a {
+								padding-left: 35px;
+								background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_home.png') no-repeat 15px 50%;
+								background-size: 15px 15px;
+
+								&.btn_gnb_home {
+									background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_home.png');
+								}
+
+								&.btn_gnb_event {
+									background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_trophy.png');
+								}
+
+								&.btn_gnb_product {
+									background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_cube.png');
+								}
+
+								&.btn_gnb_coupon {
+									background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_flag.png');
+								}
+
+								&.btn_gnb_template {
+									background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_flat.png');
+								}
+
+								&.btn_gnb_system {
+									background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_bell.png');
+								}
+
+							}
+
+						}
+
+						a {
+							display: block;
+							height: 35px;
+							color: $base_color1;
+							line-height: 35px;
+							cursor: pointer;
+							-webkit-tap-highlight-color: #f8f8f8;
+
+							&:hover {
+								background-color: #f8f8f8;
+							}
+
+						}
+
+						&.active .tit-h2 a {
+							&.btn_gnb_home {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_home_on.png');
+							}
+
+							&.btn_gnb_event {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_trophy_on.png');
+							}
+
+							&.btn_gnb_product {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_cube_on.png');
+							}
+
+							&.btn_gnb_coupon {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_flag_on.png');
+							}
+
+							&.btn_gnb_template {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_flat_on.png');
+							}
+
+							&.btn_gnb_system {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_bell_on.png');
+							}
+
+						}
+
+					}
+
+					> li:first-child {
+						border-top: 0;
+					}
+
+					> li:last-child {
+						border-bottom: 1px solid #ececec;
+					}
+
+					.gnb_two {
+						display: none;
+
+						li {
+							.tit-h3 {
+								position: relative;
+								height: 35px;
+								font-size: 12px;
+
+								&:before {
+									content: "";
+									display: block;
+									position: absolute;
+									left: 40px;
+									top: 10px;
+									border-left: 2px solid #202934;
+									border-bottom: 2px solid #202934;
+									@include size(8.5px);
+								}
+
+								a {
+									padding-left: 55px;
+								}
+
+							}
+
+						}
+
+						.gnb_three {
+							display: none;
+
+							li {
+								.tit-h4 {
+									position: relative;
+									height: 35px;
+									font-size: 12px;
+
+									&:before {
+										content: "";
+										display: block;
+										position: absolute;
+										left: 63px;
+										top: 50%;
+										margin-top: -3.5px;
+										background: #202934;
+										border-radius: 3.5px;
+										@include size(7px);
+									}
+
+									a {
+										padding-left: 75px;
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.btn_floating {
+		opacity: 0;
+		display: none;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: -10px;
+		width: 10px;
+		border: 0;
+		color: $point_color1;
+		background: rgba(0, 0, 0, 0.1);
+		text-align: right;
+
+		&:before {
+			margin-left: -2px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
+		@include respond-to($desktop) {
+			display: block;
+		}
+
+	}
+
+}
+
+// flat-mini
+.flat-mini {
+	position: fixed;
+	left: 0;
+	top: 50px;
+	bottom: 0;
+	width: 45px;
+	height: calc(100vh - 50px);
+	border-right: 1px solid $point_color1;
+	background: #fff;
+	z-index: 20;
+
+	.flat-mini_body {
+		.gnb {
+			.gnb_one {
+				li {
+					.tit-h2 {
+						&:after {
+							display: none;
+						}
+
+						a {
+							position: relative;
+							height: 45px;
+							background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_home.png') no-repeat 50% 50%;
+							background-size: 20px 20px;
+
+							&.btn_gnb_home {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_home.png');
+							}
+
+							&.btn_gnb_event {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_trophy.png');
+							}
+
+							&.btn_gnb_product {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_cube.png');
+							}
+
+							&.btn_gnb_coupon {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_flag.png');
+							}
+
+							&.btn_gnb_template {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_flat.png');
+							}
+
+							&.btn_gnb_system {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_bell.png');
+							}
+
+							&.icon_new:after {
+								right: 6.5px;
+								top: 6.5px;
+							}
+
+						}
+
+					}
+
+					a {
+						display: block;
+						color: $base_color1;
+						-webkit-tap-highlight-color: #f8f8f8;
+
+						&:hover {
+							background-color: #f8f8f8;
+						}
+
+					}
+
+					&.active .tit-h2 {
+						background-color: transparent;
+
+						&:after {
+							display: block;
+							right: -224px;
+							z-index: 2;
+						}
+
+						a {
+							&.btn_gnb_home {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_home_on.png');
+							}
+
+							&.btn_gnb_event {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_trophy_on.png');
+							}
+
+							&.btn_gnb_product {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_cube_on.png');
+							}
+
+							&.btn_gnb_coupon {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_flag_on.png');
+							}
+
+							&.btn_gnb_template {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_flat_on.png');
+							}
+
+							&.btn_gnb_system {
+								background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_gnb_bell_on.png');
+							}
+
+						}
+
+					}
+
+				}
+
+				> li {
+					position: relative;
+				}
+
+				.gnb_two {
+					display: none;
+					position: absolute;
+					top: 0;
+					left: 46px;
+					width: 244px;
+					padding-top: 44px;
+					border-width: 1px 1px 1px 0;
+					border-style: solid;
+					border-color: #202934;
+					background: #fff;
+
+					li {
+						border-top: 1px solid #ececec;
+
+						.tit-h3 {
+							position: relative;
+							height: 35px;
+							font-size: 12px;
+
+							&:before {
+								content: "";
+								display: block;
+								position: absolute;
+								left: 15px;
+								top: 10px;
+								border-left: 2px solid #202934;
+								border-bottom: 2px solid #202934;
+								@include size(8.5px);
+							}
+
+							a {
+								padding-left: 30px;
+								line-height: 35px;
+							}
+
+						}
+
+					}
+
+					.gnb_three {
+						display: none;
+
+						li {
+							.tit-h4 {
+								position: relative;
+								height: 35px;
+								font-size: 12px;
+
+								&:before {
+									content: "";
+									display: block;
+									position: absolute;
+									left: 38px;
+									top: 50%;
+									margin-top: -3.5px;
+									background: #202934;
+									border-radius: 3.5px;
+									@include size(7px);
+								}
+
+								a {
+									padding-left: 50px;
+									line-height: 35px;
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		.on .tit-h2 .ir {
+			overflow: visible;
+			visibility: visible;
+			left: 45px;
+			top: 1px;
+			width: 245px;
+			height: 44px;
+			padding-left: 10px;
+			font-size: 14px;
+			color: $point_color1;
+			background: #fff;
+			line-height: 44px;
+			z-index: 2;
+			@include box-sizing;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: -1px;
+				left: -46px;
+				width: 46px;
+				height: 46px;
+				border-top: 1px solid  #202934;
+				border-bottom: 1px solid  #202934;
+				z-index: 21;
+			}
+
+		}
+
+	}
+
+}
+
+.flat .nav .nav_body,
+.flat-mini .flat-mini_body {
+	.gnb {
+		.sub {
+			> .tit-h2,
+			> .tit-h3 {
+				&:after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					right: 20px;
+					width: 7.5px;
+					height: 7.5px;
+					margin-top: -3.75px;
+					background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_angle_sprite.png') no-repeat 0 0;
+					background-size: 7.5px auto;
+				}
+
+			}
+
+		}
+
+		.gnb_one > .on {
+			.tit-h2:after {
+				background-position: 0 -7.5px;
+			}
+
+			.gnb_two {
+				display: block;
+			}
+
+		}
+
+		.gnb_two > .on {
+			.tit-h3:after {
+				background-position: 0 -7.5px;
+			}
+
+			.gnb_three {
+				display: block;
+			}
+
+		}
+
+		.active {
+			> .tit-h2,
+			> .tit-h3,
+			> .tit-h4 {
+				background: #ecf3fd;
+
+				a {
+					color: $point_color1;
+				}
+
+			}
+
+			> .tit-h3:before {
+				border-color: $point_color1 !important;
+			}
+
+			> .tit-h4:before {
+				background: $point_color1 !important;
+			}
+
+		}
+
+	}
+
+}
+
+// container
+.containerwrap {
+	@include clear;
+}
+
+#container {
+	overflow: hidden;
+
+	.container_main {
+		.container_head {
+			.container_head_wrap {
+				position: relative;
+				background: #fff;
+				z-index: 15;
+			}
+
+			.container_head_tit {
+				position: relative;
+				height: 20px;
+				padding: 10px 15px;
+				border-bottom: 1px solid $base_color1;
+				font-size: 0;
+				background: #f8f8f8;
+				z-index: 15;
+
+				@include respond-to($desktop) {
+					padding: 15px;
+					border-bottom: 3px solid #ececec;
+				}
+
+				.tit-h2 {
+					position: relative;
+					cursor: pointer;
+
+					span {
+						display: inline-block;
+						margin-left: 5px;
+						font-size: 12px;
+						vertical-align: middle
+					}
+
+					&:after {
+						content: "";
+						position: absolute;
+						right: 5px;
+						top: 50%;
+						width: 9px;
+						height: 7px;
+						margin-top: -3.5px;
+						background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_down_tri.png') no-repeat 0 0;
+						background-size: 9px;
+					}
+
+				}
+
+				@include respond-to($desktop) {
+					.tit-h2 {
+						display: inline-block;
+						vertical-align: middle;
+
+						&:after {
+							position: static;
+							display: inline-block;
+							margin: 0 0 -1px 5px;
+							color: $point_color1;
+							background-image: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_down_tri_on.png');
+							vertical-align: middle;
+						}
+
+					}
+
+				}
+
+			}
+
+			.cate {
+				display: inline-block;
+				width: 33px;
+				height: 18.5px;
+				margin-left: 1px;
+				border: 1px solid #ccc;
+				font-size: 10px;
+				color: $base_color2;
+				font-weight: bold;
+				background: #fff;
+				line-height: 18.5px;
+				text-align: center;
+				vertical-align: middle;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+			}
+
+			.container_head_list {
+				position: absolute;
+				left: 0;
+				top: 41px;
+				width: 100%;
+
+				&:before {
+					content: "";
+					position: fixed;
+					left: 0;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					background: rgba(32, 41, 52, 0.5);
+					z-index: 14;
+
+					@include respond-to($desktop) {
+						display: none;
+					}
+
+				}
+
+				@include respond-to($desktop) {
+					position: absolute;
+					left: 13px;
+					top: 54px;
+					width: 420px;
+					border: 1px solid $base_color1;
+				}
+
+				.container_head_list_body {
+					position: relative;
+					padding-bottom: 15px;
+					background: #fff;
+					z-index: 15;
+
+					@include respond-to($desktop) {
+						padding-bottom: 0;
+						box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+					}
+
+					.tit-h3 {
+						display: none;
+
+						@include respond-to($desktop) {
+							display: block;
+							height: 29px;
+							padding-left: 10px;
+							font-size: 12px;
+							line-height: 29px;
+						}
+
+					}
+
+					li {
+						position: relative;
+						padding: 7.5px 15px;
+						border-bottom: 1px solid #ececec;
+
+						.iradio .cate:first-child {
+							margin-left: 5px;
+						}
+
+						.btn_minishop {
+							position: absolute;
+							right: 15px;
+							top: 50%;
+							margin-top: -12.5px;
+							font-size: 10px;
+							font-weight: bold;
+							line-height: 23px;
+							text-align: center;
+							letter-spacing: 0;
+							@include btn(75px, 25px, 1px solid $base_color3, $base_color2, #fff);
+
+							&:hover {
+								border-color: $point_color1;
+								color: $point_color1;
+							}
+
+							@include respond-to($desktop) {
+								width: 90px;
+								font-size: 12px;
+							}
+
+						}
+
+						@include respond-to($desktop) {
+							border-top: 1px solid #ececec;
+							border-bottom: 0;
+						}
+
+					}
+
+					.form_button {
+						margin-top: 15px;
+						font-size: 0;
+						text-align: center;
+
+						.btn_multishop_set {
+							display: inline-block;
+							font-size: 14px;
+							font-weight: bold;
+							text-align: center;
+							line-height: 38px;
+							@include btn(110px, 40px, 1px solid $base_color3, $base_color1, #fff);
+						}
+
+						.btn_submit {
+							margin-left: 5px;
+							font-size: 14px;
+							font-weight: bold;
+							line-height: 38px;
+							@include btn(110px, 40px, 0, #fff, $point_color1);
+
+							&:hover {
+								background: $point_color1_over;
+							}
+
+						}
+
+						@include respond-to($desktop) {
+							margin-top: 0;
+							border-top: 1px solid $base_color1;
+
+							.btn_multishop_set {
+								overflow: hidden;
+								position: absolute;
+								right: 10px;
+								top: 5px;
+								background: url('//img.happyshopping.kr/img_static/img_mobile/admin/comm/icon_set_mini.png') no-repeat 50% 50%;
+								text-indent: -9999px;
+								@include btn(20px, 20px, 0, null, transparent);
+							}
+
+							.btn_submit {
+								margin-left: 0;
+								font-size: 12px;
+								line-height: 32px;
+								@include btn(100%, 34px, 0, $base_color1, #fff);
+
+								&:hover {
+									background: #f6f6f6;
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.flat-mini + #container {
+	margin-left: 46px;
+}

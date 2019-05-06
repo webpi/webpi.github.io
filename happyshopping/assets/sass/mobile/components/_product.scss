@@ -1,0 +1,538 @@
+@charset "utf-8";
+
+// 세로형 상품
+.item-product_type1 {
+	.thumb {
+		display: block;
+		border: 1px solid #e5e5e5;
+		border-bottom: 0;
+	}
+	.item-product_type1_bot {
+		padding-bottom: 16px;
+
+		.button-group {
+			.btn_cart,
+			.btn_estmate {
+				font-size: 11px;
+				font-weight: bold;
+				@include btn(50%, 27px, 0, #fff, $point_color1, null, 25px);
+				[class^="icon-"] {
+					margin-right: 2px;
+					&:before {
+						position: relative;
+						top: 1px;
+					}
+				}
+			}
+			.btn_happytree {
+				display: inline-block;
+				font-size: 11px;
+				font-weight: bold;
+				@include btn(50%, 27px, 1px solid $point_color1, $point_color1, #fff, center, 25px);
+				.icon-search:before {
+					position: relative;
+					top: 1px;
+				}
+			}
+		}
+
+		.item-product_type1_bot_info {
+			padding: 0 5px;
+			text-align: center;
+			.name {
+				display: block;
+				height: 23px;
+				font-size: 12px;
+				color: #4a4a4a;
+				letter-spacing: 0;
+				line-height: 23px;
+				@include truncate(100%);
+			}
+			.price {
+				display: block;
+				height: 23px;
+				font-size: 17px;
+				color: $point_color2;
+				letter-spacing: 0;
+				span {
+					font-size: 12px;
+					color: #888;
+				}
+			}
+		}
+	}
+}
+
+// 표준pc형 상품
+.item-product_type2 {
+	@include grid-cols(2, 5px);
+
+	.thumb {
+		position: relative;
+		display: block;
+		border: 1px solid #e5e5e5;
+
+		a {
+			display: block;
+		}
+
+		.btn_thumb {
+			position: absolute;
+			bottom: -1px;
+			right: -1px;
+			font-size: 16px;
+			@include btn(28px, 28px, 0, #fff, #28b962);
+		}
+	}
+
+	.subject {
+		display: block;
+		height: 32px;
+		padding: 5px 0;
+		font-size: 12px;
+		line-height: 1.3;
+
+		&.planpc {
+			font-size: 11px;
+
+			span {
+				display: block;
+				font-size: 13px;
+				font-weight: bold;
+				@include truncate();
+			}
+		}
+	}
+
+	.spec {
+		height: 40px;
+		padding: 5px;
+		background: #f0eff5;
+		@include box-sizing();
+
+		.spec_info {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			font-size: 11px;
+			color: $base_color2;
+			word-wrap: break-word;
+			word-break: keep-all;
+			line-height: 1.4;
+			@include truncate();
+			white-space: normal;
+
+			span {
+				color: $point_color1;				
+			}
+		}
+	}
+
+	.price {
+		display: block;
+		height: 35px;
+		font-size: 12px;
+		color: $base_color3;
+		font-weight: bold;
+		line-height: 35px;
+		text-align: right;
+
+		strong {
+			font-size: 17px;
+			color: $point_color2;
+			letter-spacing: 0;
+		}
+	}
+
+	.mediumguide {
+		height: 60px;
+		padding: 4px;
+		border: 1px solid #ccc;
+		font-size: 11px;
+		background: #fff;
+		line-height: 1.4;
+
+		img {
+			width: 70px;
+		}
+
+		a {
+			display: block;
+		}
+
+		span {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			max-height: 36px;
+			word-wrap: break-word;
+			word-break: keep-all;
+			@include truncate();
+			white-space: normal;
+		}
+
+		em {
+			display: block;
+			color: $point_color1;
+			text-align: right;
+		}
+	}
+
+	.btn_direct_buy {
+		font-size: 11px;
+		font-weight: bold;
+		@include btn(100%, 28px, 0, #fff, $point_color1);
+
+		[class^="icon-"] {
+			margin-right: 4px;
+			font-size: 16px;
+			font-weight: normal;
+			vertical-align: -2px;
+		}
+	}
+
+	.btn_planpc {
+		display: block;
+		margin-top: 5px;
+		font-size: 11px;
+		font-weight: bold;
+		@include btn(100%, 28px, 0, #fff, $point_color1, center, 28px);
+	}
+
+	.btn_direct_planpc {
+		display: block;
+		margin-top: 5px;
+		font-size: 11px;
+		font-weight: bold;
+		@include btn(100%, 28px, 0, #fff, $point_color2, center, 28px);
+	}
+}
+
+// 상품 리스트
+.minishop_price_list {
+	.minishop_price_list_item {
+		padding: 10px;
+		border-bottom: 1px solid #e5e5e5;
+
+		.minishop_price_list_item_box {
+			width: calc(100vw - 20px);
+			@include clear;
+
+			.minishop_price_list_item_lft {
+				position: relative;
+				float: left;
+				margin-right: 10px;
+				@include size(70px);
+
+				.thumb {
+					overflow: hidden;
+					display: block;
+					border: 1px solid #e5e5e5;
+					@include size(70px);
+					@include box-sizing();
+				}
+
+				.icheck {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 50%;
+					height: 50%;
+
+					label {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.btn_happytree_photo {
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					width: 50%;
+					height: 50%;
+
+					[class^="icon-"] {
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						font-size: 12px;
+						@include btn(17px, 17px, 0, #fff, #28b962, center, 17px);
+					}
+				}
+			}
+
+			.minishop_price_list_item_rgt {
+				overflow: hidden;
+				width: calc(100vw - 100px);
+
+				.name {
+					display: block;
+					height: 18px;
+					font-size: 14px;
+					@include truncate(100%);
+				}
+
+				.rank {
+					display: inline-block;
+					width: 16px;
+					height: 15px;
+					margin-right: 5px;
+					padding-top: 1px;
+					border: 1px solid #0f4f9f;
+					font-size: 11px;
+					background: #fff;
+					text-align: center;
+					line-height: 15px;
+					vertical-align: middle;
+				}
+
+				.cate {
+					margin-top: 4px;
+					font-size: 0;
+
+					.cate_name {
+						display: inline-block;
+						height: 20px;
+						margin-right: 5px;
+						font-size: 13px;
+						line-height: 20px;
+						vertical-align: middle;
+						letter-spacing: 0;
+					}
+
+					[class^="mark-"] {
+						margin-right: 3px;
+					}
+				}
+
+				.total {
+					margin-top: 5px;
+					@include clear;
+
+					.total_price {
+						float: left;
+						height: 25px;
+						font-size: 16px;
+						color: $point_color2;
+						letter-spacing: 0;
+						line-height: 25px;
+
+						span {
+							font-size: 12px;
+							color: $base_color3;
+							font-weight: normal;
+						}										
+					}
+
+					.total_each {
+						float: right;
+					}
+
+					.total_soldout {
+						float: right;
+					}
+				}
+			}
+		}
+
+		.add_item {
+			position: relative;
+			margin-top: 6px;
+			border-bottom: 1px solid #e5e5e5;
+
+			.btn-add-item {
+				position: absolute;
+				right: 0;
+				bottom: -1px;
+				font-size: 16px;
+				@include btn(30px, 30px, 0, #fff, $point_color1);
+
+				span {
+					font-size: 16px;
+					line-height: 30px;
+				}
+			}
+
+			.btn-remove-item {
+				position: absolute;
+				right: 0;
+				bottom: -1px;
+				font-size: 21px;
+				@include btn(30px, 30px, 1px solid $point_color1, $point_color1, #fff);
+			}
+
+			.soldout {
+				position: absolute;
+				right: 0;
+				bottom: -1px;
+				height: 30px;
+				font-size: 15px;
+				color: $base_color3;
+				font-weight: bold;
+				line-height: 30px;
+			}
+		}
+
+		.specinfo {
+			margin-top: 10px;
+			font-size: 12px;
+			color: $base_color2;
+			@include truncate();
+		}
+
+		.total_soldout {
+			display: block;
+			width: 83px;
+			height: 25px;
+			font-size: 11px;
+			color: $base_color3;
+			background: #dadada;
+			line-height: 25px;
+			text-align: center;
+			border-radius: 3px;
+		}
+		
+		.minishop_price_list_item_option {
+			margin-top: 10px;
+			padding: 15px 10px;
+			background: #f2f2f2;
+
+			li {
+				margin-top: 5px;
+				@include clear;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				.option_item {
+					float: left;
+					max-width: calc(100% - 180px);
+					height: 25px;
+					font-size: 13px;
+					line-height: 25px;
+					@include truncate();
+				}
+
+				.total_each {
+					float: right;
+				}
+
+				.total_soldout {
+					float: right;
+					width: 38px;
+				}
+			}
+		}
+
+		.minishop_price_list_item_stdpc {
+			margin-top: 10px;
+			background: #f2f2f2;
+
+			.minishop_price_list_item_stdpc_top {
+				height: 40px;
+				padding: 0 10px;
+				font-size: 13px;
+				line-height: 40px;
+				text-align: right;
+
+				span {
+					color: $base_color3;
+					letter-spacing: 0;
+				}
+			}
+
+			.minishop_price_list_item_stdpc_option {
+				padding: 10px;
+				border-top: 1px solid #e5e5e5;
+				border-bottom: 1px solid #e5e5e5;
+
+				li {
+					position: relative;
+					margin-top: 5px;
+					font-size: 0;
+
+					span {
+						display: inline-block;
+						font-size: 13px;
+						line-height: 20px;
+						vertical-align: middle;
+					}
+
+					.item-cate {
+						width: 60px;
+						font-weight: bold;
+					}
+
+					.status {
+						width: 30px;
+						height: 20px;
+						margin-right: 10px;
+						font-size: 11px;
+						color: #fff;
+						background: $base_color3;
+						line-height: 20px;
+						text-align: center;
+
+						&.cng {
+							background: #3384cc;
+						}
+
+						&.add {
+							background: #d64040;
+						}
+					}
+
+					.name {
+						position: relative;
+						width: calc(100vw - 230px);
+						@include truncate();
+					}
+
+					.value {
+						position: absolute;
+						right: 0;
+						top: 0;
+						color: $base_color3;
+						letter-spacing: 0;
+						line-height: 20px;
+					}
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+
+			.btn_option_detail {
+				font-size: 12px;
+				@include btn(100%, 40px, 0, $base_color2, #f2f2f2);
+
+				[class^="icon-"] {
+					margin-left: 2px;
+					vertical-align: -4px;
+
+					&:before {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	// 애드리스트 광고
+	.adv_items {
+		background: #f7fafe;
+
+		.adv_items_bot {
+			height: 40px;
+			padding: 0 15px;
+			border-bottom: 1px solid $base_color3;
+			font-size: 11px;
+			color: $base_color2;
+			text-align: right;
+			line-height: 40px;
+		}
+	}
+}

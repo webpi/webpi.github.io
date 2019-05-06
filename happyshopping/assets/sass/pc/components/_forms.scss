@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+// input field
+// input
+.istyle {
+	height: 34px;
+	padding: 0 9px;
+	border: 1px solid $base_color3;
+	color: $base_color1;
+	font-weight: bold;
+	line-height: 32px;
+	vertical-align: middle;
+	outline: 0;
+	box-sizing: border-box;
+
+	&.num {
+		text-align: center;
+	}
+}
+
+// select
+.sstyle {
+	min-width: 100px;
+	height: 34px;
+	border: 1px solid $base_color3;
+	font-weight: bold;
+	vertical-align: middle;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+// textarea
+.itext {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid $base_color3;
+	line-height: 1.4;
+	box-sizing: border-box;
+}
+
+// validation massage, button
+.success {
+	.istyle {
+		border-color: $point_color1;
+	}
+
+	.istyle + [class^="btn-"] {
+		background-color: $point_color1 !important;
+	}
+}
+
+.fail .istyle {
+	border-color: $point_color2;
+	background: #fffbfb;
+}
+
+// radio, checkbox group
+.igroup {
+	@include clear;
+	> li {
+		float: left;
+		margin-right: 20px;
+
+		&:last-child {
+			margin-left: 0;
+		}
+	}
+}
+
+// radio, checkbox
+.icheck,
+.iradio {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	input {
+		opacity: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	label {
+		display: inline-block;
+
+		em {
+			position: relative;
+			top: 1px;
+		}
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-right: 5px;
+			border: 1px solid $base_color3;
+			font-size: 16px;
+			background: #fff;
+			vertical-align: middle;
+			line-height: 16px;
+		}
+
+		&:hover:before {
+			background-color: $point_color1;
+		}
+	}
+
+	&.required {
+		label {
+			&:before {
+				border-color: $point_color2;
+			}
+		}
+	}
+}
+
+.iradio label:before {
+	padding: 3px;
+	border-radius: 50%;
+}
+
+.iradio input:checked + label {
+	@include loadIcon($icon-lens);
+
+	&:before {
+		color: $point_color1;
+	}
+
+	&:hover:before {
+		background: none;
+	}
+
+	em {
+		font-weight: bold;
+	}
+}
+
+.icheck input:checked + label {
+	@include loadIcon($icon-done);
+
+	&:before {
+		border-color: $base_color3;
+		color: #fff;
+		background: $point_color1;
+	}
+
+	em {
+		font-weight: bold;
+	}
+}
+
+.icheck input:disabled + label,
+.iradio input:disabled + label {
+	color: #999;
+
+	&:before {
+		border-color: #cecece;
+		background-color: #fff;
+	}
+}
+
+// radio, checkbox alert
+.ialert {
+	border-color: $point_color2;
+
+	label {
+		color: $point_color2;
+
+		&:before {
+			border-color: $point_color2;
+		}
+	}
+}
+
+// 개수입력
+.cnt-change_number {
+	position: relative;
+	width: 44px;
+	
+	padding-right: 13px;
+
+	.istyle {
+		width: 44px;
+		height: 30px;
+		border-color: #d3d3d3;
+		border-right: 0;
+		font-size: 18px;
+		font-weight: bold;
+		color: #333;
+		line-height: 28px;
+		text-align: right;
+		letter-spacing: 0;
+	}
+
+	input[readonly] {
+		color: $base_color3;
+	}
+
+	.dn,
+	.up {
+		@include btn(13px, 16px, 1px solid #d3d3d3, #ff6600, #fff);
+
+		&:disabled {
+			color: $base_color3;
+		}
+	}
+
+	.up {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.dn {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 15px;
+	}
+
+	&.big {
+		width: 44px;
+		height: 45px;
+		padding-right: 21px;
+		position: relative;
+
+		.istyle {
+			width: 44px;
+			height: 45px;
+			border-color: #d3d3d3;
+			border-right: 0;
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+			line-height: 43px;
+			text-align: right;
+			letter-spacing: 0;
+		}
+
+		.dn,
+		.up {
+			@include btn(21px, 24px, 1px solid #d3d3d3, #ff6600, #fff);
+		}
+
+		.up {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		
+		.dn {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			height: 23px;
+		}
+	}
+}

@@ -1,0 +1,665 @@
+@charset "utf-8";
+
+#footer {
+	margin-bottom: 50px;
+
+	.footer-body {
+		position: relative;
+		@include default_width;
+
+		.btn-top-scroll {
+			display: block;
+			position: absolute;
+			right: 4px;
+			top: 6px;
+			padding-top: 4px;
+			font-size: 10px;
+			@include btn(30px, 30px, 1px solid #d3d0e1, $base_color3, #fff, center);
+			@include loadIcon($icon-caret-up,15px,$point_color2);
+
+			&:before {
+				display: block;
+				line-height: 7px;
+			}
+		}
+
+		.footer-body_lnb {
+			border-top: 2px solid $base_color1;
+			border-bottom: 1px solid #ccc;
+			font-size: 0;
+			text-align: center;
+
+			li {
+				display: inline-block;
+				position: relative;
+				height: 39px;
+				padding: 0 20px 0 21px;
+				line-height: 39px;
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 50%;
+					width: 1px;
+					height: 17px;
+					margin-top: -8.5px;
+					background: #d3d3d3;
+				}
+
+				&:first-child:before {
+					display: none;
+				}
+
+				a {
+					font-size: 13px;
+					color: $base_color1;
+					font-weight: bold;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.footer-body_conts {
+			position: relative;
+			margin-top: 15px;
+			@include clear;
+
+			.footer-body_conts_logo {
+				float: left;
+				width: 136px;
+				height: 50px;
+				margin: 10px 29px 0 0;
+				background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -192px -92px;
+			}
+
+			.footer-body_conts_info {
+				overflow: hidden;
+				letter-spacing: -0.8px;
+
+				> ul > li {
+					margin-top: 6px;
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					.email {
+						color: $base_color1;
+						letter-spacing: 0;
+					}
+
+					.btn-corp-confirm {
+						position: relative;
+						top: -2px;
+						padding: 0 5px;
+						@include btn(87px, 14px, 1px solid #d3d3d3, #000, #fff, center);
+						border-bottom-width: 2px;
+					}
+				}
+
+				.bar {
+					position: relative;
+					margin-left: 8px;
+					padding-left: 11px;
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 3px;
+						width: 1px;
+						height: 12px;
+						background: #d3d3d3;
+					}
+				}
+
+				address {
+					margin-top: 6px;
+				}
+
+				.copyright {
+					margin-top: 14px;
+					color: $base_color2;
+					letter-spacing: 0;
+				}
+
+				.footer-body_conts_info_sns {
+					overflow: hidden;
+					margin-top: 18px;
+					@include clear;
+
+					ul {
+						overflow: hidden;
+						float: left;
+						@include clear;
+					}
+
+					li {
+						float: left;
+						margin-left: 5px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+
+						img {
+							width: 40px;
+						}
+					}
+
+					> ul {
+						margin-right: 20px;
+					}
+
+					.footer-body_conts_info_sns_happytree {
+						overflow: hidden;
+						padding-left: 20px;
+						border-left: 1px solid #e6e6e6;
+						@include clear;
+
+						.tit-h3 {
+							float: left;
+							margin-right: 10px;
+							font-size: 12px;
+							color: $base_color2;
+							line-height: 40px;
+						}
+					}
+				}
+			}
+
+			.footer-body_conts_service {
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 15px 25px 10px;
+				background: #f3f3f3;
+
+				.question-helpservice .btn-q {
+					height: 38px;
+					line-height: 38px;
+				}
+
+				.btn-ars-guide {
+					background: #f3f3f3;
+				}
+
+				.layer-pop-ars {
+					position: absolute;
+					bottom: 20px;
+					right: 0;
+				}
+			}
+		}
+
+		.footer-body_aside {
+			height: 126px;
+			margin-top: 35px;
+			border: 1px solid #c4c0d8;
+			@include clear;
+
+			dl {
+				float: left;
+				height: 106px;
+
+				dt {
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+
+			.sgi {
+				width: 350px;
+				border-right: 1px dashed #c4c0d8;
+				padding: 10px 15px;
+
+				dt {
+					position: relative;
+
+					span {
+						position: absolute;
+						right: 0;
+						top: 1.5px;
+						background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -167px -70px;
+						width: 95px;
+						height: 15px;
+					}
+				}
+
+				dd {
+					margin-top: 5px;
+					line-height: 1.4;
+
+					span {
+						color: $point_color2;
+					}
+
+					.btn {
+						display: inline-block;
+						margin-top: 5px;
+						padding: 0 5px;
+						font-size: 11px;
+						@include btn(null, 22px, 1px solid #c4c0d8, $base_color1, #f0eff5, center, 20px);
+						border-bottom: 2px solid #c4c0d8;
+
+						&:hover {
+							border-color: #9891ba;
+						}
+
+						[class^='icon-'] {
+							margin: 0 2px;
+							color: #f89683;
+						}
+					}
+				}
+			}
+
+			.escrow {
+				@include clear;
+
+				dt {
+					float: left;
+					margin-right: 15px;
+					padding: 10px 15px;
+
+					&:after {
+						content: "";
+						display: block;
+						width: 81px;
+						height: 74px;
+						margin: 10px auto 0;
+						background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -76px -70px;
+					}
+				}
+
+				dd {
+					overflow: hidden;
+					position: relative;
+					height: 96px;
+					padding: 30px 0 0 76px;
+					font-size: 13px;
+					line-height: 22px;
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						display: block;
+						width: 61px;
+						height: 126px;
+						background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -5px -5px;
+					}
+
+					strong {
+						color: #0f4f9f;
+					}
+					@include breakpoint(max-width 1209px) {
+						width: 320px;
+						height: 118px;
+						padding-top: 8px;
+
+						strong {
+							display: block;
+						}
+
+						br {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		@include breakpoint(max-width 1209px) {
+			width: 950px;
+		}
+	}
+}
+
+// 간소화
+#footer-mini {
+	.footer-mini_body {
+		@include default_width;
+		padding: 0 0 10px;
+
+		.copyright {
+			text-align: center;
+			letter-spacing: 0;
+		}
+	}
+}
+
+// 모바일 대응
+#footer-m {
+	background: #f5f5f5;
+	line-height: 1;
+
+	.footer-m_body {
+		position: relative;
+		height: 84px;
+
+		.footer-m_body_menu {
+			padding-top: 20px;
+			font-size: 0;
+			text-align: center;
+
+			li {
+				position: relative;
+				display: inline-block;
+				padding: 0 10px 0 11px;
+				font-size: 12px;
+				color: $base_color1;
+				font-weight: bold;
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 1px;
+					width: 1px;
+					height: 11px;
+					background: #ccc;
+				}
+
+				&:first-child:before {
+					display: none;
+				}
+			}
+		}
+
+		.copyright {
+			margin-top: 18px;
+			font-size: 11px;
+			color: $base_color2;
+			text-align: center;
+			letter-spacing: 0;
+		}
+	}
+	@include breakpoint(0 $responsive_break_width) {
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+}
+
+// 푸터 ars 안내
+.layer-pop-ars {
+	position: absolute;
+	width: 890px;
+	padding: 20px;
+	border: 2px solid $point_color1;
+	background: #fff url('https://img.happyshopping.kr/img_static/img_pres/_v3/bg_pop_ars_top.png') no-repeat 0 0;
+	box-shadow: #d3d3d3 3px 3px 3px;
+
+	.pop-ars_body {
+		text-align: center;
+		@include clear;
+
+		.pop-ars_body_guide {
+			position: relative;
+			float: left;
+			width: 375px;
+			height: 304px;
+			margin-right: 10px;
+			font-size: 26px;
+			color: #0f4f9f;
+			background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/bg_pop_ars_guide.png') no-repeat 50% 150px;
+
+			p {
+				margin-top: 20px;
+				font-size: 14px;
+				color: $base_color1;
+				line-height: 1.4;
+
+				strong {
+					font-size: 16px;
+				}
+			}
+
+			.button-group {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			}
+
+			a {
+				display: inline-block;
+				height: 40px;
+				padding: 0 20px;
+				font-size: 16px;
+				color: #fff !important;
+				line-height: 40px;
+				background: $point_color1;
+				border-radius: 20px;
+
+				&:hover {
+					background: $point_color1_over;
+				}
+
+				[class^='icon-'] {
+					position: relative;
+					top: 2px;
+					margin-left: 1px;
+				}
+			}
+		}
+
+		.board .number {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border: 1px solid #0f4f9f;
+			font-size: 14px;
+			color: #0f4f9f;
+			font-weight: bold;
+			line-height: 20px;
+			text-align: center;
+			border-radius: 11px;
+		}
+	}
+
+	.pop-ars_body_number {
+		overflow: hidden;
+
+		.board {
+			border-top: 1px solid #0f4f9f;
+
+			th {
+				height: 38px;
+				border-bottom: 1px solid #0f4f9f;
+				font-size: 16px;
+				line-height: 22px;
+				color: #0f4f9f;
+			}
+
+			td {
+				border-bottom: 1px solid #d3d3d3;
+				font-size: 13px;
+				color: $base_color2;
+			}
+
+			.box-td {
+				padding: 7px 5px;
+				font-weight: bold;
+				text-align: left;
+				line-height: 18px;
+			}
+		}
+	}
+
+	.btn-layer-pop_clse {
+		position: absolute;
+		right: 0;
+		top: -37px;
+		box-shadow: #d3d3d3 3px 3px 3px;
+		@include btn(32px, 32px, 1px solid $point_color1, $point_color1, #fff);
+		@include loadIcon($icon-close,30px);
+	}
+}
+
+// 모바일 기본
+#footer-m-basic {
+	margin-bottom: 56px;
+	padding: 15px 0 24px;
+	background: #e5e5e5;
+
+	.footer-m-basic_body_btn {
+		font-size: 0;
+		text-align: center;
+
+		.btn_footer-m-basic_body_btn {
+			display: inline-block;
+			min-width: 60px;
+			margin-right: 5px;
+			padding: 0 10px;
+			font-size: 11px;
+			font-weight: bold;
+			line-height: 28px;
+			text-align: center;
+			@include btn(null, 30px, 1px solid #b1b1b1, $base_color2, #e5e5e5);
+		}
+
+		.btn_fold {
+			font-size: 11px;
+			line-height: 28px;
+			@include btn(43px, 30px, 0, $base_color3, transparent);
+		}
+	}
+
+	.footer-m-basic_body_detail {
+		margin-top: 15px;
+		padding: 10px 0;
+
+		ul {
+			li {
+				font-size: 11px;
+				color: $base_color2;
+				text-align: center;
+				line-height: 1.6;
+				letter-spacing: 0;
+
+				.btn_info {
+					padding: 0 5px;
+					font-size: 9px;
+					border-radius: 3px;
+					@include btn(null, 15px, 1px solid $base_color3, $base_color2, #e5e5e5, center, 13px);
+					vertical-align: 1px;
+				}
+
+				.bar {
+					color: #bababa;
+					padding:0 2px;
+				}
+
+				.service {
+					position: relative;
+
+					.icon-phone {
+						position: absolute;
+						right: -23px;
+						top: 50%;
+						margin-top: -11px;
+						border-radius: 10px;
+						color: $base_color3;
+						background: #ccc;
+						line-height: 20px;
+						text-align: center;
+						@include size(20px);
+
+						&:before {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-m-basic_body_menu {
+		margin-top: 15px;
+		font-size: 0;
+		text-align: center;
+
+		li {
+			position: relative;
+			display: inline-block;
+			padding: 0 5px 0 5.5px;
+			font-size: 10px;
+			color: $base_color1;
+			font-weight: bold;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 1px;
+				width: 1px;
+				height: 11px;
+				background: #ccc;
+			}
+
+			&:first-child:before {
+				display: none;
+			}
+		}
+	}
+
+	.copyright {
+		margin-top: 10px;
+		font-size: 10px;
+		color: $base_color2;
+		text-align: center;
+		letter-spacing: 0;
+	}	
+}
+
+.footer-m-bar {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 55px;
+	border-top: 1px solid $base_color3;
+	background: #fff;
+	z-index: 20;
+
+	ul {
+		@include flexbox();
+
+		li {
+			font-size: 10px;
+			color: $base_color1;
+			font-weight: bold;
+			text-align: center;
+			@include flex(1, 1, auto);
+
+			a {
+				display: block;
+				height: 45px;
+				padding-top: 10px;
+			}
+
+			em {
+				display: block;
+				height: 20px;
+				margin-bottom: 4px;
+				font-size: 20px;
+
+				&.icon-bottom_menu {
+					font-size: 40px;
+					line-height: 20px;
+				}
+			}
+			&.active {
+				a {
+					color: $point_color1;
+				}
+			}
+		}
+	}
+}

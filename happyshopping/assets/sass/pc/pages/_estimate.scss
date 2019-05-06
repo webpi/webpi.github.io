@@ -1,0 +1,662 @@
+@charset "utf-8";
+
+.estimate-body {
+	padding-bottom: 100px;
+	line-height: 1;
+	@include default_width;
+
+	.estimate-body_top {
+		position: relative;
+		height: 50px;
+		padding-top: 40px;
+		@include clear;
+
+		.tit-h2 {
+			float: left;
+			font-size: 30px;
+			color: #000;
+		}
+	}
+
+	.estimate-body_menu {
+		font-size: 0;
+
+		[class^="btn-estimate-body_"] {
+			font-size: 20px;
+			font-weight: bold;
+			@include btn(50%, 60px, 2px solid #d1d0d5, $base_color2, #f4f4f4, null, 56px);
+			@include box-sizing();
+
+			&.active {
+				border-bottom: 0;
+				background: #fff;
+			}
+
+			i:before {
+				position: relative;
+				top: 3px;
+				font-size: 24px;
+			}
+		}
+
+		.btn-estimate-body_nor {
+			border-right-width: 0;
+			border-bottom-color: #0f4f9f;
+
+			&.active {
+				border-color: #9933cc;
+				border-right-width: 2px;
+				color: #9933cc;
+			}
+		}
+
+		.btn-estimate-body_card {
+			border-left-width: 0;
+			border-bottom-color: #9933cc;
+
+			&.active {
+				border-color: #0f4f9f;
+				border-left-width: 2px;
+				color: #0f4f9f;
+			}
+		}
+	}
+
+	.estimate-body_minishop {
+		margin-top: 46px;
+
+		.estimate-body_minishop_nor {
+			border-top: 2px solid $base_color1;
+			@include clear;
+		}
+
+		.estimate_compare {
+			float: left;
+			width: 720px;
+			border-right: 1px solid #747475;
+
+			.estimate_compare_list {
+				.estimate_compare_list_top {
+					border-bottom: 1px solid $base_color1;
+					@include clear;
+
+					span {
+						display: block;
+						float: left;
+						height: 90px;
+						font-weight: bold;
+						line-height: 90px;
+						text-align: center;
+
+						&.tit1 {
+							width: 120px;
+						}
+
+						&.tit2 {
+							width: calc(100% - 120px - 77px - 140px);
+						}
+
+						&.tit3 {
+							width: 77px;
+						}
+
+						&.tit4 {
+							width: 140px;
+						}
+					}
+				}
+
+				.estimate_compare_list_body {
+					li {
+						height: 50px;
+						border-bottom: 1px solid #e8e7ea;
+						@include clear;
+
+						.category {
+							float: left;
+							width: 120px;
+							height: 49px;
+							font-size: 14px;
+							color: $point_color1;
+							font-weight: bold;
+							letter-spacing: 0;
+							line-height: 49px;
+							text-align: center;
+							@include truncate();
+						}
+
+						.productname {
+							float: left;
+							width: calc(100% - 120px - 77px - 140px);
+							height: 50px;
+							padding: 16px 0;
+							font-size: 0;
+							text-align: left;
+							line-height: 30px;
+							@include clear;
+							@include box-sizing();
+
+							[class^="mark-"] {
+								float: left;
+								margin-right: 3px;
+							}
+
+							.name {
+								display: block;
+								height: 18px;
+								font-size: 14px;
+								line-height: 18px;
+								@include truncate();
+							}
+						}
+
+						.cnt-change {
+							float: left;
+							width: 77px;
+							height: 30px;
+							padding: 10px 0;
+
+							.cnt-change_number {
+								margin: 0 auto;
+							}
+						}
+
+						.compare_price {
+							float: left;
+							display: block;
+							width: 90px;
+							height: 50px;
+							font-size: 14px;
+							color: $base_color2;
+							letter-spacing: 0;
+							text-align: right;
+							line-height: 50px;
+
+							span {
+								color: #f34522;
+							}
+						}
+
+						.del {
+							float: left;
+							width: 50px;
+							height: 30px;
+							padding: 10px 0;
+							text-align: center;
+
+							.btn-compare-del {
+								@include btn(30px, 30px, 1px solid #e5e5e5, null, #fff);
+
+								img {
+									vertical-align: 0;
+								}
+
+								&:hover {
+									background: #f2f2f2;
+								}
+							}
+						}
+
+						&:last-child {
+							border-bottom: 0;
+						}
+					}
+				}
+			}
+
+			.policy {
+				padding-right: 10px;
+				text-align: right
+			}
+
+			.total_price {
+				padding-right: 10px;
+				font-size: 18px;
+				text-align: right;
+				line-height: 93px;
+
+				span {
+					margin-left: 15px;
+					font-size: 28px;
+					color: $point_color2;
+					letter-spacing: 0;
+				}
+			}
+		}
+		.policy {
+			border-top: 2px solid $point_color1;
+			padding: 15px 0;
+
+			li {
+				height: 20px;
+				font-size: 11px;
+				color: $base_color2;
+				line-height: 20px;
+
+				span {
+					color: #ff0000;
+					letter-spacing: 0
+				}
+
+				.btn_delivery_info {
+					@include btn(null, 20px, 0, $base_color2, transparent);
+					vertical-align: top;
+				}
+
+				.btn_free-delivery {
+					font-size: 11px;
+					@include btn(48px, 20px, 1px solid #ff6600, #ff6600, #fff);
+					vertical-align: top;
+				}
+			}
+		}
+
+		.total_price {
+			height: 93px;
+			border-top: 2px solid $point_color1;
+			border-bottom: 2px solid $point_color1;
+			background: #ecf3fd;
+		}
+
+		.estimate_minishop {
+			float: right;
+			width: calc(100% - 721px);
+
+			.estimate_minishop_seller_list {
+				@include clear;
+			}
+
+			.estimate_minishop_seller {
+				border-left: 1px solid #747475;
+				.tit-h4 {
+					position: relative;
+					height: 34px;
+					font-size: 14px;
+					color: #fff;
+					line-height: 34px;
+					text-align: center;
+				}
+
+				&:first-child {
+					border-left: 0;
+				}
+
+				&.powerseller {
+					float: left;
+					width: 85px;
+
+					.tit-h4 {
+						background: #9162d0;
+
+						&:after {
+							content: "";
+							position: absolute;
+							top: -38px;
+							left: -5px;
+							width: 48px;
+							height: 51px;
+							background: url('//img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -511px -155px;
+						}
+					}
+
+					.sellername {
+						color: #9162d0;
+					}
+
+					.total_price {
+						color: #9162d0;
+
+						.btn-buy {
+							background: #9162d0;
+						}
+					}
+				}
+				&.newseller {
+					float: left;
+					width: 85px;
+
+					.tit-h4 {
+						background: #f2745f;
+
+						&:after {
+							content: "";
+							position: absolute;
+							top: -38px;
+							left: -5px;
+							width: 48px;
+							height: 51px;
+							background: url('//img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -606px -155px;
+						}
+					}
+
+					.sellername {
+						color: #f2745f;
+					}
+
+					.total_price {
+						color: #f2745f;
+
+						.btn-buy {
+							background: #f2745f;
+						}
+					}
+				}
+
+				.estimate_minishop_seller_head {
+					height: 56px;
+					border-bottom: 1px solid $base_color1;
+					font-size: 0;
+					text-align: center;
+
+					.sellername {
+						display: block;
+						height: 29px;
+						padding: 10px 3px 0;
+						font-size: 14px;
+						@include box-sizing;
+						@include truncate(100%);
+					}
+
+					a {
+						display: inline-block;
+						font-size: 11px;
+						@include btn(38px, 20px, 1px solid #d3d3d3, $base_color2, #fff, center, 18px);
+						
+						&.btn-minishop {
+							margin-right: 2px;
+						}
+					}
+				}
+
+				.estimate_minishop_seller_body {
+					li {
+						position: relative;
+						height: 50px;
+						padding-right: 10px;
+						border-bottom: 1px solid #e8e7ea;
+						font-weight: bold;
+						line-height: 48px;
+						text-align: right;
+						letter-spacing: 0;
+
+						.soldout {
+							position: absolute;
+							left: 0;
+							top: 0;
+							display: block;
+							width: 100%;
+							height: 100%;
+							font-size: 13px;
+							color: #fff;
+							background: rgba(0, 0, 0, 0.5);
+							text-align: center;
+						}
+
+						&.hotdeal {
+							background: #fcebfe;
+						}
+
+						&:last-child {
+							border-bottom: 0;
+						}
+					}
+				}
+
+				.policy {
+					text-align: center;
+				}
+
+				.total_price {
+					height: 73px;
+					padding-top: 20px;
+					text-align: center;
+
+					strong {
+						display: block;
+						margin-bottom: 10px;
+						font-size: 14px;
+						letter-spacing: 0;
+					}
+
+					.btn-buy {
+						font-size: 14px;
+						font-weight: bold;
+						@include btn (78px, 32px, 0, #fff);
+					}
+				}
+
+				&.greatseller {
+					overflow: hidden;
+
+					.tit-h4 {
+						background: #4576d1;
+					}
+
+					.estimate_minishop_greatseller_list {
+						overflow: hidden;
+						position: relative;
+
+						.scroll {
+							@include clear;
+						}
+
+						.btn_scroll_next,
+						.btn_scroll_first {
+							position: absolute;
+							top: 50%;
+							right: 10px;
+							opacity: 0.8;
+							margin-top: -22px;
+							font-size: 32px;
+							@include btn(null, null, 0, $point_color1, transparent);
+						}
+
+						.estimate_minishop_greatseller_cell {
+							float: left;
+							width: 85px;
+							border-right: 1px solid #747475;
+						}
+
+						.estimate_minishop_greatseller_empty {
+							position: relative;
+							float: left;
+							width: 85px;
+							border-right: 1px solid #747475;
+
+							.estimate_minishop_seller_head {
+								border-bottom-color: transparent;
+							}
+
+							.estimate_minishop_seller_body {
+								li {
+									border-bottom-color: transparent;
+								}
+							}
+
+							.policy {
+								border-top-color: transparent;
+							}
+
+							.total_price {
+								border-top-color: transparent;
+								background: #fff;
+							}
+
+							.btn_scroll_first {
+								left: 10px;
+								right: auto;
+							}
+						}
+					}
+
+					.total_price {
+						color: #4576d1;
+						
+						.lowest {
+							color: #ff0000;
+						}
+
+						.btn-buy {
+							background: #4576d1;
+						}
+					}
+				}
+			}
+
+			.estimate_minishop_paging {
+				margin-top: 15px;
+				@include clear;
+
+				.box {
+					float: right;
+					@include clear;
+				}
+
+				.estimate_minishop_paging_cnt {
+					position: relative;
+					float: left;
+					width: 251px;
+					height: 40px;
+					background: #eeedef;
+
+					.paging_cnt {
+						display: block;
+						font-size: 18px;
+						line-height: 40px;
+						text-align: center;
+						letter-spacing: 0;
+						font-weight: bold;
+						strong {
+							color: $point_color1;
+						}
+					}
+
+					.btn-prev,
+					.btn-next {
+						position: absolute;
+						top: 0;
+						font-size: 22px;
+						line-height: 32px;
+						@include btn(40px, 40px, 4px solid $point_color1, $point_color1, #fff);
+					}
+
+					.btn-prev {
+						left: 0;
+					}
+
+					.btn-next {
+						right: 0;
+					}
+				}
+
+				.btn-more-seller {
+					font-size: 28px;
+					@include btn(40px, 40px,0, $point_color1, #fff);
+				}
+			}
+		}
+
+		&.wide {
+			overflow-x: hidden;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			min-width: 950px;
+			width: 100%;
+			padding-top: 100px;
+			margin-top: 0;
+			background: #fff;
+			z-index: 10;
+			@include box-sizing;
+
+			&:before {
+				content: "";
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: #fff;
+			}
+
+			[class^="estimate-body_minishop_"] {
+				position: relative;
+				z-index: 2;
+			}
+
+			.estimate_minishop_greatseller_list {
+				overflow-x: scroll !important;
+
+				.scroll {
+					padding-bottom: 34px;
+				}
+			}
+
+			.estimate_minishop_paging {
+				display: none;
+			}
+
+			.btn-more-seller-clse {
+				display: block;
+			}
+
+
+		}
+
+		.btn-more-seller-clse {
+			position: absolute;
+			right: 30px;
+			top: 30px;
+			display: none;
+			font-size: 28px;
+			@include btn(40px, 40px,0, $point_color1, #fff);
+		}
+	}
+
+	.compare_add_service {
+		margin-top: 15px;
+		border-bottom: 2px solid $base_color1;
+	}
+
+	.adv-minishop {
+		margin-top: 70px;
+	}
+
+	.seller-collection {
+		margin-top: 40px;
+	}
+
+	@include breakpoint(max-width 1209px) {
+		width: 950px;
+
+		.estimate-body_minishop {
+			.estimate_compare {
+				width: 649px;
+			}
+
+			.estimate_minishop {
+				float: left;
+				width: 300px;
+			}
+		}
+	}
+
+	.estimate-body_notfound {
+		padding-top: 70px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+
+		.btn_shopping {
+			display: block;
+			margin: 20px auto 0;
+			font-size: 16px;
+			@include btn(140px, 43px, 2px solid $point_color1, $point_color1, #fff, center, 39px);
+
+			&:hover {
+				background: #f8f8f8;
+			}
+		}
+	}
+}

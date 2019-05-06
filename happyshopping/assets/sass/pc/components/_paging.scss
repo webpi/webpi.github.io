@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.paging {
+	font-size: 0;
+	text-align: center;
+
+	a {
+		display: inline-block;
+		margin-left: 5px;
+		border: 1px solid transparent;
+		font-size: 14px;
+		color: $base_color2;
+		font-weight: bold;
+		vertical-align: middle;
+		letter-spacing: 0;
+		text-align: center;
+		line-height: 26px;
+		@include size(28px);
+		@include box-sizing();
+
+		&.active {
+			border-color: $point_color1;
+			color: $point_color1;
+		}
+
+		&:hover {
+			border-color: $point_color1;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	[class^="btn_paging_"] {
+		width: auto;
+		border-color: #d3d3d3;
+		padding: 0 10px;
+		font-size: 13px;
+		font-weight: normal;
+		background: #f7f7f7;
+	}
+}

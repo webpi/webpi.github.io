@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+.system-body {
+    line-height: 1;
+    @include default_width;
+
+    // 404
+    .system-body_04 {
+        padding: 104px 0 140px;
+
+        .tit-h2 {
+            font-size: 60px;
+            color: $point_color1;
+            text-align: center;
+        }
+
+        .dsc {
+            margin-top: 12px;
+            font-size: 22px;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .time {
+            width: 840px;
+            height: 100px;
+            margin: 28px auto 0;
+            padding-top: 24px;
+            font-size: 40px;
+            color: #fff;
+            background: url('//img.happyshopping.kr/img_static/img_pres/_v3/bg_system04_time.png') no-repeat 0 0;
+            text-align: center;
+            line-height: 100px;
+            letter-spacing: 0;
+
+            span {
+                font-size: 20px;
+            }
+
+        }
+
+        .system-body_04_bot {
+            width: 840px;
+            margin: 50px auto 0;
+            @include clear;
+
+            .system-body_04_bot_q {
+                float: left;
+                margin-right: 68px;
+                padding: 15px 0 18px;
+
+                .layer-pop-ars {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    margin: -174px 0 0 -467px;
+                }
+
+            }
+
+            .system-body_04_bot_sns {
+                overflow: hidden;
+                padding: 50px 0 50px 48px;
+                border-left: 1px solid $base_color3;
+                @include clear;
+
+                ul {
+                    overflow: hidden;
+                    float: left;
+                    @include clear;
+                }
+
+                li {
+                    float: left;
+                    margin-left: 5px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                }
+
+                > ul {
+                    margin-right: 40px;
+                }
+
+                .system-body_04_bot_sns_happytree {
+                    overflow: hidden;
+                    @include clear;
+
+                    .tit-h3 {
+                        float: left;
+                        margin-right: 10px;
+                        font-size: 12px;
+                        color: $base_color2;
+                        line-height: 50px;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
+// 브라우저 체크
+.browsercheck-body {
+    overflow: hidden;
+    background: #f3f3f3;
+
+    .browsercheck-body_main {
+        position: relative;
+        height: 600px;
+        padding: 55px 40px 0;
+        @include box-sizing();
+        @include default_width;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: -119px;
+            bottom: 0;
+            width: 570px;
+            height: 318px;
+            background: url("//img.happyshopping.kr/img_static/img_pres/_v3/bg_browser_check.jpg") no-repeat 0 0;
+        }
+
+        * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .tit-h2 {
+            margin-top: 45px;
+            font-size: 26px;
+            line-height: 1.2;
+
+            span {
+                font-size: 36px;
+
+                em {
+                    color: $point_color2;
+                }
+            }
+        }
+
+        .dsc {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.4;
+
+            strong {
+                color: $point_color2;
+            }
+        }
+
+        .dsc2 {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.4;
+
+            strong {
+                color: $point_color2;
+            }
+        }
+
+        .btn_browser_check {
+            display: block;
+            margin-top: 35px;
+            font-size: 22px;
+            font-weight: bold;
+            @include btn(330px, 70px, 0, #fff, $point_color1, center, 70px);
+
+            &:hover {
+                background: $point_color1_over;
+            }
+        }
+
+        @include respond-to($small_desktop) {
+            width: 950px;
+
+            &:after {
+                right: -228px;
+            }
+        }
+    }
+}

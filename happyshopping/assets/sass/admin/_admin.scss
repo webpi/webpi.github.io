@@ -1,0 +1,565 @@
+@charset "utf-8";
+
+.container_body {
+	padding: 10px;
+
+	.location {
+		margin-bottom: 17px;
+		font-size: 0;
+
+		span {
+			font-size: 14px;
+
+			&:before {
+				display: inline-block;
+				margin: 0 5px;
+				vertical-align: middle;
+			}
+
+			&:first-child:before {
+				display: none;
+			}
+
+			a {
+				display: inline-block;
+				font-size: 12px;
+				color: $base_color2;
+				vertical-align: middle;
+			}
+
+		}
+	}
+
+	.tit-h3 {
+		height: 68px;
+		font-size: 30px;
+	}
+
+	@include respond-to($desktop) {
+		padding: 30px;
+
+		.location {
+			position: absolute;
+			right: 15px;
+			top: 66px;
+			margin-bottom: 0;
+			z-index: 16;
+		}
+	}
+
+}
+
+// 검색
+.area-search {
+	.tit-h4 {
+		height: 28px;
+		font-size: 18px;
+	}
+
+	.area-search_board {
+		.board {
+			th {
+				width: 70px;
+			}
+		}
+	}
+
+	.searchday {
+		.searchday_btn {
+			display: inline-block;
+			font-size: 0;
+			vertical-align: middle;
+
+			.btn_searchday {
+				margin-left: 5px;
+				font-size: 12px;
+				font-weight: bold;
+				@include btn(40px, 24px, 1px solid #ccc, $base_color1, #f8f8f8);
+
+				&.day7,
+				&.mon1,
+				&.mon6 {
+					display: none;
+				}
+
+				&:hover,
+				&.active {
+					border: 1px solid $base_color3;
+					background: #e8e7ea;
+				}
+
+			}
+		}
+
+		.searchday_period {
+			margin-top: 7.5px;
+			font-size: 0;
+		}
+	}
+
+	.form_button {
+		margin-top: 15px;
+		font-size: 0;
+		text-align: center;
+
+		[class^="btn_"] {
+			width: 100px;
+		}
+	}
+
+	@include respond-to($desktop) {
+		.area-search_board {
+			.board {
+				th {
+					width: 200px;
+				}
+			}
+		}
+
+		.searchday {
+			@include flexbox();
+			@include align-items(center);
+
+			.searchday_btn {
+				display: block;
+				@include order(1);
+
+				.btn_searchday {
+					&.day7,
+					&.mon1,
+					&.mon6 {
+						display: inline-block;
+					}
+				}
+			}
+
+			.searchday_period {
+				margin: 0 0 0 5px;
+				font-size: 0;
+				@include order(0);
+			}
+		}
+	}
+
+}
+
+// 검색결과
+.area-searchresult {
+	margin-top: 45px;
+
+	.area-searchresult_top {
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ececec;
+		@include clear;
+
+		.cnt {
+			float: left;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 30px;
+
+			.number {
+				color: $point_color2;
+				letter-spacing: 0;
+			}
+
+			.bar {
+				color: #b3b3b3;
+			}
+
+		}
+
+		.pager {
+			float: right;
+			font-size: 12px;
+
+			.istyle {
+				width: 45px;
+				font-size: 12px;
+			}
+
+			.btn_go {
+				font-size: 12px;
+				@include btn(34px, 30px, 0, #fff, #b5b5b5);
+			}
+
+		}
+
+	}
+
+	.area-searchresult_list {
+		.area-searchresult_list_btn {
+			margin: 10px 0;
+			font-size: 0;
+			@include clear;
+
+			.btn_all_del,
+			.btn_slt_del {
+				float: left;
+				margin-right: 5px;
+			}
+
+			.btn_exel_dn {
+				float: right;
+			}
+
+		}
+
+		.area-searchresult_list_body {
+			position: relative;
+			overflow: hidden;
+			border: 1px solid #ccc;
+
+			.box-board {
+				overflow-x: auto;
+				overflow-y: hidden;
+
+				.board_top {
+					.moretd > .box-td {
+						width: 17px;
+						min-width: auto;
+					}
+
+					.btn_detail {
+						@include btn(null, null, 0, $base_color1, transparent);
+
+						&:before {
+							font-size: 14px;
+						}
+
+					}
+
+				}
+
+				.box-board {
+					background: #f8f8f8;
+
+					th,
+					td {
+						border: 1px solid #ececec;
+					}
+
+					th {
+						border-left: 0;
+						line-height: 17px;
+
+						span {
+							display: block;
+							padding: 0 10px;
+							text-align: left;
+						}
+
+					}
+
+					td {
+						border-right: 0;
+					}
+
+					tr:first-child th,
+					tr:first-child td {
+						border-top: 0;
+					}
+
+				}
+
+			}
+
+			.board_button {
+				padding: 15px 0 30px;
+				font-size: 0;
+				text-align: center;
+				background: #f8f8f8;
+
+				a {
+					display: inline-block;
+					margin-left: 5px;
+					font-size: 14px;
+					font-weight: bold;
+					line-height: 38px;
+					@include btn(100px, 40px, 1px solid $base_color3, $base_color1, #fff);
+
+					&:first-child {
+						margin-left: 0;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+// 쿠폰 발행
+.area-coupon {
+	margin-top: 10px;
+	padding-bottom: 50px; 
+
+	.tit-h4 {
+		height: 28px;
+		font-size: 18px;
+	}
+
+	.area-coupon_load {
+		margin-bottom: 20px;
+
+		.sstyle {
+			width: 100%;
+		}
+	}
+
+	.area-coupon_board {
+		.board {
+			th {
+				width: 70px;
+			}
+		}
+	}
+
+	.box-search {
+		-webkit-overflow-scrolling : touch;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding-bottom: 70px;
+		background: #fff;
+		z-index: 90;
+		@include box-sizing();
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.item_slt {
+			margin: 0 25px;
+			padding: 20px;
+			background: #f8f8f8;
+		}
+
+		.item_button {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+
+			.btn_box-search_apply {
+				font-size: 16px;
+				font-weight: bold;
+				@include btn(100%, 50px, 0, #fff, $point_color1);
+			}
+		}
+
+		.item_search_box_submit {
+			display: none;
+		}
+
+		.item_search_box_bot {
+			margin-top: 10px;
+			@include clear;
+
+			.btn_item_search_box_prev,
+			.btn_item_search_box_next {
+				float: left;
+				width: calc((100% - 162px) / 2);
+				height: 38px;
+				margin-right: 6px;
+
+				[class^="icon-"] {
+					position: relative;
+					top: -1px;
+					margin: 0 4px;
+					font-size: 25px;
+					vertical-align: -5px;
+				}
+			}
+
+			.btn_item_search_box_submit {
+				float: right;
+				width: 150px;
+				height: 38px;
+			}
+		}
+
+		.btn_box-search_clse {
+			position: absolute;
+			right: 6px;
+			top: 6px;
+			font-size: 24px;
+			@include btn(30px, 30px, 0, $base_color1, transparent);
+		}
+	}
+
+	.item_search {
+		padding: 25px;
+		@include clear;
+
+		.item_search_box {
+
+		}
+	}
+
+	.publish_corp {
+		@include clear;
+
+		li {
+			float: left;
+			margin-right: 20px;
+			font-size: 0;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.coupon_limit {
+		li {
+			padding: 7px 10px;
+			border-top: 1px solid #ececec;
+			font-size: 0;
+
+			.t {
+				display: block;
+				margin-right: 10px;
+			}
+
+			.iradio {
+				vertical-align: middle;
+			}
+
+			.icnt {
+				vertical-align: middle;
+			}
+
+			.info_noti {
+				display: block;
+				margin-top: 30px;
+			}
+
+			&:first-child {
+				border-top: 0;
+			}
+		}
+	}
+
+	.form_button {
+		position: fixed;
+		left:0;
+		bottom: 0;
+		width: 100%;
+		font-size: 0;
+		z-index: 30;
+
+		.btn_border {
+			border-left: 0;
+			border-right: 0;
+			border-color: $base_color3 #fff #fff;
+		}
+
+	    [class^=btn_] {
+	    	width: 50%;
+	    	height: 50px;
+	    	margin: 0;
+	    }
+	}
+
+	@include respond-to($desktop) {
+		padding-bottom: 0; 
+
+		.area-coupon_board {
+			.board {
+				th {
+					width: 200px;
+				}
+			}
+		}
+
+		.box-search {
+			overflow: visible;
+			position: static;
+			left: auto;
+			top: auto;
+			width: auto;
+			height: auto;
+			padding-bottom: 0;
+
+			.item_search_box_bot {
+				display: none;
+			}
+
+			.item_slt {
+				display: none;
+			}
+
+			.item_search_box_submit {
+				display: block;
+			}
+
+			.item_button {
+				display: none;
+			}
+
+			.btn_box-search_clse {
+				display: none;
+			}
+		}
+
+		.item_search {
+			margin-bottom: -50px;
+			border-top: 1px solid #ececec;
+			@include clear;
+			
+			.item_search_box {
+				float: left;
+				width: 298px;
+				margin: 0 50px 50px 0;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.coupon_limit {
+			li {
+				padding: 7px 20px;
+
+				.t {
+					display: inline-block;
+				}
+
+				.info_noti {
+					display: inline-block;
+					margin: 0 0 0 20px;
+					vertical-align: middle;
+				}
+			}
+		}
+
+		.form_button {
+			position: static;
+			margin-top: 15px;
+		    font-size: 0;
+		    text-align: center;
+
+		    .btn_border {
+		    	border: 1px solid $base_color3;
+		    }
+
+		    [class^=btn_] {
+		    	width: 100px;
+		    	height: 40px;
+		    }
+
+		    [class^=btn_] + [class^=btn_] {
+		    	margin-left: 5px;
+		    }
+		}
+	}
+}

@@ -1,0 +1,1531 @@
+@charset "utf-8";
+
+.order-body {
+	padding-bottom: 100px;
+	line-height: 1;
+	@include default_width;
+
+	.order-body_top {
+		position: relative;
+		height: 50px;
+		padding-top: 40px;
+		border-bottom: 2px solid $point_color1;
+
+		.tit-h2 {
+			font-size: 30px;
+			color: #000;
+		}
+
+		ol {
+			position: absolute;
+			top: 47px;
+			right: 0;
+			@include clear;
+
+			li {
+				position: relative;
+				float: left;
+				margin-left: 10px;
+				font-size: 14px;
+				color: #ccc;
+				font-weight: bold;
+				@include loadIcon($icon-chevron-right);
+
+				&:before {
+					margin-right: 10px;
+				}
+
+				&:first-child {
+					margin-left: 0;
+
+					&:before {
+						display: none;
+					}
+				}
+
+				span {
+					font-size: 24px;
+				}
+
+				strong {
+					color: #000;
+				}
+			}
+		}
+	}
+
+	.order-body_row {
+		position: relative;
+		margin-top: 60px;
+
+		.tit-h3 {
+			min-height: 37px;
+			font-size: 20px;
+			color: $base_color1;
+		}
+
+		.box-board {
+			padding-top: 0.5px;
+		}
+
+		.igroup {
+			padding: 5px 0;
+		}
+
+		.box-board_body {
+			float: left;
+			width: 949px;
+			border-right: 1px solid #e8e7ea;
+			@include breakpoint(max-width 1209px) {
+				float: none;
+				width: auto;
+				border-right: 0;
+			}
+		}
+
+		.btn-phone-change {
+			font-weight: bold;
+			@include btn(78px, 34px, 0, #fff, $base_color3);
+		}
+
+		.responsive {
+			border-bottom: 1px solid #e8e7ea;
+			@include clear;
+
+			.box-board_body {
+				margin-bottom: -1px;
+			}
+		}
+
+		.certi-number {
+			.btn-certi-cncl,
+			.btn-certi-number {
+				font-weight: bold;
+				@include btn(78px, 34px, 0, #fff, $base_color3);
+			}
+
+			.certi-number_time em {
+				color: $point_color2;
+			}
+		}
+
+		.certi-number_time,
+		.phone-number_noti {
+			display: inline-block;
+			margin-left: 20px;
+			color: $base_color3;
+			vertical-align: middle;
+		}
+	}
+
+	.order-body_row_head {
+		@include clear;
+
+		.tit-h3 {
+			float: left;
+		}
+
+		.noti-required {
+			float: left;
+			margin: 6px 0 0 20px;
+			padding-left: 9px;
+			color: $base_color3;
+			background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/bul_dot_red.png') no-repeat 0 50%;
+		}
+	}
+
+	.order-body_noti {
+		margin-top: 50px;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		em {
+			color: $point_color1;
+		}
+		span {
+			color: $point_color2;
+		}
+	}
+
+	.delivery-noti {
+		position: absolute;
+		top: 6px;
+		right: 0;
+		color: $base_color3;
+	}
+
+	.base_color1 {
+		color: $base_color1;
+	}
+
+	.base_color3 {
+		color: $base_color3;
+	}
+
+	.point_color {
+		color: $point_color2;
+	}
+
+	.delivery {
+		position: relative;
+
+		.delivery-recent {
+			position: absolute;
+			left: 76px;
+			top: 35px;
+			padding: 10px 0;
+			border: 1px solid #000;
+			background: #fff;
+			z-index: 10;
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 36px;
+				top: -7px;
+				width: 13px;
+				height: 7px;
+				background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/arw_delivery_recent.gif') no-repeat 0 0;
+			}
+
+			li {
+				position: relative;
+				height: 30px;
+				padding: 0 65px 0 20px;
+				line-height: 30px;
+				cursor: pointer;
+				white-space: nowrap;
+				box-sizing: border-box;
+
+				.btn_del {
+					position: absolute;
+					right: 20px;
+					top: 50%;
+					margin-top: -15px;
+					@include btn(30px, 30px, 0, $base_color3, transparent);
+				}
+
+				&:hover {
+					border-top: 1px solid #e8e7ea;
+					border-bottom: 1px solid #e8e7ea;
+					background: #fafafc;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+
+	.delivery-name {
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+
+	.delivery-logo {
+		vertical-align: middle;
+	}
+
+	.safe-number {
+		display: inline-block;
+		margin-left: 20px;
+		color: $base_color3;
+		vertical-align: middle;
+	}
+
+	.btn-question-tip {
+		@include size(18px);
+		border: 0;
+		background: none;
+		vertical-align: middle;
+	}
+
+	.zipcode {
+		margin-bottom: 10px;
+		font-size: 0;
+
+		* {
+			font-size: 12px;
+		}
+
+		.btn-zipcode {
+			background: $base_color3;
+			@include btn(78px, 34px, 0, #fff, $base_color3, center, 34px);
+		}
+
+		.defalut-delivery {
+			margin-left: 20px;
+		}
+	}
+
+	.zipcode + .istyle {
+		margin-right: 10px;
+	}
+
+	.memo-slt {
+		min-width: 306px;
+		font-weight: normal;
+	}
+
+	.direct-memo {
+		position: relative;
+		margin-top: 10px;
+		padding-right: 60px;
+
+		.itext {
+			height: 76px;
+		}
+
+		.word-cnt {
+			position: absolute;
+			bottom: 0;
+			right: 18px;
+
+			em {
+				color: $base_color1;
+			}
+		}
+	}
+
+	.paymentdate {
+		@include clear;
+
+		.t {
+			float: left;
+			width: 90px;
+			font-weight: bold;
+			line-height: 34px;
+		}
+
+		.igroup {
+			float: left;
+		}
+	}
+
+	.quickservice {
+		margin-top: 10px;
+		font-size: 0;
+
+		* {
+			font-size: 12px;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		em,
+		label,
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		label {
+			width: 150px; //width: 90px;
+			font-weight: bold;
+		}
+
+		span {
+			margin-left: 5px;
+		}
+
+		em {
+			margin-right: 10px;
+		}
+
+		.sstyle {
+			width: 80px;
+			min-width: 80px;
+			margin-right: -1px;
+		}
+	}
+
+	.service-noti {
+		margin-top: 15px;
+		font-size: 11px;
+		color: $base_color3;
+		line-height: 20px;
+	}
+
+	.btn-office-find {
+		font-weight: bold;
+		@include btn(96px, 34px, 0, #fff, $base_color3);
+	}
+
+	.officefind-noti {
+		margin-top: 5px;
+		color: $base_color3;
+		line-height: 20px;
+	}
+
+	.agent-info_slt {
+		padding-top: 5px;
+
+		.agent-info_slt_chk {
+			margin-top: 10px;
+			padding: 10px 20px;
+			border: 2px solid #ccc;
+
+			ul {
+				margin-top: 7px;
+
+				li {
+					margin-top: 10px;
+					font-size: 0;
+
+					* {
+						font-size: 12px;
+					}
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					label {
+						display: inline-block;
+						width: 79px;
+						padding-left: 10px;
+						background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/bul_dot_333.png') no-repeat 0 49%;
+						vertical-align: middle;
+					}
+				}
+			}
+
+			.alert-msg {
+				margin-left: 89px;
+			}
+		}
+	}
+
+	.delivery-guide {
+		position: relative;
+		float: right;
+		width: 220px;
+		padding: 20px 0 0 20px;
+
+		.tit-h4 {
+			height: 20px;
+		}
+
+		.delivery-guide_step {
+			margin-right: 20px;
+
+			ol > li {
+				position: relative;
+				margin-top: 7px;
+				padding: 0 9px;
+				border: 1px solid #b3b3b3;
+
+				.box {
+					overflow: hidden;
+					height: 32px;
+				}
+
+				.tit-h5 {
+					position: relative;
+					height: 32px;
+					border-bottom: 1px solid #e8e7ea;
+					font-size: 12px;
+					color: $base_color3;
+					line-height: 32px;
+					cursor: pointer;
+
+					.ic {
+						position: absolute;
+						right: 4px;
+						top: 2px;
+						@include loadIcon($icon-caret-down,16px);
+					}
+
+					em {
+						display: inline-block;
+						width: 18px;
+						height: 18px;
+						margin: -2px 3px 0 0;
+						color: #fff;
+						font-weight: bold;
+						text-align: center;
+						line-height: 18px;
+						border-radius: 9px;
+						background: #c6c6c6;
+						vertical-align: middle;
+					}
+				}
+
+				.step {
+					padding: 8px 0;
+					font-size: 11px;
+					line-height: 18px;
+
+					li {
+						color: $base_color3;
+					}
+
+					.gap {
+						margin-left: 11px;
+					}
+				}
+
+				&:after {
+					content: "";
+					position: absolute;
+					left: 50%;
+					bottom: -6px;
+					width: 9px;
+					height: 6px;
+					margin-left: -4.5px;
+					background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/arw_delivery_guide.gif') no-repeat 0 0;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&:last-child:after {
+					display: none;
+				}
+
+				&.active {
+					.box {
+						height: auto;
+					}
+
+					.tit-h5 {
+						color: $base_color1;
+
+						em {
+							background: $base_color2;
+						}
+
+						.ic {
+							@include loadIcon($icon-caret-up);
+						}
+					}
+				}
+			}
+
+			.btn-pop-service {
+				position: absolute;
+				right: 20px;
+				top: 19px;
+				letter-spacing: 0;
+				@include btn(null, null, 0, $point_color1, transparent);
+
+				[class^='icon-'] {
+					margin: 0 4px;
+				}
+			}
+		}
+
+		.delivery-guide_guide {
+			margin-top: 30px;
+
+			li {
+				margin-top: 8px;
+				line-height: 18px;
+				font-size: 11px;
+				color: $base_color3;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+		@include breakpoint(max-width 1209px) {
+			display: none;
+		}
+	}
+
+	.coupon_status {
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		vertical-align: middle;
+
+		.bar {
+			position: relative;
+			top: -1px;
+			padding: 0 3px;
+		}
+
+		strong {
+			color: $point_color2;
+			letter-spacing: 0;
+		}
+	}
+
+	.btn-coupon,
+	.btn-get-coupons {
+		font-weight: bold;
+		@include btn(87px, 34px, 1px solid $point_color1, $point_color1, #fff);
+		
+		&.on {
+			border: 0;
+			color: #fff;
+			background: $point_color1;
+
+			&:hover {
+				background: $point_color1_over;
+			}
+		}
+
+		&:hover {
+			background: #f8f8f8;
+		}
+
+		&:disabled {
+			border-color: #ccc;
+			color: $base_color3;
+			background: #f2f2f2;
+			cursor: default;
+		}
+	}
+
+	.btn-get-coupons {
+		margin-left: 10px;
+	}
+
+	.discounted {
+		font-size: 14px;
+		color: $point_color2;
+		letter-spacing: 0;
+	}
+
+	.order-items {
+		padding: 20px 40px 20px 10px;
+
+		.order-items_table {
+			display: table;
+			width: 100%;
+			min-height: 100px;
+			text-align: left;
+
+			.order-items_row {
+				display: table-row;
+
+				.order-items_cell,
+				.order-items_item {
+					display: table-cell;
+				}
+
+				.order-items_cell {
+					width: 100px;
+					padding-right: 20px;
+				}
+			}
+		}
+
+		.order-items_photo {
+			overflow: hidden;
+			display: block;
+			@include size(100px);
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.order-items_item {
+			position: relative;
+			vertical-align: middle;
+
+			.name {
+				display: inline-block;
+				margin-right: 60px;
+				font-size: 14px;
+				color: #000;
+				vertical-align: middle;
+				line-height: 18px;
+			}
+
+			.order-items_item_cnt {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -8px;
+				font-weight: bold;
+				line-height: 16px;
+				letter-spacing: 0;
+			}
+
+			.order-items_item_lst {
+				margin-top: 5px;
+
+				li {
+					position: relative;
+					height: 28px;
+					margin-top: 5px;
+					padding: 0 60px 0 10px;
+					border: 1px solid #e8e7ea;
+					color: $base_color2;
+					background: #fafafc;
+					line-height: 28px;
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					.cnt {
+						position: absolute;
+						top: 0;
+						right: 20px;
+						font-size: 11px;
+						letter-spacing: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.order-item-amount {
+		display: block;
+		padding-right: 40px;
+		text-align: right;
+		letter-spacing: 0;
+
+		strong {
+			font-size: 16px;
+		}
+	}
+
+	.delivery-cost {
+		display: block;
+		margin-bottom: 10px;
+		text-align: center;
+
+		strong {
+			font-size: 16px;
+			letter-spacing: 0;
+		}
+	}
+
+	.free-delivery {
+		display: inline-block;
+		width: 90px;
+		height: 28px;
+		margin-bottom: 10px;
+		border: 1px solid #ff6600;
+		font-weight: bold;
+		line-height: 28px;
+		text-align: center;
+	}
+
+	.delivery-date strong {
+		color: #ff6600;
+		letter-spacing: 0;
+	}
+
+	.order-body_row_head {
+		.btn-product-change {
+			display: inline-block;
+			@include btn(110px, 28px, 1px solid #ccc, #333, #fff, center, 26px);
+
+			&:hover {
+				background: #f6f6f6;
+			}
+		}
+
+		.order-body_row_head_span {
+			float: left;
+			margin: -4px 0 0 20px;
+
+			.order-body_row_head_span_noti {
+				margin-left: 9px;
+				color: $base_color3;
+			}
+		}
+	}
+
+	.ico-plus:before {
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		margin-right: 9px;
+		background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/ico_grayplus.png') no-repeat 0 0;
+		vertical-align: middle;
+	}
+	.ico-minus:before {
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		margin-right: 9px;
+		background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/ico_redminus.png') no-repeat 0 0;
+		vertical-align: middle;
+	}
+
+	.payment-amount {
+		display: block;
+		font-size: 14px;
+		letter-spacing: 0;
+		min-height: 16px;
+
+		span {
+			font-size: 20px;
+		}
+
+		.earn_point {
+			font-size: 12px;
+			font-weight: normal;
+
+			em {
+				color: $base-color1;
+			}
+		}
+
+		&.ico-minus:before {
+			position: relative;
+			top: -2px;
+		}
+	}
+
+	.point-input {
+		display: inline-block;
+		width: 184px;
+		font-size: 14px;
+		font-weight: bold;
+		vertical-align: middle;
+
+		.istyle {
+			font-size: 20px;
+			text-align: right;
+		}
+	}
+
+	.point-info {
+		display: inline-block;
+		vertical-align: middle;
+
+		.btn-point-alluse {
+			margin-right: 9px;
+			font-weight: bold;
+			@include btn(89px, 34px, 1px solid #ccc, $base_color3, #f2f2f2);
+			cursor: default;
+
+			&.on {
+				border-color: $point_color1;
+				color: $point_color1;
+				background: #fff;
+				cursor: pointer;
+
+				&:hover {
+					background: #f6f6f6;
+				}
+			}
+		}
+
+		strong {
+			letter-spacing: 0;
+
+			em {
+				color: $point_color2;
+			}
+		}
+	}
+
+	.payment-method {
+		.payment-method_detail {
+			position: relative;
+			width: 725px;
+			margin-top: 10px;
+			padding: 10px 10px 10px 20px;
+			border: 2px solid #ccc;
+
+			li {
+				font-size: 0;
+
+				* {
+					font-size: 12px;
+				}
+			}
+
+			.t {
+				display: inline-block;
+				padding-left: 10px;
+				background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/bul_dot_333.png') no-repeat 0 49%;
+				vertical-align: middle;
+			}
+
+			.creditcard {
+				li {
+					margin-top: 5px;
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					.t {
+						width: 55px;
+					}
+				}
+
+				.sstyle {
+					width: 200px;
+				}
+
+				.inst-dsc {
+					display: inline-block;
+					margin-left: 10px;
+					color: $base_color3;
+					letter-spacing: 0;
+					vertical-align: middle;
+				}
+
+				.btn-inst-benefit {
+					color: $base_color1;
+					font-weight: bold;
+					letter-spacing: 0;
+
+					[class^='icon-'] {
+						margin-left: 4px;
+						font-size: 9px;
+					}
+				}
+			}
+
+			.nbankbook {
+				li {
+					padding: 10px 0;
+					border-top: 1px solid #e8e7ea;
+
+					&:first-child {
+						border-top: 0;
+					}
+
+					.t {
+						width: 102px;
+					}
+
+					.nbankbook_noti {
+						display: inline-block;
+						margin-left: 10px;
+						color: $base_color3;
+						font-weight: normal;
+						vertical-align: middle;
+
+						span {
+							color: $point_color2;
+						}
+					}
+
+					.calendar {
+						position: relative;
+						display: inline-block;
+						margin-left: 20px;
+						padding-right: 33px;
+						vertical-align: middle;
+
+						label {
+							display: inline-block;
+							margin-right: 10px;
+							vertical-align: middle;
+						}
+
+						.istyle {
+							width: 117px;
+							border-right: 0;
+						}
+
+						.btn-cal {
+							position: absolute;
+							right: 0;
+							top: 0;
+							@include btn(33px, 34px, 1px solid $base_color3, null, #e8e7ea);
+							border-left: 0;
+
+							&:before {
+								content: "";
+								display: inline-block;
+								width: 32px;
+								height: 32px;
+								background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/ico_calendar.gif') no-repeat 54% 50%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.refund-method {
+		.refund-method_default {
+			width: 715px;
+			margin-top: 10px;
+			padding: 10px 20px;
+			border: 2px solid #ccc;
+			.refund-method_default_info {
+				position: relative;
+				ul {
+					width: 320px;
+					padding: 5px 0;
+					border-right: 1px solid #ccc;
+					li {
+						padding-left: 10px;
+						line-height: 20px;
+						background: url("https://img.happyshopping.kr/img_static/img_pres/_v3/bul_dot_333.png") no-repeat 0 49%;
+					}
+				}
+				.btn_refund_reset {
+					position: absolute;
+					left: 370px;
+					top: 50%;
+					margin-top: -14px;
+					@include btn(55px, 28px, 1px solid #ccc, null, #fff);
+				}
+			}
+
+			.refund-method_default_new {
+				position: relative;
+				width: 320px;
+				border-right: 1px solid #ccc;
+				.refund-method_default_new_input {
+					font-size: 0;
+					* {
+						font-size: 12px;
+					}
+					.sstyle {
+						width: 150px;
+						margin-left: 5px;
+					}
+					.refund_number {
+						margin: 5px 0 10px;
+						font-size: 0;
+						.istyle {
+							width: 198px;
+						}
+						.btn_refund_number_cert {
+							font-weight: bold;
+							@include btn(77px, 34px, 0, #fff, $base_color3);
+						}
+					}
+				}
+				.btn_refund_cncl {
+					position: absolute;
+					left: 370px;
+					top: 50%;
+					margin-top: -14px;
+					@include btn(55px, 28px, 1px solid #ccc, null, #fff);
+				}
+			}
+		}
+
+		.refund-method_detail {
+			width: 715px;
+			margin-top: 10px;
+			padding: 10px 20px;
+			border: 2px solid #ccc;
+			font-size: 0;
+
+			* {
+				font-size: 12px;
+			}
+
+			label {
+				display: inline-block;
+				width: 82px;
+				padding-left: 10px;
+				background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/bul_dot_333.png') no-repeat 0 49%;
+				vertical-align: middle;
+			}
+
+			.sstyle {
+				min-width: 260px;
+				font-weight: normal;
+			}
+
+			.box {
+				margin-top: 10px;
+				padding-left: 92px;
+				font-size: 0;
+
+				* {
+					font-size: 12px;
+				}
+
+				.sstyle {
+					min-width: 110px;
+					margin: 0 5px;
+				}
+			}
+		}
+	}
+
+	.doc-evidence {
+		.doc-evidence_noti {
+			margin-top: 6px;
+			font-size: 11px;
+			color: $base_color3;
+			line-height: 18px;
+		}
+
+		.doc-evidence_detail {
+			width: 715px;
+			margin-top: 10px;
+			padding: 10px 20px;
+			border: 2px solid #ccc;
+			font-size: 0;
+
+			* {
+				font-size: 12px;
+			}
+
+			.doc-evidence_detail_slt {
+				margin-top: 10px;
+				font-size: 0;
+
+				* {
+					font-size: 12px;
+				}
+
+				.sstyle:first-child {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	.tooltip {
+		&.layer-safenumber {
+			&:before {
+				display: none;
+			}
+
+			ol {
+				margin-top: 7px;
+				padding: 7px 0 0 9px;
+				border-top: 1px solid $base_color2;
+
+				li:first-letter {
+					margin-left: -9px;
+				}
+			}
+		}
+
+		&.layer-happypoint {
+			&:before {
+				display: none;
+			}
+		}
+
+		&.layer-escrow {
+			&:after {
+				display: none;
+			}
+		}
+
+		&.layer-nbankbook {
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.btn-happypoint:hover ~ .layer-happypoint {
+		opacity: 1;
+		left: 44px;
+		margin-top: -13px;
+	}
+
+	.btn-safenumber-guide:hover ~ .layer-safenumber {
+		opacity: 1;
+		left: 550px;
+	}
+
+	.escrow-tooltip:hover ~ .layer-escrow {
+		opacity: 1;
+		left: -32px;
+		bottom: 31px;
+	}
+
+	.nbankbook-tooltip:hover ~ .layer-nbankbook {
+		opacity: 1;
+		left: -32px;
+		bottom: 31px;
+	}
+
+	.tab-box {
+		border-top: 2px solid $base_color1;
+
+		ul {
+			overflow: hidden;
+			position: relative;
+			height: 200px;
+			margin-top: 20px;
+			@include clear;
+
+			li {
+				float: left;
+				margin-right: -1px;
+
+				.tit-h4 {
+					width: 208px;
+					height: 49px;
+					border-width: 1px 1px 0;
+					border-style: solid;
+					border-color: #ccc;
+					font-size: 14px;
+					background: #fff;
+					line-height: 49px;
+					text-align: center;
+					cursor: pointer;
+
+					&:hover {
+						color: $point_color1;
+					}
+				}
+
+				.conts {
+					opacity: 0;
+					overflow-y: auto;
+					position: absolute;
+					left: -9999px;
+					bottom: 0;
+					width: 1%;
+					height: 151px;
+					padding: 15px 20px;
+					border: 1px solid $point_color1;
+					color: $base_color2;
+					line-height: 20px;
+					box-sizing: border-box;
+				}
+
+				&.active .tit-h4 {
+					position: relative;
+					border-color: $point_color1;
+					color: $point_color1;
+					z-index: 1;
+				}
+
+				&.active .conts {
+					opacity: 1;
+					left: 0;
+					width: 100%;
+				}
+			}
+		}
+
+		&.payment-agency {
+			padding-top: 10px;
+
+			ul {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.privacy-check {
+		margin-top: 10px;
+		@include clear;
+
+		li {
+			float: left;
+			margin-right: 20px;
+		}
+	}
+
+	.order-body_row_head {
+		.btn-conts-view {
+			float: left;
+			margin: -4px 0 0 10px;
+			font-size: 11px;
+			line-height: 26px;
+
+			&:hover {
+				background: #f6f6f6;
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			@include btn(96px, 28px, 1px solid #ccc, #333, #fff, center);
+
+			[class^='icon-'] {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 0 3px 4px;
+				font-size: 15px;
+			}
+		}
+	}
+
+	.payment-check {
+		padding: 10px 0 20px;
+		border-bottom: 1px solid #e8e7ea;
+	}
+
+	.button-group {
+		margin-top: 50px;
+	}
+
+	.btn-continue-shopping {
+		display: inline-block;
+		font-size: 24px;
+		font-weight: bold;
+		margin-right: 10px;
+		@include btn(300px, 70px, 2px solid $point_color1, $point_color1, #fff, center, 66px);
+
+		&:hover {
+			background: #f6f6f6;
+		}
+	}
+
+	.btn-buy-submit {
+		font-size: 24px;
+		font-weight: bold;
+		@include btn(300px, 70px, 0, #fff, $point_color1, center, 70px);
+
+		&:hover {
+			background: #2d7ee4;
+		}
+	}
+	@include breakpoint(max-width 1209px) {
+		width: 950px;
+	}
+}
+
+.order-body-result {
+	@include clear;
+
+	.order-body-result_view {
+		float: left;
+		width: 950px;
+
+		.order-body_top {
+			border-bottom-color: $base_color1;
+		}
+
+		.order-body-result_main {
+			width: 610px;
+			margin: 76px auto 0;
+
+			.tit-h3 {
+				height: 72px;
+				font-size: 34px;
+				text-align: center;
+
+				span {
+					color: $point_color1;
+
+					&.fail {
+						color: $point_color2;
+					}
+				}
+			}
+
+			.deposit-amount {
+				font-size: 20px;
+				color: $point_color2;
+				letter-spacing: 0;
+
+				em {
+					font-size: 14px;
+					color: $base_color1;
+				}
+			}
+
+			.btn-ibaak {
+				display: inline-block;
+				margin-left: 10px;
+				@include btn(137px, 28px, 1px solid #ccc, $base_color1, #fff, center, 26px);
+
+				&:hover {
+					background: #f6f6f6;
+				}
+			}
+
+			.cardname {
+				font-size: 14px;
+			}
+
+			.ordercode {
+				display: inline-block;
+				margin-top: 8px;
+				letter-spacing: 0;
+			}
+
+			.sum {
+				background: #ecf3fd;
+			}
+
+			.price {
+				position: relative;
+
+				.price_t {
+					display: block;
+					line-height: 34px;
+
+					&.price_total {
+						font-size: 16px;
+						color: $point_color2;
+					}
+				}
+
+				.price_price {
+					position: absolute;
+					right: 0;
+					top: 0;
+					height: 34px;
+					line-height: 34px;
+
+					.price_price_save {
+						position: relative;
+						display: inline-block;
+						height: 24px;
+						margin: -3px 10px 0 0;
+						padding: 0 10px;
+						border: 1px solid $base_color3;
+						font-size: 11px;
+						line-height: 24px;
+						background: #fff;
+						vertical-align: middle;
+
+						em {
+							color: #000;
+							letter-spacing: 0;
+						}
+
+						&:after {
+							content: "";
+							position: absolute;
+							right: -5px;
+							top: 50%;
+							width: 5px;
+							height: 8px;
+							margin-top: -4px;
+							background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/arw_price_price_save.gif') no-repeat 0 0;
+						}
+					}
+
+					.price_price_sum {
+						font-size: 20px;
+						letter-spacing: 0;
+
+						em {
+							font-size: 14px;
+						}
+
+						&.ico-minus:before {
+							position: relative;
+							top: -2px;
+						}
+					}
+
+					.price_price_save + .price_price_sum {
+						display: inline-block;
+						height: 34px;
+						margin-top: -3px;
+						color: $point_color2;
+						vertical-align: middle;
+
+						em {
+							color: $base_color1;
+						}
+					}
+				}
+			}
+
+			.earn-point {
+				margin-top: 10px;
+				padding: 20px 0 10px;
+				border-top: 1px solid #e8e7ea;
+				text-align: right;
+
+				span {
+					letter-spacing: 0;
+				}
+			}
+
+			.order-body-result_main_noti {
+				margin-top: 17px;
+				font-size: 11px;
+				color: $base_color2;
+				line-height: 18px;
+
+				a {
+					color: $base_color1;
+					font-weight: bold;
+				}
+
+				strong {
+					color: $base_color1;
+				}
+			}
+
+			.button-group {
+				margin-top: 37px;
+			}
+
+			.btn-repurchase,
+			.btn-shopping-history {
+				display: inline-block;
+				font-size: 24px;
+				font-weight: bold;
+				@include btn(300px, 70px, 0, #fff, $point_color1, center, 70px);
+
+				&:hover {
+					background: #2d7ee4;
+				}
+			}
+
+			.box-board + .box-board {
+				margin-top: 20px;
+			}
+		}
+
+		.order-body-result_bnr {
+			margin-top: 80px;
+			border: 1px solid #d3d3d3;
+		}
+
+		.order-body-result_bot {
+			margin-top: 60px;
+
+			.tit-h3 {
+				font-size: 18px;
+			}
+
+			.product-basket {
+				margin-top: 50px;
+			}
+
+			.product_paging {
+				position: absolute;
+				right: 0;
+				top: -5px;
+
+				.btn-round {
+					display: inline-block;
+					margin-right: 18px;
+				}
+
+				.paging-number {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+		@include breakpoint(max-width 1209px) {
+			float: none;
+			margin: 0 auto;
+		}
+	}
+
+	.aside {
+		float: right;
+		width: 220px;
+		height: 100px;
+		margin-top: 90px;
+		background: #ccc;
+		@include breakpoint(max-width 1209px) {
+			display: none;
+		}
+	}
+}
+
+.order-box {
+	margin-top: 50px;
+	text-align: center;
+}

@@ -1,0 +1,1155 @@
+@charset "utf-8";
+
+.cart-body {
+	padding: 40px 0 100px;
+	line-height: 1;
+	@include default_width;
+	@include breakpoint(max-width 1209px) {
+		width: 950px;
+	}
+
+	.cart-body_top {
+		position: relative;
+		height: 50px;
+		@include clear;
+
+		.tit-h2 {
+			float: left;
+			font-size: 30px;
+			color: #000;
+		}
+
+		.btn-cart-empty {
+			overflow: hidden;
+			float: left;
+			margin: -3px 0 0 10px;
+			padding: 0 10px;
+			border-radius: 18px;
+			font-size: 0;
+			@include btn(38px, 38px, 1px solid $base_color2, $base_color2, #fff);
+
+			&:before {
+				display: inline-block;
+				font-size: 22px;
+				vertical-align: middle;
+			}
+
+			span {
+				position: absolute;
+				visibility: hidden;
+				display: inline-block;
+				margin-left: 5px;
+				font-size: 14px;
+				font-weight: bold;
+				vertical-align: middle;
+			}
+
+			&:hover {
+				width: auto;
+				border-color: $point_color1;
+				color: $point_color1;
+
+				span {
+					position: static;
+					visibility: visible;
+					color: $point_color1;
+				}
+			}
+		}
+
+		ol {
+			position: absolute;
+			top: 7px;
+			right: 0;
+			@include clear;
+
+			li {
+				position: relative;
+				float: left;
+				margin-left: 10px;
+				font-size: 14px;
+				color: #ccc;
+				font-weight: bold;
+				@include loadIcon($icon-chevron-right);
+
+				&:before {
+					margin-right: 10px;
+				}
+
+				&:first-child {
+					margin-left: 0;
+					&:before {
+						display: none;
+					}
+				}
+
+				span {
+					font-size: 24px;
+				}
+
+				strong {
+					color: #000;
+				}
+			}
+		}
+	}
+
+	.cart-body_menu {
+		font-size: 0;
+
+		[class^="btn-cart-body_"] {
+			display: inline-block;
+			font-size: 20px;
+			font-weight: bold;
+			@include btn(50%, 60px, 2px solid #d1d0d5, $base_color1, #f4f4f4, center, 56px);
+			border-bottom-color: $point_color1;
+
+			&.active {
+				border-bottom: 0;
+				border-color: $point_color1;
+				color: $point_color1;
+				background: #fff;
+			}
+		}
+
+		.btn-cart-body_cart {
+			border-right-width: 0;
+
+			&.active {
+				border-right-width: 2px;
+			}
+		}
+
+		.btn-cart-body_compare {
+			border-left-width: 0;
+
+			&.active {
+				border-left-width: 2px;
+			}
+		}
+	}
+
+	// 장바구니
+	.cart-body_cart {
+		margin-top: 30px;
+		.cart-body_row {
+			position: relative;
+			margin-top: 60px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			.tit-h3 {
+				min-height: 43px;
+				font-size: 25px;
+				color: $base_color1;
+			}
+
+			.cart-body_row_head {
+				@include clear;
+
+				.tit-h3 {
+					float: left;
+				}
+
+				.btn-minisop-info {
+					float: left;
+					margin: 4px 0 0 10px;
+					border: 0;
+					color: #999;
+					background: none;
+
+					&:hover {
+						color: $point_color1;
+					}
+				}
+			}
+
+			.seller-info {
+				margin-bottom: 20px;
+
+				.seller-info_descwarranty {
+					display: none;
+				}
+
+			}
+
+			.box-board {
+				position: relative;
+				padding-right: 130px;
+			}
+
+			.cart-body_row_botmenu {
+				position: relative;
+				margin-top: 20px;
+				padding-left: 40px;
+				font-size: 0;
+
+				.btn-cart_fork {
+					font-size: 12px;
+					line-height: 28px;
+					@include btn(119px, 30px, 1px solid $base_color2, $base_color1, #fff);
+					i {
+						position: relative;
+						top: 2px;
+						font-size: 15px;
+					}
+				}
+
+				.btn-cart_del {
+					margin-left: 5px;
+					font-size: 12px;
+					@include btn(64px, 30px, 1px solid $base_color2, $base_color1, #fff);
+				}
+
+				.noti {
+					position: absolute;
+					right: 10px;
+					top: 0;
+					font-size: 12px;
+					color: $base_color2;
+					line-height: 30px;
+				}
+			}
+
+			.cart-body_row_sum {
+				position: relative;
+				margin-top: 20px;
+				border-top: 2px solid $point_color1;
+				border-bottom: 2px solid $point_color1;
+
+				.cart-body_row_sum_total {
+					@include clear;
+
+					.tit-h4 {
+						float: left;
+						height: 140px;
+						margin-left: 30px;
+						font-size: 28px;
+						line-height: 140px;
+					}
+
+					ul {
+						float: right;
+						width: 395px;
+						padding-top: 10px;
+
+						li {
+							position: relative;
+							border-top: 1px solid #e8e7ea;
+							padding: 0 20px;
+							font-size: 16px;
+							color: $base_color1;
+							font-weight: bold;
+							line-height: 40px;
+
+							&:first-child {
+								border-top: 0;
+							}
+
+							.btn-mycoupon {
+								margin: -4px 0 0 5px;
+								font-size: 12px;
+								@include btn(79px, 22px, 1px solid #ccc, $base_color3, #fff);
+							}
+
+							strong {
+								position: absolute;
+								right: 20px;
+								top: 0;
+								font-size: 20px;
+								letter-spacing: 0;
+
+								span {
+									font-size: 14px;
+									color: $base_color2;
+								}
+							}
+						}
+					}
+				}
+
+				.cart-body_row_sum_pay {
+					height: 105px;
+					background: #ecf3fd;
+					@include clear;
+
+					.tit-h4 {
+						float: left;
+						margin-left: 30px;
+						font-size: 22px;
+						color: #f34522;
+						line-height: 105px;
+					}
+
+					.cart-body_row_sum_tatol_price {
+						float: right;
+						margin-right: 20px;
+						padding: 22px 0;
+						color: $base_color2;
+						font-weight: bold;
+						text-align: right;
+
+						span {
+							display: block;
+							margin-bottom: 10px;
+							font-size: 18px;
+
+							strong {
+								font-size: 34px;
+								color: #f34522;
+								letter-spacing: 0;
+							}
+						}
+
+						.earn {
+							font-size: 14px;
+							letter-spacing: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.button-group {
+		margin-top: 30px
+	}
+
+	.btn-continue-shopping {
+		display: inline-block;
+		font-size: 24px;
+		font-weight: bold;
+		margin-right: 10px;
+		@include btn(300px, 70px, 2px solid $point_color1, $point_color1, #fff, center, 66px);
+
+		&:hover {
+			background: #f6f6f6;
+		}
+	}
+
+	.btn-buy-submit {
+		font-size: 24px;
+		font-weight: bold;
+		@include btn(300px, 70px, 0, #fff, $point_color1, center, 70px);
+
+		&:hover {
+			background: #2d7ee4;
+		}
+	}
+
+	// 상품 견적
+	.cart-body_compare {
+		margin-top: 30px;
+
+		.compare_add_service {
+			margin-top: -1px;
+		}
+
+		.cart-body_compare_sum {
+			padding: 0 20px;
+			border-top: 2px solid $point_color1;
+			border-bottom: 2px solid $point_color1;
+			background: #ecf3fd;
+			@include clear;
+
+			.tit-h3 {
+				float: left;
+				font-size: 28px;
+				color: #f34522;
+				line-height: 104px;
+			}
+
+			.cart-body_compare_sum_price {
+				float: right;
+				font-size: 0;
+
+				.iradio {
+					margin-left: 10px;
+
+					label {
+						padding-top: 3px;
+						font-size: 14px;
+						color: $base_color2;
+						font-weight: bold;
+
+						&:before {
+							margin-top: -3px;
+						}
+					}
+				}
+
+				.price {
+					display: inline-block;
+					height: 104px;
+					margin-left: 20px;
+					font-size: 18px;
+					color: $base_color2;
+					letter-spacing: 0;
+					line-height: 98px;
+					vertical-align: middle;
+
+					span {
+						font-size: 32px;
+						color: #f34522;
+					}
+				}
+			}
+		}
+
+		.cart-body_compare_other {
+			margin-top: 30px;
+			border-top: 1px solid #e8e7ea;
+
+			ul {
+				@include clear;
+
+				li {
+					float: left;
+					width: 33%;
+					height: 100px;
+					padding-top: 28px;
+					border-left: 1px solid #e8e7ea;
+					color: $base_color3;
+					font-weight: bold;
+					text-align: center;
+					@include box-sizing;
+
+					&:first-child {
+						border-left: 0;
+					}
+
+					&:last-child {
+						width: 34%;
+					}
+
+					div {
+						display: inline-block;
+						font-size: 0;
+						text-align: left;
+					}
+
+					span {
+						display: block;
+						margin-bottom: 10px;
+						font-size: 12px;
+
+						em {
+							color: $base_color1;
+						}
+					}
+
+					strong {
+						display: inline-block;
+						margin-right: 10px;
+						font-size: 18px;
+						color: $point_color1;
+						vertical-align: middle;
+					}
+
+					a,
+					button {
+						display: inline-block;
+						min-width: 92px;
+						padding: 0 20px;
+						font-size: 14px;
+						font-weight: bold;
+						@include btn(null, 26px, 1px solid $base_color3, $base_color1, #fff, center, 24px);
+
+						&:hover {
+							border-color: $point_color1;
+							color: $point_color1;
+						}
+					}
+				}
+			}
+		}
+
+		// pc 견적 온라인 상담하기 레이어
+		.layer-pop_online_contact {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -300px 0 0 -335px;
+			width: 670px;
+			padding: 30px 0;
+			background: #e7e7e7;
+
+			.tit-h4 {
+				text-align: center;
+
+				span {
+					display: inline-block;
+					padding-bottom: 5px;
+					border-bottom: 6px solid $point_color1;
+					font-size: 20px;
+					vertical-align: top;
+				}
+			}
+
+			.dsc {
+				margin-top: 15px;
+				font-size: 30px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 1.3;
+				letter-spacing: -2px;
+
+				span {
+					color: #0f4f9f;
+				}
+			}
+
+			.layer-pop_online_contact_box {
+				margin: 15px 50px 0;
+				border: 1px solid #d3d3d3;
+				padding: 30px;
+				background: #fff;
+
+				.tit {
+					position: relative;
+					height: 96px;
+					padding: 50px 0 0 110px;
+					font-size: 15px;
+					line-height: 1.3;
+					@include box-sizing();
+
+					strong {
+						color: $point_color2;
+					}
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 325px;
+						height: 100%;
+						background: url("//img.happyshopping.kr/img_static/img_pres/_v3/sprite_pop4.png") no-repeat 0 -1669px;
+					}
+				}
+
+				.button-group {
+					margin-top: 30px;
+
+					.btn_online_contact {
+						display: block;
+						margin: 0 auto;
+						font-size: 20px;
+						font-weight: bold;
+						@include btn(330px, 56px, 0, #fff, $point_color1, center, 56px);
+
+						&:hover {
+							background: $point_color1_over;
+						}
+					}
+
+					.btn_online_service {
+						margin-top: 10px;
+						font-size: 14px;
+						@include btn(null, null, 0, null, transparent);
+						border-bottom: 1px solid $base_color1;
+
+						[class^="icon-"] {
+							margin-left: 5px;
+							font-size: 16px;
+						}
+					}
+				}
+
+				.layer-pop_online_contact_box_tip {
+					position: relative;
+					min-height: 60px;
+					margin-top: 10px;
+					padding: 8px 0 0 70px;
+					font-size: 14px;
+					color: $base_color2;
+					line-height: 1.5;
+					@include box-sizing();
+
+					.t {
+						position: absolute;
+						left: 0;
+						top: 0;
+						padding-top: 14px;
+						border-radius: 30px;
+						font-size: 14px;
+						color: #fff;
+						background: #222;
+						text-align: center;
+						line-height: 1;
+						@include size(60px);
+						@include box-sizing();
+
+						strong {
+							font-size: 22px;
+						}
+					}
+				}
+			}
+
+			.layer-pop_online_contact_noti {
+				margin: 20px 50px 0;
+
+				li {
+					color: $base_color2;
+					line-height: 1.5;
+				}
+			}
+		}
+
+		// pc 견적 입찰하기 레이어
+		.layer-pop_online_bidding {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -300px 0 0 -335px;
+			width: 670px;
+			padding: 30px 0;
+			background: #e7e7e7;
+
+			.tit-h4 {
+				text-align: center;
+
+				span {
+					display: inline-block;
+					padding-bottom: 5px;
+					border-bottom: 6px solid $point_color1;
+					font-size: 20px;
+					vertical-align: top;
+				}
+			}
+
+			.dsc {
+				margin-top: 15px;
+				font-size: 30px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 1.3;
+				letter-spacing: -2px;
+
+				span {
+					color: #0f4f9f;
+				}
+			}
+
+			.layer-pop_online_bidding_box {
+				margin: 15px 50px 0;
+				border: 1px solid #d3d3d3;
+				padding: 30px;
+				background: #fff;
+
+				.tit {
+					position: relative;
+					height: 116px;
+					padding: 60px 0 0 110px;
+					font-size: 15px;
+					line-height: 1.3;
+					@include box-sizing();
+
+					strong {
+						color: $point_color2;
+					}
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 410px;
+						height: 100%;
+						background: url("//img.happyshopping.kr/img_static/img_pres/_v3/sprite_pop4.png") no-repeat -385px -1669px;;
+					}
+				}
+
+				.button-group {
+					margin-top: 0;
+
+					.btn_online_bidding {
+						display: block;
+						margin: 0 auto;
+						font-size: 20px;
+						font-weight: bold;
+						@include btn(270px, 56px, 0, #fff, $point_color1, center, 56px);
+
+						&:hover {
+							background: $point_color1_over;
+						}
+					}
+
+					.btn_online_service {
+						margin-top: 10px;
+						font-size: 14px;
+						@include btn(null, null, 0, null, transparent);
+						border-bottom: 1px solid $base_color1;
+
+						[class^="icon-"] {
+							margin-left: 5px;
+							font-size: 16px;
+						}
+					}
+				}
+
+				.layer-pop_online_bidding_box_tip {
+					position: relative;
+					min-height: 60px;
+					margin-top: 10px;
+					padding: 8px 0 0 70px;
+					font-size: 14px;
+					color: $base_color2;
+					line-height: 1.5;
+					@include box-sizing();
+
+					.t {
+						position: absolute;
+						left: 0;
+						top: 0;
+						padding-top: 14px;
+						border-radius: 30px;
+						font-size: 14px;
+						color: #fff;
+						background: #222;
+						text-align: center;
+						line-height: 1;
+						@include size(60px);
+						@include box-sizing();
+
+						strong {
+							font-size: 22px;
+						}
+					}
+				}
+			}
+
+			.layer-pop_online_bidding_noti {
+				margin: 20px 50px 0;
+
+				li {
+					color: $base_color2;
+					line-height: 1.5;
+				}
+			}
+		}
+
+		// 튜닝/오버클럭 상담 구매하기 레이어
+		.layer-pop_tuning {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -300px 0 0 -335px;
+			width: 670px;
+			padding: 30px 0;
+			background: #e7e7e7;
+
+			.tit-h4 {
+				text-align: center;
+
+				span {
+					display: inline-block;
+					padding-bottom: 5px;
+					border-bottom: 6px solid $point_color1;
+					font-size: 20px;
+					vertical-align: top;
+				}
+			}
+
+			.dsc {
+				margin-top: 15px;
+				font-size: 30px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 1.3;
+				letter-spacing: -2px;
+
+				span {
+					color: #0f4f9f;
+				}
+			}
+
+			.layer-pop_tuning_box {
+				margin: 15px 50px 0;
+				border: 1px solid #d3d3d3;
+				padding: 12px 30px;
+				background: #fff;
+
+				.layer-pop_tuning_box_top {
+					.tit-h5 {
+						height: 51px;
+						padding: 12px 80px 2px 0;
+						font-size: 16px;
+						font-weight: normal;
+						background: url("//img.happyshopping.kr/img_static/img_pres/_v3/sprite_pop4.png") no-repeat 0 -1785px;
+						text-align: right;
+						line-height: 37px;
+						@include box-sizing();
+					}
+
+					ul {
+						height: 84px;
+						margin-top: 10px;
+						padding: 10px 0 10px 80px;
+						background: url("//img.happyshopping.kr/img_static/img_pres/_v3/sprite_pop4.png") no-repeat 0 -1846px;
+						@include box-sizing();
+
+						li {
+							position: relative;
+							margin-top: 1px;
+							padding-left: 26px;
+							font-size: 16px;
+							line-height: 1.3;
+
+							span {
+								position: absolute;
+								left: 0;
+								top: 0;
+								border-radius: 10px;
+								color: #fff;
+								background: #d3d3d3;
+								text-align: center;
+								@include size(20px);
+							}
+
+							strong {
+								color: $point_color2;
+							}
+
+							&:first-child {
+								margin-top: 0;
+							}
+						}
+					}
+				}
+
+				.button-group {
+					margin-top: 15px;
+					
+					.btn_tuning {
+						display: block;
+						margin: 0 auto;
+						font-size: 20px;
+						font-weight: bold;
+						@include btn(370px, 56px, 0, #fff, $point_color1, center, 56px);
+
+						&:hover {
+							background: $point_color1_over;
+						}
+					}
+
+					.btn_online_service {
+						margin-top: 10px;
+						font-size: 14px;
+						@include btn(null, null, 0, null, transparent);
+						border-bottom: 1px solid $base_color1;
+
+						[class^="icon-"] {
+							margin-left: 5px;
+							font-size: 16px;
+						}
+					}
+				}
+
+				.layer-pop_tuning_box_tip {
+					position: relative;
+					min-height: 60px;
+					margin-top: 10px;
+					padding: 8px 0 0 70px;
+					font-size: 14px;
+					color: $base_color2;
+					line-height: 1.5;
+					@include box-sizing();
+
+					.t {
+						position: absolute;
+						left: 0;
+						top: 0;
+						padding-top: 14px;
+						border-radius: 30px;
+						font-size: 14px;
+						color: #fff;
+						background: #222;
+						text-align: center;
+						line-height: 1;
+						@include size(60px);
+						@include box-sizing();
+
+						strong {
+							font-size: 22px;
+						}
+					}
+				}
+			}
+
+			.layer-pop_tuning_noti {
+				margin: 20px 50px 0;
+
+				li {
+					color: $base_color2;
+					line-height: 1.5;
+				}
+			}
+		}
+	}
+
+	.cart-body_compare_share {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50px;
+		text-align: right;
+
+		.in {
+			font-size: 0;
+
+			.tit-h5,
+			.btn-facebook,
+			.btn-kakaotalk,
+			.btn-email,
+			.btn-link,
+			.btn-print {
+				display: inline-block;
+				font-size: 12px;
+				color: $base_color2;
+				vertical-align: middle;
+			}
+
+			.tit-h5 {
+				margin-right: 5px;
+			}
+
+			.btn-facebook,
+			.btn-kakaotalk,
+			.btn-email,
+			.btn-link,
+			.btn-print {
+				margin-left: 5px;
+				@include btn(38px, 38px, 0, null, transparent);
+			}
+
+			@include default_width;
+			@include breakpoint(max-width 1209px) {
+				width: 950px;
+			}
+		}
+	}
+
+	.cart-body_notfound {
+		padding-top: 70px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+
+		p {
+			margin-top: 10px;
+			font-size: 12px;
+			color: $base_color3;
+		}
+
+		.btn_shopping {
+			display: block;
+			margin: 20px auto 0;
+			font-size: 16px;
+			@include btn(140px, 43px, 2px solid $point_color1, $point_color1, #fff, center, 39px);
+
+			&:hover {
+				background: #f8f8f8;
+			}
+		}
+	}
+
+	.aside-medium {
+		.tit-h2 {
+			height: 52px;
+			padding-top: 12px;
+		}
+	}
+}
+
+// 옵션변경/추가
+.layer-pop_option {
+	position: absolute;
+	width: 538px;
+	padding: 20px;
+	border: 2px solid #333;
+	background: #fff;
+	z-index: 100;
+
+	.tit-h4 {
+		height: 40px;
+		border-bottom: 1px solid $base_color1;
+		font-size: 20px;
+	}
+
+	.cart_option_change {
+		margin-top: 20px;
+
+		.cart_option_change_product {
+			margin-bottom: 20px;
+			@include clear;
+
+			.photo {
+				overflow: hidden;
+				float: left;
+				margin-right: 20px;
+				@include size(100px);
+				img {
+					max-width: 100%;
+				}
+			}
+
+			.cart_option_change_product_name {
+				overflow: hidden;
+				font-size: 14px;
+				color: #000;
+				font-weight: bold;
+
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 0;
+					height: 100px;
+					vertical-align: middle;
+				}
+			}
+		}
+
+		.cart_option_change_slt {
+			width: 100%;
+		}
+
+		.cart_option_change_option {
+			margin-top: 40px;
+
+			.tit-h5 {
+				font-size: 12px;
+				color: $base_color1;
+			}
+
+			ul {
+				margin-top: 10px;
+				border-top: 1px solid $base_color1;
+
+				li {
+					position: relative;
+					min-height: 20px;
+					padding: 10px;
+					border-top: 1px solid #f2f2f2;
+					color: $base_color2;
+
+					&:first-child {
+						border-top: 0;
+					}
+
+					.cnt-change {
+						position: absolute;
+						top: 50%;
+						right: 10px;
+						margin-top: -15px;
+						@include clear;
+
+						.cnt-change_price {
+							float: left;
+							color: $base_color1;
+							line-height: 30px;
+							letter-spacing: 0;
+						}
+
+						.cnt-change_number {
+							float: left;
+							margin-left: 10px;
+						}
+
+						.btn-option-del {
+							float: left;
+							margin-left: 10px;
+							@include btn(30px, 30px, 1px solid #e5e5e5, null, #fff);
+							
+							img {
+								vertical-align: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		.cart_option_change_price {
+			border-top: 2px solid $point_color1;
+			border-bottom: 2px solid $point_color1;
+			background: #ecf3fd;
+
+			strong {
+				position: relative;
+				display: block;
+				height: 50px;
+				padding: 0 20px;
+				border-top: 1px solid #e8e7ea;
+				font-size: 16px;
+				line-height: 50px;
+
+				&:first-child {
+					border-top: 0;
+				}
+
+				span {
+					position: absolute;
+					right: 20px;
+					top: 0;
+					height: 50px;
+					letter-spacing: 0;
+				}
+
+				&.adddis span {
+					font-size: 20px;
+
+					em {
+						font-size: 14px;
+						color: $base_color2;
+					}
+				}
+
+				&.total span {
+					font-size: 30px;
+					color: $point_color2;
+
+					em {
+						font-size: 16px;
+						color: $base_color2;
+					}
+				}
+			}
+		}
+	}
+
+	.button-group {
+		margin-top: 20px;
+	}
+
+	.btn-pop-cncl,
+	.btn-pop-option-submit {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.btn-pop-cncl {
+		margin-right: 10px;
+		@include btn(140px, 43px, 1px solid $point_color1, $point_color1, #fff);
+		
+		&:hover {
+			background: #f6f6f6;
+		}
+	}
+
+	.btn-pop-option-submit {
+		@include btn(140px, 43px, 0, #fff, $point_color1);
+
+		&:hover {
+			background: #2d7ee4;
+		}
+	}
+}
+
+.layer-pop_apply_coupon {
+	left: 50%;
+	top: 50%;
+	margin: -290px 0 0 -297px;
+}

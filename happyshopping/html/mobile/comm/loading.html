@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>행복쇼핑</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="행복쇼핑, 행복, 쇼핑, 컴퓨터, PC, 조립PC, 조립컴퓨터, 노트북, 태블릿, 상품 추천, 가격비교, 가격비교사이트, 가격비교 싸이트, 가격 검색, 최저가, 추천, 인터넷쇼핑, 온라인쇼핑, 쇼핑, 쇼핑몰, 싸게 파는 곳, 싸게 살 수 있는 곳" />
+	<meta name="description" content="행복쇼핑은 컴퓨터, 조립PC에 특화된 온라인 견적 가격비교 사이트 입니다. 안전구매시스템(전자보증,에스크로)을 갖춘 쇼핑몰, 미니샵의 최저 가격 정보를 보여드립니다. 쇼핑의 행복! 행복쇼핑" />
+
+	<!-- 웹폰트용 -->
+    <script src="https://ajax.pping.kr/font/js/hpping.webfont.js"></script>
+    <script>
+        const hpping = new hppingFont();
+        hpping.init({
+            href: 'https://ajax.pping.kr/font/css/hpping.webfont.css'
+        });
+    </script>
+    <!-- // 웹폰트용 -->
+
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_comm.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/buttons.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/header.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/footer.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_index.css" />
+
+	<!-- <link rel="stylesheet" href="../../../assets/css/mobile/mobile_comm.css" />
+	<link rel="stylesheet" href="../../../assets/css/buttons.css" />
+	<link rel="stylesheet" href="../../../assets/css/mobile/mobile_layers.css" />
+	<link rel="stylesheet" href="../../../assets/css/header.css" />
+	<link rel="stylesheet" href="../../../assets/css/footer.css" />
+	<link rel="stylesheet" href="../../../assets/css/mobile/mobile_index.css" /> -->
+</head>
+
+<body class="">
+<!-- 전체 로딩 off 추가시 안보임 -->
+<div class="comm_loading"></div>
+<!-- // 전체 로딩 -->
+
+<!-- 부분 로딩 off 추가시 안보임 -->
+<div class="comm_loading_inside"></div>
+<!-- // 부분 로딩 -->
+
+<div id="wrap">
+	<!-- header -->
+	<header id="header-m-basic">
+		<div class="header-m-basic_body">
+			<div class="header-m-basic_body_top">
+				<h1 class="tit-h1">
+					<a href="index.html"><img src="//img.happyshopping.kr/img_static/img_mobile/comm/logo_happyshopping.png" alt="행복쇼핑" /></a>
+				</h1>
+
+				<button type="button" class="btn_flat"><span class="ir">메뉴</span></button>
+
+				<div class="header-m-basic_body_aside">
+					<a href="#" class="btn-estimate"><span class="ir">상품견적</span><span>99</span></a>
+					<a href="#" class="btn-cart"><span class="ir">장바구니</span><span>99</span></a>
+				</div>
+			</div>
+
+			<!-- 검색 -->
+			<div class="header-m-basic_body_search">
+				<form>
+					<fieldset>
+						<legend><span>통합검색</span></legend>
+						<input type="search" title="통합검색" placeholder="통합검색 서비스 제공 예정" class="isearch" readonly="readonly" disabled />
+						<div class="btn_group">
+							<button type="button" class="btn-voice"><span class="ir">음성</span></button>
+							<em class="bar"></em>
+							<input type="submit" class="btn-submit" disabled="disabled" />
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<!-- // 검색 -->
+		</div>
+
+		<!-- gnb -->
+		<div class="gnb-m-basic">
+			<div class="gnb-m-basic_body">
+				<div class="gnb-m-basic_nav">
+					<ul class="gnb-m-basic_nav_main">
+						<li class="">
+							<a href="#">컴퓨터 견적</a>
+						</li>
+						<li class="">
+							<a href="#">행쇼 표준PC</a>
+						</li>
+						<li class="">
+							<a href="#">노트북</a>
+						</li>
+						<li class="">
+							<a href="#">이벤트&amp;기획전</a>
+						</li>
+						<li class="">
+							<a href="#">PC견적상담</a>
+						</li>
+						<li class="">
+							<a href="#">PC견적입찰</a>
+						</li>
+						<li class="">
+							<a href="#">행복핫딜</a>
+						</li>
+						<li class="">
+							<a href="comm/gnb_cate.html">상품분류</a>
+						</li>
+						<li class="">
+							<a href="comm/gnb_brand.html">브랜드</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 더보기 / 접기 -->
+				<button type="button" class="btn_gnb_all"><i class="icon-angle-down"></i> 더보기</button>
+				<button type="button" class="btn_gnb_all"><i class="icon-angle-up"></i> 접기</button>
+
+				<!-- 전체 보기 -->
+				<div class="layer_gnb_all">
+					<ul>
+						<li><a href="#">컴퓨터 견적</a></li>
+						<li><a href="#">행쇼 표준PC</a></li>
+						<li><a href="#">노트북</a></li>
+						<li><a href="#">이벤트&amp;기획전</a></li>
+						<li><a href="#">PC견적 상담</a></li>
+						<li><a href="#">PC견적 입찰</a></li>
+						<li><a href="#">행복핫딜</a></li>
+						<li><a href="index_cate.html">상품분류</a></li>
+						<li><a href="index_brand.html">브랜드</a></li>
+					</ul>
+				</div>
+				<!-- // 전체 보기 -->
+			</div>
+		</div>
+		<!-- // gnb -->
+
+		<!-- gnb fix용 -->
+		<div class="gnb-m-basic snap">
+			<div class="gnb-m-basic_body">
+				<div class="gnb-m-basic_nav">
+					<ul class="gnb-m-basic_nav_main">
+						<li class="">
+							<a href="#">컴퓨터 견적</a>
+						</li>
+						<li class="">
+							<a href="#">행쇼 표준PC</a>
+						</li>
+						<li class="">
+							<a href="#">노트북</a>
+						</li>
+						<li class="">
+							<a href="#">이벤트&amp;기획전</a>
+						</li>
+						<li class="">
+							<a href="#">PC견적상담</a>
+						</li>
+						<li class="">
+							<a href="#">PC견적입찰</a>
+						</li>
+						<li class="">
+							<a href="index_cate.html">상품분류</a>
+						</li>
+						<li class="">
+							<a href="index_brand.html">브랜드</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 더보기 / 접기 -->
+				<button type="button" class="btn_gnb_all"><i class="icon-angle-down"></i> 더보기</button>
+				<button type="button" class="btn_gnb_all"><i class="icon-angle-up"></i> 접기</button>
+
+				<!-- 전체 보기 -->
+				<div class="layer_gnb_all">
+					<ul>
+						<li><a href="#">컴퓨터 견적</a></li>
+						<li><a href="#">행쇼표준PC</a></li>
+						<li><a href="#">노트북</a></li>
+						<li><a href="#">이벤트&amp;기획전</a></li>
+						<li><a href="#">PC견적 상담</a></li>
+						<li><a href="#">PC견적 입찰</a></li>
+						<li><a href="index_cate.html">상품분류</a></li>
+						<li><a href="index_brand.html">브랜드</a></li>
+					</ul>
+				</div>
+				<!-- // 전체 보기 -->
+			</div>
+		</div>
+		<!-- // gnb fix용 -->
+	</header>
+	<!-- // header -->
+
+	<div id="container">
+		<div class="container_main">
+			<!-- 최상단 배너 -->
+			<section class="main_banner">
+				<figure class="main_banner_headline">
+					<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main1.jpg" alt="GTX10 시리즈 사고 모든 걱정을 날려버려!" /></a>
+				</figure>
+
+				<article class="main_banner_list">
+					<div class="main_banner_list_item">
+						<a href="#">
+							<span class="ribbon badge_event">이벤트</span>
+							<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_1436000/img_1435866/200.jpg" alt="이벤트 타이틀" /></span>
+							<span class="tit">이 가격에 윈도우까지? 연시 가성비 종결자 PC</span>
+						</a>
+					</div>
+
+					<div class="main_banner_list_item">
+						<a href="#">
+							<span class="ribbon badge_pc">기획PC</span>
+							<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_1519000/img_1518173/200.jpg" alt="이벤트 타이틀" /></span>
+							<span class="tit">이 가격에 윈도우까지? 연시 가성비 종결자 PC</span>
+						</a>
+					</div>
+
+					<div class="main_banner_list_item">
+						<a href="#">
+							<span class="ribbon badge_event">부품기획전</span>
+							<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_1436000/img_1435850/200.jpg" alt="이벤트 타이틀" /></span>
+							<span class="tit">이 가격에 윈도우까지? 연시 가성비 종결자 PC</span>
+						</a>
+					</div>
+
+					<div class="main_banner_list_item">
+						<a href="#">
+							<span class="ribbon badge_event">이벤트</span>
+							<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_1238000/img_1237731/200.jpg" alt="이벤트 타이틀" /></span>
+							<span class="tit">이 가격에 윈도우까지? 연시 가성비 종결자 PC</span>
+						</a>
+					</div>
+
+					<div class="main_banner_list_item">
+						<a href="#">
+							<span class="ribbon badge_pc">기획PC</span>
+							<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_401000/img_400904/200.jpg" alt="이벤트 타이틀" /></span>
+							<span class="tit">이 가격에 윈도우까지? 연시 가성비 종결자 PC</span>
+						</a>
+					</div>
+
+					<div class="main_banner_list_item">
+						<a href="#">
+							<span class="ribbon badge_parts">부품기획전</span>
+							<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_992000/img_991054/200.jpg" alt="이벤트 타이틀" /></span>
+							<span class="tit">이 가격에 윈도우까지? 연시 가성비 종결자 PC</span>
+						</a>
+					</div>
+				</article>
+			</section>
+			<!-- // 최상단 배너 -->
+
+			<!-- 중간 배너1 -->
+			<div class="main_banner_box">
+				<figure>
+					<img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main4.jpg" alt="소비자의 마음으로 선택! 행쇼 큐레이션">
+				</figure>
+			</div>
+			<!-- // 중간 배너1 -->
+
+			<!-- 행쇼표준PC -->
+			<section class="main_stdpc">
+				<h2 class="tit-h2">행쇼표준PC</h2>
+				<!-- nav -->
+				<div class="main_stdpc_head">
+					<ul>
+						<!-- 활성화 active -->
+						<li class="active">
+							<button type="button" class="btn_stdpc">홈오피스</button>
+
+							<div class="main_stdpc_head_sub">
+								<!-- 활성화 on -->
+								<button type="button" class="btn_stdpc_head_sub on">기본패키지</button>
+								<button type="button" class="btn_stdpc_head_sub">모니터패키지</button>
+								<button type="button" class="btn_stdpc_head_sub">윈도우패키지</button>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn_stdpc">게임</button>
+
+							<div class="main_stdpc_head_sub">
+								<button type="button" class="btn_stdpc_head_sub">기본패키지</button>
+								<button type="button" class="btn_stdpc_head_sub">모니터패키지</button>
+								<button type="button" class="btn_stdpc_head_sub">윈도우패키지</button>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn_stdpc">테마</button>
+
+							<div class="main_stdpc_head_sub">
+								<button type="button" class="btn_stdpc_head_sub">기본패키지</button>
+								<button type="button" class="btn_stdpc_head_sub">모니터패키지</button>
+								<button type="button" class="btn_stdpc_head_sub">윈도우패키지</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- // nav -->
+
+				<article class="main_stdpc_body">
+					<!-- item -->
+					<div class="item-product_type1">
+						<span class="thumb">
+							<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+						</span>
+
+						<div class="item-product_type1_bot">
+							<div class="button-group">
+								<button type="button" class="btn_estmate"><i class="icon-in"></i> 견적담기</button>
+								<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+							</div>
+
+							<div class="item-product_type1_bot_info">
+								<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+								<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+							</div>
+						</div>
+					</div>
+					<!-- // item -->
+
+					<!-- item -->
+					<div class="item-product_type1">
+						<span class="thumb">
+							<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+						</span>
+
+						<div class="item-product_type1_bot">
+							<div class="button-group">
+								<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+								<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+							</div>
+
+							<div class="item-product_type1_bot_info">
+								<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+								<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+							</div>
+						</div>
+					</div>
+					<!-- // item -->
+
+					<!-- item -->
+					<div class="item-product_type1">
+						<span class="thumb">
+							<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+						</span>
+
+						<div class="item-product_type1_bot">
+							<div class="button-group">
+								<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+								<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+							</div>
+
+							<div class="item-product_type1_bot_info">
+								<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+								<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+							</div>
+						</div>
+					</div>
+					<!-- // item -->
+
+					<!-- item -->
+					<div class="item-product_type1">
+						<span class="thumb">
+							<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+						</span>
+
+						<div class="item-product_type1_bot">
+							<div class="button-group">
+								<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+								<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+							</div>
+
+							<div class="item-product_type1_bot_info">
+								<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+								<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+							</div>
+						</div>
+					</div>
+					<!-- // item -->
+				</article>
+
+				<a href="#" class="btn_all">전체보기<i class="icon-add"></i></a>
+			</section>
+			<!-- // 행쇼표준PC -->
+
+			<!-- 큐레이션 -->
+			<section class="main_curation">
+				<nav class="main_curation_lnb">
+					<ul>
+						<li>
+							<button type="button" class="btn_curation_lnb active">
+								<i class="icon-d_menu_01"></i><br />
+								컴퓨터<br />주요부품
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_curation_lnb">
+								<i class="icon-d_menu_02"></i><br />
+								컴퓨터<br />주변기기
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_curation_lnb">
+								<i class="icon-d_menu_03"></i><br />
+								소프트웨어<br />전산소모품
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_curation_lnb">
+								<i class="icon-d_menu_04"></i><br />
+								DSLR/디카<br />캠코더
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_curation_lnb">
+								<i class="icon-d_menu_05"></i><br />
+								디지털<br />완제품
+							</button>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- fix lnb 해당 위치 fixed 추가 -->
+				<nav class="main_curation_lnb snap">
+					<ul>
+						<li>
+							<button type="button" class="btn_curation_lnb active">
+								컴퓨터<br />주요부품
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_curation_lnb">
+								컴퓨터<br />주변기기
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_curation_lnb">
+								소프트웨어<br />전산소모품
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_curation_lnb">
+								DSLR/디카<br />캠코더
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_curation_lnb">
+								디지털<br />완제품
+							</button>
+						</li>
+					</ul>
+				</nav>
+				<!-- // fix lnb -->
+
+				<div class="main_curation_body">
+					<div class="curation_list">
+						<h2 class="ir">컴퓨터 주요부품</h2>
+						<!-- cpu -->
+						<article class="curation_list_box">
+							<h3 class="tit-h3">CPU</h3>
+							<div class="curation_list_box_in">
+								<!-- 미디엄가이드 -->
+								<div class="mediumguide">
+									<span class="tit"><img src="//img.happyshopping.kr/img_static/img_mobile/comm/t_mediumguide.png" alt="미디엄가이드" /></span>
+									<a href="#" class="subject">라이젠(RYZEN)이냐 카비레이크(Kaby Lake)냐, 라이젠(RYZEN)이냐 카비레이크(Kaby Lake)냐,</a>
+								</div>
+								<!-- // 미디엄가이드 -->
+
+								<div class="product_wrap">
+									<!-- 슬라이드 -->
+									<div class="product_list">
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+									</div>
+								</div>
+
+								<div class="sidemenu">
+									<a href="#">컴퓨터견적</a>
+									<em class="bar">|</em>
+									<a href="#">상품검색 <i class="icon-bottom_zoomlens"></i></a>
+								</div>
+							</div>
+						</article>
+						<!-- // cpu -->
+
+						<!-- 메인보드 -->
+						<article class="curation_list_box">
+							<h3 class="tit-h3">메인보드</h3>
+							<div class="curation_list_box_in">
+								<!-- 미디엄가이드 -->
+								<div class="mediumguide">
+									<span class="tit"><img src="//img.happyshopping.kr/img_static/img_mobile/comm/t_mediumguide.png" alt="미디엄가이드" /></span>
+									<a href="#" class="subject">라이젠(RYZEN)이냐 카비레이크(Kaby Lake)냐, 라이젠(RYZEN)이냐 카비레이크(Kaby Lake)냐,</a>
+								</div>
+								<!-- // 미디엄가이드 -->
+
+								<div class="product_wrap">
+									<!-- 슬라이드 -->
+									<div class="product_list">
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+									</div>
+								</div>
+
+								<div class="sidemenu">
+									<a href="#">컴퓨터견적</a>
+									<em class="bar">|</em>
+									<a href="#">상품검색 <i class="icon-bottom_zoomlens"></i></a>
+								</div>
+							</div>
+						</article>
+						<!-- // 메인보드 -->
+
+						<!-- 메모리 -->
+						<article class="curation_list_box">
+							<h3 class="tit-h3">메모리</h3>
+							<div class="curation_list_box_in">
+								<!-- 미디엄가이드 -->
+								<div class="mediumguide">
+									<span class="tit"><img src="//img.happyshopping.kr/img_static/img_mobile/comm/t_mediumguide.png" alt="미디엄가이드" /></span>
+									<a href="#" class="subject">라이젠(RYZEN)이냐 카비레이크(Kaby Lake)냐, 라이젠(RYZEN)이냐 카비레이크(Kaby Lake)냐,</a>
+								</div>
+								<!-- // 미디엄가이드 -->
+
+								<div class="product_wrap">
+									<!-- 슬라이드 -->
+									<div class="product_list">
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+
+										<!-- product_list_item -->
+										<div class="item-product_type1">
+											<span class="thumb">
+												<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main3.jpg" alt="" /></a>
+											</span>
+
+											<div class="item-product_type1_bot">
+												<div class="button-group">
+													<button type="button" class="btn_cart"><i class="icon-cart"></i> 장바구니</button>
+													<button type="button" class="btn_happytree"><i class="icon-search"></i> 해피트리</button>
+												</div>
+
+												<div class="item-product_type1_bot_info">
+													<strong class="name">ASUS PRIME B250M-A STCOM ASUS PRIME B250M-A STCOM</strong>
+													<strong class="price"><span>최저</span> 107,500<span>원</span></strong>
+												</div>
+											</div>
+										</div>
+										<!-- // product_list_item -->
+									</div>
+								</div>
+
+								<div class="sidemenu">
+									<a href="#">컴퓨터견적</a>
+									<em class="bar">|</em>
+									<a href="#">상품검색 <i class="icon-bottom_zoomlens"></i></a>
+								</div>
+							</div>
+						</article>
+						<!-- // 메모리 -->
+					</div>
+
+					<div class="main_curation_body_box">
+						<h2 class="ir">컴퓨터 주변기기</h2>
+						<article class="curation_list_box">
+
+						</article>
+					</div>
+
+					<div class="main_curation_body_box">
+						<h2 class="ir">소프트웨어 전산소모품</h2>
+						<article class="curation_list_box">
+
+						</article>
+					</div>
+
+					<div class="main_curation_body_box">
+						<h2 class="ir">DSLR/디카 캠코더</h2>
+						<article class="curation_list_box">
+
+						</article>
+					</div>
+
+					<div class="main_curation_body_box">
+						<h2 class="ir">디지털 완제품</h2>
+						<article class="curation_list_box">
+
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- // 큐레이션 -->
+
+
+			<!-- 중간 배너2 -->
+			<div class="main_banner_box">
+				<figure>
+					<a href="#"><img src="//img.happyshopping.kr/img_static/img_mobile/junk/sample_main4.jpg" alt="소비자의 마음으로 선택! 행쇼 큐레이션"></a>
+				</figure>
+			</div>
+			<!-- // 중간 배너2 -->
+
+			<!-- 미니샵 리스트 -->
+			<article class="main_minishop">
+				<h2 class="ir">미니샵 리스트</h2>
+				<!-- 파워셀러 -->
+				<div class="main_minishop_seller">
+					<span class="sellertype powerseller">파워셀러</span>
+					<!-- 슬라이드 -->
+					<div class="main_minishop_list">
+						<!-- 미니샵 -->
+						<div class="minishop_list_item">
+							<span class="ci"><img src="//img.happyshopping.kr/img_static/img_logo/594_80_35.png" alt="이름" /></span>
+							<span class="name">유니크컴</span>
+						</div>
+						<!-- // 미니샵 -->
+
+						<!-- 미니샵 -->
+						<div class="minishop_list_item">
+							<span class="ci"><img src="//img.happyshopping.kr/img_static/img_logo/594_80_35.png" alt="이름" /></span>
+							<span class="name">유니크컴</span>
+						</div>
+						<!-- // 미니샵 -->
+
+						<!-- 미니샵 -->
+						<div class="minishop_list_item">
+							<span class="ci"><img src="//img.happyshopping.kr/img_static/img_logo/594_80_35.png" alt="이름" /></span>
+							<span class="name">유니크컴</span>
+						</div>
+						<!-- // 미니샵 -->
+
+						<!-- 미니샵 -->
+						<div class="minishop_list_item">
+							<span class="ci"><img src="//img.happyshopping.kr/img_static/img_logo/594_80_35.png" alt="이름" /></span>
+							<span class="name">유니크컴</span>
+						</div>
+						<!-- // 미니샵 -->
+					</div>
+
+					<div class="main_minishop_pager">
+						<strong class="cnt">총 <span>999</span>개</strong>
+						<a href="#" class="btn_all">전체보기 <i class="icon-add"></i></a>
+					</div>
+				</div>
+				<!-- // 파워셀러 -->
+			</article>
+			<!-- // 미니샵 리스트 -->
+		</div>
+	</div>
+
+	<!-- 공지사항 -->
+	<div id="notice">
+		<h2 class="tit-h2">공지사항</h2>
+		<div class="notice_contents">
+			<a href="#">[당첨자 발표] 미디엄가이드 오픈기념 35% 할인 이벤트 당첨 미디엄가이드 오픈기념 35% 할인 이벤트 당첨</a>
+
+			<span class="date">17.07.01</span>
+		</div>
+	</div>
+	<!-- // 공지사항 -->
+
+	<!-- footer -->
+	<footer id="footer-m-basic">
+		<div class="footer-m-basic_body">
+			<div class="footer-m-basic_body_btn">
+				<a href="#" class="btn_footer-m-basic_body_btn">로그아웃</a>
+				<a href="#" class="btn_footer-m-basic_body_btn">PC버전</a>
+				<button type="button" class="btn_footer-m-basic_body_btn">홈 바로가기 추가</button>
+				<button type="button" class="btn_fold"><i class="icon-angle-down"></i> 더보기</button>
+				<button type="button" class="btn_fold"><i class="icon-angle-up"></i> 접기</button>
+			</div>
+
+			<!-- 더보기시 보임 -->
+			<div class="footer-m-basic_body_detail" style="display:">
+				<ul>
+					<li>행복쇼핑 주식회사 대표이사 : 강공승</li>
+					<li>개인정보관리책임자 : 김기범(<a href="mailto:purity@pping.kr">purity@pping.kr</a>) </li>
+					<li>사업자등록번호 : 105-87-89183</li>
+					<li>통신판매번호 : 제 2015-서울용산-00997호 <a href="https://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2015302015030200996&area1=&area2=&currpage=1&searchKey=01&searchVal=%C7%E0%BA%B9%BC%EE%C7%CE%20%C1%D6%BD%C4%C8%B8%BB%E7&stdate=&enddate=" target="_blank" class="btn_info">정보확인</a></li>
+					<li>(04373) 서울특별시 용산구 청파로 46, 7층 (한강로3가, 한통빌딩)</li>
+					<li>팩스 : 0505-300-4602 <em class="bar">|</em> 고객센터 : <a href="tel:1600-4602" class="service">1600-4602 <i class="icon-phone"></i></a></li>
+				</ul>			
+			</div>
+			<!-- // 더보기시 보임 -->
+
+			<ul class="footer-m-basic_body_menu">
+				<li>
+					<a href="https://www.pping.co/" target="_blank">회사소개</a>
+				</li>
+				<li>
+					<a href="https://www.pping.co/recruit/apply" target="_blank">인재채용</a>
+				</li>
+				<li>
+					<a href="http://help.minishop.pping.kr/main/faq_write/?cat=14" target="_blank">입점제휴문의</a>
+				</li>
+				<li>
+					<a href="https://www.pping.kr/policy" target="_blank">이용약관</a>
+				</li>
+			</ul>
+
+			<p class="copyright">&copy;HappyShopping Inc.</p>
+		</div>
+	</footer>
+	<!-- // footer -->
+
+	<!-- footer-m-bar -->
+	<div class="footer-m-bar">
+		<ul>
+			<li class="active"><a href="#"><em class="icon-bottom_home"></em>행복쇼핑 홈</a></li>
+			<li><a href="#"><em class="icon-bottom_menu"></em>상품분류</a></li>
+			<li><a href="#"><em class="icon-bottom_zoomlens"></em>검색</a></li>
+			<li><a href="#"><em class="icon-bottom_user"></em>MY 쇼핑</a></li>
+			<li><a href="#"><em class="icon-bottom_phone"></em>고객센터</a></li>
+		</ul>
+	</div>
+	<!-- // footer-m-bar -->
+
+	<div class="etc_aside">
+		<a href="recently_viewed_products.html" class="btn_lately_product">최근본<br />상품</a>
+
+		<a href="#wrap" class="icon-bar_arrow_up btn_page_atop"><span class="ir">상단으로</span></a>
+	</div>
+</div>
+
+<!-- test react 적용시 제거 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(".btn_gnb_all").click(function() {
+		if (!$(".layer_gnb_all").is(':visible')) {
+			$("#wrap").addClass("modal");
+		} else {
+			$("#wrap").removeClass("modal");
+		}
+
+		$(".layer_gnb_all").toggle();
+	});
+
+	$(".btn_fold").click(function() {
+		$(".footer-m-basic_body_fold").toggleClass("unfold");
+	});
+
+	$(window).on("scroll", function() {
+		curationLnbScroll();
+    });
+});
+
+function curationLnbScroll() {
+    currentScrollTop = $(window).scrollTop();
+    var curationLnbTop = $(".main_curation_lnb").offset().top + 40;
+    var curationLnbTop2 = $(".main_curation_lnb").offset().top + 30;
+
+    if (currentScrollTop > curationLnbTop) {
+        $(".main_curation_lnb.snap").addClass("fixed");
+        $("#wrap").removeClass("modal");
+    } else {
+    	if ($(".layer_gnb_all").is(":visible")) {
+    		$("#wrap").addClass("modal");
+    	} 
+    	
+    	$(".main_curation_lnb.snap").removeClass("fixed");
+    }
+
+    if (currentScrollTop > 96) {
+        $(".gnb-m-basic.snap").addClass("fixed");
+    } else {
+    	$(".gnb-m-basic.snap").removeClass("fixed");
+    }
+
+    if (currentScrollTop > curationLnbTop2) {
+        $(".gnb-m-basic.snap").removeClass("fixed");
+    } 
+}
+</script>
+</body>
+</html>

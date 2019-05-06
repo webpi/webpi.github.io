@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>배송지 수정 | 행복쇼핑</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="행복쇼핑, 행복, 쇼핑, 컴퓨터, PC, 조립PC, 조립컴퓨터, 노트북, 태블릿, 상품 추천, 가격비교, 가격비교사이트, 가격비교 싸이트, 가격 검색, 최저가, 추천, 인터넷쇼핑, 온라인쇼핑, 쇼핑, 쇼핑몰, 싸게 파는 곳, 싸게 살 수 있는 곳" />
+	<meta name="description" content="행복쇼핑은 컴퓨터, 조립PC에 특화된 온라인 견적 가격비교 사이트 입니다. 안전구매시스템(전자보증,에스크로)을 갖춘 쇼핑몰, 미니샵의 최저 가격 정보를 보여드립니다. 쇼핑의 행복! 행복쇼핑" />
+
+	<!-- 웹폰트용 -->
+    <script src="https://ajax.pping.kr/font/js/hpping.webfont.js"></script>
+    <script>
+        const hpping = new hppingFont();
+        hpping.init({
+            href: 'https://ajax.pping.kr/font/css/hpping.webfont.css'
+        });
+    </script>
+    <!-- // 웹폰트용 -->
+
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_comm.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/buttons.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/board.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_forms.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_layers.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/header.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/footer.css" />
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/mobile_order.css" />
+
+	<!-- <link rel="stylesheet" href="../../../assets/css/mobile_comm.css" />
+	<link rel="stylesheet" href="../../../assets/css/buttons.css" />
+	<link rel="stylesheet" href="../../../assets/css/board.css" />
+	<link rel="stylesheet" href="../../../assets/css/mobile_forms.css" />
+	<link rel="stylesheet" href="../../../assets/css/mobile_layers.css" />
+	<link rel="stylesheet" href="../../../assets/css/header.css" />
+	<link rel="stylesheet" href="../../../assets/css/footer.css" />
+	<link rel="stylesheet" href="../../../assets/css/mobile_order.css" /> -->
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+	<header class="header-m-page">
+		<div class="header-m-page_body">
+			<h1 class="tit-h1">
+				배송지 수정 <!-- 추가일시 배송지 추가 -->
+			</h1>
+
+			<a href="#" class="btn_page_prev"><i class="icon-arrow_back"></i> <span class="ir">이전</span></a>
+		</div>
+	</header>
+	<!-- // header -->
+
+	<div id="container">
+		<div class="container_order">
+			<section class="order_address">
+				<form>
+					<fieldset>
+						<legend><span>배송지 입력</span></legend>
+						<div class="order_address_input">
+							<table class="board">
+								<caption><span>상세</span></caption>
+								<colgroup>
+									<col style="width:90px" />
+									<col />
+								</colgroup>
+								<tbody>
+								<tr>
+									<th scope="row"><label for="id-f1">수령인 이름</label></th>
+									<td>
+										<div class="box-td">
+											<input type="text" id="id-f1" class="istyle" style="width:100%" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="id-f2">배송지명</label></th>
+									<td>
+										<div class="box-td">
+											<input type="text" id="id-f2" class="istyle" style="width:100%" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="id-f3">휴대전화</label></th>
+									<td>
+										<div class="box-td">
+											<div class="phonebox">
+												<select id="id-f3" class="sstyle">
+													<option>010</option>
+												</select>
+												<span class="dash">-</span>
+												<input type="tel" id="id-f2" class="istyle ctr" />
+												<span class="dash">-</span>
+												<input type="tel" id="id-f2" class="istyle ctr" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="vt"><label for="id-f4">배송지</label></th>
+									<td>
+										<div class="box-td">
+											<div class="addressbox">
+												<div class="zipcode">
+													<input type="number" id="id-f4" class="istyle ctr" />
+													<button type="button" class="btn_zipcode">우편번호</button>
+													<span class="icheck">
+														<input type="checkbox" id="id-checkbox1" name="name-checkbox1" />
+														<label for="id-checkbox1"><span>기본 배송지로 선택</span></label>
+													</span>
+												</div>
+												<input type="text" title="주소" class="istyle" />
+												<input type="text" title="상세주소" class="istyle" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="order_fixed_footer">
+							<div class="button-group ctr">
+								<button type="button" class="btn_border">취소</button>
+								<button type="button" class="btn_flat">수정 <!-- 추가일시 추가 --></button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</section>
+		</div>
+	</div>
+</div>
+</body>
+</html>

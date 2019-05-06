@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=950">
+	<title>쇼핑의 행복! 행복쇼핑 (가격비교)</title>
+	<meta name="description" content="행복쇼핑은 컴퓨터, 조립PC에 특화된 온라인 견적 가격비교 사이트 입니다. 안전구매시스템(전자보증,에스크로)을 갖춘 쇼핑몰, 미니샵의 최저 가격 정보를 보여드립니다. 쇼핑의 행복! 행복쇼핑">
+	<meta name="Keywords" content="행복쇼핑, 행복, 쇼핑, 컴퓨터, PC, 조립PC, 조립컴퓨터, 노트북, 태블릿, 상품 추천, 가격비교, 가격비교사이트, 가격비교 싸이트, 가격 검색, 최저가, 추천, 인터넷쇼핑, 온라인쇼핑, 쇼핑, 쇼핑몰, 싸게 파는 곳, 싸게 살 수 있는 곳" />
+	<link rel="shortcut icon" href="//img.happyshopping.kr/img_static/img/_v2/sso/pping.ico" type="image/x-icon">
+	<!-- IcoMoon App - Icon Font stylesheets -->
+	<link href="https://s3.amazonaws.com/icomoon.io/44051/talkppingkr/style.css" rel="stylesheet" type="text/css">
+	<!-- Bootstrap stylesheets from CDN -->
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!-- Datatables Responsive from CDN -->
+	<link href="http://cdn.datatables.net/1.10.4/css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+	<link href="http://cdn.datatables.net/responsive/1.0.1/css/dataTables.responsive.css" rel="stylesheet" type="text/css">
+	<!-- Pixel Admin's stylesheets -->
+	<link href="//ajax.pping.kr/_v2/css_global/bootstrap_ui/bootstrap-ui.1471496334.css" rel="stylesheet" type="text/css">
+	<link href="//ajax.pping.kr/_v2/css_global/bootstrap_ui/pages.1471496333.css" rel="stylesheet" type="text/css">
+	<link href="//ajax.pping.kr/_v2/css_global/bootstrap_ui/rtl.1471496332.css" rel="stylesheet" type="text/css">
+	<link href="//ajax.pping.kr/_v2/css_global/bootstrap_ui/themes.1471496331.css" rel="stylesheet" type="text/css">
+	<!-- Author's custom stylesheets -->
+	<link href="//ajax.pping.kr/_v2/css/new_login/sso_common.min.1422351679.css" rel="stylesheet" type="text/css">
+	<link href="//ajax.pping.kr/_v2/css/new_login/sso_member.min.1426214891.css" rel="stylesheet" type="text/css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<style>
+	/* reset */
+	html body.page-signin {
+		overflow-y: scroll;
+		min-width: 950px;
+		background: #fff !important;
+	}
+	html body.page-signin:before {
+		display: none;
+	}
+
+	.page-signin .signin-container {
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		width: 402px;
+		margin: 0 0 0 -402px !important;
+		border-radius: 0;
+		line-height: 1;
+	}
+
+	.page-signin .signin-container .signin-form {
+		width: 402px !important;
+		padding: 0;
+		border: 1px solid #ddd;
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+
+	.page-signin .signin-container .signin-form .logo {
+		display: block;
+		padding: 36px 0 24px;
+		text-align: center
+	}
+
+	.page-signin .signin-container .signin-form .signin-form_body {
+		padding: 0 30px 30px
+	}
+
+	.page-signin .signin-container .signin-form .signin-with {
+		margin: 0 0 30px
+	}
+
+	.content_bnr {
+		position: absolute;
+		top: 246px;
+		left: 0;
+		width: 100%;
+		padding-left: 50%;
+		box-sizing: border-box;
+	}
+	.content_bnr .content_bnr_adv {
+		display: none;
+	}
+	.content_bnr .content_bnr_adv.show {
+		display: block;
+	}
+	.content_bnr .content_bnr_adv .name {
+		min-height: 81px;
+		margin-left: 30px;
+	}
+	.content_bnr .content_bnr_adv .bnr-small {
+		width: 430px;
+		height: 230px;
+		margin: 30px 0 0 -30px;
+	}
+	.content_bnr .content_bnr_adv .bnr-big {
+		display: none;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		top: 104px;
+		width: 100%;
+	}
+	.content_bnr .content_bnr_adv .bnr-big a img:first-child {
+		position: relative;
+		left: 50%;
+		margin-left: -960px;
+	}
+	.content_bnr .content_bnr_adv .bnr-big:hover {
+		display: block
+	}
+	.content_bnr .content_bnr_adv .bnr-small:hover ~ .bnr-big {
+		display: block;
+	}
+
+	.content_bnr .content_bnr_adv .happytree-event .btn-e {
+		position: absolute;
+		bottom: 112px;
+		left: 50%;
+		margin-left: -133px;
+		z-index: 2;
+	}
+	</style>
+</head>
+
+<body class="page-signin">
+<!-- 로그인 컨테이너 시작 -->
+<div class="signin-container">
+	<!-- 정보 입력 시작 -->
+	<div class="signin-form">
+		<span class="logo">
+			<a href="https://www.pping.kr/"><img src="http://img.happyshopping.kr/img_static/img_pres/_v3/logo_happyshopping_login.png" alt="행복쇼핑"></a>
+		</span>
+
+		<!-- 비즈니스 플랫폼 링크 시작 -->
+		<div class="signin-with">
+			<a href="index.html" class="signin-with-btn" id="forgot-password-link"><span>BUSINESS PLATFORM</span></a>
+		</div>
+		<!--// 비즈니스 플랫폼 링크 끝 -->
+
+		<div class="signin-form_body">
+			<!-- 메시지 영역 시작 -->
+			<p class="logout-message">
+				<!-- 로그아웃 메시지 -->
+				<span class="text01 "><span class="icon-info3"></span> 행복쇼핑에서 안전하게 로그아웃 되었습니다. </span>
+				<!-- 아이디 입력 null 메시지 -->
+				<span class="text02 display-none">
+					<span class="icon-info3"></span> 아이디를 입력하세요.
+				</span>
+				<!-- 비밀번호 입력 null 메시지 -->
+				<span class="text03 display-none">
+					<span class="icon-info3"></span> 비밀번호를 입력하세요.
+				</span>
+				<!-- 아이디, 비밀번호 입력 오류 메시지 -->
+				<span class="text04 display-none">
+					<span class="icon-info3"></span> 아이디/비밀번호를 다시 확인해 주세요. <em> 입력하신 아이디 또는 비밀번호가 일치하지 않거나 행복쇼핑에 등록되지 않은 아이디입니다.<br> 비밀번호는 대/소문자 구분하여 입력하시기 바랍니다.</em>
+				</span>
+			</p>
+			<!--// 메시지 영역 끝 -->
+
+			<!-- 관리자 로그인 시작 -->
+			<div class="admin-login display-none">
+				<ul class="info-list">
+					<li><strong> 님</strong></li>
+					<li><strong>&nbsp;&#183;&nbsp;</strong></li>
+					<li><a href="javascript:window.location.href='//sso.pping.kr/logout'">로그아웃</a></li>
+					<li><strong>&nbsp;&#183;&nbsp;</strong></li>
+					<li><a href="javascript:window.location.href='http://mypage.minishop.pping.kr'">마이페이지</a></li>
+					<li><strong>&nbsp;&#183;&nbsp;</strong></li>
+					<li><a href="#none">도움말</a></li>
+				</ul>
+
+				<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+					<h4>A PHP Error was encountered</h4>
+					<p>Severity: Notice</p>
+					<p>Message: Undefined variable: f_auth</p>
+					<p>Filename: main/login.php</p>
+					<p>Line Number: 263</p>
+				</div>
+
+				<div class="bar">
+					<strong>관리자 로그인</strong>
+				</div>
+
+				<!-- 로그인 검색 시작 -->
+				<div class="row">
+					<div class="col-xs-12 col-lg-5">
+						<select class="form-control" id="type1">
+							<option  value="1">쇼핑몰명</option>
+							<option  value="2">상호</option>
+							<option  value="3">아이디</option>
+						</select>
+					</div>
+					<div class="col-xs-12 col-lg-7">
+						<div class="input-group input-group-sm">
+							<input type="text" class="form-control" placeholder="Search..." name="serch_val1" id="serch_val1" value="">
+							<span class="input-group-btn">
+								<button class="btn" onclick="serch_mall()">
+									<span class="icon-search"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--// 로그인 검색 끝 -->
+
+				<!-- 쇼핑몰 리스트 시작 -->
+				<div class="table-primary shop-sec">
+					<table id="jq-datatables-login" class="display nowrap" cellspacing="0" width="100%">
+						<colgroup>
+							<col width="10%">
+							<col width="*">
+							<col width="15%">
+						</colgroup>
+						<thead>
+						<tr>
+							<th></th>
+							<th>업체명</th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<!--// 쇼핑몰 리스트 끝 -->
+			</div>
+			<!--// 관리자 로그인 끝 -->
+
+			<!-- 일반 사용자 로그인 시작 -->
+			<form action="" id="signin-form_id" class="">
+				<div class="form-group w-icon">
+					<input type="text" name="signin_username" id="username_id" class="form-control input-lg" placeholder="아이디">
+					<span class="icon-user signin-form-icon"></span>
+				</div>
+
+				<div class="form-group w-icon">
+					<input type="password" name="signin_password" id="password_id" class="form-control input-lg" placeholder="비밀번호">
+					<span class="icon-locked signin-form-icon"></span>
+				</div>
+
+				<div class="form-actions">
+					<input type="button" onclick="form_submit()" value="로그인" class="signin-btn bg-primary">&nbsp;&nbsp;
+					<input type="button" onclick="window.location.href='https://sso.pping.kr/join'" value="회원가입" class="signin-btn bg-warning">
+					<div>
+						<a href="javascript:window.location.href='https://sso.pping.kr/search'" class="forgot-password">아이디</a>&nbsp;&#183;
+						<a href="javascript:window.location.href='https://sso.pping.kr/search/password'" class="forgot-password">비밀번호 찾기</a>
+					</div>
+				</div>
+			</form>
+			<!--// 일반 사용자 로그인 끝 -->
+
+			<!-- 비즈니스 플랫폼 시작 -->
+			<div class="password-reset-form business" id="password-reset-form">
+				<div class="header">
+					<div class="signin-text">
+						<span>BUSINESS PLATFORM</span>
+						<div class="close">&times;</div>
+					</div>
+				</div>
+
+				<div class="contents-sec">
+
+					<h4>
+					행복쇼핑의 다양한 비즈니스 플랫폼이 여러분의 <strong>성공적인 사업</strong>을 도와드립니다.
+				</h4>
+					<span>행복쇼핑의 다양한 비즈니스를 경험해 보세요.</span>
+
+					<ul class="btn-platform">
+						<li><button type="submit" class="btn btn-primary" onclick="window.location.href='http://minishop.wbp.pping.kr/main/information'">가격비교 입점</button></li>
+						<li><button type="submit" class="btn btn-primary" onclick="window.location.href='http://minishop.wbp.pping.kr/'">미니샵</button></li>
+						<li><button type="submit" class="btn btn-primary" onclick="window.location.href='http://minishop.wbp.pping.kr'">마케팅 플랫폼</button></li>
+						<li><button type="submit" class="btn btn-primary" onclick="window.location.href='http://stdpc.pping.kr/'">표준 PC</button></li>
+						<li><button type="submit" class="btn btn-primary" onclick="window.location.href='http://talk.pping.kr'">PC견적/상담</button></li>
+						<li><button type="submit" class="btn btn-primary disabled">SCM/리서치</button></li>
+						<li><button type="submit" class="btn btn-primary" onclick="window.location.href='http://point.minishop.pping.kr/'">해피포인트</button></li>
+						<li><button type="submit" class="btn btn-primary disabled">상품컨텐츠</button></li>
+						<li><button type="submit" class="btn btn-primary narrow disabled">협력제안</button></li>
+					</ul>
+				</div>
+			</div>
+			<!--// 비즈니스 플랫폼 끝 -->
+		</div>
+	</div>
+	<!--// 정보 입력 끝 -->
+</div>
+<!--// 로그인 컨테이너 끝 -->
+
+<!-- 배너 시작 -->
+<div class="content_bnr">
+	<div class="content_bnr_adv content_bnr_adv1">
+		<div class="name"><img src="http://img.happyshopping.kr/img_static/img_pres/_v3/btn_happytree_login.png" alt="해피트리 런칭 이벤트"></div>
+
+		<div class="bnr-small">
+			<img src="http://img.happyshopping.kr/img_static/img_pres/_v3/img_login_happytree_event.png" alt="해피트리 런팅 이벤트 제작비 20%, 서비스 10+1, 페이백 10%">
+		</div>
+
+		<div class="bnr-big happytree-event">
+			<a href="https://www.happytree.io/" target="_blank">
+				<img src="http://img.happyshopping.kr/img_static/img_pres/_v3/login_happytree_event.jpg" alt="해피트리 이벤트">
+				<img src="http://img.happyshopping.kr/img_static/img_pres/_v3/btn_happytree_event.png" alt="이벤트 바로가기" class="btn-e">
+			</a>
+		</div>
+	</div>
+
+	<div class="content_bnr_adv content_bnr_adv2">
+		<div class="name"></div>
+
+		<div class="bnr-small">
+			<img src="http://img.happyshopping.kr/img_static/img_pres/_v3/img_login_msi_event.jpg" alt="너굴맨이 추천하니 안심하라구!">
+		</div>
+
+		<div class="bnr-big">
+			<a href="https://shopping.pping.kr/1010600000/1163759" target="_blank"><img src="http://img.happyshopping.kr/img_static/img_pres/_v3/login_msi_event.jpg" alt="MSI 이벤트"></a>
+		</div>
+	</div>
+</div>
+<!--// 배너 끝 -->
+
+<!-- Get jQuery from Google CDN -->
+<!--[if lt IE 9]>
+	<script type="text/javascript"> window.jQuery || document.write('<script src="/http:/ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">'+"<"+"/script>"); </script>
+	<script type="text/javascript"> window.jQuery || document.write('<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js">'+"<"+"/script>"); </script>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+	<script type="text/javascript"> window.jQuery || document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">'+"<"+"/script>"); </script>
+<!--<![endif]-->
+
+
+<script>
+function ui_loginBnrRandom() {
+	var bnrRandom = $('.content_bnr_adv');
+	bnrRandom.eq(Math.floor(Math.random() * bnrRandom.length)).addClass("show");
+} ui_loginBnrRandom();
+</script>
+</body>
+
+</html>

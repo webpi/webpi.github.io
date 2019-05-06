@@ -1,0 +1,1406 @@
+@charset "utf-8";
+
+html {
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Spoqa Han Sans', "맑은 고딕", "Malgun Gothic", "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "NanumGothic", Dotum, "돋움", Helvetica, sans-serif;
+	color: $base_color1;
+	background: #f2f4f7;
+	line-height: 1;
+}
+
+blockquote,
+button,
+code,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul,
+figure {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+li {
+	vertical-align: top;
+}
+
+fieldset,
+img {
+	border: 0 none;
+}
+
+em {
+	font-style: normal;
+}
+
+button img {
+	vertical-align: top;
+}
+
+button[disabled=disabled] {
+	outline: none;
+}
+
+button,
+label {
+	cursor: pointer;
+}
+
+caption span,
+legend span {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+}
+
+table,
+td,
+tr {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: inherit;
+
+	&:active,
+	&:hover,
+	&:link,
+	&:visited {
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+	
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+hr {
+	height: 0;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+}
+
+button,
+input,
+textarea {
+	line-height: normal;
+	outline: 0 none !important;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+	overflow: visible;
+	border-radius: 0;
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+textarea {
+	overflow: auto;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	resize: none;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=number],
+input[type=search],
+input[type=email],
+input[type=url] {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+select {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+// common class
+.blind {
+	display: none;
+}
+
+.visible {
+	visibility: hidden;
+}
+
+.ir {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	width: 1%;
+	height: 1%;
+	margin: 0;
+	padding: 0;
+	font-size: 1%;
+	line-height: 1%;
+}
+
+.ico-plus:before {
+	content: "";
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	background: url('//img.happyshopping.kr/img_static/img_pres/_v3/ico_grayplus.png') no-repeat 0 0;
+	background-size: cover;
+}
+
+.ico-minus:before {
+	content: "";
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	background: url('//img.happyshopping.kr/img_static/img_pres/_v3/ico_redminus.png') no-repeat 0 0;
+	background-size: cover;
+}
+
+// layout
+#wrap {
+	min-width: 320px;
+
+	&.modal:before {
+		content: "";
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(32,41,52,0.5);
+		z-index: 19;
+	}
+}
+
+.container_comm {
+	overflow: hidden;
+}
+
+.etc_aside {
+	position: fixed;
+	bottom: 60px;
+	right: 5px;
+
+	// 최근본상품
+	.btn_lately_product {
+		display: block;
+		padding-top: 4px;
+		border-radius: 3px;
+		font-size: 10px;
+		text-align: center;
+		line-height: 1.2;
+		@include btn(35px, 35px, 1px solid #3776c7, #fff, $point_color1);
+	}
+
+	// 상단으로
+	.btn_page_atop {
+		display: block;
+		margin-top: 5px;
+		border-radius: 3px;
+		font-size: 30px;
+		text-align: center;
+		@include btn(35px, 35px, 1px solid $base_color3, $base_color2, rgba(255,255,255,0.75));
+		
+		&:before {
+			position: relative;
+			top: 3px;
+		}
+	}
+}
+
+// 메세지
+.alert-msg {
+	display: block;
+	padding: 8px 0;
+	font-size: 12px;
+	color: $point_color1;
+	line-height: 1.4;
+	@include box-sizing;
+
+	&.fail {
+		color: $point_color2;
+	}
+}
+
+// 공지사항
+#notice {
+	position: relative;
+	height: 36px;
+	margin: 7.5px 0 1px;
+	padding: 0 66px 0 15px;
+	font-size: 12px;
+	background: #fff;
+	line-height: 36px;
+	@include clear;
+	
+	.tit-h2 {
+		float: left;
+		margin-right: 9px;
+		font-size: 13px;
+	}
+
+	.notice_contents {
+		@include truncate(100%);
+
+		a {
+			color: $base_color2;
+		}
+
+		.date {
+			position: absolute;
+			right: 15px;
+			top: 0;
+			color: $base_color1;
+			letter-spacing: 0;
+		}
+	}
+
+	.slick-slider {
+		overflow: hidden;
+		height: 36px;
+
+		.slick-slide {
+			border: 0;
+		}
+	}
+}
+
+// 최근 본 상품
+.comm_recently {
+	border-top: 3px solid $point_color1;
+	border-bottom: 1.5px solid $base_color3;
+	
+	.comm_recently_top {
+		position: relative;
+		height: 40px;
+		padding: 0 15px;
+		border-bottom: 1px solid $base_color3;
+		background: #f8f8f8;
+
+		p {
+			font-size: 11px;
+			color: $base_color2;
+			line-height: 40px;
+		}
+
+		.btn_recently_del {
+			position: absolute;
+			right: 15px;
+			top: 50%;
+			margin-top: -12.5px;
+			font-size: 9px;
+			border-radius: 3px;
+			@include btn(45px, 25px, 1px solid $base_color3, $base_color3, #fff);
+		}
+	}
+
+	.comm_recently_list {
+		position: relative;
+		min-height: 91px;
+		background: #fff;
+
+		.recently_item {
+			position: relative;
+			border-top: 1px solid #e5e5e5;
+			background: #fff;
+			z-index: 1;
+
+			a {
+				display: block;
+				margin-right: 35px;
+				padding: 10px 15px;
+				@include clear;
+			}
+
+			.thumb {
+				overflow: hidden;
+				float: left;
+				margin-right: 10px;
+				border: 1px solid #e5e5e5;
+				@include size(69px);
+			}
+
+			.recently_item_info {
+				overflow: hidden;
+
+				.name {
+					display: block;
+					font-size: 12px;
+					color: $base_color1;
+					font-weight: bold;
+					line-height: 1.3;
+				}
+
+				.low_price {
+					display: block;
+					margin-top: 6px;
+					font-size: 10px;
+					color: $base_color3;
+					strong {
+						font-size: 14px;
+						color: $point_color2;
+						letter-spacing: 0;
+					}
+				}
+			}
+
+			.btn_item_del {
+				position: absolute;
+				right: 15px;
+				top: 8px;
+				font-size: 16px;
+				@include btn(null, null, 0, $base_color3, transparent);
+			}
+
+
+			&:first-child {
+				border-top: 0;
+			}
+		}
+
+		&:after {
+			content: "최근 본 상품이 없습니다.";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 91px;
+			font-size: 14px;
+			color: $base_color2;
+			font-weight: bold;
+			text-align: center;
+			line-height: 91px;
+			z-index: 0;
+		}
+	}
+}
+
+// 미니샵 마크
+.malltype {
+	display: inline-block;
+	text-align: center;
+
+	&.big {
+		width: 53px;
+		height: 23px;
+		border-radius: 12px;
+		font-size: 11px;
+		line-height: 23px;
+		vertical-align: middle;
+	}
+
+	&.small {
+		width: 56px;
+		height: 14px;
+		border-radius: 8px;
+		font-size: 9px;
+		line-height: 14px;
+		vertical-align: 2px;
+	}
+	
+	&.nor {
+		border: 1px solid #956ccc;
+		color: #956ccc;
+	}
+
+	&.card {
+		border: 1px solid #0f4f9f;
+		color: #0f4f9f;
+	}
+}
+
+// 셀러
+.sellertype {
+	display: block;
+	width: 53px;
+	height: 20px;
+	padding: 2px 0 0 12px;
+	font-size: 11px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 20px;
+
+	&.powerseller {
+		background: url('//img.happyshopping.kr/img_static/img_mobile/comm/bg_sellertype_power.png') no-repeat 0 0;
+		background-size: cover;
+	}
+
+	&.newseller {
+		background: url('//img.happyshopping.kr/img_static/img_mobile/comm/bg_sellertype_new.png') no-repeat 0 0;
+		background-size: cover;
+	}
+}
+
+// 라벨
+.mark-event {
+	@include mark_badge(#f47300);
+}
+
+.mark-hotdeal {
+	@include mark_badge(#db00f5);
+}
+
+.mark-parts {
+	@include mark_badge(#2aa8d7);
+}
+
+.mark-pc {
+	@include mark_badge(#6715d0);
+}
+
+.mark-std {
+	color: #fff;
+	background: #f34522;
+	border-radius: 9px;
+	@include mark_badge(#f34522);
+}
+
+.mark-stdpc {
+	color: #3366cc;
+	@include mark_badge(#3366cc);
+}
+
+
+// 쿠폰
+.badge_dup {
+	@include badge_coupon(#ff3333);
+}
+
+.badge_discount {
+	@include badge_coupon(#3399cc);
+}
+
+.badge_saving {
+	@include badge_coupon(#1aa827);
+}
+
+.badge_event {
+	@include badge_coupon(#ef3701);
+}
+
+.badge_hotdeal {
+	@include badge_coupon(#ce32ff);
+}
+
+
+// 신고하기
+.comm_minishop_report {
+	padding: 25px 10px 50px;
+	border-top: 3px solid $point_color1;
+	background: #fff;
+
+	.comm_minishop_report_box {
+		margin-bottom: 25px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.tit-h2 {
+		height: 20px;
+		font-size: 12px;
+	}
+
+	.box-board {
+		border-top-width: 1px;
+		border-bottom: 1px solid $base_color3;
+		border-color: $base_color3;
+	}
+
+	.board {
+		&.thead-lft {
+			th {
+				border-right: 1px solid #e5e5e5;
+
+				span {
+					margin: 0;
+					padding: 14px;
+					font-size: 12px;
+					color: $base_color1;
+				}
+
+				&.vt {
+					vertical-align: top;
+				}
+			}
+
+			td {
+				font-size: 13px;
+
+				.box-td {
+					padding: 7px 5px 7px 15px;
+					line-height: 16px;
+					letter-spacing: 0;
+				}
+			}
+		}
+		tr:last-child th,
+		tr:last-child td {
+			border-bottom: 0;
+		}
+
+		.btn_company_intro {
+			margin-left: 10px;
+			border-radius: 3px;
+			font-size: 9px;
+			@include btn(45px, 25px, 1px solid $base_color3, $base_color2, #fff);
+			vertical-align: 0;
+		}
+
+		.map {
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.btn_info {
+			display: inline-block;
+			margin-left: 10px;
+			border-radius: 3px;
+			font-size: 9px;
+			@include btn(45px, 25px, 1px solid $base_color3, $base_color2, #fff, center, 23px);
+			vertical-align: 0;
+		}
+
+		.igroup {
+			li {
+				width: 50%;
+				padding: 5px 0;
+
+				.icheck {
+					display: block;
+					height: auto;
+
+					label {
+						display: block;
+
+						span {
+							width: calc(100% - 30px);
+							font-size: 13px;
+							vertical-align: -4px;
+							letter-spacing: 0;
+							white-space: normal;
+							vertical-align: top;
+						}
+					}
+				}
+
+				@include respond-to($size960) {
+				  width: 25%;
+				}
+			}
+
+			&.portrait li {
+				width: 100%;
+			}
+		}
+	}
+
+	.box-textarea {
+		margin-top: 15px;
+	}
+
+	.box-fileadd {
+		margin-top: 5px;
+
+		.btn_fileadd {
+			position: relative;
+			display: block;
+			font-size: 11px;
+			font-weight: bold;
+			@include btn(100%, 30px, 0, #fff, $base_color3, center, 30px);
+
+			.btn_ifile {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 100%;
+				height: 30px;
+				font-size: 16px;
+				opacity: 0;
+			}
+		}
+
+		.box-fileadd_list {
+			li {
+				position: relative;
+				height: 40px;
+				border-bottom: 1px solid #e5e5e5;
+				font-size: 11px;
+				color: $base_color2;
+				line-height: 40px;
+				letter-spacing: 0;
+
+				.btn_fileadd_del {
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -12.5px;
+					border-radius: 3px;
+					font-size: 11px;
+					@include btn(36px, 25px, 1px solid $base_color3, $base_color2, #f8f8f8);
+				}
+			}
+		}
+
+		.box-fileadd_noti {
+			margin-top: 8px;
+
+			li {
+				font-size: 11px;
+				color: $base_color2;
+				line-height: 1.5;
+			}
+		}
+	}
+
+	.caution {
+		display: block;
+		height: 41px;
+		margin-top: 15px;
+		border: 1px solid $base_color3;
+		font-size: 12px;
+		background: #f8f8f8;
+		line-height: 41px;
+		text-align: center;
+	}
+
+	.processing-result {
+		margin-top: 25px;
+
+		.icheck label span {
+			font-size: 12px;
+			vertical-align: -3px;
+
+			strong {
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	.button-group {
+		margin-top: 15px;
+	}
+
+	.btn_cncl {
+		font-size: 14px;
+		font-weight: bold;
+		@include btn(50%, 50px, 1px solid $point_color1, $point_color1, #fff);
+	}
+
+	.btn_submit {
+		font-size: 14px;
+		font-weight: bold;
+		@include btn(50%, 50px, 0, #fff, $point_color1);
+	}
+}
+
+// 상품 상세보기 해피트리
+.comm_item_happytree {
+	border-top: 3px solid $point_color1;
+	background: #fff;
+
+	.comm_item_happytree_body {
+		.comm_item_happytree_body_top {
+			position: relative;
+			height: 60px;
+			padding: 0 80px 0 15px;
+			border-bottom: 1px solid $base_color3;
+			font-size: 0;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				width: 0;
+				height: 60px;
+				vertical-align: middle;
+			}
+
+			.name {
+				display: inline-block;
+				font-size: 14px;
+				vertical-align: middle;
+				line-height: 1.2;
+			}
+
+			.btn_product_detail{
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				margin-top: -12.5px;
+				font-size: 11px;
+				border-radius: 3px;
+				@include btn(45px, 25px, 1px solid $base_color3, $base_color3, #fff, center, 23px);
+			}
+		}
+
+		.comm_item_happytree_body_main {
+			position: relative;
+			padding-bottom: 15px;
+
+			.photo-list {
+				overflow: hidden;
+				margin: 0 auto;
+				text-align: center;
+
+				img {
+					margin: 0 auto;
+				}
+			}
+
+			.photo-cnt {
+				position: absolute;
+				left: 50%;
+				bottom: 10px;
+				width: 54px;
+				height: 28px;
+				margin-left: -27px;
+				border-radius: 14px;
+				font-size: 12px;
+				color: #fff;
+				font-weight: bold;
+				background: #b2b2b2;
+				line-height: 28px;
+				text-align: center;
+				letter-spacing: 0;
+			}
+
+			.comm_item_happytree_main_aside {
+				position: absolute;
+				right: 15px;
+				bottom: 10px;
+				font-size: 0;
+
+				.btn_fork,
+				.btn_share {
+					margin-left: 8px;
+					border-radius: 14px;
+					@include btn(28px, 28px, 1px solid #b2b2b2, #616161, #fff);
+					
+					&:before {
+						position: relative;
+						top: 2px;
+						font-size: 18px;
+					}
+					
+					&.icon-favorite:before {
+						color: $point_color1;
+					}
+				}
+			}
+
+			.layer-pop_share {
+				bottom: 50px;
+			}
+		}
+	}
+
+	.comm_item_happytree_footer {
+		position: relative;
+		background: #464646;
+
+		a {
+			display: block;
+			height: 65px;
+			padding: 15px 0 0 104px;
+			font-size: 14px;
+			color: $base_color3;
+			font-weight: bold;
+			background: url("//img.happyshopping.kr/img_static/img_mobile/comm/m_happytree.png") no-repeat 36px 50%;
+			background-size: 57px auto;
+			line-height: 1.3;
+			@include box-sizing();
+
+			span {
+				color: #39f789;
+			}
+
+			em {
+				color: #febb5a;
+			}
+
+			[class^="icon-"] {
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				margin-top: -14px;
+				border: 1px solid #fff;
+				border-radius: 14px;
+				text-align: center;
+				line-height: 26px;
+				@include size(28px);
+				@include box-sizing();
+
+				&:before {
+					font-size: 15px;
+					color: #fff;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+// 공통 레이어
+.layer-pop {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+
+	&:before {
+		content: "";
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 30;
+	}
+
+	.layer-pop_center {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 40;
+		@include flexbox();
+		@include justify-content(center);
+		@include align-items(center);
+	}
+}
+
+// 공통 레이어
+.layer-pop_comm {
+	overflow: hidden;
+	position: relative;
+	width: calc(100% - 80px);
+	padding: 24px;
+	border: 1px solid #444;
+	background: #fff;
+	text-align: center;
+	z-index: 40;
+	@include box-sizing();
+
+	.layer-pop_msg {
+		display: block;
+		margin-top: 20px;
+		font-size: 14px;
+		font-weight: bold;
+
+		strong {
+			color: $point_color1;
+		}
+	}
+
+	.layer-pop_button {
+		margin-top: 20px;
+		font-size: 0;
+		
+		a {
+			display: inline-block;
+		}
+
+		.btn_layer-pop_border {
+			width: calc(50% - 3px);
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			@include btn(null, 40px, 1px solid $point_color1, $point_color1, #fff, null, 38px);
+		}
+
+		.btn_layer-pop_flat {
+			width: calc(50% - 3px);
+			margin-left: 6px;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			@include btn(null, 40px, 0, #FFF, $point_color1, null, 40px);
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 24px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-weight: bold;
+		}
+	}
+}
+
+// 견적담기 레이어
+.layer-pop_add {
+	overflow: hidden;
+	position: relative;
+	width: calc(100% - 80px);
+	padding: 24px;
+	border: 1px solid #444;
+	background: #fff;
+	text-align: center;
+	z-index: 40;
+	@include box-sizing();
+
+	.layer-pop_minishop {
+		display: block;
+		margin-top: 9px;
+		font-size: 14px;
+		color: $base_color3;
+		font-weight: bold;
+	}
+
+	.layer-pop_msg {
+		display: block;
+		margin-top: 20px;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 1.4;
+
+		strong {
+			color: $point_color1;
+		}
+	}
+
+	.layer-pop_minishop + .layer-pop_msg {
+		margin-top: 9px;
+	}
+
+	.layer-pop_button {
+		margin-top: 20px;
+		font-size: 0;
+		@include flexbox();
+		
+		.btn_layer-pop_border {
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			@include flex(1, 1);
+			@include btn(null, 40px, 1px solid $point_color1, $point_color1, #fff, null, 38px);
+		}
+
+		.btn_layer-pop_flat {
+			margin-left: 5px;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			@include flex(1, 1);
+			@include btn(null, 40px, 0, #FFF, $point_color1, null, 40px);
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 24px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-weight: bold;
+		}
+	}
+}
+
+// 미니샵 신고하기 확인 레이어
+.layer_report_conform {
+	position: relative;
+	width: 81.944vw;
+	max-width: 290px;
+	padding: 25px;
+	border: 1px solid #444;
+	background: #fff;
+	text-align: center;
+	@include box-sizing();
+
+	.tit {
+		display: block;
+		padding: 10px 0;
+		font-size: 14px;
+	}
+
+	.msg {
+		margin-top: 10px;
+		padding: 12px 18px;
+		font-size: 11px;
+		background: #f2f2f2;
+		line-height: 1.4;
+	}
+
+	.btn_submit {
+		margin-top: 20px;
+		font-size: 14px;
+		@include btn(117px, 40px, 0, #fff, $point_color1);
+	}
+
+	.btn_apply {
+		margin-top: 20px;
+		font-size: 12px;
+		font-weight: bold;
+		@include btn(117px, 40px, 1px solid $base_color3, $base_color2, #fff);
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 24px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-weight: bold;
+		}
+	}
+}
+
+// 찜레이어
+.layer-pop_fork {
+	overflow: hidden;
+	position: relative;
+	width: calc(100% - 80px);
+	padding: 25px;
+	border: 1px solid #444;
+	background: #fff;
+	text-align: center;
+	z-index: 40;
+	@include box-sizing();
+
+	.layer-pop_msg {
+		display: block;
+		margin-top: 10px;
+		font-size: 12px;
+		font-weight: bold;
+		line-height: 1.4;
+
+		strong {
+			color: $point_color1;
+		}
+	}
+
+	.layer-pop_button {
+		margin-top: 15px;
+		text-align: center;
+
+		.btn_layer-pop_flat {
+			font-size: 12px;
+			font-weight: bold;
+			@include btn(117px, 40px, 0, #fff, $point_color1);
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 24px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-weight: bold;
+		}
+	}
+}
+
+// 행복쇼핑 정책
+.container_policy {
+	background: #fff;
+
+	.policy_body {
+		margin-bottom: 61px;
+		border-top: 3px solid $point_color1;
+
+		.policy_body_lnb {
+			-webkit-overflow-scrolling: touch;
+			overflow-x: auto;
+			overflow-y: hidden;
+			border-bottom: 1px solid #ededed;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			ul {
+				@include flexbox();
+
+				li {
+					height: 45px;
+					padding: 0 14px;
+					line-height: 45px;
+					@include flex(0, 0, auto);
+
+					.btn {
+						font-size: 12px;
+						font-weight: bold;
+
+						&.active {
+							color: $point_color1;
+						}
+					}
+				}
+			}
+		}
+
+		.policy_body_main {
+			padding: 20px 15px;
+		}
+
+		.tit-h2 {
+			font-size: 16px;
+		}
+
+		.tit-h3 {
+			padding: 15px 0;
+			font-size: 14px;
+		}
+
+		.tit-h4 {
+			padding: 10px 0;
+			font-size: 12px;	
+		}
+
+		.tit-h5 {
+			padding: 10px 0;
+			font-size: 11px;	
+		}
+
+		.tit-h3 + .tit-h4 {
+			padding-top: 0;
+		}
+
+		.policy_body_main_top {
+			margin-top: 20px;
+			padding: 12px 15px;
+			border: 1px solid #ccc;
+			font-size: 11px;
+			color: $base_color2;
+			background: #f6f6f6;
+			line-height: 1.6;
+
+			span {
+				display: block;
+				margin-top: 20px;
+			}
+		}
+
+		.policy_body_main_box {
+			font-size: 11px;
+			line-height: 1.6;
+
+			ol {
+				padding-left: 10px;
+
+				li {
+					list-style: decimal;
+				}
+			}
+
+			.paragraph {
+				margin-top: 10px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.button-group {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 5px;
+		border-top: 1px solid $base_color3;
+		background: #f2f2f2;
+		@include box-sizing();
+
+		.btn_apply {
+			font-size: 16px;
+			font-weight: bold;
+			@include btn(100%, 50px, 0, #fff, $point_color1);
+		}
+	}
+}
+
+// 없음 
+.comm_notfound {
+	padding: 100px 0;
+	font-size: 16px;
+	color: $base_color1;
+	font-weight: bold;
+	text-align: center;
+}
+
+// 로딩
+.comm_loading {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	z-index: 100;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -20px 0 0 -20px;
+		background: url("//img.happyshopping.kr/img_static/img_pres/_v3/loading_w.gif") no-repeat 50% 50%;
+		background-size: cover;		
+		@include size(40px);
+	}
+
+	&.off {
+		display: none;
+	}
+}
+
+.comm_loading_inside {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	z-index: 1;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 30%;
+		margin: -20px 0 0 -20px;
+		background: url("//img.happyshopping.kr/img_static/img_mobile/comm/comm_loading.gif") no-repeat 50% 50%;
+		background-size: 40px 40px;		
+		@include size(40px);
+	}
+
+	&.off {
+		display: none;
+	}
+}
+
+// 벨리데이션
+.ifocus {
+	border-color: $point_color1 !important;
+}
+
+.ialarm {
+	border-color: $point_color2 !important;
+	background: #fffbfb !important;
+}

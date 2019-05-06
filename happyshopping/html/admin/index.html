@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="ko" />
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>관리자 · 행복쇼핑</title>
+
+	<!-- 웹폰트용 -->
+    <script src="https://ajax.pping.kr/font/js/hpping.webfont.js"></script>
+    <script>
+        const hpping = new hppingFont();
+        hpping.init({
+            href: 'https://ajax.pping.kr/font/css/hpping.webfont.css'
+        });
+    </script>
+    <!-- // 웹폰트용 -->
+
+	<link rel="stylesheet" href="//dev-ajax.pping.kr:8080/_v3/css/pc/new/admin.css" />
+	<!-- <link rel="stylesheet" href="../../../assets/css/admin.css" /> -->
+</head>
+<body>
+<!-- modal 사용시 클래스 modal -->
+<div id="wrap">
+	<!-- header -->
+	<header id="header">
+		<!-- 숏컷 -->
+		<div class="header_shortcuts">
+			<h1 class="tit-h1 btn_shortcuts"><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/img_happyshopping_ci.png" alt="행복쇼핑" title="바로가기" /></h1>
+
+			<div class="header_shortcuts_list">
+				<strong class="t">바로가기</strong>
+				<ul>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_happyshoping.jpg" alt="행복쇼핑" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_happyshoping_small.png" alt="행복쇼핑" />행복쇼핑</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_naverpost.jpg" alt="네이버 포스트" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_naverpost_small.jpg" alt="네이버 포스트" />네이버 포스트</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_naverblog.jpg" alt="네이버 블로그" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_naverblog_small.jpg" alt="네이버 블로그" />네이버 블로그</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_facebook.jpg" alt="페이스북" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_facebook_small.jpg" alt="페이스북" />페이스북</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_instagram.jpg" alt="인스타그램" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_instagram_small.jpg" alt="인스타그램" />인스타그램</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_slideshare.jpg" alt="슬라이드쉐어" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_slideshare_small.jpg" alt="슬라이드쉐어" />슬라이드쉐어</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_healingcom.jpg" alt="A/S 힐링컴" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_healingcom_small.jpg" alt="A/S 힐링컴" />힐링컴</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_usafe.jpg" alt="결제 유세이프" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_usafe_small.png" alt="결제 유세이프" />유세이프</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_nicepay.jpg" alt="결제 나이스페이" target="_blank" />
+							<span><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_shortcuts_nicepay_small.png" alt="결제 나이스페이" />나이스페이</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // 숏컷 -->
+
+		<!-- header_main -->
+		<div class="header_main">
+			<!-- 활성화 active, 알림 노티 icon_new -->
+			<button type="button" class="btn_flat icon_new"><span class="ir">메인메뉴</span></button>
+		</div>
+		<!-- // header_main -->
+
+		<!-- header_aside -->
+		<div class="header_aside">
+			<!-- 검색 -->
+			<div class="search">
+				<button type="button" class="btn_search"><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_search.png" alt="검색" /></button>
+
+				<div class="search_form">
+					<form>
+						<fieldset>
+							<legend><span>전체검색</span></legend>
+							<input type="search" class="isearch" placeholder="검색어를 입력해 주세요." title="검색어" />
+							<input type="submit" value="검색하기" class="btn_search_submit" />
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<!-- // 검색 -->
+
+			<!-- 메뉴 -->
+			<div class="header_aside_menu">
+				<div class="header_aside_menu_my">
+					<button type="button" class="btn_my_menu">
+						<span class="btn_my_menu_mobile"><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/btn_header_menu.png" alt="메뉴" /></span>
+						<span class="btn_my_menu_desktop"><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/bg_header_user_photo_small.jpg" alt="메뉴" /></span>
+					</button>
+
+					<div class="header_aside_menu_my_list">
+						<ul>
+							<li><a href="#" class="profile">프로필</a></li>
+							<li><a href="#" class="mypage">마이페이지</a></li>
+							<li><a href="#" class="noti">알림</a></li>
+							<li><a href="#" class="message">메세지</a></li>
+							<li><a href="#" class="set">설정</a></li>
+							<li><a href="#" class="logout">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- header_aside_menu_desktop -->
+				<ul class="header_aside_menu_desktop">
+					<li>
+						<button type="button" class="btn_noti">
+							<em class="ir">알림</em>
+							<span class="new_cnt">99</span>
+						</button>
+
+						<!-- 알림 리스트 -->
+						<div class="list noti_list">
+							<strong class="tit">알림</strong>
+							<div class="list_scroll">
+								<!-- box -->
+								<article class="list_box type_order">
+									<a href="#">
+										<strong class="t">주문</strong>
+										<p class="conts">
+											그래픽카드 주문 되었습니다.
+										</p>
+										<span class="date"><em>2017.05.05</em> 행복쇼핑</span>
+									</a>
+
+									<button type="button" class="btn_favo"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box type_update">
+									<a href="#">
+										<strong class="t">주문</strong>
+										<p class="conts">
+											그래픽카드 주문 되었습니다.
+										</p>
+										<span class="date"><em>2017.05.05</em> 행복쇼핑</span>
+									</a>
+
+									<button type="button" class="btn_favo on"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box type_event">
+									<a href="#">
+										<strong class="t">주문</strong>
+										<p class="conts">
+											그래픽카드 주문 되었습니다.
+										</p>
+										<span class="date"><em>2017.05.05</em> 행복쇼핑</span>
+									</a>
+
+									<button type="button" class="btn_favo"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box type_order">
+									<a href="#">
+										<strong class="t">주문</strong>
+										<p class="conts">
+											그래픽카드 주문 되었습니다.
+										</p>
+										<span class="date"><em>2017.05.05</em> 행복쇼핑</span>
+									</a>
+
+									<button type="button" class="btn_favo"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box type_update">
+									<a href="#">
+										<strong class="t">주문</strong>
+										<p class="conts">
+											그래픽카드 주문 되었습니다.
+										</p>
+										<span class="date"><em>2017.05.05</em> 행복쇼핑</span>
+									</a>
+
+									<button type="button" class="btn_favo on"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box type_event">
+									<a href="#">
+										<strong class="t">주문</strong>
+										<p class="conts">
+											그래픽카드 주문 되었습니다.
+										</p>
+										<span class="date"><em>2017.05.05</em> 행복쇼핑</span>
+									</a>
+
+									<button type="button" class="btn_favo"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+							</div>
+							<a href="#" class="btn_all_view">전체보기</a>
+						</div>
+						<!-- // 알림 리스트 -->
+					</li>
+					<li>
+						<button type="button" class="btn_msg">
+							<em class="ir">메시지</em>
+							<span class="new_cnt">99</span>
+						</button>
+
+						<!-- 메시지 리스트 -->
+						<div class="list msg_list">
+							<strong class="tit">메시지</strong>
+							<div class="list_scroll">
+								<!-- box -->
+								<article class="list_box">
+									<a href="#">
+										<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_496000/img_495216/500.jpg" alt="이름"></span>
+										<p class="conts">
+											osh007님으로부터 쪽지가 도착하였습니다.
+										</p>
+										<span class="date"><em>2017.05.05 osh0720</em></span>
+									</a>
+
+									<button type="button" class="btn_favo"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box">
+									<a href="#">
+										<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_496000/img_495216/500.jpg" alt="이름"></span>
+										<p class="conts">
+											osh007님으로부터 쪽지가 도착하였습니다.
+										</p>
+										<span class="date"><em>2017.05.05 osh0720</em></span>
+									</a>
+
+									<button type="button" class="btn_favo on"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box">
+									<a href="#">
+										<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_496000/img_495216/500.jpg" alt="이름"></span>
+										<p class="conts">
+											osh007님으로부터 쪽지가 도착하였습니다.
+										</p>
+										<span class="date"><em>2017.05.05 osh0720</em></span>
+									</a>
+
+									<button type="button" class="btn_favo"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box">
+									<a href="#">
+										<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_496000/img_495216/500.jpg" alt="이름"></span>
+										<p class="conts">
+											osh007님으로부터 쪽지가 도착하였습니다.
+										</p>
+										<span class="date"><em>2017.05.05 osh0720</em></span>
+									</a>
+
+									<button type="button" class="btn_favo"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box">
+									<a href="#">
+										<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_496000/img_495216/500.jpg" alt="이름"></span>
+										<p class="conts">
+											osh007님으로부터 쪽지가 도착하였습니다.
+										</p>
+										<span class="date"><em>2017.05.05 osh0720</em></span>
+									</a>
+
+									<button type="button" class="btn_favo on"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+
+								<!-- box -->
+								<article class="list_box">
+									<a href="#">
+										<span class="photo"><img src="//img.happyshopping.kr/img_shopping/img_goods/img_496000/img_495216/500.jpg" alt="이름"></span>
+										<p class="conts">
+											osh007님으로부터 쪽지가 도착하였습니다.
+										</p>
+										<span class="date"><em>2017.05.05 osh0720</em></span>
+									</a>
+
+									<button type="button" class="btn_favo"><span class="ir">즐겨찾기</span></button>
+								</article>
+								<!-- // box -->
+							</div>
+							<a href="#" class="btn_all_view">전체보기</a>
+						</div>
+						<!-- // 메시지 리스트 -->
+					</li>
+				</ul>
+				<!-- // header_aside_menu_desktop -->
+			</div>
+			<!-- // 메뉴 -->
+		</div>
+		<!-- // header_aside -->
+	</header>
+	<!-- // header -->
+
+	<section class="containerwrap">
+		<!-- flat btn_flat 클릭시 on -->
+		<div class="flat">
+			<div class="flat_body">
+				<!-- user -->
+				<div class="user">
+					<span class="photo"><img src="//img.happyshopping.kr/img_static/img_mobile/admin/comm/bg_header_user_photo.jpg" alt="이름" /></span>
+					<div class="user_info">
+						<strong class="name">ohseunghyun님</strong>
+
+						<div class="user_menu">
+							<button type="button" class="btn_favo">즐겨찾기</button>
+							<button type="button" class="btn_deposit">예치금</button>
+							<button type="button" class="btn_logout">로그아웃</button>
+						</div>
+					</div>
+
+					<div class="user_aside">
+						<button type="button" class="btn_user_set"><span class="ir">>설정</span></button>
+						<button type="button" class="btn_user_clse"><span class="ir">닫기</span></button>
+					</div>
+				</div>
+				<!-- // user -->
+
+				<!-- nav -->
+				<div class="nav">
+					<ul class="nav_head">
+						<!-- 알림 노티 icon_new -->
+						<li class="active">
+							<button type="button" class="btn_gnb active icon_new"><span class="ir">메뉴</span></button>
+						</li>
+						<li>
+							<button type="button" class="btn_noti"><span class="ir">알림</span></button>
+						</li>
+						<li>
+							<button type="button" class="btn_set"><span class="ir">설정</span></button>
+						</li>
+					</ul>
+
+					<div class="nav_body">
+						<!-- gnb -->
+						<div class="gnb">
+							<ul class="gnb_one">
+								<li>
+									<h2 class="tit-h2"><a href="#" class="btn_gnb_home">홈</a></h2>
+								</li>
+								<li>
+									<h2 class="tit-h2"><a href="#" class="btn_gnb_event">이벤트<span class="new_cnt">99</span></a></h2>
+								</li>
+								<li class="sub active on">
+									<h2 class="tit-h2"><a href="#" class="btn_gnb_product">상품</a></h2>
+									<!-- 2depth -->
+									<ul class="gnb_two">
+										<li class="sub on">
+											<h3 class="tit-h3"><a>상품관리<span class="new_cnt">99</span></a></h3>
+											<!-- 3depth -->
+											<ul class="gnb_three">
+												<li>
+													<h4 class="tit-h4">
+														<a href="#">영재 Special Edition<span class="new_cnt">9</span></a>
+													</h4>
+												</li>
+												<li class="active">
+													<h4 class="tit-h4">
+														<a href="#">소프트웨어/전산소모품 모음</a>
+													</h4>
+												</li>
+												<li >
+													<h4 class="tit-h4">
+														<a href="#">영재 Special Edition<span class="new_cnt">8</span></a>
+													</h4>
+												</li>
+											</ul>
+											<!-- // 3depth -->
+										</li>
+										<li>
+											<h3 class="tit-h3"><a href="#">통계/데이터/관리대상</a></h3>
+										</li>
+										<li>
+											<h3 class="tit-h3"><a href="#">SCM 기본설정</a></h3>
+										</li>
+									</ul>
+									<!-- // 2depth -->
+								</li>
+								<li class="sub">
+									<h2 class="tit-h2"><a href="#" class="btn_gnb_coupon">쿠폰</a></h2>
+
+									<!-- 2depth -->
+									<ul class="gnb_two">
+										<li class="sub">
+											<h3 class="tit-h3"><a>상품관리<span class="new_cnt">99</span></a></h3>
+											<!-- 3depth -->
+											<ul class="gnb_three">
+												<li>
+													<h4 class="tit-h4">
+														<a href="#">영재 Special Edition<span class="new_cnt">9</span></a>
+													</h4>
+												</li>
+												<li class="active">
+													<h4 class="tit-h4">
+														<a href="#">소프트웨어/전산소모품 모음</a>
+													</h4>
+												</li>
+												<li >
+													<h4 class="tit-h4">
+														<a href="#">영재 Special Edition<span class="new_cnt">8</span></a>
+													</h4>
+												</li>
+											</ul>
+											<!-- // 3depth -->
+										</li>
+										<li>
+											<h3 class="tit-h3"><a href="#">통계/데이터/관리대상</a></h3>
+										</li>
+										<li>
+											<h3 class="tit-h3"><a href="#">SCM 기본설정</a></h3>
+										</li>
+									</ul>
+									<!-- // 2depth -->
+								</li>
+								<li>
+									<h2 class="tit-h2"><a href="#" class="btn_gnb_template">템플릿</a></h2>
+								</li>
+								<li>
+									<h2 class="tit-h2"><a href="#" class="btn_gnb_system">시스템 관리</a></h2>
+								</li>
+							</ul>
+						</div>
+						<!-- // gnb -->
+
+						<!-- -->
+						<div class="blind">
+							<h2 class="ir">알림</h2>
+						</div>
+						<!-- // -->
+
+						<!-- -->
+						<div class="blind">
+							<h2 class="ir">설정</h2>
+						</div>
+						<!-- // -->
+					</div>
+				</div>
+				<!-- // nav -->
+
+				<!-- 닫기 -->
+				<button type="button" class="icon-triangle-left btn_flat"><em class="ir">닫기</em></button>
+				<!-- // 닫기 -->
+			</div>
+		</div>
+		<!-- // flat -->
+
+		<!-- flat-mini -->
+		<div class="flat-mini">
+			<div class="flat-mini_body">
+				<!-- gnb -->
+				<div class="gnb">
+					<ul class="gnb_one">
+						<!-- 활성 active 서브메뉴 on -->
+						<li class="active">
+							<h2 class="tit-h2"><a href="#" class="btn_gnb_home"><span class="ir">홈</span></a></h2>
+						</li>
+						<li>
+							<h2 class="tit-h2"><a href="#" class="btn_gnb_event"><span class="ir">이벤트</span></a></h2>
+						</li>
+						<li class="active on">
+							<h2 class="tit-h2"><a href="#" class="btn_gnb_product icon_new"><span class="ir">상품</span></a></h2>
+							<!-- 2depth -->
+							<ul class="gnb_two">
+								<li class="sub on">
+									<h3 class="tit-h3"><a>상품관리<span class="new_cnt">99</span></a></h3>
+									<!-- 3depth -->
+									<ul class="gnb_three">
+										<li>
+											<h4 class="tit-h4">
+												<a href="#">영재 Special Edition<span class="new_cnt">9</span></a>
+											</h4>
+										</li>
+										<li class="active">
+											<h4 class="tit-h4">
+												<a href="#">소프트웨어/전산소모품 모음</a>
+											</h4>
+										</li>
+										<li >
+											<h4 class="tit-h4">
+												<a href="#">영재 Special Edition<span class="new_cnt">8</span></a>
+											</h4>
+										</li>
+									</ul>
+									<!-- // 3depth -->
+								</li>
+								<li>
+									<h3 class="tit-h3"><a href="#">통계/데이터/관리대상</a></h3>
+								</li>
+								<li>
+									<h3 class="tit-h3"><a href="#">SCM 기본설정</a></h3>
+								</li>
+							</ul>
+							<!-- // 2depth -->
+						</li>
+						<li class="sub">
+							<h2 class="tit-h2"><a href="#" class="btn_gnb_coupon"><span class="ir">쿠폰<span class="new_cnt">9</span></span></a></h2>
+
+							<!-- 2depth -->
+							<ul class="gnb_two">
+								<li class="sub">
+									<h3 class="tit-h3"><a>상품관리<span class="new_cnt">99</span></a></h3>
+									<!-- 3depth -->
+									<ul class="gnb_three">
+										<li>
+											<h4 class="tit-h4">
+												<a href="#">영재 Special Edition<span class="new_cnt">9</span></a>
+											</h4>
+										</li>
+										<li class="active">
+											<h4 class="tit-h4">
+												<a href="#">소프트웨어/전산소모품 모음</a>
+											</h4>
+										</li>
+										<li >
+											<h4 class="tit-h4">
+												<a href="#">영재 Special Edition<span class="new_cnt">8</span></a>
+											</h4>
+										</li>
+									</ul>
+									<!-- // 3depth -->
+								</li>
+								<li>
+									<h3 class="tit-h3"><a href="#">통계/데이터/관리대상</a></h3>
+								</li>
+								<li>
+									<h3 class="tit-h3"><a href="#">SCM 기본설정</a></h3>
+								</li>
+							</ul>
+							<!-- // 2depth -->
+						</li>
+						<li>
+							<h2 class="tit-h2"><a href="#" class="btn_gnb_template"><span class="ir">템플릿</span></a></h2>
+						</li>
+						<li>
+							<h2 class="tit-h2"><a href="#" class="btn_gnb_system"><span class="ir">시스템 관리</span></a></h2>
+						</li>
+					</ul>
+				</div>
+				<!-- // gnb -->
+			</div>
+		</div>
+		<!-- // flat-mini -->
+
+		<!-- container -->
+		<div id="container">
+			<div class="container_main">
+				<!-- container_head -->
+				<div class="container_head">
+					<div class="container_head_wrap">
+						<form>
+							<fieldset>
+								<legend><span>미니샵 선택</span></legend>
+								<div class="container_head_tit">
+									<h2 class="tit-h2">
+										<em class="cate">운영1</em>
+										<em class="cate">카드</em>
+										<span>표준PC 운영1</span>
+									</h2>
+								</div>
+
+								<!-- container_head_list -->
+								<div class="container_head_list">
+									<div class="container_head_list_body">
+										<h3 class="tit-h3">멀티샵 설정</h3>
+										<ul class="igroup_radio">
+											<li>
+												<span class="iradio">
+													<input type="radio" id="id-rdo1" name="name-rdo" checked />
+													<label for="id-rdo1">
+														<span>
+															<em class="cate">운영1</em>
+															<em class="cate">카드</em>
+															표준PC 운영1
+														</span>
+													</label>
+												</span>
+
+												<a href="#" class="btn_minishop">미니샵 이동 <i class=" icon-redo"></i></a>
+											</li>
+											<li>
+												<span class="iradio">
+													<input type="radio" id="id-rdo2" name="name-rdo" />
+													<label for="id-rdo2">
+														<span>
+															<em class="cate">운영1</em>
+															<em class="cate">카드</em>
+															표준PC 운영1
+														</span>
+													</label>
+												</span>
+
+												<a href="#" class="btn_minishop">미니샵 이동 <i class=" icon-redo"></i></a>
+											</li>
+											<li>
+												<span class="iradio">
+													<input type="radio" id="id-rdo3" name="name-rdo" />
+													<label for="id-rdo3">
+														<span>
+															<em class="cate">운영1</em>
+															<em class="cate">카드</em>
+															표준PC 운영1
+														</span>
+													</label>
+												</span>
+
+												<a href="#" class="btn_minishop">미니샵 이동 <i class=" icon-redo"></i></a>
+											</li>
+										</ul>
+
+										<div class="form_button">
+											<a href="#" class="btn_multishop_set">멀티샵 설정</a>
+											<input type="submit" value="적용" class="btn_submit" />
+										</div>
+									</div>
+								</div>
+								<!-- // container_head_list -->
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<!-- // container_head -->
+
+				<div class="container_body">
+					내용
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</section>
+
+	<!-- footer -->
+	<footer id="footer">
+
+	</footer>
+	<!-- // footer -->
+</div>
+
+<!-- test react 적용시 제거 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(".header_aside_menu_my_list").hide();
+	$(".header_shortcuts_list").hide();
+	$(".container_head_list").hide();
+	$(".noti_list").hide();
+	$(".msg_list").hide();
+
+	$(".btn_flat").click(function() {
+		$(".header_aside_menu_my_list").hide();
+		$(".header_shortcuts_list").hide();
+		$(".container_head_list").hide();
+		$(".noti_list").hide();
+		$(".msg_list").hide();
+
+		_this = $(".flat");
+		if ($(this).is(".active")) {
+			_this.removeClass("on");
+		} else {
+			_this.addClass("on");
+		}
+		$(this).toggleClass("active");
+	});
+
+	$(".btn_shortcuts").click(function() {
+		$(".header_aside_menu_my_list").hide();
+		$(".container_head_list").hide();
+		$(".noti_list").hide();
+		$(".msg_list").hide();
+		$(".flat").removeClass("on");
+		var wrap = $("#wrap");
+		_this = $(".header_shortcuts_list");
+		if (_this.css("display") == "none") {
+			wrap.addClass("modal");
+		} else {
+			wrap.removeClass("modal");
+		}
+		_this.toggle();
+	});
+
+	$(".btn_my_menu").click(function() {
+		$(".header_shortcuts_list").hide();
+		$(".container_head_list").hide();
+		$(".noti_list").hide();
+		$(".msg_list").hide();
+		$(".flat").removeClass("on");
+		var wrap = $("#wrap");
+		_this = $(".header_aside_menu_my_list");
+		if (_this.css("display") == "none") {
+			wrap.addClass("modal");
+		} else {
+			wrap.removeClass("modal");
+		}
+		_this.toggle();
+	});
+
+	$(".header_aside_menu .btn_noti").click(function() {
+		$(".header_aside_menu_my_list").hide();
+		$(".header_shortcuts_list").hide();
+		$(".container_head_list").hide();
+		$(".msg_list").hide();
+		_this = $(".noti_list");
+		_this.toggle();
+	});
+
+	$(".header_aside_menu .btn_msg").click(function() {
+		$(".header_aside_menu_my_list").hide();
+		$(".header_shortcuts_list").hide();
+		$(".container_head_list").hide();
+		$(".noti_list").hide();
+		_this = $(".msg_list");
+		_this.toggle();
+	});
+
+	$(".container_head_tit").click(function() {
+		$(".header_shortcuts_list").hide();
+		$(".noti_list").hide();
+		$(".msg_list").hide();
+		$(".flat").removeClass("on");
+		_this = $(".container_head_list");
+		_this.toggle();
+	});
+});
+</script>
+</body>
+</html>

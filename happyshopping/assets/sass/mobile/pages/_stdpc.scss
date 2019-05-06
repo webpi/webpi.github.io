@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+.container_stdpc {
+	margin-bottom: 56px;
+	background: #fff;
+
+	.stdpc_body {
+		border-top: 3px solid $point_color1;
+
+		.stdpc_body_main {
+			overflow: hidden;
+			position: relative;
+
+			// lnb
+			.lnb_cates {
+				.lnb_cates_box {
+					li {
+						&:last-child {
+							border-bottom: 1px solid #e5e5e5;
+						}
+
+						&.active {
+							border-bottom: 0;
+						}
+					}
+				}
+			}
+
+			// 표준pc, 기획pc 상품
+			.stdpc_body_items {
+				-webkit-overflow-scrolling: touch;
+				overflow-x: hidden;
+				overflow-y: auto;
+				width: calc(100vw - 85px);
+				height: calc(100vh - 106px);
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				.stdpc_banner_box {
+					overflow: hidden;
+					height: 40px;
+					
+					a {
+						display: block;
+					}
+
+					img {
+						display: block;
+						height: 40px;
+						max-width: none;
+						margin: 0 auto;
+					}
+				}
+
+				.stdpc_search_box {
+					position: relative;
+					padding: 12px 50px 12px 15px;
+					border-bottom: 1px solid $base_color3;
+					font-size: 12px;
+					line-height: 16px;
+
+					strong {
+						color: $point_color2;
+					}
+
+					.btn_stdpc_search_box_clse {
+						position: absolute;
+						right: 15px;
+						top: 10px;
+						border-radius: 10px;
+						@include btn(20px, 20px, 0, $base_color3, #e5e5e5);
+					}
+				}
+
+				.stdpc_body_items_top {
+					position: relative;
+					height: 41px;
+					padding: 7px 15px;
+					@include box-sizing();
+
+					.tit-h3 {
+						font-size: 14px;
+						line-height: 26px;
+					}
+
+					.sstyle {
+						min-width: 80px;
+						height: 26px;
+						border-radius: 3px;
+						font-size: 11px;
+					}
+
+					.stdpc_body_items_top_search {
+						position: absolute;
+						right: 15px;
+						top: 7px;
+						font-size: 0;
+
+						[class^="btn_"] {
+							display: inline-block;
+						}
+
+						.btn_detail_search {
+							font-size: 11px;
+							border-radius: 3px;
+							@include btn(58px, 26px, 1px solid $base_color3, $base_color2, #fff,center, 24px);
+						}
+
+						.btn_search {
+							margin-left: 5px;
+							font-size: 20px;
+							color: $base_color2;
+							vertical-align: middle;
+							line-height: 26px;
+							text-align: center;
+							letter-spacing: 0;
+							@include size(26px);
+						}
+					}
+				}
+
+				.stdpc_body_items_main {
+					.stdpc_body_items_main_head {
+						font-size: 0;
+						@include flexbox();
+
+						.btn {
+							font-size: 13px;
+							font-weight: bold;
+							@include flex();
+							@include btn(null, 31px, 0, #fff, $base_color3);
+
+							&.active {
+								background: #6c6cd1;
+							}
+						}
+					}
+
+					.stdpc_body_items_main_box {
+						padding: 0 15px;
+
+						.stdpc_body_items_main_box_in {
+							overflow: hidden;
+
+							.stdpc_body_items_main_box_in_head {
+								font-size: 0;
+								@include flexbox();
+
+								.btn {
+									margin-right: -1px;
+									font-size: 12px;
+									font-weight: bold;
+									@include btn(null, 36px, 1px solid #ccc, $base_color2, #fff);
+									border-bottom-color: #6c6cd1;
+									@include flex();
+
+									&:last-child {
+										margin-right: 0;
+									}
+
+									&.active {
+										position: relative;
+										border-color: #6c6cd1 #6c6cd1 #fff #6c6cd1;
+										color: #6c6cd1;
+									}
+								}
+							}
+
+							.stdpc_body_items_main_box_in_cnt {
+								height: 30px;
+								font-size: 12px;
+								text-align: right;
+								line-height: 30px;
+								letter-spacing: 0;
+							}
+
+							.stdpc_body_items_main_box_in_list {
+								margin: 0 -5px;
+								@include clear;
+
+								.item-product_type2 {
+									float:left;
+									padding-top: 15px;
+									padding-bottom: 15px;
+
+									&:nth-child(n+3) {
+										border-top: 1px solid $base_color3;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				// 표준pc
+				.stdpc_body_items_stdpc {
+					.stdpc_body_items_main {
+						.mediumguide {
+							height: 40px;
+							padding-top: 12px;
+							font-size: 0;
+							@include box-sizing();
+
+							img {
+								width: 70px;
+								vertical-align: middle;
+							}
+
+							a {
+								display: inline-block;
+								width: calc(100% - 70px - 8px);
+								margin-left: 8px;
+								padding-top: 1px;
+								font-size: 12px;
+								color: $base_color1;
+								line-height: 13px;
+								vertical-align: middle;
+								@include truncate();
+							}
+						}
+					}
+				}
+				
+				// 기획pc
+				.stdpc_body_items_planpc {
+					margin-top: 10px;
+
+					.stdpc_body_items_top {
+						border-top: 2px solid $base_color1;
+						border-bottom: 1px solid $base_color3;
+					}
+
+					&.planpc_box {
+						margin-top: 0;
+
+						.stdpc_body_items_top {
+							border-top: 0;
+						}
+
+						.stdpc_body_items_main {
+							padding-bottom: 25px;
+
+							.stdpc_body_items_main_box {
+								margin-top: 20px;
+
+								.stdpc_body_items_main_box_in_list {
+									-webkit-overflow-scrolling: touch;
+									overflow-x: auto;
+									@include flexbox;
+
+									&::-webkit-scrollbar {
+										display: none;
+									}
+
+									.item-product_type2 {
+										float: none;
+										width: 126px; 
+										padding-top: 0;
+										padding-bottom: 0;
+										border-top: 0 !important;
+										@include flex(0, 0, auto);
+									}
+								}
+
+								&:first-child {
+									margin-top: 0;
+								}
+
+							}
+						}
+					}
+				}
+			}
+
+			// 기획전 상품 리스트
+			.stdpc_body_main_planpc {
+				.mediumguide {
+					height: 40px;
+					padding: 12px 15px 0;
+					font-size: 0;
+					border-bottom: 1px solid $base_color3;
+					@include box-sizing();
+
+					img {
+						width: 70px;
+						margin-right: 10px;
+						vertical-align: middle;
+					}
+
+					a,
+					span {
+						display: inline-block;
+						font-size: 12px;
+						vertical-align: middle;
+					}
+
+					a {
+						width: calc(100% - 120px);
+						padding-top: 1px;
+						color: $base_color2;
+						line-height: 13px;
+						@include truncate();
+					}
+
+					span {
+						font-size: 11px;
+						color: $point_color1;
+					}
+				}
+
+				.stdpc_body_main_planpc_list {
+					padding: 0 10px;
+					@include clear;
+
+					.item-product_type2 {
+						float: left;
+						padding-top: 15px;
+						padding-bottom: 15px;
+
+						.subject {
+							height: 45px;
+							padding: 3px 0;
+							font-size: 14px;
+							@include box-sizing();
+						}
+
+						.price {
+							height: 24px;
+							line-height: 1;
+						}
+
+						.btn_info {
+							font-size: 11px;
+							font-weight: bold;
+							@include btn(50%, 28px, 1px solid $point_color1, $point_color1, #fff);
+						}
+
+						.btn_buy {
+							font-size: 11px;
+							font-weight: bold;
+							@include btn(50%, 28px, 0, #fff, $point_color1);
+
+							[class^="icon-"] {
+							    margin-right: 4px;
+							    font-size: 16px;
+							    vertical-align: -2px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.keyword {
+			padding: 0 4px;
+			color: #fff;
+			font-style: normal;
+			background: $point_color2;
+		}
+	}
+}

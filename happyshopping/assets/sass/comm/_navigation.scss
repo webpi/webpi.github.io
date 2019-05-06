@@ -1,0 +1,792 @@
+@charset "utf-8";
+
+// pc
+.gnb {
+	float: left;
+
+	ul {
+		@include clear;
+
+		li {
+			float: left;
+			height: 48px;
+			margin-left: 40px;
+			padding-top: 12px;
+			box-sizing: border-box;
+			@include breakpoint(max-width 1209px) {
+				margin-left: 16px;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			a {
+				display: block;
+				font-size: 14px;
+				color: $base_color1;
+				font-weight: bold;
+				line-height: 22px;
+
+				&:hover {
+					color: $point_color1;
+				}
+
+				&.btn-estimate {
+					height: 22px;
+					padding-left: 26px;
+					background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/ico_gnb_estimate.png') no-repeat 0 0;
+				}
+
+				&.btn-stdpc {
+					height: 22px;
+					padding-left: 26px;
+					background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/ico_gnb_stpc.png') no-repeat 0 0;
+				}
+
+				&.btn-notebook {
+					height: 22px;
+					padding-left: 26px;
+					background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/ico_gnb_notebook.png') no-repeat 0 0;
+				}
+
+				&.btn-happyhotdeal {
+					width: 74px;
+					height: 39px;
+					background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -127px -1390px;
+					line-height: 39px;
+					text-indent: -99999px;
+				}
+			}
+
+			&.happyhotdeal {
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+.nav {
+	position: relative;
+	float: right;
+	padding-top: 12px;
+
+	.tit-h2 {
+		height: 22px;
+		font-size: 14px;
+		color: $base_color1;
+		text-align: center;
+		line-height: 22px;
+		cursor: pointer;
+
+		&:before {
+			display: inline-block;
+			position: relative;
+			top: -2px;
+			width: 22px;
+			height: 22px;
+			margin-right: 5px;
+			color: #fff;
+			font-weight: normal;
+			background: $point_color1;
+			border-radius: 11px;
+			line-height: 22px;
+			vertical-align: middle;
+		}
+
+		.icon-angle-down {
+			position: relative;
+			top: 2px;
+			font-size: 18px;
+			font-weight: 600;
+		}
+		// @include icon('\e913', 18px, after);
+		// &:after {
+		//   position: relative;
+		//   top: -2px;
+		//   display: inline-block;
+		//   font-weight: normal;
+		//   vertical-align: middle;
+		// }
+	}
+	@include clear;
+
+	.nav-category {
+		overflow: hidden;
+		position: relative;
+		float: left;
+		height: 36px;
+		margin-right: 30px;
+
+		.tit-h2 {
+			@include loadIcon($icon-th-large,14px);
+			&:before {
+				line-height: 22px;
+			}
+		}
+
+		.sub {
+			visibility: hidden;
+			position: absolute;
+			left: 50%;
+			top: 48px;
+			margin-left: -124px;
+			padding: 1px;
+			border: 1px solid #0f4f9f;
+			background: #fff;
+			z-index: 13;
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: -7px;
+				left: 50%;
+				width: 13px;
+				height: 7px;
+				margin-left: -6.5px;
+				background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -76px -5px;
+			}
+
+			li {
+				position: relative;
+				margin-top: 1px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				a {
+					display: block;
+					width: 245px;
+					height: 54px;
+					padding-left: 69px;
+					font-size: 14px;
+					color: $base_color2;
+					font-weight: bold;
+					line-height: 54px;
+					box-sizing: border-box;
+
+					&:hover {
+						color: #000;
+					}
+
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: 0;
+						top: 0;
+						@include size (54px);
+						background: #0f4f9f url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_2.png') no-repeat;
+					}
+
+					&.btn1:before {
+						background-position: 0 -846px;
+					}
+
+					&.btn2:before {
+						background-position: -54px -846px;
+					}
+
+					&.btn3:before {
+						background-position: -109px -846px
+					}
+
+					&.btn4:before {
+						background-position: -162px -846px;
+					}
+
+					&.btn5:before {
+						background-position: -216px -846px;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			overflow: visible;
+
+			.sub {
+				visibility: visible;
+				top: 36px;
+			}
+		}
+	}
+
+	.nav-brand {
+		float: left;
+		height: 36px;
+
+		.tit-h2 {
+			@include loadIcon($icon-th-menu,14px);
+			&:before {
+				line-height: 22px;
+				letter-spacing: 0;
+			}
+		}
+
+		.sub {
+			display: none;
+			position: absolute;
+			right: 0;
+			top: 48px;
+			width: 1152px;
+			padding: 18px;
+			border: 1px solid #0f4f9f;
+			background: #fff;
+			z-index: 20;
+			@include breakpoint(max-width 1209px) {
+				width: 912px;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: -7px;
+				right: 34px;
+				width: 13px;
+				height: 7px;
+				background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -76px -5px;
+			}
+
+			.sub_keyword {
+				@include clear;
+
+				.btn-sub_keyword_all {
+					float: left;
+					margin-right: 10px;
+					font-size: 14px;
+					@include btn(72px, 72px, 0, #fff, #f66e52);
+				}
+
+				.sub_keyword_word {
+					overflow: hidden;
+
+					.sub_keyword_word_en,
+					.sub_keyword_word_kr {
+						font-size: 0;
+					}
+
+					.sub_keyword_word_en {
+						margin-top: 6px;
+					}
+
+					button {
+						min-width: 33px;
+						margin-right: 3px;
+						padding: 0 5px;
+						font-size: 16px;
+						@include btn(null, 33px, 1px solid #d3d0e1, $base_color1, #f0eff5);
+
+						&:hover {
+							border-color: #f66e52;
+							color: #fff;
+							background: #f66e52;
+						}
+
+						&.number {
+							margin-left: 17px;
+						}
+
+						@include breakpoint(max-width 1209px) {
+							min-width: 28px;
+						}
+					}
+				}
+			}
+
+			.nav-brand_sub_bnr {
+				position: relative;
+				max-width: 1127px;
+				margin-top: 17px;
+
+				.nav-brand_sub_bnr_stage {
+					overflow: hidden;
+
+					img {
+						max-width: 100%;
+					}
+				}
+
+				.nav-brand_sub_bnr_stage_cnt {
+					opacity: 0;
+					position: absolute;
+					right: 22px;
+					top: 50%;
+					width: 40px;
+					height: 46px;
+					margin-top: -23px;
+					font-size: 14px;
+					color: #fff;
+					background: #70a9f1;
+					line-height: 46px;
+					text-align: center;
+					letter-spacing: 0;
+				}
+
+				.btn_prev,
+				.btn_next {
+					opacity: 0;
+					position: absolute;
+					top: 50%;
+					margin-top: -23px;
+					font-size: 25px;
+					@include btn(22px, 46px, 0, #fff, #70a9f1);
+				}
+
+				.btn_prev {
+					left: 0;
+				}
+
+				.btn_next {
+					right: 0;
+				}
+
+				&:hover {
+					.nav-brand_sub_bnr_stage_cnt,
+					.btn_prev,
+					.btn_next {
+						opacity: 0.5;
+
+						&:hover {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			.nav-brand_sub_list {
+				margin-top: 20px;
+				padding-bottom: 10px;
+
+				.total-cnt {
+					display: block;
+					font-size: 14px;
+					color: $base_color2;
+
+					strong {
+						font-size: 16px;
+						color: #f34522;
+						letter-spacing: 0;
+					}
+				}
+
+				ul {
+					margin-top: 20px;
+					@include clear;
+
+					li {
+						float: left;
+						width: 20%;
+						line-height: 24px;
+
+						a {
+							font-size: 14px;
+							color: $base_color1;
+							@include loadIcon($icon-angle-right,10px,#f34522);
+
+							&:before {
+								display: inline-block;
+								width: 10px;
+								height: 10px;
+								margin: -4px 3px 0 0;
+								border: 1px solid #d3d0e1;
+								font-weight: normal;
+								line-height: 10px;
+								text-align: center;
+								vertical-align: middle;
+							}
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+
+					&.special {
+						a {
+							color: #0f4f9f;
+							font-weight: bold;
+						}
+					}
+
+					&.special + .basic {
+						padding-top: 20px;
+						border-top: 1px dashed #e1dfeb;
+					}
+				}
+
+				.paging-circle {
+					margin-top: 30px;
+				}
+			}
+
+			.btn-clse {
+				position: absolute;
+				right: 5px;
+				bottom: 5px;
+				@include btn(null, null, 0, null, transparent);
+				@include loadIcon($icon-close,50px,#9ec5f6);
+			}
+		}
+
+		&:hover {
+			.sub {
+				display: block;
+			}
+		}
+	}
+}
+
+// 모바일
+.gnb-m-basic {
+	height: 45px;
+	
+	box-shadow: rgba(0, 0, 0, 0.05) 1px 2px 2px;
+	background: #fff;
+
+	.gnb-m-basic_body {
+		position: relative;
+		padding-right: 60px;
+
+		.gnb-m-basic_nav {
+			position: relative;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 15px;
+				height: 45px;
+				background: url('//img.happyshopping.kr/img_static/img_mobile/comm/bg_gnb_m_basic_lft.png') no-repeat 0 0;
+				background-size: cover;
+				z-index: 1;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 15px;
+				height: 45px;
+				background: url('//img.happyshopping.kr/img_static/img_mobile/comm/bg_gnb_m_basic_rgt.png') no-repeat 0 0;
+				background-size: cover;
+				z-index: 1;
+			}
+
+			.gnb-m-basic_nav_main {
+				overflow-x: auto;
+				height: 45px;
+				margin: 0 7.5px;
+				@include flexbox();
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				li {
+					@include flex(0, 0, auto);
+
+					a {
+						display: block;
+						height: 42px;
+						margin: 0 7.5px;
+						font-size: 14px;
+						color: $base_color1;
+						font-weight: bold;
+						text-align: center;
+						line-height: 42px;
+						white-space: nowrap;
+					}
+
+					&.active {
+						a {
+							border-bottom: 3px solid $point_color1;
+							color: $point_color1;
+						}
+					}
+				}
+			}
+		}
+
+		.btn_gnb_all {
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 11px;
+			font-weight: bold;
+			@include btn(60px, 42px, 0, $base_color3, transparent);
+
+			&:before {
+				position: relative;
+				top: 1px;
+				font-size: 14px;
+			}
+		}
+
+		.layer_gnb_all {
+			display: none;
+			position: absolute;
+			top: 52px;
+			left: 0;
+			width: 100vw;
+			background: #fff;
+
+			ul {
+				@include clear;
+
+				li {
+					float: left;
+					width: calc(100% / 3);
+					border-bottom: 1px solid #e5e5e5;
+					border-right: 1px solid #e5e5e5;
+					text-align: center;
+					@include box-sizing;
+
+					&:nth-child(3n) {
+						border-right: 0;
+					}
+
+					a {
+						display: block;
+						height: 40px;
+						font-size: 13px;
+						color: $base_color2;
+						font-weight: bold;
+						line-height: 40px;
+					}
+				}
+			}
+		}
+	}
+
+	&.snap {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+
+		&.fixed {
+			display: block;
+		}
+	}
+}
+
+// 상품분류
+.comm_cate {
+	margin-top: 7.5px;
+	background: #fff;
+
+	.tit {
+		display: block;
+		height: 30px;
+		padding: 0 15px;
+		font-size: 11px;
+		color: $base_color2;
+		line-height: 30px;
+	}
+
+	.comm_cate_depth1 {
+		li {
+			position: relative;
+
+			.btn_comm_cate {
+				position: relative;
+				display: block;
+				padding-left: 60px;
+				font-size: 14px;
+				font-weight: bold;
+				text-align: left;
+				@include btn(100%, 40px, 0, $base_color1, #fff, null, 40px);
+				border-bottom: 1px solid #e5e5e5;
+
+				[class^="icon-d_"] {
+					position: absolute;
+					left: 15px;
+					top: 50%;
+					display: block;
+					margin-top: -15px;
+					border-radius: 15px;
+					font-size: 17px;
+					color: #fff;
+					font-weight: normal;
+					background: $point_color1;
+					text-align: center;
+					line-height: 30px;
+					@include size(30px);
+				}
+
+				[class^="icon-angle-"] {
+					position: absolute;
+					right: 15px;
+					top: 50%;
+					margin-top: -9.5px;
+					font-size: 19px;
+				}
+			}
+
+			&:first-child .btn_comm_cate {
+				border-top: 1px solid #e5e5e5;
+			}
+
+			&.active {
+				.btn_comm_cate {
+					background: #ecf3fd;
+				}
+				
+				.comm_cate_depth2 {
+					display: block;
+				}
+			}
+		}
+		.comm_cate_depth2 {
+			position: relative;
+			display: none;
+			@include clear;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 1px;
+				background: #e5e5e5;
+				line-height: 1;
+			}
+
+			li {
+				float: left;
+				width: 50%;
+				border-right: 1px solid #e5e5e5;
+				border-bottom: 1px solid #e5e5e5;
+				text-align: center;
+				@include box-sizing;
+
+				&:nth-child(2n) {
+					border-right: 0;
+				}
+
+				a {
+					display: block;
+					height: 40px;
+					font-size: 13px;
+					color: $base_color2;
+					font-weight: bold;
+					line-height: 40px;
+				}
+			}
+		}
+	}
+}
+
+// 브랜드 검색
+.comm_brand {
+	margin-top: 7.5px;
+	background: #fff;
+
+	.tit {
+		display: block;
+		height: 30px;
+		padding: 0 15px;
+		font-size: 11px;
+		color: $base_color2;
+		line-height: 30px;
+	}
+
+	.comm_brand_tab {
+		font-size: 0;
+		@include clear;
+		
+		.btn {
+			width: calc(100% / 3);
+			height: 42px;
+			border-width: 1px 0 1px 1px;
+			border-style: solid;
+			border-color: #e5e5e5 #e5e5e5 $point_color1 #e5e5e5;
+			font-size: 14px;
+			color: $base_color1;
+			font-weight: bold;
+			background: #fff;
+			@include box-sizing;
+
+			&:first-child {
+				border-left: 0;
+			}
+
+			&.active {
+				border: 1px solid $point_color1;
+				color: #fff;
+				background: $point_color1;
+
+				& + .btn {
+					border-left: 0;
+				}
+			}
+		}
+	}
+	.comm_brand_box {
+		padding: 0 15px;
+
+		.comm_brand_box_pad {
+			padding-top: 10px;
+			font-size: 0;
+
+			.btn_keypad {
+				width: calc((100% / 10) + 1px);
+				margin: 0 -1px -1px 0;
+				font-size: 13px;
+				font-weight: bold;
+				@include btn(null, 42px, 1px solid #e5e5e5, $base_color1, #fff);
+
+				&.active {
+					color: #fff;
+					background: #f66e52;
+				}
+			}
+		}
+
+		.result_cnt {
+			display: block;
+			height: 30px;
+			font-size: 11px;
+			color: $base_color2;
+			line-height: 30px;
+
+			span {
+				color: $point_color2;
+				letter-spacing: 0;
+			}
+		}
+
+		ul {
+			@include clear;
+		}
+
+		li {
+			float: left;
+			width: 33.3%;
+			padding: 10px 0;
+			font-size: 12px;
+			font-weight: bold;
+		}
+
+		.comm_brand_box_head {
+			padding: 10px 15px;
+			border: 1px solid #e5e5e5;
+			background: #ecf3fd;
+		}
+
+		.comm_brand_box_list {
+			padding: 10px 15px;
+		}
+	}
+
+	.btn_more {
+		font-size: 13px;
+		@include btn(100%, 40px, 1px solid #e5e5e5, $base_color2, #fff);
+		border-width: 1px 0;
+	}
+}

@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.etc_aside {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	z-index: 20;
+
+	.etc_aside_conts {
+		li {
+			position: relative;
+			margin-top: 2px;
+
+			.hover {
+				display: none;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			&.direct_apply:hover {
+				.hover {
+					display: block;
+				}
+			}
+
+			&.direct_recruit:hover {
+				.hover {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.etc_aside_direct_scroll {
+		margin-top: 20px;
+		text-align: right;
+
+		a {
+			display: inline-block;
+			margin-top: 2px;
+			text-align: center;
+			box-shadow: #c4c4c4 3px 3px 3px;
+			line-height: 1;
+			@include btn(54px, 54px, 0, #fff, #656565);
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			em:before {
+				font-size: 20px;
+			}
+
+			&.abs_top {
+				padding-top: 8px;
+			}
+
+			&.abs_bot {
+				padding-top: 13px;
+			}
+
+			&:hover {
+				background: #585858;
+			}
+
+		}
+
+	}
+
+	@include respond-to($small_desktop) {
+		display: none;
+	}
+
+}

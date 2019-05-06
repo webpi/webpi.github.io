@@ -1,0 +1,807 @@
+@charset "utf-8";
+
+// 공유하기
+.layer-pop_share {
+	position: absolute;
+	left: 25px;
+	right: 25px;
+	padding: 50px 11.111111vw 40px;
+	border: 1px solid #444;
+	background: #fff;
+
+	.layer-pop_share_sns {
+		margin: 0 -10px;
+		text-align: center;
+		@include flexbox();
+		@include flex-wrap(wrap);
+		@include justify-content(center);
+
+		a {
+			display: block;
+			margin-bottom: 7px;
+			font-size: 12px;
+			color: $base_color3;
+			@include flex(0, 0, auto);
+			@include grid-cols(3, 10px);
+			@include respond-to($size640) {
+			  	@include grid-cols(6, 10px);
+			}
+			span {
+				display: block;
+				height: 21px;
+				line-height: 21px;
+				@include truncate(100%);
+			}
+		}
+	}
+
+	.layer-pop_share_url {
+		margin-top: 10px;
+		font-size: 0;
+		.copyurl {
+			display: inline-block;
+			width: calc(100% - 48px);
+			margin-right: -1px;
+			padding: 0 5px;
+			font-size: 12px;
+			@include btn(null, 36px, 1px solid #bbb, $point_color1, #fff, null, 34px);
+			letter-spacing: 0;
+			@include truncate(100%);
+		}
+		.btn_urlcopy {
+			display: inline-block;
+			font-size: 12px;
+			font-weight: bold;
+			@include btn(49px, 36px, 1px solid #bbb, $base_color2, #e5e5e5, center, 34px);
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 15px;
+		top: 16px;
+		@include btn(null, null, 0, null, transparent);
+		[class^="icon-"]:before {
+			font-size: 16px;
+		}
+	}
+}
+
+.layer-pop_center {
+	.layer-pop_share {
+		position: relative;
+		width: calc(100vw - 50px);
+		left: auto;
+		right: auto;
+		@include box-sizing();
+	}
+}
+
+// 쿠폰보기
+.layer_coupon_view {
+	-webkit-overflow-scrolling : touch;
+	overflow-y: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	padding-bottom: 30px;
+	background: #fff;
+	z-index: 2;
+	@include box-sizing();
+	
+	.layer_coupon_view_head {
+		height: 50px;
+		padding: 0 10px;
+		font-size: 0;
+		background: #e5e5e5;
+
+		strong {
+			display: inline-block;
+			margin-right: 5px;
+			font-size: 16px;
+			line-height: 50px;
+			vertical-align: middle;
+		}
+
+		.btn_all_coupon {
+			font-size: 11px;
+			border-radius: 3px;
+			@include btn(72px, 25px, 1px solid $base_color3, $base_color2, #e5e5e5);
+		}
+	}
+
+	.layer_coupon_view_body {
+		.layer_coupon_view_body_top {
+			height: 40px;
+			padding: 0 10px;
+			border-bottom: 1px solid #e5e5e5;
+			font-size: 12px;
+			color: $base_color3;
+			line-height: 40px;
+		}
+
+		.layer_coupon_view_body_list {
+			.list_item {
+				position: relative;
+				padding: 10px;
+				border-bottom: 1px solid #e8e7ea;
+				@include clear;
+
+				.item_info {
+					margin-right: 95px;
+
+					.name {
+						display: block;
+						margin-top: 5px;
+						font-size: 14px;
+						@include truncate();
+
+						span {
+							color: $point_color2;
+							letter-spacing: 0;
+						}
+					}
+
+					.dsc {
+						display: block;
+						margin-top: 5px;
+						font-size: 12px;
+						color: $base_color2;
+					}
+				}
+
+				.item_aside {
+					position: absolute;
+					right: 10px;
+					top: 50%;
+					margin-top: -15px;
+
+					.dsc {
+						margin-right: 10px;
+						font-size: 14px;
+						color: $base_color3;
+					}
+
+					.btn_coupon_apply {
+						font-size: 12px;
+						color: #fff;
+						font-weight: bold;
+						@include btn(65px, 30px, 0, #fff, $point_color1);
+
+						&:disabled {
+							background: $base_color3;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 15px;
+		top: 13px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-size: 24px;
+		}
+	}
+}
+
+// 쿠폰받기
+.layer_coupon_receive {
+	-webkit-overflow-scrolling : touch;
+	overflow-y: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	padding-bottom: 30px;
+	background: #fff;
+	z-index: 21;
+	@include box-sizing();
+	
+	.layer_coupon_receive_head {
+		height: 50px;
+		padding: 0 10px;
+		font-size: 0;
+		background: #e5e5e5;
+
+		strong {
+			display: inline-block;
+			margin-right: 5px;
+			font-size: 16px;
+			line-height: 50px;
+			vertical-align: middle;
+		}
+	}
+
+	.layer_coupon_receive_body {
+		.layer_coupon_receive_body_top {
+			height: 40px;
+			padding: 0 10px;
+			border-bottom: 1px solid #e5e5e5;
+			font-size: 12px;
+			color: $base_color3;
+			line-height: 40px;
+		}
+
+		.layer_coupon_receive_body_box_top {
+			height: 40px;
+			padding: 2px 15px 0;
+			border-bottom: 1px solid #e5e5e5;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 38px;
+			@include box-sizing();
+		}
+
+		.layer_coupon_receive_body_list {
+			.list_item {
+				position: relative;
+				padding: 10px;
+				border-bottom: 1px solid #e8e7ea;
+				@include clear;
+
+				.item_info {
+					margin-right: 95px;
+
+					.name {
+						display: block;
+						margin-top: 5px;
+						font-size: 14px;
+						@include truncate();
+
+						span {
+							color: $point_color2;
+							letter-spacing: 0;
+						}
+					}
+
+					.dsc {
+						display: block;
+						margin-top: 5px;
+						font-size: 12px;
+						color: $base_color2;
+					}
+				}
+
+				.item_aside {
+					position: absolute;
+					right: 10px;
+					top: 50%;
+					margin-top: -15px;
+
+					.dsc {
+						margin-right: 10px;
+						font-size: 14px;
+						color: $base_color3;
+					}
+
+					.btn_coupon_apply {
+						font-size: 12px;
+						color: #fff;
+						font-weight: bold;
+						@include btn(65px, 30px, 0, #fff, $point_color1);
+
+						&:disabled {
+							background: $base_color3;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 15px;
+		top: 13px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-size: 24px;
+		}
+	}
+}
+
+// 상품정보 레이어
+.layer_stdpc_info {
+	-webkit-overflow-scrolling : touch;
+	overflow-y: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	padding-bottom: 30px;
+	background: #fff;
+	z-index: 21;
+	@include box-sizing();
+	
+	.layer_stdpc_info_head {
+		height: 50px;
+		background: #e5e5e5;
+		strong {
+			display: block;
+			padding: 0 14px;
+			font-size: 16px;
+			line-height: 50px;
+		}
+	}
+
+	.layer_stdpc_info_body {
+		padding: 25px 10px;
+
+		.tit-h2 {
+			height: 30px;
+			font-size: 15px;
+		}
+
+		.layer_stdpc_info_body_board {
+			border-top: 1px solid $base_color3;
+			border-bottom: 1px solid $base_color3;
+		}
+
+		.board {
+			width: 100%;
+
+			th,
+			td {
+				border-top: 1px solid #ededed;
+				font-size: 12px;
+				color: $base_color2;
+			}
+
+			th {
+				border-right: 1px solid #ededed;
+				background: #fbfbfb;
+				text-align: left;
+
+				span {
+					padding: 0 10px;
+				}
+			}
+
+			td {
+				padding: 10px;
+				line-height: 1.6;
+			}
+
+			tr:first-child {
+				th,
+				td {
+					border-top: 0;
+				}
+			}
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 15px;
+		top: 13px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-size: 24px;
+		}
+	}
+}
+
+// 스펙 레이어
+.layer-pop_spec {
+	position: relative;
+	width: 290px;
+	padding: 34px 24px;
+	border: 1px solid #444;
+	background: #fff;
+	z-index: 2;
+	@include box-sizing();
+
+	ul {
+		padding: 14px;
+		background: #f2f2f2;
+
+		li {
+			padding-left: 12px;
+			font-size: 12px;
+			line-height: 1.5;
+
+			&:first-letter {
+				margin-left: -12px;
+			}
+		}
+	}
+
+	.button-group {
+		margin-top: 20px;
+
+		.btn_apply {
+			font-size: 14px;
+			font-weight:bold;
+			@include btn(117px, 40px, 1px solid $point_color1, $point_color1, #fff);
+		}
+	}
+
+	.btn_layer_clse {
+	    position: absolute;
+	    right: 6px;
+	    top: 6px;
+	    font-size: 24px;
+	    @include btn(null, null, 0, null, transparent);
+	}
+}
+
+// 표준PC 구매 레이어 
+.layer_stdpc_directbuy {
+	position: relative;
+	width: 290px;
+	padding: 35px 24px 25px;
+	border: 1px solid #444;
+	background: #fff;
+	@include box-sizing();
+	z-index: 31;
+
+	.tit-h2 {
+		text-align: center;
+
+		img {
+			width: 240px;
+		}
+	}
+
+	.stdpc_directbuy_main {
+		margin-top: 13px;
+		
+		.stdpc_buy {
+			li {
+				margin-top: 10px;
+				padding: 10px;
+				@include box-sizing();
+
+				.t {
+					display: block;
+					letter-spacing: -2px;
+					font-size: 0;
+
+					em {
+						display: inline-block;
+						margin-right: 4px;
+						border-radius: 18px;
+						font-size: 12px;
+						color: #fff;
+						font-weight: bold;
+						text-align: center;
+						line-height: 36px;
+						@include size(36px);
+						vertical-align: middle;
+					}
+
+					strong {
+						display: inline-block;
+						font-size: 19px;
+						color: $base_color1;
+						vertical-align: middle;
+					}
+				}
+
+				.pop_stdpc_buy_price {
+					font-size: 0;
+					text-align: right;
+
+					.pop_stdpc_buy_price_price {
+						display: inline-block;
+						height: 30px;
+						margin-right: 7px;
+						font-size: 14px;
+						line-height: 30px;
+						vertical-align: top;
+
+						strong {
+							font-size:20px;
+							color: $point_color2;
+							letter-spacing: 0;
+						}
+					}
+
+					.btn-cart-to {
+						font-size: 19px;
+						vertical-align: top;
+						@include size(30px);
+
+						&:before {
+							top: 0;
+						}
+					}
+
+					.btn-add-to {
+						font-size: 19px;
+						vertical-align: top;
+						@include size(30px);
+
+						&:before {
+							top: 0;
+						}
+					}
+
+					.product_add_btn_layer {
+						right: 0;
+						bottom: 60px;
+
+						&:before {
+							right: 27px;
+						}
+					}
+				}
+
+				.dsc {
+					margin: 20px 10px 0;
+					padding-top: 10px;
+					border-top: 1px solid #d3dce4;
+					font-size: 12px;
+					color: $base_color2;
+					line-height: 1.5;
+				}
+
+				&.full_buy {
+					border: 1px solid #dbd1fd;
+					background: #f6f3fe;
+
+					.t {
+						em {
+							background: #a48bfa;
+						}
+
+						strong {
+							span {
+								color: #9175f4;
+							}
+						}
+					}
+				}
+
+				&.cart_buy {
+					border: 1px solid #b0dfee;
+					background: #f0f5f8;
+
+					.t {
+						em {
+							background: #62bfdd;
+						}
+
+						strong {
+							span {
+								color: #56b7d6;
+							}
+						}
+					}
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.layer-pop_add {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -100px 0 0 calc(-50vw + 40px);
+			width: calc(100vw - 80px);
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 15px;
+		top: 13px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-size: 24px;
+		}
+	}
+}
+
+// 신용카드 혜택 안내
+.layer_card_guide {
+	-webkit-overflow-scrolling : touch;
+	overflow-y: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	padding-bottom: 30px;
+	background: #fff;
+	z-index: 21;
+	@include box-sizing();
+	
+	.layer_card_guide_head {
+		height: 50px;
+		background: #e5e5e5;
+		strong {
+			display: block;
+			padding: 0 14px;
+			font-size: 16px;
+			line-height: 50px;
+		}
+	}
+
+	.layer_card_guide_body {
+		margin-top: 10px;
+
+		.layer_card_guide_body_top {
+			position: relative;
+			padding: 15px 0;
+
+			.tit-h2 {
+				height: 24px;
+				padding-top: 3px;
+				font-size: 25px;
+				line-height: 21px;
+				font-weight: normal;
+				text-align: center;
+				letter-spacing: 0;
+				@include box-sizing();
+			}
+
+			.btn_prev,
+			.btn_next {
+				position: absolute;
+				top: 50%;
+				margin-top: -12px;
+				border-radius: 12px;
+				font-size: 19px;
+				@include btn(24px, 24px, 1px solid $base_color1, $base_color1, #fff);
+			}
+
+			.btn_prev {
+				left: 50%;
+				margin-left: -90px;
+			}
+
+			.btn_next {
+				right: 50%;
+				margin-right: -90px;
+			}
+		}
+
+		.layer_card_guide_body_main {
+			padding: 0 15px;
+
+			.card_box {
+				margin-top: 14px;
+				padding: 25px 15px;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+
+				.tit-h3 {
+					height: 30px;
+
+					img {
+						max-height: 100%;
+					}
+				}
+
+				.card_box_info {
+					overflow: hidden;
+					margin-top: 20px;
+				}
+
+				ul {
+					margin: 10px 0 0 -21px;
+					@include clear;
+
+					li {
+						position: relative;
+						float: left;
+						margin-left: 10px;
+						padding-left: 11px;
+						font-size: 12px;
+						line-height: 1.6;
+
+						&:before {
+							content: "";
+							position: absolute;
+							left: 0;
+							top: 3px;
+							width: 1px;
+							height: 11px;
+							background: #ccc;
+						}
+					}
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+
+				&.lottecard {
+					.tit-h3 {
+						height: 20px;
+					}
+				}
+
+				&.hanaskcard {
+					.tit-h3 {
+						height: 25px;
+					}
+				}
+
+				&.kbcard {
+					.tit-h3 {
+						height: 32px;
+					}
+				}
+
+				&.samsungcard {
+					.tit-h3 {
+						height: 50px;
+					}
+				}
+
+				&.hanaskcard {
+					.tit-h3 {
+						height: 25px;
+					}
+				}
+
+				&.nhcard {
+					.tit-h3 {
+						height: 22px;
+					}
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.layer_card_guide_body_caution {
+			margin-top: 30px;
+			padding: 0 15px;
+
+			.tit-h2 {
+				font-size: 12px;
+			}
+
+			ul {
+				margin-top: 6px;
+
+				li {
+					padding-left: 9px;
+					font-size: 12px;
+					color: $base_color2;
+					line-height: 1.4;
+
+					&:first-letter {
+						margin-left: -9px;
+					}
+				}
+			}
+		}
+	}
+
+	.btn_layer_clse {
+		position: absolute;
+		right: 15px;
+		top: 13px;
+		@include btn(null, null, 0, null, transparent);
+
+		[class^="icon-"]:before {
+			font-size: 24px;
+		}
+	}
+}

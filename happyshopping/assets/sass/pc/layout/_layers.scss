@@ -1,0 +1,4191 @@
+@charset "utf-8";
+
+@mixin icon($word, $font_size:null, $direction:"before", $color:null) {
+	@if $direction == "before" {
+		&:before {
+			font-family: 'icomoon';
+			content: $word;
+			font-size: $font_size;
+			color: $color;
+		}
+	}
+
+	@else if $direction == "after" {
+		&:after {
+			font-family: 'icomoon';
+			content: $word;
+			font-size: $font_size;
+			color: $color;
+		}
+	}
+}
+
+// 간단 툴팁
+.tooltip {
+	opacity: 0;
+	position: absolute;
+	left: -99999px;
+	width: 298px;
+	padding: 10px;
+	border: 1px solid #000;
+	font-size: 11px;
+	color: $base_color2;
+	font-weight: normal;
+	background: #fff;
+	line-height: 16px;
+	z-index: 2;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 37px;
+		top: -7px;
+		width: 13px;
+		height: 7px;
+		background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/arw_delivery_recent.gif') no-repeat 0 0;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 37px;
+		bottom: -7px;
+		width: 13px;
+		height: 7px;
+		background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/arw_delivery_recent_b.gif') no-repeat 0 0;
+	}
+
+	.tit,
+	.tit-h4 {
+		color: $base_color1;
+	}
+
+	.tit {
+		font-weight: bold;
+	}
+
+	.gap {
+		margin-left: 6px;
+	}
+}
+
+// 주문 화물 영업소
+.layer-pop_office {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 636px;
+	margin: -302px 0 0 -340px;
+	padding: 20px;
+	border: 2px solid $base_color1;
+	background: #fff;
+	z-index: 100;
+
+	.tit-h4 {
+		height: 40px;
+		border-bottom: 1px solid $base_color1;
+		font-size: 20px;
+	}
+
+	.search {
+		height: 165px;
+		font-size: 0;
+		text-align: center;
+
+		.dsc {
+			margin-bottom: 10px;
+			padding-top: 40px;
+			font-size: 12px;
+			color: $base_color2;
+
+			label {
+				display: inline-block;
+				margin-bottom: 10px;
+				font-size: 16px;
+				color: $point_color1;
+
+				span {
+					color: $point_color2;
+				}
+			}
+		}
+
+		.istyle {
+			font-size: 12px;
+		}
+
+		.btn-search {
+			font-size: 12px;
+			font-weight: bold;
+			@include btn(62px, 34px, 0, #fff, $point_color1);
+		}
+	}
+
+	.search-result {
+		thead {
+			display: block;
+			width: 100%;
+
+			th {
+				&:first-child {
+					width: 168px;
+
+					+ th {
+						width: 104px;
+
+						+ th {
+							width: 280px;
+						}
+					}
+				}
+
+				&:last-child {
+					width: 81px;
+				}
+			}
+		}
+
+		tbody {
+			overflow-y: scroll;
+			display: block;
+			width: 100%;
+			height: 264px;
+		}
+
+		td {
+			&:first-child {
+				width: 168px;
+				text-align: left;
+
+				+ td {
+					width: 104px;
+					letter-spacing: 0;
+
+					+ td {
+						width: 280px;
+
+						+ td {
+							width: 64px;
+						}
+					}
+				}
+			}
+		}
+
+		.iradio label:before {
+			margin-right: 10px;
+		}
+
+		.btn-map {
+			@include btn(44px, 24px, 1px solid #dcdcdc, null, #fff);
+
+			&:hover {
+				border-color: $point_color1;
+				background: #f6f6f6;
+			}
+		}
+
+		.notfound {
+			width: 618px;
+			font-size: 14px;
+			font-weight: bold;
+			@include notfound(178px, 100px 0 0 0);
+		}
+	}
+
+	.map-detail {
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		right: 20px;
+
+		.map-detail_map {
+			overflow: hidden;
+			border: 1px solid $base_color1;
+		}
+
+		.btn-layer-pop_map_clse {
+			position: absolute;
+			right: 1px;
+			top: 1px;
+			@include btn(30px, 30px, 0, null, $base_color1);
+		}
+	}
+}
+
+// 주문 미니샵 위치
+.layer-pop_minishop {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 636px;
+	margin: -302px 0 0 -340px;
+	padding: 20px;
+	border: 2px solid $base_color1;
+	background: #fff;
+	z-index: 100;
+
+	.tit-h4 {
+		height: 40px;
+		font-size: 20px;
+	}
+
+	.map-detail {
+		overflow-y: auto;
+		max-height: 472px;
+
+		.map-detail_map {
+			overflow: hidden;
+			border-width: 1px;
+			border-style: solid;
+			border-color: $base_color1;
+			height: 298px;
+		}
+
+		dl {
+			margin-top: 18px;
+			padding-top: 18px;
+			border-top: 1px solid #e8e7ea;
+			line-height: 18px;
+
+			&:nth-child(even) {
+				margin-top: 23px;
+				padding-top: 0;
+				border-top: 0;
+			}
+			@include clear;
+
+			dt {
+				float: left;
+				width: 110px;
+				padding-left: 8px;
+				font-weight: bold;
+			}
+
+			dd {
+				overflow: hidden;
+			}
+		}
+
+		.button-group {
+			margin-top: 30px;
+		}
+
+		.btn-map-print {
+			font-size: 16px;
+			font-weight: bold;
+			@include btn(140px, 43px, 0, #fff, $point_color1);
+		}
+	}
+}
+
+// 주문 쿠폰
+.layer-pop_coupon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 636px;
+	margin: -302px 0 0 -340px;
+	padding: 20px;
+	border: 2px solid $base_color1;
+	background: #fff;
+	z-index: 100;
+
+	.tit-h4 {
+		height: 39px;
+		font-size: 20px;
+	}
+
+	.layer-pop_header .dsc {
+		float: left;
+		margin-left: 10px;
+		padding-top: 8px;
+		color: $base_color3;
+	}
+
+	.thead-top {
+		th {
+			border-color: $base_color1;
+			font-size: 14px;
+			background: #f7f7f7;
+		}
+
+		td {
+			border-bottom: 0;
+			border-color: $base_color1;
+			text-align: left;
+			vertical-align: top;
+
+			&.vm {
+				vertical-align: middle;
+			}
+
+			.pop_coupon_body_notfound {
+				font-size: 14px;
+				font-weight: bold;
+				text-align: center;
+			}
+
+			ul {
+				padding: 20px;
+
+				li {
+					margin-top: 10px;
+
+					.iradio label em span,
+					.icheck label em span {
+						color: $point_color2;
+						letter-spacing: 0;
+					}
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+
+			.dsc {
+				margin-top: 3px;
+				padding-left: 23px;
+				color: $base_color3;
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	.total {
+		border-top: 2px solid $point_color1;
+		border-bottom: 2px solid $point_color1;
+		padding-right: 10px;
+		font-size: 16px;
+		background: #ecf3fd;
+		line-height: 66px;
+		text-align: right;
+
+		span {
+			font-size: 30px;
+			color: $point_color2;
+			letter-spacing: 0;
+		}
+
+		em {
+			color: $base_color2;
+		}
+	}
+
+	.button-group {
+		margin-top: 20px;
+	}
+
+	.btn-pop-cncl,
+	.btn-pop-coupon-submit {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.btn-pop-cncl {
+		margin-right: 10px;
+		@include btn(140px, 43px, 1px solid $point_color1, $point_color1, #fff);
+
+		&:hover {
+			background: #f6f6f6;
+		}
+	}
+
+	.btn-pop-coupon-submit {
+		@include btn(140px, 43px, 0, #fff, $point_color1);
+
+		&:hover {
+			background: #2d7ee4;
+		}
+	}
+}
+
+// 주문 퀵서비스
+.layer-pop_quickservice {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 376px;
+	margin: -302px 0 0 -190px;
+	padding: 20px;
+	border: 2px solid $base_color1;
+	background: #fff;
+	z-index: 100;
+
+	.tit-h4 {
+		height: 40px;
+		border-bottom: 1px solid $base_color1;
+		font-size: 20px;
+	}
+
+	.search {
+		font-size: 0;
+		text-align: center;
+
+		.dsc {
+			margin-bottom: 10px;
+			padding-top: 40px;
+			font-size: 12px;
+			color: $base_color2;
+
+			label {
+				display: inline-block;
+				margin-bottom: 10px;
+				font-size: 16px;
+				color: $point_color1;
+
+				span {
+					color: $point_color2;
+				}
+			}
+		}
+
+		.istyle {
+			font-size: 12px;
+		}
+
+		.btn-search {
+			font-size: 12px;
+			font-weight: bold;
+			@include btn(62px, 34px, 0, #fff, $point_color1);
+		}
+
+		.search_quickservice_noti {
+			margin-top: 16px;
+			font-size: 11px;
+			color: $base_color2;
+			text-align: left;
+			line-height: 18px;
+		}
+	}
+
+	.search-result {
+		margin-top: 16px;
+
+		thead {
+			display: block;
+			width: 100%;
+
+			th {
+				&:first-child {
+					width: 274px;
+
+					+ th {
+						width: 101px;
+					}
+				}
+			}
+		}
+
+		tbody {
+			overflow-y: scroll;
+			display: block;
+			width: 100%;
+			height: 230px;
+		}
+
+		td {
+			&:first-child {
+				width: 274px;
+				text-align: left;
+
+				+ td {
+					width: 83px;
+					letter-spacing: 0;
+				}
+			}
+
+			.box-td {
+				padding: 10px;
+			}
+		}
+
+		.notfound {
+			width: 358px;
+			font-size: 14px;
+			font-weight: bold;
+			@include notfound(178px, 100px 0 0 0);
+		}
+	}
+}
+
+// 상품 해피트리 상세 사진
+.layer-pop_photodetail {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 502px;
+	margin: -345px 0 0 -300px;
+	padding: 57px 49px 10px;
+	border: 2px solid $base_color1;
+	background: #fff;
+	z-index: 100;
+
+	.layer-pop_photodetail_head {
+		height: 33px;
+		font-size: 20px;
+		text-align: center;
+
+		.btn-detail {
+			overflow: hidden;
+			position: relative;
+			top: -2px;
+			display: inline-block;
+			border-radius: 16px;
+			@include btn(32px, 32px, 1px solid $point_color1, $point_color1, #fff);
+
+			[class^="icon-"] {
+				display: inline-block;
+				font-size: 27px;
+				vertical-align: top;
+				@include size(30px);
+			}
+
+			a {
+				position: absolute;
+				right: -9999px;
+				top: -9999px;
+				height: 30px;
+				padding: 1px 1px 1px 10px;
+				font-size: 14px;
+				color: $point_color1;
+				line-height: 30px;
+				border-radius: 16px;
+				white-space: nowrap;
+			}
+
+			&:hover {
+				overflow: visible;
+
+				a {
+					top: -1px;
+					right: -1px;
+					color: #fff;
+					background: $point_color1;
+				}
+			}
+		}
+	}
+
+	.layer-pop_photodetail_body {
+		margin-top: 12px;
+
+		.photo-list {
+			border: 1px solid #d3d3d3;
+			@include size(500px);
+
+			.btn-next,
+			.btn-prev {
+				opacity: 0.7;
+				margin-top: -66.5px;
+				font-size: 100px;
+				color: $point_color1;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			.btn-prev {
+				left: -130px;
+			}
+
+			.btn-next {
+				right: -130px;
+			}
+		}
+
+		.btn-next,
+		.btn-prev {
+			position: absolute;
+			top: 50%;
+			@include btn(null, null, 0, null, transparent);
+		}
+
+		.photo-zoom {
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			border: 1px solid $point_color1;
+			cursor: pointer;
+			z-index: 30;
+			@include translate(-50%, -50%);
+		}
+
+		.thumb-list {
+			position: relative;
+			margin-top: 10px;
+
+			.thumb-list_slider {
+				overflow: hidden;
+				position: relative;
+				width: 406px;
+				padding: 0 15px;
+			}
+
+			ul {
+				@include clear;
+			}
+
+			.item {
+				overflow: hidden;
+				float: left;
+				margin-right: 2px;
+				border: 1px solid #d3d3d3;
+				cursor: pointer;
+				@include size(64px);
+
+				&:hover {
+					border-color: $point_color1;
+				}
+			}
+
+			.btn-next,
+			.btn-prev {
+				margin-top: -16px;
+				font-size: 24px;
+				color: #d3d3d3;
+
+				&:hover {
+					color: $point_color1;
+				}
+			}
+
+			.btn-prev {
+				left: -5px;
+			}
+
+			.btn-next {
+				right: -5px;
+			}
+
+			.btn-zoom {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				margin-top: -17.5px;
+				font-size: 18px;
+				@include btn(35px, 35px, 0, #fff, #e0e0e4);
+			}
+		}
+
+		.happytree-service {
+			position: absolute;
+			top: 10px;
+			left: 0;
+			width: 100%;
+			font-size: 0;
+			text-align: center;
+
+			* {
+				font-size: 16px;
+			}
+
+			a,
+			strong {
+				display: inline-block;
+				margin-right: 5px;
+				vertical-align: middle;
+			}
+
+			.fc1 {
+				color: #1cb55a;
+			}
+
+			.fc2 {
+				color: #95600c;
+			}
+
+			.btn-happytree-detail {
+				margin-right: 0;
+				font-size: 12px;
+				font-weight: bold;
+				line-height: 23px;
+				text-align: center;
+				@include btn(82px, 25px, 1px solid $base_color3, $base_color3, transparent);
+
+				&:hover {
+					color: #fff;
+					background: $base_color3;
+				}
+			}
+		}
+	}
+
+	.btn-layer-pop_clse {
+		position: absolute;
+		right: -127px;
+		top: 0;
+		font-size: 47px;
+		line-height: 50px;
+		@include btn(52px, 52px, 1px solid $point_color1, $point_color1, transparent);
+	}
+}
+
+// 다음맵에 주소 툴팁
+.layer-tooltip-map {
+	position: absolute;
+	bottom: 55px;
+	width: 296px;
+	margin-left: -145px;
+	padding: 17px 20px 19px;
+	border: 2px solid #000;
+	background-color: #fff;
+	white-space: initial;
+	@include rounded(10px);
+
+	strong {
+		display: inline-block;
+		margin-bottom: 6px;
+		color: #000;
+		font-size: 18px;
+		letter-spacing: -.08em;
+	}
+
+	span {
+		color: $base_color2;
+	}
+
+	&:before {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		display: block;
+		content: '';
+		// outline: 2px solid #000;
+		width: 0;
+		height: 0;
+		margin-bottom: -28px;
+		margin-left: -28px;
+		border-style: solid;
+		border-width: 28px 28px 0 0;
+		border-color: #000 transparent transparent transparent;
+	}
+
+	&:after {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		display: block;
+		content: '';
+		// outline: 2px solid #000;
+		width: 0;
+		height: 0;
+		margin-bottom: -24px;
+		margin-left: -26px;
+		border-style: solid;
+		border-width: 26px 25px 0 0;
+		border-color: #fff transparent transparent transparent;
+	}
+}
+
+// 전문가 조립서비스 (1대분)
+.layer-pop_assembly {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 694px;
+	margin: -350px 0 0 -347px;
+	padding: 50px 30px 20px;
+	border: 2px solid #444;
+	background: #fff;
+	line-height: 1;
+	@include box-sizing();
+
+	.layer-pop_assembly_head {
+		.tit-h4 {
+			font-size: 32px;
+			text-align: center;
+			letter-spacing: -3px;
+
+			span {
+				color: $point_color2;
+			}
+		}
+	}
+
+	.layer-pop_assembly_body {
+		margin-top: 30px;
+
+		.layer-pop_assembly_body_box {
+			padding: 30px;
+			border: 2px solid $point_color1;
+			background: #f4f4f4;
+
+			.layer-pop_assembly_body_box_top {
+				margin-bottom: 7px;
+				@include clear;
+
+				.t {
+					float: left;
+					font-size: 20px;
+					font-weight: bold;
+					line-height: 30px;
+				}
+
+				.each_input {
+					position: relative;
+					float: left;
+					margin-left: 10px;
+					padding: 0 28px;
+					border: 1px solid $base_color2;
+
+					.btn_cnt_minus,
+					.btn_cnt_plus {
+						position: absolute;
+						top: 0;
+						font-size: 21px;
+						@include btn(28px, 28px, 0, $base_color2, #fff);
+					}
+
+					.btn_cnt_minus {
+						left: 0;
+					}
+
+					.btn_cnt_plus {
+						right: 0;
+					}
+
+					.inum {
+						width: 32px;
+						height: 28px;
+						border-width: 0 1px;
+						border-style: solid;
+						border-color: $base_color2;
+						font-weight: bold;
+						text-align: center;
+						letter-spacing: 0;
+					}
+				}
+
+				.as-price {
+					float: left;
+					height: 30px;
+					margin-left: 10px;
+					font-size: 22px;
+					color: $point-color2;
+					letter-spacing: 0;
+					line-height: 30px;
+
+					span {
+						font-size: 16px;
+						color: $base_color1;
+						font-weight: normal;
+					}
+				}
+			}
+
+			.icheck {
+				font-size: 0;
+
+				label {
+					vertical-align: top;
+
+					span {
+						display: inline-block;
+						font-size: 14px;
+						vertical-align: middle;
+					}
+				}
+
+				em {
+					display: inline-block;
+					margin-left: 8px;
+					font-size: 14px;
+					vertical-align: top;
+					line-height: 18px;
+					letter-spacing: 0;
+
+					span {
+						color: $base_color3;
+					}
+
+					.bar {
+						position: relative;
+						top: -1px;
+						margin-right: 8px;
+					}
+				}
+			}
+
+			.button-group {
+				margin-top: 20px;
+			}
+
+			.btn_flat,
+			.btn_border {
+				width: calc(50% - 5px);
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			.btn_flat {
+				@include btn(null, 60px, 0, #fff, $point_color1);
+
+				&:hover {
+					background: $point_color1_over;
+				}
+			}
+
+			.btn_border {
+				margin-left: 10px;
+				@include btn(null, 60px, 2px solid $point_color1, $point_color1, #fff);
+
+				&:hover {
+					background: #f8f8f8;
+				}
+			}
+		}
+
+		.layer-pop_assembly_body_dsc {
+			margin-top: 20px;
+
+			li {
+				height: 50px;
+				margin-top: 5px;
+				padding-left: 60px;
+				font-size: 14px;
+				color: $base_color2;
+				word-break: keep-all;
+				word-wrap: break-word;
+
+				strong {
+					color: $point_color1;
+				}
+
+				&.dsc1 {
+					padding-top: 6px;
+					background: url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_assembly_dsc1.png") no-repeat 0 50%;
+					line-height: 20px;
+				}
+
+				&.dsc2 {
+					background: url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_as_dsc2.png") no-repeat 0 50%;
+					line-height: 50px;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.layer-pop_assembly_body_caution {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #e8e7ea;
+
+			.layer-pop_assembly_body_caution_top {
+				.icheck {
+					margin-right: 10px;
+					font-size: 0;
+
+					label {
+						span {
+							display: inline-block;
+							font-size: 12px;
+							font-weight: bold;
+							vertical-align: middle;
+						}
+					}
+				}
+
+				.btn_conts {
+					font-size: 12px;
+					@include btn(82px, 30px, 1px solid $base_color3, $base_color2, #fff);
+
+					[class^="icon-"] {
+						&:before {
+							font-size: 18px;
+							vertical-align: -3px;
+						}
+					}
+				}
+
+				.ialert {
+					display: inline-block;
+					margin-left: 10px;
+					font-size: 12px;
+					color: $point_color2;
+					vertical-align: middle;
+				}
+			}
+
+			ul {
+				margin-top: 20px;
+
+				li {
+					padding-left: 12px;
+					color: $base_color2;
+					line-height: 20px;
+					word-break: keep-all;
+					word-wrap: break-word;
+
+					span {
+						margin-left: -12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// as 출장서비스 (1대분)
+.layer-pop_as {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 694px;
+	margin: -350px 0 0 -347px;
+	padding: 50px 30px 20px;
+	border: 2px solid #444;
+	background: #fff;
+	line-height: 1;
+	@include box-sizing();
+
+	.layer-pop_as_head {
+		.tit-h4 {
+			font-size: 32px;
+			text-align: center;
+			letter-spacing: -3px;
+
+			span {
+				color: $point_color2;
+			}
+		}
+	}
+
+	.layer-pop_as_body {
+		margin-top: 30px;
+
+		.layer-pop_as_body_box {
+			padding: 30px;
+			border: 2px solid $point_color1;
+			background: #f4f4f4;
+
+			.layer-pop_as_body_box_top {
+				margin-bottom: 7px;
+				@include clear;
+
+				.t {
+					float: left;
+					font-size: 20px;
+					font-weight: bold;
+					line-height: 30px;
+				}
+
+				.each_input {
+					position: relative;
+					float: left;
+					margin-left: 10px;
+					padding: 0 28px;
+					border: 1px solid $base_color2;
+
+					.btn_cnt_minus,
+					.btn_cnt_plus {
+						position: absolute;
+						top: 0;
+						font-size: 21px;
+						@include btn(28px, 28px, 0, $base_color2, #fff)
+					}
+
+					.btn_cnt_minus {
+						left: 0;
+					}
+
+					.btn_cnt_plus {
+						right: 0;
+					}
+
+					.inum {
+						width: 32px;
+						height: 28px;
+						border-width: 0 1px;
+						border-style: solid;
+						border-color: $base_color2;
+						font-weight: bold;
+						text-align: center;
+						letter-spacing: 0;
+					}
+				}
+
+				.as-price {
+					float: left;
+					height: 30px;
+					margin-left: 10px;
+					font-size: 22px;
+					color: $point-color2;
+					letter-spacing: 0;
+					line-height: 30px;
+
+					span {
+						font-size: 16px;
+						color: $base_color1;
+						font-weight: normal;
+					}
+				}
+			}
+
+			.icheck {
+				font-size: 0;
+
+				label {
+					vertical-align: top;
+
+					span {
+						display: inline-block;
+						font-size: 14px;
+						vertical-align: middle;
+					}
+				}
+
+				em {
+					display: inline-block;
+					margin-left: 8px;
+					font-size: 14px;
+					vertical-align: top;
+					line-height: 18px;
+					letter-spacing: 0;
+
+					span {
+						color: $base_color3;
+					}
+
+					.bar {
+						position: relative;
+						top: -1px;
+						margin-right: 8px;
+					}
+				}
+			}
+
+			.button-group {
+				margin-top: 20px;
+			}
+
+			.btn_flat,
+			.btn_border {
+				width: calc(50% - 5px);
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			.btn_flat {
+				@include btn(null, 60px, 0, #fff, $point_color1);
+
+				&:hover {
+					background: $point_color1_over;
+				}
+			}
+
+			.btn_border {
+				margin-left: 10px;
+				@include btn(null, 60px, 2px solid $point_color1, $point_color1, #fff);
+
+				&:hover {
+					background: #f8f8f8;
+				}
+			}
+		}
+
+		.layer-pop_as_body_dsc {
+			margin-top: 20px;
+
+			li {
+				height: 50px;
+				margin-top: 5px;
+				padding-left: 60px;
+				font-size: 14px;
+				color: $base_color2;
+				word-break: keep-all;
+				word-wrap: break-word;
+
+				strong {
+					color: $point_color1;
+				}
+
+				&.dsc1 {
+					padding-top: 6px;
+					background: url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_as_dsc1.png") no-repeat 0 50%;
+					line-height: 20px;
+				}
+
+				&.dsc2 {
+					background: url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_as_dsc2.png") no-repeat 0 50%;
+					line-height: 50px;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.layer-pop_as_body_caution {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #e8e7ea;
+
+			.layer-pop_as_body_caution_top {
+				.icheck {
+					margin-right: 10px;
+					font-size: 0;
+
+					label {
+						span {
+							display: inline-block;
+							font-size: 12px;
+							font-weight: bold;
+							vertical-align: middle;
+						}
+					}
+				}
+
+				.btn_conts {
+					font-size: 12px;
+					@include btn(82px, 30px, 1px solid $base_color3, $base_color2, #fff);
+
+					[class^="icon-"] {
+						&:before {
+							font-size: 18px;
+							vertical-align: -3px;
+						}
+					}
+				}
+
+				.ialert {
+					display: inline-block;
+					margin-left: 10px;
+					font-size: 12px;
+					color: $point_color2;
+					vertical-align: middle;
+				}
+			}
+
+			ul {
+				margin-top: 20px;
+
+				li {
+					padding-left: 12px;
+					color: $base_color2;
+					line-height: 20px;
+					word-break: keep-all;
+					word-wrap: break-word;
+
+					span {
+						margin-left: -12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 정품부품
+.layer-pop_box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 816px;
+	height: 600px;
+	width: 816px;
+	height: 600px;
+	margin: -300px 0 0 -408px;
+	line-height: 1;
+
+	.layer-pop_box_head {
+		height: 234px;
+		padding-top: 25px;
+		background: url('https://img.happyshopping.kr/img_static/img_pres/_v3/sprite_pop4.png') no-repeat 0 -477px;
+
+		.tit-h4 {
+			position: relative;
+			padding-top: 13px;
+			font-size: 26px;
+			color: $point_color1;
+			font-weight: normal;
+			text-align: center;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 0;
+				width: 80px;
+				height: 3px;
+				margin-left: -40px;
+				background: $point_color1;
+			}
+
+			span {
+				font-weight: bold;
+			}
+
+			em {
+				font-size: 20px;
+			}
+		}
+
+		.dsc {
+			display: block;
+			margin-top: 30px;
+			padding-left: 50px;
+			font-size: 34px;
+			color: #000;
+			line-height: 1.3;
+
+			strong {
+				font-size: 42px;
+			}
+		}
+	}
+
+	.layer-pop_box_body {
+		padding: 20px 40px;
+
+		.dsc {
+			li {
+				font-size: 0;
+
+				&:before {
+					content: "";
+					display: inline-block;
+					width: 82px;
+					height: 82px;
+					margin-right: 18px;
+					background: url('http://img.happyshopping.kr/img_static/img_pres/_v3/sprite_pop4.png') no-repeat;
+					vertical-align: middle;
+				}
+
+				span {
+					display: inline-block;
+					font-size: 16px;
+					line-height: 1.5;
+					vertical-align: middle;
+				}
+
+				&.dsc_1:before {
+					background-position: -232px -1233px;
+				}
+
+				&.dsc_2 {
+					margin-top: 10px;
+
+					&:before {
+						background-position: -232px -1325px;
+					}
+				}
+			}
+		}
+
+		.noti {
+			margin-top: 20px;
+			padding: 10px 0;
+			border-top: 1px solid #d3d3d3;
+			border-bottom: 1px solid #d3d3d3;
+
+			li {
+				position: relative;
+				margin-top: 10px;
+				padding: 0 10px 0 30px;
+				font-size: 14px;
+				line-height: 1.5;
+
+				&:before {
+					position: absolute;
+					left: 10px;
+					width: 10px;
+					color: $point_color2;
+					text-align: center;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+// 운영체제 설치
+.layer-pop_osset {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 694px;
+	margin: -350px 0 0 -347px;
+	padding: 50px 30px 20px;
+	border: 2px solid #444;
+	background: #fff;
+	line-height: 1;
+	@include box-sizing();
+
+	.layer-pop_osset_head {
+		.tit-h4 {
+			font-size: 32px;
+			text-align: center;
+			letter-spacing: -3px;
+
+			span {
+				color: $point_color2;
+			}
+		}
+	}
+
+	.layer-pop_osset_body {
+		margin-top: 30px;
+
+		.layer-pop_osset_body_box {
+			padding: 30px;
+			border: 2px solid $point_color1;
+			background: #f4f4f4;
+
+			.layer-pop_osset_body_box_top {
+				margin-bottom: 7px;
+				@include clear;
+
+				.t {
+					float: left;
+					font-size: 20px;
+					font-weight: bold;
+					line-height: 30px;
+				}
+
+				.each_input {
+					position: relative;
+					float: left;
+					margin-left: 10px;
+					padding: 0 28px;
+					border: 1px solid $base_color2;
+
+					.btn_cnt_minus,
+					.btn_cnt_plus {
+						position: absolute;
+						top: 0;
+						font-size: 21px;
+						@include btn(28px, 28px, 0, $base_color2, #fff)
+					}
+
+					.btn_cnt_minus {
+						left: 0;
+					}
+
+					.btn_cnt_plus {
+						right: 0;
+					}
+
+					.inum {
+						width: 32px;
+						height: 28px;
+						border-width: 0 1px;
+						border-style: solid;
+						border-color: $base_color2;
+						font-weight: bold;
+						text-align: center;
+						letter-spacing: 0;
+					}
+				}
+
+				.as-price {
+					float: left;
+					height: 30px;
+					margin-left: 10px;
+					font-size: 22px;
+					color: $point-color2;
+					letter-spacing: 0;
+					line-height: 30px;
+
+					span {
+						font-size: 16px;
+						color: $base_color1;
+						font-weight: normal;
+					}
+				}
+			}
+
+			.button-group {
+				margin-top: 20px;
+			}
+
+			.btn_flat,
+			.btn_border {
+				width: calc(50% - 5px);
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			.btn_flat {
+				@include btn(null, 60px, 0, #fff, $point_color1);
+
+				&:hover {
+					background: $point_color1_over;
+				}
+			}
+
+			.btn_border {
+				margin-left: 10px;
+				@include btn(null, 60px, 2px solid $point_color1, $point_color1, #fff);
+
+				&:hover {
+					background: #f8f8f8;
+				}
+			}
+		}
+
+		.layer-pop_osset_body_dsc {
+			margin-top: 20px;
+
+			li {
+				height: 50px;
+				margin-top: 5px;
+				padding-left: 60px;
+				font-size: 14px;
+				color: $base_color2;
+				word-break: keep-all;
+				word-wrap: break-word;
+
+				strong {
+					color: $point_color1;
+				}
+
+				&.dsc1 {
+					background: url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_osset_dsc1.png") no-repeat 0 50%;
+					line-height: 50px;
+				}
+
+				&.dsc2 {
+					padding-top: 6px;
+					background: url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_osset_dsc2.png") no-repeat 0 50%;
+					line-height: 20px;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.layer-pop_osset_body_caution {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #e8e7ea;
+
+			.layer-pop_osset_body_caution_top {
+				.icheck {
+					margin-right: 10px;
+					font-size: 0;
+
+					label {
+						span {
+							display: inline-block;
+							font-size: 12px;
+							font-weight: bold;
+							vertical-align: middle;
+						}
+					}
+				}
+
+				.btn_conts {
+					font-size: 12px;
+					@include btn(82px, 30px, 1px solid $base_color3, $base_color2, #fff);
+
+					[class^="icon-"] {
+						&:before {
+							font-size: 18px;
+							vertical-align: -3px;
+						}
+					}
+				}
+
+				.ialert {
+					display: inline-block;
+					margin-left: 10px;
+					font-size: 12px;
+					color: $point_color2;
+					vertical-align: middle;
+				}
+			}
+
+			ul {
+				margin-top: 20px;
+
+				li {
+					padding-left: 12px;
+					color: $base_color2;
+					line-height: 20px;
+					word-break: keep-all;
+					word-wrap: break-word;
+
+					span {
+						margin-left: -12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 운영체제 구매
+.layer-pop_osbuy {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 694px;
+	margin: -350px 0 0 -347px;
+	padding: 50px 30px 20px;
+	border: 2px solid #444;
+	background: #fff;
+	line-height: 1;
+	@include box-sizing();
+
+	.layer-pop_osbuy_head {
+		.tit-h4 {
+			font-size: 32px;
+			text-align: center;
+			letter-spacing: -3px;
+
+			span {
+				color: $point_color2;
+			}
+		}
+	}
+
+	.layer-pop_osbuy_body {
+		margin-top: 30px;
+
+		.layer-pop_osbuy_body_box {
+			padding: 30px;
+			border: 2px solid $point_color1;
+			background: #f4f4f4;
+
+			.usage {
+				li {
+					@include clear;
+
+					.tit-h5 {
+						float: left;
+						height: 29px;
+						padding-left: 35px;
+						font-size: 16px;
+						line-height: 29px;
+
+						span {
+							font-weight: normal;
+						}
+					}
+
+					.usage_product {
+						float: right;
+
+						.usage_product_name {
+							display: block;
+							font-size: 20px;
+							line-height: 29px;
+						}
+
+						.usage_product_est {
+							margin-top: 10px;
+							font-size: 0;
+							text-align: right;
+
+							.est_price {
+								display: inline-block;
+								margin-right: 10px;
+								font-size: 16px;
+								vertical-align: middle;
+
+								strong {
+									font-size: 28px;
+									color: $point_color2;
+									letter-spacing: 0;
+								}
+							}
+
+							.btn-add-to {
+								@include size(30px);
+
+								&:before {
+									font-size: 16px;
+								}
+
+								span {
+									font-size: 16px;
+									line-height: 30px;
+								}
+							}
+						}
+					}
+
+					&.usage_home {
+						.tit-h5 {
+							background: url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_house.png") no-repeat 0 0;
+						}
+					}
+
+					&.usage_corp {
+						margin-top: 20px;
+						padding-top: 20px;
+						border-top: 1px solid #ccc;
+
+						.tit-h5 {
+							background: url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_building.png") no-repeat 4px 0;
+						}
+					}
+				}
+			}
+		}
+
+		.layer-pop_osbuy_body_noti {
+			margin-top: 15px;
+
+			li {
+				color: $base_color2;
+				line-height: 20px;
+			}
+		}
+
+		.button-group {
+			margin-top: 40px;
+		}
+
+		.btn_flat,
+		.btn_flat2 {
+			display: inline-block;
+			width: calc(50% - 5px);
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.btn_flat {
+			@include btn(null, 60px, 0, #fff, $point_color2, center, 58px);
+		}
+
+		.btn_flat2 {
+			margin-left: 10px;
+			@include btn(null, 60px, 0, #fff, $base_color1, center, 58px);
+		}
+	}
+}
+
+// 상품 판매 미니샵 리스트
+.layer-pop_minishoplist {
+	position: absolute;
+	right: 0;
+	width: 550px;
+	padding: 10px 20px 20px;
+	border: 1px solid #444;
+	background: #fff;
+	z-index: 10;
+	@include box-sizing;
+
+	&.normalshop {
+		top: 30px;
+	}
+
+	&.powersellershop {
+		top: 45px;
+	}
+
+	.tit-h4 {
+		height: 30px;
+		padding-top: 7px;
+		border-bottom: 1px solid #444;
+		font-size: 20px;
+	}
+
+	.layer-pop_minishoplist_body {
+		margin-top: 20px;
+
+		.product_box {
+			@include clear;
+
+			.thumb {
+				overflow: hidden;
+				float: left;
+				margin-right: 10px;
+				border: 1px solid #d3d3d3;
+				@include size(64px);
+				img {
+					max-width: 100%;
+				}
+			}
+
+			.product_box_name {
+				overflow: hidden;
+				font-size: 0;
+
+				&:before {
+					content: "";
+					display: inline-block;
+					width: 0;
+					height: 66px;
+					vertical-align: middle;
+				}
+
+				span {
+					display: inline-block;
+					font-size: 14px;
+					vertical-align: middle;
+					line-height: 1.4;
+
+					.bar {
+						position: relative;
+						top: -1px;
+						padding: 0 8px;
+					}
+				}
+			}
+		}
+
+		.sell_minishop_list {
+			margin-top: 20px;
+
+			.board {
+				border: 1px solid #d3d3d3;
+				th {
+					height: 36px;
+					border-bottom: 1px solid #d3d3d3;
+					background: #ececec;
+				}
+
+				td {
+					height: 57px;
+					border-top: 1px solid #d3d3d3;
+					text-align: center;
+
+					.product_price {
+						display: inline-block;
+						padding: 0 10px 0 30px;
+						text-align: left;
+						letter-spacing: 0;
+						line-height: 1.4;
+
+						strong {
+							font-size: 16px;
+							color: #888;
+
+							&.price {
+								color: $point_color2;
+							}
+						}
+					}
+
+					.iradio,
+					.icheck {
+						margin-left: 10px;
+
+						& + .product_price {
+							padding-left: 0;
+							vertical-align: middle;
+						}
+					}
+
+					[class^="mark-"],
+					.sellername {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					.sellername {
+						width: 80px;
+						text-align: left;
+						letter-spacing: 0;
+
+						a:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+
+				thead {
+					display: block;
+					width: 100%;
+				}
+
+				tbody {
+					display: block;
+					overflow-y: scroll;
+					overflow-x: hidden;
+					width: 100%;
+					max-height: 173px;
+
+					tr:first-child td {
+						border-top: 0;
+					}
+				}
+
+				th:first-child,
+				td:first-child {
+					width: 150px;
+				}
+
+				th:first-child + th,
+				td:first-child + td {
+					width: 90px;
+				}
+
+				th:first-child + th + th,
+				td:first-child + td + td {
+					width: 100px;
+				}
+
+				th:last-child {
+					width: 166px;
+				}
+
+				td:first-child {
+					text-align: left;
+				}
+
+				td:last-child {
+					width: 149px;
+				}
+			}
+		}
+	}
+
+	.btn-layer-pop_clse {
+		position: absolute;
+		right: 20px;
+		top: 18px;
+		@include btn(null, null, 0, null, transparent);
+	}
+}
+
+// 상품 담기 레이어
+.product_add_btn_layer {
+	position: absolute;
+	min-width: 220px;
+	padding: 20px 25px;
+	border:1px solid $point_color1;
+	font-size: 12px;
+	background: #fff;
+	text-align: center;
+	z-index: 2;
+	@include box-sizing;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: -7px;
+		right: 12px;
+		width: 13px;
+		height: 7px;
+		background: url('//img.happyshopping.kr/img_static/img_pres/_v3/sprite_1.png') no-repeat -76px -33px;
+		z-index: 2;
+	}
+
+	.product_add_btn_seller {
+		padding: 10px 0;
+		color: $base_color3;
+		font-weight: bold;
+		white-space: nowrap;
+
+		.malltype {
+			font-weight: normal;
+		}
+	}
+
+	.btn_product_add_view {
+		display: inline-block;
+		margin-top: 10px;
+		padding:0 10px;
+		box-shadow: inset #d3d3d3 0 -2px 2px;
+		line-height: 25px;
+		@include btn(null, 28px, 1px solid #c4c4c4, #000, #f7f7f7);
+
+		em:before {
+			color: $point_color2;
+		}
+	}
+
+	.btn_clse {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		font-size: 20px;
+		@include btn(null, mull, 0, $point_color1, transparent);
+	}
+}
+
+// 쿠폰 받기
+.layer-pop_get_coupon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -300px 0 0 -261px;
+	width: 488px;
+	padding: 20px;
+	border: 2px solid $base_color1;
+	background: #fff;
+	z-index: 100;
+
+	.tit-h4 {
+		height: 39px;
+		font-size: 20px;
+	}
+
+	.layer-pop_header .dsc {
+		float: left;
+		margin-left: 10px;
+		padding-top: 8px;
+		color: $base_color3;
+	}
+
+	.get_coupon_list {
+		position: relative;
+		overflow-y: auto;
+		height: 405px;
+		min-height: 243px;
+		border-top: 2px solid $base_color1;
+		border-bottom: 2px solid $base_color1;
+
+		.get_coupon_list_notfound {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			margin-top: -10px;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;			
+		}
+	}
+
+	.list_item {
+		padding: 20px 0;
+		border-top: 1px solid #e8e7ea;
+		@include clear;
+		
+		&:first-child {
+			border-top: 0;
+		}
+
+		&:hover {
+			background: #f8f8f8;
+		}
+
+		.badge {
+			float: left;
+			width: 45px;
+			height: 16px;
+			border: 1px solid #ccc;
+			font-family: "돋움", Dotum;
+			font-size: 11px;
+			background: #fff;
+			text-align: center;
+			line-height: 16px;
+
+			&.badge_dup {
+				border-color: #ff3333;
+				color: #ff3333;
+			}
+
+			&.badge_discount {
+				border-color: #3399cc;
+				color: #3399cc;
+			}
+
+			&.badge_saving {
+				border-color: #1aa827;
+				color: #1aa827;
+			}
+		}
+
+		.item_info {
+			float: left;
+			max-width: 240px;
+			margin-left: 5px;
+
+			.name {
+				display: block;
+				font-size: 14px;
+				color: #222;
+				line-height: 18px;
+			}
+
+			.dsc {
+				display: block;
+				margin-top: 5px;
+				color: $base_color3;
+			}
+		}
+
+		.item_aside {
+			float: right;
+
+			.dsc {
+				margin-right: 10px;
+				font-size: 14px;
+				color: $base_color3;
+
+				strong {
+					font-size: 18px;
+					color: $point_color2;
+					letter-spacing: 0;
+				}
+
+				em {
+					color: $point_color2;
+					font-weight: bold;
+				}
+
+				&.dis {
+					* {
+						color: $base_color3;
+					}
+					text-decoration: line-through;
+				}
+			}
+
+			.btn_coupon_apply {
+				font-size: 14px;
+				color: #fff;
+				font-weight: bold;
+				@include btn(80px, 40px, 0, #fff, $point_color1);
+
+				&:hover {
+					background: $point_color1_over;
+				}
+
+				&.close {
+					background: $base_color3;
+					cursor: default;
+				}
+			}
+		}
+	}
+	.button-group {
+		margin-top: 20px;
+	}
+	.btn-pop-clse {
+		font-size: 16px;
+		font-weight: bold;
+		@include btn(140px, 43px, 2px solid $point_color1, $point_color1, #fff);
+		&:hover {
+			background: #f8f8f8;
+		}
+	}
+}
+
+// 적용 쿠폰 보기
+.layer-pop_apply_coupon {
+	position: absolute;
+	width: 552px;
+	padding: 15px 20px 20px;
+	border: 1px solid #444;
+	background: #fff;
+	z-index: 21;
+
+	.pop_apply_coupon_head {
+		height: 30px;
+		border-bottom: 1px solid #444;
+		font-size: 0;
+		line-height: 20px;
+
+		.tit {
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		.btn_all_coupon {
+			margin-left: 10px;
+			font-size: 12px;
+			color: $base_color3;
+		}
+	}
+
+	.pop_apply_coupon_body {
+		overflow-y: auto;
+		max-height: 475px;
+		margin-top: 20px;
+		border: 1px solid #ccc;
+
+		.t {
+			display: block;
+			height: 36px;
+			padding-left: 20px;
+			border-bottom: 1px solid #e0e0e0;
+			font-size: 14px;
+			color: #222;
+			background: #efefef;
+			line-height: 36px;
+
+			span {
+				margin-left: 15px;
+				font-size: 11px;
+				font-weight: normal;
+				color: $base_color2;
+			}
+		}
+
+		.list_item {
+			padding: 10px 20px;
+			@include clear;
+
+			&:hover {
+				background: #f8f8f8;
+			}
+
+			.badge {
+				float: left;
+				width: 45px;
+				height: 16px;
+				border: 1px solid #ccc;
+				font-family: "돋움", Dotum;
+				font-size: 11px;
+				background: #fff;
+				text-align: center;
+				line-height: 16px;
+
+				&.badge_dup {
+					border-color: #ff3333;
+					color: #ff3333;
+				}
+
+				&.badge_discount {
+					border-color: #3399cc;
+					color: #3399cc;
+				}
+
+				&.badge_saving {
+					border-color: #1aa827;
+					color: #1aa827;
+				}
+			}
+
+			.item_info {
+				float: left;
+				max-width: 240px;
+				margin-left: 5px;
+
+				.name {
+					display: block;
+					font-size: 14px;
+					color: #222;
+					line-height: 18px;
+				}
+
+				.dsc {
+					display: block;
+					margin-top: 5px;
+					color: $base_color3;
+				}
+			}
+
+			.item_aside {
+				float: right;
+
+				.dsc {
+					margin-right: 10px;
+					font-size: 14px;
+					color: $base_color3;
+
+					strong {
+						font-size: 18px;
+						color: $point_color2;
+						letter-spacing: 0;
+					}
+
+					em {
+						color: $point_color2;
+						font-weight: bold;
+					}
+
+					&.dis {
+						* {
+							color: $base_color3;
+						}
+						text-decoration: line-through;
+					}
+				}
+
+				.btn_coupon_apply {
+					font-size: 14px;
+					color: #fff;
+					font-weight: bold;
+					@include btn(80px, 40px, 0, #fff, $point_color1);
+
+					&:hover {
+						background: $point_color1_over;
+					}
+
+					&.close {
+						background: $base_color3;
+						cursor: default;
+					}
+				}
+			}
+		}
+
+		.auto {
+			border-bottom: 1px solid #e0e0e0;
+
+			.auto_list {
+				padding: 10px 0;
+			}
+		}
+
+		.issue {
+			.issue_list {
+				padding: 10px 0;
+			}
+		}
+	}
+
+	.btn_apply_coupon_clse {
+		position: absolute;
+		right: 12px;
+		top: 12px;
+		font-size: 24px;
+		@include btn(null, null, 0, $point_color1, transparent);
+	}
+}
+
+.layer-minishop {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	border-width: 0 2px 2px;
+	border-style: solid;
+	border-color: $point_color1;
+	background: #fff;
+	box-shadow: #d3d3d3 3px 3px 3px;
+	z-index: 100;
+	.layer-minishop_head {
+		padding: 10px 10px 10px 25px;
+		background: $point_color1;
+		.tit-h4 {
+			height: 24px;
+			padding-left: 10px;
+			border-left: 2px solid #fff;
+			font-size: 18px;
+			color: #fff;
+			line-height: 24px;
+		}
+	}
+
+	.layer-minishop_body {
+		padding: 15px 20px;
+		.layer-minishop_body_top {
+			@include clear;
+			span {
+				float: left;
+				margin: 3px 5px 0 0;
+			}
+			.tit-h5 {
+				overflow: hidden;
+				height: 23px;
+				font-size: 20px;
+				line-height: 23px;
+			}
+		}
+
+		.box-board {
+			border-top: 1px solid #0f4f9f;
+			th {
+				label,
+				span {
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+
+	.btn-layer-clse {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		@include btn(30px, 30px, 0, #fff, transparent);
+		@include loadIcon($icon-close,30px);
+	}
+
+	// 미니샵 배송정책
+	&.pop-delivery {
+		width: 570px;
+		margin: -150px 0 0 -287px;
+		.box-board {
+			margin-top: 15px;
+			a {
+				color: $base_color1;
+				letter-spacing: 0;
+			}
+		}
+	}
+}
+
+// 신고하기 레이어
+.layer-pop_report {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 550px;
+	margin: - 300px 0 0 -275px;
+	padding: 10px 20px 20px;
+	border: 1px solid #444;
+	background: #fff;
+	z-index: 10;
+	@include box-sizing;
+
+	.tit-h4 {
+		height: 30px;
+		padding-top: 7px;
+		border-bottom: 1px solid #444;
+		font-size: 20px;
+	}
+
+	.report_body {
+		margin-top: 20px;
+
+		.report_body_top {
+			height: 42px;
+			padding: 0 40px;
+			font-size: 12px;
+			color: $base_color2;
+			background: #f0f0f0 url("//img.happyshopping.kr/img_static/img_pres/_v3/img_clover.png") no-repeat 10px 50%;
+			line-height: 42px;
+
+			span {
+				color: #339900;
+			}
+
+			.btn_more {
+				display: inline-block;
+				margin-left: 5px;
+				border-radius: 9px;
+				font-size: 11px;
+				@include btn(83px, 18px, 1px solid #d6d7dc, $base_color2, #dddee4, center, 16px);
+				vertical-align: 1px;
+
+				[class^="icon-"] {
+					color: #339900;
+				}
+			}
+		}
+
+		.report_body_main {
+			margin-top: 20px;
+
+			.report_body_main_box {
+				margin-top: 40px;
+
+				.tit-h6 {
+					font-size: 14px;
+					color: $base_color2;
+				}
+
+				.report_body_main_box_radio {
+					margin-top: 10px;
+
+					li {
+						margin-top: 6px;
+
+						.iradio {
+							font-size: 0;
+
+							label {
+								span {
+									display: inline-block;
+									height: 24px;
+									font-size: 14px;
+									vertical-align: middle;
+									line-height: 22px;
+								}
+							}
+						}
+
+						&:first-child {
+							margin-top: 0;
+						}
+					}
+				}
+
+				.report_body_main_box_textarea {
+					margin-top: 10px;
+					border: 1px solid #707070;
+
+					textarea {
+						display: block;
+						width: 100%;
+						padding: 15px;
+						border: 0;
+						line-height: 1.6;
+						@include box-sizing();
+					}
+				}
+
+				.wordcheck {
+					display: block;
+					margin-top: 5px;
+					color: $base_color3;
+					text-align: right;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.report_body_button {
+			margin-top: 30px;
+			text-align: center;
+
+			.btn_flat {
+				font-size: 14px;
+				font-weight: bold;
+				@include btn(155px, 40px, 0, #fff, $point_color1);
+
+				&:hover {
+					background: $point_color1_over;
+				}
+			}
+		}
+	}
+
+	.btn-layer-pop_clse {
+		position: absolute;
+		right: 20px;
+		top: 18px;
+		@include btn(null, null, 0, null, transparent);
+	}
+}
+
+// 문의하기 레이어
+.layer-pop_question {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 678px;
+	margin: -300px 0 0 -339px;
+	padding: 10px 20px 20px;
+	border: 1px solid #444;
+	background: #fff;
+	z-index: 10;
+	@include box-sizing;
+
+	.tit-h4 {
+		height: 30px;
+		padding-top: 7px;
+		border-bottom: 1px solid #444;
+		font-size: 20px;
+	}
+
+	.report_body {
+		margin-top: 20px;
+
+		.report_body_board {
+			.board {
+				th {
+					font-size: 14px;
+					color: #2f5296;
+					background: #f2f2f4;
+					text-align: left;
+
+					span,
+					label {
+						display: inline-block;
+						padding: 12px 20px;
+						line-height: 20px;
+					}
+
+					&.vt {
+						vertical-align: top;
+					}
+				}
+
+				td {
+					font-size: 14px;
+
+					.board_td {
+						padding: 5px 20px;
+					}
+
+					[class^="mark-"] {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					.sellername {
+						display: inline-block;
+						font-size: 12px;
+						vertical-align: middle;
+					}
+
+					textarea {
+						display: block;
+						width: 100%;
+						margin-top: 10px;
+						border: 1px solid #707070;
+						padding: 10px;
+						line-height: 1.4;
+						@include box-sizing();
+					}
+
+					.caution {
+						margin: 10px 0 5px;
+						font-size: 12px;
+					}
+				}
+
+				td,
+				th {
+					border-bottom: 1px solid #dddee3;
+				}
+
+				tr:first-child {
+					td,
+					th {
+						border-top: 1px solid #dddee3;
+					}
+				}
+			}
+		}
+
+		.report_body_button {
+			margin-top: 30px;
+			text-align: center;
+
+			.btn_flat {
+				font-size: 14px;
+				font-weight: bold;
+				@include btn(155px, 40px, 0, #fff, $point_color1);
+
+				&:hover {
+					background: $point_color1_over;
+				}
+			}
+		}
+	}
+
+	.btn-layer-pop_clse {
+		position: absolute;
+		right: 20px;
+		top: 18px;
+		@include btn(null, null, 0, null, transparent);
+	}
+}
+
+// 표준pc 구매 레이어
+.layer-pop_stdpc {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 692px;
+	margin: -200px 0 0 -346px;
+	padding: 20px 30px 30px;
+	border: 1px solid #444;
+	background: #fff;
+	text-align: left;
+	z-index: 10;
+	@include box-sizing;
+
+	.tit-h4 {
+		text-align: center;
+	}
+
+	.pop_stdpc_buy {
+		margin-top: 20px;
+		@include clear;
+
+		li {
+			float: left;
+			width: 304px;
+			padding: 10px;
+			@include box-sizing();
+
+			.t {
+				display: block;
+				letter-spacing: -2px;
+				font-size: 0;
+
+				em {
+					display: inline-block;
+					margin-right: 10px;
+					border-radius: 25px;
+					font-size: 18px;
+					color: #fff;
+					font-weight: bold;
+					text-align: center;
+					line-height: 50px;
+					@include size(50px);
+					vertical-align: middle;
+				}
+
+				strong {
+					display: inline-block;
+					font-size: 20px;
+					color: $base_color1;
+					vertical-align: middle;
+
+					span {
+						font-size: 24px;
+					}
+				}
+			}
+
+			.pop_stdpc_buy_price {
+				position: relative;
+				padding: 0 10px;
+				font-size: 0;
+				text-align: right;
+
+				.pop_stdpc_buy_price_price {
+					display: inline-block;
+					height: 50px;
+					margin-right: 10px;
+					font-size: 20px;
+					line-height: 50px;
+					vertical-align: top;
+
+					strong {
+						font-size:32px;
+						color: $point_color2;
+						letter-spacing: 0;
+					}
+				}
+
+				.btn-cart-to {
+					font-size: 30px;
+					vertical-align: top;
+					@include size(50px);
+
+					&:before {
+						top: 0;
+					}
+
+					span {
+						font-size: 22px;
+						line-height: 50px;
+
+						&:before {
+							font-size: 30px;
+						}
+					}
+				}
+
+				.btn-add-to {
+					font-size: 26px;
+					vertical-align: top;
+					@include size(50px);
+
+					&:before {
+						top: 0;
+					}
+
+					span {
+						font-size: 22px;
+						line-height: 50px;
+
+						&:before {
+							font-size: 26px;
+						}
+					}
+				}
+
+				.product_add_btn_layer {
+					right: 0;
+					bottom: 60px;
+
+					&:before {
+						right: 27px;
+					}
+				}
+			}
+
+			.dsc {
+				margin: 20px 10px 0;
+				padding-top: 10px;
+				border-top: 1px solid #d3dce4;
+				font-size: 12px;
+				color: $base_color2;
+				line-height: 1.5;
+			}
+
+			&.full_buy {
+				float: left;
+				border: 1px solid #dbd1fd;
+				background: #f6f3fe;
+
+				.t {
+					em {
+						background: #a48bfa;
+					}
+
+					strong {
+						span {
+							color: #9175f4;
+						}
+					}
+				}
+			}
+
+			&.cart_buy {
+				float: right;
+				border: 1px solid #b0dfee;
+				background: #f0f5f8;
+
+				.t {
+					em {
+						background: #62bfdd;
+					}
+
+					strong {
+						span {
+							color: #56b7d6;
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	.btn-layer-pop_clse {
+		position: absolute;
+		right: 20px;
+		top: 18px;
+		@include btn(null, null, 0, null, transparent);
+	}
+}
+
+// 장바구니 레이어
+.layer-pop_cart_add {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	width: 548px;
+	margin-left: -274px;
+	padding: 20px;
+	border: 2px solid #444;
+	background: #fff;
+	z-index: 51;
+	@include box-sizing();
+	
+	.tit-h4 {
+		height: 40px;
+		border-bottom: 1px solid $base_color1;
+		font-size: 20px;
+	}
+
+	.pop_cart_add_body {
+		.pop_cart_add_top {
+			@include clear;
+
+			.thumb {
+				overflow: hidden;
+				float: left;
+				width: 100px;
+				height: 100px;
+				margin-right: 10px;
+
+				img {
+					max-height: 100%;
+				}
+			}
+
+			.conts {
+				overflow: hidden;
+				padding: 14px 0;
+
+				.name {
+					display: block;
+					height: 34px;
+					font-size: 18px;
+					line-height: 34px;
+					@include truncate();
+				}
+
+				.conts_bot {
+					@include clear;
+
+					.inunmer {
+						position: relative;
+						float: left;
+						display: block;
+						height: 28px;
+						margin-top: 4px;
+						padding: 0 28px;
+						border: 1px solid $base_color2;
+
+						input[type="text"] {
+							width: 32px;
+							height: 28px;
+							border-top: 0;
+							border-bottom: 0;
+							border-left: 1px solid $base_color2;
+							border-right: 1px solid $base_color2;
+							font-size: 20px;
+							font-weight: bold;
+							line-height: 28px;
+							text-align: center;
+							vertical-align: top;
+							letter-spacing: 0;
+						}
+
+						.btn_cnt {
+							position: absolute;
+							top: 0;
+							font-size: 24px;
+							@include btn(28px, 28px, 0, null, #fff);
+							line-height: 1;
+
+							&.up {
+								right: 0;
+							}
+
+							&.down {
+								left: 0;
+							}
+						}
+					}
+
+					.price_sum {
+						float: left;
+						height: 38px;
+						margin-left: 10px;
+						font-size: 16px;
+						color: #888;
+						line-height: 38px;
+
+						strong {
+							font-size: 26px;
+							color: $point_color2;
+						}
+					}
+
+					.product_add {
+						float: right;
+
+						.btn_cart_add {
+							padding: 0 10px;
+							font-size: 16px;
+							@include btn(null, 38px, 0, #fff, $point_color1);
+
+							[class^="icon-"] {
+								margin-right: 6px;
+								font-size: 21px;
+								vertical-align: -1px;
+							}
+
+							&:hover {
+								background: $point_color1_over;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.pop_cart_add_info {
+			margin-top: 10px;
+			color: $base_color3;
+
+			.bar {
+				position: relative;
+				top: -1px;
+				padding:0 5px;
+				color: #dbdbdb;
+			}
+
+			.free {
+				color: #ff6600;
+			}
+
+			.day {
+				color: #ff6600;
+				letter-spacing: 0;
+			}
+
+			.sellerinfo {
+				margin-top: 5px;
+
+				strong {
+					color: $base_color1;
+				}
+			}
+		}
+
+		.fast-delivery {
+			position: relative;
+			margin-top: 20px;
+			padding: 15px 0;
+			border-top: 1px solid #d3d3d3;
+			border-bottom: 1px solid #d3d3d3;
+			@include clear;
+
+			.thumb {
+				overflow: hidden;
+				float: left;
+				width: 60px;
+				height: 60px;
+				margin-right: 10px;
+
+				img {
+					max-width: 100%;
+				}
+			}
+
+			.fast-delivery_info {
+				overflow: hidden;
+				padding-top: 8px;
+
+				.t {
+					display: block;
+				}
+
+				span {
+					color: $base_color3;
+
+					&.price {
+						strong {
+							font-size: 16px;
+							color: $base_color1;
+							letter-spacing: 0;
+						}
+
+					}
+
+					.date {
+						color: $point_color2;
+					}
+
+				}
+
+				.bar {
+					position: relative;
+					top: -1px;
+					padding: 0 8px;
+				}
+
+			}
+
+			.btn_go {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -16px;
+				border-radius: 16px;
+				font-size: 15px;
+				@include btn(30px, 30px, 1px solid $point_color1, $point_color1, #fff, center, 28px);
+
+				&:hover {
+					background: #f8f8f8;
+				}
+
+			}
+
+		}
+
+		.btn_other_minishop {
+			margin-top: 10px;
+			font-size: 18px;
+			font-weight: bold;
+			@include btn(100%, 53px, 2px solid $point_color1, $point_color1, #fff);
+
+			[class^="icon-"] {
+				font-size: 22px;
+				vertical-align: -2px;
+			}
+
+			&:hover {
+				background: #f8f8f8;
+			}
+		}
+
+		.pop_cart_add_othershop {
+			margin-top: 10px;
+
+			.board {
+				border: 1px solid #d3d3d3;
+				@include box-sizing();
+
+				th {
+					height: 36px;
+					border-bottom: 1px solid #d3d3d3;
+					background: #ececec;
+				}
+
+				td {
+					height: 57px;
+					border-top: 1px solid #d3d3d3;
+					text-align: center;
+
+					.product_price {
+						display: inline-block;
+						padding: 0 10px 0 30px;
+						text-align: left;
+						letter-spacing: 0;
+						line-height: 1.4;
+
+						strong {
+							font-size: 16px;
+							color: #888;
+
+							&.price {
+								color: $point_color2;
+							}
+						}
+
+						.free {
+							color: #f60;
+						}
+					}
+
+					.iradio,
+					.icheck {
+						margin-left: 10px;
+
+						& + .product_price {
+							padding-left: 0;
+							vertical-align: middle;
+						}
+					}
+
+					[class^="mark-"],
+					.sellername {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					.sellername {
+						width: 80px;
+						text-align: left;
+						letter-spacing: 0;
+
+						a:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+
+				thead {
+					display: block;
+					width: 100%;
+				}
+
+				tbody {
+					display: block;
+					overflow-y: scroll;
+					overflow-x: hidden;
+					width: 100%;
+					max-height: 231px;
+
+					tr:first-child td {
+						border-top: 0;
+					}
+				}
+
+				th:first-child,
+				td:first-child {
+					width: 148px;
+				}
+
+				th:first-child + th,
+				td:first-child + td {
+					width: 90px;
+				}
+
+				th:first-child + th + th,
+				td:first-child + td + td {
+					width: 100px;
+				}
+
+				th:last-child {
+					width: 164px;
+				}
+
+				td:first-child {
+					text-align: left;
+				}
+
+				td:last-child {
+					width: 147px;
+				}
+			}
+		}
+	}
+
+	.btn-layer-pop_clse {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+}
+
+// 장바구니 레이어 담기 공통
+.layer-pop_cart_msg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	margin: -150px 0 0 -200px;
+	padding: 52px 30px 20px;
+	border: 2px solid #444;
+	background: #fff;
+	z-index: 51;
+	@include box-sizing();
+	
+	.msg {
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		line-height: 1.4;
+
+		.malltype {
+			width: 100px;
+			height: 34px;
+			font-weight: normal;
+			border-radius: 17px;
+			line-height: 32px;
+		}
+	}
+
+	.button-group {
+		margin-top: 20px;
+		font-size: 0;
+		text-align: center;
+
+		.btn_border,
+		.btn_flat {
+			display: inline-block;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.btn_border {
+			@include btn(calc(50% - 5px), 43px, 2px solid $point_color1, $point_color1, #fff, center, 39px);
+
+			&:hover {
+				background: #f8f8f8;
+			}
+		}
+
+		.btn_flat {
+			@include btn(calc(50% - 5px), 43px, 0, #fff, $point_color1, center, 43px);
+
+			&:hover {
+				background: $point_color1_over;
+			}
+		}
+
+		[class^="btn_"] + [class^="btn_"] {
+			margin-left: 10px;
+		}
+	}
+
+	.btn-layer-pop_clse {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+}
+
+// 온라인 견적서
+.pop_online_estimate {
+	padding: 40px 30px;
+
+	.tit-h1 {
+		font-size: 36px;
+    	color: #000;
+    	text-align: center;
+    	line-height: 1;
+
+    	img {
+    		margin-right: 10px;
+    		vertical-align: middle;
+    	}
+	}
+
+	.pop_online_estimate_main {
+		margin-top: 20px;
+
+		.pop_online_estimate_main_top {
+			border-top: 6px solid $point_color1;
+			border-bottom: 1px solid #d3d3d3;
+			@include clear;
+
+			.pop_online_estimate_main_top_lft {
+				float: left;
+				width: 50%;
+				margin-right: -1px;
+				padding: 20px 0;
+				border-right: 1px solid #d3d3d3;
+				@include box-sizing();
+
+				.info {
+					li {
+						margin-top: 10px;
+						font-size: 14px;
+
+						.tit {
+							display: inline-block;
+							width: 85px;
+							padding: 0 5px;
+							@include box-sizing();
+						}
+
+						.name {
+							text-decoration: underline;
+						}
+
+						.date {
+							font-weight: bold;
+						}
+
+						.price {
+							display: inline-block;
+							line-height: 1;
+
+							strong {
+								font-size: 32px;
+								color: $point_color2;
+							}
+
+							.vat {
+								color: $base_color3;
+							}
+						}
+
+						.vt {
+							vertical-align: top;
+						}
+
+						&:first-child {
+							margin-top: 0;
+						}
+					}
+				}
+
+				.noti {
+					margin-top: 10px;
+
+					li {
+						font-size: 14px;
+						color: $base_color3;
+					}
+				}
+			}
+
+			.pop_online_estimate_main_top_rgt {
+				float: left;
+				width: 50%;
+				padding: 20px;
+				border-left: 1px solid #d3d3d3;
+				@include box-sizing();
+
+				.noti1,
+				.noti2 {
+					li {
+						margin-top: 5px;
+
+						a {
+							color: $point_color1;
+							text-decoration: underline;
+						}
+
+						&:first-child {
+							margin-top: 0;
+						}
+					}
+				}
+
+				.noti1 {
+					[class^="icon-"] {
+						color: $point_color1;
+					}
+				}
+
+				.noti2 {
+					margin-top: 10px;
+
+					li {
+						color: $base_color3;
+					}
+				}
+
+				.minishop_info {
+					.t {
+						display: block;
+						margin-bottom: 10px;
+						font-size: 18px;
+						line-height: 1;
+					}
+
+					.board {
+						th,
+						td {
+							border-top: 1px solid #d3d3d3;
+						}
+
+						th {
+							padding: 0 6px;
+							font-weight: normal;
+							text-align: left;
+							background: #f9f9f9;
+						}
+
+						.td-box {
+							padding: 6px 10px;
+						}
+					}
+				}
+			}
+		}
+
+		.pop_online_estimate_main_noti {
+			margin-top: 20px;
+
+			li {
+				margin-top: 5px;
+
+				a {
+					color: $point_color1;
+					text-decoration: underline;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				[class^="icon-"] {
+					color: $point_color1;
+				}
+			}
+		}
+
+		.pop_online_estimate_main_bot {
+			position: relative;
+			margin-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 6px solid $point_color1;
+
+			.pop_online_estimate_main_bot_tab {
+				position: relative;
+				font-size: 0;
+
+				.btn {
+					margin-right: -2px;
+					font-size: 18px;
+					font-weight: bold;
+					@include btn(150px, 45px, 0, null, #fff);
+
+					&:before {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 2px;
+						line-height: 0;
+					}
+
+					span {
+						display: inline-block;
+						@include btn(150px, 45px, 2px solid #9b9b9b, #9b9b9b, #fff, center, 41px);
+					}
+
+					&.active span {
+						position: relative;
+					}
+				}
+
+				.btn_nor.active {
+					&:before {
+						background: #956ccc;
+					}
+
+					span {
+						padding-bottom: 2px;
+						border-bottom: 0;
+						border-color: #956ccc;
+						color: #956ccc;
+					}
+				}
+
+				.btn_card.active {
+					&:before {
+						background: #0f4f9f;
+					}
+
+					span {
+						padding-bottom: 2px;
+						border-bottom: 0;
+						border-color: #0f4f9f;
+						color: #0f4f9f;
+					}
+				}
+			}
+
+			.pop_online_estimate_main_bot_items {
+				margin-top: 20px;
+
+				.board {
+					th {
+						height: 35px;
+						border-bottom: 1px solid #0f4f9f;
+						font-size: 12px;
+					}
+
+					td {
+						padding: 10px 0;
+						border-bottom: 1px solid #d3d3d3;
+						font-size: 12px;
+						text-align: center;
+
+						.td-box {
+							padding: 0 10px;
+							text-align: left;
+
+							a {
+								text-decoration: underline;
+							}
+
+							.code {
+								margin-left: 10px;
+								color: #0f4f9f;
+							}
+						}
+					}
+
+					tbody {
+						tr:last-child {
+							td {
+								border-bottom: 0;
+							}
+						}
+					}
+				}
+
+				.total {
+					height: 46px;
+					padding:0 10px;
+					font-size: 20px;
+					color: #fff;
+					font-weight: bold;
+					background: $point_color2;
+					line-height: 46px;
+					text-align: right;
+
+					span{
+						position: relative;
+						top: -3px;
+					}
+
+					strong {
+						margin-left: 15px;
+						font-size: 28px;
+					}
+
+					em {
+						font-size: 12px;
+						font-weight: normal;
+					}
+				}
+
+				.noti {
+					margin-top: 20px;
+
+					li {
+						margin-top: 5px;
+						padding-left: 20px;
+						color: $base_color3;
+
+						&:first-child {
+							margin-top: 0;
+						}
+					}
+				}
+
+				.deposit_account {
+					padding: 20px 0;
+					@include clear;
+
+					.t {
+						float: left;
+						padding: 0 30px;
+						font-size: 20px;
+						text-align: center;
+						line-height: 1.2;
+					}
+
+					ul {
+						overflow: hidden;
+
+						li {
+							float: left;
+							width: 50%;
+							padding-left: 20px;
+							border-left: 1px solid #d3d3d3;
+							line-height: 1.7;
+							@include box-sizing();
+						}
+					}
+				}
+			}
+
+			.pop_online_estimate_main_bot_check {
+				position: absolute;
+				right: 0;
+				top: 12px;
+
+				.icheck {
+					margin-left: 10px;
+					vertical-align: top;
+
+					label {
+						&:before {
+							vertical-align: top;
+						}
+
+						span {
+							display: inline-block;
+							vertical-align: top;
+						}
+					}
+				}
+			}
+		}
+
+		.button-group {
+			margin-top: 30px;
+
+			.btn {
+				margin-left: 10px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+
+			.btn_border {
+				padding: 0 50px;
+				font-size: 18px;
+				font-weight: bold;
+				@include btn(null, 50px, 1px solid $point_color1, $point_color1, #fff);
+
+				&:hover {
+					background: #f8f8f8;
+				}
+			}
+
+			.btn_flat {
+				padding: 0 50px;
+				font-size: 18px;
+				font-weight: bold;
+				@include btn(null, 50px, 0, #fff, $point_color1);
+
+				&:hover {
+					background: $point_color1_over;
+				}
+			}
+		}
+	}
+}
+
+// 상품 검색
+.layer_item_search {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+
+	&:before {
+		content: "";
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.7);
+	}
+
+	.in {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 950px;
+		min-height: 700px;
+		background: #fff;
+		z-index: 31;
+		@include translate(-50%, -50%);
+		
+
+		// 검색방법
+		.item_search_head {
+			border-bottom: 2px solid $point_color1;
+			font-size: 0;
+
+			.btn {
+				font-size: 20px;
+				font-weight: bold;
+				@include btn(50%, 58px, 0, $base_color2, #fff);
+
+				&:hover {
+					background: #f8f8f8;
+				}
+
+				&.active {
+					color: #fff;
+					background: $point_color1;
+				}
+			}
+		}
+		
+		// 상품스펙
+		.item_search_spec {
+			margin: 20px 20px 0;
+
+			.item_search_spec_wrap {
+				overflow-y: auto;
+				height: 510px;
+
+				.item_search_spec_row {
+					margin-bottom: -1px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.item_search_spec_t {
+				margin-bottom: -1px;
+				font-size: 0;
+
+				.btn {
+					position: relative;
+					margin-right: -1px;
+					padding: 0 20px;
+					font-size: 12px;
+					font-weight: bold;
+					text-align: left;
+					@include btn(calc(20% + 1px), 50px, 1px solid #d7d7d7, $base_color1, #fff);
+
+					span {
+						display: inline-block;
+						margin-left: 4px;
+						border-radius: 11px;
+						font-size: 12px;
+						color: #fff;
+						background: $point_color2;
+						letter-spacing: 0;
+						text-align: center;
+						line-height: 22px;
+						@include size(22px);
+					}
+
+					[class^="icon-"] {
+						position: absolute;
+						right: 10px;
+						top: 50%;
+						margin-top: -9px;
+						font-size: 18px;
+					}
+
+					&.active {
+						padding-bottom: 1px;
+						border-color: $point_color1;
+						border-bottom: 0;
+						color: $point_color1;
+						background: #f7f7f7;
+						z-index: 2;
+					}
+
+					&:last-child {
+						width: 20%;
+						margin-right: 0;
+					}
+				}
+			}
+
+			.item_search_spec_list {
+				position: relative;
+				padding: 0 42px 0 20px;
+				border: 1px solid $point_color1;
+				background: #f7f7f7;
+				z-index: 1;
+
+				ul {
+					@include clear;
+
+					li {
+						float: left;
+						width: 20%;
+						height: 48px;
+						padding-right: 20px;
+						font-size: 0;
+						@include box-sizing();
+
+						&:before {
+							content: "";
+							display: inline-block;
+							width: 0;
+							height: 48px;
+							vertical-align: middle;
+						}
+
+						.icheck {
+							width: 100%;
+
+							label {
+								width: 100%;
+								color: $point_color1;
+								font-weight: bold;
+
+								&:before {
+									vertical-align: middle;
+								}
+
+								span {
+									display: inline-block;
+									width: calc(100% - 25px);
+									font-size: 12px;
+									vertical-align: middle;
+									line-height: 18px;
+									word-break: keep-all;
+                        			word-wrap: break-word;
+								}
+							}
+						}
+
+						&:nth-child(n+6) {
+							border-top: 1px solid #d7d7d7;
+						}
+					}
+				}
+
+				.btn_more {
+					position: absolute;
+					right: 10px;
+					bottom: 13px;
+					border-radius: 11px;
+					font-size: 17px;
+					line-height: 1;
+					@include btn(22px, 22px, 0, #fff, $base_color2);
+				}
+			}
+
+			.btn_option_add {
+				font-size: 12px;
+				@include btn(100%, 49px, 0, $base_color1, transparent);
+				border-bottom: 1px solid #d7d7d7;
+
+				[class^="icon-"] {
+					display: inline-block;
+					border: 1px solid $base_color2;
+					border-radius: 11px;
+					font-size: 19px;
+					color: $base_color3;
+					background: #fff;
+					line-height: 1;
+					vertical-align: -3px;
+					@include size(22px);
+					@include box-sizing();
+				}
+			}
+		}
+
+		// 가격
+		.item_search_price {
+			margin: 20px 20px 0;
+
+			.item_search_price_wrap {
+				overflow-y: auto;
+				height: 510px;
+
+				.item_search_spec_main {
+					.item_search_spec_main_price {
+						padding: 30px 20px;
+						border: 1px solid #d7d7d7;
+						background: #f7f7f7;
+					}
+
+					.item_search_spec_main_price_input {
+						font-size: 0;
+						text-align: center;
+
+						label {
+							display: inline-block;
+							height: 50px;
+							margin-right: 10px;
+							font-size: 18px;
+							font-weight: bold;
+							line-height: 50px;
+							vertical-align: middle;
+						}
+
+						.ispan {
+							position: relative;
+							display: inline-block;
+							vertical-align: middle;
+
+							&:after {
+								content: "원";
+								position: absolute;
+								font-size: 16px;
+								right: 5px;
+								top: 0;
+								width: 30px;
+								height: 47px;
+								padding-top: 3px;
+								line-height: 47px;
+								text-align: center;
+
+							}
+						}
+
+						.dash {
+							display: inline-block;
+							width: 20px;
+							font-size: 20px;
+							font-weight: bold;
+							vertical-align: middle;
+							text-align: center;
+						}
+
+						.istyle {
+							width: 230px;
+							height: 50px;
+							padding-right: 30px;
+							border-color: $base_color2;
+							font-size: 24px;
+							color: $point_color2;
+							font-weight: bold;
+							letter-spacing: 0;
+							line-height: 48px;
+							text-align: right;
+						}
+
+						.btn_idirect {
+							margin-left: 10px;
+							font-size: 15px;
+							font-weight: bold;
+							@include btn(130px, 50px, 2px solid $point_color2, $point_color2, #fff);
+						}
+
+						.btn_price_search {
+							margin-left: 10px;
+							font-size: 15px;
+							font-weight: bold;
+							@include btn(130px, 50px, 0, #fff, $point_color2);
+						}
+					}
+
+					.item_search_spec_main_direct {
+						position: relative;
+						padding: 30px 20px;
+						border: 1px solid #d7d7d7;
+						background: #f7f7f7;
+
+						.btn_direct_clse {
+							position: absolute;
+							right: 10px;
+							top: 10px;
+							font-size:16px;
+							@include btn(30px, 30px, 0, $base_color3, transparent);
+						}
+					}
+
+					.item_search_spec_main_list {
+						overflow: hidden;
+						margin-top: 30px;
+
+						.tit-h4 {
+							font-size: 16px;
+						}
+
+						> ul {
+							margin-left: -10px;
+							@include clear;
+
+							> li {
+								float: left;
+								width: calc(20% - 10px);
+								margin: 10px 0 0 10px;
+
+								.item_search_spec_main_list_box {
+									position: relative;
+									height: 130px;
+									padding: 40px 10px 10px;
+									border: 1px solid #d7d7d7;
+									background: #fff;
+									@include box-sizing();
+
+									.icheck {
+										position: absolute;
+									    left: 0;
+									    top: 0;
+									    width: 100%;
+									    height: 100%;
+									    padding: 12px;
+									    z-index: 2;
+									    @include box-sizing();
+
+									    label {
+									    	width: 100%;
+									    	height: 100%;
+									    	text-align: right;
+
+									    	&:before {
+									    		margin-right: 0;
+									    	}
+									    }
+									}
+
+									strong {
+										display: block;
+										height: 32px;
+										color: $base_color3;
+
+										span {
+											font-size: 20px;
+											color: $base_color1;
+											letter-spacing: 0;
+										}
+									}
+
+									ul {
+										padding-top: 8px;
+										border-top: 1px solid #d7d7d7;
+
+										li {
+											position: relative;
+											line-height: 1.6;
+
+											span {
+												position: absolute;
+												right: 0;
+												top: 0;
+												letter-spacing: 0;
+											}
+										}
+									}
+
+									.rank {
+										position: absolute;
+									    left: 10px;
+									    top: 10px;
+									    border-radius: 11px;
+									    font-size: 12px;
+									    color: #fff;
+									    font-weight: bold;
+									    background: $point_color2;
+									    text-align: center;
+									    line-height: 22px;
+									    @include size(22px);
+									}
+
+									&.active {
+										border-color: $point_color1;
+										background: #f7f7f7;
+
+										strong {
+											span {
+												color: $point_color2;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// 선택값 리스트
+		.item_search_label {
+			overflow: hidden;
+			margin-bottom: 20px;
+			@include clear;
+
+			.btn_all_cncl {
+				float: left;
+				margin-right: 5px;
+				@include btn(70px, 22px, 1px solid #ccc, $base_color1, #f2f2f2);
+			}
+
+			.item_search_label_list {
+				overflow: hidden;
+				margin-bottom: -5px;
+				@include clear;
+
+				li {
+					position: relative;
+					float: left;
+					height: 20px;
+					margin: 0 5px 5px 0;
+					padding: 0 20px 0 5px;
+					border: 1px solid #ccc;
+					font-size: 12px;
+					line-height: 20px;
+					letter-spacing: 0;
+
+					.btn_label_del {
+						position: absolute;
+						right: 0;
+						top: 0;
+						font-family: "돋움", Dotum;
+						@include btn(20px, 20px, 0, null, transparent);
+					}
+				}
+			}
+		}
+
+		// 검색버튼
+		.button-group {
+			margin-top: 18px;
+			padding-top: 20px;
+			border-top: 1px solid $point_color1;
+			font-size: 0;
+
+			.btn_border {
+				font-size: 18px;
+				font-weight: bold;
+				@include btn(190px, 50px, 2px solid $point_color1, $point_color1, #fff);
+
+				&:hover {
+					background: #f8f8f8;
+				}
+			}
+
+			.btn_flat {
+				font-size: 18px;
+				font-weight: bold;
+				@include btn(190px, 50px, 0, #fff, $point_color1);
+
+				&:hover {
+					background: $point_color1_over;
+				}
+			}
+
+			[class^="btn_"] + [class^="btn_"] {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.btn_layer_item_search_clse {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		@include btn(30px, 30px, 0, null, transparent);
+	}
+	
+	$w950: '(max-width:950px)';
+	@include respond-to($w950) {
+		&:before {
+			position: absolute;
+		}
+
+		.in {
+			left: 0;
+			top: 0;
+			@include translate(0, 0);
+		}
+	}
+}

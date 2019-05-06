@@ -1,0 +1,639 @@
+@charset "utf-8";
+
+.stdpc-body {
+	padding: 20px 0 100px;
+	line-height: 1;
+
+	.stdpc-body_compare {
+		position: relative;
+		padding-top: 42px;
+		
+		// 견적없음
+		.cart-body_notfound {
+			padding-top: 70px;
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+
+			p {
+				margin-top: 10px;
+				font-size: 12px;
+				color: $base_color3;
+			}
+
+			.btn_shopping {
+				display: block;
+				margin: 20px auto 0;
+				font-size: 16px;
+				@include btn(140px, 43px, 2px solid $point_color1, $point_color1, #fff, center, 39px);
+
+				&:hover {
+					background: #f8f8f8;
+				}
+
+			}
+
+		}
+		
+		// 총견적
+		.cart-body_compare_sum {
+			padding: 0 20px;
+			border-top: 2px solid $point_color1;
+			border-bottom: 2px solid $point_color1;
+			background: #ecf3fd;
+			@include clear;
+
+			.tit-h3 {
+				float: left;
+				font-size: 28px;
+				color: #f34522;
+				line-height: 104px;
+			}
+
+			.cart-body_compare_sum_price {
+				float: right;
+				font-size: 0;
+
+				.iradio {
+					margin-left: 10px;
+
+					label {
+						padding-top: 3px;
+						font-size: 14px;
+						color: $base_color2;
+						font-weight: bold;
+
+						&:before {
+							margin-top: -3px;
+						}
+
+					}
+
+				}
+
+				.price {
+					display: inline-block;
+					height: 104px;
+					margin-left: 20px;
+					font-size: 18px;
+					color: $base_color2;
+					letter-spacing: 0;
+					line-height: 98px;
+					vertical-align: middle;
+
+					span {
+						font-size: 32px;
+						color: #f34522;
+					}
+
+				}
+
+			}
+
+		}
+
+		.button-group {
+			margin-top: 30px;
+
+			.btn-continue-shopping {
+				display: inline-block;
+				font-size: 24px;
+				font-weight: bold;
+				margin-right: 10px;
+				@include btn(300px, 70px, 2px solid $point_color1, $point_color1, #fff, center, 66px);
+
+				&:hover {
+					background: #f6f6f6;
+				}
+
+			}
+
+			.btn-buy-submit {
+				font-size: 24px;
+				font-weight: bold;
+				@include btn(300px, 70px, 0, #fff, $point_color1, center, 70px);
+
+				&:hover {
+					background: #2d7ee4;
+				}
+
+			}
+		
+		}
+
+		.cart-body_compare_other {
+			margin-top: 30px;
+			border-top: 1px solid #e8e7ea;
+
+			ul {
+				@include clear;
+
+				li {
+					float: left;
+					width: 33%;
+					height: 100px;
+					padding-top: 28px;
+					border-left: 1px solid #e8e7ea;
+					color: $base_color3;
+					font-weight: bold;
+					text-align: center;
+					@include box-sizing;
+
+					&:first-child {
+						border-left: 0;
+					}
+
+					&:last-child {
+						width: 34%;
+					}
+
+					div {
+						display: inline-block;
+						font-size: 0;
+						text-align: left;
+					}
+
+					span {
+						display: block;
+						margin-bottom: 10px;
+						font-size: 12px;
+
+						em {
+							color: $base_color1;
+						}
+
+					}
+
+					strong {
+						display: inline-block;
+						margin-right: 10px;
+						font-size: 18px;
+						color: $point_color1;
+						vertical-align: middle;
+					}
+
+					a,
+					button {
+						display: inline-block;
+						min-width: 92px;
+						padding: 0 20px;
+						font-size: 14px;
+						font-weight: bold;
+						@include btn(null, 26px, 1px solid $base_color3, $base_color1, #fff, center, 24px);
+
+						&:hover {
+							border-color: $point_color1;
+							color: $point_color1;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+		
+		// 중간 광고
+		.stdpc-body_compare_adv {
+			margin-top: 40px;
+		}
+
+		.stdpc-body_compare_main {
+			position: relative;
+			margin-top: 50px;
+
+			.lnb_cates {
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 10;
+
+				&.fixed {
+					position: fixed;
+				    left: 50%;
+				    margin-left: -595px;
+				}
+			}
+
+			.stdpc-body_compare_main_box {
+				margin: 0 0 -50px 60px;
+
+				.stdpc-body_compare_main_stdpc,
+				.stdpc-body_compare_main_plan {
+					position: relative;
+					margin-bottom: 50px;
+				}
+
+				.tit-h2 {
+					height: 44px;
+					font-size: 28px;
+				}
+
+				.box_search {
+					position: absolute;
+					right: 0;
+					top: 0;
+					font-size: 0;
+
+					.imonthday {
+						width: 78px;
+						height: 33px;
+						margin-right: -1px;
+						padding: 0 10px;
+						border: 1px solid $base_color3;
+						font-size: 12px;
+						line-height: 31px;
+						vertical-align: top;
+						letter-spacing: 0;
+						@include box-sizing();
+					}
+
+					.btn_cal {
+						font-size: 18px;
+						@include btn(33px, 33px, 1px solid $base_color3, null, null);
+						background: #e8e7ea url("//img.happyshopping.kr/img_static/img_pres/_v3/ico_calendar.png") no-repeat 50% 50%;
+					}
+
+					.box_search_search {
+						position: relative;
+						display: inline-block;
+						margin-left: 5px;
+						vertical-align: top;
+
+						.isearch {
+							width: 180px;
+							height: 33px;
+							padding: 0 40px 0 10px;
+							border: 1px solid $base_color3;
+							font-size: 12px;
+							line-height: 31px;
+							@include box-sizing();
+						}
+
+						.btn_isearch {
+							position: absolute;
+							right: 3px;
+							top: 0;
+							font-size: 14px;
+							@include btn(33px, 33px, 0, $base_color3, transparent);
+						}
+					}
+				}
+
+				.box_stdpc_nav {
+					position: relative;
+					background: #fff;
+					@include clear;
+
+					&:before {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						height: 2px;
+						width: 100%;
+						background: #0f4f9f;
+					}
+
+					&.fixed {
+						position: fixed;
+						top: 0;
+						width: 950px;
+						z-index: 10;
+					}
+
+					.btn {
+						float: left;
+						margin-right: -2px;
+						font-size: 16px;
+						font-weight: bold;
+						line-height: 46px;
+						text-align: center;
+						@include btn(null, 48px, 1px solid #d3d3d3, null, #f0eff5, center, 46px);
+
+						&:hover {
+							color: #0f4f9f;
+							background: #fff;
+						}
+
+						&.active {
+							position: relative;
+							border: 2px solid #0f4f9f;
+							border-bottom-color: #fff;
+							color: #0f4f9f;
+							background: #fff;
+							line-height: 44px;
+						}
+
+					}
+
+					&.cnt2 {
+						.btn {
+							width: calc(50% + 1px);
+						}
+
+					}
+
+					&.cnt3 {
+						.btn {
+							width: calc((100% / 3) + 2px);
+
+							&:first-child {
+								width: calc((100% / 3) + 1px);
+							}
+						}
+
+					}
+
+					&.cnt4 {
+						.btn {
+							width: calc(25% + 2px);
+
+							&:first-child {
+								width: 25%;
+							}
+						}
+					}
+
+
+					&.cnt5 {
+						.btn {
+							width: calc(20% + 2px);
+
+							&:first-child {
+								width: 20%;
+							}
+						}
+					}
+
+				}
+
+				// 행쇼 표준pc
+				.box_stdpc {
+					.box_stdpc_body {
+						position: relative;
+						margin-top: 20px;
+
+						.box_stdpc_body_top {
+							height: 42px;
+							padding-top: 8px;
+							font-size: 0;
+							@include box-sizing();
+
+							.tit-h3 {
+								display: inline-block;
+								font-size: 24px;
+								vertical-align: bottom;
+							}
+
+							span {
+								display: inline-block;
+								margin-left: 10px;
+								font-size: 12px;
+								color: $base_color3;
+								vertical-align: bottom;
+							}
+						}
+
+						.box_stdpc_body_cate {
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: 100%;
+							height: 42px;
+							font-size: 0;
+							text-align: right;
+
+							&:before {
+								content: "";
+								position: absolute;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								width: 100%;
+								border-bottom: 1px solid $base_color2;
+							}
+							
+							.btn {
+								margin-left: -1px;
+								border-width: 1px 1px 0 1px;
+								border-style: solid;
+								border-color: #d3d3d3;
+								font-size: 14px;
+								font-weight: bold;
+								@include btn(157px, 42px, null, $base_color2, #fff);
+
+								&:first-child {
+									margin-left: 0;
+								}
+
+								&:hover {
+									color: $base_color1;
+								}
+
+								&.active {
+									position: relative;
+									border-color: $base_color2;
+									color: $base_color1;
+								}
+							}
+						}
+
+						.box_stdpc_body_mediumguide {
+							margin: 15px 0 -5px;
+							font-size: 0;
+
+							a {
+								display: inline-block;
+								margin-left: 8px;
+								padding-left: 8px;
+								border-left: 1px solid #e5e5e5;
+								font-size: 12px;
+								color: $base_color1;
+								vertical-align: middle;
+
+								span {
+									margin-left: 8px;
+									font-size: 11px;
+									color: $point_color1;
+								}
+							}
+						}
+
+						.box_stdpc_body_list {
+							@include clear;
+						}
+					}
+				}
+
+				// 행쇼 기획pc
+				.box_plan {
+					.box_plan_body {
+						position: relative;
+						margin-top: 20px;
+
+						.box_plan_body_list {
+							@include clear;
+						}
+
+						&:first-child {
+							margin-top: 0;
+						}
+					}
+
+					&.planpc {
+						margin-top: 20px;
+
+						.box_plan_body_list {
+							margin-top: 10px;
+						}
+
+						.stdpc_item {
+							margin-top: 0;
+						}
+					}
+				}
+
+				.box_paging {
+					@include clear;
+
+					.paging-number {
+						float: right;
+
+						button {
+							border-color: #d8d5e5;
+						}
+					}
+				}
+			}
+
+			// 검색결과
+			&.search_result {
+				.search_result_msg {
+					position: relative;
+					height: 50px;
+					margin-bottom: 30px;
+					padding: 10px;
+					font-size: 18px;
+					background: #f0eff5;
+					line-height: 50px;
+
+					strong {
+						color: $point_color2;
+					}
+
+					.btn_clse {
+						position: absolute;
+						right: 10px;
+						top: 50%;
+						margin-top: -15px;
+						@include btn(30px, 30px, 1px solid #d3d3d3);
+						background: #fff url("//img.happyshopping.kr/img_static/img_pres/_v3/btn_clse_dark.png") no-repeat 50% 50%;
+					}
+				}
+
+				.lnb_cates {
+					display: none;
+				}
+
+				.stdpc-body_compare_main_box {
+					margin-left: 0;
+
+					.stdpc_item {
+						margin-right: 40px;
+					}
+				}
+
+				.stdpc-body_compare_main_stdpc {
+					.box_stdpc_body_top {
+						height: auto;
+					}
+				}
+
+				.stdpc-body_compare_main_plan {
+					.tit-h2 {
+						border-bottom: 1px solid #2e5397;
+					}
+				}
+
+				.box_paging {
+					margin: 20px 0 10px;
+				}
+
+				.keyword {
+					padding: 0 2px;
+					color: #fff;
+					background: $point_color2;
+				}
+
+				.box_stdpc_body_list_item {
+					.spec {
+						height: 260px;
+					}
+				}
+
+				.box_plan_body_list_item {
+					.mediumguide {
+						height: 260px;
+					}
+				}
+			}
+		}
+
+		// 견적 공유
+		.stdpc-body_compare_share {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			text-align: right;
+
+			.in {
+				font-size: 0;
+
+				.tit-h5,
+				.btn-facebook,
+				.btn-kakaotalk,
+				.btn-email,
+				.btn-link,
+				.btn-print {
+					display: inline-block;
+					font-size: 12px;
+					color: $base_color2;
+					vertical-align: middle;
+				}
+
+				.tit-h5 {
+					margin-right: 5px;
+				}
+
+				.btn-facebook,
+				.btn-kakaotalk,
+				.btn-email,
+				.btn-link,
+				.btn-print {
+					margin-left: 5px;
+					@include btn(38px, 38px, 0, null, transparent);
+				}
+
+				@include default_width;
+
+				@include respond-to($small_desktop) {
+					width: 950px;
+				}
+
+			}
+
+		}
+
+	}
+
+	.aside-medium {
+		.tit-h2 {
+			padding-top: 0;
+		}
+
+	}
+
+}

@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+.button-group {
+	font-size: 0;
+
+	&.ctr {
+		text-align: center;
+	}
+
+	&.rgt {
+		text-align: right;
+	}
+}
+
+// 담기
+.btn-add-to {
+	overflow: hidden;
+	position: relative;
+	@include loadIcon($icon-in,null,#fff);
+	// @include icon('\e92e', null, before, #fff);
+	@include btn(null, null, 0, #fff, $point_color1);
+
+	span {
+		opacity: 0;
+		position: absolute;
+		right: -9999px;
+		top: 0;
+		bottom: 0;
+		padding: 0 10px;
+		background: $point_color1;
+		text-align: left;
+		white-space: nowrap;
+
+		&:before {
+			margin-right: 10px;
+		}
+
+		@include loadIcon($icon-in);
+	}
+
+	&:hover {
+		overflow: visible;
+
+		span {
+			opacity: 1;
+			right: 0;
+		}
+	}
+}
+
+.btn-cart-to {
+	overflow: hidden;
+	position: relative;
+	@include loadIcon($icon-cart,null,#fff);
+	// @include icon('\e92e', null, before, #fff);
+	@include btn(null, null, 0, #fff, $point_color1);
+
+	span {
+		opacity: 0;
+		position: absolute;
+		right: -9999px;
+		top: 0;
+		bottom: 0;
+		padding: 0 10px;
+		background: $point_color1;
+		text-align: left;
+		white-space: nowrap;
+
+		&:before {
+			position: relative;
+			top: 2px;
+			margin-right: 10px;
+		}
+
+		@include loadIcon($icon-cart);
+	}
+
+	&:hover {
+		overflow: visible;
+		
+		span {
+			opacity: 1;
+			right: 0;
+		}
+	}
+}
+
+// 모바일 찜하기
+.btn_fork {
+	border-radius: 15px;
+	@include btn(30px, 30px, 1px solid #ccc, $point_color1, #fff);
+
+	&:before {
+		position: relative;
+		top: 1px;
+		font-size: 19px;
+	}
+}
+
+// 모바일 쓰레기통 삭제
+.btn_trash_del {
+	border-radius: 15px;
+	font-size: 17px;
+	@include btn(30px, 30px, 1px solid #ccc, $base_color2, #fff);
+	
+	&:before {
+		position: relative;
+		top: 2px;
+		font-size: 19px;
+	}
+}
+
+// 모바일 상단으로
+.btn_page_top {
+	position: fixed;
+	right: 3px;
+	bottom: 270px;
+	border-radius: 3px;
+	z-index: 2;
+	@include btn(35px, 35px, 1px solid $base_color3, $base_color2, rgba(255, 255, 255, 0.7));
+
+	[class^="icon-"] {
+		font-size: 34px;
+	}
+}
+
+
+// 모바일 스위치
+.toggle_switch {
+	position: relative;
+	display: inline-block;
+	width: 46px;
+	height: 26px;
+
+	input {
+		display: none;
+	}
+
+	.slider {
+		position: absolute;
+		top: 3px;
+		left: 0;
+		right: 0;
+		bottom: 3px;
+		padding: 0 5px 0 6px;
+		font-size: 10px;
+		color: #fff;
+		background: #bbb;
+		letter-spacing: 0;
+		text-align: right;
+		line-height: 20px;
+		cursor: pointer;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+		@include box-sizing();
+
+		&:before {
+			position: absolute;
+			content: "";
+			left: -4px;
+			bottom: -3px;
+			border: 1px solid #ccc;
+			background: #fff;
+			-webkit-transition: 0.4s;
+			transition: .4s;
+			@include size(26px);
+			@include box-sizing();
+		}
+
+		em {
+			position: relative;
+			top: 1px;
+
+			&.on {
+				display: none;
+			}
+
+			&.off {
+				display: inline;
+			}
+		}
+
+		&.round {
+			border-radius: 26px;
+
+			&:before {
+				border-radius: 50%;
+			}
+		}
+	}
+
+	input:checked + .slider {
+		text-align: left;
+		background: $point_color1;
+
+		.on {
+			display: inline;
+		}
+
+		.off {
+			display: none;
+		}
+	}
+
+	input:checked + .slider:before {
+		-webkit-transform: translateX(27px);
+		-ms-transform: translateX(27px);
+		transform: translateX(27px);
+	}
+
+	&.pc {
+		width: 38px;
+		height: 21px;
+
+		.slider {
+			top: 2px;
+			left: 0;
+			right: 0;
+			bottom: 2px;
+			padding: 0 5px 0 4px;
+			line-height: 16px;
+
+			&:before {
+				left: -7px;
+				bottom: -2px;
+				border: 1px solid #ccc;
+				background: #fff;
+				-webkit-transition: 0.4s;
+				transition: .4s;
+				@include size(21px);
+				@include box-sizing();
+			}
+
+			em {
+				top: auto;
+			}
+
+			&.round {
+				border-radius: 21px;
+
+				&:before {
+					border-radius: 50%;
+				}
+			}
+		}
+
+		input:checked + .slider:before {
+			-webkit-transform: translateX(30px);
+			-ms-transform: translateX(30px);
+			transform: translateX(30px);
+		}
+	}
+}
