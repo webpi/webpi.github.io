@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>수강신청-기업(신청서작성)</title>
+    <link href="/css/component_blue.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template6/resp/template6.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template6/resp/blue.css" rel="stylesheet" type="text/css" media="all">
+    <!--[if lt IE 10]>
+        <link href="/css/template6/resp/ie8-9.css" rel="stylesheet" type="text/css" media="all">
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/template6/style.js"></script>
+</head>
+<body>
+    <!-- register popup start -->
+    <div class="register">
+        <h3>수강신청</h3>
+		<div class="floatRight">
+			<button type="button" class="btnReset">초기화</button>
+			<button type="button" class="btnClose" onclick="window.close();">닫기</button>
+		</div>
+		
+		<!-- contentsWrap start -->
+		<div class="contentsWrap">
+	
+			<!-- step start -->
+			<div class="step">
+				<ul>
+					<li class="active"><span>Step 1</span>신청서 작성</li>
+					<li><span>Step 2</span>신청완료</li>
+				</ul>
+			</div>
+			<!-- //step end -->
+
+			<!-- contentsBox start -->
+			<div class="contentsBox">	
+
+				<h5>과정정보</h5>
+				<div class="boardWrite">
+					<table>
+						<caption>과정정보</caption>
+						<tbody>
+							<tr>
+								<th style="width:17%;">과정명</th>
+								<td>위기에 강한 기업의 비결! 독서경영 에너지</td>
+							</tr>
+							<tr>
+								<th>교육기간</th>
+								<td>0000-00-00 ~ 0000-00-00</td>
+							</tr>
+							<tr>
+								<th>교육비</th>
+								<td>1,000,000원</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h5>신청자 정보</h5>
+				<div class="boardWrite">
+					<table>
+						<caption>신청자 정보 입력</caption>
+						<tbody>
+							<tr>
+								<th class="asterisk" style="width:17%;">아이디</th>
+								<td>Abcd1234</td>
+							</tr>
+							<tr>
+								<th class="asterisk">성명</th>
+								<td>김정보</td>
+							</tr>
+							<tr>
+								<th class="asterisk">국적구분</th>
+								<td>
+									<div class="selectBox">
+										<select id="">
+											<option value="" selected>내국인</option>
+											<option value="">외국인</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">주민등록번호</th>
+								<td>
+									<input type="text" id="" value="" name="" placeholder="" style="width:100px" />
+									-
+									<input type="text" id="" value="" name="" placeholder="" style="width:100px" />
+									<p class="error">*재직자 과정을 수강하기 위해서는 주민등록번호는 필수 입력 사항입니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">외국인등록번호</th>
+								<td>
+									<input type="text" id="" value="" name="" placeholder="" style="width:100px" />
+									-
+									<input type="text" id="" value="" name="" placeholder="" style="width:100px" />
+									<p class="error">*재직자 과정을 수강하기 위해서는 외국인등록번호는 필수 입력 사항입니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>휴대전화</th>
+								<td>
+									<label for="" class="hidden">휴대전화</label>
+									<div class="selectBox">
+										<select id="">
+											<option value="" selected>010</option>
+											<option value="">010</option>
+											<option value="">010</option>
+											<option value="">010</option>
+										</select>
+									</div>
+									-
+									<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+									-
+									<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+								</td>
+							</tr>
+							<tr>
+								<th>이메일</th>
+								<td>
+									<input type="text" id="" name="" placeholder="" style="width:100px" />
+									@
+									<input type="text" id="" name="" placeholder="" style="width:100px" />
+									<div class="selectBox">
+										<select id="">
+											<option value="" selected>직접입력</option>
+											<option value="">hotmail.com</option>
+											<option value="">gmail.com</option>
+											<option value="">naver.com</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+<!-- 				<h5>재수강 사유</h5> -->
+<!-- 				<div class="boardWrite"> -->
+<!-- 					<table> -->
+<!-- 						<caption>재수강 사유</caption> -->
+<!-- 						<tbody> -->
+<!-- 							<tr> -->
+<!-- 								<th style="width:15%;">재수강 사유</th> -->
+<!-- 								<td> -->
+<!-- 									<textarea></textarea> -->
+<!-- 								</td> -->
+<!-- 							</tr> -->
+<!-- 						</tbody> -->
+<!-- 					</table> -->
+<!-- 				</div> -->
+				<h5>배송지 정보</h5>
+				<div class="boardWrite">
+					<table>
+						<caption>배송지 정보</caption>
+						<tbody>
+							<tr>
+								<th class="asterisk" style="width:17%;">배송 구분</th>
+								<td>
+									<div class="radioncheckbox">
+										<label for="radio01"><input type="radio" id="radio01" name="" />회사</label>
+										<label for="radio02"><input type="radio" id="radio02" name="" />자택</label>
+									</div>
+									<span class="warning">(회사 선택 시 사업장 주소지로 발송되므로 주소지를 변경할 수 없습니다)</span>
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">주소</th>
+								<td>
+									<div id="setAddrDiv" class="radioncheckbox">
+										<label for="p_dirctSet1"><input type="radio" name="p_dirctSet" id="p_dirctSet1" value="01" onclick="setAddr('01')" checked="">기본주소</label>
+										<label for="p_dirctSet2"><input type="radio" name="p_dirctSet" id="p_dirctSet2" value="02" onclick="setAddr('02')">직접입력</label>
+									</div>
+									<ul class="address">
+										<li>
+											<button type="button" id="zipcdBtn" class="inside btnZipcode" onclick="doDaumPostCode('3')">우편번호</button>
+											<input type="hidden" id="p_rcpnt_zipcd" name="p_rcpnt_zipcd" value="">
+											<input type="text" id="p_rcpnt_zipcd1" name="p_rcpnt_zipcd1" datatype="number" maxlength="3" class="zipCode" dispname="주소" isnull="N" readonly="" value="">
+											<span>-</span>
+											<input type="text" id="p_rcpnt_zipcd2" name="p_rcpnt_zipcd2" datatype="number" maxlength="3" class="zipCode" dispname="주소" isnull="N" readonly="" value="">
+											<span>(</span>
+											<input type="text" id="p_rcpnt_zonecd" name="p_rcpnt_zonecd" datatype="number" maxlength="5" class="zipCode" dispname="주소" isnull="N" readonly="" value="">
+											<span>)</span>
+										</li>
+										<li>	
+											<label>지번주소 : </label>
+											<input type="text" class="small" id="p_rcpnt_jibunaddr" name="p_rcpnt_jibunaddr" dispname="주소" readonly="" value="">
+											<input type="text" class="medium" id="p_rcpnt_jibunaddr_dtl" name="p_rcpnt_jibunaddr_dtl" dispname="주소" maxlength="250" value="">
+										</li>
+										<li>
+											<label>도로명주소 : </label>
+											<input type="text" class="small" id="p_rcpnt_roadaddr" name="p_rcpnt_roadaddr" dispname="주소" readonly="" value="">
+											<input type="text" class="medium" id="p_rcpnt_roadaddr_dtl" name="p_rcpnt_roadaddr_dtl" dispname="주소" maxlength="250" value="">
+										</li>
+										<li>
+											<p class="warning">배송지 주소는 우편번호를 클릭하여 수정이 가능합니다.</p>
+										</li>
+									</ul>
+									
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">전화번호</th>
+								<td>
+									<label for="" class="hidden">전화번호</label>
+									<div class="selectBox">
+										<select id="">
+											<option value="" selected>02</option>
+											<option value="">010</option>
+											<option value="">010</option>
+											<option value="">010</option>
+										</select>
+									</div>
+									-
+									<input type="text" id="" name="" value="" maxlength="4" size="4" class="tel" />
+									-
+									<input type="text" id="" name="" value="" maxlength="4" size="4" class="tel" />
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">휴대전화</th>
+								<td>
+									<label for="" class="hidden">휴대전화</label>
+									<div class="selectBox">
+										<select id="">
+											<option value="" selected>010</option>
+											<option value="">010</option>
+											<option value="">010</option>
+											<option value="">010</option>
+										</select>
+									</div>
+									-
+									<input type="text" id="" name="" value="1111" maxlength="4" size="4" class="tel" />
+									-
+									<input type="text" id="" name="" value="2222" maxlength="4" size="4" class="tel" />
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">배송 메세지</th>
+								<td>
+									<input type="text" id="" name="" value="" class="large" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h5>소속정보</h5>
+				<div class="boardWrite">
+					<table>
+						<caption>소속정보</caption>
+						<tbody>
+							<tr>
+								<th class="asterisk" style="width:17%;">회사명</th>
+								<td>무한상사</td>
+							</tr>
+							<tr>
+								<th class="asterisk">사업자번호</th>
+								<td>123-11-12345</td>
+							</tr>
+							<tr>
+								<th class="asterisk">고용보험관리번호</th>
+								<td>1111111(자동)</td>
+							</tr>
+							<tr>
+								<th class="asterisk">담당자명</th>
+								<td>
+									<input type="text" id="" name="" value="" maxlength="4" size="4" style="width:100px" />
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">직위</th>
+								<td>
+									<input type="text" id="" name="" value="" maxlength="4" size="4" style="width:100px" />
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">휴대전화</th>
+								<td>
+									<label for="" class="hidden">휴대전화</label>
+									<div class="selectBox">
+										<select id="">
+											<option value="" selected>010</option>
+											<option value="">010</option>
+											<option value="">010</option>
+											<option value="">010</option>
+										</select>
+									</div>
+									-
+									<input type="text" id="" name="" value="" maxlength="4" size="4" class="tel" />
+									-
+									<input type="text" id="" name="" value="" maxlength="4" size="4" class="tel" />
+								</td>
+							</tr>
+							<tr>
+								<th class="asterisk">이메일</th>
+								<td>
+									<input type="text" id="" name="" placeholder="" style="width:100px" />
+									@
+									<input type="text" id="" name="" placeholder="" style="width:100px" />
+									<div class="selectBox">
+										<select id="">
+											<option value="" selected>직접입력</option>
+											<option value="">hotmail.com</option>
+											<option value="">gmail.com</option>
+											<option value="">naver.com</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+						
+				<h5><label for="check01"><input type="checkbox" id="check01" name="" />개인정보의 수집.이용 및 제공에 관한 동의서</label></h5>
+				<div class="boxGray textBox expand">
+					1. 고용노동부에서는 근로자 직업능력개발훈련 지원제도 운영에 있어 개인을 고유하게 구별하기 위해 부여된 식별정보(주민등록번호 등)를 포함한 개인정보를 다음과 같이 직업능력개발정보망(HRD-Net)에 수집ㆍ이용하고 있습니다.
+					<button type="button" class="btnMore">더보기</button>
+				</div>
+	
+				<!-- btnArea start -->
+				<div class="btnArea">
+					<button type="button" class="btnNext" onclick="location.href='register_company_step02.html';">계속진행</button>
+				</div>
+				<!-- //btnArea end -->
+			
+			</div>
+			<!-- //contentsBox end -->
+
+		</div>
+		<!-- //contentsWrap end -->
+	
+	</div>
+    <!-- //register popup end -->
+</body>
+</html>

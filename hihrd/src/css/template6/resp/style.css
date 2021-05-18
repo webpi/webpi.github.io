@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+/* LYW 20-02-17 추가 */
+
+
+	#header .component5 .searchMenu {display:none}
+	#header .component5 .box .searchCon {display:inline-block}
+	#header .component5 .box .search button {top:0}
+
+/* EOD : LYW 20-02-17 추가 */
+
+/* 아래 css 모두 component.css 에 넣어주시면 감사하겠습니다. */
+
+/* LYW 20-02-19 추가 */
+
+  /* 학습 일정 */
+
+  .study_plan {margin:0 0 30px}
+  .study_plan > .tit {padding-bottom: 15px;}
+  .study_plan > .tit strong {font-size:20px}
+
+  .study_notice {position:relative; height:50px; line-height:50px; border:1px solid #dedede; border-top:2px solid #5e5e5e; background-color:#f8f8f8; overflow:hidden}
+  .study_notice .tit {position:absolute; top:17px; left:50px; line-height:1; font-size:15px; font-weight:600}
+  .study_notice .tit:before {content:""; display:inline-block; width:21px; height:16px; position:absolute; top:0; left:-30px; background:url('../../../images/template6/resp/default/usr/icon_speaker.png') no-repeat;}
+  .study_notice .content {margin:0 90px 0 150px; font-weight:bold}
+  .study_notice .content .txt_blue {color:#4587d1; margin:0 5px 0 0; letter-spacing: -0.5px;}
+  .sliderNotice > li > a {display:block; color:#5e5e5e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: -0.5px;}
+  
+  .study_process {position:relative; height:50px; line-height:50px; margin:10px 0 0; border:1px solid #dedede;  background-color:#f8f8f8;}
+  .study_process .tit {position:absolute; top:17px; left:50px; line-height:1; font-size:15px; font-weight:600}
+  .study_process .tit:before {content:""; display:inline-block; width:21px; height:16px; position:absolute; top:0; left:-30px; background:url('../../../images/template6/resp/default/usr/icon_note.png') no-repeat;}
+  .study_process .tit strong {font-size:17px;}
+  .study_process .content {margin:0 0 0 150px; font-weight:bold}
+  .study_process .content  .txt_orange {color:#f0564c; font-size:17px}
+  
+  .study_notice .bx-controls {position:absolute; top:12px; right:20px; line-height:1; display:block}
+  .study_notice .bx-prev {display:inline-block; width:24px; height:24px; margin:0 5px 0 0; background:white url('../../../images/template6/resp/default/usr/icon_gray_down_arrow.png') center center no-repeat; border:1px solid #dedede; overflow:hidden; text-indent:-999px}
+  .study_notice .bx-next {display:inline-block; width:24px; height:24px; background:white url('../../../images/template6/resp/default/usr/icon_gray_up_arrow.png') center center no-repeat; border:1px solid #dedede; overflow:hidden; text-indent:-999px}
+
+  /* EOD : 학습 일정 */
+
+  /* 나의 학습 현황 */
+
+  .Learning > .tit {font-size:20px; margin:0 0 15px}
+
+  .tabArea {display:none}
+
+  .tabBox { display:table; table-layout:fixed; width:100%; }
+	.tabBox li { display:table-cell; vertical-align:middle; text-align:center; }
+		.tabBox li a { display:table;  width:100%; height:60px; word-break:break-all; }
+		.tabBox li a span { position:relative; display:table-cell; vertical-align:middle; font-weight:600; padding:0 12px; border-right:1px solid #e6e6e6; border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; font-size:16px; color:#919191; background:#f8f8f8; }
+		.tabBox li:first-child a span {border-left:1px solid #e6e6e6; }
+		.tabBox li.active a span { position:relative; background:#4689d2; color:white; border-right:1px solid #4689d2; border-top:1px solid #4689d2; border-bottom:1px solid #4689d2}
+		.tabBox li.active:first-child a span { border-left:none; } 
+  
+  .LearningBox {margin:0 0 30px}
+  .StudyBox {}
+  .StudyBox > ul {overflow:hidden; border-left:1px solid #dedede; border-right:1px solid #dedede;}
+  .StudyBox > ul > li {position:relative; border-bottom:1px solid #dedede}
+  .StudyBox > ul > li.no_data {text-align:center; padding:30px 0 25px; border-bottom:1px solid #dedede}
+  .StudyBox > ul > li.no_data .icon {display:inline-block; width:50px; height:50px; margin:0 0 15px; background: url("../../../images/template6/resp/default/usr/icon_nodata_studyBox.png") no-repeat}
+  .StudyBox > ul > li.no_data .txt {font-size:18px; font-weight:bold; color:#00346e; margin:0}
+
+  .StudyBox.type02 > ul {border-right:0}
+  .StudyBox.type02 > ul > li {width:50%; float:left; border-right:1px solid #dedede}
+  .StudyBox.type02 > ul > li.no_data {width:100%}
+  .StudyBox.type02 .StudyBoxL {margin:0 100px 0 0}
+  .StudyBox.type02 .StudyBoxR {right:0}
+  .StudyBoxL {margin: 0 500px 0 0; font-weight:600;}
+  .StudyBoxLIn {padding:35px 40px 30px}
+  .StudyBoxLIn .tit {position:relative; font-size:18px; color:#00346e; white-space: nowrap; overflow: hidden; margin:0 0 0 -23px; text-overflow: ellipsis}
+  .StudyBoxLIn .tit:before {content:""; display:inline-block; width:12px; height:10px; margin:0 10px 0 0; background:url('../../../images/template6/resp/default/usr/icon_blue_chk.png') no-repeat;}
+  .StudyBoxLIn .dataBox {position:relative; width:310px; margin:18px 0 0;}
+  .StudyBoxLIn .time {font-size:13px; color:#5e5e5e;}
+  .StudyBoxLIn .time strong {color:#2c2c2c}
+  .StudyBoxLIn .day {font-size:12px; color:#919191; margin:8px 0 0}
+  .StudyBoxLIn .day .txt_red {color:#f0564c}
+  .StudyBoxLIn .btn_orange {position:absolute; bottom:0; right:0; display:inline-block; width:110px; height:30px; padding:0; color:White; font-size:13px; background-color:#f68b1f}
+
+  .StudyBoxR {position:absolute; top:22px; right:20px; text-align:right}
+  
+  .studyProgress {width: 100px; margin:0; display: inline-block; position: relative;  text-align: center;	line-height: 1.2;}
+  .studyProgress .txt {display: block; position: absolute;	top: 30px;	left: 50%;	margin:0 0 0 -18px;	font-size: 12px; color: #5e5e5e;}
+  .studyProgress canvas {vertical-align: top;}
+  .studyProgress strong {position: absolute; top: 45px; left: 0; width: 100%; text-align: center; line-height: 1; }
+  .studyProgress strong span {vertical-align:middle; font-size: 23px;}
+  .studyProgress .data {display:none}
+  .studyProgress strong sub {vertical-align:middle; font-size:13px;}
+
+  .studyData {display:inline-block; vertical-align:middle}
+  .studyDataBox {width:120px; text-align:center; margin:3px 0 0}
+  .studyDataBox > .tit {background-color:#17adad; color:white; height:35px; line-height:35px; color:white; font-size:14px; font-weight:600; border-radius:3px 3px 0 0}
+  .studyDataBox > .tit.sky {background-color:#279fd1}
+  .studyDataBox > .tit.blue {background-color:#4587d1}
+  .studyDataBox .content {display:table; width:100%; height:60px; border:1px solid #dedede; border-radius:0 0 3px 3px}
+  .studyDataBox .contentIn {display:table-cell; width:100%; height:100%; vertical-align:middle; font-size: 13px; color: #5e5e5e; font-weight: 600;}
+  .studyDataBox .contentIn i {font-size:24px; color:#f0564c; margin:0 2px 0 0}
+  .studyDataBox .contentIn .txt_sky {color:#4689d2}
+  .studyDataBox .contentIn strong {font-size:15px}
+
+  .studyData > ul {overflow:hidden;}
+  .studyData > ul > li {float:left; margin:0 0 0 10px}
+  .studyData > ul > li:first-child {margin:0 15px 0 0}
+
+  .LearningBox .btn_more {position:relative; width:100%; height:34px; font-size:13px; color:#4587d1; text-align:center; background:#ecf5ff; border:1px solid #4587d1; border-top:0; animation:flash 2s infinite;}
+  .LearningBox .btn_more:before {content:""; position:absolute; top:-1px; left:-1px; right:-1px; border-top:1px solid #4587d1}
+  .LearningBox .btn_more i {display:inline-block; margin:0 0 0 5px; width:14px; height:8px; background: url("../../../images/template6/resp/default/usr/icon_blue_down_arrow.png")}
+	
+  @keyframes flash {
+
+	0% { background:#ffff99; } 
+	50% { background:white; } 
+	100% { background:#ffff99; }
+
+  }
+
+  /* EOD : 나의 학습 현황 */
+
+  /* 이미지 썸네일 영역 */
+
+  .webModule29 .left_banner {float:left; width:491px; height:220px;}
+  .webModule29 .left_banner a {display:block}
+
+  .webModule31 .customer {float:left; background:none; width:238px; margin:0 0 0 20px}
+  .webModule31 > div.customer .title {margin:0 0 45px}
+  .webModule31 .customer p {float:left}
+  .webModule31 .customer p.tel {margin:0 0 25px; float: left;}
+  .webModule31 .link {float:left; width:240px; margin:0 0 0 12px; padding:0; border:0; }
+  .webModule31 .link ul li {margin:10px 0 0}
+  .webModule31 .link ul li:first-child {margin:0}
+  .webModule31 .link ul li a {display: block; height:116px; line-height: 116px;  padding-left: 110px;  border: 1px solid #dedede; font-size: 1.15em; font-weight: 700; background: url('../../../images/component/wm18_icon_link02.png') 18px center no-repeat;}
+  .webModule31 .link ul li + li a {background: url("../../../images/component/wm18_icon_link04.png") 18px center no-repeat;}
+
+/* EOD : LYW 20-02-19 추가 */
+
+
+
+@media screen and (max-width: 1023px){
+
+	#header .component5 .searchMenu {position: absolute;  display: inline-block; top: 0; right: 0; min-width: 48px; width: 48px; height: 50px; padding: 0; margin: 0; text-indent:-100px; overflow:hidden; background: url('../../../images/template3/resp/default/button/btn_mobile_search.png') center center no-repeat;}
+	#header .component5 .box .searchCon {display:none; background-color: #225fa4; position: absolute; top: 50px;  left: 0;  width: 100%; height: 84px}
+	#header .component5 .box .searchCon.active {display:block}
+	#header .component5 .box .search {display:inline-block; width:90%; min-width:270px; margin:25px 0; height:auto}
+	#header .component5 .box .search input {width:100%; height:34px; padding-left:10px}
+	#header .component5 .box .search .searchInput {margin:0 86px 0 0}
+	#header .component5 .box .search button {min-width:80px; width:80px; height:34px; font-size:13px; color:white; background:#689dd8}
+	#header .component5 .box .zoom {display:none}
+
+	/* 학습 일정 */
+
+	.study_notice .bx-controls {right:12px}
+
+	.study_notice {height:70px; line-height:1}
+    .study_process {height:95px; line-height:1}
+	.study_notice .tit:before , .study_process .tit:before {display:none}
+	.study_notice .tit , .study_process .tit {left:12px}
+	.study_notice .content  , .study_process .content {margin:42px 12px 0}
+	.study_process .content .sub_txt {display:block; margin:5px 0 0}
+
+
+	/* EOD : 학습 일정 */ 
+
+	/* 나의 학습현황 */
+
+	.tabBox li a span {font-size:15px}
+  
+    .StudyBox > ul {border-right:0}
+    .StudyBox > ul > li {width:100%; float:left; border-right:1px solid #dedede}
+	.StudyBox.type02 > ul {border-left:1px solid #dedede}
+	.StudyBox.type02 > ul > li {border-left:0; border-right:1px solid #dedede}
+	.StudyBoxL , .StudyBox.type02 .StudyBoxL {margin:0}
+	.StudyBoxLIn {padding:20px 12px 0}
+	.StudyBoxLIn .tit {font-size:15px; margin:0}
+	.StudyBoxLIn .tit:before {display:none}
+	.StudyBoxLIn .dataBox {width:100%}
+	.StudyBoxLIn .day {font-size:11px; letter-spacing:-0.3px}
+	.StudyBoxLIn .btn_orange {margin:15px 0 0; margin-right:6px}
+	.StudyBox.type02 .StudyBoxR {position:absolute; padding:0; top:50px; right:30px}
+	.StudyBox.type02 .StudyBoxLIn {padding:20px 12px 30px}
+	.StudyBox.type02 .StudyBoxLIn .btn_orange {width:110px}
+   
+	.StudyBoxR {position:static; padding:20px 12px}
+    .studyData {width:100%}
+	.studyData > ul {overflow:hidden}
+	.studyData > ul > li {width:50%; float:left; margin:0; min-height:103px; text-align:center}
+	.studyData > ul > li:first-child {margin:0}
+	.studyDataBox {width:auto; margin:3px 5px}
+
+	/* EOD : 나의 학습현황 */
+
+	.webModule29 .left_banner {display:none}
+	
+	.webModule31 .customer {width:50%; margin:0;}
+	.webModule31 .link {width:100%; height:auto; margin:20px 0 0}
+	.webModule31 .link ul li {width:50%; float:left; margin:0;}
+	.webModule31 .link ul li a {background: url('../../../images/component/wm18_icon_link02.png') center 14px no-repeat; height:135px;  padding:108px 0 0; line-height:1; text-align:center}
+	.webModule31 .link ul li + li a {background: url('../../../images/component/wm18_icon_link04.png') center 14px no-repeat; border-left:0}
+
+}
+
+@media screen and (max-width: 767px) {
+
+	.webModule31 .customer {width:100%}
+	
+	/* 나의 학습현황 */
+   
+    .StudyBox > ul > li {width:100%;}
+	.StudyBox.type02 > ul > li {width:100%}
+	.StudyBox.type02 .StudyBoxR {right:12px}
+
+	/* EOD : 나의 학습현황 */
+
+
+
+}
+
+/* bxSlider 동적 CSS 추가 */
+
+/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+.bannerListArea > .bx-wrapper {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+.bannerListArea > .bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+.bannerListArea > .bxslider {
+  margin: 0;
+  padding: 0;
+}
+.bannerListArea > ul.bxslider {
+  list-style: none;
+}
+.courseList > .bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+/** THEME
+===================================*/
+.bannerListArea > .bx-wrapper .bx-pager,
+.bannerListArea > .bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+/* LOADER */
+.bannerListArea > .bx-wrapper .bx-loading {
+  min-height: 50px;
+  /* background: url('images/bx_loader.gif') center center no-repeat #ffffff; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+/* PAGER */
+.bannerListArea > .bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+}
+.bannerListArea > .bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.bannerListArea > .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bannerListArea > .bx-wrapper .bx-pager.bx-default-pager a.active,
+.bannerListArea > .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #000;
+}
+.bannerListArea > .bx-wrapper .bx-pager-item,
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  vertical-align: bottom;
+  *zoom: 1;
+  *display: inline;
+}
+.bannerListArea > .bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bannerListArea > .bx-wrapper .bx-prev {
+  left: 10px;
+  /*  background: url('images/controls.png') no-repeat 0 -32px; */
+}
+.bannerListArea > .bx-wrapper .bx-prev:hover,
+.bannerListArea > .bx-wrapper .bx-prev:focus {
+  background-position: 0 0;
+}
+.bannerListArea > .bx-wrapper .bx-next {
+  right: 10px;
+  /* background: url('images/controls.png') no-repeat -43px -32px; */
+}
+.bannerListArea > .bx-wrapper .bx-next:hover,
+.bannerListArea > .bx-wrapper .bx-next:focus {
+  background-position: -43px 0;
+}
+.bannerListArea > .bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.bannerListArea > .bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+/* AUTO CONTROLS (START / STOP) */
+.bannerListArea > .bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  /* background: url('images/controls.png') -86px -11px no-repeat; */
+  margin: 0 3px;
+}
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-start:hover,
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-start.active,
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-start:focus {
+  background-position: -86px 0;
+}
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url('images/controls.png') -86px -44px no-repeat;
+  margin: 0 3px;
+}
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-stop.active,
+.bannerListArea > .bx-wrapper .bx-controls-auto .bx-stop:focus {
+  background-position: -86px -33px;
+}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bannerListArea > .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+.bannerListArea > .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+/* IMAGE CAPTIONS */
+.bannerListArea > .bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+.bannerListArea > .bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}

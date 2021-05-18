@@ -1,0 +1,1684 @@
+@charset "utf-8";
+
+/* common */
+input, input[type="text"], input[type="password"], input[type="search"], input[type="file"], input[type="number"] {
+	border: 1px solid #d9dddf;
+	background: #ffffff;
+}
+
+label input[type="checkbox"], label input[type="radio"] {
+    border:none;
+}
+input[type="checkbox"]+label {
+	background: url('/images/template2/resp/default/usr/bg_input_checkbox.png') 0 center no-repeat;
+	background-size: 16px 16px;
+}
+input[type="checkbox"]:checked+label {
+	background: url('/images/template2/resp/default/usr/bg_input_checkbox_checked.png') 0 center no-repeat;
+	background-size: 16px 16px;
+}
+input[type="radio"]+label {
+	background: url('/images/template2/resp/default/usr/bg_input_radio.png') 0 center no-repeat;
+	background-size: 16px 16px;
+}
+input[type="radio"]:checked+label {
+	background: url('/images/template2/resp/default/usr/bg_input_radio_checked.png') 0 center no-repeat;
+	background-size: 16px 16px;
+}
+input[type="text"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="file"]:disabled, input[type="number"]:disabled, textarea:disabled {
+	background-color: #eeeeee;
+}
+.selectBox {
+	border: 1px solid #d9dddf;
+	background: #ffffff;
+}
+.selectBox.disabled {
+	background-color: #eeeeee;
+}
+.error, .warning {
+	color: #f2444a;
+}
+textarea {
+	border: 1px solid #d9dddf;
+	background: #ffffff;
+}
+.search input {
+	border: 1px solid #dddddd;
+}
+.searchBox {
+	background: #f5f5f5;
+}
+.contentsWrap .boxGray {
+	background: #f5f5f5;
+}
+.textBox.scrollBox {
+	border: 1px solid #d9dddf;
+}
+.msgBox.success {
+	border: 1px solid #7fcea7;
+	color: #009d4f;
+	background: #edf8f3;
+}
+.msgBox.success strong {
+	color: #009d4f;
+}
+.msgBox.success:before {
+	background: url('/images/template2/resp/default/usr/icon_msgbox_success.png') center center no-repeat;
+}
+.textBox em {
+	color: #1573ca;
+}
+.borderBox {
+	border: 1px solid #d9dddf;	
+}
+.icon {
+	color: #ffffff;
+}
+
+.icon.book {
+	border: 1px solid #f2444a;
+	color: #f2444a;
+	background: #feeced;	
+}
+.icon.smart {
+	border: 1px solid #1d69cc;
+	color: #1d69cc;
+	background: #e8f0fa;
+}
+.icon.elearning {
+	border: 1px solid #61696f;
+	color: #61696f;
+	background: #eff0f0;
+}
+.icon.package {
+	border: 1px solid #ff9c00;
+	color: #e48b00;
+	background: #fff5e5;
+}
+.icon.refund {
+	border: 1px solid #003464;
+	color: #003464;
+	background: #ffffff;
+}
+.icon.noRefund {
+	border: 1px solid #009d4f;
+	color: #009d4f;
+	background: #ffffff;
+}
+.icon.present {
+	border: 1px solid #4693db;
+	background: #4693db;	
+}
+.icon.event {
+	border: 1px solid #0057a8;
+	background: #0057a8;
+}
+.icon.recommend {
+	border: 1px solid #61696f;
+	background: #61696f;
+}
+.icon.pc {
+	background: #acb2b5 url('/images/template2/resp/default/usr/icon_pc.png') center center no-repeat;
+}
+.icon.mobile {
+	background: #acb2b5 url('/images/template2/resp/default/usr/icon_mobile.png') center center no-repeat;
+}
+.icon.tablet {
+	background: #acb2b5 url('/images/template2/resp/default/usr/icon_tablet.png') center center no-repeat;
+}
+.icon.notice {
+	border: 1px solid #292f37;
+	color: #292f37;
+	background: #ffffff;
+}
+.icon.new,
+.icon.hot {
+	color: #f2444a; 
+}
+.icon.lock {
+	background: url('/images/template2/resp/default/usr/icon_lock.png') center 5px no-repeat;
+}
+.icon.normal {
+	border: 1px solid #e7e9ea;
+	color: #61696f;
+	background: #e7e9ea;
+}
+.icon.question {
+	border: 1px solid #e5eef6;
+	color: #0057a8;
+	background: #e5eef6;
+}
+.icon.progress {
+	border: 1px solid #40b67b;
+	color: #009d4f;
+	background: #ffffff;
+}
+.icon.standby {
+	border: 1px solid #f57377;
+	color: #f2444a;
+	background: #ffffff;
+}
+.icon.end {
+	border: 1px solid #aab0b3;
+	color: #8e9599;
+	background: #ffffff;
+}
+.icon.member {
+	color: #292f37;
+	background: url('/images/template2/resp/default/usr/icon_member.png') 0 2px no-repeat;
+}
+.icon.feed {
+	color: #292f37;
+	background: url('/images/template2/resp/default/usr/icon_feed.png') 0 3px no-repeat;
+}
+.grade span {
+	background: url('/images/template2/resp/default/usr/icon_grade.png') 0 0 no-repeat;
+}
+.grade span.active {
+	background: url('/images/template2/resp/default/usr/icon_grade_active.png') 0 0 no-repeat;
+}
+.grade span.num {
+	color: #ff9c00;
+	background: none;
+}
+.paging a:hover,
+.paging a.active {
+    border: 1px solid #8e9599;
+}
+.paging .btnFirst {
+    background: #fff url('/images/template2/resp/default/button/btn_paging.png') 0 0 no-repeat;
+}
+.paging .btnPrev,
+.paging .btnPrev:hover {
+    border:none;
+    background: #fff url('/images/template2/resp/default/button/btn_paging.png') -35px 0 no-repeat;
+}
+.paging .btnNext,
+.paging .btnNext:hover {
+	border:none;
+    background: #fff url('/images/template2/resp/default/button/btn_paging.png') -70px 0 no-repeat;
+}
+.paging .btnLast {
+    background: #fff url('/images/template2/resp/default/button/btn_paging.png') -105px 0 no-repeat;
+}
+
+
+/* button */
+.boardWrite table td button, .inclub button, .btnShortcut, .review .btnView, #sub .remote li > div button, .inside.btnFind  { /* ash */
+	border: 1px solid #8e9599;
+	color: #292f37;
+	background: #f9f9f9;
+} 
+.boardWrite table td buttonL:hover, .inclub button:hover, .btnShortcut:hover, .review .btnView:hover, #sub .remote li > div button:hover, .inside.btnFind:hover {
+	border: 1px solid #555f66;
+	color: #292f37;
+	background: #f9f9f9;
+} 
+
+.btnClassroom, .btnSurvey, .btnWrite, .btnConfirm, .btnSurveyDone, .btnList, .btnJoin, .btnSave, .btnWithdrawal, .btnPreview, .register .btnNext, 
+.btnInvite, .btnPoll, .btnInclubOpen, .btnEntrance, .findIdpw .btnLogin, .btnCertify, .btnNext, .btnAgree, .btnQuiz, .inclub .btnJoin, .inside.btnApprove,
+.inside.btnRestore, .btnRegisterDone { /* blue */
+	border: 1px solid #1573ca;
+	color: #ffffff;
+	background: #1573ca;
+}
+.btnClassroom:hover, .btnSurvey:hover, .btnWrite:hover, .btnConfirm:hover, .btnSurveyDone:hover, .btnList:hover, .btnJoin:hover, .btnSave:hover, .btnWithdrawal:hover, .btnPreview:hover, .register .btnNext:hover, 
+.btnInvite:hover, .btnPoll:hover, .btnInclubOpen:hover, .btnEntrance:hover, .findIdpw .btnLogin:hover, .btnCertify:hover, .btnNext:hover, .btnAgree:hover, .btnQuiz:hover, .inclub .btnJoin:hover, .inside.btnApprove:hover,
+.inside.btnRestore:hover, .btnRegisterDone:hover {
+	border: 1px solid #1573ca;
+	color: #1573ca;
+	background: #ffffff;
+}
+.btnSearch, .btnResult, .btnDelivery, .btnDelete, .btnCancel, .btnTemporaryDone, .btnModify, .btnReturn, .btnUnfollow, .btnClose, .btnCategory, 
+.btnAdd, .findIdpw .btnPwFind, .floatLeft .btnPrev, .floatLeft .btnNext, .inclub .btnWithdrawal, .btnJoinNext, .btnJoinNot, .btnRecommend, .btnInclubClose,
+.course+.btnArea .btnList, .inside.btnAuthority, .inside.btnView,
+.popup .certificate .btnCertificate:hover {/* gray */
+	border: 1px solid #7f868b;
+	color: #ffffff;
+	background: #7f868b; 
+}
+.btnSearch:hover, .btnResult:hover, .btnDelivery:hover, .btnDelete:hover, .btnCancel:hover, .btnTemporaryDone:hover, .btnModify:hover, .btnReturn:hover, .btnUnfollow:hover, .btnClose:hover, .btnCategory:hover, 
+.btnAdd:hover, .findIdpw .btnPwFind:hover, .floatLeft .btnPrev:hover, .floatLeft .btnNext:hover, .inclub .btnWithdrawal:hover, .btnJoinNext:hover, .btnJoinNot:hover, .btnRecommend:hover, .btnInclubClose:hover,
+.course+.btnArea .btnList:hover, .inside.btnAuthority:hover, .inside.btnView:hover {
+	border: 1px solid #7f868b;
+	color: #7f868b;
+	background: #ffffff;
+}
+
+.btnReset {
+	border: 1px solid #555f66;
+	color: #ffffff;
+	background: #555f66;	
+}
+.btnReset:hover {
+	border: 1px solid #555f66;
+	color: #555f66;
+	background: #ffffff;	
+}
+.btnReceive {
+	border: 1px solid #009d4f;
+	color: #ffffff;
+	background: #009d4f;
+}
+.btnReceive:hover {
+	border: 1px solid #009d4f;
+	color: #009d4f;
+	background: #ffffff;
+}
+.thumbnList.type2 li > div.state .btnCancel, .btnRegister, .btnJoinCancel {/* red */
+	border: 1px solid #f2444a;
+	color: #ffffff;
+	background: #f2444a;
+}
+.btnRegister p {
+	color: #ffffff;
+}
+.thumbnList.type2 li > div.state .btnCancel:hover, .btnRegister:hover, .btnJoinCancel:hover {
+	border: 1px solid #f2444a;
+	color: #f2444a;
+	background: #ffffff;
+}
+
+.btnFollow {
+	border: 1px solid #ff595f;
+	color: #ffffff;
+	background: #ff595f;
+}
+.btnFollow:hover {
+	border: 1px solid #ff595f;
+	color: #ff595f;
+	background: #ffffff;
+}
+
+.btnInclub {
+	border: 1px solid #8e9599;
+	color: #292f37;
+	background: #f9f9f9;
+}
+.btnInclub:hover {
+	border: 1px solid #555f66;
+}
+.textBox .btnDelivery, .feed .btnCommentWrite, .thumbnList li .btnArea .btnBook {
+	border: 1px solid #8e9599;
+	color: #292f37;
+	background-color: #f9f9f9;
+}
+.popup .certificate .btnCertificate  {
+	border: 1px solid #8e9599;
+	color: #292f37;
+	background-color: #f9f9f9;
+	background-image: none;
+}
+.btnCertificate {
+	border: 1px solid #8e9599;
+	color: #292f37;	
+	background: #f9f9f9 url('/images/template2/resp/default/button/btn_certificate.png') 74px center no-repeat;
+}
+.textBox .btnDelivery, .feed .btnCommentWrite {
+	background: #f9f9f9 url('/images/template2/resp/default/button/btn_delivery.png') 60px center no-repeat;
+}
+.textBox .btnDelivery.active, .feed .btnCommentWrite.active {
+	background: #f9f9f9 url('/images/template2/resp/default/button/btn_delivery_active.png') 60px center no-repeat;
+}
+
+.listAttach li a {
+	color: #61696f;
+}
+.listAttach .btnDownload, .softwareDown .btnDownload {
+	border: 1px solid #8e9599;
+	color: #292f37;
+	background: #f9f9f9 url('/images/template2/resp/default/button/btn_download.png') 61px center no-repeat;
+}
+.listAttach .btnDelete, .listAttach .btnDelete:hover {
+	background: url('/images/template2/resp/default/button/btn_delete.png') 0 0 no-repeat;
+}
+.listAttach .btnDelete, .listAttach .btnDelete:hover {
+	border: none;
+}
+.contentsBox .tab {
+	border-bottom: 1px solid #8e9599;
+}
+.contentsBox .tab ul li {
+	border: solid #e3e3e3;
+	border-width: 1px 1px 0 1px;
+	border-bottom: 1px solid #8e9599;
+	background: #f9f9f9;
+}
+.contentsBox .tab ul li:hover {
+	background: #f5f5f5;
+}
+.contentsBox .tab ul li a {
+	color: #7f868b;
+}
+.contentsBox .tab ul li a:hover {
+	color: #494f54;
+}
+.contentsBox .tab ul li.active {
+	border-color: #8e9599;
+	border-bottom-color: #ffffff;
+	background: #ffffff;
+}
+.contentsBox .tab ul li.active a {
+	color: #61696f;
+}
+
+.tab.type2 .btnPrev, .tab.type2 .btnNext {
+	border: solid #e3e3e3;
+	border-width: 1px 1px 0 1px;
+}
+.tab.type2 .btnPrev {
+	background: #ffffff url('/images/template2/resp/default/button/btn_tab_prev.png') center center no-repeat;
+}
+.tab.type2 .btnNext {
+	background: #ffffff url('/images/template2/resp/default/button/btn_tab_next.png') center center no-repeat;
+}
+
+.step li {
+	background: #e7e9ea;
+}
+.step li:before {
+	border-left: 27px solid #ffffff;
+	border-top: 55px solid transparent;
+	border-bottom: 55px solid transparent;
+}
+.step li:after {
+	border-left: 27px solid #e7e9ea;
+	border-top: 55px solid transparent;
+	border-bottom: 55px solid transparent;
+}
+.step li:first-child:before,
+.step li+li+li+li:after {
+	display: none;
+}
+.step li.active {
+	background: #1573ca;
+}
+.step li.active:after {
+	border-left: 27px solid #1573ca;
+}
+.step li > div > p {
+	color: #61696f;
+}
+.step li > div > p > span {
+	color: #8e9599;
+	border-bottom: 1px solid #a7acaf;
+}
+.step li.active > div > p {
+	color: #ffffff;
+}
+.step li.active > div > p > span {
+	color: #72b4f2;
+	border-bottom: 1px solid #60a5e9;
+}
+.step li .step01 {
+	background: url('/images/template2/resp/default/usr/step_01.png') 94px 11px no-repeat;
+}
+.step li .step02 {
+	background: url('/images/template2/resp/default/usr/step_02.png') 104px 11px no-repeat;
+}
+.step li .step03 {
+	background: url('/images/template2/resp/default/usr/step_03.png') 104px 11px no-repeat;
+}
+.step li .step04 {
+	background: url('/images/template2/resp/default/usr/step_04.png') 104px 11px no-repeat;
+}
+.step li.active .step01 {
+	background: url('/images/template2/resp/default/usr/step_active_01.png') 94px 11px no-repeat;
+}
+.step li.active .step02 {
+	background: url('/images/template2/resp/default/usr/step_active_02.png') 104px 11px no-repeat;
+}
+.step li.active .step03 {
+	background: url('/images/template2/resp/default/usr/step_active_03.png') 104px 11px no-repeat;
+}
+.step li.active .step04 {
+	background: url('/images/template2/resp/default/usr/step_active_04.png') 104px 11px no-repeat;
+}
+.register .step li {
+	color: #61696f;
+	background: #e7e9ea;
+}
+.register .step li:before {
+	content: " ";
+	border-left: 16px solid #ffffff;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+}
+.register .step li:first-child:before {
+    border-left: 16px solid #e7e9ea;
+}
+.register .step li.active:first-child:before {
+    border-left-color: #1573ca;
+}
+.register .step li.active {
+	color: #ffffff;
+	background: #1573ca;
+}
+.register .step li span {
+    color: #8e9599;
+    border-bottom: 1px solid #8e9599;
+}
+.register .step li.active span {
+    color: #72b4f2;
+    border-bottom: 1px solid #72b4f2;
+}
+/* layout */
+.contentsWrap #contents > .headingBox {
+    background: #f3f4f4;
+}
+.contentsWrap #contents > .headingBox h3 {
+	color: #61696f;
+}
+.popup > h3 {
+	color: #ffffff;
+	background: #61696f;
+}
+.popup > .btnClose,
+.popup > .btnClose:hover {
+    border: none;
+	background: url('/images/template2/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.popup .contentsWrap .contentsBox {
+	background: #ffffff;
+}
+.popupNotice {
+    background: #9fc7e3;  
+}
+.popupNotice h3 {
+    color: #ffffff;
+	background: #0057a8;
+}
+.popupNotice > .btnClose,
+.popupNotice > .btnClose:hover {
+    border: none;
+	background: url('/images/template2/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.popupNotice  .contentsBox {
+    border: 20px solid #9fc7e3;
+    background: #ffffff;
+}
+.popupNotice .todayClose {
+	background: #333333;
+}
+.popupNotice .todayClose label {
+	color: #ffffff;
+}
+.popupLayer {
+	background: #ffffff;
+}
+.popupLayer > h3 {
+	color: #ffffff;
+	background: #61696f;
+}
+.popupLayer > .btnClose,
+.popupLayer > .btnClose:hover {
+    border: none;
+	background: url('/images/template2/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.popupLayer .contentsWrap .contentsBox{
+    background: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* board */
+table th {
+	border-bottom: 1px solid #e7e9ea;
+    background: #f9f9f9;
+}
+table th.asterisk:after {
+	color: #f2444a;
+}
+table td {
+    border-bottom: 1px solid #e7e9ea;
+}
+.boardList, .boardWrite, .boardView {
+	border-top: 2px solid  #61696f;
+}	
+
+.boardList tbody tr:hover {
+	background: #f5f8fc;
+} 
+.boardList table th {
+	border-bottom: 1px solid #61696f;
+}
+.boardList table td {
+	border-bottom: 1px solid #e7e9ea;
+}
+.boardView td.info {
+	background: #f9f9f9;
+}
+.boardView td.info p span {
+	color: #8e9599;
+}
+.boardView td.info p span+span:before {
+	color: #d9dddf;
+}
+.boardView thead th.title {
+	border-bottom: none;
+}
+.boardWrite .inclubImage {
+	border: 1px solid #d9dddf;
+}
+.boardWrite td ul.grade li  label span {
+	background: url('/images/template2/resp/default/usr/icon_grade_active.png') 0 0 no-repeat;
+}
+.boardView td .info, .boardWrite td .info {
+	color: #8e9599;
+}
+.boardWrite td .listAttach {
+	border: 1px solid #d9dddf;
+	background: #f9f9f9;
+}
+
+
+.thumbnList li {
+	border: 1px solid #e7e9ea;
+	background: #ffffff;
+}
+.thumbnList li:hover {
+    border: 1px solid #4693db;
+}
+/* .thumbnList li .textBox p.date { */
+/* 	color: #8e9599; */
+/* } */
+.thumbnList li .btnArea .info {
+	color: #f2444a;
+}
+.thumbnList li .textBox p.date:before{
+	background: url('/images/template2/resp/default/usr/icon_register.png') 0 center no-repeat;
+}
+.thumbnList li .iconBox.type2 {
+	border-top: 1px solid #e7e9ea;
+	background: #f9f9f9;
+}
+.thumbnList.type2 li { 
+	border: none; 
+}
+.thumbnList.type2 li:hover {
+	background: #f6fafd;
+}
+.thumbnList.type2 li:first-child,
+.thumbnList.type2 li:first-child:hover {
+	background: #f3f4f4;
+}
+.thumbnList.type2 li > div {
+	border: solid #e7e9ea;
+	border-width: 0px 0px 1px 1px;
+}
+.thumbnList.type2 li > div:first-child {
+	border-width: 0px 0px 1px 0px ;
+}
+.thumbnList.type2 li:first-child > div {
+	border-bottom: 2px solid #e7e9ea;
+}
+.thumbnList.type2 li .imgBox img {
+	border: 1px solid #d9dddf;
+}
+.thumbnList.type2 li .textBox {
+	border: none;
+}
+.thumbnList.type2 li .textBox .period,
+.thumbnList.type2 li .textBox .month
+.thumbnList.type2 li .textBox p.date {
+	color: #292f37;
+}
+.thumbnList.type2 li .progressRate > span.num {
+	color: #f2444a;
+}
+.thumbnList.type2 li .progressRate .rate {
+    background: #fcdadb;
+}
+.thumbnList.type2 li .progressRate .rate > span {
+	background: #f2444a;
+}
+.thumbnList.type2 li > div p.incomplete {
+	color: #f2444a;
+}
+.btnSchedule {
+	color: #0057a8;
+}
+.imgBox .badge {
+	color: #ffffff;
+	background: url('/images/template2/resp/default/usr/badge_inclub.png') 0 0 no-repeat;
+}
+.table {
+	border-top: 1px solid #d9dddf;
+}
+.table th {
+	border-left: 1px solid #e7e9ea;
+	border-bottom: 1px solid #d9dddf;
+	background: #f3f4f4;
+}
+.table tbody th {
+	background: #f9f9f9;
+} 
+
+.table td {
+	border: solid #e7e9ea;
+	border-width: 0px 0px 1px 1px;
+}
+.totalList .floatRight a {
+	border: 1px solid #d9dddf;
+}
+.totalList .floatRight a.active {
+	border: 1px solid #61696f;
+}
+.totalList .floatRight a.list {
+	background: #ffffff url('/images/template2/resp/default/button/btn_tab_list.png') center center no-repeat;
+}
+.totalList .floatRight a.thumbnail {
+	background: #ffffff url('/images/template2/resp/default/button/btn_tab_thumbnail.png') center center no-repeat;
+}
+.table th.diagonal {  /* 표 대각선 */
+	background: #f3f4f4 url('/images/template2/resp/default/usr/bg_diagonal.png') 0 0 no-repeat;
+	background-size: 50% 100%;
+}
+.table th.diagonal.top {
+	border-bottom: none;
+}
+.table th.diagonal.bottom {
+    border-top: none;
+	background-position: right bottom;
+}
+.table td.cellEm {
+	background: #fef5f6;
+}
+/* contents */
+.contentsBox .login {
+	border: 1px solid #d9dddf;
+}
+.contentsBox .login > div:first-child ul {
+	border-bottom: 1px dashed #d9dddf;
+}
+.contentsBox .login .btnLogin {
+	border: 1px solid #1573ca;
+    color: #ffffff;
+    background: #1573ca;
+}
+.contentsBox .login .btnLogin:hover {
+	border: 1px solid #1573ca;
+	color: #1573ca;
+    background: #ffffff;
+}
+.contentsBox .login > div.join {
+	border-left: 1px solid #d9dddf;
+	background: #f9f9f9;
+}
+.joinMsg .textBox .success {
+	color: #009d4f;
+}
+.joinMsg .info {
+	background: #ffffff;
+}
+.boardWrite.findIdpw {
+	border: none;
+}
+.boardWrite.findIdpw table th, .boardWrite.findIdpw table td {
+	border: none;
+	background: none;
+}
+.boardWrite.findIdpw .info {
+	background: #f5f5f5;
+}
+
+#sub .myLearning:first-child { /* 나의 홈 */
+	border: 1px solid #d9dddf;
+}
+#sub .myLearning > .title {
+	border-bottom: 1px solid #d9dddf;
+	background: #f3f4f4;
+}
+#sub .myLearning > .title .icon {
+	background: url('/images/template2/resp/default/usr/icon_myLearning_title.png') center center no-repeat;
+}
+#sub .myLearning .state li {
+	border: solid #d9dddf;
+	border-width: 1px 1px 1px 0px;
+}
+#sub .myLearning .state li:first-child {
+	border-width: 1px 1px 1px 1px;
+}
+#sub .myLearning .state li .nember {
+	color: #f2444a;
+}
+#sub .myLearning .state li.complete,
+#sub .myLearning .state li.incomplete {
+	background: #f5f5f5;
+}
+#sub .myLearning .state li.register .nember+div:before {
+	background: url('/images/template2/resp/default/usr/icon_state_register.png') 0 center no-repeat;
+}
+#sub .myLearning .state li.standby .nember+div:before {
+	background: url('/images/template2/resp/default/usr/icon_state_standby.png') 0 center no-repeat;
+}
+#sub .myLearning .state li.cancel .nember+div:before {
+	background: url('/images/template2/resp/default/usr/icon_state_cancel.png') 0 center no-repeat;
+}
+#sub .myLearning .state li.progress .nember+div:before {
+	background: url('/images/template2/resp/default/usr/icon_state_progress.png') 0 center no-repeat;
+}
+#sub .myLearning .state li.complete .nember+div:before {
+	background: url('/images/template2/resp/default/usr/icon_state_complete.png') 0 center no-repeat;
+}
+#sub .myLearning .state li.incomplete .nember+div:before {
+	background: url('/images/template2/resp/default/usr/icon_state_incomplete.png') 0 center no-repeat;
+}
+#sub .myLearning .legend li .book {
+	background: #f2444a;
+}
+#sub .myLearning .legend li .smart {
+	background: #1573ca;
+}
+#sub .myLearning .legend li .elearning {
+	background: #61696f;
+}
+#sub .customer li {
+	border: 1px solid #a1c7ea;
+	background: url('/images/template2/resp/blue/usr/icon_myhome_customer.png') 24px center no-repeat;
+}
+#sub .customer li.remote {
+	background: url('/images/template2/resp/blue/usr/icon_myhome_remote.png') 24px center no-repeat;
+}
+#sub .customer li p span.tel {
+	background: url('/images/template2/resp/default/usr/icon_myhome_customer_tel.png') 0 4px no-repeat;
+}
+#sub .customer li p span.email {
+	background: url('/images/template2/resp/default/usr/icon_myhome_customer_email.png') 0 6px no-repeat;
+}
+#sub .customer li .title {
+	color: #1573ca;
+}
+#sub .customer li.remote p {
+	color: #61696f;
+}
+#sub .customer li.remote p.title {
+	color: #1573ca;
+}
+#sub .myLearning > ul > li {
+	border: 1px solid #d9dddf;
+}
+#sub .myLearning > ul > li > .title {
+	border-bottom: 1px solid #d9dddf;
+	background: #f3f4f4;
+}
+#sub .myLearning > ul > li > .title .btnMore {
+	background: url('/images/template2/resp/default/button/btn_myhome_more.png') center center no-repeat;
+}
+#sub .myLearning > ul > li > .noData span {
+	color: #61696f;
+}
+#sub .myLearning > ul > li > .noData.course {
+	border-bottom: none;
+	background: url('/images/template2/resp/default/usr/icon_nodata_course.png') center 40px no-repeat;
+}
+#sub .myLearning > ul > li > .noData.review {
+	background: url('/images/template2/resp/default/usr/icon_nodata_review.png') center 40px no-repeat;
+}
+#sub .myLearning > ul > li > .noData.question {
+	background: url('/images/template2/resp/default/usr/icon_nodata_question.png') center 40px no-repeat;
+}
+#sub .myLearning > ul > li > .noData.survey {
+	background: url('/images/template2/resp/default/usr/icon_nodata_survey.png') center 40px no-repeat;
+}
+#sub .myLearning > ul > li > .noData.selected {
+	background: url('/images/template2/resp/default/usr/icon_nodata_selected.png') center 40px no-repeat;
+}
+#sub .myLearning > ul > li > .noData.delivery {
+	background: url('/images/template2/resp/default/usr/icon_nodata_delivery.png') center 40px no-repeat;
+}
+#sub .myLearning > ul > li > .content .textBox:first-child {
+	border-bottom: 1px solid #e7e9ea;
+}
+#sub .myLearning > ul > li > .content .textBox .btnSurvey {
+	border: 1px solid #009d4f;
+	background: #009d4f;
+}
+#sub .myLearning > ul > li > .content .textBox .btnClassroom span,
+#sub .myLearning > ul > li > .content .textBox .btnSurvey span {
+	color: #ffffff;
+}
+#sub .myLearning > ul > li > .content .textBox .btnClassroom:hover span {
+	color: #1573ca;
+}
+#sub .myLearning > ul > li > .content .textBox .btnSurvey:hover {
+	border: 1px solid #009d4f;
+	color: #009d4f;
+	background: #ffffff;
+}
+#sub .myLearning > ul > li > .content .textBox .btnSurvey:hover span {
+	color: #009d4f;
+}
+#sub .myLearning > ul > li > .content .textBox .period {
+	color: #8e9599;
+}
+#sub .myLearning > ul > li > .content div.info dd em,
+#sub .myLearning > ul > li > .content div.info dd em strong {
+	color: #f2444a;
+}
+#sub .myLearning > ul > li > .content div.info dd .progressRate .rate {
+	background: #fcdadb;
+}
+#sub .myLearning > ul > li > .content div.info dd .progressRate .rate > span {
+	background: #f2444a;
+}
+#sub .myLearning > ul > li > .content div.info dd .progressRate .nember {
+	color: #f2444a;
+}
+#sub .myLearning > ul > li > .content > .prev,
+#sub .myLearning > ul > li > .content > .next {
+	border: 1px solid #d9dddf;
+}
+#sub .myLearning > ul > li > .content > .prev {
+	background: #ffffff url('/images/template2/resp/default/button/btn_myhome_prev.png') center center no-repeat;
+}
+#sub .myLearning > ul > li > .content > .next {
+	background: #ffffff url('/images/template2/resp/default/button/btn_myhome_next.png') center center no-repeat;
+}
+#sub .myLearning > ul > li > .content > .imgBox { /* 나의 홈 1:1문의 */
+	border: 1px solid #d9dddf;
+}
+#sub .myLearning > ul > li > .content > .imgBox+.textBox+.info {
+	border-top: 1px solid #e7e9ea;
+}
+#sub .myLearning > ul > li > .content div.info dd .standby ,
+#sub .myLearning > ul > li > .content div.info dd .end {
+	color: #f2444a;
+}
+#sub .myLearning > ul > li > .content.survey .textBox .title:before {
+	background: #61696f;
+}
+#sub .myLearning > ul > li > .thumbnList li .imgBox {
+	border: 1px solid #d9dddf;
+}
+#sub .myLearning > ul > li > .thumbnList li,
+#sub .myLearning > ul > li > .thumbnList li:hover {
+	border: none;
+}
+#sub .myLearning > ul > li > .thumbnList li:first-child {
+	border-bottom: 1px solid #e7e9ea;
+}
+#sub .myLearning > ul > li > .thumbnList li .textBox .delivery {
+	color: #f2444a;
+}
+
+/* course */
+.course { 
+	border-bottom: 1px solid #9da4a8;
+}
+.course > .title {
+	border-bottom: 1px solid #e7e9ea;	
+}
+.course .location {
+	color: #61696f;
+}
+.course .share a {
+	border: 1px solid;
+}
+.course .share a:hover:before {
+    color: #ffffff;
+    background: #4c4c4c;
+}
+.course .share a:hover:after {
+    border-top: 6px solid #4c4c4c;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.course .share .btnSelect {
+	border-color: #f2444a;
+	background: #ffffff url('/images/template2/resp/default/button/btn_share_select.png') center 14px no-repeat; 
+}
+.course .share .btnLike {
+	border-color: #61696f;
+	background: #ffffff url('/images/template2/resp/default/button/btn_share_like.png') center 14px no-repeat;
+}
+.course .share .btnRecommend {
+	border-color: #0057a8;
+	background: #ffffff url('/images/template2/resp/default/button/btn_share_recommend.png') center 14px no-repeat;
+}
+.course .share .btnSelect.active {
+	background-image: url('/images/template2/resp/default/button/btn_share_select_active.png');
+}
+.course .share .btnLike.active {
+	background-image: url('/images/template2/resp/default/button/btn_share_like_active.png');
+}
+.course .share .btnRecommend.active {
+	background-image: url('/images/template2/resp/default/button/btn_share_recommend_active.png');
+}
+.course .share a.btnSelect > span {
+	color: #f2444a;
+}
+.course .share a.btnLike > span {
+	color: #61696f;
+}
+.course .share a.btnRecommend > span {
+	color: #0057a8;
+}
+
+.course .imgBox .scrollBox {
+	background: #f3f4f4;
+}
+.course .imgBox .scrollBox li {
+	border-top: 1px solid #d9dddf;
+}
+.course .imgBox .scrollBox li:first-child {
+	border-top: none;
+}
+.course .imgBox .scrollBox li .imgBox {
+	border: 1px solid #d9dddf;
+}
+.course .textBox dt {
+	color: #0057a8;
+}
+.course.booklearning .textBox dd:nth-child(4n+2) {
+	background: #f9f9f9;
+}
+.course .sns a {
+	background-image: url('/images/template2/resp/default/usr/icon_sns.png');
+	background-repeat: no-repeat;
+}
+.course .sns a.facebook {
+	background-position: 0 0;
+}
+.course .sns a.twitter {
+	background-position: -30px 0;
+}
+.course .sns a.band {
+	background-position: -120px 0;
+}
+.courseView .content h5,
+.view h6 {
+	background: url('/images/template2/resp/default/usr/bult_courseDetail_h5.png') 0 5px no-repeat;
+}
+.courseView .content .lecture > .info:first-child {
+	color: #ed1c24;
+}
+.courseView .content .lecture .textBox p > span {
+	color: #8e9599;
+}
+.courseView .content .lecture .textBox p > span+span:before {
+	color: #a0a5a9;
+}
+.courseView .content .lecture .textBox .btnArea .btnView {
+	border: 1px solid #c0c4c7;
+	color: #292f37;
+}
+div.book {
+	border: 1px solid #e7e9ea;
+}
+div.book .box .imgBox {
+	border: 1px solid #d9dddf;
+	background: url('/images/template2/resp/default/usr/img_default_book.png') 0 0 no-repeat;
+	background-size:  cover; 
+}
+div.book .box .imgBox .badge {
+	background: url('/images/template2/resp/default/usr/badge_book_type1.png') 0 0 no-repeat;
+}
+div.book .box .imgBox .badge.type2 {
+	background: url('/images/template2/resp/default/usr/badge_book_type2.png') 0 0 no-repeat;
+}
+div.book .box .textBox p span {
+	color: #61696f;
+}
+div.book .box .textBox p span:before {
+    color: #e7e9ea;
+}
+div.book .box .textBox .title .btnList {
+	border: none;
+	color: #ffffff;
+	background: #7f868b;
+}
+div.book .box .btnView {
+	color: #ffffff;
+	background: #1573ca url('/images/template2/resp/default/button/btn_view.png') 137px center no-repeat;
+}
+div.book .box .btnView.active {
+	background: #1573ca url('/images/template2/resp/default/button/btn_view_active.png') 137px center no-repeat;
+}
+.courseView .content .book > strong {
+	border-bottom: 1px solid #e7e9ea;
+	background: #f9f9f9 url('/images/template2/resp/default/usr/bult_book.png') 30px 11px no-repeat;
+}
+.courseView .content .book ul > li {
+	border-top: 1px solid #e7e9ea;
+}
+.courseView .content .book ul > li:first-child {
+	border-top: none;
+}
+.book .view {
+	border-top: 1px solid #e7e9ea;
+	background: #f9f9f9;
+}
+.courseEplg { /* 수강후기 및 코멘트 */
+	border-top: 2px solid #61696f;
+}
+.courseEplg li, .appraisal li {
+	border-bottom: 1px solid #e7e9ea;
+}
+.courseEplg li p:first-child:before, .appraisal li p:first-child:before {
+	background: #61696f;
+}
+.courseEplg li p.name, .appraisal li p span {
+	color: #8e9599;
+}
+.toolBar .btnArea .btnRegister {
+	border: solid #d9dddf;
+	border-width: 1px 0 1px 1px;
+	color: #f2444a;
+	background: #ffffff url('/images/template2/resp/blue/button/btn_toolbar_register.png') 10px center no-repeat;
+	background-size: 22px 22px;
+}
+.toolBar .btnArea .btnRegister:hover {
+	border: solid #f2444a;
+	border-width: 1px 0 1px 1px;
+}
+.toolBar .btnArea .btnRegister p {
+	color: #f2444a;
+}
+.toolBar .btnArea .btnTop {
+    color: #ffffff;
+    background: #0057a8 url('/images/template2/resp/blue/button/btn_top.png') center 11px no-repeat;
+}
+.toolBar .btnArea .btnTop span {
+	color: #ffffff;
+}
+.toolBar .btnArea .btnTop:hover {
+    border: 1px solid #0057a8;
+    color: #0057a8;
+    background: #ffffff url('/images/template2/resp/blue/button/btn_top_active.png') center 11px no-repeat;
+}
+.toolBar .btnArea .btnTop:hover span {
+	color: #0057a8;
+}
+.toolBar .btnArea .btnRegister.disable {
+	color: #c3c7ca;
+	background: #ffffff url('/images/template2/resp/blue/button/btn_toolbar_register_disable.png') 10px center no-repeat;
+	background-size: 22px 22px;
+}
+.toolBar .btnArea .btnRegister.disable:hover {
+	border: solid #e7e9ea;
+	border-width: 1px 0 1px 1px;
+}
+.toolBar .btnArea .btnRegister.disable p {
+	color: #c3c7ca;
+}
+.courseView .content .thumbnList.book,
+.courseView .content .thumbnList.book li {
+	border: none;
+}
+.courseView .content .thumbnList.book li .imgBox {
+	border: 1px solid #d9dddf;
+}
+.courseView .content .thumbnList .bx-prev {
+	background: url('/images/template2/resp/default/button/btn_slider_prev.png') 0 0 no-repeat;
+}
+.courseView .content .thumbnList .bx-next {
+	background: url('/images/template2/resp/default/button/btn_slider_next.png') 0 0 no-repeat;
+}
+
+.faq { /* FAQ */
+	border-top: 2px solid #61696f;
+}
+
+.faq li {
+	border-bottom: 1px solid #e7e9ea;
+}
+.faq li .content {
+	border-top: 1px solid #e7e9ea;
+	background: #f9f9f9;
+}
+.faq li a {
+	background: url('/images/template2/resp/default/button/btn_faq.png') right center no-repeat;
+}
+.faq li.active a {
+	background: url('/images/template2/resp/default/button/btn_faq_active.png')right center no-repeat;
+}
+.faq li span {
+	background: #e7e9ea;
+}
+.faq li .content > span {
+	color: #ffffff;
+	background: #7f868b;
+}
+.tab+div.category {
+    border: 1px solid #e7e9ea;
+    border-top: none;
+}
+.tab+div.category > span {
+    color: #61696f;
+    border: 1px solid #d9dddf;
+}
+.tab+div.category > span:hover,
+.tab+div.category > span.active {
+	border: 1px solid #61696f;
+}
+
+.diagnosis li {
+	border-top: 2px solid #61696f;
+	background: url('/images/template2/resp/blue/usr/icon_diagnosis01.png') 30px center no-repeat;
+}
+.diagnosis li+li {
+	background: url('/images/template2/resp/blue/usr/icon_diagnosis02.png') 30px center no-repeat;
+}
+.diagnosis li+li+li {
+	background: url('/images/template2/resp/blue/usr/icon_diagnosis03.png') 30px center no-repeat;
+}
+.diagnosis li+li+li+li {
+	background: url('/images/template2/resp/blue/usr/icon_diagnosis04.png') 30px center no-repeat;
+}
+.diagnosis li .textBox {
+	border: solid #d9dddf;
+	border-width: 0px 1px 1px 1px;
+}
+.diagnosis li .textBox .title {
+	color: #0a4081;
+}
+.diagnosis li .textBox p {
+	color: #61696f;
+}
+
+.comment { /* feed */
+	background: #f9f9f9;
+}
+.comment .btnArea .btnAttach {
+	border: 1px solid #8e9599;
+}
+.comment .btnArea .btnAttach.photo {
+	background: #ffffff url('/images/template2/resp/default/button/btn_attach_photo.png') center center no-repeat;
+}
+.comment .btnArea .btnAttach.file {
+	background: #ffffff url('/images/template2/resp/default/button/btn_attach_file.png') center center no-repeat;
+}
+.profileImg {
+	background: url('/images/template2/resp/default/usr/bg_default_profile.png') center center no-repeat;
+	background-size: 100%;	   
+}
+.profileBg {
+	background: url('/images/template2/resp/default/usr/bg_profile.png') 0 0 no-repeat;
+    background-size: 100%;
+}
+.feed li {
+	border-top: 1px solid #e7e9ea;
+}
+.feed li:first-child {
+	border-top: none;
+}
+.feed li .btnDelete {
+	background: url('/images/template2/resp/default/button/btn_delete_mini.png') center center no-repeat;
+}
+.feed li .textBox .share .icon {
+	color: #292f37;
+}
+.feed li .textBox .share .icon.like {
+	background: url('/images/template2/resp/default/usr/icon_like.png') 0 center no-repeat;
+}
+.feed li .textBox .share .icon.select {
+	background: url('/images/template2/resp/default/usr/icon_select.png') 0 center no-repeat;
+}
+.feed li .textBox .share .icon.comment {
+    border-left: 1px solid #d9dddf;
+	background: url('/images/template2/resp/default/usr/icon_comment.png') 15px center no-repeat;
+}
+.feed li .textBox .box .date {
+	color: #8e9599;
+}
+.feed li > .box {
+	border: 1px solid #dddddd;
+}
+.feed li > .box .imgBox img {
+    border: 1px solid #d9dddf;
+}
+.feed li .listAttach li {
+	border-top: none;
+}
+.feed li .view li {
+	border-top: 1px solid #e7e9ea;
+}
+.feed > .btnArea {
+	border-top: 1px solid #d9dddf;
+}
+.feed > .btnArea .btnMore {
+	border: 1px solid #d9dddf;
+	border-top: none;
+}
+.feed > .btnArea .btnMore:hover {
+	background: #f9f9f9;
+}
+
+.commentList {
+	border-top: 2px solid #61696f;
+}
+.commentList li {
+	border-bottom: 1px solid #e7e9ea;
+}
+.commentList li .icon.comment {
+    background: none;
+}
+.commentList li .btnDelete, .appraisal li .btnDelete {
+	background: url('/images/template2/resp/default/button/btn_delete_mini.png') center center no-repeat;
+}
+.commentList li .btnModify, .appraisal li .btnModify {
+	background: url('/images/template2/resp/default/button/btn_modify_mini.png') center center no-repeat;
+}
+.commentList li .btnCancel, .appraisal li .btnCancel {
+	background: url('/images/template2/resp/default/button/btn_cancel_mini.png') center center no-repeat;
+}
+.commentList li p+p span {
+	color: #8e9599;
+}
+.commentList li p+p .date:before {
+	border-left: 1px solid #a0a5a9;
+}
+
+.sort li a {
+    color: #8e9599;
+}
+.sort li:before {
+	color: #8e9599;
+}
+.sort li.active a {
+    color: #292f37;
+    background: url('/images/template2/resp/default/usr/tab_sort_active.png') 0 center no-repeat;
+}
+.inclubView {
+	border-top: 3px solid #61696f;
+}
+.inclubView .title {
+	border: 1px solid #d9dddf;
+	border-top: none;
+	background: #f9f9f9;
+}
+.inclubView .title p span+span:before {
+    border-left: 1px solid #d7d9db;
+    border-right: 1px solid #e2e4e5;
+}
+.inclubView .inclub {
+	border: 1px solid #d9dddf;
+	border-top: none;
+}
+.inclubView .inclub .imgBox {
+    border: 1px solid #d9dddf;
+}
+.inclubView .inclub .textBox .content {
+	border-bottom: 1px solid #d9dddf;
+}
+.inclubView .inclub .textBox .tag:before {
+	color: #8e9599;
+	background: url('/images/template2/resp/default/usr/icon_tag.png') 0 center no-repeat;	
+}
+.inclubView .inclub .textBox .tag span {
+	border: 1px solid #e7e9ea;
+	color: #61696f;
+}
+.talking .title {
+	border: 2px solid #e7e9ea;
+}
+.talking .title p > strong {
+	color: #1573ca;
+}
+.talking dt {
+	border: solid #d9dddf;
+	border-width: 1px 0 1px 0;	
+	background: #f3f4f4;
+}
+.talking dd {
+    border-bottom: 1px solid #e7e9ea;
+}
+.talking dd > div {
+	border-right: 1px solid #e7e9ea;
+}
+.talking dd div.graph {
+	border-right: none;
+}
+.talking dd div.graph > p {
+	background: #ffdedf;
+}
+.talking dd div.graph > p > span {
+	background: #ff595f;
+}
+.expand .btnMore {
+	border: none;
+	background: #7f868b url('/images/template2/resp/default/button/register_btn_more.png') center center no-repeat;
+}
+#sub .thinking .title, #sub .knowledge .title {
+	background: #4693db;
+}
+#sub .thinking .title strong, #sub .knowledge .title strong {
+	color: #ffffff;
+}
+#sub .thinking .title p span {
+	color: #004686;
+}
+#sub .thinking .title p span+span:before {
+	color: #004686;
+}
+#sub .thinking .title p span.active {
+	color: #ffffff;
+}
+#sub .thinking dl {
+	border: 1px solid #e7e9ea;
+	border-top: none;
+}
+#sub .knowledge .box { 
+	border: 1px solid #e7e9ea;
+	border-top: none;
+}
+.softwareDown li {
+	border: 1px solid #e7e9ea;
+}
+.softwareDown li .textBox {
+	background: #f9f9f9;
+}
+.softwareDown li .textBox span  {
+	color: #61696f;
+}
+.register h3 {
+	color: #ffffff;
+	background: #61696f;
+}
+.register .floatRight .btnReset, .register .floatRight .btnClose {
+	border: none;
+	border-left: 1px solid #ffffff;
+}
+.register .floatRight .btnReset, .register .floatRight .btnReset:hover {
+	background: #61696f url('/images/template2/resp/default/button/popup_register_btn_reset.png') center center no-repeat;
+}
+.register .floatRight .btnClose {
+	background: #333333 url('/images/template2/resp/default/button/popup_register_btn_close.png') center center no-repeat;
+}
+.register .boardList td .imgBox {
+    border: 1px solid #d9dddf;
+}
+.register .boardList td .textBox p+p > span {
+	color: #61696f;
+}
+.certify .imgBox {
+	background: url('/images/template2/resp/default/usr/icon_certify.png') 0 0 no-repeat;
+}
+.review .imgBox, .lecture .imgBox { /* 리뷰n리플(상세), 교재보기팝업, 강사정보 */
+    border-top: 2px solid #61696f;
+    border-bottom: 1px solid #e7e9ea;
+    background: #f9f9f9;
+}
+.review .imgBox img,
+.lecture .imgBox img {
+    border: 1px solid #d9dddf;
+}
+.review .textBox {
+	border-bottom: 1px solid #e7e9ea;
+}
+.popup .review .title {
+	border: solid #d9dddf;
+	border-width: 1px 0;
+	background: #f3f4f4;
+}
+
+#sub .remote li { /* 원격지원신청 */
+	border: 1px solid #d9dddf;
+}
+#sub .remote li:first-child {
+	background: url('/images/template2/resp/blue/usr/icon_remote01.png') 20px center no-repeat;
+}
+#sub .remote li+li {
+	background: url('/images/template2/resp/blue/usr/icon_remote02.png') 20px center no-repeat;
+}
+#sub .remote li+li+li {
+	background: url('/images/template2/resp/blue/usr/icon_remote03.png') 20px center no-repeat;
+}
+#sub .remote li+li:before {
+	background: url('/images/template2/resp/blue/usr/icon_remote04.png') 0 0 no-repeat;
+}
+#sub .remote li > div strong {
+	color: #1d69cc;
+}
+#sub nav > ul > li {
+	border: solid #e7e9ea;
+	border-width: 1px 1px 1px 0px;
+	background: #f9f9f9;
+}
+#sub nav > ul > li:first-child {
+	border-width: 1px 1px 1px 1px;
+}
+#sub nav > ul > li > a {
+	background: url('/images/template2/resp/default/usr/icon_content_nav.png') right center no-repeat;
+}
+#sub nav > ul > li:hover > a {
+	color: #72b4f2;
+	background: url('/images/template2/resp/default/usr/icon_content_nav_active.png') right center no-repeat;
+}
+#sub nav > ul > li:first-child a,
+#sub nav > ul > li:first-child a:hover {
+	color: #61696f;
+	background: url('/images/template2/resp/default/usr/icon_content_nav_home.png') 20px center no-repeat;
+}
+#sub nav ul li .twoDepth {
+    border: 1px solid #e7e9ea;
+    background: #f9f9f9;
+}
+#sub nav ul li .twoDepth li a:hover {
+	color: #ffffff;
+	background: #72b4f2;
+}
+
+.greeting .title { /* CEO 인사말 */
+	border-bottom: 1px solid #0057a8;
+	background: url('/images/template2/resp/default/usr/img_greeting01.png') right bottom no-repeat;
+}
+.greeting .title p {
+	color: #0057a8;
+}
+.greeting .title p strong {
+	color: #0057a8;
+}
+
+.contentsBox .history .tab ul li { /* 회사연혁 */
+	border: solid #d9dddf;
+	border-width: 1px 1px 1px 0px;
+	background: none;
+}
+.contentsBox .history .tab ul li a {
+	color: #61696f;
+}
+.contentsBox .history .tab ul li:first-child {
+	border-width: 1px 1px 1px 1px;
+}
+.contentsBox .history .tab ul li.active {
+	border-color: #1573ca;
+	background: #1573ca;
+}
+.contentsBox .history .tab ul li.active a {
+	color: #ffffff;
+}
+.history .box > div:before {
+	background: #c0c4c7;
+}
+.history .box > ul li .year {
+    border-right: 1px solid #d9dddf;
+	color: #9da4a8;
+}
+.history .box > ul li.new .year {
+	color: #1573ca;
+}
+.history .box > ul li .year:before {
+	background: url('/images/template2/resp/default/usr/icon_history.png') 0 0 no-repeat;
+}
+.history .box > ul li.new .year:before {
+	background: url('/images/template2/resp/blue/usr/icon_history_new.png') 0 0 no-repeat;
+}
+.history .box > .list ul li:before {
+	background: #8e9599;
+}
+.history .box+.box > ul li .year {
+	border-right: none;
+}
+
+.vision .title { /* Vision/Mision */
+	border-top: 1px solid #61696f;
+	border-bottom: 1px solid #dfe1e2;
+}
+
+.map .imgBox { /* 오시는 길 */
+	border: 1px solid #dce0e2;
+}
+.map ul {
+	border-top: 1px solid #8e9599;
+}
+.map ul li {
+	border-bottom: 1px solid #e7e9ea;
+}
+.map ul li.address {
+	background: url('/images/template2/resp/blue/usr/icon_map_address.png') 20px 16px no-repeat;
+}
+.map ul li.tel {
+	background: url('/images/template2/resp/blue/usr/icon_map_tel.png') 23px 12px no-repeat;
+}
+.map ul li.fax {
+	background: url('/images/template2/resp/blue/usr/icon_map_fax.png') 20px 14px no-repeat;
+}
+.map ul li.subway {
+	background: url('/images/template2/resp/blue/usr/icon_map_subway.png') 22px 14px no-repeat;
+}
+.map ul li.bus {
+	background: url('/images/template2/resp/blue/usr/icon_map_bus.png') 19px 16px no-repeat;
+}
+.map ul li p span+span:before {
+	background: url('/images/template2/resp/default/usr/icon_arrow.png') 0 0 no-repeat;
+}
+
+.partner ul li { /* 관계회사 */
+	border: 1px solid #d9dddf;
+}
+.partner+.partner {
+	border: 1px solid #d9dddf;
+}
+.partner > span {
+	border-right: 1px solid #dce0e2;
+	color: #61696f;
+}
+.partner > span.last {
+	border-right: none;
+}
+
+
+
+
+@media screen and (max-width: 800px) { 
+	#sub .myLearning:first-child {
+		border-width: 1px 0px 1px 0px;
+	}
+	#sub .myLearning .state li+li+li+li {
+		border-width: 0px 1px 1px 1px;
+	}
+	#sub .myLearning .state li+li+li+li+li {
+		border-width: 0px 1px 1px 0px;
+	}
+	#sub .myLearning > ul > li {
+		border-width: 1px 0 1px 0;
+	}
+	
+	#container .boardList {
+		border-top: 1px solid #e7e9ea;
+	}
+	#container .boardList table thead, #container .boardList table th, #container  .boardList table td {
+		border: none;
+	}
+	#container .boardList table tr {
+		border-bottom: 1px solid #e7e9ea;
+	}
+	.thumbnList.type2 {
+		border-top: 1px solid #e7e9ea;
+	}
+	.thumbnList.type2 li {
+		border-bottom: 1px solid #e7e9ea;
+	}
+	.thumbnList.type2 li > div {
+		border: none;
+	}
+	.table.delivery .title {
+		border-left: none;
+	}
+	.contentsBox .login > div.join {
+		border-left: none;
+	}
+	.toolBar .btnArea .btnRegister, .toolBar .btnArea .btnRegister:hover,
+	.toolBar .btnArea .btnRegister.disable, .toolBar .btnArea .btnRegister.disable:hover {
+		    border-width: 1px 1px 1px 1px;
+		    background-position: center center;
+	}
+	.partner > span,
+	.partner > span.last {
+	    border-right: 1px solid #dce0e2;
+	}
+	.partner > span:nth-child(3n) {
+		border-right: none;
+	}
+	.course.booklearning .textBox dd:nth-child(4n+2) {
+		background: none;
+	}	
+}
+@media screen and (max-width: 767px) {
+	#sub .remote li {
+	    border: none;
+	}
+}
+@media screen and (max-width: 700px) {
+	.talking dd > div {
+		border: none;
+	}
+}
+@media screen and (max-width: 413px) {
+	.diagnosis li, .diagnosis li+li, .diagnosis li+li+li, .diagnosis li+li+li+li {
+		background: none;
+	}
+	.partner > span,
+	.partner > span.last,
+	.partner > span:nth-child(3n) {
+	    border-right: 1px solid #dce0e2;
+	}
+	.partner > span:nth-child(2n) {
+		border-right: none;
+	}
+}
+@media screen and (max-width: 380px) { 
+	.course.booklearning .textBox dd:nth-child(4n+2) {
+		background: #f9f9f9;
+	}
+}
+@media screen and (max-width: 360px) { 
+	#sub .myLearning .state li+li+li {
+	    border-width: 0px 1px 1px 1px;
+	}
+	#sub .myLearning .state li+li+li+li {
+	    border-width: 0px 1px 1px 0px;
+	}
+	#sub .myLearning .state li+li+li+li+li {
+	    border-width: 0px 1px 1px 1px;
+	}
+	#sub .myLearning .state li+li+li+li+li+li {
+	    border-width: 0px 1px 1px 0px;
+	}
+	.history .box > ul li .year {
+	    border-right: none;
+	}
+}
+@media screen and (max-width: 340px) {
+	#sub .customer li, #sub .customer li.remote {
+		background-position: 90% center;
+	}
+}

@@ -1,0 +1,467 @@
+@charset "utf-8";
+
+// 과정 상세
+.section-view {
+    overflow: hidden;
+    padding-bottom: 100px;
+
+    .view-top {
+        overflow: hidden;
+        position: relative;
+        background: {
+            position: 50% 0;
+            repeat: no-repeat;
+            size: 100% 575px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: url("/images/template9/resp/default/usr/thumb/bg_view_thumb_alpha.png") repeat-x 0 0;
+        }
+    }
+
+    .view-contents {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 150px;
+
+        .view-time {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        &-btn {
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            width: 100%;
+            max-width: 1200px;
+
+            @include translate(-50%, 0);
+
+            .btn-item-view {
+                font-size: 14px;
+                vertical-align: top;
+
+                @include size(70px);
+
+                &:before {
+                    top: 16px;
+                }
+
+                &.btn-entrance {
+                    &:before {
+                        top: 8px;
+                    }
+                }
+
+                &.btn-enrolment {
+                    &:before {
+                        top: 9px;
+                    }
+                }
+            }
+        }
+
+        &-info {
+            position: relative;
+            max-width: 700px;
+            min-height: 424px;
+            margin-left: -40px;
+            padding: 40px 40px 0;
+            background: #fff;
+            opacity: .95;
+
+            @include box-sizing;
+            @include border-radius(10px 10px 0 0);
+        }
+
+        &-top {
+            min-height: 24px;
+            font-size: 0;
+        }
+
+        .badge {
+            &-status {
+                margin-right: 10px;
+                padding-left: 25px;
+                vertical-align: middle;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    width: 10px;
+                    height: 12px;
+                    margin-top: -6px;
+                    background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat -52px -42px;
+                }
+            }
+
+            &-ing {
+                padding-left: 28px;
+                background: $base-color2;
+
+                &:before {
+                    width: 13px;
+                    height: 13px;
+                    margin-top: -6px;
+                    background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat -106px -125px;
+                }
+            }
+
+            &-stay {
+                padding-left: 28px;
+                background: $bg-color1;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    width: 13px;
+                    height: 3px;
+                    margin-top: -1px;
+                    background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat -178px -35px;
+                }
+            }
+
+            &-complete {
+                padding-left: 26px;
+                background: $base-color1;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    width: 11px;
+                    height: 9px;
+                    margin-top: -4.5px;
+                    background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat -12px -56px;
+                }
+            }
+        }
+
+        .btn-course-cancel,
+        .btn-ctfc-print {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .cnt {
+            display: inline-block;
+            position: relative;
+            padding-left: 15px;
+            font-size: 14px;
+            color: $font-color3;
+            vertical-align: middle;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 10px;
+                height: 13px;
+                margin-top: -6.5px;
+                background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat 0 0;
+            }
+        }
+
+        &-main {
+            margin-top: 13px;
+        }
+
+        .tit-h2 {
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        &-detail {
+            overflow: hidden;
+            margin: 23px 0 -15px -20px;
+
+            @include clear;
+
+            li {
+                position: relative;
+                float: left;
+                margin: 0 0 15px 20px;
+                padding-left: 18px;
+                font-size: 14px;
+                color: $font-color2;
+                white-space: nowrap;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    margin-top: -6.5px;
+                    font-size: 0;
+                    background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat;
+
+                    @include size(13px);
+                }
+
+                &.period {
+                    &:before {
+                        background-position: -15px 0;
+                    }
+                }
+
+                &.progressrate {
+                    &:before {
+                        width: 13px;
+                        height: 12px;
+                        margin-top: -6px;
+                        background-position: -103px -18px;
+                    }
+                }
+
+                &.schedule {
+                    &:before {
+                        background-position: -103px 0;
+                    }
+                }
+
+                &.studytime {
+                    &:before {
+                        background-position: -121px 0;
+                    }
+                }
+
+                &.personnel {
+                    &:before {
+                        background-position: -139px 0;
+                    }
+                }
+
+                &.educosts {
+                    &:before {
+                        background-position: -157px 0;
+                    }
+                }
+
+                &.referencebook {
+                    &:before {
+                        background-position: -175px 0;
+                    }
+                }
+
+                &.students {
+                    padding-left: 15px;
+
+                    &:before {
+                        width: 10px;
+                        height: 13px;
+                        background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat 0 0;
+                    }
+                }
+
+                &.evaluation {
+                    &:before {
+                        background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat -121px -18px;
+                    }
+                }
+
+                &.evaluation2 {
+                    &:before {
+                        background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat -139px -18px;
+                    }
+                }
+
+                &.assignment {
+                    &:before {
+                        background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat -157px -18px;
+                    }
+                }
+
+                &.score {
+                    &:before {
+                        background: url("/images/template9/resp/default/usr/ico_sprite.png") no-repeat -175px -18px;
+                    }
+                }
+            }
+
+            span {
+                color: $font-color3;
+            }
+        }
+
+        &-dsc {
+            overflow: hidden;
+            height: 145px;
+            margin-top: 25px;
+            font-size: 16px;
+            color: $font-color2;
+            line-height: 1.5;
+
+            &.on {
+                height: auto;
+            }
+        }
+
+        &-bot {
+            display: none;
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        &-aside {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 0;
+
+            .btn-like {
+                margin-right: 18px;
+            }
+        }
+    }
+
+    .view-bottom {
+        position: relative;
+        max-width: 1200px;
+        margin: 60px auto 0;
+
+        &-menu {
+            position: relative;
+            font-size: 0;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                font-size: 0;
+                background: $border-color2;
+            }
+
+            .btn-tab {
+                position: relative;
+                display: inline-block;
+                height: 20px;
+                padding: 0 20px 14px;
+                font-size: 18px;
+                color: $font-color1;
+                vertical-align: top;
+                line-height: 20px;
+
+                &:after {
+                    content: "";
+                    display: none;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    font-size: 0;
+                    background: $base-color1;
+                }
+
+                .badge {
+                    display: inline-block;
+                    height: 20px;
+                    margin: -2px 0 0 10px;
+                    padding: 0 7px;
+                    font-size: 14px;
+                    color: $font-color3;
+                    font-weight: 300;
+                    background: $bg-color3;
+                    line-height: 19px;
+                    text-align: center;
+                    vertical-align: middle;
+
+                    @include border-radius(50px);
+                }
+
+                &.active {
+                    color: $base-color2;
+                    font-weight: 500;
+
+                    &:after {
+                        display: inline-block;
+                    }
+
+                    .badge {
+                        color: #fff;
+                        background: $base-color1;
+                    }
+                }
+            }
+        }
+
+        &-contents {
+            margin-top: 40px;
+        }
+
+        &-box {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            z-index: -9999;
+
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                position: static;
+                z-index: auto;
+            }
+        }
+
+        &-cmnt {
+            .cmnt-wrap {
+                .cmnt-item-cmnt {
+                    white-space: normal;
+                }
+            }
+        }
+
+        &-index {
+            li {
+                margin-top: 25px;
+                font-size: 16px;
+                color: $font-color1;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+            .step {
+                margin-right: 16px;
+                color: $base-color1;
+                white-space: nowrap;
+            }
+        }
+
+        &-pds {
+            .accordion-item {
+                .accordion-item-top {
+                    .tit-h3 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .btn-list {
+            position: absolute;
+            right: 0;
+            top: -6px;
+        }
+    }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    @@include('./src/publish/hihrd/comm/head.html')
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header class="header">
+            @@include('./src/publish/hihrd/comm/header.html')
+        </header>
+        <!-- // header -->
+
+        <div class="container">
+            <section class="section-my">
+                <div class="my-account">
+                    <div class="my-wrap">
+                        <h2 class="tit-h2">개인정보 수정</h2>
+
+                        <!-- form 필요없을시 삭제 가능 -->
+                        <form>
+                            <fieldset>
+                                <legend><span>개인정보</span></legend>
+
+                                <div class="my-account-info">
+                                    <ul class="my-account-list">
+                                        <li>
+                                            <span class="tit">아이디</span>
+                                            
+                                            <span class="content">Parkhi2020</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">성명</span>
+                                            
+                                            <span class="content">박하이</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">비밀번호</span>
+
+                                            <span class="content">
+                                                <button type="button" class="btn btn-large btn-color1 btn-password-change">비밀번호 변경</button>
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="my-account-list">
+                                        <li class="my-account-tel">
+                                            <label for="id-phone" class="tit">
+                                                휴대전화<em class="ico-required">*</em>
+                                            </label>
+
+                                            <span class="content content-input">
+                                                <!-- <span class="slt slt-large">
+                                                    <select id="id-phone">
+                                                        <option>010</option>
+                                                    </select>
+                                                </span> -->
+                                                <div class="selectBox">
+                                                    <select id="" name="" isnull="" title="선택" class="selectbox">
+                                                        <option value="">- 선택 -</option>
+                                                        <option value="010" selected="">010</option>
+                                                    </select>
+                                                </div>
+                                                <span class="form-dash">-</span>
+
+                                                <input type="text" title="중간번호" class="istyle istyle-large">
+                                                <span class="form-dash">-</span>
+
+                                                <input type="text" title="끝번호" class="istyle istyle-large">
+                                            </span>
+                                        </li>
+                                        <li class="my-account-email">
+                                            <label for="id-email" class="tit">
+                                                이메일<em class="ico-required">*</em>
+                                            </label>
+
+                                            <span class="content content-input">
+                                                <input type="text" id="id-email" class="istyle istyle-large">
+                                                <span class="form-at">@</span>
+                                                
+                                                <input type="text" title="호스팅" class="istyle istyle-large">
+
+                                                <div class="selectBox">
+                                                    <select id="" name="" isnull="" title="선택" class="selectbox">
+                                                        <option value="">직접입력</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+
+                                                <!-- <span class="slt slt-large">
+                                                    <select title="직접입력">
+                                                        <option>직접입력</option>
+                                                    </select>
+                                                </span> -->
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">하이플래너 등급</span>
+                                            
+                                            <span class="content">6차월</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="my-account-bot">
+                                    <button type="button" class="btn btn-large btn-color1-flat">저장</button>
+
+                                    <button type="button" class="btn btn-large btn-basic">취소</button>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                        <!-- 비밀번호 변경 레이어 (popup-layer 클래스 제거시 레어어 기능 x -->
+                        <div class="popup-layer popup-password" style="display: none;">
+                            <div class="popup-wrap">
+                                <div class="popup-head">
+                                    비밀번호 변경
+                                </div>
+
+                                <div class="popup-body">
+                                    <!-- form 필요없을시 삭제 가능 -->
+                                    <form>
+                                        <fieldset>
+                                            <legend><span>비밀번호 변경 입력</span></legend>
+
+                                            <div class="popup-contents">
+                                                <p class="dsc">영문, 숫자, 특수기호(!, @, # 등)를 모두 사용하여 최소 8자 이상으로 만들어 주세요.</p>
+
+                                                <table class="popup-password-form">
+                                                    <caption><span>비밀번호 변경하기</span></caption>
+
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="id-current-pw">기존 비밀번호</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="password" id="id-current-pw" placeholder="기존 비밀번호" class="istyle istyle-large">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="id-new-pw">새로운 비밀번호</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="password" id="id-new-pw" placeholder="새로운 비밀번호" class="istyle istyle-large">
+
+                                                            <p class="new-pw-guide">영문, 숫자, 특수기호를 포함하여 입력해 주세요. 비밀번호는 8자 미만으로 구성하실 수는 없습니다.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="id-new-pw-re">비밀번호 확인</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="password" id="id-new-pw-re" placeholder="비밀번호 확인" class="istyle istyle-large">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <div class="popup-bot">
+                                                <button type="button" class="btn btn-color1-flat btn-large">저장</button>
+
+                                                <button type="button" class="btn btn-basic btn-large">취소</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                                <button type="button" class="btn-popup-clse"><span class="ir">닫기</span></button>
+                            </div>
+                        </div>
+                        <!-- // 비밀번호 변경 레이어 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            @@include('./src/publish/hihrd/comm/footer.html')
+        </footer>
+        <!-- // footer -->
+    </div>
+
+    <!-- ui 스크립트 -->
+    <!-- slick -->
+    <link rel="stylesheet" href="/js/template9/slick/slick.css">
+    <script src="/js/template9/slick/slick.js"></script>
+
+    <!-- jquery confirm -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="/js/template9/jquery-confirm.js"></script>
+    <script src="/js/template9/style_pub.js"></script>
+    
+    <script>
+        // 비밀번호 변경 레이어 테스트용
+        $(".btn-password-change").click(function() {
+            $.dialog({
+                title: false,
+                boxMaxWidth :'600px',
+                boxWidth : '100%',
+                // title: '비밀번호 변경',
+                useBootstrap: false,
+                content: 'url:popup_pw.html',
+                draggable: false,
+                closeIcon: true,
+                closeIconClass: 'btn-popup-clse'
+            });
+        });
+
+        // 공통 레이어 팝업 테스트용
+        $(".my-account-bot .btn-color1-flat").click(function() {
+            $.dialog({
+                title: false,
+                boxMaxWidth :'480px',
+                boxWidth : '100%',
+                useBootstrap: false,
+                content: 'url:popup_comm.html',
+                draggable: false,
+            });
+        });
+    </script>
+</body>
+</html>

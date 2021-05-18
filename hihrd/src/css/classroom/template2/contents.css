@@ -1,0 +1,837 @@
+@charset "utf-8";
+
+.contentsBox { 
+    /* padding: 20px 25px 30px 25px; */
+    padding: 20px 10px 30px 10px;
+}
+.contentsBox > .title { 
+    margin-bottom: 20px;
+    padding-left: 30px;
+    font-size: 1.38em;
+    font-weight: bold;
+    background: url('/images/classroom/template2/navy/bullet_title.png') 16px 3px no-repeat;
+}
+
+/* main */
+.learning {
+	overflow: hidden;/* 
+	margin-bottom: 10px; */
+}.learning .state {
+/*     margin-top: 20px; */
+	width: 100%;
+}
+.learning .state li {
+	position: relative;
+    float: left;
+    display: inline-block;
+	width: 25%;
+    height: 160px;
+	border-left: none;
+	border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #ee8a83;
+    background: #fff6f5;
+}
+.learning .state li + li {
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #17adad;
+    background: #eeffff;
+}
+.learning .state li + li + li {
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #279fd1;
+    background: #edfaff;
+}
+.learning .state li + li + li + li {
+    border-left: 1px solid #eaeaea;
+	border-right: none;
+    border-bottom: 1px solid #4587d1;
+    background: #ecf5ff;
+}
+.learning .state li .title {
+    height: 46px;
+    line-height: 46px;
+    padding-left: 38px;
+    color: #ffffff;
+    font-size: 1.15em;
+    font-weight: 700;
+    background: #f0564c url('/images/classroom/template2/navy/icon_state01.png') 8px 12px no-repeat;
+    background-repeat: no-repeat;
+}
+.learning .state li+li .title {
+    background: #17adad url('/images/classroom/template2/navy/icon_state02.png') 8px 12px no-repeat;
+}
+.learning .state li+li+li .title {
+    background: #279fd1 url('/images/classroom/template2/navy/icon_state03.png') 8px 12px no-repeat;
+}
+.learning .state li+li+li+li .title {
+    background: #4587d1 url('/images/classroom/template2/navy/icon_state04.png') 8px 12px no-repeat;
+}
+.learning .state li .number {
+	display: table-cell;
+	width: inherit;
+	height: 80px;
+	text-align: center;
+}
+.learning .state li .noData {
+	display: table-cell;
+	width: inherit;
+	height: 110px;
+	text-align: center;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.learning .state li .number a > strong { 
+    display: block;
+    line-height: 1.38em;
+    font-size: 1.54em; 
+    cursor: pointer;
+}
+.learning .state li .number a > strong > span {
+    display: inline-block;
+    margin: -4px 3px 0 3px;
+    color: #f0564c;
+}
+.learning .state li .number a:hover > strong { 
+    color: #2c2c2c;
+}
+.learning .state li .number > p {
+	position: absolute;
+	left: 0;
+	display: block;
+	bottom: 10px;
+	width: 100%;
+}	
+.contentsBox > .box, 
+.contentsBox > .notice,
+.contentsBox .content > .box {
+	margin-top: 10px;
+	border: solid 1px #cccccc; 
+	background: #ffffff;
+}
+.contentsBox > .box h4,
+.contentsBox .content > .box h4 {
+	height: 50px;
+	margin-bottom: 0;
+	padding-left: 25px;
+	line-height: 50px;
+	border-bottom: solid 1px #e3e3e3;
+	font-size: 1.23em;
+	background: #f8f8f8;
+}
+.contentsBox > .box h5,
+.contentsBox .content > .box h5 {
+/* 	height: 25px; */
+	margin-bottom: -5px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 1em;
+}
+.contentsBox .content .boxnavy {
+	display: block;
+	width: auto;
+	margin: 20px 25px 20px 25px;
+	padding: 4% 4.94% 3% 4.94%;
+	background: #f8f8f8;
+} 
+.contentsBox .box h4 .btnMore {
+	float: right;
+	display: inline-block;
+    width: 26px;
+    height: 26px;
+	margin-top: 12px;
+	margin-right: 25px;
+    font-size: 0;
+	background: url('/images/classroom/template2/button/btn_more.png') no-repeat 0 0;
+}
+.contentsBox .box h4 .btnMore:hover {
+	background: url('/images/classroom/template2/button/btn_more.png') no-repeat 0 0;
+}
+.contentsBox .box h4 .btnRefresh {
+	float: right;
+	margin: 12px 25px 0 0;
+	font-size: 0.81em;
+}
+
+.contentsBox > .box > .textBox {
+	padding: 20px 25px 20px 25px;
+	line-height: 30px;
+	font-size: 1em;
+	background: #ffffff;
+}
+.contentsBox .box > .boardList,
+.contentsBox .box > .boardView,
+.contentsBox .box > .boardWrite,
+.contentsBox > .box > .commentList {
+	margin: 20px 25px 20px 25px;
+}
+.popup .contentsBox .box > .boardList,
+.popup .contentsBox .box > .boardView,
+.popup .contentsBox .box > .boardWrite,
+.popup .contentsBox > .box > .commentList {
+	margin: 20px 0px 20px 0px;
+}
+
+.contentsBox > .box > .comment {
+	margin: 10px 25px 20px 25px;
+	border: solid 1px #e3e3e3;
+	background: #f8f8f8;
+}
+.contentsBox > .box .paging,
+.contentsBox .content > .box .paging {
+	margin: 0 0 20px 0;
+} 
+.contentsBox > .box .search,
+.contentsBox .content > .box .search {
+	margin: 20px 25px 0 0;
+} 
+.contentsBox > .box .btnArea,
+.contentsBox .content > .box .btnArea {
+	margin-top: 10px;
+	padding: 0 20px;
+}
+.contentsBox > .box .textBox li {
+	margin-top: 10px;
+}
+.contentsBox > .box .textBox li:first-child {
+	margin-top: 0px;
+}
+.contentsBox > .box .textBox li span {
+	float: left;
+	width: 18px;
+	height: 18px;
+	color: #ffffff;
+	font-weight: 700;
+	text-align: center;
+	line-height: 17px;
+	background: #77a4d8;
+	-webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+}
+.contentsBox > .box .textBox li strong {
+	display: block;
+	padding-left: 33px;
+	line-height: 1.38em;
+	color: #4587d1;
+}
+.contentsBox > .box .textBox li .warning {
+	color: #2c2c2c;
+}
+.contentsBox > .box .textBox dl dt {
+	float: left;
+	margin-left: 30px;
+	font-weight: 700;
+}
+.contentsBox > .box .textBox dl dd {
+	margin-left: 130px;
+}
+
+
+/* 학습현황 */
+.situation > p+ul {
+	margin-top: 6px;
+}
+.situation {
+	margin: 20px 25px;
+}
+
+.situation ul {
+	overflow: hidden;
+	border-top: 2px solid #2e3e4e;
+}
+.situation li {
+	float: left;
+	width: 122px;
+	border-left: 1px solid #dddddd;
+}
+.situation li:first-child {
+	border-left: none;
+}
+.situation li+li+li+li {
+	width: 123px;
+}
+
+.situation li > p {
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	border-bottom: 1px solid #dedede;
+	text-align: center;
+}
+.situation li > p.title {
+	font-weight: 700;
+	background: #f8f8f8;
+}
+.situation li.state > p.title {
+	color: #f0564c;
+	background: #fff6f5;
+}
+.situation li.total > p.title {
+	color: #4587d1;
+	background: #ecf5ff;
+}
+
+
+
+@media screen and (max-width: 1023px) {
+	.situation li,
+	.situation li+li+li+li {
+		width: 16.6%;
+		width: calc(100%/6);
+	}
+	.learning .state li {
+		width: 25%;
+	}
+	.contentsBox > .box > h5.info {
+		margin-bottom: 20px;
+	}
+	.contentsBox > .title { 
+	    font-size: 1.23em;
+	    margin-bottom: 10px;
+	}
+	.learning .state li .number {
+	    font-size: 1.23em;
+	}
+	.learning .state li .number a > strong {
+	    font-size: 1.23em;
+	}
+}
+@media screen and (max-width: 767px) {
+	.situation li,
+	.situation li+li+li+li {
+		width: 33.3%; 
+		width: calc(100%/3);
+	}
+	.situation li:nth-child(4) {
+		border-left: none;
+	}
+}
+@media screen and (max-width: 640px) {
+	.learning .state li {
+		width: 50%;
+		margin-bottom: 2px;
+	}
+	.learning .state li {
+		border-left: none;
+		border-right: 1px solid #eaeaea;
+	}
+	.learning .state li + li {
+		border-left: 1px solid #eaeaea;
+		border-right: none;
+	}
+	.learning .state li + li + li {
+		border-left: none;
+		border-right: 1px solid #eaeaea;
+	}
+	.learning .state li + li + li + li {
+		border-left: 1px solid #eaeaea;
+		border-right: none;
+	}
+	.learning .state li .number, .learning .state li .noData { 
+		width: 20%;
+	}	
+	.contentsBox > .box .textBox dl {
+		margin: 0px 0 20px 20px;
+	}
+	.contentsBox > .box .textBox dl dt {
+		float: none;
+		margin-left: 0px;
+	}
+	.contentsBox > .box .textBox dl dd {
+		margin-left: 0px;
+	}	
+		
+}
+@media screen and (max-width: 500px) {
+	.situation li,
+	.situation li+li+li+li {
+		width: 50%;
+	}
+	.situation li:nth-child(4) {
+		border-left: 1px solid #dddddd;
+	}
+	.situation li:nth-child(3),
+	.situation li:nth-child(5) {
+		border-left: none;
+	}
+}
+@media screen and (max-width: 414px) {
+	.contentsBox > .box .textBox dl {
+		margin: 0px 0 20px 0px;
+	}	
+}
+@media screen and (max-width: 320px) {
+	.learning .state li {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	.learning .state li .number { 
+		width: 10%;
+	}
+
+}
+
+
+/* 학습방법 - 학습문의 */
+.inquiry {
+	min-height: 360px;
+}
+.inquiry .box {
+	float: left;
+	display: block;
+	width: 243px;
+	height: 360px;
+	margin-left: 15px;
+	padding-top: 50px;
+	border: solid 1px #d9dddf;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	text-align: center;
+}
+.inquiry .box:first-child {
+	margin-left: 0px;	
+}
+.inquiry .box .textBox p {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-size: 15px;
+	font-weight: 700;
+}
+.inquiry .box .textBox span {
+	display: block;
+	letter-spacing: -1px;
+}
+.inquiry .box .textBox .content {
+	color: #7f868b;
+	margin-bottom: 5px;
+}
+.inquiry .box .textBox .tel {
+	width: 100px;
+	margin: 0 auto;
+	padding-left: 18px;
+	background: url('/images/classroom/template1/gray/img_title_inquiry_tel.png') no-repeat 0px 5px;	
+}
+.inquiry .box .textBox .time {
+	color: #f2444a;
+}
+span.ppt {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/ppt.png') no-repeat;
+}
+span.pdf {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/pdf.png') no-repeat;
+}
+span.doc {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/doc.png') no-repeat;
+}	
+span.xls {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/xls.png') no-repeat;
+}
+span.txt {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/txt.png') no-repeat;
+}
+span.hwp {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/txt.png') no-repeat;
+}	
+span.html {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/html.png') no-repeat;
+}
+span.jpg {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/jpg.png') no-repeat;
+}
+span.gif {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/gif.png') no-repeat;
+}
+span.png {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/png.png') no-repeat;
+}
+span.zip {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/zip.png') no-repeat;
+}
+.video {
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+/* 본인인증  */
+.certify { 
+	display: block;
+	width: 100%;
+	border: solid 2px #e7e9ea;
+	margin-bottom: 25px;
+}
+.certify > .imgBox {
+	float: left;
+	width: 120px;
+	height: 100px;
+	padding: 20px;
+	font-size: 0;
+	background: url('/images/classroom/template2/default/icon_certify.png') 30px 20px no-repeat;
+}
+.certify .textBox {
+	display: inline-block;
+	width: auto;
+	padding: 20px;
+}
+.certify .textBox .info {
+	color: #0c50a1;
+}
+.certify .textBox .box {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.certify .textBox .box .imgBox {
+	display: block;
+	width: inherit;
+	margin-bottom: 10px;
+	padding: 10px 20px 10px 20px;
+	border: solid 1px #919191;
+	font-size: 1.54em;
+	font-style: italic;
+	color: #313538;
+	font-weight: 700;
+	letter-spacing: 3px;
+/* 	background: #e7e9ea; */
+}
+
+
+.certify .textBox .box .otpBox {position:relative;text-align:center;margin: 20px 0 0;}
+.certify .textBox .box .otpBoxIn {display:inline-block;} 
+.certify .textBox .box .otpBoxIn input {width: 198px;height: 35px; padding:0 10px; border:2px solid #333;}
+.certify .textBox .box .otpBoxIn > button {height:35px; background:#333; border:1px solid #333}
+.certify .textBox .box .otpBoxIn > button:hover {color:#fff568}
+.certify .textBox .box .otpBoxIn .hrdFrameKeyPad {position:absolute; top:40px; left:50%; width:600px; margin:0 0 0 -300px; z-index:1;}
+.certify .textBox .box .otpBoxIn .hrdFrameKeyPad > table {table-layout:fixed}
+.certify .textBox .box .otpBoxIn .hrdFrameKeyPad img {width:48px; height:48px}
+.certify .textBox .box .otpBoxIn .hrdFrameKeyPad button {height:48px}
+
+.certify.otp {position:relative}
+.certify.otp > .imgBox {position:absolute; top:0; left:0;}
+.certify.otp > .textBox {display: block; margin: 0 0 0 120px;} 
+
+
+.certify .textBox .box input {
+	display: inline;
+	width: 30%;
+	margin-left: 10px;
+	margin-right: 2px;
+	vertical-align: middle;	
+}
+.certify .textBox .box button {
+	display: inline;
+	vertical-align: middle;	
+}
+
+
+.certify .textBox .success {
+	padding-left: 40px;
+	line-height: 28px;	
+	color: #009d4f;
+	background: url('/images/classroom/template1/default/icon_success.png') 0px 0px no-repeat;
+}
+.certify .textBox .error {
+	margin-top: 10px;	
+	padding-left: 40px;
+	line-height: 28px;	
+	color: #f2444a;	
+	background: url('/images/classroom/template1/default/icon_error.png') 0px 0px no-repeat;
+}
+.certify+.btnArea {
+	text-align: center;
+}
+
+
+/* 과제  */
+.task  {
+}
+.task dt {
+    display: block;
+    float: left;
+    margin-top: 40px;
+	font-weight: 700;    
+}
+.task dt span {
+	float: left;
+	height: 100%;
+	padding-right: 7px;
+}
+.task dt p:first-child {
+	font-weight: 700;
+}
+.task dt p {
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+.task dt p strong {
+	margin-left: 10px;
+	color: #0c50a1;	
+}
+.task dd {
+    margin-left: 20px;
+}
+.popup .task dd .box {
+	float: none;
+	margin-top: 10px;
+	padding: 0;
+}
+.popup .task dd .box > label {
+	float: left;
+	line-height: 26px;
+	padding-right: 10px;
+}
+.popup .task dd .box > .fileAttach {
+	display: inline-block;
+}
+.popup .task dd .info,
+.popup .task dd .wrong {
+	padding-left: 70px;
+	line-height: 26px;
+}
+.popup .contentsBox > .box > h6 {
+	margin-top: 40px;
+}
+.popup .contentsBox > .btnArea {
+    margin-top: 20px;
+    margin-bottom: 15px;		
+	display: block;
+}
+.popup div.grade {
+	margin-bottom: 10px;
+	text-align: right;
+}
+.popup div.grade > p {
+	display: inline-block;
+	font-weight: 700;
+	font-size: 1.38em;
+	letter-spacing: 1px;
+}
+.popup div.grade > p > span {
+	display: inline-block;
+	width: 120px;
+	height: 38px;
+	line-height: 38px;	
+	margin-left: 10px;
+	padding: 0px 20px 0px 20px;
+	color: #ffffff;
+	text-align: center;
+ 	background: url('/images/classroom/template2/navy/pop_test.png') 0 0 no-repeat;
+}
+.popup div.time {
+	margin-bottom: 10px;
+	text-align: right;
+}
+.popup div.time > p {
+	display: inline-block;
+	font-weight: 700;
+	font-size: 1.38em;
+}
+.popup div.time > p > span {
+	float: left;
+	display: inline-block;
+	width: 120px;
+	height: 38px;
+	line-height: 38px;
+	margin-left: 10px;
+	padding: 0 7px 0 7px;
+	color: #ffffff;
+	text-align: center;
+ 	background: url('/images/classroom/template2/navy/pop_test.png') 0 0 no-repeat;
+}
+
+/* 시험, 설문  */
+.test dt {
+    display: block;
+    margin-top: 40px;
+	font-weight: 700;    
+}
+.test dt > span {
+	float: left;
+	height: 100%;
+	padding-right: 7px;
+}
+.test dt p {
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+.test dt .mark {
+	padding-bottom: 25px;
+	font-weight: 400;
+}
+.test dt .mark > span {
+	margin-right: 0px;
+	padding-right: 12px;
+	vertical-align: 0;
+}
+.test dt .mark > span strong, .test dt .mark > span strong span {
+	vertical-align: 0;
+}
+.test dt .mark > span:before {
+	padding-right: 12px;
+	content: '|';
+	color: #cccccc;
+}
+.test dt .mark > span:first-child:before {
+	padding-right: 0px;
+	content: '';
+}
+.test dt .mark > span > span {
+	color: #f2444a;
+}
+.test dd {
+	clear: both;
+	overflow: hidden;
+	position: relative;
+	display: block;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.test dd > input[type="radio"], 
+.test dd > input[type="checkbox"] {
+	float: left;
+	margin: 4px 0 0px 0px;
+}
+.test dd label {
+	display: table-cell;
+	padding-left: 10px;
+	line-height: 20px;
+}
+.test dd label span {
+	float: left;
+	height: 100%;
+	padding-right: 7px;
+}
+.test dd label p {
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+.test dd > p {
+    margin-top: 5px;	
+    line-height: 18px;
+    text-align: right;
+}
+.test dd > p > span  {
+	margin-right: 5px;
+	color: #2e3e4e;  
+}
+.test dd.answer {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+.test dd.answer > p {
+	color: #f0564c;
+	font-weight: 700;  
+	font-size: 1.15em; 
+	text-align: left;
+}
+.test dd.answer > p > strong {
+	font-weight: 400;  
+	font-size: 13px;  
+}
+.test dd.answer .explain {
+    margin-top: 8px;
+}
+.test dd.answer .explain .btnView:after {
+	 content: " ▼";
+	font-size: 0.8em;	 
+}
+.test dd.answer .explain.active .btnView:after {	
+	 content: " ▲";
+	font-size: 0.8em;
+}
+.test dd.answer .explain .content {
+	display: none;
+	margin-top: 5px;
+	padding: 15px 20px 15px 20px;
+    background: #f8f8f8;
+}
+.test dd .box {
+	margin-top: 10px;
+	padding: 0;
+}
+.test dd .box > label {
+	float: left;
+	line-height: 26px;
+	margin: 0px 0 0px 0px;
+	padding-right: 10px;
+}
+.test dd .box > .fileAttach {
+	display: inline-block;
+}
+.test dd .info {
+	color: #1d66bf;
+	padding-left: 70px;
+	line-height: 26px;
+}
+.popup .contentsBox > .box {
+	margin-top: 10px;
+	border: none; 
+	background: #ffffff;
+}
+
+@media screen and (max-width: 1000px) {
+
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad {width:400px; margin:0 0 0 -200px}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad button {min-width:40px; height:40px}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad img {width:40px; height:40px;}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad table tr {height:46px}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad table td {width:40px}
+}
+
+	
+@media screen and (max-width: 640px) {
+	
+	/* 본인인증 OTP */
+	
+	.certify.otp > .imgBox {position:static; background: url(/images/classroom/template2/default/icon_certify.png) 20px 10px no-repeat;}
+	.certify.otp > .textBox {margin:0}
+	.certify.otp .textBox .box {margin:20px 0 0}
+	.certify .textBox .box .otpBoxIn input {width:150px}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad {width:300px; margin:0 0 0 -150px}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad button {min-width:36px; height:36px}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad img {width:36px; height:36px;}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad table tr {height:46px}
+	.certify .textBox .box .otpBoxIn .hrdFrameKeyPad table td {width:40px}
+	
+	/* 본인인증 OTP */
+	
+	
+}

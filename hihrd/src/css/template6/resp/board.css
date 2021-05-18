@@ -1,0 +1,889 @@
+@charset "utf-8";
+
+/* table */
+table {
+	width: 100%;
+}
+table th {
+	padding: 15px 8px;
+    vertical-align: middle;
+}
+table th.asterisk:before {
+	content:"*";
+}
+table td {
+	height: 48px;
+	padding: 10px 8px;
+    vertical-align: middle;
+}
+table td > span {
+	display: inline-block;
+}
+.boardList+.btnArea, .boardWrite+.btnArea, .boardWrite+.info+.btnArea, .boardView+.btnArea {
+	margin-top: 20px;
+}	
+
+/* boardList */
+.boardList table td {
+	text-align: center;
+}
+.boardList table td.title {
+	text-align: left;
+} 
+.boardList table td.title .icon.notice {
+	display: none;
+}
+.boardList .title a:hover {
+	text-decoration: underline;
+}
+
+/* boardView */
+.boxGray+.boardView {
+	margin-top: 20px;
+}
+.boardView table th {
+	text-align: left;
+	padding: 10px 20px;
+}
+.boardView table td {
+	padding: 10px 20px;
+}
+.boardView table td.content {
+	height: 200px;
+	padding: 20px;
+    line-height: 25px;
+	vertical-align: top;
+	word-break: break-all;
+}
+.boardView thead th.title {
+	padding: 18px 20px 15px 20px;
+	border-bottom: none;
+	font-size: 1.38em; 
+}
+.boardView thead th.title .icon{
+	line-height: 24px;
+	vertical-align: top;
+}
+.boardView thead th.title .icon.notice {
+	line-height: 21px;
+}
+.boardView thead th.title.type2 {
+	position: relative;
+    padding-right: 215px;
+}
+.boardView thead th.title.type2 .btnArea {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+.boardView thead th.title.type2 .btnArea button { 
+ 	min-width: 80px;
+ 	height: 34px;
+ 	line-height: 32px;
+	padding: 0 15px;
+	font-size: 13px;
+}
+.boardView td.info {
+	height: auto;
+	padding: 0 20px 15px;
+}
+.boardView td.info .grade {
+	float: right;
+}
+.boardView td.info p > span {
+	display: inline-block;
+}
+.boardView td.info p span+span:before {
+	content: "|";
+	padding: 0 20px 0 15px;	
+}
+.boardView td.info p span > strong {
+    vertical-align: 0px;
+    margin-right: 5px;
+}
+
+/* boardWrite */
+.boxGray+.boardWrite {
+	margin-top: 20px;
+}
+.boardWrite table th {
+	padding: 10px 20px;
+	text-align: left;
+}
+.boardWrite table td .radioncheckbox {
+	display: inline-block;
+}
+.boardWrite .address li {
+	position: relative;
+}
+.boardWrite .address li > label:first-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:inline-block;
+    width: 73px;
+    /* line-height: 34px; */
+}
+.boardWrite .address li+li {
+	padding-left: 73px;
+	margin-top: 8px;
+}
+.boardWrite .address li+li input {
+	width: 100% !important;
+}
+.boardWrite .address li+li input+input {
+	margin-top: 4px; 
+}
+.boardWrite .inclubImage {
+    float: left;
+	overflow: hidden;
+	width: 180px;
+	height: 135px;
+    margin-right: 8px;
+}
+.boardWrite .inclubImage img {
+	width: 100%;
+	height: 100%;
+}
+.boardWrite .job input+label {
+	width: 180px;
+	margin: 0 10px 8px 0
+}
+.boardWrite .job input[type="radio"]+label+input[type="radio"]+label {
+	margin-left: 0;
+}
+.boardWrite .book li {
+	float: left;
+	margin: 0 20px 0 0
+}
+.boardView td .iconBox, .boardWrite td .iconBox {
+	margin-bottom: 5px;
+}
+.boardView td p.error, .boardWrite td p.error,
+.boardView td p.success, .boardWrite td p.success,
+.boardView td p.info, .boardWrite td p.info,
+.boardWrite td p.info+textarea {
+	margin-top: 8px;
+}
+.boardView td p.error, .boardWrite td p.error,
+.boardView td p.success, .boardWrite td p.success,
+.boardView td p.info, .boardWrite td p.info,
+.boardWrite td p.info+textarea,
+.boardView td span.info, .boardWrite td span.info,
+.boardView td span.error, .boardWrite td span.error,
+.boardView td span.success, .boardWrite td span.success {
+	line-height: 20px;
+}
+.boardWrite td input+span.info, .boardWrite td button+span.info {
+	padding-left: 11px;
+}
+.boardWrite td .profileImg {
+	float: left;
+	margin-right: 10px;
+}
+.boardWrite td ul.grade li {
+	float: left;
+    margin-right: 20px;
+    line-height: 24px;
+}
+.boardWrite td ul.grade li  label span {
+    margin-top: -3px;
+    margin-left: 5px;
+}
+.boardWrite td .listAttach {
+	margin-top: 10px;
+	padding: 15px;
+}
+.boardWrite td .radioncheckbox {
+	line-height: 25px;
+	margin-bottom: 5px;
+}
+
+/* thumbnList */
+.thumbnList {
+	overflow: auto;
+}
+.thumbnList > .selectBox {
+	float: right;
+	margin-bottom: 10px;
+}
+.thumbnList + .btnArea {
+    margin-top: 20px;
+}
+.thumbnList li {
+	float: left;
+	overflow: hidden;
+	width: 172px;
+	margin-right: 12px;
+	margin-bottom: 12px; 
+}
+.contentsBox .thumbnList li:nth-child(4n) {
+	margin-right: 0;
+}
+.thumbnList li .imgBox img {
+	width: 100%;
+	height: 116px;
+} 
+.thumbnList li .textBox {
+	position: relative;
+	height: 121px;
+}
+.thumbnList li .textBox > p, .thumbnList li .textBox > div {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.thumbnList li .textBox .iconBox {
+	margin-top: 15px;
+}	
+.thumbnList li .textBox p.title {
+	margin-top: 7px;
+	font-size: 1.15em;
+    font-weight: 700;
+}
+.thumbnList li .textBox p.title > a {
+    overflow: hidden;
+    display: inline-block;
+    display: -webkit-box;
+    max-height: 40px; 
+    line-height: 20px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.thumbnList li .textBox p.title > a:hover {
+	text-decoration: underline;
+}
+.thumbnList .textBox .title > a+span.info {
+	font-size: 0.86em;
+	font-weight: 400;
+}
+.thumbnList li .iconBox.type2 {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	width: 100%;
+	height: 42px;
+	margin-top: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.thumbnList li .btnArea .btnBook {
+	display: block;
+	min-width: 76px;
+    margin-top: 5px;
+}
+.thumbnList li .btnArea .btnBook:after {
+	content: " ";
+    display: inline-block;
+    width: 5px;
+    height: 9px;
+    margin-left: 5px;
+    margin-top: -2px;
+    vertical-align: middle;
+    background: url('/images/template6/resp/default/button/btn_book.png') 0 center no-repeat;
+}
+
+/* thumbnList type2 */
+.thumbnList.type2 li { 
+	display: table;	
+	width: 100%;
+	min-height: 52px;
+	margin: 0;
+	padding-bottom: 0;
+	border: none;
+}
+.thumbnList.type2 li:first-child,
+.thumbnList.type2 li:first-child:hover {
+	text-align: center;
+	font-weight: 700;
+}
+.thumbnList.type2 li > div {
+	display: table-cell;
+	padding: 15px 0px 15px 0px;
+}
+.thumbnList.type2 li .textBox p.title > a {
+	display: inline;
+	height: auto;
+}
+.thumbnList.type2 li > div > a:hover {
+	text-decoration: underline;
+}
+.thumbnList.type2 li > div.noData {
+	text-align: center;
+}
+.thumbnList.type2 li .imgBox { /* 180/135 */
+	display:table-cell;
+	width: 174px;
+	height: 114px;
+	padding-left: 10px;
+	vertical-align: top;
+}
+.thumbnList.type2 li .imgBox.type2 { /* 80/60 */
+	width: 80px;
+}
+.thumbnList.type2 li .imgBox img {
+	width: 174px;
+	height: 114px;
+}
+.thumbnList.type2 li .imgBox.type2 img {
+	width: 80px;
+	height: 60px;
+}
+.thumbnList.type2 li .profileImg {
+	display: table-cell;
+}
+.thumbnList.type2 li .textBox {
+	display:table-cell;
+    padding: 0px 15px 10px 15px;
+    vertical-align: top;
+    height: auto;
+}
+.thumbnList.type2 li > div.textBox {
+	padding: 8px 15px 10px 15px;
+}
+.thumbnList.type2 li .textBox .icon.new,
+.thumbnList.type2 li .textBox .icon.hot {
+	line-height: 23px;
+}
+.thumbnList.type2 li .imgBox.type2+.textBox {
+	vertical-align: middle;
+}
+.thumbnList.type2 li .textBox > .iconBox {
+	margin-top: 5px;
+	padding: 0;
+}
+.thumbnList.type2 li .textBox .title {
+	height: auto;
+	-webkit-box-orient: inherit;
+    white-space: inherit;
+}
+.thumbnList.type2 li .imgBox+.textBox .title+p {
+	margin-top: 12px;
+}
+.thumbnList.type2 li .textBox > p {
+	padding: 0;
+}
+.thumbnList.type2 li .textBox > p > span,
+.thumbnList.type2 li .textBox > span > span  {
+	vertical-align: 0px;
+}
+.thumbnList.type2 li .textBox > p > span.icon {
+	vertical-align: top;
+}
+.thumbnList.type2 li .textBox p.content {
+    margin-bottom: 9px;
+}
+/* .thumbnList.type2 li .textBox .course, */
+/* .thumbnList.type2 li .textBox .period, */
+/* .thumbnList.type2 li .textBox .month, */
+/* .thumbnList.type2 li .textBox p.date { */
+/* 	line-height: 22px; */
+/* } */
+.thumbnList.type2 li .textBox .period {
+	letter-spacing: -0.5px;
+}
+.thumbnList.type2 li .textBox .course > span,
+.thumbnList.type2 li .textBox .period > span,
+.thumbnList.type2 li .textBox .month > span,
+.thumbnList.type2 li .textBox p.writer > span,
+.thumbnList.type2 li .textBox p.date > span,
+.thumbnList.type2 li .textBox p.book > span,
+.thumbnList.type2 li .textBox p.time > span {
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: 700;
+}
+.thumbnList.type2 li .textBox p.book > button {
+	margin-left: 10px;
+}
+.thumbnList.type2 li .textBox > span {
+	display: inline-block;
+	margin-right: 5px;
+}
+.thumbnList.type2 li > div.state {
+	width: 135px;
+	text-align: center;
+	vertical-align: middle;
+}
+.thumbnList.type2 li > div.certificate+div.state {
+	width: 110px;
+}
+.thumbnList.type2 li > div.state.type2 {
+	width: 90px;
+}
+.thumbnList.type2 li > div p {
+	line-height: 22px;
+}
+.thumbnList.type2 li > div p.month > .btnDelivery {
+	margin-left: 5px;
+}
+.thumbnList.type2 li > div p.follow span {
+	display: inline-block;
+	line-height: 22px;
+}
+.thumbnList.type2 li > div p.follow span+span:before {
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+    padding-left: 13px;
+}
+.thumbnList.type2 li > div p+button {
+	margin-top: 6px;
+}
+.thumbnList.type2 li .progressRate {
+	margin: 0 10px 10px 10px;
+}
+.thumbnList.type2 li .progressRate > span {
+	float: left;
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom: 7px;
+}
+.thumbnList.type2 li .progressRate > span.num {
+	float: right;
+}
+.thumbnList.type2 li .progressRate .rate {
+    clear: both;
+	position: relative;
+	width: 100%;
+	height: 15px;
+}
+.thumbnList.type2 li .progressRate .rate > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+}
+.thumbnList.type2 li > div.certificate {
+	width: 118px;
+	text-align: center;
+	vertical-align: middle;
+}
+.thumbnList.type2 li > div.result {
+    width: 70px;
+	text-align: center;
+	vertical-align: middle;
+}
+.thumbnList.type2 li > div.cors .imgBox {
+	width: 82px;
+}
+.thumbnList.type2 li > div.writer,
+.thumbnList.type2 li > div.publisher,
+.thumbnList.type2 li > div.related {
+	width: 100px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.checkBox {
+	width: 37px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.checkBox label {
+	padding-left: 18px;
+}
+.thumbnList.type2 li div.delivery {
+	width: 100%;
+}
+.thumbnList.type2 li > div.sum {
+	width: 100px;
+	text-align: right;
+}
+.thumbnList.type2 li:first-child > div.sum {
+	text-align: center;
+}
+.thumbnList.type2 li .survey {
+	padding: 11px 20px 9px;
+	vertical-align: middle;
+}
+.thumbnList.type2 li .survey .title .icon {
+	margin-left: 5px;
+}
+.thumbnList.type2 li .survey .textBox {
+	padding: 0;
+}
+.thumbnList li .survey .textBox p.title {
+	margin: 0 0 8px 0;
+}
+.thumbnList.type2 li > div.schedule {
+	width: 70px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.sort {
+	width: 100px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.period {
+	width: 126px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.price {
+	width: 120px;
+	text-align: center;
+	vertical-align: middle;
+}
+.btnSchedule {
+	min-width: 0;
+	height: auto;
+	padding: 0;
+	text-decoration: underline;
+	font-size: 1em;
+}
+.thumbnList.type2 li > div.number {
+	width: 100px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.number > span {
+	display: inline-block;
+}
+.thumbnList.type2 li > div.number:first-child {
+	width: 60px;
+}
+.thumbnList.type2 li > div.category {
+	width: 95px;
+	text-align: center;
+}
+.boxGray+.thumbnList.type2 {
+	margin-top: 20px;
+}
+.thumbnList.type2 li > div.hit,
+.thumbnList.type2 li > div.recommend {
+	width: 62px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.date {
+	width: 120px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.write {
+	width: 70px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.course {
+	width: 170px;
+}
+.thumbnList.type2 li > div.month {
+	width: 115px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.grade {
+	width: 62px;
+	text-align: center;
+}
+.thumbnList.type2 li .textBox .name .btnInclub {
+	margin-left: 5px;
+}
+.thumbnList.type2 li .profileImg+.textBox {
+	vertical-align: middle;
+}
+
+/* .table */
+.table th {
+	height: 42px;
+	padding: 18px 15px; 
+	text-align: center;
+}
+.table td {
+	padding: 18px 15px;
+	text-align: center;
+}
+.table td.title {
+	text-align: left;
+}
+.table.schedule td {
+	padding: 8px 10px;
+}
+.table.delivery {
+	margin-top: 20px;
+}
+.totalList {
+	overflow: hidden;
+    line-height: 22px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.totalList .selectBox {
+	float: right;
+}
+.totalList .floatRight {
+	margin-left: 10px;
+}
+.totalList .floatRight a {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	font-size: 0;
+	vertical-align: top;
+}
+.mobileInfoBox {
+	display: none;
+}
+
+@media screen and (max-width: 1023px) {
+	.totalList {
+		margin-top: 10px;
+		padding: 0 4%;
+	}
+	.boardList thead,
+	.boardList tbody td {
+		display: none;
+	}
+	.boardList tbody tr {
+		position: relative;
+		display: block;
+		padding: 10px 20px;
+	}
+	.boardList tbody tr td.category,
+	.boardList tbody tr td.title,
+	.boardList tbody tr td.date {
+		display: block;
+		text-align: left;
+		height: auto;
+		line-height: 22px;
+		padding: 0;
+	}
+	.mobileInfoBox {
+		display: block;
+		font-weight: 700;
+	}
+	.boardList tbody tr td.sttime {
+		display: block;
+		text-align: left;
+		height: auto;
+		line-height: 22px;
+		padding: 0;
+		text-align: right;
+	}
+	.boardList tbody tr td.category:before {
+		content:"[";
+	}
+	.boardList tbody tr td.category:after {
+		content: "]";
+	}
+	.boardList tbody tr td.state {
+		position: absolute;
+		top: 0;
+		right: 10px;
+		display: inline-block;
+	}
+	.thumbnList ul{
+		margin: 0 1%;
+	}
+	.thumbnList li, .courseView .content .thumbnList li {
+		width: 23%;
+		margin: 0 1%;
+		margin-bottom: 2%;
+	}	
+	.thumbnList.type2 ul{
+		margin: 0;
+	}
+	.thumbnList.type2 .selectBox {
+		margin-top: 15px;
+	}
+	.thumbnList.type2 li {
+		position: relative;
+		display: block;
+		padding: 20px 4%;
+	}
+	.thumbnList.type2 li:first-child {
+		display: none;
+	}
+	.thumbnList.type2 li > div {
+		display: block;
+		padding: 0;
+	}
+	.thumbnList.type2 li > div.state p+button {
+		margin: 0 0 0 10px;
+	}
+	.thumbnList.type2 li > div.textBox {
+	    padding: 8px 0px 0px 0px;
+	}
+	.thumbnList.type2 li .imgBox {
+		padding-left: 0;
+	}
+	.thumbnList.type2 li .textBox {
+	    padding: 0px 15px 0px 15px;
+	}
+	.thumbnList.type2 li > div.sort {
+	    position: absolute;
+	    top: 20px;
+	    right: 4%;
+	    display: inline-block;
+	    padding: 0;
+	    text-align: right;
+	}
+	.thumbnList.type2 li > div.state,
+	.thumbnList.type2 li > div.certificate+div.state,
+	.thumbnList.type2 li > div.price {
+		clear: both;
+		width: 100%;
+		text-align: right;
+	}
+	.thumbnList.type2 li > div.state .btnClassroom {
+		width: 100%;
+		margin: 10px 0 0 0;
+	}
+	.thumbnList.type2 li > div.survey {
+		padding: 0;
+	}
+	.thumbnList.type2 li > div.textBox {
+		padding: 0 0 10px 0;
+	}
+	.thumbnList.type2 li .progressRate {
+		margin: 10px 0 0 0;
+	} 
+	.thumbnList.type2 li > div.result,
+	.thumbnList.type2 li > div.certificate {
+		float: left;
+		width: auto;
+		padding-left: 15px;
+		text-align: left;
+	}
+	.thumbnList.type2 li > div.result {
+		padding-left: 189px;
+	}
+	.thumbnList.type2 li > div.certificate p,
+	.thumbnList.type2 li > div.result p {
+		display: inline-block;
+		vertical-align: 0px;
+	}
+	.thumbnList.type2 li > div.state > p {
+		display: inline-block;
+		padding-left: 10px;
+	}
+	.thumbnList.type2 li > div.result:before {
+		content: "학습결과";
+		margin-right: 5px;
+		font-weight: 700;
+	}
+	.thumbnList.type2 li > div.certificate:before {
+		content: "수료여부 ";
+		margin-right: 5px;
+		font-weight: 700;
+	}
+	.thumbnList.type2 li > div.price:before {
+		content: "교육비 ";
+		margin-right: 5px;
+		font-weight: 700;
+	}
+	.thumbnList.type2 li > div.sort:before {
+		content: "[";
+	}
+	.thumbnList.type2 li > div.sort:after {
+		content: "]";
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.boardView td.info p span+span:before {
+		display: none;
+	}
+	.boardView td.info p span {
+		margin-right: 10px;
+		line-height: 22px;
+	}
+	.thumbnList ul{
+		margin: 0;
+	}
+	.thumbnList li {
+		width: 49%;
+		margin: 0 2% 2% 0;
+	}
+	.thumbnList li:nth-child(2n) {
+		margin: 0 0 2% 0;
+	}
+	.thumbnList.type2 li:nth-child(2n) {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.boardView thead th.title.type2 {
+		padding: 18px 20px 8px 20px;
+	}
+	.boardView thead th.title.type2 .btnArea {
+	    position: inherit;
+		top: auto;
+		right: auto;
+		display: block;
+		margin-top: 10px;
+	}
+	.boardWrite th {
+		width: 30%;
+	}
+	.thumbnList.type2 li div > .imgBox,
+	.thumbnList.type2 li div > .imgBox img {
+		width: 100px;
+		height: 90px; 
+	}
+	.thumbnList.type2 li .textBox {
+		padding: 0 10px 0px 10px;
+	}
+	.thumbnList.type2 li .textBox > .iconBox {
+		margin-top: 0;
+	}
+	.thumbnList.type2 li .imgBox+.textBox .title+p {
+		margin-top: 3px;
+	}
+	.thumbnList.type2 li > div.sort {
+		padding-bottom: 8px;
+	}
+	.thumbnList.type2 li > div.result,
+	.thumbnList.type2 li > div.certificate {
+		float: none;
+	    display: inline-block;
+		width: auto;
+		padding-left: 0;
+		padding-right: 15px;
+		text-align: left;
+	}
+	.thumbnList.type2 li > div.result {
+		padding-left: 110px;
+	}
+}
+@media screen and (max-width: 560px) {
+	button.inside.btnDelivery {
+		padding: 0 10px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.boardWrite td.email .selectBox {
+		display: block;
+		width: 210px;
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 410px) {
+	.boardWrite td .address li .btnZipcode {
+		display: block;
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.thumbnList li {
+		width: 100%;
+		margin: 0 0 2% 0;
+	}
+	.table.delivery td {
+		padding: 10px 8px;
+	}
+	.boardWrite td.email input {
+		width: 210px !important;
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 359px) {
+	.thumbnList.type2 li div > .imgBox {
+		display: none;
+	}
+	.thumbnList.type2 li div > .textBox {
+		display: block;
+		padding: 0;
+	}
+	.thumbnList.type2 li > div.result {
+		padding-left: 0px;
+	}
+}
+

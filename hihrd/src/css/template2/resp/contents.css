@@ -1,0 +1,2908 @@
+@charset "utf-8";
+
+/* login */
+.contentsBox .login {
+	display: table;
+    width: 100%;
+}
+.contentsBox .login > div {
+	display: table-cell;
+}
+.contentsBox .login > div:first-child {
+	position: relative;
+	Padding: 40px 60px;
+}
+.contentsBox .login > div:first-child ul {
+	overflow: auto;
+	margin-bottom: 16px;
+}
+.contentsBox .login > div:first-child li {
+	margin-bottom: 10px;
+}
+.contentsBox .login > div:first-child li input {
+	width: 250px;
+	width: calc(100% - 95px);
+}
+.contentsBox .login > div:first-child li.error {
+	line-height: 22px;
+}
+.contentsBox a.btnIdpwFind {
+	text-decoration: underline;
+	font-weight: 700;
+}
+.contentsBox .login .btnLogin {
+    position: absolute;
+    display: block;
+    top: 40px;
+    right: 60px;
+    min-width: 85px;
+    padding: 0;
+    height: 78px;
+    cursor: pointer;
+}
+.contentsBox .login > div.join {
+	width: 535px;
+	text-align: center;
+}
+.contentsBox .login > div.join p {
+	font-size: 1.15em;
+}
+.contentsBox .login > div.join .btnJoin {
+	margin-top: 30px;
+}
+
+/* join */
+.joinMsg {
+	text-align: center;
+}
+.joinMsg .textBox .success {
+	margin: 0;
+	margin-bottom: 14px;
+	line-height: 1;
+	font-size: 1.54em; /* 20/13 */
+	font-weight: 700;
+}
+.joinMsg .textBox p {
+	font-size: 1.15em;
+}
+.joinMsg .info {
+	margin-top: 30px;
+	padding: 28px 0;
+}
+.joinMsg .info p {
+	display: inline-block;
+	margin: 0 23px;
+}
+.joinMsg .info p strong {
+	 vertical-align: top;
+	 line-height: 23px;
+}
+.joinMsg .info p+p strong {
+	 line-height: 20px;
+}
+
+/* findIdPw */
+.boardWrite.findIdpw table th {
+	height: 34px;
+	padding: 5px 10px 5px 20px;
+}
+.boardWrite.findIdpw table td {
+	height: 34px;
+/* 	padding: 5px 10px; */
+}
+.boardWrite.findIdpw table td input {
+	margin: 5px 0 5px 0;
+	
+}
+.boardWrite.findIdpw > p {
+	margin-bottom: 24px;
+	padding: 0 20px;
+}
+.boardWrite.findIdpw span.error {
+	display: inline-block;
+}
+.boardWrite.findIdpw .info {
+	margin-top: 35px;
+	padding: 40px;
+	text-align: center;
+}
+.boardWrite.findIdpw .info > p > span {
+	display: block;
+	margin-bottom: 30px;
+	font-size: 1.15em;
+}
+.boardWrite.findIdpw .info > p > span > strong {
+    display: inline-block;
+    margin-top: -4px;
+}
+.findIdpw .btnPwFind {
+	margin-left: 6px;
+}
+.findIdpw .selectBox select {
+	padding: 0 7px 0 8px;
+}
+
+/* 나의 홈 */
+#sub .myLearning > .title {
+	padding: 0 30px;
+	line-height: 44px;
+}
+#sub .myLearning > .title .icon {
+	display: inline-block;
+	width: 14px;
+	height: 12px;
+	margin-right: 4px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	vertical-align: middle;
+}
+#sub .myLearning > .title strong {
+	display: inline-block;
+	font-size: 1.15em;
+	margin-right: 15px;
+}
+#sub .myLearning > .title .selectBox select {
+	top: -7px;
+}
+#sub .myLearning .state {
+	overflow: auto;
+	padding: 30px;
+}
+#sub .myLearning .state li {
+	float: left;
+	width: 156px; 
+	padding: 15px 0;
+	text-align: center;
+}
+#sub .myLearning .state li:first-child {
+	width: 158px; 
+}
+#sub .myLearning .state li .nember {
+	line-height: 36px;
+	margin-bottom: 8px;
+	font-size: 1.69em; /* 22/13 */
+	font-weight: 700;
+}
+#sub .myLearning .state li .nember+div {
+	line-height: 24px;
+	font-size: 1.15em;
+	font-weight: 700;
+}
+#sub .myLearning .state li .nember+div:before {
+	content: " ";
+	display: inline-block;
+	margin-right: 8px;
+	height: 24px;
+	vertical-align: top;
+}
+#sub .myLearning .state li.register .nember+div:before {
+	width: 15px;
+}
+#sub .myLearning .state li.standby .nember+div:before {
+	width: 10px;
+}
+#sub .myLearning .state li.cancel .nember+div:before {
+	width: 18px;
+}
+#sub .myLearning .state li.progress .nember+div:before {
+	width: 17px;
+}
+#sub .myLearning .state li.complete .nember+div:before {
+	width: 16px;
+}
+#sub .myLearning .state li.incomplete .nember+div:before {
+	width: 13px;
+}
+#sub .myLearning .state li.register .nember+div {
+	width: auto;
+}
+#sub .myLearning .graph {
+	padding: 0 30px;
+	text-align: center;
+}
+#sub .myLearning .legend {
+	overflow: auto;
+	padding: 30px;
+}
+#sub .myLearning .legend li {
+	float: left;
+	margin-left: 25px;
+	line-height: 1;
+	font-weight: 700;
+}
+#sub .myLearning .legend li:first-child {
+	margin-left: 0;
+}
+#sub .myLearning .legend li span {
+	display: inline-block;
+	vertical-align: top;
+	font-weight: 700;
+}
+#sub .myLearning .legend li .book,
+#sub .myLearning .legend li .smart,
+#sub .myLearning .legend li .elearning {
+	width: 13px;
+	height: 13px;
+	margin-right: 10px;
+}
+#sub .customer {
+	overflow: auto;
+	margin: 20px 0 50px;
+}
+#sub .customer li {
+	float: left;
+	width: 490px;
+	height: 110px;
+	padding: 18px 0 15px 125px;
+}
+#sub .customer li.remote {
+	display: table;
+	margin-left: 20px;
+}
+#sub .customer li.remote a {
+	display: table-cell;
+}
+#sub .customer li p {
+	line-height: 20px;
+	font-weight: 700;
+}
+#sub .customer li p span {
+	display: inline-block;
+	line-height: 20px;
+	vertical-align: top;
+	font-weight: 400;
+}
+#sub .customer li p span.tel {
+	margin-right: 15px;
+	padding-left:23px;
+}
+#sub .customer li p span.email {
+	padding-left:23px;
+}
+#sub .customer li p span.email a {
+	vertical-align: top;
+}
+#sub .customer li .title {
+	line-height: 31px;
+	font-size: 1.54em; /* 20/13 */
+}
+#sub .myLearning {
+	overflow: auto;
+}
+#sub .myLearning > ul > li {
+	float: left;
+	overflow: hidden;
+	width: 490px;
+	height: 258px;
+	margin-bottom: 26px;
+}
+#sub .myLearning > ul > li:nth-child(2n) {
+	margin-left: 20px;
+}
+#sub .myLearning > ul > li > .title {
+	position: relative;
+	padding: 0 25px;
+	line-height: 43px;
+	font-size: 1.15em;
+	font-weight: 700;
+}
+#sub .myLearning > ul > li > .title > span {
+	vertical-align: top;
+}
+#sub .myLearning > ul > li > .title .btnMore {
+	position: absolute;
+	top: 12px;
+	right:22px;
+	width: 20px;
+	height: 20px;
+	font-size: 0;
+}
+#sub .myLearning > ul > li > .noData {
+	padding-top: 160px;
+	text-align: center;
+	font-weight: 700;
+}
+#sub .myLearning > ul > li > .content {
+	position: relative;
+}
+#sub .myLearning > ul > li > .content .textBox {
+	position: relative;
+	height: 107px;
+	padding: 20px 126px 15px 25px; 
+}
+#sub .myLearning > ul > li > .content .textBox .iconBox {
+	margin-bottom: 6px;
+}
+#sub .myLearning > ul > li > .content .textBox .title {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+	max-height: 44px;
+	line-height: 22px;
+	font-size: 15px;
+	font-weight: 700;
+	text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+#sub .myLearning > ul > li > .content .textBox .btnClassroom,
+#sub .myLearning > ul > li > .content .textBox .btnSurvey {
+	position: absolute;
+	top: 27px;
+	right: 25px;
+	min-width: 76px;
+	height: 50px;
+	line-height: 16px;
+	padding: 0;
+	font-size: 1em;
+}
+#sub .myLearning > ul > li > .content .textBox .btnClassroom span,
+#sub .myLearning > ul > li > .content .textBox .btnSurvey span {
+	display: block;
+}
+#sub .myLearning > ul > li > .content div.info {
+	padding: 22px 25px;
+}
+#sub .myLearning > ul > li > .content div.info dt {
+	float: left;
+	width: 60px;
+	line-height: 18px;
+	font-weight: 700;
+}
+#sub .myLearning > ul > li > .content div.info dd {
+	width: 100%;
+	margin-bottom: 7px;
+	padding-left: 60px;
+	line-height: 18px;
+}
+#sub .myLearning > ul > li > .content div.info dd em {
+	display: block;
+	vertical-align: top;
+	font-weight: 400;
+}
+#sub .myLearning > ul > li > .content div.info dd em strong {
+	display: inline-block;
+    margin-left: 4px;
+	vertical-align: top;
+}
+#sub .myLearning > ul > li > .content div.info dd .progressRate .rate {
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	height: 15px;
+}
+#sub .myLearning > ul > li > .content div.info dd .progressRate .rate > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 15px;
+}
+#sub .myLearning > ul > li > .content div.info dd .progressRate .nember {
+	margin-left: 6px;
+	font-weight: 700;
+}
+#sub .myLearning > ul > li > .content > .prev,
+#sub .myLearning > ul > li > .content > .next {
+	position: absolute;
+	top: 74px;
+	width: 15px;
+	height: 55px;
+	font-size: 0;
+}
+#sub .myLearning > ul > li > .content > .prev {
+	left: -1px;
+}
+#sub .myLearning > ul > li > .content > .next {
+	right: -1px;
+}
+#sub .myLearning > ul > li > .content > .imgBox { /* 나의 홈 1:1문의 */
+	float:left;
+	width: 100px;
+	height: 75px;
+	margin: 15px 0 15px 25px;
+}
+#sub .myLearning > ul > li > .content > .imgBox img {
+	width: 100%;
+	height: 100%;
+}
+#sub .myLearning > ul > li > .content > .imgBox+.textBox {
+	float: left;
+    width: 363px;
+	padding: 20px 25px 15px;
+}
+#sub .myLearning > ul > li > .content div.info dd a {
+	display: -webkit-box;
+    overflow: hidden;
+    max-height: 36px;
+	vertical-align: top;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+#sub .myLearning > ul > li > .content > .imgBox+.textBox+.info {
+    clear: both;
+}
+#sub .myLearning > ul > li > .content.survey .textBox .title { /* 진행중인 설문 */
+	position: relative;
+	padding-left: 13px;
+}
+#sub .myLearning > ul > li > .content.survey .textBox .title:before {
+	content: " ";
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 3px;
+	height: 3px;
+}
+#sub .myLearning > ul > li > .content.survey .textBox .period {
+	margin-top: 3px;
+	padding-left: 13px;
+}
+#sub .myLearning > ul > li > .thumbnList li { /* 찜한과정/배송현황 */
+	width: 100%;
+	margin: 0;
+}
+#sub .myLearning > ul > li > .thumbnList li .imgBox {
+	float:left;
+	width: 100px;
+	height: 75px;
+	margin: 15px 0 15px 25px;
+}
+#sub .myLearning > ul > li > .thumbnList li .imgBox img {
+	width: 100%;
+	height: 100%;
+}
+#sub .myLearning > ul > li > .thumbnList li .textBox {
+	float: left;
+    width: 363px;
+	padding: 15px 25px 15px;
+}
+#sub .myLearning > ul > li > .thumbnList li .textBox .iconBox {
+	margin: 5px 0 6px;
+}
+#sub .myLearning > ul > li > .thumbnList li .textBox p.title {
+	height: auto;
+	max-height: 44px;
+	margin: 0;
+	line-height: 22px;
+	font-size: 1.15em;
+}
+#sub .myLearning > ul > li > .thumbnList li .textBox .delivery {
+	margin-top: 3px;
+}
+
+/* course */
+.course {
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 30px;
+}
+.course > .title {
+	position: relative;
+	margin-bottom: 30px;
+	padding-right: 60px;
+	padding-bottom: 30px;
+}
+.course > .title > h4 {
+	margin: 15px 0 35px 0;
+	font-size: 2.3em; /* 30/13 */	
+}
+.course .share {
+	position: absolute;
+	right: 10px;
+	bottom: 30px;
+}
+.course .share a {
+	position: relative;	
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	font-size: 0;
+}
+.course .share a:hover:before {
+    position: absolute;
+    display: inline-block;
+    top: -39px;
+    left: 50%;
+    margin-left: -30px;
+    padding: 0 7px 0 7px;
+    min-width: 50px;
+    height: 28px;
+    line-height: 28px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    font-size: 13px;
+    text-align: center;
+	white-space: nowrap;
+    z-index: 99;
+}
+.course .share a:hover:after {
+    content: " ";
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    margin-left: -5px;
+}
+.course .share .btnSelect:hover:before {
+	content: "찜하기";
+}
+.course .share .btnLike:hover:before {
+	content: "좋아요";
+}
+.course .share .btnRecommend:hover:before {
+	content: "추천하기";
+}
+.course .share a > span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 400;
+}
+.course > .imgBox {
+	float: left;
+}
+.course > .imgBox > img {
+	float: left;
+	width: 400px;
+	height: 300px;
+}
+.course .imgBox .scrollBox {
+	overflow-y: auto;
+	width: 295px;
+	height: 300px;
+	padding: 10px 30px;
+}
+.course .imgBox .scrollBox li {
+	display: table;
+	width: 100%;
+	padding: 20px 0;
+}
+.course .imgBox .scrollBox li .imgBox {
+	display: table-cell;
+	width: 45px;
+	height: 66px;
+}
+.course .imgBox .scrollBox li .textBox {
+	display: table-cell;
+	padding: 0 10px;
+	vertical-align: top;
+}
+.course .imgBox .scrollBox li .textBox .title {
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.course > .textBox {
+	display: inline-block;    
+    width: 335px;
+}
+.course .textBox dl {
+	display: block;
+	margin-left: 30px;
+}
+.course .textBox dt {
+	float: left;
+    font-weight: 700;
+	line-height: 34px; 
+}
+.course .textBox dd {
+	margin-left: 80px;
+	margin-bottom: 12px;
+	padding-top: 7px;
+	line-height: 20px;	
+}
+ .course .textBox dd .selectBox {
+	margin-top: -8px;
+}
+.course .textBox dd .selectBox select {
+	top: 2px;
+}
+.course .sns {
+    position: absolute;
+    right: 0;
+	bottom: 210px;
+    font-size: 0;
+}
+.course .sns a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+.course .sns a+a {
+	margin-left: 6px;
+}
+.course .btnArea {
+	position: absolute;
+	right: 0;
+	bottom: 255px;
+	width: 260px;
+}
+.course .btnArea button {
+	width: 100%;
+}
+.course .btnArea button+button {
+	margin: 10px 0 0 0;
+}
+.course .btnArea button p {
+	font-size: 1em;
+}
+.course + .btnArea { /* 목록 버튼 */
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.course.booklearning > .textBox { /* 과정상세-북러닝 */
+	overflow: auto;
+	width: 100%;
+	margin-top: 30px;	
+}
+.course.booklearning .textBox dl {
+	overflow: auto;
+	display: inline-block;
+	float: left;
+	width: 50%;
+	margin: 0;
+}
+.course.booklearning .textBox dl:first-child {
+	width: 50%;
+}
+.course.booklearning .textBox dt {
+	width: 150px;
+	height: 50px;
+	padding-left: 50px;
+	line-height: 50px;
+	font-size: 1.15em;
+}
+.course.booklearning .textBox dd {
+	width: 100%;	
+	height: 50px;
+	line-height: 50px;
+	margin: 0px;
+	padding-left: 150px;
+	padding-top: 0;
+	font-size: 1.15em;
+}
+.course.booklearning .textBox dd .selectBox {
+	margin-top: -4px;
+}
+.course.booklearning .textBox dd .selectBox select {
+	top: -11px;
+}
+.course.booklearning .sns {
+	bottom: 421px;
+}
+.course.booklearning .btnArea {
+	bottom: 466px;
+}
+.courseView .content {
+	padding-top: 1px;
+	line-height: 25px;
+}
+.courseView .content h5,
+.view h6 {
+	padding-left: 17px;
+	font-size: 1.54em;
+}
+.courseView .content h6 {
+	font-size: 1.54em; /* 20/13 */
+}
+.courseView .content > p+p {
+	margin-top: 10px;
+}
+.courseView .content .lecture > .info:first-child {
+	display: block;
+	margin-bottom: 20px;
+}
+.courseView .content .lecture .profileImg.female {
+	display: inline-block;
+    width: 110px;
+    height: 110px;
+	background: url('/images/template2/resp/default/usr/img_default_profile_female.png') no-repeat;
+	background-size: 110px 110px;
+}
+.courseView .content .lecture .profileImg.male {
+	display: inline-block;
+    width: 110px;
+    height: 110px;
+	background: url('/images/template2/resp/default/usr/img_default_profile_male.png') no-repeat;
+	background-size: 110px 110px;
+}
+.courseView .content .lecture .textBox {
+	display: inline-block;
+	width: 880px;
+	padding-left: 15px;
+	vertical-align: top;
+}
+.courseView .content .lecture .textBox .name {
+	font-weight: 700;
+}
+.courseView .content .lecture .textBox p+p {
+	margin-bottom: 10px;
+}
+.courseView .content .lecture .textBox p > span+span:before {
+	content:"|";
+	padding: 0 5px 0 1px;
+}
+.courseView .content .lecture .textBox .btnArea {
+	text-align: left;
+}
+.courseView .content .lecture .textBox .btnArea .btnView {
+	min-width: 0;
+	width: 87px;
+	height: 34px;
+	padding: 0;
+	font-size: 1em;
+	font-weight: 400;
+}
+.courseView .content ol li p.title { /* 학습목차 */
+    margin-bottom: 5px;
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.courseView .content ol li p.title+ol {
+	margin-bottom: 30px;
+}
+div.book .box {
+	position: relative;
+	padding: 30px;
+}
+div.book .box .imgBox {
+	position: relative;
+	display: table-cell;
+	width: 90px;
+	height: 132px;
+} 
+div.book .box .imgBox.type2 {
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: auto;
+}
+div.book .box .imgBox img {
+	width: 100%;
+	height: 132px;
+}
+div.book .box .imgBox .badge {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	display: block;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	text-align: center;
+	font-weight: 700;
+}
+div.book .box .textBox {
+	display: table-cell;
+	padding: 0 0px 0 15px;
+    vertical-align: top;
+}
+div.book .box .textBox .iconBox {
+	margin-bottom: 10px;
+}
+div.book .box .textBox .title {
+	display: block;
+    margin-bottom: 7px;
+	font-size: 1.15em;
+	font-weight: 700;
+}
+div.book .box .textBox p span {
+	margin-right: 13px;
+}
+div.book .box .textBox p span+span:before,
+div.book .box .textBox p .date:before,
+div.book .box .textBox p .price:before {
+	content: "|";
+	padding-right: 15px;
+}
+div.book .box .textBox .title .btnList {
+	min-width: 0;
+	width: 84px;
+	height: 22px;
+	line-height: 20px;
+	padding: 0;
+	font-size: 0.85em; /* 13/15 */
+	font-weight: 400;
+}
+div.book .box .textBox .title .btnList:after {
+    content: ">";
+    display: inline-block;
+    padding-left: 5px;
+    line-height: 22px;
+    font-size: 0.9em;
+}
+div.book .box .btnView {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 200px;
+	height: 25px;
+	padding: 0 50px;
+	margin-left: -100px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	text-align: left;
+	font-size: 1em;
+}
+.courseView .content .book+.book {
+	margin-top: 30px;
+}
+.courseView .content .book > strong {
+	display: block;
+	height: 34px;
+	line-height: 34px;
+	padding-left: 57px;
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.courseView .content div.book .view {
+/* 	display: none; */
+}
+.view {
+	padding: 15px 30px 50px; 
+	line-height: 25px;
+}
+.courseEplg li, .appraisal li {/* 수강후기 및 코멘트 */
+	position: relative;
+    padding: 15px 150px 15px 20px; 
+}
+.courseEplg li p, .appraisal li p {
+	position: relative;
+	padding-left: 10px;
+	line-height: 22px;
+}
+.courseEplg li p:first-child:before, .appraisal li p:first-child:before {
+	content: " ";
+	position: absolute;
+	top: 9px;
+	left: 0;
+	display: block;
+	width: 3px;
+	height: 3px;
+}
+.courseEplg li .grade, .appraisal li .grade {
+	position: absolute;
+	top: 11px;
+	right: 20px;
+}
+.courseEplg li p.name, .appraisal li p span {
+	display: inline-block;
+	margin-top: 3px;
+}
+.appraisal li p span+span:before {
+	content: "|";
+    padding: 0 12px 0 10px;
+    font-size: 10px;
+}
+.toolBar {
+    position: absolute;
+    left: 50%;
+    margin-left: 338px;
+    bottom: -22px;
+    z-index: 999;
+}
+.toolBar .btnArea button {
+	float: left;
+}
+.toolBar .btnArea .btnRegister {
+	width: 140px;
+	height: 45px;
+	padding: 0 0 0 35px;
+}
+.toolBar .btnArea .btnRegister p {
+	font-size: 1em;
+}
+.toolBar .btnArea .btnTop {
+    min-width: 45px;
+    height: 45px;
+    padding: 19px 0 0 0;
+    font-size: 0.92em;
+}
+.bx-pager-item {
+	display: none;
+}
+.courseView .content .thumbnList {
+	overflow: inherit;
+	position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+.courseView .content .thumbnList li {
+	width: 223px !important;
+	margin-right: 15px; 
+}
+.courseView .content .thumbnList li .imgBox {
+	height: 166px;
+}
+.courseView .content .thumbnList.book {
+    width: 814px;
+}
+.courseView .content .thumbnList.book li {
+	width: 196px !important;
+	margin-right: 10px; 
+	text-align: center;
+}
+.courseView .content .thumbnList.book li .imgBox {
+	width: 122px;
+	height: 178px;
+	margin: 0 auto;
+}
+.courseView .content .thumbnList.book li .btnArea {
+	text-align: center;
+}
+.courseView .content .thumbnList .bx-prev,
+.courseView .content .thumbnList .bx-next {
+	position: absolute;
+	top: 50%;
+	width: 25px;
+	height: 134px;
+	margin-top: -67px;
+	font-size: 0;
+}
+.courseView .content .thumbnList .bx-prev {
+	left: -30px;
+}
+.courseView .content .thumbnList .bx-next {
+	right: -30px;
+}
+
+.courseView .content .thumbnList.book .bx-prev,
+.courseView .content .thumbnList.book .bx-next {
+	top: 68px;
+	margin-top: 0;
+ }
+.courseView .content .thumbnList.book .bx-prev {
+	left: -64px;
+}
+.courseView .content .thumbnList.book .bx-next {
+	right: -64px;
+}
+.courseView .content .thumbnList .bx-viewport {
+	height: auto !important;
+}
+
+/* FAQ */
+.tab+div.category {
+	margin-top: -30px;
+    padding: 30px 20px 20px 20px;
+    font-size: 0;
+}
+.tab+div.category > span {
+	display: inline-block;
+    padding: 9px 20px;
+    height: 38px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.tab+div.category+.faq {
+	margin-top: 20px;
+}
+.faq li a {
+	position: relative;
+	display: block;
+	padding: 13px 38px 13px 60px;
+	line-height: 25px;
+}
+.faq li.active > a {
+	font-weight: 700;
+}
+.faq li .content {
+	position: relative;
+	display: none;
+	padding: 13px 38px 13px 60px;
+	line-height: 25px;
+}
+.faq li.active .content {
+	display: block;
+	
+}
+.faq li span {
+	position: absolute;
+	top: 14px;
+	left: 20px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	text-align: center;
+	font-weight: 700;
+}
+
+/* 진단센터 */
+.diagnosis {
+	padding-top: 20px;
+}
+.diagnosis li {
+	float: left;
+	width: 490px;
+}
+.diagnosis li+li {
+	margin-left: 20px;
+}
+.diagnosis li+li+li {
+	margin-top: 20px;
+	margin-left: 0px;
+}
+.diagnosis li+li+li+li {
+	margin-left: 20px;
+}
+.diagnosis li .textBox {
+	height: 210px;
+	padding: 30px 35px 30px 190px;
+	line-height: 22px;
+}
+.diagnosis li .textBox .title {
+	line-height: 48px;
+	font-size: 1.23em; /* 16/13 */
+	font-weight: 700; 
+}
+.diagnosis li .textBox .btnArea {
+	margin-top: 15px;
+}
+
+/* feed */
+.comment {
+	overflow: auto;
+    position: relative;
+	padding: 20px 30px;
+}
+.comment .box {
+	position: relative;
+}
+.comment .box+.box {
+	margin-top: 10px;
+}
+.comment div.category {
+	float: left;
+	width: 70%;
+	margin-top: 10px;
+}
+.comment textarea {
+	padding-right: 90px;
+	height: 76px;
+}
+.comment .listAttach {
+	position: relative;
+	float:left;	
+	width: 70%;
+    padding: 0 0 0 70px;
+    margin-top: 15px;
+}
+.comment .listAttach li {
+	float: left;
+	margin-top: 0;
+	margin-bottom: 10px;
+	margin-right: 15px;
+}
+.comment .listAttach:before {
+	content: "첨부파일";
+	position: absolute;
+    top: 1px;
+	left: 0;
+	font-weight: 700;
+	
+}
+.comment .listAttach.photo {
+	margin-top: 0;
+}
+.comment .listAttach.photo:before {
+	content: "첨부사진";
+} 
+.comment .btnWrite {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 80px;
+	height: 76px;
+	padding: 0;
+}
+.comment .btnArea {
+    float: right;
+    margin-top: 15px;
+}
+.comment .btnArea .btnAttach {
+	min-width: 36px;
+	height: 36px;
+	padding: 0;
+	font-size:0;	
+}
+.comment .btnArea .btnAttach.file {
+	margin-left: 4px;
+}
+.comment+.tab.type2 {
+	margin-top: 30px;
+}
+.profileImg {
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+.profileImg img {
+	width: 100%; 
+	height: 100%;
+}
+.profileBg {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+.comment+.feed {
+	margin-top: 20px;
+}
+.feed li {
+	position:relative;
+	padding: 20px 0 20px 100px;
+}
+.feed li div.noData {
+	padding-right: 100px;
+	text-align: center;
+}
+.feed li .profileImg {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+.feed li .textBox .iconBox {
+	display: inline-block;
+}
+.feed li .textBox .name {
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.feed li .textBox > .iconBox {
+	margin-right: 4px;
+}
+.feed li .textBox > .name+button {
+	margin-left: 4px;
+}
+.feed li .btnFollow {
+	min-width:  69px;
+	height: 23px;
+    line-height: 21px;
+	padding: 0;
+	font-size: 0.92em;
+}
+.feed li .btnUnfollow {
+	min-width: 83px;
+	height: 23px;
+    line-height: 22px;
+	padding: 0;
+	font-size: 0.92em;
+}
+@media screen and ( -webkit-min-device-pixel-ratio:0 ) {
+    .feed li .btnUnfollow {
+    	line-height: 21px;
+    }
+}
+
+.feed li .btnDelete {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	min-width: 0;
+	width: 21px;
+	height: 21px;
+	padding: 0;
+	font-size: 0;
+}
+.feed li .textBox .content {
+	margin-top: 15px;
+}
+.feed li .textBox .content .category {
+    display: inline-block;
+    margin-top: -3px;
+    margin-right: 5px;
+}
+.feed li .textBox .share {
+	display: inline-block;
+	margin-right: 11px;
+    line-height: 1;
+}
+.feed li .textBox .share .icon {
+	padding: 0;
+    height: 13px;
+    line-height: 13px;
+	font-size: 13px;
+	font-family: 'Nanum Gothic','dotum', serif, arial;
+}
+.feed li .textBox .share .icon.like {
+	padding-left: 22px;
+}
+.feed li .textBox .share .icon.comment {
+	overflow: hidden;
+	margin-left: 15px;
+	padding-left: 35px;
+}
+.feed li .textBox .share .icon > strong {
+	display: inline-block;
+    margin-top: -3px;
+}
+.feed li .textBox .box {
+	margin-top: 15px;
+}
+.feed li .textBox .box .date {
+	float: right;
+}
+.feed li > .textBox .imgBox {
+	max-width: 50%;
+	margin: 15px 0 5px;
+}
+.feed li > .textBox .imgBox img {
+	width:auto;
+	max-width: 100%;
+}
+.feed li .view {
+	padding: 0;
+}
+.feed li > .box {
+	display: table;
+	width: 100%;
+	margin-top: 15px;
+	padding: 15px;
+}
+.feed li > .box .imgBox {
+   display: table-cell;
+   width: 180px;
+   vertical-align: top;
+}
+.feed li > .box .imgBox img {
+	width: 180px;
+    height: 135px;
+}
+.feed li > .box .textBox {
+    display: table-cell;
+    padding: 0 15px;
+    border: none;
+    vertical-align: top;
+}
+.feed li > .box .textBox .title {
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.feed li > .box .textBox p > strong {
+	display: inline-block;
+	margin-top: -3px;
+    margin-right: 10px;
+}
+
+.feed li > .box .textBox .share .icon {
+	height: 21px;
+	line-height: 21px;
+	padding-left: 21px;
+}
+.feed li > .box .textBox .share .icon+.icon {
+	margin-left: 5px;
+}
+.feed li .listAttach li {
+	padding: 0;
+}
+
+.feed li .view .comment {
+	margin-top: 20px;
+	padding: 0;
+}
+.feed li .view li {
+	margin-top: 20px;
+	padding-top: 20px;
+}
+.feed li .view li .profileImg {
+	width: 60px;
+	height: 60px;
+}
+.feed li .view li {
+	padding-left: 75px;
+}
+.feed li .view li .box {
+	overflow: auto;
+}
+.feed > .btnArea {
+	text-align: center;
+}
+.commentList {
+	margin-top: 20px;
+}
+.commentList li {
+	padding: 13px 56px 13px 56px;	
+}
+.commentList li.noData {
+	padding: 13px 0;
+	text-align: center;
+}
+.commentList li .icon.comment {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    overflow: visible;
+    display: block;
+    width: 26px;
+    height: 27px;
+    padding: 0;
+}
+.commentList li .btnDelete, .commentList li .btnModify, .commentList li .btnCancel,
+.appraisal li .btnDelete, .appraisal li .btnModify, .appraisal li .btnCancel {
+	min-width: 0;
+	width: 21px;
+	height: 21px;
+	margin: 0 4px 0 4px;	
+	padding: 0;
+	font-size: 0;
+}
+.commentList li p {
+	display: inline;
+	line-height: 25px;
+}
+.commentList li p:first-child > span {
+	display: inline-block;
+	padding-right: 10px;
+	line-height: 18px;	
+	word-break: break-all;
+}
+.commentList li p:first-child > input {
+	margin-bottom: 10px;
+}
+.commentList li p+p {
+	float: right;
+}
+.commentList li p+p .date:before {
+	content: " ";
+    display: inline-block;
+	height: 10px;
+	padding-left: 13px;
+	margin-left: 13px;
+}
+ul.sort {
+    float: right;
+}
+.sort li {
+    float: left;
+}
+.sort li a {
+    display: inline-block;
+}
+.sort li:before {
+	content: "|";
+	margin-left: 10px;
+	padding-right: 8px;
+    font-size: 11px;
+    font-weight: 400;
+}
+.sort li:first-child:before {
+    display: none;
+}
+.sort li.active a {
+    padding-left: 16px;
+    font-weight: 700;
+}
+
+/* 인클럽 */
+.inclubView {
+	margin-bottom: 30px;
+}
+.inclubView .title {
+	position: relative;
+	padding: 15px 90px 0 20px;
+}
+.inclubView .title p span+span:before {
+	content: " ";
+    display: inline-block;
+    width: 0;
+    height: 10px;
+    margin: 0 15px 0 11px;
+}
+.inclubView .title h4 {
+    margin: 14px 0 19px;
+}
+.inclubView .title .share {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+.inclubView .title .share span {
+	display: block;
+	font-family: 'Nanum Gothic','dotum', serif, arial;
+}
+.inclubView .inclub {
+    overflow: auto;
+	padding: 20px;
+}
+.inclubView .inclub .imgBox {
+    float: left;
+    width: 182px;
+    height: 137px;
+}
+.inclubView .inclub .textBox {
+    min-height: 135px;
+    padding-left: 200px;
+}
+.inclubView .inclub .textBox .content {
+	padding-bottom: 25px;
+	font-size: 1.23em;
+}
+.inclubView .inclub .textBox .tag {
+	position: relative;
+	display: block;
+	margin-top: 10px;
+	padding-left: 55px;
+}
+.inclubView .inclub .textBox .tag:before {
+	content: "TAG";
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 0;
+	padding-left: 16px;
+	font-weight: 700;
+}
+.inclubView .inclub .textBox .tag span {
+	display: inline-block;
+	height: 30px;
+	line-height: 26px;
+	margin-bottom: 5px;
+	padding: 0 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	font-weight: 700;
+}
+@media screen and ( -webkit-min-device-pixel-ratio:0 ) {
+    .inclubView .inclub .textBox .tag span {
+		line-height: 28px;
+	}
+}
+/* talking poll */
+.talking {
+	margin-top: 20px;
+}
+.talking .title {
+	padding: 30px;  
+	line-height: 30px;
+}
+.talking .title p {
+	font-size: 1.15em;
+}
+.talking .title p > strong {
+	display: inline-block;
+    margin-top: -3px;
+    margin-right: 15px;
+}
+.talking .title p:first-child > strong {
+	letter-spacing: 29px;
+    margin-right: -15px;
+} 
+.talking .title p+p {
+	display: inline-block;
+}
+.talking .title p+p+p:before {
+	content: "|";
+    margin-left: 20px;
+    padding-right: 22px;
+}
+.talking dt {
+	margin-top: 20px ;
+	padding: 10px 20px;
+	line-height: 25px;
+	font-weight: 700;
+}
+.talking dd {
+	display: table;
+	width: 100%;
+	height: 45px;
+	line-height: 42px;
+	padding: 0 15px 0 20px;	
+}
+.talking dd label+input[type="text"] {
+	margin-left:10px;
+}
+.talking dd > div {
+	display: table-cell;
+}
+.talking dd div.member {
+	width: 70px;
+	text-align: center;
+}
+.talking dd div.number {
+	width: 90px;
+	text-align: center;
+}
+.talking dd div.graph {
+	width: 230px;
+	padding: 0 0 0 15px;
+}
+.talking dd div.graph > p {
+	position:relative;
+	display: block;
+	width: 100%;
+	height: 15px;
+}
+.talking dd div.graph > p > span {
+	position:absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 15px;
+}
+.talking+.btnArea {
+	margin-top: 30px;
+}
+.expand {
+	position: relative;
+}
+.expand .btnMore {
+	position: absolute;
+	right:0;
+	bottom: 0;
+	min-width: 23px;
+	height: 23px;
+	padding: 0;
+    font-size: 0;
+}
+
+/* Thinking Quiz, 짤막상식 */
+#sub .thinking, #sub .knowledge {
+	margin: 20px 0;
+}
+#sub .thinking .title, #sub .knowledge .title {
+    overflow: auto;
+    min-height: 42px;
+    line-height: 22px;
+	padding: 10px 20px;
+}
+#sub .thinking .title strong, #sub .knowledge .title strong {
+	font-size: 1.15em;
+}
+#sub .thinking .title p span {
+	display: inline-block;
+	font-weight: 700;
+}
+#sub .thinking .title p span+span:before {
+	content: ">";
+	padding: 0 5px;
+}
+#sub .thinking dl {
+	padding: 20px;
+}
+#sub .thinking dt {
+	line-height: 25px;
+}
+#sub .thinking dd {
+	margin-top: 18px;
+}
+#sub .thinking dd.alignRight {
+	font-weight: 700;
+}
+.knowledge .box { /* 짤막상식 */
+	overflow: auto;
+	padding: 20px;
+}
+.knowledge .box .imgBox {
+	float: left;
+	width: 182px;
+	height: 137px;
+}
+.knowledge .box .textBox {
+	padding-left: 202px;	
+}
+
+.review > .box, .lecture >.box { /* 리뷰n리플(상세), 교재보기팝업, 강사정보 */
+	display: table;
+	width: 100%;
+}
+.boxGray.textBox+.review {
+	margin-top: 20px;
+}
+.review .imgBox, .lecture .imgBox { 
+	display: table-cell;
+    padding: 15px;
+    vertical-align: top;
+    text-align: center;
+}
+.review .imgBox img {
+    width: auto;
+    height: 247px;
+}
+.lecture .imgBox img {
+    width: auto;
+    height: 126px;
+}
+.review .boardView, .lecture .boardView {
+	display: table-cell;
+    width: 100%;
+}
+.review .btnView {
+	min-width: 0;
+	height: 23px;
+	margin-top: 12px;
+	padding: 0 15px;
+	font-size: 0.92em;
+}
+.review .textBox {
+	clear: both;
+	padding: 20px;
+}
+.review+.btnArea {
+	margin-top: 30px;
+}
+.popup .review .imgBox img{
+    width: auto;
+    height: 230px;
+}
+.popup .review .imgBox, .popup .review .boardView {
+	border-top: none;
+}
+.popup .review .title {
+	display: block;
+	min-height: 40px;
+	line-height: 24px;
+	padding: 8px 20px;
+	font-size: 1.15em;
+	font-weight: 700;	
+}
+.popup .lecture h5 {
+	padding-left:23px;
+	background: url('/images/template2/resp/blue/usr/bult_lecture.png') 0 1px no-repeat;
+}
+.popup .lecture dt {
+	margin-bottom: 5px;
+	font-size: 1.15em;
+	font-weight: 700;
+}
+
+/* 소프트웨어 다운로드 */
+.softwareDown {
+	overflow: auto;
+}
+.softwareDown li {
+	float: left;
+	width: 235px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.softwareDown li:nth-child(4n+1) {
+	margin-left: 0px;
+}
+.softwareDown li .imgBox {
+	height: 189px;
+	line-height: 189px;
+	text-align: center;
+}
+.softwareDown li .imgBox img {
+    width: auto;
+    height: auto;
+}
+.softwareDown li .textBox {
+	height: 189px;
+	padding: 25px 20px;
+}
+.softwareDown li .textBox strong {
+	display: block;
+	line-height: 23px;
+	font-size: 1.23em; /* 16/13 */
+}
+.softwareDown li .textBox span {
+	display: block;
+	margin-top: 13px;
+	line-height: 22px;
+}
+.softwareDown li .textBox button {
+	display: block;
+	margin-top: 14px;
+	margin-left: 0;
+}
+
+/* 원격지원신청 */
+#sub .remote li {
+	float:left;
+	position: relative;
+	display: table;
+	width: 274px;
+	height: 134px;
+	margin-left: 48px;
+	padding-left: 120px;
+	-webkit-border-radius: 67px;
+	-moz-border-radius: 67px;
+	border-radius: 67px;
+}
+#sub .remote li:first-child {
+	margin-left: 0;
+}
+#sub .remote li+li:before {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	left: -28px;
+	display: block;
+	width: 8px;
+	height: 13px;
+	margin-top: -7px;
+}
+#sub .remote li > div {
+	display: table-cell;
+}
+#sub .remote li > div strong {
+	display: block;
+	margin-bottom: 4px;
+	line-height: 26px;
+	font-size: 1.15em;
+	font-weight: 700;
+}
+#sub .remote li > div p {
+	line-height: 22px;
+}
+#sub .remote li > div .tel {
+	font-weight: 700;
+}
+#sub .remote li > div button {
+	min-width: 0;
+	height: 23px;
+	padding: 0 15px;
+	margin-top: 5px;
+	font-size: 0.92em;
+}
+
+/* 회원 탈퇴 */
+.textBox+input+label {
+	display: block;
+	margin-top: 30px;
+}
+.textBox+input+label+.boardWrite {
+	margin-top: 20px;
+}
+
+/* popup */
+.popup .textBox+input+label {
+	display: block;
+	margin-top: 20px;
+}
+.popup .btnArea {
+	margin-top: 20px;
+}
+.popup .btnArea+.boardList, .popup .btnArea+.boardWrite {
+	margin-top: 20px;
+}
+.popup .question h4 { /* 설문참여 팝업 */
+	text-align: center;
+}
+.popup .question dt {
+	line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.popup .question dt:first-child {
+	margin-top: 0;
+}
+.popup .question dd {
+    line-height: 30px;
+	padding-left: 15px;
+}
+.popup .question dd ul.grade li label > img {
+	margin-top: -3px;
+}
+.popup .question .imgBox { 
+	max-width: 100%;
+	margin: 10px 0 10px 15px;
+}
+.popup .question .imgBox img {
+	width: auto;
+	max-width: 100%;
+}
+.popup .question .btnArea {
+	text-align: center;
+}
+.popup .question .table th, .popup .question .table td {
+	text-align: left;
+}
+.popup .question dd input, .popup .question dd textarea {
+	margin-top: 10px;
+}
+
+.register { /* 수강신청 - 팝업 */
+	position: relative;
+	margin: 0 auto;
+	width: 920px;
+}
+.register .msgBox {
+	margin-top: 20px;
+}
+.msgBox.success strong {
+	display: inline-block;
+	margin-top: -3px;
+}
+.register h3 {
+	height: 40px;
+	line-height: 40px;
+	margin: 0;
+	padding: 0 115px 0 20px;
+	font-size: 1.23em; /* 16/13 */
+	font-weight: 700;
+}
+.register > .floatRight {
+	margin-top: -40px;
+}
+.register .floatRight .btnReset, .register .floatRight .btnClose {
+	min-width: 56px;
+	height: 40px;
+	padding: 0;
+	font-size: 0;
+}
+.register .contentsWrap .contentsBox {
+	width: 100%;
+}
+.register .boardList td .imgBox {
+	float: left;
+	overflow: hidden;
+    width: 60px;
+    height: 75px;
+    margin-right: 10px;
+}
+.register .boardList td .imgBox.type2 {
+	width: 125px;
+    height: auto;
+}
+.register .boardList td .textBox {
+	float: left;
+	text-align: left;
+}
+.register .boardList td .textBox p.title {
+	margin-bottom: 4px;
+	font-weight: 700;
+}
+.register .boardList td .textBox p+p {
+	line-height: 20px;
+}
+.register .boardList td .textBox p span+span:before {
+    content: "|";
+    padding-left: 13px;
+    padding-right: 15px;
+    color: #e7e9ea;
+}
+
+.certify { /* 본인인증 팝업 */
+	display: table;
+	width: 100%;
+}
+.certify .imgBox {
+	display: table-cell;
+	width: 65px;
+	height: 65px;
+	font-size: 0;
+}
+.certify .textBox {
+	display: table-cell;
+	padding-left: 20px;
+	font-size: 1.15em;
+}
+.certify+.btnArea {
+	text-align: center;
+}
+
+.invite { /* 인클럽 초대 */
+	text-align: center;
+}
+.invite .imgBox {
+	display: inline-block;
+	width: 260px;
+	height: 207px;
+}
+.invite p {
+	display: block;
+	margin: 20px 0 15px;
+	font-size: 1.15em;
+}
+.invite .name, .invite p strong {
+	display: inline-block;
+    margin-top: -3px;
+	font-weight: 700;
+}
+
+/* 수료증 */
+.popup .certificate {
+	position: relative;
+	width: 960px;
+    height: 1380px;
+ 	border: solid 0px white;
+	font-size: 1.8em;
+	background: url('/images/common/home/alpaco/img_certificate.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.popup .certificate .btnCertificate {
+	position: absolute;
+	top: 45px;
+	right: 125px;
+	height: 50px;
+}
+.popup .certificate dl {
+	position: absolute;
+	top: 26%;
+	left: 14%;
+	width: 70%;
+	letter-spacing: 0.05em;
+}
+.popup .certificate dt {
+	display: block;
+	float: left;
+	margin-top: 5%;
+}
+.popup .certificate dd:before {
+	content: ':';
+	padding-right: 5%;
+}
+.popup .certificate dd {
+	margin-left: 21%;
+	margin-top: 5%;
+}
+.popup .certificate dd span {
+	width: 93.32%;
+	display: block;
+	float: right;
+	line-height: 150%;
+}
+
+/* 컨텐츠성 페이지 */
+#sub nav {
+	width: 100%;
+    margin-top: -40px;
+    margin-bottom: 50px;
+}
+#sub nav > ul {
+	margin: 0 auto;
+	width: 1000px;
+	height:48px;
+}
+#sub nav > ul > li {
+	position: relative;
+	float: left;
+	min-width: 211px;	
+	height: 48px;
+	line-height: 48px;
+}
+#sub nav > ul > li:first-child {
+	min-width: 200px;
+}
+#sub nav > ul > li > a {
+	display: block;
+	padding: 0 45px 0 20px;
+	font-size: 1.15em;
+	font-weight: 700;
+}
+#sub nav > ul > li:first-child a,
+#sub nav > ul > li:first-child a:hover {
+	padding-left: 50px;
+}
+#sub nav ul li .twoDepth {
+	display: none;
+    position: absolute;
+    top: 46px;
+    left: -1px;
+    width: 101%;
+    width: calc(100% + 2px);
+    padding: 10px 0;
+    z-index: 99;
+}
+#sub nav ul li:hover .twoDepth {
+	display: block;
+}
+#sub nav ul li .twoDepth li {
+	height: 30px;
+	line-height: 30px;
+}
+#sub nav ul li .twoDepth li a {
+	display: block;
+	padding: 0 20px;
+}
+.greeting .title { /* CEO 인사말 */
+	padding: 18px 0 62px 0;
+}
+.greeting .title p {
+	line-height: 42px;
+	font-size: 2.7em; /* 35/13 */
+}
+.greeting .title p+span {
+	margin-top: 15px;
+}
+.greeting .title span {
+	display: block;
+	line-height: 22px;
+	font-size: 1.23em; /* 16/13 */
+	font-weight: 700;
+}
+.greeting > p {
+	line-height: 25px;
+	margin-bottom: 25px;
+}
+.greeting .seal {
+	padding-top: 30px;
+	text-align: right;
+}
+
+.contentsBox .history .tab { /* 회사연혁 */
+	margin-bottom: 66px;
+	height: 50px;
+	border: none;
+}
+.contentsBox .history .tab ul li {
+	width: 33.333%;
+	width: calc(100%/3);
+	height: 50px;
+	line-height: 50px;
+}
+.contentsBox .history .tab ul li a {
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.history .box {
+	display: table;
+	width: 100%;
+}
+.history .box > div {
+	position: relative;
+	display: table-cell;
+	width: 218px;
+	line-height: 1;
+	vertical-align: top;
+	font-size: 2.23em; /* 29/13 */
+	font-weight: 700;
+} 
+.history .box > div:before {
+	content: " ";
+	position: absolute;
+	top: -12px;
+	left: 1px;
+	display: block;
+	width: 33px;
+	height: 2px;
+}
+.history .box > ul {
+	display: table-cell;
+} 
+.history .box > ul > li {
+	display: table;
+	width: 100%;
+}
+.history .box > ul li .year {
+	position: relative;
+	display: table-cell;
+	width: 90px;
+    line-height: 19px;
+	vertical-align: top;
+	font-size: 1.92em; /* 25/13 */
+	font-weight: 700;
+}
+.history .box > ul li .year:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: -10px;
+	display: block;
+	width: 19px;
+	height: 19px;
+}
+.history .box > .list ul {
+	display: table-cell;
+	padding: 0 0 42px 60px;
+}
+.history .box > .list ul li {
+	position: relative;
+	line-height: 22px;
+	padding-left: 11px;
+}
+.history .box > .list ul li:before {
+	content: " ";
+	position: absolute;
+	top: 10px;
+	left: 0;
+	display: block;
+	width: 3px;
+	height: 3px;
+}
+.history .box > .list ul li:first-child {
+	margin-bottom: 7px;
+	padding-left: 0;
+	font-size: 1.23em; /* 16/13 */
+	font-weight: 700;
+}
+.history .box > .list ul li:first-child:before {
+	display: none;
+}
+
+.vision .title { /* Vision/Mision */
+	height: 57px;
+	line-height: 57px;
+	margin: 100px 0 50px;
+	border-top: 1px solid #61696f;
+	border-bottom: 1px solid #dfe1e2;
+	text-align: center;
+	font-size: 1.77em; /* 23/13 */
+	font-weight: 700;
+}
+.vision .title:first-child {
+	margin: 0 0 50px;
+}
+
+.map .imgBox { /* 오시는 길 */
+	height: 560px;
+	margin-bottom: 50px;
+}
+.map h4 { 
+	margin-bottom: 20px;
+}
+.map ul {
+	margin-bottom: 50px;
+}
+.map ul li {
+    line-height: 25px;
+	padding: 13px 0 14px 63px; 
+}
+.map ul li strong {
+	display: inline-block;
+	width: 60px;
+	vertical-align: top;
+}
+.map ul li p {
+	display: inline-block;
+}
+.map ul li p span {
+	display: inline-block;
+	vertical-align: top;
+}
+.map ul li p span+span {
+	position: relative;
+	padding-left: 20px;
+}
+.map ul li p span+span:before {
+	content: " ";
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	display: block;
+	width: 10px;
+	height: 5px;
+}
+
+.partner { /* 관계회사 */
+	overflow: auto;
+}
+.partner ul li {
+	float: left;
+	width: 235px;
+	height: 70px;
+	line-height: 70px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.partner ul li.last {
+	margin-right: 0;
+}
+.partner+.partner {
+	margin-top: 10px;
+	padding: 12px 0;
+}
+.partner > span {
+	float: left;
+	display: block;
+	width: 200px;
+	height: 15px;
+	margin: 18px 0;
+	line-height: 1;
+	text-align: center;
+	font-size: 1.15em;
+}
+.partner > span.last {
+	width: 198px;
+}
+.contentsBox > .imgBox+.textBox { /* 모사자처리 지침 */
+	margin-top: 15px;
+}
+.guideNote {  /* 수강생 유의사항 */
+	line-height: 25px;	
+}
+.guideNote p+p,
+.guideNote .borderBox {
+	margin-top: 15px;
+}
+.guideNote .warning {
+	margin-top: 10px;
+	font-weight: 700;
+}
+.guideNote .date {
+    margin: 70px 0 30px;
+	text-align: center;
+	font-size: 1.23em;
+	font-weight: 700;
+}
+.guideNote .seal {
+	text-align: center;
+}
+.guideNote .seal img {
+	width: 200px;	
+}
+
+/* 멤버쉽 */
+.textBox.scrollBox+input+label > strong > u {
+	display: inline-block;
+	margin-top: -2px;
+}
+h6 > input+label {
+	margin-top: -3px;
+}
+.boardWrite table td .radioncheckbox > input+label {
+	margin-top: -2px;
+}
+
+@media screen and (max-width: 800px) {
+	.contentsBox .search {
+		margin-top: 15px;
+		padding: 0 4% 0 4%;
+	}
+	.searchBox .search {
+		margin: 0;
+	}
+	.contentsBox .login {
+		display: block;
+	}
+	.contentsBox .login > div {
+		display: block;
+		width: 100%;
+	}
+	.contentsBox .login > div.join {
+		width: 100%;
+		padding: 40px;
+	}
+	.course.booklearning .textBox dd .selectBox {
+	    margin-top: -8px;
+	}
+	.course.booklearning .textBox dd .selectBox select {
+	    top: 0px;
+	}
+	#sub .myLearning .state li,
+	#sub .myLearning .state li:first-child {
+		width: 33.33%;
+		width: calc(100%/3);
+	}
+	#sub .customer li {
+		width: 100%;
+	}
+	#sub .customer li p span.email {
+	    margin-left: 0;
+	}
+	#sub .customer li.remote {
+		margin: 20px 0 0 0;
+	}
+	#sub .myLearning > ul > li {
+		width: 100%;
+	}
+	#sub .myLearning > ul > li:nth-child(2n) {
+		margin-left: 0;
+	}
+	#sub .myLearning > ul > li > .content > .imgBox+.textBox, .myLearning > ul > li > .thumbnList li .textBox {
+		width: calc(100% - 125px);
+	}
+	#sub .myLearning > ul > li > .thumbnList {
+		padding: 0;
+	}
+	#sub .myLearning > ul > li > .thumbnList li {
+		width: 100%;
+		margin: 0;
+	}
+	.course {
+		padding: 20px;
+	}
+	.course > .title > h4 {
+		padding: 0 0px;
+	}
+	.course .location {
+		margin: -5px 0px 20px 0;
+	}	
+	.course .device {
+		display: none;
+	}
+	.course > .imgBox {
+		float: left;
+		margin-bottom: 20px;	
+	}
+	.course > .imgBox > img {
+		float: left;
+		width: 298px;
+		height: 223px;
+	}	
+	.course .imgBox .scrollBox {
+		display: none;
+	}
+	.course > .textBox {
+		width: calc(100% - 300px);
+		margin: -7px 0 17px 0;
+	}
+	.course.booklearning > .textBox {
+		overflow: hidden;
+		display: inline-block;    
+	    width: calc(100% - 300px);
+	    margin-top: 0px;
+		margin: -7px 0 17px 0;
+	}
+	.course.booklearning .textBox dl {
+		overflow: hidden;
+		display: block;
+		width: 100%;
+		margin-left: 30px;
+	}
+	.course.booklearning .textBox dl:first-child {
+		width: 100%;
+	}
+	.course.booklearning .textBox dt {
+		width: auto;
+		height: auto;
+		padding-left: inherit;
+		font-size: 1em;
+		float: left;
+	    font-weight: 700;
+		line-height: 34px; 
+	}
+	.course.booklearning .textBox dd {
+		width: 100%;	
+		height: auto;
+		margin: 0px 0 12px 80px;
+		padding-left: inherit;
+		padding-top: 7px;
+		line-height: 20px;
+		font-size: 1em;
+	}
+	 .course.booklearning .textBox dd .selectBox {
+		margin-top: -8px;
+	}
+	.course.booklearning .textBox dd .selectBox select {
+		top: 2px;
+	}
+	.course .sns, .course.booklearning .sns {
+	    right: inherit;
+	    left: 20px;
+	    bottom: 26px;
+	}	
+	.course .btnArea, .course.booklearning .btnArea {
+		position: inherit;
+	    bottom: inherit;
+		right: inherit;
+		float: right;
+		display: inline-block;
+		width: calc(100% - 120px);
+	}
+	.course .btnArea button {
+		display: inline-block;
+		width: 45%;
+	}
+	.course .btnArea button+button {
+		margin: 0 0 0 0;
+	}
+	.course + .btnArea {
+		margin-left: 20px;
+		margin-right: 20px;
+	}	
+	.courseView .content h5 {
+		margin: 35px 20px 10px;
+	}
+	.courseView .content > .imgBox,
+	.courseView .content .lecture,
+	.courseView .content ol,
+	.courseView .content > p {
+		padding: 0 20px;
+	}
+	.courseView .content ol li ol {
+		padding: 0;
+	}
+	.courseView .content .lecture .textBox {
+		display: block;
+	    width: 100%;
+	    padding-left: 0;
+	    margin-top: 20px;
+	}
+	.toolBar {
+	    left: inherit;
+	    margin-left: 0;
+	    right: 20px;
+	}
+	.toolBar .btnArea .btnRegister {
+	    float: initial;
+	    display: block;
+	    min-width: 0;
+	    width: 45px;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    border-radius: 50%;
+	    font-size: 0;
+	}
+	.toolBar .btnArea .btnTop {
+		float: initial;
+	    margin-top: 5px;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    border-radius: 50%;
+	}
+	#sub .courseView .content .thumbnList ul {
+		overflow: auto;
+		transform: inherit !important;
+	}
+	#sub .courseView .content .thumbnList ul li {
+		width: 32% !important;
+		margin-right: 2%;
+	}
+	#sub .courseView .content .thumbnList.book li {
+		width: 33.33% !important;
+		width: calc(100%/3) !important;
+		margin-right: 0;
+	}
+	#sub .courseView .content .thumbnList ul li:nth-child(3n){
+		margin-right: 0;
+	}
+	.diagnosis li, .diagnosis li+li, .diagnosis li+li+li, .diagnosis li+li+li+li {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	.diagnosis li .textBox {
+		height: auto;
+	}
+	.comment {
+		padding: 20px;
+	}
+	.feed li {
+	    padding: 20px 20px 20px 120px;
+	} 
+	.feed li div.noData {
+		padding-right: 120px;
+	}
+	.feed li .profileImg {
+		left: 20px;
+	}
+	.feed li .view li .profileImg {
+		left: 0;
+	}
+	.feed li .btnDelete {
+		right: 20px;
+	}
+	.feed li .view .btnDelete {
+		right: 0px;
+	}
+	.feed li .view li {
+		padding: 20px 0px 20px 75px;
+	}
+	.talking {
+		padding: 0 20px;
+	}
+	.inclubView .title h4 {
+		padding: 0;
+	}
+	.commentList li {
+	    padding: 13px 20px 13px 56px;
+	}
+	.commentList li p+p {
+	    position: inherit;
+	    display: block;
+	    right: 0;
+	    margin-top: 0;
+	}
+	.softwareDown li {
+		width: 48.5%;
+		margin-left: 3%;
+	}
+	.softwareDown li:nth-child(4n+1) {
+		margin-left: 3%;
+	}
+	.softwareDown li:nth-child(2n+1) {
+		margin-left: 0px;
+	}
+	#sub .remote {
+		margin: 0 20px;
+	}
+	#sub .remote li {
+		height: 115px;
+	    padding-left: 107px;
+	    padding-right: 25px;
+	    margin-left: 10px;
+	    width: auto;
+	}
+	#sub .remote li:first-child {
+		width: auto;
+	}
+	.greeting, .history .box {
+		padding: 0 20px;
+	}
+	.history .box > div {
+		width: 187px;
+	}
+	.greeting h6{
+		padding: 0;
+	}
+	.vision .title {
+		font-size: 1.53em;
+	}
+	.partner ul li,
+	.partner ul li.last {
+		width: 32%;
+		margin-right: 2%;
+	}
+	.partner ul li:nth-child(3n) {
+		margin-right: 0px;
+	}
+	.partner > span,
+	.partner > span.last {
+		width: 33.33%;
+		width: calc(100%/3);
+		padding: 0 10px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.course > .title {
+		padding-right: 0px;
+	} 
+	.course .share {
+		position: inherit;
+		right: inherit;
+		bottom: inherit;
+		margin-bottom: 10px;
+	}
+	#sub .remote {
+	    margin: 0;
+	}
+	#sub .remote li {
+		float: inherit;
+	    margin-left: 0px;
+	    height: 100px;
+	}
+	#sub .remote li+li:before {
+		display: none;
+	}
+}
+@media screen and (max-width: 700px) {
+	.course > .imgBox {
+		display: none;
+	}
+	.course > .textBox, .course.booklearning > .textBox {
+		width: 100%;
+	}
+	.course .textBox, .course.booklearning .textBox { 
+		margin-top: -10px;
+	}
+	.course .textBox dl, .course.booklearning .textBox dl {
+		margin-left: 0px;
+	}
+	.talking dd > div {
+		display: inline-block;
+		width: 70%;
+	    padding-top: 10px;
+	    line-height: 20px;
+	}
+	.talking dd div.member,
+	.talking dd div.number {
+		width: 15%;
+		text-align: right;
+	}
+	.talking dd div.graph {
+		display: block;
+		width: 100%;
+	    padding: 5px 0 20px 0;
+	}
+	.history .box, .history .box > ul {
+		display: block;
+	}
+	.history .box > div {
+		display: none;
+	}
+}
+@media screen and (max-width: 550px) {
+	.course .sns, .course.booklearning .sns {
+		position: inherit;
+	    right: inherit;
+	    top: inherit;
+	    left: inherit;
+	    bottom: inherit;
+	    display: block;
+	    margin-top: 20px;
+	}
+	.course .btnArea, .course.booklearning .btnArea {
+		display: block;
+		float: none;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.course .btnArea button {
+		float: left;
+		display: inline-block;
+		width: 48%;
+		padding: 0 0;
+	}
+	.course .btnArea .btnRegister {
+		letter-spacing: -0.5px;
+	}
+	.course .btnArea button+button {
+		margin: 0 0 0 4%;
+	}	
+	#sub .courseView .content .thumbnList ul li,
+	#sub .courseView .content .thumbnList ul li:nth-child(3n) {
+		width: 49% !important;
+		margin-right: 2%;
+	}
+	#sub .courseView .content .thumbnList.book ul li:nth-child(3n),
+	#sub .courseView .content .thumbnList ul li:nth-child(2n) {
+		margin-right: 0;
+	}
+	#sub .courseView .content .thumbnList.book li {
+		width: 50% !important;
+	}
+	.talking .title p+p {
+		display: block;
+	}
+	.talking .title p+p+p:before {
+		display: none;
+	}
+	.feed li > .textBox .imgBox {
+		max-width: 100%;
+	}
+	.feed li > .box .imgBox {
+	   display: none;
+	}
+	.feed li > .box .textBox {
+	    padding: 0;
+	}
+	.review .imgBox {
+		display: none;
+	}
+}
+@media screen and (max-width: 500px) {
+	#sub .myLearning .legend li {
+	    float: initial;
+	    margin-left: 0;
+	    margin-top: 10px;
+	}
+	.courseEplg li, .appraisal li {
+		padding: 15px 20px;
+	}
+	.courseEplg li .grade, .appraisal li .grade {
+	    position: inherit;
+	    text-align: right;
+	    top: 0;
+	    right: 0;
+	}
+	.feed li .textBox .share {
+		display: block;
+		margin-bottom: 10px;
+	}
+	div.book .box .imgBox {
+		display: none;
+	}
+	div.book .box .textBox {
+		padding: 0;
+	}
+	.inclubView .inclub .imgBox {
+	    float: inherit;
+    	margin: 0 auto;
+	}
+	.inclubView .inclub .textBox {
+	    margin-top: 20px;
+		padding-left: 0;
+	}
+	.talking dd > div {
+		width: 60%;
+	}
+	.talking dd div.member,
+	.talking dd div.number {
+		width: 20%;
+	}
+	.softwareDown li {
+		width: 100%;
+		margin-left: 0%;
+	}
+	.softwareDown li:nth-child(4n+1) {
+		margin-left: 0;
+	}
+	.softwareDown li .imgBox {
+	    float: left;
+	    width: 120px;
+	    height: auto;
+    	padding: 0 20px;
+	}
+	.softwareDown li .imgBox img {
+		width: 100%;
+	}
+	.softwareDown li .textBox {
+		min-height: 189px;
+		height: auto;
+		margin-left: 120px;
+	}
+	.history .box > .list ul {
+		padding: 0 0 30px 40px;
+	}
+}
+@media screen and (max-width: 480px) {
+	#sub .customer li {
+	    padding: 7px 0 7px 125px;
+	}
+	#sub .customer li p span.email  {
+		display: block;
+	    margin-left: 60px;
+	}
+	.feed li, .feed li .view li {
+		padding: 20px 0;
+	}
+	.feed li div.noData {
+		padding: 0;
+	}
+	.feed li .profileImg {
+		display: none;
+	}
+	.feed li .textBox {
+		padding: 0 20px;
+	}
+	.feed li .view .comment {
+		padding: 20px;
+	}
+	.feed li .view .comment .btnWrite {
+		top: 20px;
+		right: 20px;
+	}
+	.feed li .view .btnDelete {
+		right: 20px;
+	}
+	.feed li > .box {
+		display: block;
+		width: auto;
+		margin: 15px 20px 0;
+	}
+	.knowledge .box .imgBox {
+		display: none;
+	}
+	.knowledge .box .textBox {
+		padding-left: 0;	
+	}
+}
+@media screen and (max-width: 430px) {
+	.history .tab ul li {
+		padding: 0;
+	}
+	.history .tab ul li a {
+		font-size: 1em;
+	}
+}
+@media screen and (max-width: 414px) {
+	.search .selectBox+input {
+	    width: 145px;
+	}
+	.contentsBox .login > div:first-child {
+		padding: 40px;
+	}
+	.contentsBox .login .btnLogin {
+		right: 40px;
+	}
+	.vision .title {
+		font-size: 1.15em;
+	}
+}
+@media screen and (max-width: 413px) {
+	.diagnosis li .textBox {
+		padding: 30px;
+	}
+	.partner ul li,
+	.partner ul li.last,
+	.partner ul li:nth-child(3n) {
+		width: 49%;
+		margin-right: 2%;
+	    margin-bottom: 2%;
+	}
+	.partner ul li:nth-child(2n) {
+		margin-right: 0px;
+	}
+	.partner > span,
+	.partner > span.last,
+	.partner > span:nth-child(3n) {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 380px) {
+	.course .textBox dt, .course.booklearning .textBox dt {
+		float: none;
+		padding: 0px 10px 0px 10px;
+	}
+	.course .textBox dd, .course.booklearning .textBox dd {
+		margin-left: 0;
+		padding: 10px 10px 10px 10px;
+		background: #f9f9f9;
+	}
+	.course .textBox dd .selectBox, .course.booklearning .textBox dd .selectBox {
+		margin-top: 0px;
+	}
+	#sub .courseView .content .thumbnList ul li,
+	#sub .courseView .content .thumbnList ul li:nth-child(3n),
+	#sub .courseView .content .thumbnList.book li {
+		width: 100% !important;
+		margin-right: 0;
+	}
+	.boardWrite.findIdpw .info {
+		padding: 30px 20px;
+	}
+	.boardWrite.findIdpw .info button {
+		height: 34px;
+		font-size: 1em;
+		padding: 0 15px;
+	}
+	.boardWrite.findIdpw .info > p > span {
+		margin-bottom: 20px;
+	}
+	.boardWrite.findIdpw .btnZip {
+		display: block;
+		margin-top: 5px;
+	}
+	.sort li:before  {
+		margin-left: 5px;
+    	padding-right: 3px;
+	}
+	.sort li.active a {
+	    padding-left: 14px;
+	}
+	.inclubView .title p:first-child span {
+		display: block;
+		line-height: 20px;
+	}
+	.inclubView .title p:first-child span+span:before {
+		display: none;
+	}
+}
+@media screen and (max-width: 360px) { 
+	#sub .myLearning .state li, .myLearning .state li:first-child {
+		width: 50%;
+	}
+	#sub .myLearning > ul > li > .content div.info dd .progressRate .rate {
+		width: 165px;
+	}
+	.history .tab {
+		margin-bottom: 40px;
+	}
+	.history .box > ul li .year, .history .box > .list ul {
+		display: block;
+	}
+	.history .box > .list ul {
+		padding: 0 0 30px 0;
+	}
+	.history .box > ul li .year {
+   		margin-bottom: 15px;
+	}
+	.history .box > ul li .year:before {
+		display: none;
+	}
+}
+@media screen and (max-width: 340px) {
+	#sub .customer li, #sub .customer li.remote {
+		padding: 7px 25px;
+	}
+	#sub .myLearning > ul > li > .content.survey .textBox .period {
+		letter-spacing: -0.5px;
+	}
+	.appraisal li p span {
+		display: block;
+	}
+	.appraisal li p span+span:before {
+		display: none;
+	}
+}

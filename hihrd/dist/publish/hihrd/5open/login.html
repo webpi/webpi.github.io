@@ -1,0 +1,644 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>메인페이지</title>
+    <link href="/css/component_blue.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template5/resp/template5.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template5/resp/blue.css" rel="stylesheet" type="text/css" media="all">
+    <!--[if lt IE 10]>
+        <link href="/css/template5/resp/ie8-9.css" rel="stylesheet" type="text/css" media="all">
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/template5/style.js"></script> 
+    <script src="/js/jquery.bxslider.min.js"></script>
+    <script src="/js/template5/gauge.min.js"></script> 
+    <script type="text/javascript">
+		$(document).ready( function() {
+			
+			if($(window).width() > 1024) {
+				$('.courseSlider').bxSlider({
+	            	auto:false,
+	                slideWidth: 1000,
+	                minSlides: 4,
+	                maxSlides: 4,
+	                moveSlides: 1,
+	                pause: 4000
+	            });
+			}
+			
+
+         });
+		
+		$(window).resize(function() {
+			  if($(window).width() > 768)
+			  {
+				  $( ".courseSlider" ).width($(window).width()*10);
+			  }else
+			  {
+				  $( ".courseSlider" ).width($(".webModule21").width());
+			  }
+		});
+    </script>
+</head>
+<body>
+    <!-- #wrap start -->
+    <div id="wrap">
+        <!-- #header start -->
+        <div id="header" class="sub">
+            <!-- component5 start -->
+            <div class="component5">
+                <!-- box start -->
+                <div class="box">
+                    <h1 class="logo">
+                        <a href="main.html">
+                            <img src="/images/template5/resp/default/usr/logo.png" alt="하이인재원" />
+                        </a>
+                    </h1>
+                    <div class="search">
+                        <label for="">검색</label>
+                        <input type="search" id="" name="" placeholder="과정명을 입력하세요" />
+                        <button type="button">검색</button>
+                    </div>
+                    <ul class="zoom">
+                        <li>화면크기설정</li>
+                        <li class="in">
+                            <a href="#" title="화면확대버튼">화면확대버튼</a>
+                        </li>
+                        <li class="out">
+                            <a href="#" title="화면축소버튼">화면축소버튼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //box end -->
+
+                <!-- gnbWrap start -->
+                <div class="gnbWrap">
+                    <!-- gnb start -->
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">교육안내</a>
+                            <ul class="twoDepth">
+                                <li>
+                                    <a href="#">학습방법</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="guide_method_learning.html">학습</a>
+                                        </li>
+                                        <li>
+                                            <a href="guide_method_test.html">평가/과제</a>
+                                        </li>
+                                        <li>
+                                            <a href="guide_method_findidpw.html">아이디/비밀번호찾기</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="guide_answer.html">모사답안처리기준</a>
+                                </li>
+                                 <li>
+                                    <a href="guide_refund.html">고용보험환급기준</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육과정</a>
+                            <ul class="twoDepth">
+                            	<li>
+                                    <a href="register_cors_list.html">전체과정</a>
+                                </li>
+                                <li>
+                                    <a href="register_cors_list.html">수강신청과정</a>
+                                </li>
+                                <li>
+                                    <a href="register_openclass_list.html">열린강의</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">마이페이지</a>
+                            <ul class="twoDepth">
+                            	<li>
+                                    <a href="myclassrm_myhome.html">나의 홈</a>
+                                </li>
+                                <li>
+                                    <a href="#">나의 강의실</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="myclassrm_myclassrm_01ing.html">수강중인 과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_myclassrm_02register.html">수강신청 과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_myclassrm_03done.html">수강완료 과정</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_openclass.html">나의 열린강의</a>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_survey.html">나의 설문</a>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_schedule.html">나의 일정관리</a>
+                                </li>
+                                <li>
+                                    <a href="#">개인정보수정</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="myclassrm_modify.html">프로필수정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_withdrawal.html">회원탈퇴</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <a href="myclassrm_delivery.html">배송현황</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                            <ul class="twoDepth">
+                                <li>
+                                    <a href="customer_notice_list.html">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="customer_faq.html">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="customer_inquiry_list.html">1:1상담</a>
+                                </li>
+                                <li>
+                                    <a href="customer_download.html">학습지원프로그램</a>
+                                </li>
+                                <li>
+                                    <a href="customer_sitemap.html">사이트맵</a>
+                                </li>
+                                <li>
+                                    <a href="customer_agrmnt.html">서비스 이용약관</a>
+                                </li>
+                                <li>
+                                    <a href="customer_policy.html">개인정보취급방침</a>
+                                </li>
+                                 <li>
+                                    <a href="http://r.hi.co.kr/nc20/cust/main">원격지원서비스</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- //gnb end -->
+                </div>
+                <!-- //gnbWrap end -->
+                
+                <button type="button" class="allMenu" onClick="menuMobile();">메뉴</button><!-- 모바일 메뉴 버튼 -->
+            </div>
+            <!-- //component5 end -->
+        </div>
+        <!-- //#header end -->
+        
+        <!-- #container start -->
+		<div id="container">
+			<!-- #main start -->
+        	<div id="main">
+        	
+				<!-- #cntnr1 start -->	
+				<div id="cntnr1">
+					<!-- webModule19 start -->	
+					<div class="webModule19">
+						<!-- loginBox start -->	
+						<div class="loginBox">
+							<strong>Membership Login</strong>
+							<!-- 로그인 전 start -->
+<!-- 							<ul>
+							    <li><input type="text" id="" name="" placeholder="아이디" /></li>
+							    <li><input type="password" id="" name="" placeholder="비밀번호" /></li>
+							    <li><input type="checkbox" id="" name="" /><label>아이디 저장</label></li>                               
+							</ul>
+							<div class="btnArea">
+								<button type="submit" class="btnLogin" onclick="location.href='/publish_2/hihrd/5open/main.html';">로그인</button>
+								<p>
+									<a href="#">회원가입</a>
+									<a href="#">아이디/비밀번호 찾기</a>
+								</p>   
+							</div>
+							//로그인 전 end -->
+							<!-- 로그인 후 start --> 
+							<div class="userInfo">
+							    <p>
+							        <strong>홍길동</strong>님 환영합니다.
+							    </p>
+							    <p>
+							        <span>현재 수강중인</span>
+							        <span>과정은 총 <span>28</span>개 입니다.</span>
+							    </p>
+							</div>
+							<div class="btnArea">
+							    <button type="button" class="btnModify" onclick="location.href='/publish/hihrd/5open/myclassrm_modify.html';">회원정보수정</button>
+							    <button type="button" class="btnLogout" onclick="location.href='/publish_2/hihrd/5open/main.html';">로그아웃</button>
+							</div>
+							<!-- //로그인 후 end -->
+						</div>
+						<!-- //loginBox end -->
+                       
+						<!-- link start -->	
+						<div class="link">
+							<ul>
+						        <li><a href="guide_refund.html">고용보험안내</a></li>
+						        <li><a href="">훈련생유의사항</a></li>
+						        <li><a href="">학습이용안내</a></li>
+						        <li><a href="guide_answer.html">모사답안지</a></li>                                   
+						    </ul>
+						</div>
+						<!-- //link end -->
+
+						<!-- banner start -->	
+						<div class="banner">
+							<div class="btnArea">
+                       			<a href="" class="btnPrev">이전</a>
+                       			<a href="" class="btnPause">중지</a>
+                       			<a href="" class="btnNext">다음</a>
+                       		</div>
+							<a href=""><img src="/images/template5/resp/default/usr/main_banner01.jpg" alt="정보보안 필수교육 금융정보보호 아카데미" /></a>
+							<!-- <a href=""><img src="/images/template5/resp/default/usr/main_banner02.jpg" alt="현대해상 임직원전용 인터넷서점 교보문고" /></a> -->
+						</div>
+						<!-- //banner end -->
+					</div>
+					<!-- //webModule19 end -->	
+                </div>
+                <!-- //#cntnr1 end -->
+                
+                <!-- #cntnr2 start -->	
+				<div id="cntnr2">
+                    <!-- webModule20 start -->	
+                    <div class="webModule20">
+                        <div class="title">
+                            <strong>나의 학습현황</strong>
+                            <span>현재 수강중인 과정은 총 <span>28</span>개 과정입니다.</span>
+                        </div>
+                        <div class="myLearning">
+                            <div class="course">
+                                <ul>
+                                    <li class="active"><a href="#">우리회사 성희롱 일기예보</a></li>
+                                    <li><a href="#">퀴즈, HEART in Heart</a></li>
+                                    <li><a href="#">삼국지 경영의 지혜 : 이문열에게 듣다<span class="icon new">NEW</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="view">
+                                <div class="box">
+                                    <button type="button" class="btnClassroom">강의실 가기</button>
+                                    <ul>
+                                        <li><strong>우리회사 성희롱 일기예보</strong></li>
+                                        <li>
+                                            <strong><span>2016</span>년 <span>8</span>월 <span>1</span>일</strong> 부터
+                                            <strong><span>2016</span>년 <span>8</span>월 <span>31</span>일</strong> 까지 모든 학습을 완료하셔야 합니다.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="state">
+                                    <li>
+                                        <div class="title">강의 진도율</div>
+                                        <div class="number">
+                                            <strong>100%</strong>
+                                            <p>남은 학습기간 D-30</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="title">과제</div>
+                                        <div class="number">
+                                            <strong>미제출<span>1</span>건</strong>
+                                            <p>마감일 D-30</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="title">진행단계평가</div>
+                                        <div class="number">
+                                            <strong>미응시<span>1</span>건</strong>
+                                            <p>마감일 D-30</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="title">최종평가</div>
+                                        <div class="number">
+                                            <strong>미응시<span>1</span>건</strong>
+                                            <p>마감일 D-30</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //#cntnr2 end -->
+                
+                <!-- #cntnr3 start -->	
+				<div id="cntnr3">
+                    <!-- webModule21 start -->	
+                    <div class="webModule21">
+                        <div class="title">신규 과정</div>
+                        <div class="thumbnList">
+                            <ul class="courseSlider">
+        						<li>
+        							<a href="register_cors_view.html">
+										<div class="imgBox">
+	        								<img src="/images/common/usr/img_01.png" alt="" />
+	        							</div>
+										<div class="textBox">
+											<div class="iconBox"> 
+												<span class="icon company">기업</span>
+<!-- 												<span class="icon individual">개인</span> -->
+												<span class="icon mobile">모바일</span> 
+											</div>
+											<p class="title">남성과 여성인재 상생으로 회사의 성공에너지 만들기</p>
+											<p class="period">2016.11.14~2016.11.25</p>	
+                                        </div>
+                                        <div class="iconBox type2"> 
+											<span class="icon event">이벤트</span>
+										</div>
+									</a>
+								</li>
+                                <li>
+        							<a href="register_cors_view.html">
+										<div class="imgBox">
+	        								<img src="/images/common/usr/img_02.png" alt="" />
+	        							</div>
+										<div class="textBox">
+											<div class="iconBox"> 
+												<span class="icon company">기업</span>
+<!-- 												<span class="icon individual">개인</span> -->
+												<span class="icon mobile">모바일</span> 
+											</div>
+											<p class="title">위기에 강한 기업의 비결! 독서경영 에너지</p>
+											<p class="period">2016.11.14~2016.11.25</p>	
+                                        </div>
+									</a>
+								</li>
+                                <li>
+        							<a href="register_cors_view.html">
+										<div class="imgBox">
+	        								<img src="/images/common/usr/img_03.png" alt="" />
+	        							</div>
+										<div class="textBox">
+											<div class="iconBox"> 
+												<span class="icon company">기업</span>
+<!-- 												<span class="icon individual">개인</span> -->
+												<span class="icon mobile">모바일</span> 
+											</div>
+											<p class="title">공감! 성공 조직을 위한 긍정 심리 -교재제공</p>
+											<p class="period">2016.11.14~2016.11.25</p>	
+                                        </div>
+									</a>
+								</li>
+                                <li>
+        							<a href="register_cors_view.html">
+										<div class="imgBox">
+	        								<img src="/images/common/usr/img_04.png" alt="" />
+	        							</div>
+										<div class="textBox">
+											<div class="iconBox"> 
+												<span class="icon company">기업</span>
+<!-- 												<span class="icon individual">개인</span> -->
+												<span class="icon mobile">모바일</span> 
+											</div>
+											<p class="title">스타 예능 PD 7인의 창의적으로 일하는 법</p>
+											<p class="period">2016.11.14~2016.11.25</p>	
+                                        </div>
+									</a>
+								</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <!-- //webModule21 end -->
+                </div>
+                <!-- //#cntnr3 end -->
+                
+                <!-- #cntnr4 start -->	
+				<div id="cntnr4">
+                   <!-- webModule21 start -->	
+                    <div class="webModule21">
+                        <div class="title">베스트 과정</div>
+                        <div class="thumbnList">
+                            <ul class="courseSlider">
+        						<li>
+        							<a href="register_cors_view.html">
+										<div class="imgBox">
+	        								<img src="/images/common/usr/img_05.png" alt="" />
+	        							</div>
+										<div class="textBox">
+											<div class="iconBox"> 
+												<span class="icon company">기업</span>
+<!-- 												<span class="icon individual">개인</span> -->
+												<span class="icon mobile">모바일</span> 
+											</div>
+											<p class="title">[New] 삼국지 경영의 지혜 : 이문열에게 듣다 [전집제공]</p>
+											<p class="period">2016.11.14~2016.11.25</p>
+                                        </div>
+									</a>
+								</li>
+                                <li>
+        							<a href="register_cors_view.html">
+										<div class="imgBox">
+	        								<img src="/images/common/usr/img_06.png" alt="" />
+	        							</div>
+										<div class="textBox">
+											<div class="iconBox"> 
+												<span class="icon company">기업</span>
+<!-- 												<span class="icon individual">개인</span> -->
+												<span class="icon mobile">모바일</span> 
+											</div>
+											<p class="title">[New] KBS 초특급 프로젝트 다큐 - 100년의 기업[교재제공]</p>
+											<p class="period">2016.11.14~2016.11.25</p>
+                                        </div>
+									</a>
+								</li>
+                                <li>
+        							<a href="register_cors_view.html">
+										<div class="imgBox">
+	        								<img src="/images/common/usr/img_07.png" alt="" />
+	        							</div>
+										<div class="textBox">
+											<div class="iconBox"> 
+												<span class="icon company">기업</span>
+<!-- 												<span class="icon individual">개인</span> -->
+												<span class="icon mobile">모바일</span> 
+											</div>
+											<p class="title">[New] 성공 CS전략, 내가 행복해야 고객이 행복하다</p>
+											<p class="period">2016.11.14~2016.11.25</p>	
+                                        </div>
+									</a>
+								</li>
+                                <li>
+        							<a href="register_cors_view.html">
+										<div class="imgBox">
+	        								<img src="/images/common/usr/img_08.png" alt="" />
+	        							</div>
+										<div class="textBox">
+											<div class="iconBox"> 
+												<span class="icon company">기업</span>
+<!-- 												<span class="icon individual">개인</span> -->
+												<span class="icon mobile">모바일</span> 
+											</div>
+											<p class="title">We are the champion, 스포츠 리더십 [선수편]</p>
+											<p class="period">2016.11.14~2016.11.25</p>	
+                                        </div>
+									</a>
+								</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <!-- //webModule21 end -->
+                </div>
+                <!-- //#cntnr4 end -->
+                
+                <!-- #cntnr5 start -->
+				<div id="cntnr5">
+                   <!-- webModule22 start -->	
+                   <div class="webModule22">
+                       <div class="notice">
+                           <div class="title">
+                               <strong>공지사항</strong>
+                               <a href="#" class="btnMore">더보기</a>
+                           </div>
+                           <ul>
+                               <li>
+                                   <a href="#">IDP시행일정입니다.</a>
+                                   <span class="date">2016-06-06</span>
+                               </li>
+                               <li>
+                                   <a href="#">IDP시행일정입니다.</a>
+                                   <span class="date">2016-06-06</span>
+                               </li>
+                               <li>
+                                   <a href="#">IDP시행일정입니다.</a>
+                                   <span class="date">2016-06-06</span>
+                               </li>
+                               <li>
+                                   <a href="#">IDP시행일정입니다.</a>
+                                   <span class="date">2016-06-06</span>
+                               </li>
+                           </ul>
+                       </div>
+                       
+                       <div class="customer">
+                           <div class="title">
+                               <strong>학습지원안내</strong>
+                           </div>
+                           <p class="tel">
+                               <span>학습상담</span>
+                               <strong>1661ㆍ9061</strong>
+                           </p>
+                           <p class="time">
+                               <strong>평일상담시간</strong>
+                               <span>09:00 ~ 18:00</span>
+                           </p>
+                           <p>
+                               <strong>토요일 : </strong>
+                               <span>휴무, </span>
+                               <strong>일요일 공휴일 : </strong>
+                               <span>휴무</span>
+                           </p>
+                       </div>
+                   </div>
+                   <!-- //webModule22 end -->
+                </div>
+                <!-- //#cntnr5 end -->
+                
+                <!-- #cntnr6 start -->	
+				<div id="cntnr6">
+                   <!-- webModule23 start -->	
+                   <div class="webModule23">
+                       <div class="banner">
+                           <ul>
+                               <li><a href="customer_faq.html">자주하는 질문</a></li>
+                               <li><a href="#">학습지원 프로그램</a></li>
+                               <li><a href="#">원격지원 서비스</a></li>
+                               <li><a href="customer_inquiry_list.html">학습장애 해결</a></li>
+                           </ul>
+                       </div>
+                   </div>
+                   <!-- //webModule23 end -->
+                </div>
+                <!-- //#cntnr6 end -->	
+        		
+        	</div>
+        	<!-- //#main end -->
+        </div>
+        <!-- //#container end -->
+        
+        <!-- #footer start -->
+        <div id="footer" class="sub">
+            <!-- component3 start -->
+            <div class="component3">
+                <!-- footerWrap start -->
+                <div class="footerWrap">
+                    <!-- logo start -->
+                    <div class="logo">
+                        <img src="/images/template5/resp/default/usr/logo_bottom.png" alt="하이인재원" />
+                    </div>
+                    <!-- //logo end --> 
+                    <!-- box start -->
+                    <div class="box">
+                        <!-- link start -->
+                        <div class="link">
+                            <ul>
+                                <li>
+                                    <a href="#" onclick="openAgrmnt();">이용약관</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="openPolicy();">개인정보취급방침</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="openPolicy2();">개인정보처리방침</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="openRefsleml();">이메일무단수집거부</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //link end --> 
+                        <!-- address start -->
+                        <div class="address">
+                            <address>
+                                <p>
+                                    <span>서울특별시 중구 명동2가 92-3 현대해상빌딩 14층</span>
+                                    <span>대표전화 : 02-3709-5800</span>
+                                    <span>현대씨앤알(주) 대표이사 이성재</span>
+                                </p>
+                                <p>
+                                    <span>사업자등록번호 102-81-32281</span>
+                                    <span>통신판매업신고 제 2010-서울중구-1663호</span>
+                                </p>
+                            </address>
+                            <p class="copyright">COPYRIGHT @HYUNDAI C&amp;R CO.LTD ALL RIGHT RESEARVED.</p>
+                        </div>
+                        <!-- //address end --> 
+                        
+                        <button type="button" class="btnTop">TOP</button>
+                        
+                    </div>
+                    <!-- //box end --> 
+                </div>
+                <!-- //footerWrap end -->
+            </div>
+            <!-- //component3 end -->
+        </div>
+        <!-- //#footer end -->
+    </div>
+    <!-- //#wrap end -->
+</body>
+</html>

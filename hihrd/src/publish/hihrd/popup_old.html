@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    @@include('./src/publish/hihrd/comm/head.html')
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header class="header">
+            @@include('./src/publish/hihrd/comm/header.html')
+        </header>
+        <!-- // header -->
+
+        <!-- footer -->
+        <footer class="footer">
+            @@include('./src/publish/hihrd/comm/footer.html')
+        </footer>
+        <!-- // footer -->
+    </div>
+
+    <!-- 공지 -->
+    <div class="popupLayer" id="dormancy_layer_confrm" style="margin-left: -300px; display: none;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>
+                오늘 하루 안보기
+
+                <button type="button" class="btnClose" onclick="window.close()"></button>	
+            </h3>
+
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox">
+                    오늘 하루 안보기
+                </div>
+                <!-- //contentsBox end -->
+
+                <div class="todayClose">
+                    <input type="checkbox" id="check01" name=""><label for="check01">오늘 하루 안보기</label>
+                </div>
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+
+        <div class="dim"></div>
+    </div>
+    <!-- // 공지 -->
+
+    <!-- 휴면회원 -->
+    <div class="popupLayer" id="dormancy_layer_confrm" style="margin-left: -300px; display: none;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>휴면회원</h3>
+
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox">
+                    <div class="dormant">
+                        <div class="imgBox">휴면회원</div>
+
+                        <div class="textBox">
+                            <p>회원님은 <em id="dormancy_dt_view"></em> 이후로 1년 이상 로그인하지 않아 휴면 상태로 전환되셨습니다.</p>
+
+                            <strong>휴면된 계정을 다시 활성화 하시겠습니까?</strong>
+                        </div>
+                    </div>
+
+                    <div class="btnArea">
+                        <button class="btnYes btn btn-large btn-color1-flat" type="button" onclick="doUpdateDormancy('Y');">예</button>
+                        <button class="btnNo btn btn-large btn-basic" type="button" onclick="doUpdateDormancy('N');">아니오</button>
+                    </div>
+
+                    <div class="dormant info">
+                        <p>
+                            <strong>휴면계정이란?</strong>
+                            회원님의 정보를 보호하고 안정적인 서비스를 제공을 위해 장시간 로그인 없는 아이디는 휴면계정으로 전환됩니다.
+                        </p>
+                        <p>
+                            <strong>관련법령</strong>
+                            정보통신망 이용촉진 및 정보보호 등에 관한 법률 제29조<br>
+                            정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령 제16조에 따라 1년 이상 서비스를 이용하지 않은 계정의 개인정보는 파기 또는 별도 보관이 이뤄져야 합니다.
+                        </p>
+                    </div>
+                </div>
+                <!-- //contentsBox end -->
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+
+        <div class="dim"></div>
+    </div>
+    <!-- // 휴면회원 -->
+
+    <!-- 휴면회원 해지 -->
+    <div class="popupLayer" id="dormancy_layer_alert" style="margin-left: -300px; display: none;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>휴면회원 해지</h3>
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox">
+                    <div class="dormant">
+                        <div class="imgBox">휴면회원 해지</div>
+                        <div class="textBox">
+                            <p>
+                                회원님의 계정이 휴면회원 해제처리 되었습니다.<br>
+                                다양한 서비스 및 정확한 정보를 제공받기 위해 개인정보를 확인하고 수정 해주시기 바랍니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnArea">
+                        <button class="btnConfirm btn btn-large btn-color1-flat" type="button"
+                            onclick="jQuery('#dormancy_layer_alert').hide(); window.location.href = '/';">확인</button>
+                    </div>
+                </div>
+                <!-- //contentsBox end -->
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+        <div class="dim"></div>
+    </div>
+    <!-- // 휴면회원 해지 -->
+
+    <!-- 자동 로그아웃 안내 -->
+    <div class="popupLayer" id="auto_logout_alert" style="margin-left: -300px; display: none;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>자동 로그아웃</h3>
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox">
+                    <div class="dormant">
+                        <div class="imgBox">자동 로그아웃</div>
+                        <div class="textBox">
+                            <p>
+                                2시간 동안 서비스 이용이 없어,
+                                <br>
+                                개인정보 보호를 위해 자동으로 로그아웃 되었습니다.
+                                <br>
+                                서비스 이용을 위해서는 다시 로그인 해주십시오.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnArea">
+                        <button class="btnConfirm btn btn-large btn-color1-flat" type="button"
+                            onclick="jQuery('#auto_logout_alert').hide(); doBodyScrollStyle();">확인</button>
+                    </div>
+                </div>
+                <!-- //contentsBox end -->
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+        <div class="dim"></div>
+    </div>
+    <!-- //자동 로그아웃 안내 -->
+
+    <!-- 자동 로그아웃 안내 -->
+    <div class="popupLayer" id="duplication_login_alert" style="margin-left: -300px; display: none;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>자동 로그아웃</h3>
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox">
+                    <div class="dormant">
+                        <div class="imgBox">자동 로그아웃</div>
+                        <div class="textBox">
+                            <p>
+                                동일한 사용자로 로그인되어 자동으로 로그아웃 되었습니다.
+                                <br>
+                                서비스 이용을 위해서는 다시 로그인 해주십시오.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnArea">
+                        <button class="btnConfirm btn btn-large btn-color1-flat" type="button"
+                            onclick="jQuery('#duplication_login_alert').hide(); doBodyScrollStyle();">확인</button>
+                    </div>
+                </div>
+                <!-- //contentsBox end -->
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+        <div class="dim"></div>
+    </div>
+    <!-- //자동 로그아웃 안내 -->
+
+    <!-- 이용약관 동의 안내 -->
+    <div class="popupLayer" id="service_agree_alert" style="margin-left: -300px; display: ;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>이용약관 및 개인정보 처리방침 동의</h3>
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox scrollDiv">
+                    <p class="info">아래의 이용약관, 개인정보 처리방침에 대한 안내를 읽고 동의해 주세요.</p>
+                    <h5>이용약관</h5>
+                    <div class="scrollBox borderBox">
+                        <div class="textBox">
+                            "회사"는 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전 동의를 구할 예정입니다.   	  
+                            <ol>
+                                <li>가. 학습관리 - 학습자의 효율적인 학습을 위한 학습지원, 학습독려, 수료 관리</li>
+                                <li>나. 교재배송, 이벤트, 공지 - 학습교재 배송, 이벤트 선물 배송, 공지 및 주요사항 메일/SMS공지</li>
+                                <li>다. 고용보험환급 업무 - 고용보험환급 업무 처리를 위한 고용노동부 신고(실시/결과)</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <label for="customer_agrmnt"><input type="checkbox" id="customer_agrmnt"> 위의 서비스 이용약관에 동의합니다.(필수)</label>
+
+                    <h5>개인정보 처리방침(개인정보보호법)</h5>
+                    <div class="scrollBox borderBox">
+                        <div class="textBox">
+                            "회사"는 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전 동의를 구할 예정입니다.   	  
+                            <ol>
+                                <li>가. 학습관리 - 학습자의 효율적인 학습을 위한 학습지원, 학습독려, 수료 관리</li>
+                                <li>나. 교재배송, 이벤트, 공지 - 학습교재 배송, 이벤트 선물 배송, 공지 및 주요사항 메일/SMS공지</li>
+                                <li>다. 고용보험환급 업무 - 고용보험환급 업무 처리를 위한 고용노동부 신고(실시/결과)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <label for="customer_policy"><input type="checkbox" id="customer_policy"> 위의 개인정보 처리방침(개인정보보호법)에 동의합니다.(필수)</label>
+
+                    <h5>개인정보 처리방침(정보통신망법)</h5>
+                    <div class="scrollBox borderBox">
+                        <div class="textBox">
+                            "회사"는 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전 동의를 구할 예정입니다.   	  
+                            <ol>
+                                <li>가. 학습관리 - 학습자의 효율적인 학습을 위한 학습지원, 학습독려, 수료 관리</li>
+                                <li>나. 교재배송, 이벤트, 공지 - 학습교재 배송, 이벤트 선물 배송, 공지 및 주요사항 메일/SMS공지</li>
+                                <li>다. 고용보험환급 업무 - 고용보험환급 업무 처리를 위한 고용노동부 신고(실시/결과)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <label for="usrinfo_agrmnt"><input type="checkbox" id="usrinfo_agrmnt"> 위의 개인정보 처리방침(정보통신망법)에 동의합니다.(필수)</label>
+
+                    <label for="usrinfo_share_agrmnt" style="display: none;"><input type="checkbox" id="usrinfo_share_agrmnt" checked="checked"> 위 개인정보 제3자 제공에에 동의합니다.(필수)</label>
+
+                    <div class="btnArea">
+                        <button type="button" class="btnSave btn btn-large btn-color1-flat" onclick="doUpdateServiceAgree('Y');">확인</button>
+                        <button type="button" class="btnSave btn btn-large btn-basic"
+                            onclick="window.location.href = '/common/logout.do'">취소</button>
+                    </div>
+
+                    <div class="mobileInfoBox" style="margin-bottom: 30px;"></div>
+                </div>
+                <!-- //contentsBox end -->
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+        <div class="dim"></div>
+    </div>
+    <!-- //이용약관 동의 안내 -->
+
+    <!-- 알림 수신 동의 모달 -->
+    <div class="popupLayer" id="push_prmttd_confrm" style="margin-left: -300px; display: none;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>알림 수신 동의</h3>
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox">
+                    <div class="dormant">
+                        <div class="textBox">
+                            <p>회원님에게 유용한 학습정보 안내를 위해 하이인재원 스마트연수원에서 알림을 발송하고 있습니다.</p>
+                            <br />
+                            <strong>학습정보 안내를 받아보시겠습니까?</strong>
+                        </div>
+                    </div>
+                    <div class="btnArea">
+                        <button class="btnYes btn btn-large btn-color1-flat" type="button" onclick="doUpdatePushPrmttd('Y');">예</button>
+                        <button class="btnNo btn btn-large btn-basic" type="button" onclick="doUpdatePushPrmttd('N');">아니오</button>
+                    </div>
+                    <div class="dormant info">
+                        <p>
+                            <strong>광고성 정보 수신 설정에 대한 변경은 아래와 같이 설정하실 수 있습니다.</strong>
+                        </p>
+                        <p>
+                            PC : 로그인 > My Page > 알림 메시지 > 알림 수신 동의 설정하기
+                            <br />
+                            iOS : 설정 > 하이인재원 사이버연수원 > 알림 설정
+                            <br />
+                            Android : 설정 > 알림 > 하이인재원 사이버연수원 > 알림 설정
+                        </p>
+                        <p>
+                            <strong>휴대전화 기기 및 OS 버전에 따라 설정환경이 상이할 수 있습니다.</strong>
+                            <strong>수신거부 후에는 하이인재원 사이버연수원에서 제공하는 학습정보 안내의 수신 대상에서 제외됩니다.</strong>
+                        </p>
+                    </div>
+                </div>
+                <!-- //contentsBox end -->
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+        <div class="dim"></div>
+    </div>
+    <!-- //알림 수신 동의 모달-->
+
+    <!-- 어플리케이션 업데이트 안내 -->
+    <div class="popupLayer" id="application_update_alert" style="margin-left: -300px; display: none;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>업데이트 안내</h3>
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox">
+                    <div class="dormant">
+                        <div class="textBox">
+                            <p>
+                                하이인재원 스마트연수원의 새로운 버전이 출시되었습니다.
+                                <br />
+                                <br />
+                                원활한 학습환경을 위해 업데이트 후 서비스 이용이 가능합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnArea">
+                        <button style="display: none;" id="application_update_url_and" class="btnConfirm btn btn-large btn-color1-flat" type="button"
+                            onclick="location.href='market://details?id=com.wbsoft.hihrd'">업데이트</button>
+                        <button style="display: none;" id="application_update_url_ios" class="btnConfirm btn btn-large btn-color1-flat" type="button"
+                            onclick="location.href='<%= CommonUtil.APPLICATION_LINK_IOS %>'">업데이트</button>
+                    </div>
+                </div>
+                <!-- //contentsBox end -->
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+        <div class="dim"></div>
+    </div>
+    <!-- //어플리케이션 업데이트 안내 -->
+
+    <!-- 하이플래너 전화번호 등록 -->
+    <div class="popupLayer" id="planner_mobile_layer" style="margin-left: -300px; display: none;">
+        <!-- popup start -->
+        <div class="popup modal">
+            <h3>휴대전화 정보 등록</h3>
+            <!-- contentsWrap start -->
+            <div class="contentsWrap">
+                <!-- contentsBox start -->
+                <div class="contentsBox">
+                    <div class="dormant">
+                        <div class="textBox" style="padding-left:0;">
+                            <strong>학습자님의 휴대전화 정보가 등록되어 있지 않습니다.</strong>
+                            <br />
+                            <br />
+                            <strong>휴대전화 정보는 아이디, 비밀번호 찾기 등 서비스 이용에 필요한 정보입니다.</strong>
+                            <br />
+                            <strong>휴대전화 정보를 등록해 주세요.</strong>
+                        </div>
+                        <div class="dormant info">
+                            <p>
+                                <div class="selectBox">
+                                    <select id="" name="" title="선택" class="selectbox">
+                                        <option>전화번호</option>
+                                        <option>010</option>
+                                    </select>
+                                </div>
+                                -
+                                <input type="text" class="tel" id="p_mobile_num2" name="p_mobile_num2" value=""
+                                    isNull="N" dispName="<wbtag:message key='usr.mobile.num'/>" maxlength="4"
+                                    dataType="number" onkeyup="return isNumber2(this);" />
+                                -
+                                <input type="text" class="tel" id="p_mobile_num3" name="p_mobile_num3" value=""
+                                    isNull="N" dispName="<wbtag:message key='usr.mobile.num'/>" maxlength="4"
+                                    dataType="number" onkeyup="return isNumber2(this);" />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="btnArea">
+                        <button class="btnYes btn btn-large btn-color1-flat" type="button" onclick="doUpdateMobileNum();">저장</button>
+                        <button class="btnNo btn btn-large btn-basic" type="button"
+                            onclick="window.location.href = '/common/logout.do'">취소</button>
+                    </div>
+
+                </div>
+                <!-- //contentsBox end -->
+            </div>
+            <!-- //contentsWrap end -->
+        </div>
+        <!-- //popup end -->
+        <div class="dim"></div>
+    </div>
+</body>
+</html>

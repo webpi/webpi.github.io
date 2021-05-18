@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+#wrap {
+	position: relative;
+}
+#header.gate {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -500px;
+}
+#gate {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	padding-bottom: 60px;
+	text-align: center;
+}
+#main {
+    margin: 0 auto;
+    width: 1000px;
+}
+#container {
+	overflow: hidden;
+}
+#sub {
+    margin: 0 auto;
+    width: 1000px;
+}
+#sub .lnb {
+    float: left;
+    width: 235px;
+}
+#sub .contentsWrap {
+    float: right;
+    width: 765px;
+    min-height: 700px;
+    padding: 0 0 80px 40px;
+}
+#sub .contentsWrap .headingBox {
+    position: relative;
+}
+#sub .contentsWrap .headingBox h3 {
+    line-height: 1;
+    margin: 45px 0 38px;
+    font-size: 2.3em;
+    font-weight: 400;
+}
+#sub .contentsWrap .headingBox .location {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #919191;
+    font-size: 0.92em;
+    line-height: 1em;
+}
+#sub .contentsWrap .headingBox .location span,
+#sub .contentsWrap .headingBox .location strong {
+	margin: 0px 8px 0 8px;
+}
+
+/* 레이어 팝업 */
+.popupLayer {
+	overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+	display: table;
+	height: 100%;
+	z-index: 999;
+}
+.popup.modal {
+	display: table-cell;
+    width: 600px;
+	vertical-align: middle;
+	z-index: 999;
+}
+.popup.modal > .btnClose {
+	position: relative;
+	top: inherit;
+	right: inherit;
+	float: right;
+	margin-top: -40px;
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 1023px) {
+	.popupLayer {
+		left: 0;
+		width: 100%;
+		margin-left: 0 !important;
+		padding: 0 2%;
+		box-sizing: border-box;
+	}
+	.popup.modal {	
+		width: 100%;
+	}
+	.popup.modal > h3 { 
+		font-size: 1.38em;
+	}
+	.popup.modal p.info {
+		line-height: 18px;
+	}
+	.popup.modal h5 {
+		margin: 20px 0 5px;
+	}
+	.popup.modal .scrollBox {
+		overflow-y: auto;
+		height: 85px;
+		padding: 20px 10px;
+	}
+}
+
+/* 일반 팝업 */
+.popup {
+	position: relative;
+}
+.popup > h3 { 
+	position:relative;
+	display: block;
+	line-height:1.5;
+	margin: 0;
+	padding: 10px 30px 11px 20px;
+	font-size: 1.54em;
+}
+
+.popup > h3 button , .popup > h3 button:hover  {
+	position:absolute;
+	top:7px;
+	right:5px;
+	min-width:15px;
+	border: none;
+	background: url('/images/template2/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.popup > .btnClose {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	min-width: 30px;
+	height: 30px;
+	padding:0;
+    font-size: 0;
+}
+.popup .contentsWrap .contentsBox {
+	width: 100%;
+	padding: 20px;
+	min-height: 0;
+}
+.popup .todayClose {
+	padding: 5px 10px 5px 10px;
+	text-align: right;
+}
+.popup .contentsWrap .scrollDiv{
+	height: 650px;
+	overflow-y: auto;
+}
+/* popupNotice */
+.popupNotice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.popupNotice h3 {
+	position: relative;
+	height: 40px;
+    line-height: 40px;
+    margin: 20px 20px 0;
+    padding: 0 25px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    font-size: 1.38em; /* 18/13 */
+}
+.popupNotice > .btnClose,
+.popupNotice > .btnClose:hover {
+	position: absolute;
+    top: 32px;
+    right: 45px;
+    min-width: 16px;
+	height: 16px;
+	padding:0;
+    font-size: 0;
+}
+.popupNotice .contentsWrap {
+	width: 100%;
+    height: 90%;
+    height: calc(100% - 63px);
+}
+.popupNotice  .contentsBox {
+	width: 100%;
+	min-height: 90%;
+    min-height: calc(100% - 25px);
+    padding: 25px;
+}
+.popupNotice .todayClose {
+	padding: 5px 10px 5px 10px;
+	text-align: right;
+}
+
+@media screen and (max-width: 1023px) {
+	#header.gate {
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+	}
+	#gate {
+		width: 100%;
+	}
+	#main {
+		width: 100%;
+		padding: 0 4% 0 4%;
+	}
+	#sub .lnb,
+	#sub .contentsWrap .headingBox .location {
+		display: none;
+	}
+	#sub {
+		overflow: auto;
+		width: 100%;
+	}
+	#sub .contentsWrap {
+		width: 100%;
+		padding: 0 0 40px 0;
+	}
+	#sub .contentsWrap .headingBox h3 {
+		height: 40px;
+		line-height: 40px;
+		margin: 0;
+		padding: 0 4%;
+		font-size: 1.15em;
+		font-weight: 700;
+	}
+}
+@media screen and (max-width: 767px) {
+	#header.gate {
+		width: 100%;
+		position:static;
+	}
+	#gate {
+		padding: 0 4% 4% 4%;
+	}
+	.webModule24 .textBox {
+		padding: 0 4%;
+	}
+}

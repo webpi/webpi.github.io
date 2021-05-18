@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이인재원 로그인</title>
+    <link rel="stylesheet" href="/css/template9/resp/template9.css">
+    <!--[if lt IE 10]>
+    <link href="/css/template9/resp/ie8-9.css" rel="stylesheet">
+    <![endif]-->
+
+    <script src="/js/jquery-1.8.3.min.js"></script>
+
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- ## IE9이하 버전에서 placeholder 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+    <script src="/js/placeholders.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="wrap-gate">
+    <section class="section-gate">
+        <!-- 기본 이미지 -->
+<!--        <div class="gate-bg">-->
+<!--            <img src="/images/template9/resp/default/bg/bg_gate_human.png" alt="" class="img">-->
+<!--        </div>-->
+        <!-- // 기본 이미지 -->
+
+        <!-- 일러스트 이미지 -->
+        <div class="gate-bg">
+            <img src="/images/template9/resp/default/bg/bg_gate_illust.png" alt="" class="img">
+        </div>
+        <!-- // 일러스트 이미지 -->
+
+        <div class="gate-wrap">
+            <header class="header-gate">
+                <h1 class="bi"><a href="#"><img src="/images/template9/resp/default/usr/bi_hilms_gate.png" alt="하이인재원" class="img"></a></h1>
+            </header>
+
+            <div class="gate-main">
+                <div class="gate-main-top">
+                    <!-- 로그인 -->
+                    <div class="gate-main-login">
+                        <!-- form 삭제가능 (fieldset, legend) -->
+                        <form>
+                            <fieldset>
+                                <legend><span>로그인 하기</span></legend>
+
+                                <div class="gate-login-form">
+                                    <span class="gate-main-istyle gate-id">
+                                        <input type="text" placeholder="아이디" title="아이디" class="istyle-gate">
+                                    </span>
+                                    <span class="gate-main-istyle gate-pw">
+                                        <input type="password" placeholder="비밀번호" title="비밀번호" class="istyle-gate">
+                                    </span>
+
+                                    <button type="button" class="btn-gate-login">로그인</button>
+                                </div>
+
+                                <div class="gate-login-account">
+                                    <span class="gate-main-icheck">
+                                        <input type="checkbox" id="id-save" class="icheck-gate">
+                                        <label for="id-save" class="label-gate">아이디 저장</label>
+                                    </span>
+
+                                    <div class="gate-main-account-menu">
+                                        <!-- button 및 a tag 변경 가능 -->
+                                        <button type="button" class="btn-gate-find">아이디 찾기</button>
+
+                                        <a href="#" class="btn-gate-find">비밀번호 찾기</a>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- // 로그인 -->
+
+                    <!-- 아이디 찾기 -->
+                    <div class="gate-main-id">
+                        <div class="gate-main-noti">
+                            <h2 class="tit-h2">아이디 찾기 방법</h2>
+
+                            <ol class="gate-main-noti-guide">
+                                <li>1. 이름, 휴대전화 번호 입력 후 <strong>[인증번호 발송]</strong> 버튼을 선택하여 인증번호를 수신할 수 있습니다.</li>
+                                <li>2. 수신된 인증번호를 입력 후 <strong>[아이디 찾기]</strong> 버튼을 선택하여 아이디를 확인할 수 있습니다.</li>
+                            </ol>
+                        </div>
+
+                        <div class="gate-id-form">
+                            <!-- form 삭제가능 (fieldset, legend) -->
+                            <form>
+                                <fieldset>
+                                    <legend><span>아이디 찾기 정보 입력</span></legend>
+                                    <span class="gate-main-istyle">
+                                        <label for="id-name" class="label-gate">이름</label>
+                                        <input type="text" id="id-name" class="istyle-gate">
+                                    </span>
+
+                                    <span class="gate-main-istyle gate-main-phone">
+                                        <label for="id-phone" class="label-gate">휴대전화</label>
+                                        <input type="text" id="id-phone" value="010" class="istyle-gate">
+                                    </span>
+
+                                    <span class="gate-main-istyle">
+                                        <label for="id-auth" class="label-gate">인증번호</label>
+                                        <input type="text" id="id-auth" class="istyle-gate istyle-gate-auth">
+                                        <button type="button" class="btn-auth-send">인증번호 발송</button>
+                                    </span>
+
+                                    <div class="gate-form-bot">
+                                        <button type="button" class="btn-gate-form btn-gate-submit">아이디 찾기</button>
+                                        <button type="button" class="btn-gate-form btn-gate-cncl">취소</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- // 아이디 찾기 -->
+
+                    <!-- 아이디 찾기 결과 -->
+                    <div class="gate-main-id-result">
+                        <div class="gate-main-result-box">
+                            <p class="gate-main-result-msg">회원님의 정보와 일치하는 아이디는 <strong>aasdf111</strong> 입니다.</p>
+
+                            <p class="gate-main-result-noti">[로그인] 버튼을 선택하여 시스템을 이용할 수 있습니다.</p>
+                        </div>
+
+                        <!-- a 태그 변경 가능 -->
+                        <button type="button" class="btn-login-go">로그인</button>
+                    </div>
+                    <!-- // 아이디 찾기 결과 -->
+
+                    <!-- 비밀번호 찾기 -->
+                    <div class="gate-main-pw">
+                        <div class="gate-main-noti">
+                            <h2 class="tit-h2">비밀번호 찾기 방법</h2>
+                            <ol class="gate-main-noti-guide">
+                                <li>1. 아이디, 휴대전화 번호 입력 후 <strong>[인증번호 발송]</strong> 버튼을 선택하여 인증번호를 수신할 수 있습니다.</li>
+                                <li>2. 수신된 인증번호를 입력 후 <strong>[비밀번호 찾기]</strong> 버튼을 선택하여 비밀번호를 확인할 수 있습니다.</li>
+                            </ol>
+                        </div>
+
+                        <div class="gate-pw-form">
+                            <!-- form 삭제가능 (fieldset, legend) -->
+                            <form>
+                                <fieldset>
+                                    <legend><span>비밀번호 찾기 정보 입력</span></legend>
+                                    <span class="gate-main-istyle">
+                                        <label for="id-id" class="label-gate">아이디</label>
+                                        <input type="text" id="id-id" class="istyle-gate">
+                                    </span>
+
+                                    <span class="gate-main-istyle gate-main-phone">
+                                        <label for="id-phone2" class="label-gate">휴대전화</label>
+                                        <input type="text" id="id-phone2" value="010" class="istyle-gate">
+                                    </span>
+
+                                    <span class="gate-main-istyle">
+                                        <label for="id-auth2" class="label-gate">인증번호</label>
+                                        <input type="text" id="id-auth2" class="istyle-gate istyle-gate-auth">
+                                        <button type="button" class="btn-auth-send">인증번호 발송</button>
+                                    </span>
+
+                                    <div class="gate-form-bot">
+                                        <button type="button" class="btn-gate-form btn-gate-submit">비밀번호 찾기</button>
+                                        <button type="button" class="btn-gate-form btn-gate-cncl">취소</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- // 비밀번호 찾기 -->
+
+                    <!-- 비밀번호 설정 -->
+                    <div class="gate-main-pw-result">
+                        <div class="gate-id-form">
+                            <div class="gate-main-noti">
+                                <h2 class="tit-h2">비밀번호 설정 방법</h2>
+                                <ol class="gate-main-noti-guide">
+                                    <li>1. 새로운 비밀번호, 비밀번호 확인 입력 후 <strong>[비밀번호 설정]</strong> 버튼을 선택하여 비밀번호를 설정할 수 있습니다.</li>
+                                    <li>2. 비밀번호는 영문, 숫자, 특수기호(!,@,#등)를 포함하여 <strong>8자 이상</strong>으로 설정해주세요.</li>
+                                </ol>
+                            </div>
+
+                            <div class="gate-pw-form">
+                                <!-- form 삭제가능 (fieldset, legend) -->
+                                <form>
+                                    <fieldset>
+                                        <legend><span>비밀번호 설정하기</span></legend>
+                                        <span class="gate-main-istyle">
+                                            <label for="id-pw" class="label-gate">새로운 비밀번호</label>
+                                            <input type="password" id="id-pw" class="istyle-gate">
+
+                                            <!-- 유효성 가능 -->
+                                            <span class="label-auth label-auth-success"><em class="ir">사용가능</em></span>
+                                            <!-- // 유효성 가능 -->
+                                        </span>
+
+                                        <span class="gate-main-istyle">
+                                            <label for="id-pwre" class="label-gate">비밀번호 확인</label>
+                                            <input type="password" id="id-pwre" class="istyle-gate">
+
+                                            <!-- 유효성 불가능 -->
+                                            <span class="label-auth label-auth-fail"><em class="ir">사용불가능</em></span>
+                                            <!-- // 유효성 불가능 -->
+                                        </span>
+
+                                        <div class="gate-form-bot">
+                                            <button type="button" class="btn-gate-form btn-gate-submit">비밀번호 설정</button>
+                                            <button type="button" class="btn-gate-form btn-gate-cncl">취소</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 비밀번호 설정 -->
+                </div>
+
+                <div class="gate-main-contents">
+                    <div class="gate-main-help">
+                        <h2 class="tit-h2">학습지원센터</h2>
+                        <a href="tel:02-3709-5877" class="gate-main-help-tel"><strong>02-3709-5877</strong></a>
+                    </div>
+
+                    <p class="gate-main-businesshours">평일 09:00~18:00  점심 12:00~13:00 <span>(토, 일, 공휴일 휴무)</span></p>
+                </div>
+
+                <div class="gate-main-contents">
+                    <h2 class="tit-h2">애플리케이션 <span>다운로드</span></h2>
+
+                    <ul class="gate-main-app">
+                        <li>
+                            <span class="gate-main-app-platform">Android</span>
+                            <a href="#" target="blank" class="btn-main-app btn-playstore"><span>Playstore</span></a>
+                        </li>
+                        <li>
+                            <span class="gate-main-app-platform">iOS</span>
+                            <a href="#" target="blank" class="btn-main-app btn-appstore"><span>Appstore</span></a>
+                        </li>
+                    </ul>
+
+                    <p class="gate-main-app-ios">iOS에서는 [ 설정 > 일반 > 기기관리 > HYUNDAI C&R co,LTD > 신뢰하기 ] 등록 후 사용이 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

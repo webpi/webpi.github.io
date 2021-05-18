@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+// 의무과정, 선택과정, 열린과정, 에듀튜브
+.section-course-sub {
+    overflow: hidden;
+    
+    .course {
+        &-wrap {
+            padding: 59px 0 60px;
+
+            &.course-color {
+                &.course-color1 {
+                    @include horizontal-gradient(#fff2e4, #fff6e1);
+                }
+
+                &.course-color2 {
+                    @include horizontal-gradient(#e5f7ec, #def4f9);
+                }
+    
+                &.course-color3 {
+                    @include horizontal-gradient(#e5effa, #eae6fb);
+                }
+    
+                &.course-color4 {
+                    @include horizontal-gradient(#fcebf6, #ffeeee);
+                }
+            }
+        }
+
+        &-top {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 70px;
+
+            @include box-sizing;
+
+            .tit-h2 {
+                font-size: 40px;
+                font-weight: 300;
+            }
+    
+            .tit-h3 {
+                margin-top: 57px;
+                font-size: 26px;
+                font-weight: 500; 
+            }
+    
+            .course-items {
+                margin-top: 21px;
+            }
+    
+            .media-item {
+                .slick-list {
+                    overflow: visible;
+                    margin: 0 -10px;
+                 }
+        
+                .slick-slide {
+                    > div {
+                        margin: 0 10px;
+                    }
+                }
+        
+                .custom-dots {
+                    position: absolute;
+                    // right: 70px;
+                    top: -33px;
+                    // left: auto;
+                    // width: 160px;
+                    margin: 0;
+                    padding: 0 70px;
+                    box-sizing: border-box;
+                    text-align: right;
+                }
+        
+                .slick-disabled {
+                    display: none !important;
+                }
+            }
+        }
+
+        &-main {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 70px 100px;
+
+            @include box-sizing;
+
+            &-sort {
+                margin-bottom: 10px;
+                text-align: right;
+            }
+    
+            .media-item {
+                overflow: hidden;
+                margin-bottom: -60px;
+    
+                @include clear;
+    
+                .item {
+                    float: left;
+                    width: calc((100% - 60px) / 4);
+                    margin: 0 0 60px 20px;
+    
+                    &:nth-child(4n + 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        &-color + .course-main {
+            padding-top: 100px;
+        }
+
+        &-empty {
+            position: relative;
+            max-width: 430px;
+            margin: 0 auto;
+            padding: 0 15px;
+            font-size: 18px;
+            color: $base-color1;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                vertical-align: top;
+            }
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding-top: 35%;
+            }
+        }
+    }
+}
+
+// 검색결과
+.section-search {
+    .search {
+        &-wrap {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 59px 70px 100px;
+
+            @include box-sizing;
+
+            .tit-h2 {
+                font-size: 26px;        
+                font-weight: 500;
+            }
+        }
+
+        &-result {
+            margin-top: 20px;
+
+            .media-item {
+                overflow: hidden;
+                margin-bottom: -60px;
+    
+                @include clear;
+    
+                .item {
+                    float: left;
+                    width: calc((100% - 60px) / 4);
+                    margin: 0 0 60px 20px;
+    
+                    &:nth-child(4n + 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

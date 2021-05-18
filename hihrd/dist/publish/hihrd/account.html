@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <title>하이인재원</title>
+    <!--[if lt IE 10]>
+        <link href="/css/template9/resp/ie8-9.css" rel="stylesheet" type="text/css" media="all">
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 placeholder 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/placeholders.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="/css/template9/resp/template9.css">
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header class="header">
+            <div class="header-wrap">
+    <h1 class="tit-h1">
+        <a href="index.html"><img src="/images/template9/resp/default/usr/bi_hilms.png" alt="하이인재원"></a>
+    </h1>
+
+    <nav class="gnb">
+        <!-- 활성 메뉴 active -->
+        <ul class="gnb-menu">
+            <li><a href="index.html" class="active">홈</a></li>
+            <li><a href="course1.html">의무과정</a></li>
+            <li><a href="course2.html">선택과정</a></li>
+            <li><a href="course3.html">열린과정</a></li>
+            <li><a href="edutube.html">에듀튜브</a></li>
+        </ul>
+    </nav>
+
+    <div class="aside">
+        <!-- 사용자 -->
+        <div class="aside-my">
+            <div class="my-top">
+                <span class="grade">6차월</span><strong class="name">박하이님</strong>
+            </div>
+
+            <ul class="my-submenu">
+                <li><a href="my_dashboard.html">나의 학습 / 활동 현황</a></li>
+                <li><a href="account.html">개인정보 수정</a></li>
+                <li><a href="qna.html">1:1 문의</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="#">로그아웃</a></li>
+            </ul>
+        </div>
+        <!-- // 사용자 -->
+
+        <!-- 검색 : 클릭시 active -->
+        <div class="aside-search">
+            <button type="button" class="btn-search js-btn-search"><span class="ir">검색창 열기</span></button>
+
+            <div class="search-box">
+                <!-- 불필요시 form 요소 제거 가능 -->
+                <form>
+                    <fieldset>
+                        <legend><span>검색하기</span></legend>
+                        <input type="text" id="" placeholder="검색어를 입력하세요" title="검색" class="isearch js-isearch">
+
+                        <button type="button" class="btn-reset js-btn-reset"><span class="ir">삭제</span></button>
+
+                        <button type="button" class="btn-search"><span class="ir">검색</span></button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- 닫기 -->
+            <button type="button" class="btn-search-box-clse js-btn-search-box-clse"><span class="ir">검색 닫기</span></button>
+            <!-- // 닫기 -->
+        </div>
+        <!-- 검색 -->
+    </div>
+
+    <!-- ismobile -->
+    <button type="button" class="btn-mobile js-btn-mobile">
+        <span class="btn-mobile-menu">
+            <span class="ir">모바일 메뉴</span>
+        </span>
+    </button>
+
+    <div class="header-mobile">
+        <div class="header-mobile-head">
+            <div class="header-mobile-top">
+                <img src="/images/template9/resp/default/usr/bi_hilms_white.png" alt="하이인재원">
+
+                <button type="button" class="btn-clse js-btn-mobile-menu-clse"><span class="ir">닫기</span></button>
+            </div>
+
+            <div class="header-mobile-my">
+                <span class="myinfo">
+                    <em class="grade">6차월</em><strong class="name">박하이님</strong>
+                </span>
+                
+                <!-- a태그로 변경 가능 -->
+                <button type="button" class="btn-logout">로그아웃</button>
+            </div>
+        </div>
+
+        <div class="header-mobile-main">
+            <ul class="header-mobile-list">
+                <!-- 활성화된 페이지 active -->
+                <li class="active"><a href="index.html">홈</a></li>
+                <li><a href="course1.html">의무과정</a></li>
+                <li><a href="course2.html">선택과정</a></li>
+                <li><a href="course3.html">열린과정</a></li>
+                <li><a href="edutube.html">에듀튜브</a></li>
+            </ul>
+
+            <ul class="header-mobile-list">
+                <li><a href="my_dashboard.html">나의 학습 / 활동 현황</a></li>
+                <li><a href="account.html">개인정보 수정</a></li>
+                <li><a href="qna.html">1:1 문의</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="#">로그아웃</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- // ismobile -->
+</div>
+        </header>
+        <!-- // header -->
+
+        <div class="container">
+            <section class="section-my">
+                <div class="my-account">
+                    <div class="my-wrap">
+                        <h2 class="tit-h2">개인정보 수정</h2>
+
+                        <!-- form 필요없을시 삭제 가능 -->
+                        <form>
+                            <fieldset>
+                                <legend><span>개인정보</span></legend>
+
+                                <div class="my-account-info">
+                                    <ul class="my-account-list">
+                                        <li>
+                                            <span class="tit">아이디</span>
+                                            
+                                            <span class="content">Parkhi2020</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">성명</span>
+                                            
+                                            <span class="content">박하이</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">비밀번호</span>
+
+                                            <span class="content">
+                                                <button type="button" class="btn btn-large btn-color1 btn-password-change">비밀번호 변경</button>
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="my-account-list">
+                                        <li class="my-account-tel">
+                                            <label for="id-phone" class="tit">
+                                                휴대전화<em class="ico-required">*</em>
+                                            </label>
+
+                                            <span class="content content-input">
+                                                <!-- <span class="slt slt-large">
+                                                    <select id="id-phone">
+                                                        <option>010</option>
+                                                    </select>
+                                                </span> -->
+                                                <div class="selectBox">
+                                                    <select id="" name="" isnull="" title="선택" class="selectbox">
+                                                        <option value="">- 선택 -</option>
+                                                        <option value="010" selected="">010</option>
+                                                    </select>
+                                                </div>
+                                                <span class="form-dash">-</span>
+
+                                                <input type="text" title="중간번호" class="istyle istyle-large">
+                                                <span class="form-dash">-</span>
+
+                                                <input type="text" title="끝번호" class="istyle istyle-large">
+                                            </span>
+                                        </li>
+                                        <li class="my-account-email">
+                                            <label for="id-email" class="tit">
+                                                이메일<em class="ico-required">*</em>
+                                            </label>
+
+                                            <span class="content content-input">
+                                                <input type="text" id="id-email" class="istyle istyle-large">
+                                                <span class="form-at">@</span>
+                                                
+                                                <input type="text" title="호스팅" class="istyle istyle-large">
+
+                                                <div class="selectBox">
+                                                    <select id="" name="" isnull="" title="선택" class="selectbox">
+                                                        <option value="">직접입력</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+
+                                                <!-- <span class="slt slt-large">
+                                                    <select title="직접입력">
+                                                        <option>직접입력</option>
+                                                    </select>
+                                                </span> -->
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">하이플래너 등급</span>
+                                            
+                                            <span class="content">6차월</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="my-account-bot">
+                                    <button type="button" class="btn btn-large btn-color1-flat">저장</button>
+
+                                    <button type="button" class="btn btn-large btn-basic">취소</button>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                        <!-- 비밀번호 변경 레이어 (popup-layer 클래스 제거시 레어어 기능 x -->
+                        <div class="popup-layer popup-password" style="display: none;">
+                            <div class="popup-wrap">
+                                <div class="popup-head">
+                                    비밀번호 변경
+                                </div>
+
+                                <div class="popup-body">
+                                    <!-- form 필요없을시 삭제 가능 -->
+                                    <form>
+                                        <fieldset>
+                                            <legend><span>비밀번호 변경 입력</span></legend>
+
+                                            <div class="popup-contents">
+                                                <p class="dsc">영문, 숫자, 특수기호(!, @, # 등)를 모두 사용하여 최소 8자 이상으로 만들어 주세요.</p>
+
+                                                <table class="popup-password-form">
+                                                    <caption><span>비밀번호 변경하기</span></caption>
+
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="id-current-pw">기존 비밀번호</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="password" id="id-current-pw" placeholder="기존 비밀번호" class="istyle istyle-large">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="id-new-pw">새로운 비밀번호</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="password" id="id-new-pw" placeholder="새로운 비밀번호" class="istyle istyle-large">
+
+                                                            <p class="new-pw-guide">영문, 숫자, 특수기호를 포함하여 입력해 주세요. 비밀번호는 8자 미만으로 구성하실 수는 없습니다.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="id-new-pw-re">비밀번호 확인</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="password" id="id-new-pw-re" placeholder="비밀번호 확인" class="istyle istyle-large">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <div class="popup-bot">
+                                                <button type="button" class="btn btn-color1-flat btn-large">저장</button>
+
+                                                <button type="button" class="btn btn-basic btn-large">취소</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                                <button type="button" class="btn-popup-clse"><span class="ir">닫기</span></button>
+                            </div>
+                        </div>
+                        <!-- // 비밀번호 변경 레이어 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-wrap">
+    <ul class="footer-menu">
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보 처리방침(개인정보보호법)</a></li>
+        <li><a href="#">개인정보 처리방침(정보통신망법)</a></li>
+        <li><a href="#">이메일무단수집거부</a></li>
+    </ul>
+
+    <div class="footer-copyright">
+        HYUNDAI C&R CO.LTD ALL RIGHT RESERVED
+    </div>
+
+    <div class="footer-support">
+        학습지원센터 <strong class="tel"><a href="tel:0237095877">02-3709-5877</a></strong>
+
+        <p class="info">평일 00:00~00:00  점심 00:00~00:00 <span>(토, 일, 공휴일 휴무)</span></p>
+    </div>
+</div>
+        </footer>
+        <!-- // footer -->
+    </div>
+
+    <!-- ui 스크립트 -->
+    <!-- slick -->
+    <link rel="stylesheet" href="/js/template9/slick/slick.css">
+    <script src="/js/template9/slick/slick.js"></script>
+
+    <!-- jquery confirm -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="/js/template9/jquery-confirm.js"></script>
+    <script src="/js/template9/style_pub.js"></script>
+    
+    <script>
+        // 비밀번호 변경 레이어 테스트용
+        $(".btn-password-change").click(function() {
+            $.dialog({
+                title: false,
+                boxMaxWidth :'600px',
+                boxWidth : '100%',
+                // title: '비밀번호 변경',
+                useBootstrap: false,
+                content: 'url:popup_pw.html',
+                draggable: false,
+                closeIcon: true,
+                closeIconClass: 'btn-popup-clse'
+            });
+        });
+
+        // 공통 레이어 팝업 테스트용
+        $(".my-account-bot .btn-color1-flat").click(function() {
+            $.dialog({
+                title: false,
+                boxMaxWidth :'480px',
+                boxWidth : '100%',
+                useBootstrap: false,
+                content: 'url:popup_comm.html',
+                draggable: false,
+            });
+        });
+    </script>
+</body>
+</html>

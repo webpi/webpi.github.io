@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+/* 웹폰트 CSS */
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/font/NanumGothic.woff) format('woff'),
+		 url(/font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 700;
+	src: url(/font/NanumGothicBold.woff) format('woff'),
+		 url(/font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 800;
+	src: url(/font/NanumGothicExtraBold.woff) format('woff'),
+		 url(/font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+/* CSS 초기화 */
+*, html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font-family: 'Nanum Gothic','dotum', serif, arial;
+	box-sizing: border-box;
+	outline: 0;
+	vertical-align: middle;
+	background:transparent;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+	display:block;
+}
+nav ul, li, ul, ol {
+	list-style:none;
+}
+blockquote, q {
+    quotes: none;
+}
+address {
+	font-style: normal;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+caption, legend, .hidden {
+	visibility:hidden;
+	position:absolute;
+	left:-9999em;
+	width:1px;
+	height:1px;
+	background:none;
+	font-size:0;
+	line-height:0;
+	text-indent:-9999em;
+}
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	line-height:1;
+	color: #333333;	
+	font-size: 0.81em; /* 13/16 */
+	line-height: 20px;
+}
+table {
+	border-collapse: collapse;
+	border-spacing:0;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+a {
+    margin: 0;
+    padding: 0;
+    color: #666666;
+    font-size: 100%;
+    text-decoration: none;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.searchBox {
+	margin-bottom: 15px;
+	padding: 20px;
+	border: 1px solid #cccccc;
+	background: #f2f2f2;
+}
+.selectBox {
+	display: inline-block;
+    width: 100px;
+    height: 24px;
+    vertical-align: bottom;
+    position: relative;
+    top: 0px;
+    border: 1px solid #c0c0c0;
+    background: #ffffff url('/images/common/classroom/bg_select.png') no-repeat;
+    background-position: 75px 3px;
+}
+.selectBox select {
+    position: relative;
+ 	top: -1px;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	padding: 0px 28px 0px 5px;
+	color: #666666;
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance:none;
+	appearance:none;
+}
+.selectBox select::-ms-expand {  /* For IE10 */
+	display:none;
+}
+textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #c0c0c0;
+}
+input[type="checkbox"] {
+	vertical-align: middle;
+}
+input[type="text"] {
+	width: 100%;
+	height: 24px;
+	padding: 0 10px;
+	border: 1px solid #c0c0c0;
+	vertical-align: middle;
+	background: #ffffff;
+}
+input.labelSearch {
+	width: 565px;
+	width: calc(100% - 170px);
+}
+
+h3.title {
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 15px;
+	padding-left: 33px;
+	border: 1px solid #e6e6e6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 1.38em; /*18/13*/
+	font-weight: 700;
+	background: #ffffff url('/images/common/classroom/bullet_h3.png') 20px center no-repeat;
+}
+
+h4 {
+	margin: 15px 0 10px 0;
+	font-size: 1.23em; /*16/13*/
+	font-weight: 700;
+}
+
+/*button*/
+.btnArea {
+	margin-top: 15px;
+	text-align: right;
+}
+
+button {
+	display: inline-block;
+	min-width: 60px;
+	height: 22px;
+	text-align: center;
+	vertical-align: middle;
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: 700;
+	cursor: pointer;
+}
+.btnStudy {
+	margin: 0 4px;
+	background: #e26138;
+}
+.btnPreview {
+	margin: 0 4px;
+	background: #888888;
+}
+.btnsurvey {
+	color: #666666;
+	border: 1px solid #666666;
+	background: #ffffff;
+}
+.btnProject {
+	margin: 0 4px;
+	background: #2f4157;
+}
+.btnModify {
+	margin: 0 4px;
+	border: 1px solid #666666;
+	background: #777777;
+}
+.btnCheck, .btnResultCheck {
+	margin: 0 4px;
+	color: #2f516e;
+	border: 1px solid #8fafca;
+	background: #edf4fb;
+}
+.btnExam {
+	background: #002456;
+}
+.btnResultView {
+	background: #4f74ba;
+}
+.btnSearch {
+	margin-left: 2px;
+}
+.btnReady {
+	background: #6291c0;
+}
+.btnQuiz {
+	background: #4f74ba;
+}
+.btnArrange {
+	color: #21a09e;
+	border: 1px solid #21a09e;
+	background: #ffffff;
+}
+.btnFind {
+	width: 68px;
+	height: 24px;
+	border: 1px solid #333333;
+	background: #555555;
+}
+.btnRegist, .btnSearch, .btnList {
+	height: 24px;
+	border: 1px solid #172638;
+	background: #2f4157;
+}
+.btnCancel, .btnChange, .btnDel, button.btnPrev, button.btnNext {
+	height: 24px;
+	color: #333333;
+	border: 1px solid #a5a5a5;
+	background: #f2f2f2;
+}
+.btnClose,
+.btnClose:hover {
+    border: none;
+	background: url('/images/template6/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.btnClose,
+.btnClose:hover {
+	position: absolute;
+	top: 22px;
+	right: 20px;
+	min-width: 16px;
+	height: 16px;
+	padding:0;
+    font-size: 0;
+}
+.btnClose.notHeader,
+.btnClose.notHeader:hover {
+    border: none;
+	background: url('/images/template6/resp/default/button/popup_btn_close_notHeader.png') center center no-repeat;
+}
+.btnClose.notHeader,
+.btnClose.notHeader:hover {
+	position: absolute;
+	top: 22px;
+	right: 20px;
+	min-width: 32px;
+	height: 32px;
+	padding:0;
+    font-size: 0;
+}
+
+/*icon*/
+.icon {
+	display: block;
+	margin: 0 auto;
+	width: 43px;
+	height: 18px;
+	line-height: 20px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color: #ffffff;
+	font-family: dotum;
+	font-size: 11px;
+}
+.wait {
+	background: #8cb981;
+}
+.ing {
+	background: #de5227;
+}
+.end {
+	background: #666666;
+}
+
+.lock {
+	display: inline-block;
+    height: 18px;
+    padding-right: 20px;
+	background: url('/images/common/classroom/icon_lock.png') right center no-repeat;
+}
+
+
+/*paging*/
+.paging {
+	margin-top: 15px;
+    text-align: center;
+}
+.paging a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+	border: 1px solid #cbcbcb;
+    text-align: center;
+    vertical-align: middle;
+	color: #666666;
+}
+.paging a.active {
+	border: 1px solid #666666;
+    color: #ffffff;
+	background: #666666;
+}
+.paging .btnFirst {
+    background: #ffffff url('/images/common/classroom/btn_paging.png') 0 0 no-repeat;
+}
+.paging .btnPrev {
+    background: #ffffff url('/images/common/classroom/btn_paging.png') -25px 0 no-repeat;
+}
+.paging .btnNext {
+    background: #ffffff url('/images/common/classroom/btn_paging.png') -50px 0 no-repeat;
+}
+.paging .btnLast {
+    background: #ffffff url('/images/common/classroom/btn_paging.png') -75px 0 no-repeat;
+}
+
+.boxGray {
+	padding: 10px 20px;
+	background: #dddddd;
+}
+
+/*text*/
+.answerWait {
+	color: #e34f20;
+	font-weight: 700;
+}
+.answerOk {
+	color: #468623;
+	font-weight: 700;
+}	
+.hideP {
+	display: none;
+}
+
+/*버튼*/
+.btnSubGray {border:1px solid #a5a5a5;display:inline-block;width:110px;text-align:center;padding:10px 0;color:#333333;font-size:14px;}
+.btnSubJoin {background:#172638;border:1px solid #a5a5a5;display:inline-block;width:110px;text-align:center;padding:10px 0;color:#fff;font-size:14px;}
+
+@media screen and (max-width: 768px) {
+	.hide, .searchBox {
+		display: none !important;
+	}
+	.hideP {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.icon {
+		width: 30px;
+		margin: 0 4px;
+	}
+	.btnReady, .btnQuiz, .btnArrange, .btnsurvey {
+		min-width: 35px;
+		margin: 0 4px;
+	}
+}

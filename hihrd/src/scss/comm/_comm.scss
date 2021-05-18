@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* 웹폰트 CSS */
+@font-face {
+	font-family:'Noto Sans KR'; font-style:normal; font-weight: 300; src:url("/font/NotoSansKR-Light.woff2") format('woff2'),
+			url("/font/NotoSansKR-Light.woff") format('woff'),
+			url("/font/NotoSansKR-Light.otf") format('opentype');
+}
+@font-face {
+	font-family:'Noto Sans KR'; font-style:normal; font-weight: 400; src:url("/font/NotoSansKR-Regular.woff2") format('woff2'),
+			url("/font/NotoSansKR-Regular.woff") format('woff'),
+			url("/font/NotoSansKR-Regular.otf") format('opentype');
+}
+@font-face {
+	font-family:'Noto Sans KR'; font-style:normal; font-weight: 500; src:url("/font/NotoSansKR-Medium.woff2") format('woff2'),
+		 	url("/font/NotoSansKR-Medium.woff") format('woff'),
+		 	url("/font/NotoSansKR-Medium.otf") format('opentype');
+}
+@font-face {
+	font-family:'Noto Sans KR'; font-style:normal; font-weight: 700; src:url("/font/NotoSansKR-Bold.woff2") format('woff2'),
+		 	url("/font/NotoSansKR-Bold.woff") format('woff'),
+		 	url("/font/NotoSansKR-Bold.otf") format('opentype');
+}
+
+body {
+	overflow-y: scroll;
+	font-family: 'Noto Sans KR', 'Nanum Gothic', 'dotum', sans-serif;
+	font-size: 10px;
+	line-height: 1;
+
+	@include wordwrap;
+}
+
+.ir {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	font-size: 1%;
+	z-index: -9999;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+}
+
+.is-hidden {
+	display: none;;
+}
+
+// layout
+#wrap {
+	min-width: 320px;
+	padding-top: 101px;
+
+	@include transition(padding .3s);
+}
+
+// scroll hide
+.no-scroll {
+	overflow: hidden;
+
+	body {
+		&:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+			background: rgba(0, 0, 0, .5);
+			z-index: 10;
+        }
+	}
+}
+
+
+// 학습문의
+.floating-call {
+	display: block;
+	position: fixed;
+	right: 60px;
+	bottom: 113px;
+	padding-top: 60px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 400;
+	background: $base-color1 url("/images/template9/resp/default/usr/icon_call.png") no-repeat 50% 19px;
+	text-align: center;
+	z-index: 1;
+	animation: cloud infinite alternate 1.2s;
+
+	@include size(120px);
+	@include box-shadow(2.347px 4.415px 12px 0 rgba(0, 0, 0, 0.7));
+	@include border-radius(100px);
+	@include box-sizing;
+	@include transition(background-color .25s);
+	@include transform(translateZ(0));
+
+	.floating-call-number {
+		display: block;
+		margin-bottom: 8px;
+		font-size: 18px;
+	}
+
+	&:hover {
+		color: #fff;
+		background-color: $base-color2;
+	}
+
+	@keyframes cloud {
+		from {
+		  bottom: 113px;
+		}
+	  
+		to {
+		  bottom: 108px;
+		}
+	}
+}
+  

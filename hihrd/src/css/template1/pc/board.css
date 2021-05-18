@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+table {
+	width: 100%;
+}
+th, td {
+	line-height: 22px;
+	padding: 8px;
+	vertical-align: middle;	
+}
+td {
+	
+}
+td > button {
+	margin: 2px 0;
+}
+.ui-jqgrid td > button { /* JQ그리드 안쪽버튼 여백 */
+	margin: 2px;
+}
+
+.boardList, .boardView, .boardWrite {
+	margin-bottom: 15px;
+}
+td > .boardList, td > .boardView, td > .boardWrite {
+	margin-bottom: 0;
+}
+
+.boardView th, .boardView td, .boardWrite th, .boardWrite td {
+	height: 46px;
+}
+
+.boardList h5 .btnArea {
+	display: inline-block;
+	margin: 0;
+	margin-top: -3px;
+}
+.boardList th {
+	height: 26px;
+  	padding: 0 5px;
+}
+.boardList td {
+	padding: 5px 8px;
+	text-align: center;
+}
+.boardView th {
+	text-align: center;
+}
+.boardView th.title {
+	text-align: left;
+}
+
+.boardView tbody th {
+	padding-left: 20px;
+	text-align: left;
+} 
+
+.boardWrite th {
+	padding-left: 20px;
+	text-align: left;	
+}
+ .asterisk:after {
+	content: "*";
+	padding: 0 3px;
+}
+.boardList td.title {
+	text-align: left;
+}
+.boardWrite .address li {
+	margin-top: 6px;
+}
+.boardWrite .address li.first-child {
+	margin-top: 0px;
+}
+.boardWrite .address label {
+	display: inline-block;
+	width: 70px;
+}
+.boardWrite .address .btnInner {
+	margin-right: 6px;
+}
+.address button {
+	margin-right: 11px;
+}
+.boardWrite .address li input[type="text"] {
+	width: 300px;
+}
+
+.boardWrite.type2 th {
+	padding: 8px;
+	text-align: center;
+}
+
+.boardWrite td > div+div {
+    margin-top: 6px;
+}
+.boardWrite > .textBox {
+	padding: 15px 10px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.boardWrite .job {
+	width: 100%;
+	padding-left: 8px;
+}
+.boardWrite .job label {
+	width: 18%;
+	margin: 0 10px 0px 0;
+}
+.boardWrite .job label > input {
+	margin: 0 8px 0px 0;
+}
+
+/*설문결과*/
+.surveyResult {
+	padding: 20px 20px 1px 20px;
+}
+.surveyResult table {
+	margin-bottom: 20px;
+}
+.surveyResult table th, .surveyResult table td {
+	padding: 6px 10px;
+	text-align: center;
+}
+.surveyResult td .graph {
+	width: 100%;
+	height: 24px;
+    overflow: hidden;
+    background-repeat: repeat-x;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.surveyResult td .graph>span {
+	display: block;
+	height: 24px;
+}
+
+/*답글*/
+.comment .register {
+	position: relative;
+}
+.comment textarea {
+	width: 100%;
+	height: 60px;
+	padding: 10px 70px 10px 10px;
+}
+.comment .register .btnRegister {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+}
+.btnRegister, .boardWrite .btnRegister {
+	width: 60px;
+	height: 60px;
+	font-weight: 700;
+}
+.comment {
+	margin-bottom: 20px;
+}
+.comment ul {
+	overflow: auto;
+}
+.comment ul li {
+	display: table;
+	width: 100%;
+	padding: 20px;
+}
+.comment ul li.register {
+	padding: 0;
+}
+.comment ul li.register .boardWrite {
+	border: none;
+}
+.comment ul li.register .boardWrite th {
+	width: 200px;
+	font-size: 1.15em;
+}
+.comment li .grade {
+	float: right;
+}
+.comment li .grade span {
+	color: #acb2b5;
+}
+.comment li .grade span.active {
+	color: #3e96e6;
+}
+.comment ul li > div {
+	display: table-cell;
+}
+.comment ul li.depth > div {
+	display: block;
+}
+.comment ul li > div.checkBox {
+	width: 30px;
+	vertical-align: top;
+	padding-top: 2px;
+}
+
+.comment ul li .btnArea {
+	margin: 0;
+	text-align: left;
+}
+.comment ul li .name {
+	font-size: 1.15em;
+}
+.comment ul li .date {
+	padding-left: 5px;
+	font-size: 0.92em;
+}
+.comment ul li p {
+	display: block;
+	margin: 10px 0;
+	line-height: 20px;
+}
+.comment ul li .btnArea button {
+    min-width: 50px;
+	height: 24px;
+	font-weight: normal;
+}
+
+.comment.type2 ul li > div.checkBox {
+    padding-top: 5px; 
+}
+.comment.type2 ul li > div.emoticon {
+	position: relative;
+	padding-left: 40px;
+}
+.comment.type2 ul li > div.emoticon .icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.comment.type2 ul li > div.emoticon p {
+	display: inline-block;
+	margin: 5px 0 0 0;
+	width: 70%;
+}
+
+.comment.type2 ul li > div.emoticon p+p {
+	float: right;
+	display: table;
+	width: 30%;
+	text-align: right;
+}
+.comment.type2 ul li > div.emoticon p > span {
+	display: inline-block;
+	padding: 0;
+	font-size: 1em;
+	color: #999999;
+}
+.comment.type2 ul li > div.emoticon p > span+span:before {
+    content: "|";
+    padding: 0 10px;
+    color: #999999;
+}
+.comment.type2 ul li > div.choice {
+	width: 37px;
+    vertical-align: top;
+    padding-top: 5px;
+}
+.icon.choice {
+	background: #5c79aa;
+}
+
+
+
+.replyArea { 
+	position: relative;
+}
+.replyArea .btnRegister {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 0;
+}
+.comment ul li .modify textarea {
+	padding: 10px;
+}
+.comment ul li .modify .btnArea {
+	margin-top: 10px;
+}
+
+.comment ul li.depth > div{
+	position: relative;
+}
+.comment ul li.depth > div:before {
+	content: " ";
+    position: absolute;
+    left: -15px;
+    display: block;
+    width: 7px;
+    height: 11px;
+    background: #fff url('/images/common/mngs/icon_recommend.gif') 0 0 no-repeat;
+}
+
+.listAttach {
+	margin-left: 10px;
+}
+.listAttach > span {
+	margin-right: 10px;	
+}

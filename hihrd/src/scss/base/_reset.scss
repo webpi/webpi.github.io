@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+blockquote,
+button,
+code,
+div,
+dl,
+dt,
+dd,
+figure,
+fieldset,
+form,
+p,
+pre,
+input,
+select,
+textarea,
+table,
+th,
+td,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+li {
+	vertical-align: top;
+}
+
+fieldset,
+img {
+	border: 0 none;
+}
+
+address,
+em {
+	font-style: normal;
+}
+
+label {
+	cursor: pointer;
+}
+
+select {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	text-transform: none;
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+option {
+	padding-right: 6px;
+}
+
+caption span,
+legend span {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	width: 1%;
+	height: 1%;
+	font-size: 1%;
+}
+
+table,
+td,
+tr {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a,
+a:active,
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+strong {
+	font-weight: 600;
+}
+
+hr {
+	height: 0;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+button,
+input,
+textarea {
+	overflow: visible;
+	line-height: normal;
+	outline: 0 none !important;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button[disabled],
+[type='button'][disabled],
+[type='reset'][disabled],
+[type='submit'][disabled] {
+  	cursor: default;
+}
+
+// Remove the inner border and padding in Firefox.
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+	-webkit-border-radius:0; 
+  	border-radius: 0;
+	resize: vertical;
+	-webkit-appearance: none;
+}
+
+input[type=button] {
+	overflow: visible;
+	border-radius: 0;
+	box-sizing: content-box;
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+[type=text],
+[type=password],
+[type=tel],
+[type=number],
+[type=search],
+[type=email],
+[type=url] {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+// Correct the odd appearance in Chrome and Safari.
+// Correct the outline style in Safari.
+[type='search'] {
+  	// -webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+// Remove the inner padding in Chrome and Safari on macOS.
+[type='search']::-webkit-search-decoration {
+  	-webkit-appearance: none;
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  	height: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+	width: 13px;
+	height: 13px;
+  	padding: 0;
+	box-sizing: border-box;
+}
+
+// Fix placeholder font properties inheritance.
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+::-ms-input-placeholder,
+::placeholder {
+  font: inherit;
+}
+
+// @font-face {
+//     font-family: 'Spoqa Han Sans';
+//     font-weight: 700;
+//     src: local('Spoqa Han Sans Bold'),
+//     url('/assets/fonts/Spoqa Han Sans Bold.woff2') format('woff2'),
+//     url('/assets/fonts/Spoqa Han Sans Bold.woff') format('woff'),
+//     url('/assets/fonts/Spoqa Han Sans Bold.ttf') format('truetype');
+// }
+
+// @font-face {
+//     font-family: 'Spoqa Han Sans';
+//     font-weight: 400;
+//     src: local('Spoqa Han Sans Regular'),
+//     url('/assets/fonts/Spoqa Han Sans Regular.woff2') format('woff2'),
+//     url('/assets/fonts/Spoqa Han Sans Regular.woff') format('woff'),
+//     url('/assets/fonts/Spoqa Han Sans Regular.ttf') format('truetype');
+// }
+
+// @font-face {
+//     font-family: 'Spoqa Han Sans';
+//     font-weight: 300;
+//     src: local('Spoqa Han Sans Light'),
+//     url('/assets/fonts/Spoqa Han Sans Light.woff2') format('woff2'),
+//     url('/assets/fonts/Spoqa Han Sans Light.woff') format('woff'),
+//     url('/assets/fonts/Spoqa Han Sans Light.ttf') format('truetype');
+// }
+
+// @font-face {
+//     font-family: 'Spoqa Han Sans';
+//     font-weight: 100;
+//     src: local('Spoqa Han Sans Thin'),
+//     url('/assets/fonts/Spoqa Han Sans Thin.woff2') format('woff2'),
+//     url('/assets/fonts/Spoqa Han Sans Thin.woff') format('woff'),
+//     url('/assets/fonts/Spoqa Han Sans Thin.ttf') format('truetype');
+// }

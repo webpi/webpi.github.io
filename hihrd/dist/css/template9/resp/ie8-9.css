@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* 로딩중 */
+.loading .loading-box svg { display: none; }
+
+.loading .loading-box { width: 140px; height: 200px; padding-top: 0; background: url("/images/template9/resp/default/usr/spinner.gif") no-repeat 50% 0; background-size: cover; }
+
+.loading .loading-box .loading-txt { display: none; }
+
+/* form */
+/* select */
+.slt, .selectBox { min-width: 115px; }
+
+.slt:before, .selectBox:before { content: ""; display: block; position: absolute; top: 0; width: 20px; height: 100%; background: #fff; }
+
+.slt select, .selectBox .selectbox { position: static !important; padding-right: 0 !important; }
+
+.slt-medium select { padding-right: 15px !important; }
+
+.slt-large select { padding-right: 20px !important; }
+
+.slt-medium:before { right: 14px; }
+
+.slt-large:before { right: 19px; }
+
+.slt select:disabled, .selectBox .selectbox:disabled { position: relative !important; width: calc(100% + 40px) !important; padding-right: 12px !important; background: #d7d7d7 url("/images/template9/resp/default/usr/ico_down_sign.png") no-repeat !important; }
+
+.slt-medium select:disabled { background-position: 61% 50% !important; }
+
+.slt-large select:disabled { background-position: 57.5% 50% !important; }
+
+/* 공통 시간 그래프 */
+.graph-linear-ani .bar-ani { visibility: visible !important; }
+
+/* 나의 학습 활동현황 */
+.section-my .my-dashboard .selectBox .selectbox { padding-right: 15px !important; }
+
+.section-my .my-dashboard .selectBox:before { right: 14px; }
+
+.section-my .my-dashboard .selectBox:disabled { background-position: 61% 50% !important; }
+
+.section-my .my-status .graph-status-linear .bar-ani, .section-my .my-status .graph-status-radial .bar-ani { visibility: visible !important; }
+
+.popup-learning .learning-media.timeline-disabled:after { content: ""; position: absolute; left: 165px; bottom: 0; right: 200px; height: 64px; background: url("/images/template9/resp/default/usr/bg_transparent.gif") repeat 0 0; z-index: 2; }
+
+@media only screen and (max-width: 1199px) { .loading .loading-box { width: 110px; height: 157px; }
+  .popup-learning .learning-media.timeline-disabled:after { right: 130px; } }

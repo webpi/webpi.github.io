@@ -1,0 +1,446 @@
+@charset "utf-8";
+
+/* common */
+.selectBox {
+	border: 1px solid #dedede;
+	background: #ffffff url('/images/classroom/template2/default/bg_select.png') right 10px no-repeat;
+}
+select {
+	border: none;
+}
+
+/* layout */
+#wrap {/*  */
+	border-right: solid 1px #e3e3e3;
+	border-left: solid 1px #e3e3e3;
+}
+#header { 
+    background: #25323e;
+}
+#container {
+    background: #eaeaea;
+}
+#header > .btnArea button {
+    border-color: #e3e3e3;
+    border-left-color: #f8f8f8;
+    border-right-color: #f8f8f8;
+    background: #f8f8f8;
+}
+@media screen and (min-width: 1024px) {
+	#header > .btnArea button.btnMain {
+	    background: #f8f8f8 url('/images/classroom/template2/button/btn_header_main.png') 14px 9px no-repeat;
+	}
+	#header > .btnArea button.btnClosed {
+	    background: #f8f8f8 url('/images/classroom/template2/button/btn_header_closed.png') 19px 10px no-repeat;
+	}
+}
+#header .logo {
+    border-color: #e3e3e3;
+    background: #ffffff;
+}
+.gnbWrap h2 {
+    border-color: #525f6d;
+    color: #abd2ff;
+    background: url('/images/classroom/template2/default/icon_classroom.png') 30px center no-repeat;
+}
+.gnbWrap .gnb li {
+    border-color: #3e4d5c;
+    background: #2e3e4e;
+}
+.gnbWrap .gnb li.active {
+    background-color: #4588d1;
+    background-image: -moz-linear-gradient(top, #4a90d5, #407ecd);
+    background-image: -ms-linear-gradient(top, #4a90d5, #407ecd);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4a90d5), to(#407ecd));
+    background-image: -webkit-linear-gradient(top, #4a90d5, #407ecd);
+    background-image: -o-linear-gradient(top, #4a90d5, #407ecd);
+    background-image: linear-gradient(top, #4a90d5, #407ecd);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a90d5', endColorstr='#407ecd', GradientType=0);
+}
+.gnbWrap .gnb li a {
+    color: #dddddd;
+}
+.gnbWrap .gnb li:hover a {
+	background: url('/images/classroom/template2/navy/icon_gnb.png') right 20px no-repeat;
+}
+.gnbWrap .gnb li.active:hover a {
+	background: none;
+}
+
+@media screen and (max-width: 1023px) {
+	#header .gnbWrap {
+    	background: #25323e;
+	}
+
+}
+
+
+
+.gnb li:hover > a, .gnb > li.active > a {
+	color: #ffffff;
+}
+.gnb li li:hover {
+	border-color: #3981d7;
+	background: #3981d7;
+}
+.gnb li li li:hover {
+	border-color: #1d66bf;
+	background: #1d66bf;
+}
+.gnb li a.icon,
+.gnb li.active li a.icon {
+	background: url('../../../images/classroom/template1/gray/icon_gnb.png') no-repeat right 21px;
+}
+.gnb li:hover > a.icon,
+.gnb li.active a.icon,
+.gnb li.active li:hover > a.icon {
+	background: url('../../../images/classroom/template1/gray/icon_gnb_active.png') no-repeat right 21px;
+}
+
+#header .customer {
+    color: #77a4d8;
+}
+#header .customer strong {
+    color: #8697a8;
+}
+#header .customer .tel {
+    color: #77a4d8;
+}
+#header .customer button {
+    border-color: #515b65;
+    color: #ffffff;
+    background: #2e3e4e;
+}
+#header .customer button:hover {
+    border-color: #515b65;
+    color: #ffffff;
+    background: #2e3e4e;
+}
+
+.contentsWrap .headingBox {
+	border-color: #d9dddf;
+}
+.contentsWrap .headingBox .box .period span {
+	color: #494f54;
+}
+.contentsWrap .headingBox .box .period span em {
+    color: #f2444a;
+}
+.contentsWrap .headingBox .box .share .btnLike {
+	border-color: #656d72;
+	background: url('../../../images/classroom/template1/button/btn_share_like.png') center 13px no-repeat;
+}
+.contentsWrap .headingBox .box .share .btnRecommend {
+	border-color: #1b76cb;
+	background: url('../../../images/classroom/template1/button/btn_share_recommend.png') center 15px no-repeat;
+}
+.contentsWrap .headingBox .box .share .btnLike.active {
+	background: url('../../../images/classroom/template1/button/btn_share_like_active.png') center 13px no-repeat;
+}
+.contentsWrap .headingBox .box .share .btnRecommend.active {
+	background: url('../../../images/classroom/template1/button/btn_share_recommend_active.png') center 15px no-repeat;
+}
+.contentsWrap .headingBox .box .share button:hover:before {
+    color: #ffffff;
+    background: #4c4c4c;
+}
+.contentsWrap .headingBox .box .share button:hover:after {
+	content: " ";
+    position: absolute;
+ 	top: -9px; 
+    left: 22px;
+    margin-left: -5px;
+	border-top-color: #4c4c4c;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.contentsWrap .headingBox .box .share .active .number {
+    color: #f2444a;
+}
+.contentsWrap .headingBox .box .date strong {
+    color: #61696f;
+}
+.contentsWrap .headingBox .box .date p > span {
+	color: #ffffff;
+}
+.contentsWrap .headingBox .box .date p > span:before {
+	background: #494f54;
+}
+.contentsWrap .headingBox .box .date p > span:after {
+	background: #61696f;
+}
+.contentsWrap .contentsBox > h4 {
+ 	color: #2c2c2c;
+}
+
+
+/*popup*/
+ .popup > h3 {
+ 	color: #ffffff;
+    background: #61696f;
+}
+.popup > .btnClose,
+.popup > .btnClose:hover {
+	border: none;
+	background: url('../../../images/template2/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.popup .contentsWrap .contentsBox {
+	background: #ffffff;
+}
+ /* popupNotice */
+/* .popupNotice {
+    background: #9fc7e3;  
+}
+.popupNotice h3 {
+    color: #ffffff;
+	background: #0057a8;
+} */
+
+
+/* 버튼 */
+.btnJoin,  .btnSubmit, .btnSurvey, 
+.btnSave, .btnWrite, .btnModify, .popup .btnTest, .inside.btnReceive {
+	border: solid 1px #4587d1;
+    color: #ffffff;
+    background: #4587d1;
+}
+.btnJoin:hover,  .btnSubmit:hover, .btnSurvey:hover, 
+.btnSave:hover, .btnWrite:hover, .btnModify:hover, .popup .btnTest:hover,
+.inside.btnReceive:hover {
+	border: solid 1px #4587d1;
+    color: #4587d1;
+    background: #f0f6fb;
+}
+.activity a.btnView,
+.contentsBox > .title .btnDownload, .btnDownload,  
+.delivery button.btnModify, .btnResult, 
+.btnStudy, .inside.btnView, .btnTemporaryDone, 
+.btnClose, .btnCancel,
+.btnSearch, .btnList, .btnDelete, .btnCertify, 
+.btnPrev, .btnNext,
+.btnRefresh, .btnViewer, .btnContinuing, .btnSituation, .inside.btnDelivery, .inside.btnReview {
+	border: solid 1px #919191;	
+    color: #ffffff;	
+    background: #919191;
+}
+.activity a.btnView:hover,
+.contentsBox > .title .btnDownload:hover, .btnDownload:hover,
+.delivery button.btnModify:hover,
+.btnResult:hover, 
+.btnStudy:hover, .inside.btnView:hover, .btnTemporaryDone:hover,
+.btnClose:hover, .btnCancel:hover,
+.btnSearch:hover, .btnList:hover, .btnDelete:hover, .btnCertify:hover, 
+.btnPrev:hover, .btnNext:hover,
+.btnRefresh:hover, .btnViewer:hover, .btnContinuing:hover, .btnSituation:hover,
+.inside.btnDelivery:hover, .inside.btnReview:hover {
+	border: solid 1px #919191;	
+    color: #919191;	
+    background: #f6f6f6;
+}
+.btnTest, .btnLearning, h3 > .btnLearning, .btnResubmit, .inside.btnModify {
+	border: solid 1px #f0564c;	
+    color: #ffffff;	
+    background: #f0564c;
+}
+.btnLearning:hover, h3 > .btnLearning:hover, .btnResubmit:hover, .inside.btnModify:hover, .btnTest:hover {
+	border: solid 1px #f0564c;	
+    color: #f0564c;	
+    background: #fef2f1;	
+}
+.btnFind {
+	border: solid 1px #c4c4c4;
+	color: #2c2c2c;
+	background: #eaeaea;
+}
+.btnFind:hover {
+	border: solid 1px #c4c4c4;
+	color: #2c2c2c;
+	background: #fdfdfd;
+}
+.test dd.answer .explain .btnView, .btnReview, .listAttach .btnDownload, .softwareDown .btnDownload {
+	border: solid 1px #c4c4c4;	
+    color: #2c2c2c;	
+    background: #eaeaea;
+}
+.test dd.answer .explain .btnView:hover, .btnReview:hover, .listAttach .btnDownload:hover, .softwareDown .btnDownload:hover {
+	border: solid 1px #c4c4c4;		
+    color: #2c2c2c;	
+    background: #fdfdfd;
+}
+.listAttach .btnDownload, .softwareDown .btnDownload {
+	background: #eaeaea url('/images/template3/resp/default/button/btn_download.png') 61px center no-repeat;
+}
+.listAttach .btnDownload:hover, .softwareDown .btnDownload:hover {	
+	background: #fdfdfd url('/images/template3/resp/default/button/btn_download.png') 61px center no-repeat;
+}
+.listAttach .btnDelete, .listAttach .btnDelete:hover {
+	background: url('/images/template3/resp/default/button/btn_delete.png') 0 0 no-repeat;
+}
+
+/* paging */
+.paging a { 
+    border: none;
+}
+.paging a:hover,
+.paging a.active {
+    color: #ffffff;
+    background: #4587d1;
+}
+.paging .btnFirst {
+    background: #ffffff url('/images/classroom/template2/button/btn_paging.png') 0 0 no-repeat;
+}
+.paging .btnFirst:hover {
+	background: #4587d1 url('/images/classroom/template2/button/btn_paging_hover.png') 0 0 no-repeat;
+}
+.paging .btnPrev {
+	background: #ffffff url('/images/classroom/template2/button/btn_paging.png') -30px 0 no-repeat;
+}
+.paging .btnPrev:hover {
+    border: none;
+	background: #4587d1 url('/images/classroom/template2/button/btn_paging_hover.png') -30px 0 no-repeat;
+}
+.paging .btnNext {
+    background: #ffffff url('/images/classroom/template2/button/btn_paging.png') -60px 0 no-repeat;
+}
+.paging .btnNext:hover {
+    border: none;
+	background: #4587d1 url('/images/classroom/template2/button/btn_paging_hover.png') -60px 0 no-repeat;
+}
+.paging .btnLast {
+    background: #ffffff url('/images/classroom/template2/button/btn_paging.png') -90px 0 no-repeat;
+}
+.paging .btnLast:hover {
+	background: #4587d1 url('/images/classroom/template2/button/btn_paging_hover.png') -90px 0 no-repeat;
+}
+
+
+/* agora */
+.contentsBox > .comment {
+	margin-top: 20px;
+	border: solid 1px #dedede;
+	background: #f8f8f8;
+}
+.comment .btnArea .btnAttach {
+	border: solid 1px #8e9599;
+}
+.comment .btnArea .btnAttach.file {
+	background: #ffffff url('../../../images/template3/resp/default/button/btn_attach_file.png') center center no-repeat;
+}
+.comment .btnArea .btnAttach.photo {
+	background: #ffffff url('../../../images/template3/resp/default/button/btn_attach_photo.png') center center no-repeat;
+}
+.profileImg {
+	background: url('../../../images/template3/resp/default/usr/bg_default_profile.png') center center no-repeat;
+	background-size: 100%;
+}
+.profileBg {
+	background: url('../../../images/template3/resp/default/usr/bg_profile.png') 0 0 no-repeat;
+	background-size: 100%;
+}
+.feed li {
+	border-top: solid 1px #d9dddf;
+}
+.feed li:first-child {
+	border-top: none;
+}
+.feed li .btnDelete, .memoView li .btnDelete {
+	background:	url('/images/template3/resp/default/button/btn_delete_mini.png') center center no-repeat;
+}
+.feed li .textBox .share .icon {
+	color: #333333;
+}
+.feed li .textBox .share .icon.like {
+	background: url('../../../images/template3/resp/default/usr/icon_like.png') 0 center no-repeat;
+}
+.feed li .textBox .share .icon.select {
+	background: url('../../../images/template3/resp/default/usr/icon_select.png') 0 center no-repeat;
+}
+.feed li .textBox .share .icon.comment {
+	border-left: solid 1px #d9dddf;
+	background: url('../../../images/template3/resp/default/usr/icon_comment.png') 15px center no-repeat;
+}
+.feed li .textBox .box .date {
+	color: #8e9599;
+}
+.feed li .view li {
+	border-top: solid 1px #e7e9ea;
+}
+.feed li > .box {
+	border: solid 1px #dddddd;
+}
+.feed li>.box .imgBox img {
+	border: solid 1px #d9dddf;
+}
+.feed li>.box .textBox {
+	border: none;
+}
+.feed li .listAttach li {
+	border-top: none;
+}
+.feed>.btnArea {
+	border-top: solid 1px #d9dddf;
+}
+.feed>.btnArea .btnMore {
+	border: solid 1px #d9dddf;
+	border-top: none;
+}
+.sort li a,
+.sort li:before {
+	color: #8e9599;
+}
+.sort li.active a {
+	color: #333333;
+	background:	url('/images/template2/resp/default/usr/tab_sort_active.png') 0 center no-repeat;
+}
+.commentList {
+	border-top: 2px solid #5e5e5e;	
+}
+.commentList li {
+	border-bottom: solid 1px #d9dddf;
+}
+.commentList li .btnDelete {
+	background:	url('/images/classroom/template1/button/btn_delete_mini.png') center center no-repeat;
+}
+.commentList li .btnModify {
+	background:	url('/images/classroom/template1/button/btn_modify_mini.png') center center no-repeat;
+}
+.commentList li .btnCancel {
+	background:	url('/images/classroom/template1/button/btn_cancel_mini.png') center center no-repeat;
+}
+.commentList li p+p span {
+	color: #8e9599;
+}
+.commentList li p+p .date:before {
+	border-left: solid 1px #a0a5a9;
+}
+
+
+/*popup*/
+ .popup > h3 {
+ 	color: #ffffff;
+    background: #2e3e4e;
+}
+.popup > .btnClose,
+.popup > .btnClose:hover {
+	border: none;
+	background: url('../../../images/template5/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.popup .contentsWrap .contentsBox {
+	background: #ffffff;
+}
+ /* popupNotice */
+/* .popupNotice {
+    background: #9fc7e3;  
+}
+.popupNotice h3 {
+    color: #ffffff;
+	background: #0057a8;
+} */
+
+.wrong { 
+	color: #f0564c;
+}
+.correct {
+	color: #17adad;
+}

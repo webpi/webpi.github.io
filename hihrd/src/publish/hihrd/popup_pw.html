@@ -1,0 +1,59 @@
+<div class="popup-password">
+    <div class="popup-wrap">
+        <div class="popup-head">
+            비밀번호 변경
+        </div>
+
+        <div class="popup-body">
+            <!-- form 필요없을시 삭제 가능 -->
+            <form>
+                <fieldset>
+                    <legend><span>비밀번호 변경 입력</span></legend>
+
+                    <div class="popup-contents">
+                        <p class="dsc">영문, 숫자, 특수기호(!, @, # 등)를 모두 사용하여 최소 8자 이상으로 만들어 주세요.</p>
+
+                        <table class="popup-password-form">
+                            <caption><span>비밀번호 변경하기</span></caption>
+
+                            <tr>
+                                <th scope="row">
+                                    <label for="id-current-pw">기존 비밀번호</label>
+                                </th>
+                                <td>
+                                    <input type="password" id="id-current-pw" placeholder="기존 비밀번호" class="istyle istyle-large">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="id-new-pw">새로운 비밀번호</label>
+                                </th>
+                                <td>
+                                    <input type="password" id="id-new-pw" placeholder="새로운 비밀번호" class="istyle istyle-large">
+
+                                    <p class="new-pw-guide">영문, 숫자, 특수기호를 포함하여 입력해 주세요. 비밀번호는 8자 미만으로 구성하실 수는 없습니다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="id-new-pw-re">비밀번호 확인</label>
+                                </th>
+                                <td>
+                                    <input type="password" id="id-new-pw-re" placeholder="비밀번호 확인" class="istyle istyle-large">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="popup-bot">
+                        <button type="button" class="btn btn-color1-flat btn-large">저장</button>
+
+                        <button type="button" class="btn btn-basic btn-large">취소</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- <button type="button" class="btn-popup-clse"><span class="ir">닫기</span></button> -->
+    </div>
+</div>

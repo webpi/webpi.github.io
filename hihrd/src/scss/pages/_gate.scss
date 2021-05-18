@@ -1,0 +1,574 @@
+@charset "utf-8";
+
+#wrap-gate {
+    overflow: hidden;
+    min-width: 320px;
+}
+
+.section-gate {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .gate-bg {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 131px;
+        bottom: 0;
+        width: calc(100% - 524px);
+        min-height: calc(100vh - 131px);
+        text-align: center;
+
+        @include box-sizing;
+
+        //@include transition(all .25s);
+
+        .img {
+            max-width: 100%;
+            vertical-align: top;
+        }
+    }
+
+    .gate-wrap {
+        width: 320px;
+        margin-left: calc(100% - 524px);
+
+        padding: 100px 0 50px;
+
+        .bi {
+            overflow: hidden;
+            text-align: center;
+
+            .img {
+                max-height: 100%;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .gate-main {
+        margin-top: 50px;
+
+        .gate-main-top {
+            .gate-main-istyle {
+                display: block;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    width: 10px;
+                    height: 12px;
+                    margin-top: -6px;
+                    z-index: 1;
+                }
+
+                .istyle-gate {
+                    width: 100%;
+                    height: 40px;
+                    padding: 0 10px 0 40px;
+                    border: 1px solid #ededed;
+                    font-size: 16px;
+                    background: #ededed;
+                    line-height: 38px;
+                    vertical-align: top;
+
+                    @include box-sizing;
+                    @include border-radius(10px);
+                    @include opacity(80);
+                    @include transition(all .2s);
+
+                    &::placeholder {
+                        color: #888;
+                    }
+
+                    &:focus {
+                        border-color: #333;
+                        background: #fff;
+
+                        @include  box-shadow(0 2px 5px 0 rgba(85, 85, 85, 0.5));
+                    }
+                }
+
+                .label-gate {
+                    position: absolute;
+                    left: 20px;
+                    top: 0;
+                    font-size: 16px;
+                    color: #999;
+                    line-height: 40px;
+                    z-index: 1;
+                }
+
+                .istyle-gate-auth {
+                    width: calc(100% - 110px);
+                    margin-right: 10px;
+                }
+
+                .label-auth {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    margin-top: -8px;
+                    background: url("/images/template9/resp/default/usr/icon_auth.png") no-repeat;
+
+                    @include size(16px);
+
+                    &.label-auth-success {
+                        background-position: 0 0;
+                    }
+
+                    &.label-auth-fail {
+                        background-position: 100% 0;
+                    }
+                }
+
+                & + .gate-main-istyle {
+                    margin-top: 10px;
+                }
+            }
+
+            .gate-main-login {
+                .gate-main-istyle {
+                    &:before {
+                        background: url("/images/template9/resp/default/usr/ico_login.png") no-repeat;
+                    }
+
+                    &.gate-id:before {
+                        background-position: 0 0;
+                    }
+
+                    &.gate-pw:before {
+                        background-position: 100% 0;
+                    }
+                }
+            }
+
+            .gate-login-form{
+                position: relative;
+                padding-right: 110px;
+
+                .btn-gate-login {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 80px;
+                    height: 100%;
+                    border: 0;
+                    font-size: 16px;
+                    color: #fff;
+                    background: #5b58bf;
+
+                    @include  border-radius(10px);
+                }
+            }
+
+            .gate-login-account {
+                position: relative;
+                margin-top: 20px;
+                font-size: 13px;
+            }
+
+            .gate-main-icheck {
+                display: inline-block;
+                vertical-align: top;
+
+                .icheck-gate {
+                    overflow: hidden;
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    margin: -1px;
+                    font-size: 1%;
+                    z-index: -9999;
+                    clip: rect(1px, 1px, 1px, 1px);
+                    clip-path: inset(50%);
+                }
+
+                .label-gate {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 24px;
+                    vertical-align: top;
+                    line-height: 16px;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        border: 1px solid #333;
+                        background: #fff;
+
+                        @include size(14px);
+                    }
+                }
+
+                .icheck-gate:checked + .label-gate:before {
+                    background: #fff url("/images/template9/resp/default/usr/ico_check_gate.png") no-repeat 50% 50%;
+                }
+            }
+
+            .gate-main-account-menu {
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 0;
+                line-height: 16px;
+
+                .btn-gate-find {
+                    display: inline-block;
+                    position: relative;
+                    height: 16px;
+                    padding: 0 10px 0 11px;
+                    border: 0;
+                    font-size: 13px;
+                    background: none;
+                    vertical-align: top;
+                    line-height: 16px;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 2px;
+                        width: 1px;
+                        height: 12px;
+                        background: #ccc;
+                    }
+
+                    &:first-child {
+                        padding-left: 0;
+
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .gate-main-noti {
+                padding: 19px 10px 18px;
+                border: 1px solid #a9a9a9;
+
+                @include border-radius(10px);
+
+                .tit-h2 {
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-align: center;
+                }
+
+                .gate-main-noti-guide {
+                    margin-top: 10px;
+                    color: #777;
+
+                    li {
+                        position: relative;
+                        padding-left: 15px;
+                        font-size: 14px;
+                        line-height: 1.4;
+
+                        strong {
+                            color: #222;
+                            font-weight: 500;
+                        }
+
+                        &:first-letter {
+                            margin-left: -15px;
+                        }
+
+                        & + li {
+                            margin-top: 4px;
+                        }
+                    }
+                }
+            }
+
+            .gate-form-bot {
+                margin-top: 20px;
+                font-size: 0;
+
+                .btn-gate-form {
+                    height: 40px;
+                    margin-left: 10px;
+                    border: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                    background: #fff;
+
+                    @include  border-radius(10px);
+
+                    &.btn-gate-submit {
+                        width: calc(100% - 110px);
+                        background: #5b58bf;
+                    }
+
+                    &.btn-gate-cncl {
+                        width: 100px;
+                        background: #999;
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .btn-auth-send {
+                width: 100px;
+                height: 40px;
+                border: 1px solid #5b58bf;
+                font-size: 14px;
+                font-weight: 400;
+                background: #fff;
+
+                @include  border-radius(10px);
+            }
+
+            // 아이디 찾기
+            .gate-main-id {
+                .gate-id-form {
+                    margin-top: 40px;
+                }
+
+                .gate-main-istyle {
+                    font-size: 0;
+
+                    .istyle-gate {
+                        padding-left: 107px;
+                    }
+                }
+            }
+
+            // 아이디 찾기 결과
+            .gate-main-id-result {
+                text-align: center;
+
+                .gate-main-result-box {
+                    margin-bottom: 30px;
+                    padding: 20px 10px;
+                    border: 1px solid #a9a9a9;
+
+                    @include border-radius(10px);
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        margin: 0 auto 7px;
+                        background: url("/images/template9/resp/default/usr/ico_circleman.png") no-repeat 0 0;
+
+                        @include  size(24px);
+                    }
+                }
+
+                .gate-main-result-msg {
+                    font-size: 16px;
+                    line-height: 1.3;
+
+                    strong {
+                        color: #5b58bf;
+                        font-weight: 500;
+                    }
+                }
+
+                .gate-main-result-noti {
+                    margin-top: 10px;
+                    font-size: 13px;
+                }
+
+                .btn-login-go {
+                    width: 100%;
+                    height: 40px;
+                    border: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                    background: #5b58bf;
+
+                    @include  border-radius(10px);
+                }
+
+                a.btn-login-go {
+                    display: inline-block;
+                    line-height: 40px;
+                    vertical-align: top;
+                }
+            }
+
+            // 비밀번호 찾기
+            .gate-main-pw,
+            .gate-main-pw-result {
+                .gate-pw-form {
+                    margin-top: 40px;
+                }
+
+                .gate-main-istyle {
+                    font-size: 0;
+                }
+            }
+
+            .gate-main-pw {
+                .gate-main-istyle {
+                    .istyle-gate {
+                        padding-left: 107px;
+                    }
+                }
+            }
+
+            // 비밀번호 설정
+            .gate-main-pw-result {
+                .gate-main-istyle {
+                    .istyle-gate {
+                        padding: 0 40px 0 138px;
+                    }
+                }
+            }
+        }
+
+        .gate-main-contents {
+            margin-top: 40px;
+            padding: 16px 10px 20px;
+            border: 1px solid #a9a9a9;
+            text-align: center;
+
+            @include border-radius(10px);
+
+            .tit-h2 {
+                font-size: 16px;
+                font-weight: 500;
+
+                span {
+                    color: #8d58b6;
+                }
+            }
+
+            .gate-main-help {
+                font-size: 0;
+
+                .tit-h2 {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .gate-main-help-tel {
+                    display: inline-block;
+                    margin-left: 10px;
+                    font-size: 20px;
+                    color: #8d58b6;
+                    vertical-align: middle;
+
+                    strong {
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .gate-main-businesshours {
+                margin-top: 8px;
+                font-size: 14px;
+                color: #777;
+                font-weight: 400;
+
+                span {
+                    display: block;
+                    margin-top: 8px;
+                }
+            }
+
+            .gate-main-app {
+                margin-top: 20px;
+                padding: 0 11px;
+
+                @include clear;
+
+                li {
+                    float: left;
+                    padding: 0 9px;
+                    font-size: 14px;
+                    color: #777;
+                    font-weight: 400;
+                }
+
+                .gate-main-app-platform {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                }
+
+                .btn-main-app {
+                    display: block;
+                    position: relative;
+                    width: 120px;
+                    height: 40px;
+                    margin: 0 auto;
+                    padding: 0 10px 0 50px;
+                    font-size: 0;
+                    color: #777;
+                    background: #333;
+                    text-align: left;
+
+                    @include border-radius(6px);
+                    @include box-sizing;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left: 20px;
+                        top: 50%;
+                    }
+
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        width: 0;
+                        height: 100%;
+                        vertical-align: middle;
+                    }
+
+                    span {
+                        display: inline-block;
+                        font-size: 12px;
+                        vertical-align: middle;
+                        line-height: 1.2;
+                    }
+
+                    &.btn-playstore {
+                        &:before {
+                            margin-top: -10px;
+                            background: url("/images/template9/resp/default/usr/app_sprite.png") no-repeat 0 0;
+
+                            @include size(20px);
+                        }
+                    }
+
+                    &.btn-appstore {
+                        &:before {
+                            width: 16px;
+                            height: 20px;
+                            margin-top: -10px;
+                            background: url("/images/template9/resp/default/usr/app_sprite.png") no-repeat -25px 0;
+                        }
+                    }
+                }
+            }
+
+            .gate-main-app-ios {
+                margin-top: 15px;
+                font-size: 12px;
+                color: #999;
+                line-height: 1.5;
+                word-break: break-all;
+            }
+
+            & + .gate-main-contents {
+                margin-top: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,596 @@
+@charset "utf-8";
+
+/* 웹폰트 CSS */
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/font/NanumGothic.woff) format('woff'),
+		 url(/font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 700;
+	src: url(/font/NanumGothicBold.woff) format('woff'),
+		 url(/font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 800;
+	src: url(/font/NanumGothicExtraBold.woff) format('woff'),
+		 url(/font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+/* CSS 초기화 */
+*, html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font-family: 'Nanum Gothic','dotum', serif, arial;
+	box-sizing: border-box;
+	outline: 0;
+	vertical-align: middle;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+	display:block;
+}
+nav ul, li, ul, ol {
+	list-style:none;
+}
+blockquote, q {
+    quotes: none;
+}
+address {
+	font-style: normal;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+caption, legend, .hidden {
+	visibility:hidden;
+	position:absolute;
+	left:-9999em;
+	width:1px;
+	height:1px;
+	background:none;
+	font-size:0;
+	line-height:0;
+	text-indent:-9999em;
+}
+body {
+	line-height: 1;
+	color: #313538;	
+	font-size: 0.81em; /* 13/16 */
+	line-height: 20px;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+a {
+    color: #2c2c2c;
+    text-decoration: none;
+}
+a:hover {
+    color: #225fa4;
+}
+
+/* h */
+h4 { 
+    font-size: 1.38em;
+    margin-bottom: 25px;
+}
+h5 { 
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+h6 {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 1.15em; 
+}
+
+/* form */
+input[type="text"], input[type="search"] {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px 1px;
+	border: 1px solid #dedede;
+	box-sizing: border-box;
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance:none;
+	appearance:none;
+	background: #ffffff;
+}
+textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #dedede;
+}
+input.large {
+	display: inline-block;
+	width: 100%;	
+}
+input.medium {
+	display: inline-block;
+	width: 60%;	
+}
+input.small {
+	display: inline-block;
+	width: 40%;	
+}
+input.mini {
+	display: inline-block;
+	width: 20%;	
+}
+.selectBox {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	vertical-align: middle;
+}
+select {
+	position: relative;
+    top: 0;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    padding: 0px 22px 0px 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: none;
+}
+select::-ms-expand { 
+ 	display: none;
+}
+
+.radioncheckbox {
+	display: inline-block;
+}
+.radioncheckbox input:first-child {
+	margin: 0px 5px 0px 10px;
+}
+.radioncheckbox label {
+	margin: 0 15px 0 5px;
+}
+
+
+/* search */
+.search {
+	margin-bottom: 15px;
+	text-align: right;
+}
+.search label {
+	display: none;
+}
+.search input {
+	width: 200px;
+}
+.searchBox {
+    margin-bottom: 10px;
+    text-align: right;	
+}
+
+
+/* box */
+.boxGray {
+/* 	line-height: 25px; */
+	margin-bottom: 30px;
+/* 	padding: 30px 40px; *//* 
+	*/
+	padding: 4% 4.94% 3% 4.94%; 
+    background: #fafafa;	
+}
+.textBox {/* 
+	display: table; */
+	display: block;
+	width: 100%;
+}
+.textBox > .imgBox {
+	display: table-cell;
+	width: 74px;
+	vertical-align: top;
+}
+.textBox > .imgBox + .box {
+	display: table-cell;
+	padding-left: 20px;
+	vertical-align: top;
+}
+.textBox .imgBox + .box strong.title {
+	display: block;
+	font-size: 1.15em;
+	margin-bottom: 10px;
+}
+.textBox .imgBox + .box ul li p {
+	margin: 0;
+}
+.textBox .info, .info {
+	color: #1d66bf;
+}
+.popup .textBox { /*보충/심화학습 팝업 */
+	 margin-bottom: 10px;
+}
+.popup .boardList + .textBox { 
+	 margin-top: 20px;
+}
+.bult {
+	position: relative;
+	padding-left: 17px;
+	line-height: 22px;
+}
+.bult:before {
+	content: " ";
+	position: absolute;
+	top: 9px;
+	left: 5px;
+	width: 3px;
+	height: 3px;
+	background: #292f37;
+}
+
+@media screen and (max-width: 568px) {
+	.textBox .imgBox, .textBox .box {
+		display: block;
+		vertical-align: top;
+	}
+	.textBox .imgBox {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 3%;
+	}
+	.textBox > .imgBox + .box {
+		padding-left: 0px;
+	}	
+}
+.textBox .box p  {
+	vertical-align: 0;	
+}
+.content > .textBox > p  {
+	margin-bottom: 5px;
+}
+.textBox .box p:first-child  {
+	margin-top: 0px;
+}
+.textBox .box p em {
+	font-style: normal;
+    color: #f2444a;	
+    vertical-align: 0;
+}
+
+/* 정렬 */
+.alignLeft {
+    text-align: left !important;
+}
+.alignRight {
+    text-align: right !important;
+}
+.alignCenter {
+    text-align: center !important;
+}
+.floatLeft {
+	float: left !important;
+}
+.floatRight {
+	float: right !important;
+}
+
+/* text */
+em, .em {
+	color: #f0564c;
+	font-style: normal;
+}
+.em.type2 {
+	color: #225fa4;
+}
+/* text */
+.textBox .box em, .textBox .box .em, .textBox .box .em.type2 {
+	font-weight: 700;
+}
+
+/* icon */
+.new {
+	display: inline-block;
+	width: 12px;
+	height: 13px;
+	margin-left: 5px;
+	font-size: 0;
+	background: url('/images/classroom/template2/navy/icon_new.png') 0px 0px no-repeat;
+}
+
+/* fileAttach */
+.fileAttach {
+	position: relative;
+	width: auto;
+}
+.fileAttach .textInput {
+	 width: calc(100% - 85px);
+}
+.fileAttach input[type="file"] {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    border: none;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.fileAttach .btnFind {
+	display: inline-block;
+	margin-left: 5px;
+}
+.listAttach {
+	padding: 10px 0;
+}
+.listAttach li {
+	margin-top: 7px;
+}
+.listAttach li:first-child {
+	margin-top: 0;
+}
+.listAttach .btnDownload, .softwareDown .btnDownload {
+	min-width: 82px;
+	height: 23px;
+	line-height: 21px;
+	padding: 0 9px 0 9px;
+	margin-left: 5px;
+	text-align: left;
+	font-size: 0.92em;
+}
+.listAttach .btnDelete, .listAttach .btnDelete:hover {
+	min-width: 0;
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	font-size: 0;
+	border: none;
+}
+.listAttach .mobile {
+	display: none;
+}
+.ppt {
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/ppt.png') no-repeat;
+}
+.pdf {
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/pdf.png') no-repeat;
+}
+.doc {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/doc.png') no-repeat;
+}	
+.xls {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/xls.png') no-repeat;
+}
+.txt {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/txt.png') no-repeat;
+}
+.hwp {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/hwp.png') no-repeat;
+}	
+.html {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/html.png') no-repeat;
+}
+.jpg {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/jpg.png') no-repeat;
+}
+.gif {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/gif.png') no-repeat;
+}
+.png {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/png.png') no-repeat;
+}
+.zip {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/zip.png') no-repeat;
+}
+
+
+/* button */
+.btnArea {
+	text-align: right;
+	margin-bottom: 20px;
+}
+/* .contentsBox .btnArea {
+	margin-top: 20px;
+} */
+button {
+	display: inline-block;	
+    text-align: center;
+    cursor: pointer;
+}
+.contentsBox button {
+	display: inline-block;	
+    text-align: center;
+    cursor: pointer;	
+	min-width: 88px;
+	height: 37px; 
+	line-height: 35px;
+    font-size: 1.15em;
+    font-weight: 700;
+}
+.contentsBox button.btnTest, .contentsBox button.btnWrite {
+	padding: 0 30px;
+}	 
+.contentsBox button.inside {
+	min-width: 70px;
+	height: 26px;
+	line-height: 24px;
+	padding: 0 12px;	
+	font-size: 1em;
+	font-weight: 400;
+	margin-bottom: 2px;
+}
+.contentsBox button.btnResubmit {
+	padding: 0 7px;
+	letter-spacing: -0.5px;
+}
+.contentsBox .inside.btnSearch, .contentsBox .inside.btnFind, .contentsBox button.btnCertify {
+	min-width: 74px;
+	height: 30px;
+	line-height: 28px;
+	font-size: 1em;	
+    font-weight: 700;	
+}
+.contentsBox button+button {
+	margin-left: 6px;
+}
+.commentList button.btnModify, .commentList button.btnDelete {
+	min-width: 60px;
+	height: 23px;	
+}
+.test dd.answer .explain .btnView, .btnReview {
+	min-width: 60px;
+	height: 23px;
+	line-height: 21px;
+	padding: 0px 9px;
+	font-size: 0.92em;			
+}	
+
+
+/* paging */
+.paging {
+	margin-top: 20px;
+	text-align: center;
+}
+.paging a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 -2px 0 -2px;
+    line-height: 28px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+}
+.paging a:hover,
+.paging a.active {
+	line-height: 28px;
+	text-decoration: none;
+} 
+.paging .btnFirst, .paging .btnPrev, .paging .btnNext, .paging .btnLast {
+	font-size: 0;
+}
+.paging .mobile {
+	display: none;
+}
+
+
+/* tab */
+.tab {
+	display: block;
+	height: 40px;
+	margin-bottom: 20px;
+}
+.tab ul li {
+	display: block;
+    float: left;
+    margin-right: 4px;
+	min-width: 150px;
+	height: 40px;
+}
+.tab li a {
+	position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    line-height: 40px;
+    border: 1px solid #bbbbbb;   
+    text-align: center;
+    color: #ffffff;   
+    font-size: 15px;
+    font-weight: 700;
+    background: #c4c4c4;   
+}
+.tab li a:hover,
+.tab li.active a {
+	height: 40px;
+	border: solid 1px #3b7aca;
+	background: #4587d1;
+}
+.tab li a:hover:before,
+.tab li.active a:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	bottom: -6px;
+	left: 50%;
+	margin-left: -5px;
+	border-top: 6px solid #4587d1;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	z-index: 20;
+}
+.tab li a:hover:after,
+.tab li.active a:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	margin-left: -6px;
+	border-top: 8px solid #3b7aca;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	z-index: 10;
+}
+.dim {
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	background: url('/images/common/usr/bg_dimmed.png') repeat;
+}
+
+@media screen and (max-width: 1023px) {
+	.paging a {
+		display: none;
+	}
+	.paging .mobile {
+		display: inline-block;
+	}
+	.paging .btnFirst, .paging .btnPrev, .paging .btnLast {
+		display: inline-block;
+	}
+	.listAttach .mobile {
+		display: block;
+		margin-top: 10px;
+	}			
+}
+@media screen and (max-width: 414px) {
+	.tab ul li {
+		display: block;
+	    float: left;
+	    margin-right: 4px;
+		min-width: 48%;
+		height: 40px;
+	}
+}

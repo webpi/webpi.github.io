@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+#wrap {
+	overflow: hidden;
+}
+#contents {
+	position: relative;
+}
+.contentsWrap #contents > .headingBox {
+	position: relative;
+	width: 100%;
+    height: 87px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.contentsWrap #contents > .headingBox h3 {
+	display: block;
+	margin: 0 auto;
+	width: 1000px;
+	line-height: 87px;
+	text-align: left;
+	font-size: 2.3em;	
+}
+.contentsWrap #contents > .headingBox .location {
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    width: 1000px;
+    line-height: 1;
+    text-align: right;
+    right: 50%;
+    margin-right: -500px;
+}
+
+.contentsWrap .contentsBox { 
+	margin: 0 auto;
+	width: 1000px;
+    min-height: 600px;
+	padding: 0 0 100px 0;
+}
+
+/*popup*/
+.popup {
+	position: relative;
+}
+.popup > h3 {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 1.54em;
+}
+.popup > .btnClose,
+.popup > .btnClose:hover {
+	position: absolute;
+	top: 17px;
+	right: 20px;
+	min-width: 16px;
+	height: 16px;
+	padding:0;
+    font-size: 0;
+}
+.popup .contentsWrap .contentsBox {
+	width: 100%;
+	padding: 20px;
+	min-height: 0;
+}
+ 
+ /* popupNotice */
+.popupNotice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.popupNotice h3 {
+	position: relative;
+	height: 40px;
+    line-height: 40px;
+    margin: 20px 20px 0;
+    padding: 0 25px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    font-size: 1.38em; /* 18/13 */
+}
+.popupNotice > .btnClose,
+.popupNotice > .btnClose:hover {
+	position: absolute;
+    top: 32px;
+    right: 45px;
+    min-width: 16px;
+	height: 16px;
+	padding:0;
+    font-size: 0;
+}
+.popupNotice .contentsWrap {
+	width: 100%;
+    height: 90%;
+    height: calc(100% - 63px);
+}
+.popupNotice  .contentsBox {
+	width: 100%;
+	min-height: 90%;
+    min-height: calc(100% - 25px);
+    padding: 25px;
+}
+.popupNotice .todayClose {
+	padding: 5px 10px 5px 10px;
+	text-align: right;
+}
+.popupLayer {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.popupLayer > h3 {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 1.54em;
+}
+.popupLayer > .btnClose,
+.popupLayer > .btnClose:hover {
+	position: absolute;
+	top: 17px;
+	right: 20px;
+	min-width: 16px;
+	height: 16px;
+	padding:0;
+    font-size: 0;
+}
+.popupLayer .contentsWrap {
+	width: 100%;
+    height: 90%;
+    height: calc(100% - 50px);
+}
+.popupLayer .contentsWrap .contentsBox{
+	width: 100%;
+	min-height: 90%;
+    min-height: calc(100% - 25px);
+    padding: 20px;
+}
+.popupLayer .todayClose {
+	padding: 0 20px;
+	text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+	.contentsWrap #contents > .headingBox {
+		height: 40px;
+		line-height: 40px;
+		margin-bottom: 0;
+	}
+	.contentsWrap #contents > .headingBox h3 {
+		width: 100%;
+		font-size: 1.15em;
+		padding: 0 15px;
+		line-height: 40px;
+	}
+	.contentsWrap #contents > .headingBox .location {
+		display: none;
+	}
+	.contentsWrap .contentsBox  {
+		width: 100%;
+	}
+}

@@ -1,0 +1,836 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    @@include('./src/publish/hihrd/comm/head.html')
+
+    <style>
+        .guide {
+            max-width: 1290px;
+            margin: 0 auto;
+            padding: 30px 15px 90px;
+            box-sizing: border-box;
+        }
+
+        .guide > .box {
+            margin-top: 90px;
+        }
+
+        .guide .h1 {
+            font-size:40px;
+        }
+
+        .guide .h2 {
+            font-size:26px; color:#ff0000; font-weight:bold; margin-bottom: 30px;
+        }
+
+        .guide .h3 {
+            font-size:22px;
+        }
+
+        .guide .h4 {
+            font-size:18px;
+        }
+
+        .guide .elements {
+            margin-top: 25px;
+            font-size: 0;
+        }
+
+        .guide .elements:first-child {
+            margin-top: 0;
+        }
+
+        .guide .elements .btn-large {
+            margin-right: 10px;
+        }
+
+        .guide .elements .btn-medium {
+            margin-right: 5px;
+        }
+
+        .btn-item-view {
+            margin-right: 10px;
+            vertical-align: top;
+        }
+
+        .btn-course-cancel {
+            margin-right: 10px;
+        }
+
+        .slt,
+        .selectBox {
+            margin-right: 5px;
+        }
+
+        .section-course {
+            height: auto;
+            padding: 0;
+            background: none;
+        }
+
+        .section-course .course-list {
+            margin: 0;
+        }
+
+        .section-popular {
+            height: auto;
+            padding: 0;
+            background: none;
+        }
+
+        .section-popular .popular-list {
+            margin: 0;
+        }
+
+        .section-trend {
+            height: auto;
+            padding: 0;
+            background: none;
+        }
+
+        .section-trend .trend-list {
+            margin: 0;
+            max-width: none;
+        }
+
+        .section-hot {
+            height: auto;
+            padding: 0;
+            background: none;
+        }
+
+        .section-hot .hot-list {
+            margin: 0;
+        }
+
+        .section-hot .hot-list .item {
+            opacity: 1;
+        }
+
+        .loading {
+            position: relative;
+        }
+
+        .loading .loading-box {
+            position: relative;
+            left: auto;
+            top: auto;
+            margin: 0 auto;
+            transform: translate(0, 0);
+        }
+
+        .search-keyword {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            @@include('./src/publish/hihrd/comm/header.html')
+        </header>
+        <!-- // header -->
+
+        <div class="guide">
+            <h1 class="h1">Markup Guide</h1>
+
+            <div class="box">
+                <h2 class="h2">text</h2>
+
+                <div class="elements">
+                    <div class="section-wrap">
+                        <h2 class="tit-h2">h2 텍스트 <strong>h2 텍스트</strong></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">Button</h2>
+                
+                <!-- a태그 변경 가능 -->
+                <div class="elements">
+                    <button type="button" class="btn btn-large btn-color1-flat">중요</button>
+
+                    <button type="button" class="btn btn-large btn-color1">중요</button>
+
+                    <button type="button" class="btn btn-basic btn-large">중요</button>
+
+                    <button type="button" disabled class="btn btn btn-large">비활성</button>
+                </div>
+
+                <div class="elements">
+                    <button type="button" class="btn btn-medium btn-color1-flat">중요</button>
+
+                    <button type="button" class="btn btn-medium btn-color1">중요</button>
+
+                    <button type="button" class="btn btn-basic btn-medium">중요</button>
+
+                    <button type="button" disabled class="btn btn btn-medium">비활성</button>
+                </div>
+
+                <div class="elements">
+                    <button type="button" class="btn-item-view">40%</button>
+
+                    <button type="button" class="btn-item-view">맛보기</button>
+
+                    <button type="button" class="btn-item-view">복습하기</button>
+
+                    <button type="button" class="btn-item-view btn-entrance">강의실<br>입장</button>
+
+                    <button type="button" class="btn-item-view btn-stay">수강대기</button>
+
+                    <button type="button" class="btn-item-view btn-enrolment">수강신청</button>
+                </div>
+
+                <div class="elements">
+                    <button type="button" class="btn-like"><span class="ir">좋아요 안함</span></button>
+
+                    <!-- 좋아요시 클래스 like 추가 -->
+                    <button type="button" class="btn-like like"><span class="ir">좋아요</span></button>
+
+                    <span class="link-wrap">
+                        <button type="button" class="btn-link">
+                            <span class="ir">url 복사</span>
+                        </button>
+
+                        <!-- 복사 완료시 활성 msg -->
+                        <span class="link-msg">
+                            <em class="btn-link-msg">링크가 복사되었습니다.</em>
+
+                            <button type="button" class="btn-link-clse js-btn-link-clse">
+                                <span class="ir">닫기</span>
+                            </button>
+                        </span>
+                        <!-- // 복사 완료 msg -->
+                    </span>
+                </div>
+
+                <div class="elements">
+                    <button type="button" class="btn btn-basic btn-medium btn-more-view">more</button>
+
+                    <button type="button" class="btn btn-basic btn-medium btn-more-view btn-more-clse">close</button>
+                </div>
+
+                <div class="elements">
+                    <button type="button" class="btn-course-cancel">수강취소</button>
+
+                    <button type="button" class="btn-ctfc-print">수료증 출력</button>
+                </div>                
+            </div>
+
+            <div class="box">
+                <h2 class="h2">select</h2>
+                
+                <div class="elements">
+                    <span class="slt slt-medium">
+                        <select title="선택">
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                        </select>
+                    </span>
+
+                    <span class="slt slt-medium">
+                        <select title="선택" disabled>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                        </select>
+                    </span>
+
+                    <span class="slt slt-large">
+                        <select title="선택">
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                        </select>
+                    </span>
+
+                    <span class="slt slt-large">
+                        <select title="선택" disabled>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                        </select>
+                    </span>
+
+                    <div class="selectBox">
+                        <select id="id-category" name="" isnull="" title="선택" class="selectbox">
+                            <option>선택</option>
+                            <option>과제문의</option>
+                            <option>학습문의</option>
+                            <option>복습문의</option>
+                        </select>
+                    </div>
+
+                    <div class="selectBox">
+                        <select id="id-category" name="" isnull="" title="선택" class="selectbox" disabled>
+                            <option>선택</option>
+                            <option>과제문의</option>
+                            <option>학습문의</option>
+                            <option>복습문의</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">input</h2>
+                
+                <div class="elements">
+                    <input type="password" id="" placeholder="" class="istyle istyle-medium">
+                </div>
+
+                <div class="elements">
+                    <input type="password" id="" placeholder="" class="istyle istyle-large">
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">Media</h2>
+                
+                <!-- 메인용 -->
+                <div class="elements">
+                    <section class="section-course">
+                        <div class="course-list">
+                            <div class="item">
+                                <div class="item-contents">
+                                    <div class="item-thumb">
+                                        <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+                                    </div>
+
+                                    <!-- 상세 -->
+                                    <div class="item-detail">
+                                        <button type="button" class="btn-item-view"><span class="ir">진행</span>40%</button>
+
+                                        <h3 class="tit-h3">트레이너 역할</h3>
+                    
+                                        <span class="period">교육기간 : 2020-05-01 ~ 2020-07-20</span>
+                    
+                                        <p class="dsc">과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의 이해와 원리 주요 질병의 스토리텔링 상담화법주요 질병 담보 연계 설계 전략 과정 정리 과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의  이해와 원리</p>
+                                    </div>
+                                    <!-- // 상세 -->
+
+                                    <!-- 과정 시간 -->
+                                    <div class="graph-linear item-time">
+                                        <span title="50%" class="bar" style="width: 50%">
+                                            <span class="bar-ani"></span>
+                                            <em class="ir">수강 시간</em>
+                                        </span>
+                                    </div>
+                                    <!-- // 과정 시간 -->
+                                </div>
+
+                                <div class="item-info">
+                                    <strong class="subject">트레이너 역할</strong>
+
+                                    <ul class="info">
+                                        <li class="cnt">
+                                            수강생 : 230
+                                        </li>
+                                        <li class="period">
+                                            교육기간 : 2020-05-01 ~ 2020-07-20
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <a href="#" class="lnk"><span class="ir">과정상세 바로가기</span></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 공통 -->
+                <div class="elements">
+                    <div class="media-item">
+                        <div class="item">
+                            <div class="item-contents">
+                                <div class="item-thumb">
+                                    <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+                                </div>
+
+                                <!-- 상세 -->
+                                <div class="item-detail">
+                                    <button type="button" class="btn-item-view btn-stay"><span class="ir">진행</span>수강대기</button>
+
+                                    <h4 class="tit-h4">트레이너 역할</h4>
+                
+                                    <span class="period">교육기간 : 2020-05-01 ~ 2020-07-20</span>
+                
+                                    <p class="dsc">과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의 이해와 원리 주요 질병 스토리텔링 상담화법주요 질병 담보 연계 설계 전략 과정 정리 과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의  이해와 원리</p>
+                                </div>
+                                <!-- // 상세 -->
+
+                                <!-- 과정 시간 -->
+                                <div class="graph-linear item-time">
+                                    <span title="50%" class="bar" style="width: 50%">
+                                        <span class="bar-ani"></span>
+                                        <em class="ir">수강 시간</em>
+                                    </span>
+                                </div>
+                                <!-- // 과정 시간 -->
+                            </div>
+
+                            <div class="item-info">
+                                <strong class="subject">트레이너 역할</strong>
+
+                                <ul class="info">
+                                    <li class="cnt">
+                                        수강생 : 230
+                                    </li>
+                                    <li class="period">
+                                        교육기간 : 2020-05-01 ~ 2020-07-20
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="view.html" class="lnk"><span class="ir">과정상세 바로가기</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elements">
+                    <section class="section-popular">
+                        <div class="popular-list">
+                            <div class="item">
+                                <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+    
+                                <div class="item-subject">
+                                    <span><em>3차월 : 시장개척</em></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="elements">
+                    <section class="section-popular">
+                        <div class="popular-list">
+                             <div class="item active">
+                                <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+    
+                                <div class="item-subject">
+                                    <span><em>3차월 : 시장개척</em></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="elements">
+                    <section class="section-trend">
+                        <div class="trend-list">
+                            <div class="item">
+                                <div class="item-thumb">
+                                    <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+
+                                    <div class="box">
+                                        <button type="button" class="btn-item-view">맛보기</button>
+                                    </div>
+
+                                    <a href="#" class="lnk"><span class="ir">과정상세 바로가기</span></a>
+                                </div>
+
+                                <div class="item-contents">
+                                    <a href="#">
+                                        <h3 class="tit-h3">사이버 질병상담 전문가 과정 사이버 질병상담 전문가 과정 사이버 질병상담 전문가 과정</h3>
+
+                                        <ul class="info">
+                                            <li class="cnt">
+                                                수강생 : 230
+                                            </li>
+                                            <li class="period">
+                                                교육기간 : 30일
+                                            </li>
+                                        </ul>
+
+                                        <p class="dsc">과정안내  영업트렌드 및 질병상담 핵심포인트 3대 질환의 이해 와원리 주요 질병의 스토리텔링 상담화법 주요 질병 담보 연계 설계전략 과정 정리 과정안내 영업트렌드 및 질병상담 핵심 포인트 3대 질환의 이해와 원리 주요 질병의 스토리텔링 상담 화법 주요 질병담보연계 설계 전략 과정 정리 과정안내 영업트</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>                                    
+                </div>
+
+                <div class="elements">
+                    <section class="section-hot">
+                        <div class="hot-list">
+                            <div class="item">
+                                <div class="item-thumb">
+                                    <a href="#"><img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정"></a>
+                                </div>
+
+                                <div class="item-contents">
+                                    <!-- 수강대기시 btn-stay 추가 -->
+                                    <button type="button" class="btn-item-view btn-stay">수강대기</button>
+
+                                    <a href="#">
+                                        <h3 class="tit-h3">7차월 하이플래너를 위한 보상컨설팅과정</h3>
+
+                                        <ul class="info">
+                                            <li class="cnt">
+                                                수강생 : 230
+                                            </li>
+                                            <li class="period">
+                                                교육기간 : 30일
+                                            </li>
+                                        </ul>
+
+                                        <p class="dsc">과정안내  영업트렌드 및 질병상담 핵심포인트 3대 질환의 이해 와원리 주요 질병의 스토리텔링 상담화법 주요 질병 담보 연계 설계전략 과정 정리 과정안내 영업트렌드 및 질병상담 핵심 포인트 3대 질환의 이해와 원리 주요 질병의 스토리텔링 상담 화법 주요 질병담보연계 설계 전략 과정 정리 과정안내 영업트...</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">badge</h2>
+
+                <div class="elements">
+                    <span class="badge-status">학습중</span>
+
+                    <!-- 학습완료 클래스 badge-close 추가 -->
+                    <span class="badge-status badge-close">학습완료</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">graph</h2>
+
+                <div class="elements">
+                    <div class="graph-linear">
+                        <span title="50%" class="bar" style="width: 50%"><em class="ir">수강 시간</em></span>
+                    </div>
+                </div>
+
+                <div class="elements">
+                    <div class="graph-linear-ani">
+                        <span title="50%" class="bar" style="width: 75%">
+                            <span class="bar-ani"></span>
+                            <em class="ir">수강 시간</em>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">댓글</h2>
+
+                <div class="elements">
+                    <div class="cmnt-wrap">
+                        <div class="cmnt-write">
+                            <!-- form 요소 필요없을시 삭제 가능 -->
+                            <form>
+                                <fieldset>
+                                    <legend><span>댓글쓰기</span></legend>
+
+                                    <textarea cols="50" rows="2" title="댓글입력" placeholder="수강후기를 남겨주세요." class="itext"></textarea>
+
+                                    <button type="button" class="btn-write-submit">등록</button>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <div class="cmnt-cnt">
+                            <strong>15</strong>개의 댓글이 있습니다.
+                        </div>
+
+                        <div class="cmnt-list">
+                            <div class="cmnt-item">
+                                <span class="cmnt-item-name">홍길동동</span>
+
+                                <div class="cmnt-item-content">
+                                    <p class="cmnt-item-cmnt">
+                                        이러이러한 내용도 추가되었으면 좋겠습니다. 좋은 강의라고 생각합니다.<span class="new">new</span>
+
+                                        <button type="button" class="btn-cmnt-del"><span class="ir">삭제</span></button>
+                                    </p>
+
+                                    <span class="cmnt-item-date">
+                                        2020-08-03 03:15:52
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="cmnt-item">
+                                <span class="cmnt-item-name">홍길동동</span>
+
+                                <div class="cmnt-item-content">
+                                    <p class="cmnt-item-cmnt">
+                                        이러이러한 내용도 추가되었으면 좋겠습니다. 좋은 강의라고 생각합니다.
+                                    </p>
+
+                                    <span class="cmnt-item-date">
+                                        2020-08-03 03:15:52
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="cmnt-item">
+                                <span class="cmnt-item-name">홍길동동</span>
+
+                                <div class="cmnt-item-content">
+                                    <p class="cmnt-item-cmnt">
+                                        이러이러한 내용도 추가되었으면 좋겠습니다. 좋은 강의라고 생각합니다. 이러이러한 내용도 추가되었으면 좋겠습니다. 좋은 강의라고 생각합니다. 이러이러한 내용도 추가되었으면 좋겠습니다. 좋은 강의라고 생각합니다.
+                                    </p>
+
+                                    <span class="cmnt-item-date">
+                                        2020-08-03 03:15:52
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cmnt-more">
+                            <button type="button" class="btn btn-basic btn-medium btn-more-view">more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">파일업로드</h2>
+
+                <div class="elements">
+                    <div class="file-upload">
+                        <span class="btn btn-color1 btn-large btn-file-upload">
+                            <input type="file" id="id-file" class="ifile">
+                            
+                            파일찾기
+                        </span>
+
+                        <!-- 파일리스트 -->
+                        <ul class="file-upload-list">
+                            <li>
+                                <span class="file-upload-name">진도율확인.jpg</span>
+
+                                <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                            </li>
+                            <li>
+                                <span class="file-upload-name">진도율확인.jpg</span>
+
+                                <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                            </li>
+                            <li>
+                                <span class="file-upload-name">진도율확인.jpg</span>
+
+                                <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                            </li>
+                            <li>
+                                <span class="file-upload-name">진도율확인.jpg 진도율확인.jpg 진도율확인.jpg 진도율확인.jpg 진도율확인.jpg 진도율확인.jpg</span>
+
+                                <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                            </li>
+                            <li>
+                                <span class="file-upload-name">진도율확인.jpg</span>
+
+                                <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                            </li>
+                        </ul>
+                        <!-- // 파일리스트 -->
+                    </div>
+                </div>
+
+                <div class="elements">
+                    <div class="file-upload file-upload-none">
+                        <!-- 파일리스트 -->
+                        <ul class="file-upload-list">
+                            <li>
+                                <a href="#">
+                                    <span class="file-upload-name">진도율확인.jpg</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="file-upload-name">진도율확인.jpg</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- // 파일리스트 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">로딩중</h2>
+
+                <div class="elements">
+                    <div class="loading">
+                        <div class="loading-box">
+                            <svg class="loading-spin" viewbox="25 25 50 50">
+                                <circle class="loading-path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+                            </svg>
+                
+                            <span class="loading-txt">loading</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elements">
+                    <!-- 리스트 로딩중 -->
+                    <div class="content-loading">
+                        <img src="/images/template9/resp/default/usr/img_content_loading.gif" alt="로딩중">
+                    </div>
+                    <!-- // 리스트 로딩중 -->
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">팝업</h2>
+
+                <div class="elements">
+                    <!-- 비밀번호 변경 레이어 -->
+                    <div class="popup-password">
+                        <div class="popup-wrap">
+                            <div class="popup-head">
+                                비밀번호 변경
+                            </div>
+
+                            <div class="popup-body">
+                                <!-- form 필요없을시 삭제 가능 -->
+                                <form>
+                                    <fieldset>
+                                        <legend><span>비밀번호 변경 입력</span></legend>
+
+                                        <div class="popup-contents">
+                                            <p class="dsc">영문, 숫자, 특수기호(!, @, # 등)를 모두 사용하여 최소 8자 이상으로 만들어 주세요.</p>
+
+                                            <table class="popup-password-form">
+                                                <caption><span>비밀번호 변경하기</span></caption>
+
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="id-current-pw">기존 비밀번호</label>
+                                                    </th>
+                                                    <td>
+                                                        <input type="password" id="id-current-pw" placeholder="기존 비밀번호" class="istyle istyle-large">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="id-new-pw">새로운 비밀번호</label>
+                                                    </th>
+                                                    <td>
+                                                        <input type="password" id="id-new-pw" placeholder="새로운 비밀번호" class="istyle istyle-large">
+
+                                                        <p class="new-pw-guide">영문, 숫자, 특수기호를 포함하여 입력해 주세요. 비밀번호는 8자 미만으로 구성하실 수는 없습니다.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="id-new-pw-re">비밀번호 확인</label>
+                                                    </th>
+                                                    <td>
+                                                        <input type="password" id="id-new-pw-re" placeholder="비밀번호 확인" class="istyle istyle-large">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <div class="popup-bot">
+                                            <button type="button" class="btn btn-color1-flat btn-large">저장</button>
+
+                                            <button type="button" class="btn btn-basic btn-large">취소</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+
+                            <button type="button" class="btn-popup-clse"><span class="ir">닫기</span></button>
+                        </div>
+                    </div>
+                    <!-- // 비밀번호 변경 레이어 -->
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">컨텐츠 없을때</h2>
+
+                <div class="elements">
+                    <div class="empty-contents">
+                        등록된 컨텐츠가 없습니다.
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">하이라이트</h2>
+
+                <div class="elements">
+                    <em class="search-keyword">하이라이트</em>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2 class="h2">accordion ui</h2>
+
+                <div class="elements">
+                    <div class="accordion-list">
+                        <div class="accordion-item js-accordion-item active on">
+                            <div class="accordion-item-top js-btn-accordion">
+                                <span class="category">학습문의</span>
+
+                                <h3 class="tit-h3">
+                                    자료가 다운로드 되지않아요.
+                                </h3>
+
+                                  <span class="date">2020-07-30</span>
+                            </div>
+
+                            <div class="accordion-item-content js-accordion-box">
+                                <div class="accordion-item-question">
+                                    <div class="accordion-item-txt">
+                                        안되네용. 확인해주세요. 스샷 첨부할게요…. 안되네용. 확인해주세요. 스샷 첨부할게요…. 안되네용. 확인해주세요. 스샷 첨부할게요…. 안되네용. 확인해주세요. 스샷 첨부할게요….
+                                    </div>
+                                </div>
+
+                                <!-- 답변없을때 자기글 -->
+                                <div class="accordion-item-modify">
+                                    <button type="button" class="btn btn-color1 btn-medium">수정</button>
+
+                                    <button type="button" class="btn btn-basic btn-medium">삭제</button>
+                                </div>
+                                <!-- // 답변없을때 자기글 -->
+                            </div>
+                        </div>
+
+                        <div class="accordion-item js-accordion-item">
+                            <div class="accordion-item-top js-btn-accordion">
+                                <span class="category">과제문의문의</span>
+
+                                <h3 class="tit-h3">
+                                    자료가 다운로드 되지않아요.
+                                </h3>
+
+                                <span class="date">2020-07-30</span>
+                            </div>
+
+                            <div class="accordion-item-content js-accordion-box">
+                                <div class="accordion-item-question">
+                                    <div class="accordion-item-txt">
+                                        안되네용. 확인해주세요. 스샷 첨부할게요…. 안되네용. 확인해주세요. 스샷 첨부할게요…. 안되네용. 확인해주세요. 스샷 첨부할게요…. 안되네용. 확인해주세요. 스샷 첨부할게요….
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        
+        <!-- footer -->
+        <footer class="footer">
+            @@include('./src/publish/hihrd/comm/footer.html')
+        </footer>
+        <!-- // footer -->
+    </div>
+
+    <!-- ui 스크립트 -->
+    <link rel="stylesheet" href="/js/template9/slick/slick.css">
+    <script src="/js/template9/slick/slick.js"></script>
+    <script src="/js/template9/style_pub.js"></script>
+</body>
+</html>
+        						      			

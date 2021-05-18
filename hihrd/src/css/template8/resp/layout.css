@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+#wrap {
+	position: relative;
+	overflow: hidden;
+}
+#header.gate {
+	text-align: center;
+}
+#gate {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 4% 4% 4%;
+	text-align: center;
+}
+
+#header .component6 {
+	padding: 13% 4% 7% 4%;
+}
+
+#container {
+	overflow: hidden;
+}
+#sub {
+    margin: 0 auto;
+    width: 100%;
+}
+#sub .lnb {
+    width: 100%;
+}
+#sub .lnb .banner{
+	display: none;
+}
+.lnb .component2 h2 {
+	display: none;
+}
+.lnb .component2 > ul {
+	overflow: auto;
+	margin-bottom: 0;
+	border: none;
+	border-bottom: 1px solid #dedede;
+}
+.lnb .component2 > ul li {
+	float: left;
+	width: 33.33%;
+	width: calc(100%/3);
+}
+.lnb .component2 ul li a {
+	border-top: none;
+	text-align: center;	
+	padding: 10px 0;
+	font-size: 1em;
+}
+.lnb .component2 ul li+li a {
+	border-left: 1px solid #dedede;	
+}
+.lnb .component2 ul li.active a {
+	color: #ffffff;
+	background: #4587d1;
+}
+#sub .contentsWrap {
+    width: 100%;
+    min-height: 360px; 
+    padding: 0 0 40px 0;
+}
+#sub .contentsWrap .headingBox {
+    display: none;
+}
+.webModule25 .title {
+	margin-bottom: 20px;
+	text-align: left;
+}
+.webModule27 {
+    border: 1px solid #e3e3e3;
+    border-top: none;
+    text-align: left;
+    background: #fafafa;
+}
+
+#footer .footerWrap {
+	border-top: 1px solid #eeeeee;
+}
+
+
+/* 팝업 */
+/* 레이어 팝업 */
+.popupLayer {
+	overflow-y: auto;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	display: table;
+	height: 100%;
+	z-index: 999;
+}
+.popup.modal {
+	display: table-cell;
+	width: 600px;
+	vertical-align: middle;
+	z-index: 999;
+}
+/*.popup.modal > .btnClose {*/
+/*	position: relative;*/
+/*	top: inherit;*/
+/*	right: inherit;*/
+/*	float: right;*/
+/*	margin-top: -40px;*/
+/*	margin-right: 10px;*/
+/*}*/
+.popup.modal > .btnClose {
+	position: absolute;
+    top: 17px;
+    right: 10px;
+}
+
+@media screen and (max-width: 1023px) {
+	.popupLayer {
+		margin-left: -50%;
+		padding-left: 4%;
+	}
+	.popup.modal {	
+		width: 96%;
+	}
+	.popup.modal > h3 { 
+		font-size: 1.38em;
+	}
+	.popup.modal p.info {
+		line-height: 18px;
+	}
+	.popup.modal h5 {
+		margin: 20px 0 5px;
+	}
+	.popup.modal .scrollBox {
+		overflow-y: auto;
+		height: 85px;
+		padding: 20px 10px;
+	}
+}
+.popupLayer .dim {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url('/images/common/usr/bg_dimmed.png') repeat;
+	z-index: 4;
+}
+.popup {
+	position: relative;
+}
+.popup > h3 { 
+	position:relative;
+	display: block;
+	line-height:1.5;
+	margin: 0;
+	padding: 10px 30px 11px 20px;
+	font-size: 1.54em;
+}
+
+.popup > h3 button , .popup > h3 button:hover  {
+	position:absolute;
+	top:7px;
+	right:5px;
+	min-width:15px;
+	border: none;
+	background: url('/images/template2/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+
+#header .component5 .box .logo {z-index:2;}
+
+.popup > .btnClose,
+.popup > .btnClose:hover {
+	min-width: 16px;
+	height: 16px;
+	padding:0;
+    font-size: 0;
+}
+.popup .contentsWrap .contentsBox {
+	width: 100%;
+	padding: 20px;
+	min-height: 0;
+}
+.popup .contentsWrap .contentsBox {
+	background: #ffffff;
+}
+.popup .contentsWrap .scrollDiv{
+	height: 650px;
+	overflow-y: auto;
+}
+.popup .todayClose {
+	padding: 5px 10px 5px 10px;
+	text-align: right;
+	background: #ffffff;
+}
+.popupNotice {
+    background: #9fc7e3;  
+}
+.popupNotice h3 {
+    color: #ffffff;
+	background: #0057a8;
+}
+.popupNotice .btnClose,
+.popupNotice .btnClose:hover {
+    border: none;
+	background: url('/images/template2/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.popupNotice  .contentsBox {
+    border: 20px solid #9fc7e3;
+    background: #ffffff;
+}
+.popupNotice .todayClose {
+	background: #333333;
+}
+.popupNotice .todayClose label {
+	color: #ffffff;
+}
+
+/* popupNotice */
+.popupNotice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.popupNotice h3 {
+	position: relative;
+	height: 40px;
+    line-height: 40px;
+    margin: 20px 20px 0;
+    padding: 0 25px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    font-size: 1.38em; /* 18/13 */
+}
+.popupNotice > .btnClose,
+.popupNotice > .btnClose:hover {
+	position: absolute;
+    top: 32px;
+    right: 45px;
+    min-width: 16px;
+	height: 16px;
+	padding:0;
+    font-size: 0;
+}
+.popupNotice .contentsWrap {
+	width: 100%;
+    height: 90%;
+    height: calc(100% - 63px);
+}
+.popupNotice  .contentsBox {
+	width: 100%;
+	min-height: 90%;
+    min-height: calc(100% - 25px);
+    padding: 25px;
+}
+.popupNotice .todayClose {
+	padding: 5px 10px 5px 10px;
+	text-align: right;
+}
+
+
+

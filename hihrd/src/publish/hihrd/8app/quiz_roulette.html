@@ -1,0 +1,2032 @@
+<html lang="ko"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    
+    <!-- sns meta -->
+    <meta property="fb:app_id" content="660833970743926">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    
+    <title>
+    	
+			
+			
+				학습자(MOBILE)
+			
+			
+	</title>
+    <script type="text/javascript">
+var jslang = "ko";
+</script>
+<script type="text/javascript" src="/js/common/multiLangSet.js"></script>
+</head><body style=""><iframe id="hiddenFrame" name="hiddenFrame" style="display:none" width="0" height="0" frameborder="0" title="ifrm"></iframe>
+<form id="hiddenForm" name="hiddenForm" style="display:none" target="hiddenFrame"><input type="hidden" name="mkey" id="mkey" value="6880"></form>
+<script type="text/javascript" charset="utf-8" src="/js/common/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/common/jquery/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/common/jquery/jquery.form.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/placeholders.js"></script>
+<script type="text/javascript" charset="utf-8" src="/se2/js/HuskyEZCreator.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/template8/style.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/template8/gauge.min.js"></script>
+<!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+<!--[if lt IE 9]>
+   <script src='/js/html5.js'></script>
+<![endif]-->
+<!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+<!--[if lt IE 9]>
+  <script src='/js/css3-mediaqueries.js'></script>
+ <![endif]-->
+<script type="text/javascript">
+jQuery.noConflict();
+</script>
+<script type="text/javascript" charset="utf-8" src="/js/common/common.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/common/common_util.js"></script>
+<script type="text/javascript">
+jQuery(function(){
+	jQuery('form').each(function(){
+		if(!jQuery(this).children('*').is('#mkey')){
+			jQuery("<input>",{type:'hidden',name:'mkey',id:'mkey',value:'6880'}).appendTo(this);
+		}
+	});
+});
+</script>
+
+	<link rel="stylesheet" type="text/css" media="all" href="/css/component_blue.css">
+<link rel="stylesheet" type="text/css" media="all" href="/css/template8/resp/template8.css">
+<link rel="stylesheet" type="text/css" media="all" href="/css/template8/resp/blue.css">
+<!--[if lt IE 10]>
+<link rel="stylesheet" type="text/css" media="all" href="/css/template8/resp/ie8-9.css" />
+<![endif]-->
+
+
+	
+	<script type="text/javascript" src="/js/common/sessionTimeCheck.js"></script>
+	<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript">
+		
+			initSessionTime('120');
+			
+			jQuery(document).ready(function(){
+				jQuery(".sliderNotice").show();
+				
+				
+				var sliderNotice = jQuery('.sliderNotice').bxSlider({
+			    	auto: true,
+			    	mode: 'vertical',
+			        pause: 4000,
+			        controls: false
+			    });
+				
+				
+			});
+			
+			function doNoticeDetailForLayout(pst_id){
+				jQuery("#noticeLayoutForm input[name=p_pst_id]").val(pst_id);
+				jQuery("#noticeLayoutForm input[name=mkey]").val("");
+				
+				var f = document.noticeLayoutForm;
+				f.action = "/usrs/bbs/usrsBbsPstDtlForm.do";
+				f.submit();
+			}
+		
+	</script>
+
+
+	<form name="noticeLayoutForm" id="noticeLayoutForm" method="post" onsubmit="return false;">
+		<input type="hidden" name="p_bbs_id" value="1">
+		<input type="hidden" name="p_pst_id" value="">
+		<input type="hidden" name="purl" value="/usrs/bbs/usrsBbsPstForm.do?p_bbs_id=1">
+	<input type="hidden" name="mkey" id="mkey" value="6880"></form>
+    <!-- #wrap start -->
+    <div id="wrap">
+        <!-- #header start -->
+        <div id="header" class="sub">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function(){
+		jQuery(".threeDepth").each(function(){
+			if(jQuery(this).find("li").length <= 0){
+				jQuery(this).remove();
+			}
+		});
+	});
+
+	function goMenu(url, cmkey){
+		jQuery("#form_menu").attr("action",url);
+		jQuery("#form_menu input[id=cmkey]").val(cmkey);
+		jQuery("#form_menu")[0].submit();
+	}
+	
+	function goMenuNewWin(url, cmkey){
+		jQuery("#form_menu").attr("action",url);
+		jQuery("#form_menu").attr("target","_blank");
+		jQuery("#form_menu input[id=cmkey]").val(cmkey);
+		jQuery("#form_menu")[0].submit();
+		jQuery("#form_menu").attr("target","");
+	}
+	
+	function goMenuPop(url, cmkey, width, height){
+		Center_Fixed_Popup2("", cmkey, width, height, "no");
+		jQuery("#form_menu").attr("action",url);
+		jQuery("#form_menu").attr("target",cmkey);
+		jQuery("#form_menu input[id=cmkey]").val(cmkey);
+		jQuery("#form_menu")[0].submit();
+		jQuery("#form_menu").attr("target","");
+	}
+	
+	function changeRole(role){
+		location.href = "/session/changeRole.do?p_role=" + role;
+	}
+	
+	function logout(){
+		location.href = "/common/logout.do";
+	}
+	
+	var maxZoom = parseFloat(2.0);
+	var minZoom = parseFloat(0.6);
+	var nowZoom = parseFloat(1.0);
+	
+	function plusZoom() {
+		if (maxZoom == nowZoom) {
+			return;
+		}
+		nowZoom = (parseFloat(nowZoom) + parseFloat(0.2)).toFixed(1);
+		applyZoom(nowZoom);
+	}
+
+	function minusZoom() {
+		if (minZoom == nowZoom) {
+			return;
+		}
+		nowZoom = (parseFloat(nowZoom) - parseFloat(0.2)).toFixed(1);
+		tmpZoom = nowZoom == 0 ? 0.1 : nowZoom;
+		applyZoom(tmpZoom);
+	}
+
+	function defaultZoom() {
+		document.location.href = document.URL;
+	}
+
+	function applyZoom(zoom) {
+		document.body.style.zoom =  zoom  ;
+		
+		document.body.style.webkitTransform =   'scale(' + zoom + ')' ;  //webkit
+		document.body.style.webkitTransformOrigin =   '0 0' ;   
+		document.body.style.MozTransform =   'scale(' + zoom + ')' ;  //Mozilla(firefox)
+		document.body.style.MozTransformOrigin =   '0 0' ;   
+		document.body.style.OTransform =   'scale(' + zoom + ')' ;  //Opera
+		document.body.style.OTransformOrigin =   '0 0' ;  
+		
+		/* 
+		var browser = navigator.userAgent.toLowerCase();
+		
+		if (browser.indexOf('safari') != -1 || browser.indexOf('chrome') != -1) {
+	        jQuery("#container").css('-webkit-transform', 'scale(' + zoom + ')');
+	        jQuery("#container").css('-webkit-transform-origin', '0 0');
+	    } else if (browser.indexOf('msie') != -1 || (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1)) {
+	    	jQuery("#container").css('zoom', zoom);
+	    } else {
+	    	jQuery("#container").css('-moz-transform', 'scale(' + zoom + ')');
+	    	jQuery("#container").css('-moz-transform-origin', '0 0');
+	    	jQuery("#container").css('-o-transform', 'scale(' + zoom + ')');
+	    	jQuery("#container").css('-o-transform-origin', '0 0');
+	    } */
+	}
+	
+	function doUnifiedSerach(text){
+		if(text != null && text != ""){
+			jQuery("#p_unified_srch_text").val(text);
+		}
+		
+		var srchText = jQuery("#p_unified_srch_text").val();
+		var hangulCheck = isHangulChar(srchText);
+		
+		if(srchText == null || srchText == ""){
+			alert("검색어를 입력해 주세요.");
+			return;
+		}else{
+			if(hangulCheck){
+				if(jsByteLength(srchText) < 6){
+					alert("두글자 이상 입력하세요.");
+					return;
+				}	
+			}else{
+				if(jsByteLength(srchText) < 2){
+					alert("두글자 이상 입력하세요.");
+					return;
+				}
+			}
+		}
+		
+		jQuery("#unifiedSerachForm input[name=p_unified_srch_text]").val(jQuery("#p_unified_srch_text").val());
+		jQuery("#unifiedSerachForm input[name=SRCHW]").val(jQuery("#p_unified_srch_text").val());
+		var f = document.unifiedSerachForm;
+		f.target = "_self";
+		f.mkey.value="";
+		f.action = "/usrs/eduRegMgnt/selectAllCrsListForm.do";	
+		f.submit();
+		f.action = "";
+	}
+	
+	function menuSearch(){
+
+		var searchCon = '.searchCon';
+
+		if(jQuery(searchCon).hasClass("active")){
+
+			jQuery(searchCon).removeClass("active");
+
+		}else{
+		
+			jQuery(searchCon).addClass("active");
+		
+		}
+	}
+</script>
+
+<form name="form_menu" id="form_menu" action="" method="post" onsubmit="return false;">
+	<input type="hidden" name="cmkey" id="cmkey" value="">
+<input type="hidden" name="mkey" id="mkey" value="6880"></form>
+<form name="unifiedSerachForm" id="unifiedSerachForm" action="" method="post" onsubmit="return false;">	
+	<input type="hidden" name="p_unified_srch_text" value="">
+	<input type="hidden" name="SRCHW" value="">
+<input type="hidden" name="mkey" id="mkey" value="6880"></form>
+
+<div class="component5 componentDiv">
+    <!-- box start -->
+    <div class="box">
+        <h1 class="logo">
+            
+				
+				
+					
+						
+							
+							
+								<a href="http://m.hihrd.co.kr:8081"><img src="/new_upload/homepage/logo/39/main_toplogo@blue.png"></a>
+							
+						
+					
+				
+			
+        </h1>
+        <div class="searchCon">
+			<div class="search">
+				<div class="searchInput">
+					<label for="">검색</label>
+					<input type="search" id="p_unified_srch_text" placeholder="과정명을 입력하세요." onkeydown="if(event.keyCode == '13'){doUnifiedSerach();}">
+				</div>
+				<button type="button" onclick="doUnifiedSerach()">검색</button>        
+			</div>
+		</div>
+        <ul class="zoom">
+			<li onclick="defaultZoom(); return false;">화면크기</li>
+			<li class="in" onclick="plusZoom(); return false;">
+				<a href="#" title="화면확대버튼">화면확대버튼</a>
+			</li>
+			<li class="out" onclick="minusZoom(); return false;">
+				<a href="#" title="화면축소버튼">화면축소버튼</a>
+			</li>
+        </ul>
+    </div>
+    <!-- //box end -->
+
+    <!-- gnbWrap start -->
+    <div class="gnbWrap">
+    
+		<!-- userInfo mobile start -->
+		
+			<div class="userInfo mobile">
+				<ul>
+			    	<li><strong>윌비소프트1</strong>님</li>
+			    	<li>
+			   			<button type="button" class="btnLogout" onclick="location.href='/common/logout.do';">로그아웃</button>
+			  		</li>
+				</ul>
+			</div>
+			
+		<!-- //userInfo mobile end -->  
+    
+        <!-- gnb start -->
+		<ul class="gnb">
+
+
+    <li class="oneDepth">
+				<a href="javascript:void(0)">
+수강신청</a>
+		<ul class="twoDepth">
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/eduRegMgnt/selectAllCrsListForm.do','6748')" class="two">
+수강신청</a>
+		<ul class="threeDepth">
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/eduRegMgnt/selectAllCrsListForm.do?p_srch_ctgry1=7','6748')">
+공통역량</a>
+				</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/eduRegMgnt/selectAllCrsListForm.do?p_srch_ctgry1=12','6748')">
+리더십역량</a>
+				</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/eduRegMgnt/selectAllCrsListForm.do?p_srch_ctgry1=24','6748')">
+자격증</a>
+				</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/eduRegMgnt/selectAllCrsListForm.do?p_srch_ctgry1=39','6748')">
+직무역량</a>
+				</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/eduRegMgnt/selectAllCrsListForm.do?p_srch_ctgry1=52','6748')">
+필수역량</a>
+				</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/eduRegMgnt/selectAllCrsListForm.do?p_srch_ctgry1=89','6748')">
+테스트</a>
+				</li>
+		</ul>
+		
+		</li>
+		</ul>
+    </li>
+    <li class="oneDepth">
+				<a href="javascript:void(0)">
+나의 강의실</a>
+		<ul class="twoDepth">
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/mypage/myCrsing.do','6556')">
+수강중인 과정</a>
+		
+		</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/mypage/myCrsreg.do','6567')">
+수강신청 과정</a>
+		
+		</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/mypage/myCrsComplete.do','6573')">
+수강완료 과정</a>
+		
+		</li>
+		</ul>
+    </li>
+    <li class="oneDepth">
+				<a href="javascript:void(0)">
+Membership</a>
+		<ul class="twoDepth">
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/portal/hi/serviceUseForm.do','7947')">
+서비스 이용약관</a>
+		</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/portal/hi/personalInfoForm.do','7948')">
+개인정보취급방침</a>
+		</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/portal/intrdc/emailRejectPopup.do','6737')">
+이메일무단수집거부</a>
+		</li>
+		</ul>
+    </li>
+    <li class="oneDepth">
+				<a href="javascript:void(0)">
+My Page</a>
+		<ul class="twoDepth">
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/myPage/selectUserInfoDetailForm.do','6678')">
+프로필 확인</a>
+		</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/lms/pushNotifi/selectPushNotifiMngtForm.do','7931')">
+알림 메시지</a>
+		
+		</li>
+		</ul>
+    </li>
+    <li class="oneDepth">
+				<a href="javascript:void(0)">
+고객센터</a>
+		<ul class="twoDepth">
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/bbs/usrsBbsPstForm.do?p_bbs_id=1','6880')">
+공지사항</a>
+		
+		</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/faq/UsrsFaqListForm.do','6885')">
+FAQ</a>
+		
+		</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/portal/customer/learningQuestionForm.do','6888')">
+1:1상담</a>
+		
+		</li>
+				<li>
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/bbs/usrsBbsPstForm.do?p_bbs_id=39','8106')">
+이벤트</a>
+		
+		</li>
+		</ul>
+    </li>
+
+		</ul>
+		<!-- //gnb  end -->
+    </div>
+    <!-- //gnbWrap  end --> 
+    
+    
+		<div class="userInfo">
+		    <div class="box">
+		        <ul>
+		            <li><strong>윌비소프트1</strong>님</li>
+		            <li>
+		                <button class="btnModify" type="button" onclick="location.href='/usrs/myPage/userInfoMgntForm.do';">회원정보수정</button>
+		            </li>
+		            <li>
+		                <button class="btnLogout" type="button" onclick="location.href='/common/logout.do';">로그아웃</button>
+		            </li>
+		        </ul>
+		    </div>
+		</div>
+	
+	
+    <button type="button" class="allMenu" onclick="menuMobile();">메뉴</button>
+    <button type="button" class="searchMenu" onclick="menuSearch();">검색</button>
+</div>
+
+        </div>
+        <!-- //#header end -->
+        
+        <!-- #container start -->
+        <div id="container">	
+        	<!-- #main start -->
+        	<div id="sub">
+
+			<!-- notice start -->
+				<div class="notice">
+					<div class="title">공지사항</div>
+					
+					<div class="list">
+						<div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 38px;"><ul class="sliderNotice" style="width: auto; position: relative; transition-duration: 0.5s; transform: translate3d(0px, -76px, 0px);"><li style="float: none; list-style: none; position: relative; width: 410px;" class="bx-clone">
+											<a href="javascript:void(0);" onclick="doNoticeDetailForLayout(199);">123</a>
+										</li>
+							
+								
+									
+										<li style="float: none; list-style: none; position: relative; width: 410px;">
+											<a href="javascript:void(0);" onclick="doNoticeDetailForLayout(204);">공지사항 메뉴에서 등록----수정</a>
+										</li>
+									
+								
+							
+								
+									
+										<li style="float: none; list-style: none; position: relative; width: 410px;">
+											<a href="javascript:void(0);" onclick="doNoticeDetailForLayout(203);">123123123 - 수정수정</a>
+										</li>
+									
+								
+							
+								
+									
+										<li style="float: none; list-style: none; position: relative; width: 410px;">
+											<a href="javascript:void(0);" onclick="doNoticeDetailForLayout(202);">제목이 길 경우는 제목이 길 경우는 제목이 길 경우는 123 456 789 제목이 길 경우는??</a>
+										</li>
+									
+								
+							
+								
+									
+										<li style="float: none; list-style: none; position: relative; width: 410px;">
+											<a href="javascript:void(0);" onclick="doNoticeDetailForLayout(199);">123</a>
+										</li>
+									
+								
+							
+								
+									
+								
+							
+								
+							
+							
+						<li style="float: none; list-style: none; position: relative; width: 410px;" class="bx-clone">
+											<a href="javascript:void(0);" onclick="doNoticeDetailForLayout(204);">공지사항 메뉴에서 등록----수정</a>
+										</li></ul></div><div class="bx-controls bx-has-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link active">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link">3</a></div><div class="bx-pager-item"><a href="" data-slide-index="3" class="bx-pager-link">4</a></div></div></div></div>
+					</div>
+				</div>
+				<!-- //notice end -->	
+        	
+        	    <!-- lnb start -->
+        		<div class="lnb">
+        			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<div class="component2">
+	<h2>고객센터</h2>
+    <ul>
+ 		<li class="active " style="width: 25%;">
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/bbs/usrsBbsPstForm.do?p_bbs_id=1','6880')">
+공지사항</a>
+   </li>
+	<li class="" style="width: 25%;">
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/faq/UsrsFaqListForm.do','6885')">
+FAQ</a>
+   </li>
+	<li class="" style="width: 25%;">
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/portal/customer/learningQuestionForm.do','6888')">
+1:1상담</a>
+   </li>
+	<li class="" style="width: 25%;">
+    <a href="javascript:goMenu('http://m.hihrd.co.kr:8080/usrs/bbs/usrsBbsPstForm.do?p_bbs_id=39','8106')">
+이벤트</a>
+   </li>
+	     
+    </ul>
+    
+	<div class="customer">
+		<div class="title">
+		    <strong>학습지원센터</strong>
+		</div>
+		<p class="tel">
+			
+			
+			
+				
+				
+				
+			
+		    <strong class="tel">1661-9061</strong>
+		</p>
+		<p class="time">
+		    <strong>평일</strong>
+		    <span>09:00 ~ 18:00</span>
+		</p>
+		<p class="time">
+		    <strong>점심</strong>
+		    <span>12:00 ~ 13:00</span>
+		</p>
+		<p>
+            <strong>토.일.공휴일</strong>
+            <span>휴무</span>
+        </p>
+		<div class="btnArea">
+			<a href="https://939.co.kr/hihrd/" target="_blank">원격지원서비스</a>
+			<a href="/usrs/portal/hi/learning.do">학습방법안내</a>
+		</div>
+	</div>			
+						
+    
+</div>
+ 
+
+	<script type="text/javascript">
+	jQuery(".component2").find(".twoDepth").hide();
+	
+	var target_element = jQuery(".component2 > ul").children(".active").closest("ul").children("li");
+	
+	if(target_element.length != 3){
+		target_element.each(function(index){
+			jQuery(this).css("width", 100 / target_element.length + "%");
+		});
+	}else{
+		target_element.css("width", "");
+	}
+	</script>
+
+
+        		</div>
+        		<!-- //lnb end -->
+        	
+        		<!-- contentsWrap start -->
+        		<div class="contentsWrap">
+        			<!-- #contents start -->
+        			<div id="contents">
+        			
+                 		<div class="headingBox">
+	        				<h3>공지사항</h3>
+	        				<span class="location">
+	        					<span>Home</span>&gt;
+	        					
+						        		<span>고객센터</span>&gt;
+						  		
+						       			<strong>공지사항</strong>
+						       	
+	        				</span>
+	        			</div>
+	        		
+	        			<!-- //headingBox end -->
+	        			<!-- contentsBox start -->
+	        			<div class="contentsBox">
+                 			
+
+
+
+
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/common/kakao.min.js"></script>
+<link rel="stylesheet" href="/css/mngs/video/video-js.css" type="text/css">
+<script type="text/javascript" src="/js/common/video/video.dev.js"></script>
+<script type="text/javascript">
+
+	var cmntListUrl = "/usrs/bbs/usrsBbsPstCmntList.do"; //댓글 리스트
+	var cmntInsertUrl = "/usrs/pot/bbs/bbsCmntWrite.do"; //댓글 등록
+	var cmntEditUrl = "/usrs/pot/bbs/bbsCmntEdit.do"; //댓글 수정
+	var cmntDeleteUrl = "/usrs/pot/bbs/bbsCmntDelete.do"; //댓글 삭제
+	
+	var pstWrithFormUrl = "/usrs/bbs/usrsBbsPstWriteForm.do"; //게시글 등록/수정 폼으로 이동
+	var pstDeleteUrl = "/usrs/pot/bbs/deleteBbsPst.do"; //게시글 삭제 */
+	var pstListUrl = "/usrs/bbs/usrsBbsPstForm.do"; //게시글 목록
+	
+	var pstNextIDUrl = "/usrs/bbs/usrsBbsPstNextIdChk.do"; //이전, 다음 상세화면
+	var pstDetailFormUrl = "/usrs/bbs/usrsBbsPstDtlForm.do"; //게시글 상세화면
+	/* var pstFavorUrl = "/usrs/bbs/usrsBbsPstFavorUpdate.do"; //좋아요 
+	var pwdChkPopUrl = "/usrs/bbs/usrsBbsPstPwdChkPopup.do"; //게시물 비밀번호 확인 팝업 */
+ 
+	var bvideo = true;
+	
+	jQuery(document).ready(function(){
+		cmntList('N');
+		
+		if(false){
+			if(bvideo)
+			{
+				video = videojs("video_1", {
+				    controls: true,
+				    preload: 'auto'
+				  });
+				bvideo = false;
+			}
+		}
+		
+		//이미지게시판 상세보기 레이어 팝업 (레이어 팝업 노출시 아무곳이나 클릭하면)
+		jQuery('.layer').click(function(e){  //배경을 클릭하면 레이어를 사라지게 하는 이벤트 핸들러
+			jQuery('.layer').fadeOut();
+			e.preventDefault();
+		});
+		
+		/* $(function () {
+			$('.rating-enable').click(function () {
+
+				$('#selectStar').barrating({ 
+					showSelectedRating:false,
+					onSelect:function(value, text) {
+                        jQuery("#p_starscr").val(value);
+                    }
+				});
+
+				$(this).addClass('deactivated');
+				$('.rating-disable').removeClass('deactivated');
+		    });
+
+			$('.rating-disable').click(function () {
+				$('select').barrating('destroy');
+				$(this).addClass('deactivated');
+				$('.rating-enable').removeClass('deactivated');
+		    });
+
+			$('.rating-enable').trigger('click');
+		}); */
+	});
+	
+	//댓글 리스트
+	function cmntList(more){
+		if(more == 'Y'){
+			jQuery("#p_cmnt_page").val(Number(jQuery("#p_cmnt_page").val())+1);
+		}else{
+			jQuery("#p_cmnt_page").val(1);
+		}
+		jQuery.ajax({
+			url: cmntListUrl,
+			cache : false,
+			dataType:'json',
+			data : {
+				p_bbs_id			: jQuery("#p_bbs_id").val(),
+				p_pst_id 			: jQuery("#p_pst_id").val(),
+				p_cmnt_page 		: jQuery("#p_cmnt_page").val(),
+				p_cmnt_listscale 	: "10",
+				p_dtl_cmnt_show_cnt : jQuery("#p_dtl_cmnt_show_cnt").val()
+			},
+			success : function(result){
+				if(result != null && result.list.length > 0){
+					if(more == "N"){
+						jQuery("#cmntForm").html("");
+						jQuery("#cmntForm").html(makeListTag(result.list));
+					}else{
+						jQuery("#cmntForm").append(makeListTag(result.list)); //기존 내용에 추가
+					}
+		
+					jQuery("#replyForm").show();
+				}else{
+					jQuery("#cmntMore").hide();
+					
+					var emptyHtml = "<li><div class='no_data'>등록된 댓글이 없습니다.</div></li>";
+					jQuery("#cmntForm").html("");
+					
+					if(false){
+						jQuery("#replyForm").hide();
+					}
+				}
+			}
+		});
+	}
+	function makeListTag(data){
+		var tag = "";
+		var modify_flag = false;
+		
+		jQuery.each(data,function(key, obj){
+			/* 2020.03.20 댓글 영역 개선 */
+			tag += "<li>";
+			tag += "	<div class='content'>";
+			
+			if(obj.PBLC_YN == "N" && '1' != obj.REG_USRID && ('N' != 'Y' && 'N' != 'Y')){
+				tag += "		<span><img src='/images/template5/resp/default/button/btn_lock.png' style='padding-bottom: 2px;'/>&nbsp;비공개 댓글입니다.</span>";
+			}else{
+				if(obj.ISPARENTDEL == "Y"){
+					tag += "	<span>삭제된 댓글입니다.</span>";
+					tag += "	<span class='tool'>";
+	            	tag += "		<ul>";
+	            	tag += "		</ul>";
+					tag += "	</span>";
+				}else{
+					tag += "	<div class='inputBox' id='cmnt_view_form" + obj.CMNT_ID + "'>";
+					tag += "	<span>";
+					
+					if(obj.PBLC_YN == "N"){
+						tag += "		<img src='/images/template5/resp/default/button/btn_lock.png' style='padding-bottom: 2px;'/>&nbsp;";
+					}
+					
+					tag += obj.CMNT_CNTNT.replace(/\n/gi,"<br/>").replace(/ /gi, "&nbsp;");
+					tag += "	</span>";
+					tag += "	</div>";
+	            	tag += "	<span class='tool' id='cmnt_view_btn" + obj.CMNT_ID + "'>";
+	            	tag += "		<ul>";
+					
+	            	modify_flag = false;
+	            	
+					if(true){
+						if(('N' == 'Y' && 'N' == 'Y') || '1' == obj.REG_USRID ){
+							tag += "				<br/><li><a href='javascript:void(0)' class='write_btn' onclick='goCmntUpdateView("+obj.CMNT_ID+")' id='cmnt_update_v"+obj.CMNT_ID+"'>수정</a></li>";//수정
+							tag += "				<li><a href='javascript:void(0)' class='cancel_btn' onclick='goCmntDelete("+obj.CMNT_ID+")' id='cmnt_delete_v"+obj.CMNT_ID+"'>삭제</a></li>";//삭제
+							modify_flag = true;
+						}else if(obj.PWD != "" ){
+							tag += "				<br/><li><a href='javascript:void(0)' class='write_btn' onclick='goDtlPwdChk("+obj.CMNT_ID+",1)' id='cmnt_update_v"+obj.CMNT_ID+"'>수정</a></li>";//수정
+							tag += "				<li><a href='javascript:void(0)' class='cancel_btn' onclick='goDtlPwdChk("+obj.CMNT_ID+",2)' id='cmnt_delete_v"+obj.CMNT_ID+"'>삭제</a></li>";//삭제
+							modify_flag = true;
+						}
+					}
+					
+					tag += "		</ul>";
+					tag += "	</span>";
+					
+					if(modify_flag){
+						tag += "	<div class='inputBox' style='display:none;' id='cmnt_edit_form" + obj.CMNT_ID + "'>";
+						tag += "		<textarea id='cmnt_edit"+obj.CMNT_ID+"'>"+obj.CMNT_CNTNT+"</textarea>";
+						tag += "	</div>";
+						tag += "	<div class='modifyBox' style='display:none;' id='cmnt_edit_btn" + obj.CMNT_ID + "'>";
+						tag += "		<ul>";
+						tag += "			<li><a href='javascript:void(0)' class='write_btn' onclick='goCmntUpdate(\"" + obj.CMNT_ID + "\")'>수정</a></li>";//수정
+						tag += "			<li><a href='javascript:void(0)' class='cancel_btn' onclick='goCmntCancel(\"" + obj.CMNT_ID + "\")'>취소</a></li>";
+						tag += "		</ul>";
+						tag += "	</div>";
+					}
+					
+				}
+			}
+			
+			tag += "	</div>";	
+			tag += "	<div class='dataBox'>";
+			
+			if(obj.ISPARENTDEL == "Y"){
+				tag += "	<span class='name'>-</span>";
+				tag += "	<span class='date'>-</span>";
+			}else{
+				tag += "	<span class='name'>"+obj.SHOW_REGNM+"</span>";
+				tag += "	<span class='date'>"+obj.REG_DT_COMN+"</span>";
+			}
+			
+			tag += "	</div>";
+			tag += "</li>";	
+			
+			if(key == data.length - 1) {
+				if(obj.TOTAL_CNT > obj.RNUM){
+					jQuery("#cmntMore").show();
+				}else{
+					jQuery("#cmntMore").hide();
+				}
+			}
+		});
+
+		return tag;
+	}
+	
+	//댓글 수정 열기
+	function goCmntUpdateView(id){
+		if(jQuery("#cmnt_edit_target").val() != id)
+		{
+			fn_hideStar(jQuery("#cmnt_edit_target").val());
+		}else
+		{
+			fn_hideStar(id);
+		}
+		
+		fn_showStar(id);
+		goCmntCancel2(jQuery("#cmnt_edit_target").val());
+
+		jQuery("#cmnt_view_form"+id).hide();
+		jQuery("#cmnt_view_btn"+id).hide();
+		
+		jQuery("#cmnt_edit_form"+id).show();
+		jQuery("#cmnt_edit_btn"+id).show();
+				
+		//jQuery("#cmnt_reply_v"+id).attr("style","display:none;"); //답글버튼
+		//jQuery("#cmnt_update_v"+id).attr("style","display:none;"); //수정버튼
+		//jQuery("#cmnt_delete_v"+id).attr("style","display:none;"); //삭제버튼
+		//jQuery("#cmnt_cancel_v"+id).attr("style","display:inline-block;"); //취소버튼
+		//jQuery("#cmnt_edit_target").val(id);		
+	}
+	
+	//댓글 답글 열기
+	function goCmntReplyView(id){
+		jQuery("#cmnt_reply_form"+id).show(); //댓글 textarea
+		jQuery("#cmnt_reply_v"+id).attr("style","display:none;"); //답글버튼
+		jQuery("#cmnt_update_v"+id).attr("style","display:none;"); //수정버튼
+		jQuery("#cmnt_delete_v"+id).attr("style","display:none;"); //삭제버튼
+		jQuery("#cmnt_cancel_v"+id).attr("style","display:inline-block;"); //취소버튼
+	}
+	
+	//댓글 작업 취소
+	function goCmntCancel(id){
+		jQuery("#cmnt_edit_form"+id).hide();
+		jQuery("#cmnt_edit_btn"+id).hide();
+		
+		jQuery("#cmnt_view_form"+id).show();
+		jQuery("#cmnt_view_btn"+id).show();
+	}
+	
+	function goCmntCancel2(id){
+		jQuery("#cmnt_cancel"+id).hide();
+		jQuery("#cmnt_edit_form"+id).hide();
+		//수정시 데이터 초기화로 인해 주석
+// 		jQuery("#cmnt_edit"+id).val('');
+		jQuery("#cmnt_reply_form"+id).hide();
+		//수정시 데이터 초기화로 인해 주석
+// 		jQuery("#cmnt_reply"+id).val('');
+		jQuery("#cmnt_reply_v"+id).attr("style","display:inline-block;"); //답글버튼
+		jQuery("#cmnt_update_v"+id).attr("style","display:inline-block;"); //수정버튼
+		jQuery("#cmnt_delete_v"+id).attr("style","display:inline-block;"); //삭제버튼
+		jQuery("#cmnt_cancel_v"+id).attr("style","display:none;"); //취소버튼
+	}
+	
+	//댓글 등록
+	function goCmntInsert(){
+		if(jsByteLength(jQuery("#p_cmnt_cntnt").val()) > 1000){
+			alert("댓글내용은 1000자를 넘을수 없습니다.");//댓글내용은 1000자를 넘을수 없습니다.
+			jQuery("#p_cmnt_cntnt").focus();
+			return;
+		}
+
+		if(jQuery("#p_reg_usrnm").val() == ""){
+			alert("등록자명을 입력해야합니다.");//등록자명을 입력해야합니다.
+			jQuery("#p_reg_usrnm").focus();
+			return;
+		}
+		
+		if(jQuery("#p_pwd").val() == ""){
+			alert("비밀번호을 입력해야합니다.");//비밀번호을 입력해야합니다.
+			jQuery("#p_pwd").focus();
+			return;
+		}
+		
+		if(jQuery("#p_cmnt_cntnt").val() == ""){
+			alert("댓글 내용을 입력해야합니다.");//댓글 내용을 입력해야합니다.
+			jQuery("#p_cmnt_cntnt").focus();
+			return;
+		}
+		if( 'N' == 'Y'){
+			if(jQuery("#selectStar").val() == ""){
+				alert("별점을 지정하지 않으면 등록 할 수 없습니다."); //별점을 지정하지 않으면 수정 할 수 없습니다.
+				return;
+			}
+		}
+		
+		if(!confirm("댓글을 등록하시겠습니까?")){ return; }//댓글을 등록하시겠습니까?
+		jQuery.ajax({
+			url : cmntInsertUrl,
+			cache : false,
+			type:'POST',
+			dataType:'json',
+			data : {
+				p_bbs_id : jQuery("#p_bbs_id").val(),
+				p_pst_id : jQuery("#p_pst_id").val(),
+				p_starscr : jQuery("#p_starscr").val(),
+				p_pblc_yn : jQuery('input:radio[name="p_pblc_yn"]:checked').val(),
+				p_reg_usrnm : jQuery("#p_reg_usrnm").val(),
+				p_cmnt_cntnt : jQuery("#p_cmnt_cntnt").val(),
+				p_pwd : jQuery("#p_pwd").val(),
+				p_dpth : '1',
+				mkey : '6880'
+			},
+			success: function(data){
+				if(data.result == "success"){
+					if( '02' == '05'){
+						alert("평가가 등록되었습니다.");//평가가 등록되었습니다.
+						jQuery("#replyForm").hide();
+					}else{
+						alert("댓글을 등록하였습니다.");//댓글을 등록하였습니다.
+						cmntList('N');
+					}
+				}else{
+					alert("댓글 등록에 실패하였습니다.");//댓글 등록에 실패하였습니다.
+				}
+				fn_selectStar(10); //p_starscr(별점 10 세팅)
+				//jQuery("#p_pblc_yn").val("Y");
+				jQuery("#p_reg_usrnm").val("");
+				jQuery("#p_cmnt_cntnt").val("");
+				jQuery("#p_pwd").val("");
+			}
+		});
+	}
+	
+	//댓글 수정
+	function goCmntUpdate(id){
+		if(jsByteLength(jQuery("#cmnt_edit"+id).val()) > 1000){
+			alert("댓글내용은 1000자를 넘을수 없습니다.");//댓글내용은 1000자를 넘을수 없습니다.
+			jQuery("#cmnt_edit"+id).focus();
+			return;
+		}
+		if( 'N' == 'Y'){
+			if(jQuery("#selectStar_"+id).val() == ""){
+				alert("별점을 지정하지 않으면 수정 할 수 없습니다."); //별점을 지정하지 않으면 수정 할 수 없습니다.
+				return;
+			}
+		}
+		
+		if(jQuery("#cmnt_edit"+id).val() == ""){
+			alert("댓글 내용을 입력해야합니다.");//댓글 내용을 입력해야합니다.
+			jQuery("#cmnt_edit"+id).focus();
+			return;
+		}
+		
+		if(!confirm("댓글을 수정하시겠습니까?")){ return; }//댓글을 수정하시겠습니까?
+		
+		jQuery.ajax({
+			url : cmntEditUrl,
+			cache : false,
+			type:'POST',
+			dataType:'json',
+			data : {
+				p_bbs_id : jQuery("#p_bbs_id").val(),
+				p_pst_id : jQuery("#p_pst_id").val(),
+				p_cmnt_id : id,
+				p_cmnt_cntnt : jQuery("#cmnt_edit"+id).val(),
+				p_starscr : jQuery("#selectStar_"+id).val(),
+				mkey : '6880'
+			},
+			success: function(data){
+				if(data.result == "success"){
+					alert("댓글을 수정하였습니다.");//댓글을 수정하였습니다.
+					cmntList('N');
+				}else{
+					alert("댓글 수정에 실패하였습니다.");//댓글 수정에 실패하였습니다.
+				}
+			}
+		});
+	}
+	
+	//댓글 삭제
+	function goCmntDelete(cmntid, pop){
+		if(pop != 'Y'){
+			if(!confirm("댓글을 삭제하시겠습니까?")){ return; }//댓글을 삭제하시겠습니까?
+		}
+		jQuery.ajax({
+			url : cmntDeleteUrl,
+			cache : false,
+			type:'POST',
+			dataType:'json',
+			data : {
+				p_bbs_id : jQuery("#p_bbs_id").val(),
+				p_pst_id : jQuery("#p_pst_id").val(),
+				p_cmnt_id : cmntid,
+				mkey : '6880'
+			},
+			success: function(data){
+				if(data.result == "success"){
+					alert("댓글을 삭제하였습니다.");//댓글을 삭제하였습니다.				
+					cmntList('N');
+				}else{
+					alert("댓글 삭제에 실패하였습니다.");//댓글 삭제에 실패하였습니다.
+				}
+			}
+		});
+	}
+	
+	//댓글 답글 등록
+	function goCmntReplyInsert(id, dpth){
+		if(jsByteLength(jQuery("#cmnt_reply"+id).val()) > 1000){
+			alert("답글의 내용은 1000자를 넘을수 없습니다.");//답글의 내용은 1000자를 넘을수 없습니다.
+			jQuery("#cmnt_reply"+id).focus();
+			return;
+		}
+		if(!confirm("답글을 등록하시겠습니까?")){ return; }//답글을 등록하시겠습니까?
+		
+		var p_depth = parseInt(dpth,10) + 1;
+		var p_prnt_cmnt_id = id;
+		
+		jQuery.ajax({
+			url : cmntInsertUrl,
+			cache : false,
+			type:'POST',
+			dataType:'json',
+			data : {
+				p_bbs_id : jQuery("#p_bbs_id").val(),
+				p_pst_id : jQuery("#p_pst_id").val(),
+				p_prnt_cmnt_id : p_prnt_cmnt_id,
+				p_dpth : p_depth,
+				p_reg_usrnm : jQuery("#p_reg_usrnm"+id).val(),
+				p_pwd : jQuery("#p_pwd"+id).val(),
+				p_cmnt_cntnt : jQuery("#cmnt_reply"+id).val(),
+				mkey : '6880'
+			},
+			success: function(data){
+				if(data.result == "success"){
+					alert("답글을 등록하였습니다.");//답글을 등록하였습니다.
+					cmntList('N');
+				}else{
+					alert("답글 등록에 실패하였습니다.");//답글 등록에 실패하였습니다.
+				}
+			}
+		});
+	}
+	
+	//게시글 삭제
+	function goDelete(){
+		if(!confirm("삭제하시겠습니까?")){ return; }//삭제하시겠습니까?
+		jQuery.ajax({
+			url : pstDeleteUrl,
+			cache : false,
+			type:'POST',
+			dataType:'json',
+			data : {
+				p_bbs_id : jQuery("#p_bbs_id").val(),
+				p_pst_id : jQuery("#p_pst_id").val(),
+				mkey : '6880'
+			},
+			success: function(data){
+				if(data.result == "success"){
+					alert("삭제되었습니다.");//삭제되었습니다.
+					goList();
+				}else{
+					alert("삭제에 실패했습니다.");//삭제에 실패했습니다.
+				}
+			}
+		});
+	}
+	
+	//게시글 수정
+	function goEditForm(){
+		var f= document.form1;
+		f.p_mode.value = "E";	
+		f.action = pstWrithFormUrl;
+		f.submit();
+	}
+	
+	//게시글 답글
+	function goReplyForm(){
+		var f= document.form1;
+		f.p_mode.value = "R";	
+		f.action = pstWrithFormUrl;
+		f.submit();
+	}
+	
+	//게시글 목록
+	function goList(){
+		jQuery("#p_pst_id").val("");
+		
+		if('8' == "7"){
+			jQuery("#form1 input[name=mkey]").val("");
+		}
+		
+		form1.action = pstListUrl;
+		form1.submit();
+	}
+	
+	//비밀번호 확인 팝업
+	function goDtlPwdChk(cmntid, mode){
+		jQuery("#p_cmnt_id").val(cmntid);
+		jQuery("#p_cmnt_yn").val("Y");
+		if(mode == 1){
+			jQuery("#p_cmnt_mode").val("E"); //수정
+		}else{
+			jQuery("#p_cmnt_mode").val("D"); //삭제
+		}
+		Center_Fixed_Popup2("", "usrsBbsPstPwdChkPopup", 350, 175, "no");
+		form1.target = "usrsBbsPstPwdChkPopup";
+		form1.action = pwdChkPopUrl;
+		form1.submit();
+		form1.target = "";
+	}
+	function pwdChkresult(cmntid, mode, yn){
+		if(yn == 'Y'){
+			if(mode == 'E'){
+				goCmntUpdateView(cmntid);
+			}else{
+				goCmntReplyView(cmntid);
+			}
+		}else{
+			alert("비밀번호가 맞지 않습니다.");//비밀번호가 맞지 않습니다.
+			return;
+		}
+		jQuery("#p_cmnt_yn").val("");
+	}
+	
+	//이전, 다음 상세화면
+	function goNextDtlForm(mode){
+		var adminyn = "N";
+		if( ('N' == 'Y' && 'N' == 'Y')){
+			adminyn = "Y";
+		}
+		jQuery.ajax({
+			url : pstNextIDUrl,
+			cache : false,
+			type:'POST',
+			dataType:'json',
+			data : {
+				p_bbs_id : jQuery("#p_bbs_id").val(),
+				p_pst_id : jQuery("#p_pst_id").val(),
+				p_adminYn : adminyn,
+				mkey : '6880'
+			},
+			success: function(data){
+				if(mode == 'P'){ //이전글
+					if(data.PRE_NO == "" || data.PRE_NO == undefined){
+						alert("이전글이 없습니다.");//이전글이 없습니다.
+						return;
+					}else{
+						jQuery("#p_pst_id").val(data.PRE_NO);
+						form1.action = pstDetailFormUrl;
+						form1.submit();
+					}
+				}else if(mode == 'N'){ //다음글
+					if(data.NEXT_NO == "" || data.NEXT_NO == undefined){
+						alert("다음글이 없습니다.");//다음글이 없습니다.
+						return;
+					}else{
+						jQuery("#p_pst_id").val(data.NEXT_NO);
+						form1.action = pstDetailFormUrl;
+						form1.submit();
+					}
+				}
+			}
+		});
+	}
+	
+	//좋아요 업데이트
+	function fn_FvrCntPlus(){
+		jQuery.ajax({
+			url: pstFavorUrl,
+			cache : false,
+			dataType:'json',
+			data : {
+				p_bbs_id	: jQuery("#p_bbs_id").val(),
+				p_pst_id 	: jQuery("#p_pst_id").val(),
+				mkey : '6880'
+			},
+			success : function(result){
+				if(result < 0){
+					alert('이미 "좋아요" 처리하신 게시물 입니다.');//이미 '좋아요' 처리하신 게시물 입니다.
+				}else{
+					alert('"좋아요" 처리되었습니다.');//'좋아요' 처리되었습니다.
+					jQuery("#fvr_cnt").html(1);
+				}
+			}
+		});
+	}
+	
+	//파일 다운로드
+	function fn_fileDown(filegrp, fileId) {
+		var dataHtml = "";
+		
+		dataHtml += "<input type='hidden' name='p_filegrp_id' value='" + filegrp + "'/>";
+		dataHtml += "<input type='hidden' name='p_file_id' value='" + fileId + "'/>";
+		
+		jQuery("#hiddenForm").html(dataHtml);
+
+		var form = document.hiddenForm[0];
+		form.action = "/common/file/FileDown.do";
+		form.submit();
+	}
+	
+	//전체 파일 다운로드
+	function fn_fileAllDown(filegrp){
+		var dataHtml = "";
+		
+		dataHtml += "<input type='hidden' name='p_filegrp_id' value='" + filegrp + "'/>";
+		
+		jQuery("#hiddenForm").html(dataHtml);
+
+		var form = document.hiddenForm[0];
+		form.action = "/common/allFileDown.do";
+		form.submit();
+	}
+	
+	//별점 열기
+	/* function fn_showStar(){
+		jQuery("#showStar").show();
+	} */
+	
+	//별점 선택
+/* 	function fn_selectStar(num){
+		var str = "";
+		if(num == 10){
+			str = '<img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" />';
+		}else if(num == 8){
+			str = '<img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" />';
+		}else if(num == 6){
+			str = '<img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" />';
+		}else if(num == 4){
+			str = '<img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" />';
+		}else if(num == 2){
+			str = '<img src="/images/cyber/icon_star.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" />';
+		}else{
+			str = '<img src="/images/cyber/icon_star_off.png" alt="<img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" /><img src="/images/cyber/icon_star_off.png" alt="" />';
+		}
+		jQuery("#selectStar").html(str);
+		jQuery("#p_starscr").val(num);
+		jQuery("#showStar").hide();
+	} */
+	
+	function videoView(id, data, type){
+		var tag = "";
+		if(type == '04'){
+			var atag = '<a href="http://videojs.com/html5-video-support/"style="color:#00ffff">';
+			tag += "<video id='example_video_1' class='video-js vjs-default-skin vjs-big-play-centered' width='640' height='390' controls autoplay preload='auto'>";
+			tag += '<source src="';
+			if(data.fileList != undefined){
+				if(data.fileList.length > 0 && data.fileList[0].FILE_EXT == 'mp4'){
+					tag += '/new_upload/bbs/'+id+'/'+data.fileList[0].SAVE_FILENM;
+				}
+			}else{
+				if(data.pstMap.VIDEO_URL.split('.mp4').length == 2){
+					tag += data.pstMap.VIDEO_URL;
+				}
+			}
+	    	    tag += '" type="video/mp4" />' +
+	    	    	   '<p class="vjs-no-js">이 비디오를 보려면 JavaScript를 활성화하고 '+atag+'HTML5를 지원하는 웹 브라우저</a>로 업그레이드하시기 바랍니다.</p>' +//이 비디오를 보려면 JavaScript를 활성화하고 <a href="http://videojs.com/html5-video-support/" style="color:#00ffff">HTML5를 지원하는 웹 브라우저</a>로 업그레이드하시기 바랍니다.
+					   '</video>';
+		}
+		return tag;
+	}
+	
+	//상세화면
+	function goDtlForm(pstid){
+		jQuery("#p_pst_id").val(pstid);
+		form1.action = pstDetailFormUrl;
+		form1.submit();
+	}
+	
+	//상세보기 내용 이미지 레이어 팝업 이벤트 
+	function layer_open(el,bbsid,filenm){
+		jQuery('.pop-container').html('');
+		var temp = jQuery('#' + el);
+		var bg = temp.prev().hasClass('bg');    //dimmed 레이어를 감지하기 위한 boolean 변수
+		jQuery('.pop-container').html('<img alt="image" src="/new_upload/bbs/'+bbsid+'/'+filenm+'" class="imgResponsive">');
+		if(bg){
+			jQuery('.layer').fadeIn();   //'bg' 클래스가 존재하면 레이어가 나타나고 배경은 dimmed 다. 
+		}else{
+			temp.fadeIn();
+		}
+
+		// 화면의 중앙에 레이어를 띄운다.
+		if (temp.outerHeight() < jQuery(document).height() ) temp.css('margin-top', '-'+temp.outerHeight()/2+'px');
+		else temp.css('top', '0px');
+		if (temp.outerWidth() < jQuery(document).width() ) temp.css('margin-left', '-'+temp.outerWidth()/2+'px');
+		else temp.css('left', '0px');
+	}
+
+
+	//별점 열기
+	function fn_showStar(id){
+		if( 'N' == 'Y'){
+			jQuery("#selectStar_"+id).show();
+			jQuery("#starscr_target").val(jQuery("#p_starscr_"+id).val());
+			
+			$('select').barrating('destroy');
+			$('.rating-enable').removeClass('deactivated');
+			jQuery("#selectStar_"+id).val("");
+			$("#selectStar_"+id).barrating({ 
+				showSelectedRating:false,
+				onSelect:function(value, text) {
+	                jQuery("#p_starscr_"+id).val(value);
+	            }
+			});
+			$('.rating-disable').removeClass('deactivated');
+			$('.rating-enable').trigger('click');
+		}
+	}
+	
+	//별점 닫기
+	function fn_hideStar(id){
+		if( 'N' == 'Y'){
+			$('.rating-disable').trigger('click');
+			jQuery("#selectStar_"+id).val(jQuery("#starscr_target").val());
+			$('.rating-enable').trigger('click');
+		}
+
+	}
+	
+	//별점 선택
+	function fn_selectStar(){
+		if( 'N' == 'Y'){
+			$('select').barrating('destroy');
+			$('.rating-enable').removeClass('deactivated');
+			jQuery("#selectStar").val("");
+			$('#selectStar').barrating({ 
+				showSelectedRating:false,
+				onSelect:function(value, text) {
+	                jQuery("#p_starscr").val(value);
+	            }
+			});
+			$('.rating-disable').removeClass('deactivated');
+			$('.rating-enable').trigger('click');
+		}
+	}
+
+	function setStar(data)
+	{
+		$('.rating-enable').click(function () {
+
+			jQuery.each(data,function(key,obj){
+				$('#selectStar_'+obj.CMNT_ID).barrating({ 
+					showSelectedRating:false,
+	                readonly:true
+// 					onSelect:function(value, text) {
+// 	                       jQuery("#p_starscr").val(value);
+// 					}
+				});
+			});
+
+			$(this).addClass('deactivated');
+			$('.rating-disable').removeClass('deactivated');
+	    });
+
+		$('.rating-disable').click(function () {
+			$('select').barrating('destroy');
+			$(this).addClass('deactivated');
+			$('.rating-enable').removeClass('deactivated');
+	    });
+
+		$('.rating-enable').trigger('click');
+	}
+	
+	function loginCheck(){
+		alert("글쓰기 권한이 없거나 비로그인 상태입니다.");
+	}
+	
+	function sharedSns(sns){
+		var o;
+		var url = "http://m.hihrd.co.kr/usrs/bbs/usrsBbsPstDtlForm.do";
+		url += "?p_bbs_id="+jQuery("#p_bbs_id").val()+"&p_pst_id="+jQuery("#p_pst_id").val()+"&mkey=6880";
+		var image = "http://m.hihrd.co.kr/new_upload/bbs/1/";
+		
+		var title = '공지사항 메뉴에서 등록----수정';
+		var summary = "공지사항 메뉴에서 등록----수정";
+		var content ="공지사항 메뉴에서 등록----수정";
+		var _br = encodeURIComponent('\r\n');
+		switch(sns){
+			case 'facebook':
+				var sharerurl = "http://www.facebook.com/sharer.php?u=" + encodeURIComponent(url);	
+				o = {
+	                method:'popup',
+	                sharerurl: sharerurl
+	            };
+				jQuery( 'meta[property="og:description"]' ).attr('content', content);
+				jQuery( 'meta[property="og:url"]' ).attr('content', sharerurl);					
+				jQuery( 'meta[property="og:title"]' ).attr( 'content', title);
+				jQuery( 'meta[property="og:image"]' ).attr( 'content', image);			
+				break;
+			case 'twitter':	
+				var sharerurl = "https://twitter.com/intent/tweet"+		
+				"?url=" + encodeURIComponent(url)+
+				"&text=" + encodeURIComponent(title);	
+				sharerurl = sharerurl.split("#").join("%23");
+				o = {
+		                method:'popup',
+		                sharerurl: sharerurl
+		            };
+				break;
+			case 'urlcopy':
+				o = {
+	                method: 'copy'
+				}			
+				break;
+			case 'band':
+				o = {
+	                method:'web2app',
+	                param:'create/post?text=' +  encodeURIComponent(title) + _br + encodeURIComponent(url),
+	                a_store:'itms-apps://itunes.apple.com/app/id542613198?mt=8',
+	                g_store:'market://details?id=com.nhn.android.band',
+	                a_proto:'bandapp://',
+	                g_proto:'scheme=bandapp;package=com.nhn.android.band'
+	            };			
+				break;
+			case 'kakao':
+				o = {
+	                method:''//,
+//	                 param:'sendurl?msg=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url) + '&type=link&apiver=2.0.1&appver=2.0&appid=dev.epiloum.net&appname=' + encodeURIComponent('kma능룔협회'),
+//	                 a_store:'itms-apps://itunes.apple.com/app/id362057947?mt=8',
+//	                 g_store:'market://details?id=com.kakao.talk',
+//	                 a_proto:'kakaolink://',
+//	                 g_proto:'scheme=kakaolink;package=com.kakao.talk'
+	            };				
+				Kakao.Link.sendTalkLink({
+				      label: title,
+				      webLink: {
+				        text: '상세정보 확인하기',
+				        url: url
+				      }
+				});
+				break;
+			default:
+	            alert('지원하지 않는 SNS입니다.');
+	            return false;
+		}
+		 switch(o.method){
+		        case 'popup':
+		        	Center_Fixed_Popup2(o.sharerurl, "snsPop", 650, 700, "yes");
+		            break;
+		 
+		        case 'web2app':
+		            if(navigator.userAgent.match(/android/i)){
+		                // Android
+		                setTimeout(function(){ location.href = 'intent://' + o.param + '#Intent;' + o.g_proto + ';end'}, 100);
+		            }
+		            else if(navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i)){
+		                // Apple
+		                setTimeout(function(){ location.href = o.a_store; }, 200);          
+		                setTimeout(function(){ location.href = o.a_proto + o.param }, 100);
+		            }
+		            else{
+		                alert('이 기능은 모바일에서만 사용할 수 있습니다.');
+		            }
+		            break;	  
+		        case 'copy':
+		        	var IE = (document.all) ? true : false;
+	    		    var url = document.location.href;
+	    		 	
+	    		    if (IE) {
+	    		         window.clipboardData.setData('Text', url);
+	    		         alert('주소가 복사되었습니다. Ctrl+V로 붙여 넣기 하세요.');
+	    		    } else { //ie이외에는 지원안됨
+	    		        temp = prompt("이 글의 트랙백 주소입니다. Ctrl+C를 눌러 클립보드로 복사하세요", url );
+	    		    }
+		    		break;
+		    }
+		
+	}
+</script>
+<script>
+    videojs.options.flash.swf = "/js/common/video/video-js.swf";
+</script>
+
+<iframe id="hiddenFrame" name="hiddenFrame" style="display:none" width="0" height="0" frameborder="0" title="ifrm"></iframe>
+
+<form id="hiddenForm" name="hiddenForm" style="display:none" target="hiddenFrame"><input type="hidden" name="mkey" id="mkey" value="6880"></form>
+
+<form name="form1" id="form1" method="post" action="" onsubmit="return false;">
+<input type="hidden" id="p_mode" name="p_mode" value="E">					<!-- 등록 수정 모드-->
+<input type="hidden" id="p_bbs_id" name="p_bbs_id" value="1">		<!-- 게시판번호 -->
+<input type="hidden" id="p_pst_id" name="p_pst_id" value="204">		<!-- 게시물번호 -->
+<input type="hidden" id="p_auth_cd" name="p_auth_cd" value="001111">		<!-- 권한코드 -->
+<input type="hidden" id="p_bbs_type" name="p_bbs_type" value="02">	<!-- 게시판유형 -->
+<input type="hidden" id="p_use_grp_cd" name="p_use_grp_cd" value="ALL">	<!-- 사용그룹코드 -->
+<input type="hidden" id="p_starscr" name="p_starscr" value="10">
+<input type="hidden" id="p_cmnt_page" name="p_cmnt_page" value="1">
+<input type="hidden" id="p_cmnt_yn" name="p_cmnt_yn" value="">
+<input type="hidden" id="p_cmnt_mode" name="p_cmnt_mode" value="">
+<input type="hidden" id="p_dtl_cmnt_show_cnt" name="p_dtl_cmnt_show_cnt" value="">
+<input type="hidden" id="p_pageno" name="p_pageno" value="1">
+<input type="hidden" id="p_listscale" name="p_listscale" value="10">
+<input type="hidden" id="p_dvc_nm" name="p_dvc_nm" value="MB">			<!-- 접속 디바이스 -->
+<input type="hidden" id="cmnt_edit_target" name="cmnt_edit_target" value="">						<!-- 수정 상태 댓글 id -->
+<input type="hidden" id="starscr_target" name="starscr_target" value="">						<!-- 수정전 별점 -->	
+
+<!-- #contents start -->
+<div id="contents">	
+<!-- contentsBox start -->
+<div class="contentsBox">
+<div class="boardView">
+	<table>
+    	<thead> 
+        	<tr>
+            	<th class="title">
+					
+					공지사항 메뉴에서 등록----수정
+					
+					
+					
+					
+					  
+					                  
+					
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="info" style="padding:10px 20px;">
+					<p>
+						
+						<span class="date">등록일 : 2019-01-16</span>
+						<span class="hits">조회수 : 59</span>
+						<!-- 답변여부,답변완료,답변대기 -->
+					</p>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="content">
+					<!-- 2020.05.07 퀴즈 -->
+					<div class="rouletteWrap">
+					    <div class="roulette_bg"></div>
+					      <p class="cnt">참여가능횟수 : 1</p>
+					      <p class="tit">
+					     	   열린강의<br/>
+					        <strong>룰렛 포인트 증정!</strong>
+					      </p>
+					      <div class="rouletteBox">
+					        <div class="rouletteArea">
+					          <img class="rouletteMaker" src="/images/template8/resp/default/usr/quiz_roulette_marker.png"/>
+					          <canvas id="canvas" width="380" height="380" data-responsiveMinWidth="180" data-responsiveScaleHeight="true"></canvas>
+					          <button class="centerBtn" onclick="startSpin();">GO</button>
+					        </div>
+					        <div class="btn_center">
+					            <button class="btn_blue01" onclick="startSpin();">이벤트 참여</button>
+					        </div>
+					      </div>
+					      
+					      <!-- popup -->
+					      <div class="quiz_pop" style="display:none;">
+					      	<div class="quiz_popBox">
+					      		<div class="quiz_bg"></div>
+					      		<div class="quiz_popIn">
+					      			<a class="quiz_close" href="javascript:void(0);" onclick="popHide();"><img src="/images/template8/resp/default/usr/quiz_pop_close.png"/></a>
+					      			<img src="/images/template8/resp/default/usr/quiz_charter01.png"/>
+					      			<p class="pop_info">이벤트가 준비중입니다.</p>
+					      			<!-- 
+					      			<img src="/images/template8/resp/default/usr/quiz_charter02.png"/>
+					      			<p class="pop_info">정답입니다!</p>
+					      			
+					      			<img src="/images/template8/resp/default/usr/quiz_charter03.png"/>
+					      			<p class="pop_info">오답입니다!</p>
+					      			
+					      			<img src="/images/template8/resp/default/usr/quiz_charter04.png"/>
+					      			<p class="pop_info">참여가 완료되었습니다!</p>
+					      			
+					      			<img src="/images/template8/resp/default/usr/quiz_charter05.png"/>
+					      			<p class="pop_info">이벤트가 종료되었습니다!</p>
+					      			 -->
+					      			<div class="btn_center">
+					      				<button class="btn_blue02" onclick="popHide();">확인</button>
+					      			</div>
+					      		</div>
+					      	</div>
+					      </div>
+					      <!-- EOD : popup -->
+					</div>
+					
+				    <style>
+						.boardView.quizWrap { position:relative; }
+						.rouletteWrap { position:relative; padding:50px 20px; margin:-20px; background:#3265ce; min-height:550px; }
+						p + .rouletteWrap { margin:20px -20px -20px -20px; }
+						.rouletteWrap:before { content:''; position:absolute; top:30px; left:50%; margin:0 0 0 -270px; width:100%; max-width:541px; height:232px; background:url(/images/template8/resp/default/usr/quiz_roulette_bg01.png); }
+						.rouletteWrap:after { content:''; position:absolute; top:50%; left:0; width:100%; height:50%; background:#fefaed; }
+						.roulette_bg { position:absolute; bottom:50%; left:0; width:100%; height:24px; margin:-12px 0 0 0; background:url(/images/template8/resp/default/usr/quiz_roulette_bg02.png) no-repeat; }
+						.roulette_bg:before {  }
+						.rouletteWrap .cnt { margin:-30px 0 10px 0; color:#fff; text-align:right; color:#b5c8f0; font-size:14px; }
+						.rouletteWrap .tit { font-size:45px; color:#fff; line-height:1.2; text-align:center; }
+						.rouletteWrap .tit strong { font-size:53px; color:#fff; }
+						.rouletteWrap .rouletteBox { position:relative; z-index:1;  }
+						.rouletteWrap .rouletteBox .rouletteArea { margin:50px 0 30px 0; position:relative; }
+						.rouletteWrap .rouletteBox .rouletteArea canvas { margin:0 auto; position:relative; padding:5px; background:#2c364e; border-radius:100%; }
+						.rouletteWrap .rouletteBox .rouletteArea .centerBtn { position:absolute; top:50%; left:50%; margin:-43px 0 0 -43px; width:86px; height:86px; background:#2c364e; border-radius:86px; line-height:86px; color:#fff; font-size:30px; text-align:center; }
+						.rouletteWrap .rouletteBox .rouletteArea .rouletteMaker { position:absolute; top:-25px; left:50%; margin:0 0 0 -20px; z-index:3; }
+						
+						.multipleWrap { position:relative; padding:30px; margin:-20px; min-height:300px; background:url(/images/template8/resp/default/usr/quiz_multiple_pattern.png) #ffecb4; }
+						p + .multipleWrap { margin:20px -20px -20px -20px; }
+						.multipleWrap .multipleBox { min-height:300px; border-radius:20px; background:#fff; padding:40px 30px 50px 30px; }
+						.multipleWrap .multipleBox .multiple_q { position:relative; text-align:center; padding:0 0 18px 0; margin:0 0 30px 0; }
+						.multipleWrap .multipleBox .multiple_q:after { content:''; position:absolute; width:26px; height:5px; background:#000; bottom:0; left:50%; margin:0 0 0 -13px; }
+						.multipleWrap .multipleBox .question { font-size:28px; line-height:1.3; text-align:center; }
+						.multipleWrap .multipleBox .q_choice { margin:30px 0 0 0; }
+						.multipleWrap .multipleBox .q_choice li { padding:15px 20px; background:#f0f1f5; border-radius:20px; margin:5px 0 0 0; }
+						.multipleWrap .multipleBox .q_choice li:first-child { margin:0; }
+						.multipleWrap .multipleBox {  }
+						.multipleWrap .multipleBox {  }
+						
+						.multipleWrap .hints { text-align:center; margin:30px 0 0 0; }
+						.multipleWrap .hints span { display:inline-block; background:#ffecb4; color:#ff8106; font-size:16px; padding:4px 35px; font-weight:bold; border-radius:15px; }
+						.multipleWrap .subjectiveBox { margin:75px 0 30px 0; text-align:center; }
+						.multipleWrap .subjectiveBox input { color:#f0f1f5; width:100%; max-width:400px; height:70px; line-height:70px; color:#a8abbc; font-size:24px; text-align:center; background:#f0f1f5; border-radius:10px; border:none; }
+						
+						.btn_center { text-align:center; margin:30px 0 0 0; }
+						.quiz_pop .btn_center { margin:30px 65px 0 65px; }
+						.btn_blue01 { display:inline-block; padding:0 40px; height:60px; line-height:60px; background:#4683ee; color:#fff; border-radius:10px; font-size:24px; font-weight:normal; }
+						.btn_blue02 { display:block; padding:0 20px; width:100%; height:50px; line-height:50px; background:#4683ee; color:#fff; border-radius:5px; font-size:18px; font-weight:normal; }
+						.customRadio { position:relative; }
+						.customRadio input[type="radio"] { position:absolute; z-index:-1; top:1px; left:9px; width:13px; height:13px; margin:0; padding:0; border:none; }
+						.customRadio input[type="radio"] + label { position:relative; z-index:3; padding:0 0 0 38px; font-size:18px; cursor:pointer; color:#666; }
+						.customRadio input[type="radio"] + label:before { content:''; position:absolute; top:-4px; left:0; width:30px; height:30px; background:url('/images/template8/resp/default/usr/quiz_radio.png') no-repeat; }
+						.customRadio input[type="radio"]:checked + label { font-weight:600; color:#222; } 
+						.customRadio input[type="radio"]:checked + label:before { content:''; background:url('/images/template8/resp/default/usr/quiz_radio_chk.png') no-repeat; background:none \0/ /*ie8*/; }
+						.constell_tit { font-size:52px; font-weight:600; text-align:center; margin:70px 0 0 0; line-height:0.8; }
+						
+						.quiz_pop { position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; display:table; table-layout:fixed; z-index:10; }
+						.quiz_pop .quiz_bg { position:absolute; top:0; left:0; width:100%; height:100%; background:url(/images/template5/resp/default/usr/trans_60.png); z-index:11; }
+						.quiz_pop .quiz_popBox { display:table-cell; vertical-align:middle; padding:15px; }
+						.quiz_pop .quiz_popBox .quiz_popIn { position:relative; z-index:15; width:100%; max-width:410px; min-height:300px; margin:0 auto; padding:50px 20px 30px 20px; background:#fff; border-radius:20px; text-align:center; }
+						.quiz_pop .quiz_popBox .quiz_popIn .quiz_close { position:absolute; top:20px; right:20px; }
+						.quiz_pop .quiz_popBox .quiz_popIn .pop_info { font-size:20px; margin:15px 0 30px 0; font-weight:600; }
+						
+						@media all and (max-width: 600px) {
+							.rouletteWrap .tit { font-size:32px; }
+							.rouletteWrap .tit strong { font-size:36px; }
+							.rouletteWrap .rouletteBox .rouletteArea { margin-left:-10px; margin-right:-10px; }
+							.rouletteWrap .rouletteBox .rouletteArea canvas { width:90%; max-width:340px; }
+							.rouletteWrap .rouletteBox .rouletteArea .rouletteMaker { width:34px; top:-19px; margin:0 0 0 -17px; }
+							.rouletteWrap .rouletteBox .rouletteArea .centerBtn { padding:0; width:50px; height:50px; margin:-25px 0 0 -25px; font-size:18px; min-width:inherit; line-height:50px; }
+							.btn_blue01 { font-size:18px; height:46px; line-height:46px; padding:0 30px; }
+							
+							.multipleWrap { padding:20px; }
+							.multipleWrap .multipleBox { padding:20px; }
+							.multipleWrap .multipleBox .multiple_q { padding:0 0 15px 0; margin:0 0 20px 0; }
+							.multipleWrap .multipleBox .multiple_q:after { width:20px; height:4px; margin:0 0 0 -10px; }
+							.multipleWrap .multipleBox .multiple_q img { width:34px; }
+							.multipleWrap .multipleBox .question { font-size:22px; }
+							.multipleWrap .multipleBox .q_choice { margin:20px 0 0 0; }
+							
+							.multipleWrap .hints { margin:20px 0 0 0; }
+							.multipleWrap .subjectiveBox { margin:50px 0 30px 0; }
+							.multipleWrap .subjectiveBox input { height:55px; line-height:55px; font-size:20px; }
+							
+							.constell_tit { margin:40px 0 0 0; font-size:40px; }
+						}
+				    </style>
+				    
+					<script src="/js/Winwheel.min.js"></script>
+					<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> 
+					<script>
+					    let theWheel = new Winwheel({
+					        'innerRadius'  : 25,
+					        'outerRadius'  : 177,
+					        'numSegments'  : 8,
+					        'textFontSize' : 20,
+					        'responsive'   : true,
+					        'textAlignment'  : 'center',
+					        'segments'     :
+					        [
+					            {'fillStyle' : '#f3f3f3', 'text' : '무료'},
+					            {'fillStyle' : '#ffffff', 'text' : 'Prize 1'},
+					            {'fillStyle' : '#f3f3f3', 'text' : 'Prize 2'},
+					            {'fillStyle' : '#ffffff', 'text' : 'Prize 3'},
+					            {'fillStyle' : '#f3f3f3', 'text' : 'Prize 4'},
+					            {'fillStyle' : '#ffffff', 'text' : 'Prize 5'},
+					            {'fillStyle' : '#f3f3f3', 'text' : 'Prize 6'},
+					            {'fillStyle' : '#ffffff', 'text' : 'Prize 7'},
+					        ],
+					        'pins' :
+					        {
+					            'outerRadius': 3,
+					            //'lineWidth'      : 10,
+					            'margin'      : -12,
+					            'responsive' : true, // This must be set to true if pin size is to be responsive, if not just location is.
+					            'fillStyle'  : '#ffffff',
+					
+					        },
+					        'animation' :           // Specify the animation to use.
+					        {
+					            'type'     : 'spinToStop',
+					            'duration' : 5,     // Duration in seconds.
+					            'spins'    : 8,     // Number of complete spins.
+					            'callbackFinished' : alertPrize
+					        }
+					    });
+					
+					    clickN = 0;
+					    function startSpin(){
+					        if(clickN == 0){
+						        theWheel.rotationAngle = theWheel.rotationAngle % 360;
+						        theWheel.startAnimation();
+					        }else{
+					        	//theWheel.stopAnimation(true);
+					        	jQuery(".quiz_pop").show();
+					        } 
+					        clickN++;
+					    }
+					
+					    function alertPrize(indicatedSegment){
+					    	jQuery(".quiz_pop").show();
+					        console.log("당첨내역은 " + indicatedSegment.text);
+					    }
+					    
+					    function popHide(){
+					    	jQuery(".quiz_pop").hide();
+					    }
+					</script>
+					<!-- EOD : 2020.05.07 퀴즈 -->
+				</td>
+			</tr>
+			
+
+			
+		</tbody>
+		
+	</table>
+	<!-- 답변내용 -->
+		
+		<!-- //답변내용 -->
+</div>
+
+<!-- //댓글 -->
+	
+	<div class="writeBox">
+		<div class="open_area" style="display: none;">
+			<span class="txt">공개여부</span>
+			<ul class="inputList">
+				<li><input type="radio" id="p_pblc_y" name="p_pblc_yn" value="Y" checked="checked"><label for="p_pblc_y">공개</label><!-- 공개 --></li>
+				<li><input type="radio" id="p_pblc_n" name="p_pblc_yn" value="N"><label for="p_pblc_n">비공개</label><!-- 비공개 --></li>
+			</ul>
+		</div>	
+		<div class="write_area">
+			<textarea id="p_cmnt_cntnt" name="p_cmnt_cntnt"></textarea>
+			<button type="button" onclick="goCmntInsert();">등록</button>
+		</div>							
+	</div>
+
+
+<div class="replyBox">
+    <ul id="cmntForm"></ul>	
+</div>
+<div class="moreBox" id="cmntMore" style="display: none;">
+    <button type="button" class="btn_more" onclick="cmntList('Y');">더보기 <img src="/images/template5/resp/default/button/btn_more_arrow.png"></button>
+</div>
+<!-- //댓글 end -->
+
+<div class="btnArea">
+	<div class="floatLeft">
+		<button type="button" class="btnPrev" onclick="goNextDtlForm('P')">이전</button>
+		<button type="button" class="btnNext" onclick="goNextDtlForm('N')">다음 </button>
+	</div>
+	
+	<button type="button" class="btnList" onclick="goList();">목록</button><!-- 목록 -->
+</div>
+</div>
+
+</div>
+<!-- //공지형게시판 end -->
+<div class="btnArea">
+	
+	
+</div>
+
+
+	
+<input type="hidden" name="mkey" id="mkey" value="6880"></form>
+                 		</div>
+	        			<!-- //contentsBox end -->
+                 	</div>
+        			<!-- //#contents end -->
+        		</div>
+        		<!-- //contentsWrap end -->
+            </div>
+            <!-- //#main end -->
+        </div>
+        <!-- //#container end -->
+        
+        <!-- #footer start -->
+        <div id="footer" class="sub">
+            
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+var footerPopupFormUrl = "/usrs/portal/intrdc/footerPopupForm.do";//팝업 URL
+
+//footer 영역 팝업
+function footerPopup(val){
+	var f = document.gate_form;
+    Center_Fixed_Popup2("", "footerPopup", 890, 600, "yes");
+	f.target = "footerPopup";
+	f.action = footerPopupFormUrl;
+	f.mkey.value = "";
+	f.p_url_mode.value = val;
+	f.submit();
+	f.target = "_self";	
+}
+
+//회사 홍보페이지로 연결
+function comIntro(){
+	var f = document.gate_form;
+	f.action = "http://hrd.hihrd.co.kr/main.do";
+	f.mkey.value = '';
+	f.target = "_blank";
+	f.submit();
+	f.target = "";
+}
+</script>
+
+<form id="gate_form" name="gate_form" method="post" onsubmit="return false;">
+	<input type="hidden" id="p_url_mode" name="p_url_mode" value="">
+
+	<div class="component4">
+		<div class="footerWrap">
+			<!-- link start -->
+				
+			<!-- //link end -->
+			<!-- box start -->
+			<div class="box">
+				<!-- logo start -->
+				<div class="logo">
+					<!-- 하이인재원 사용 안함 -->
+					<!--  
+					
+						
+						
+							
+								<img src="/new_upload/homepage/logo/39/gate_btmlogo@blue.png" />
+							
+						
+					
+					-->
+					
+						<img src="/new_upload/homepage/logo/39/gate_btmlogo@blue.png">
+					
+				</div>
+				<!-- //logo end -->
+				<!-- address start -->
+				<div class="address">
+					<!-- 하이인재원 사용 안함 -->
+					<!--  
+					
+						
+						
+							
+						
+					
+					-->
+					
+					
+					<address>
+                                <p>
+                                    <strong>평생교육시설신고 제110호</strong>
+                                    <strong>통신판매업신고 제 19-3913호</strong>
+                                </p>
+                                <p>
+                                    <span>서울특별시 중구 명동2가 92-3 현대해상빌딩 14층</span>
+                                    <span>TEL : 1661-0961</span>
+                                    <span>FAX : 02-2635-9439</span>
+                                </p>
+                            </address>
+<p class="copyright">Copyright:2009 HYUNDAI C&amp;R CO.LTD ALL RIGHT RESERVED</p>
+				</div>
+				<!-- //address end -->
+			</div>
+		</div>
+	</div>
+<input type="hidden" name="mkey" id="mkey" value="6880"></form>
+
+        </div>
+        <!-- //#footer end -->
+    </div>
+    <!-- //#wrap end -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/common/jquery/jquery.cookie.js"></script>
+<script type="text/javascript">
+	function pophide(id, type){
+		jQuery("#pop_p_"+id).hide();
+	}
+
+	function fnClose(id, type){
+		setCookiePop(id, 1);
+		
+		if(type == "01")
+		{
+	 		self.close();
+		}else if(type == "0201" )
+		{			
+			jQuery("#pop_p_"+id).hide();
+		}else if(type == "0202"){
+			jQuery("#pop_p_"+id).hide();
+		}
+	}
+	
+	function setCookiePop(id, expiredays){
+		var today = new Array();
+		var bCookie = true;		
+		var cookies = document.cookie;
+		if(jQuery.cookie("today") != null){
+			today = jQuery.cookie("today").split(",");
+			for(var i = 0; i < today.length; i++){
+				if(today[i] == id)
+				{
+					bCookie = false;
+					return;
+				}
+			}			
+		}	
+		if(bCookie) today.push(id);		
+		jQuery.cookie("today", today, {expires:expiredays,path:'/'});
+	}
+		
+	
+	
+</script>
+<form name="popForm">
+<input type="hidden" name="cntnt" id="cntnt" value="">
+<input type="hidden" name="title" id="title" value="">
+
+
+	
+
+<input type="hidden" name="mkey" id="mkey" value="6880"></form>
+
+
+</body></html>

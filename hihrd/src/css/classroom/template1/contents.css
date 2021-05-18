@@ -1,0 +1,1567 @@
+﻿@charset "utf-8";
+
+.contentsBox { 
+    padding: 30px 25px 30px 25px;
+}
+@media screen and (max-width: 768px) {
+	.contentsBox { 
+	    padding: 30px 4% 30px 4%;
+	}	
+}
+
+/* tab */
+.tab {
+	display: block;
+	position: relative;
+	height: 41px;
+	margin-bottom: 30px;
+	border-bottom: solid 1px #7f868b;
+	border-left: 1px solid #d9dddf;
+}
+.tab ul li {
+	display: block;
+    float: left;
+	min-width: 136px;
+	height: 40px;
+	border-top: 1px solid #d9dddf;
+	border-right: 1px solid #d9dddf;
+	background: #f3f4f4;
+}
+.tab li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    line-height: 40px;
+    font-size: 15px;
+	letter-spacing: -1px;
+	color: #61696f;   
+    text-align: center;
+}
+.tab li.active {
+	height: 41px;
+	border: solid 1px #7f868b;
+	border-bottom: none;
+	font-weight: 700;
+	background: #ffffff;
+}
+.tab li.active a {
+	color: #313538;	
+}
+.tab li a span {
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 800px) {
+	.tab ul li {
+		min-width: inherit;
+	}
+	.tab li a {
+	    padding: 0 15px;
+	}	
+}
+@media screen and (max-width: 640px) {
+	.tab { 
+		height: inherit;
+		border-bottom: none;
+		border-left: none;
+	}
+	.tab ul li {
+	    float: none;
+		min-width: 100%;
+		margin-top: -1px;
+		border: 1px solid #d9dddf;
+	}
+	.tab li.active {
+		border: none;
+	}
+	.tab li.active a {
+		height: 40px;
+		border: 1px solid #7f868b;
+	}
+}
+
+.learningTab {
+	display: block;
+	position: relative;
+	height: 41px;
+	margin-bottom: 40px;
+	margin-top: 30px;
+	border-bottom: solid 1px #7f868b;
+	border-left: 1px solid #d9dddf;
+}
+.learningTab ul li {
+	display: block;
+    float: left;
+	min-width: 120px;
+	height: 40px;
+	border-top: 1px solid #d9dddf;
+	border-right: 1px solid #d9dddf;
+	background: #f3f4f4;
+}
+.learningTab li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    line-height: 40px;
+	color: #61696f;
+    letter-spacing: -1px;    
+    text-align: center;
+}
+.learningTab li.active {
+	height: 41px;
+	border: solid 1px #7f868b;
+	border-bottom: none;
+	font-weight: 700;
+	color: #313538;		
+	background: #ffffff;
+}
+.learningTab li a span {
+    margin-left: 4px;
+}
+
+.memo {
+	display: block;
+	position: relative;
+	height: 31px;
+	margin-bottom: 30px;
+	border-bottom: solid 1px #ff595f;
+}
+.memo ul li {
+	display: block;
+    float: left;
+}
+.memo li a {
+    display: block;
+    min-width: 150px;
+    height: 30px;
+    padding: 0 15px;
+    line-height: 31px;
+	color: #313538;
+    letter-spacing: -1px; 
+    text-align: center;
+    background: #ebeced;
+}
+.memo li.active a {
+	color: #ffffff;		
+	background: #ff595f;
+}
+
+
+
+
+
+/* 학습 수행 활동 */
+.weekPerform {
+    display: block;
+    margin: 5px 0 30px 0;
+}
+.weekPerform .alignRight {
+	margin-bottom: 10px;
+}
+.weekPerform .all {
+	float: left;
+	display: inline-block;
+	width: 52px;
+	height: 54px;
+	margin: 0px 5px 0px 0px;
+	border: solid 1px #c0c0c0;
+}
+.weekPerform .box {
+    overflow: hidden;
+    position: relative;
+    height: 54px;
+}
+.weekPerform ul {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 2000px;
+    height: 40px;
+	z-index: 20;
+}
+.weekPerform li {
+	float: left;
+	display: inline-block;
+	width: 54px;
+	height: 54px;
+	margin: 0px 0px 0px 5px;
+	border: solid 1px #c0c0c0;	
+}
+.weekPerform li:first-child {
+	margin: 0px;
+}
+.weekPerform li a,
+.weekPerform .all a {
+	display: block;		
+	width: 100%;
+	height: 100%;
+	line-height: 52px;
+	text-align: center;
+	background: #ebeced;
+}
+.weekPerform li a:hover,
+.weekPerform .all a:hover {
+	color: #ffffff;
+	background: #7f868b;
+}
+.weekPerform li.active, .weekPerform li:hover, .weekPerform .all:hover {
+	border: solid 1px #7f868b;
+}
+.weekPerform li.active a {
+	font-weight: 700;
+	color: #ffffff;	
+	background: #7f868b;
+}
+.weekPerform .btnPrev, .weekPerform .btnNext {
+	display: inline-block;
+	width: 30px;
+	height: 32px;
+	font-size: 0;
+	border: solid #e3e3e3;
+	border-width: 1px 1px 1px 1px;	
+}
+.weekPerform .btnPrev {
+	margin-right: 3px;
+	background: #ffffff url('/images/template2/resp/default/button/btn_tab_prev.png') 9px 7px no-repeat;
+}
+.weekPerform .btnNext {
+	background: #ffffff url('/images/template2/resp/default/button/btn_tab_next.png') 10px 7px no-repeat;
+}
+.weekPerform .btnPrev:hover {
+	border: solid 1px #c0c0c0;
+	background: #f9f9f9 url('/images/template2/resp/default/button/btn_tab_prev.png') 9px 7px no-repeat;
+}
+.weekPerform .btnNext:hover {
+	border: solid 1px #c0c0c0;
+	background: #f9f9f9 url('/images/template2/resp/default/button/btn_tab_next.png') 10px 7px no-repeat;
+}
+.weekPerform .content {
+	clear: both;
+	position: relative;
+	top: -1px;
+	margin: 0px 0 0 0px;
+	padding: 20px 20px 20px 20px;
+	color: #ffffff;
+	background: #7f868b;
+	z-index: 50;
+}
+.weekPerform .content dt {
+    display: block;
+    float: left;
+    font-weight: 700;
+    line-height: 18px;
+}
+.weekPerform .content dd {
+	margin-bottom: 5px;
+	margin-left: 65px;
+	padding-left: 15px;
+}
+.weekPerform .content dd:before {
+	content: ':';
+	padding-right: 15px;
+	margin-left: -18px;
+	
+}
+
+
+
+
+/*
+@media screen and (max-width: 800px) {
+	.weekPerform li {
+		width: 7.15%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.weekPerform li {
+		width: 2.52%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.weekPerform li {
+		width: 24.38%;
+	}
+}
+@media screen and (max-width: 720px) {
+	.weekPerform li {
+		width: 24%;
+	}
+}
+@media screen and (max-width: 640px) {
+
+}
+@media screen and (max-width: 450px) {
+	.weekPerform li {
+		width: 23.5%;
+	}
+}
+
+
+/* 학습방법 - 학습프로세스 */
+.process {
+}
+.process li {
+	display: table;
+	width: 100%;
+}
+.process li > div {
+}
+.process li .imgBox {
+	display: table-cell;
+	width: 130px;
+	text-align: center;
+	vertical-align: bottom;	
+}
+.process li:first-child .imgBox {
+	height: 68px;
+	background: url('/images/classroom/template1/gray/bg_process_01.png') no-repeat;
+}
+.process li:first-child+li.month .imgBox {
+	height: 61px;
+	background: url('/images/classroom/template1/gray/bg_process_02.png') no-repeat;
+}
+.process li.month .imgBox {
+	height: 61px;
+	background: url('/images/classroom/template1/gray/bg_process_02_1.png') no-repeat;
+}
+.process li.task .imgBox {
+	height: 51px;
+	background: url('/images/classroom/template1/gray/bg_process_03.png') no-repeat;
+}
+.process li.test .imgBox {
+	height: 51px;
+	background: url('/images/classroom/template1/gray/bg_process_04.png') no-repeat;
+}
+.process li.final .imgBox {
+	height: 76px;
+	background: url('/images/classroom/template1/gray/bg_process_05.png') no-repeat;
+}
+.process li .imgBox span {
+	display: block;
+	padding-bottom: 5px;	
+	color: #ffffff;
+	font-weight: 700;
+}
+.process li.final .imgBox span, .process li.final .textBox { 
+	padding-bottom: 20px;
+}
+.process li .textBox {
+	display: table-cell;
+	width: auto;
+	height: 51px;
+	padding-bottom: 5px;
+	vertical-align: bottom;		
+}
+.process li .textBox .number {
+	width: 60px;
+	margin-right: 5px;
+	padding-left: 20px;
+	font-size: 15px;
+	font-weight: 700;	
+	background: none !important;
+}
+.process li:first-child .textBox .number {
+	color: #6690d4;
+}
+.process li.month .textBox .number {
+	color: #2d5fa5;
+}
+.process li.task .textBox .number {
+	color: #009d4f;
+}
+.process li.test .textBox .number {
+	color: #f2444a;
+}
+.process li.final .textBox .number {
+	color: #494f54;
+}
+.process li .textBox span {
+	display: table-cell;
+	padding-left: 15px;
+	letter-spacing: -0.5px;
+}
+.process li:first-child .textBox span {
+	background: url('/images/classroom/template1/gray/bullet_01.png') no-repeat 0px 7px;
+}
+.process li.month .textBox span {
+	background: url('/images/classroom/template1/gray/bullet_02.png') no-repeat 0px 7px;
+}
+.process li.task .textBox span {
+	background: url('/images/classroom/template1/gray/bullet_03.png') no-repeat 0px 7px;
+}
+.process li.test .textBox span {
+	background: url('/images/classroom/template1/gray/bullet_04.png') no-repeat 0px 7px;
+}
+.process li.final .textBox span {
+	background: url('/images/classroom/template1/gray/bullet_05.png') no-repeat 0px 7px;
+}
+
+@media screen and (max-width: 568px) {
+	.process li .imgBox {
+		display: block;
+		width:50%;
+		margin: 0 auto;
+		-webkit-border-radius: 5px 5px 0px 0px;
+	    -moz-border-radius: 5px 5px 0px 0px;
+	    border-radius: 5px 5px 0px 0px;
+	}
+	.process li:first-child .imgBox {
+		height: inherit;
+		border: solid 1px #7caaec;
+		background: #7caaec;
+	}
+	.process li:first-child+li.month .imgBox {
+		height: inherit;
+		background: #4e80ba;
+	}
+	.process li.month .imgBox {
+		height: inherit;
+		background: #4e80ba;
+	}
+	.process li.task .imgBox {
+		height: inherit;
+		background: #3fb57a;
+	}
+	.process li.test .imgBox {
+		height: inherit;
+		background: #f56f73;
+	}
+	.process li.final .imgBox {
+		height: inherit;
+		background: #707579;
+	}
+	.process li .imgBox span {
+		display: block;
+		padding-top: 6px;	
+		padding-bottom: 5px;
+		font-weight: 700;
+	}
+	.process li.final .imgBox span { 
+		padding-bottom: 5px;
+	}
+	.process li.final .textBox { 
+		padding-bottom: 15px;
+	}
+	.process li:first-child .textBox {
+		border: solid 1px #7caaec;
+	}
+	.process li.month .textBox {
+		border: solid 1px #4e80ba;
+	}
+	.process li.task .textBox {
+		border: solid 1px #3fb57a;
+	}
+	.process li.test .textBox {
+		border: solid 1px #f56f73;
+	}
+	.process li.final .textBox {
+		margin-bottom: 0;
+		border: solid 1px #707579;
+	}
+	.process li .textBox {
+		display: block;
+		width:100%;
+		height: inherit;
+		margin-bottom: 20px;
+		padding: 15px 10px 15px 10px;
+		vertical-align: top;
+		background: #ffffff;		
+	}
+	.process li .textBox .number {
+		width: 50px;
+		margin-right: 0px;
+		padding-left: 5px;
+		font-size: 15px;
+		font-weight: 700;
+		vertical-align: top;
+		background: none !important;
+	}
+}
+
+/* 학습방법 - 학습문의 */
+.inquiry {
+	min-height: 360px;
+}
+.inquiry .box {
+	float: left;
+	display: block;
+	width: 243px;
+	height: 360px;
+	margin-left: 15px;
+	padding-top: 50px;
+	border: solid 1px #d9dddf;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	text-align: center;
+}
+.inquiry .box:first-child {
+	margin-left: 0px;	
+}
+.inquiry .box .textBox p {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-size: 15px;
+	font-weight: 700;
+}
+.inquiry .box .textBox span {
+	display: block;
+	letter-spacing: -1px;
+}
+.inquiry .box .textBox .content {
+	color: #7f868b;
+	margin-bottom: 5px;
+}
+.inquiry .box .textBox .tel {
+	width: 100px;
+	margin: 0 auto;
+	padding-left: 18px;
+	background: url('/images/classroom/template1/gray/img_title_inquiry_tel.png') no-repeat 0px 5px;	
+}
+.inquiry .box .textBox .time {
+	color: #f2444a;
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+	.inquiry .box {
+		width: 31%;
+		margin-left: 3.5%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.inquiry .box {
+		float: none;
+		width: 100%;
+		height: auto;
+		margin-left: 0;
+		margin-bottom: 20px;
+		padding-top: 0;
+	}
+	.inquiry .box .imgBox {
+		display: table-cell;
+		width: 20%;
+		padding: 2%;
+		vertical-align: top;
+	}
+	.inquiry .box .imgBox img {
+		width: 100%;
+	}
+	.inquiry .box .textBox {
+		display: table-cell;
+		padding: 2% 2% 0 2%;
+		text-align: left;
+	}
+	.inquiry .box .textBox p {
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	.inquiry .box .textBox span {
+		letter-spacing: 0;
+	}
+	.inquiry .box .textBox .content br {
+		display: none;
+	}
+	.inquiry .box .textBox .tel {
+		width: auto;
+		margin-right: 10px;
+	}	
+}
+@media screen and (max-width: 639px) {
+	.inquiry .box .imgBox {
+		display: block;
+		width: 100%;
+		padding: 20px 2% 15px 2%;
+	}
+	.inquiry .box .imgBox img {
+		width: 100px;
+	}
+	.inquiry .box .textBox {
+		display: block;
+		padding: 0 4% 15px 4%;
+		text-align: left;
+	}
+	.inquiry .box .textBox span {
+		display: inline-block;
+	}
+	.inquiry .box .textBox .content{
+		display: block;
+	}
+
+}
+
+/* 학습방법 - 평가참여방법 */
+.boardList.standard table {
+    border-top: solid 1px #d9dddf;
+}
+.boardList.standard table th {
+	text-align: center;
+	border-left: solid 1px #d9dddf;
+	background: #e9f1fb;
+}
+.boardList.standard table th:firtst-child {
+   border-left: none;
+}
+ .boardList.standard .sort {
+	width: 13%;
+ }
+ .boardList.standard .standard {
+ 	width: 17%;
+ } 
+ .boardList.standard .content {
+    width: 50%;
+    text-align: left;
+ }
+ .boardList.standard .test {
+    width: 20%;
+    text-align: left;
+ }
+ 
+ @media screen and (max-width: 1000px) {
+	/* 학습방법 - 평가참여방법 */
+	.boardList.standard table, 
+	.boardList.standard table tbody,
+	.boardList.standard table tr,
+	.boardList.standard .sort,
+	.boardList.standard .standard,
+	.boardList.standard .content,
+	.boardList.standard .test {
+		display: block;
+		width: 100%;
+		border-left: none;
+	}
+	.boardList.standard table th {
+		display: none;
+	}
+	.boardList.standard .sort {
+		font-weight: bold;
+		text-align: left;
+		background: #e9f1fb;
+	}
+	.boardList.standard .sort br {
+		display: none;
+	}
+	.boardList.standard .standard {
+		text-align: left;
+		background: #f9f9f9;
+	}
+}
+   
+.content > .standard {
+	width: 100%;
+	height: auto !important;
+/* 	margin-top: 30px;	 */
+}
+.content .standard li div {
+	width: 13%;
+}
+.content .standard li:first-child div {
+	text-align: center;
+}
+.content .standard li div+div {
+	width: 17%;
+}
+.content .standard li div+div+div {
+	width: 50%;	
+	text-align: left;
+}
+.content .standard li div+div+div+div {
+	width: 20%;
+}
+.content .standard li div li {
+	border: none;
+}
+.content .standard li div.alignCenter {
+	width: 87%;
+}
+
+@media screen and (max-width: 1000px) {
+	/* 학습방법 - 평가참여방법 */
+	.content .standard > ul {
+	   border-bottom: none;
+	}
+	.content .standard > ul > li {
+		margin-top: 20px;
+	}
+	.content .standard > ul > li:first-child {
+		margin-top: 0px;
+	}	
+	.content .standard li div, .content .standard li div.alignCenter {
+		display: block;
+		width: 100%;
+		border-left: none;
+	}
+	.content .standard li:first-child div {
+		display: none;
+	}
+	.boardList.standard li div:first-child  {
+		font-weight: 700;
+    	background: #e9f1fb;	
+	} 	
+	.boardList.standard li div:first-child br {
+		display: none;
+	}
+	.boardList.standard li div:first-child,
+	.content .standard li div+div,
+	.content .standard li div+div+div,
+	.content .standard li div+div+div+div {
+		width: 100%;
+		border-bottom: solid 1px #d9dddf;
+		text-align: left;
+	}
+	.content .standard li div+div.alignCenter,
+	.content .standard li div+div+div,
+	.content .standard li div+div+div+div {
+		background: none;
+	}
+	.content .standard li div+div {
+		background: #f9f9f9;
+	}
+}
+
+/* 학습방법 - 학습로드맵 */
+.roadMap {
+	padding: 30px;
+	background: #f3f4f4;
+}
+.roadMap li {
+	display: table;
+	width: 100%;
+	margin-top: 20px;
+}
+.roadMap li:first-child {
+	margin-top: 0px;
+}
+.roadMap li .imgBox  {
+	display: table-cell;
+	background: #739fd4;		
+}
+.roadMap li.type2 .imgBox {
+	background: #3274c4;
+}
+.roadMap li .imgBox span {
+	display: block;
+	width: 80px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 700;
+}
+.roadMap li .textBox {
+	display: table-cell;
+	background: #ffffff;
+	-webkit-box-shadow: 4px 4px 0px 0px rgba(231,232,232,1);
+	-moz-box-shadow: 4px 4px 0px 0px rgba(231,232,232,1);
+	box-shadow: 4px 4px 0px 0px rgba(231,232,232,1);		
+}
+.roadMap li .textBox a {
+	display: block;
+	border: solid 1px #ffffff;
+	font-weight: 700;
+	color: #313538;
+	padding: 10px 30px 10px 44px;
+	background: url('/images/classroom/template1/gray/bullet_01.png') no-repeat 30px 17px;
+}
+.roadMap li.type2 .textBox a {
+	background: url('/images/classroom/template1/gray/bullet_02.png') no-repeat 30px 17px;
+}
+.roadMap li.type3 .textBox a {
+	background: url('/images/classroom/template1/gray/bullet_03.png') no-repeat 30px 17px;
+}
+.roadMap li .textBox a:hover {
+	border: solid 1px #1d66bf;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 568px) {
+	.roadMap {
+		padding: 4.4%;
+	}
+	.roadMap li {
+		display: block;
+	}
+	/* .roadMap li:first-child {
+		margin-top: 0px;
+	} */
+	.roadMap li .imgBox  {
+		display: block;	
+	}
+	
+	.roadMap li .imgBox span {
+		padding: 5px 0 5px 0;
+	}
+	.roadMap li .textBox {
+		display: block;
+	}
+}
+
+
+/* 학습방법 - 교재구성 */
+.book {
+}
+.book ul { 
+}	
+.book li { 
+	display: table;
+	width: 100%;
+}	
+.book .month {
+	display: table-cell;
+	width: 120px;
+	text-align: center;
+}
+.book .month p {
+	display: block;
+	position: relative;
+	height: 176px;
+	padding-top: 100px;
+	border: solid 10px #f3f4f4;
+	font-size: 20px;
+	background: url('/images/classroom/template1/gray/bg_book_month.png') no-repeat center 35px;
+}
+.book .month p .mark {
+	display: block;
+	position: absolute;
+	top: 55px;
+	left: 31px;
+	width: 7px;
+	height: 7px;
+	border: solid 1px #2c99df;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #2c99df;
+}
+.book li+li .month p .mark {
+	left: 41px;
+}
+.book li+li+li .month p .mark {
+	left: 51px;
+}
+.book li+li+li+li .month p .mark {
+	left: 61px;
+}
+.book .month .arrow {
+	display: block;
+	width: 100%;
+	height: 43px;
+	background: url('/images/classroom/template1/gray/bg_book_arrow.png') no-repeat center 15px;
+}
+.book li > div+div {
+	display: block;	
+	position: relative;
+	min-height: 176px;
+	margin-left: 30px;
+	padding: 20px 25px 20px 25px;
+	border: solid 1px #d9dddf;
+	background: #f9f9f9;
+}
+.book li > div+div .arrow {
+	display: block;
+	position: absolute;
+	top: 72px;
+	left: -15px;
+	width: 15px;
+	height: 30px;	
+	background: url('/images/classroom/template1/gray/bg_book_arrow_01.png') no-repeat;
+}
+.book li > div+div .imgBox {
+	float: left;
+	width: 92px;
+	height: 134px;
+	border: solid 1px #d9dddf;
+	background: url('/images/classroom/template1/default/img_default_book.png') no-repeat;
+	background-size: 92px 134px; 
+}
+.book li > div+div .imgBox img {
+	width: 100%;
+	height: 100%;
+}
+.book li > div+div .textBox {
+	display: inline-block;
+	width: calc(100% - 92px);
+	padding-left: 25px;
+	vertical-align: top;	
+}
+.book li > div+div .textBox p {
+	margin-bottom: 5px;
+	padding: 5px 0 10px 0;
+	border-bottom: solid 1px #acb2b5;
+	font-size: 15px;
+	font-weight: 700;
+}
+.book li > div+div .textBox dl {
+	display: block;
+	line-height: 25px;
+	color: #494f54;
+}
+.book li > div+div .textBox dt {
+	float: left;
+	font-weight: 700;
+}
+.book li > div+div .textBox dd {
+	margin-left: 60px;
+}
+.reference {
+	margin-top: 60px;
+}
+.reference p {
+	height: 30px;
+	margin-bottom: 25px;
+	padding-left: 38px;
+	line-height: 28px;
+	font-size: 18px;
+	font-weight: 700;
+	background: url('/images/classroom/template1/gray/bg_reference_title.png') no-repeat;
+}
+.reference li {
+	margin-bottom: 5px;
+}
+.reference li span {
+	padding-left: 15px;
+}
+.reference li .title {
+	font-weight: 700;
+}
+.reference li .writer, .reference li .publisher {
+	color: #61696f;
+}
+.reference li .writer:before, .reference li .publisher:before {
+	padding-right: 15px;
+	content: '|';
+	color: #c0c4c7;
+}
+
+@media screen and (max-width: 568px) {
+	.book li { 
+		display: block;
+		position: relative;
+		padding-bottom: 43px;
+	}	
+	.book .month {
+		display: block;
+		width: 100%;
+		text-align: inherit;
+	}
+	.book .month p {
+		height: 72px;
+		padding-top: 0px;
+		padding-left: 86px;
+		border: solid 1px #d9dddf;
+		border-bottom: none;
+		line-height: 72px;
+		background: url('/images/classroom/template1/gray/bg_book_month.png') no-repeat 10px 10px;
+	}
+	.book .month p .mark {
+		top: 30px;
+		left: 19px;
+	}
+	.book li+li .month p .mark {
+		left: 29px;
+	}
+	.book li+li+li .month p .mark {
+		left: 39px;
+	}
+	.book li+li+li+li .month p .mark {
+		left: 49px;
+	}
+	.book li .arrow {
+		position: absolute;
+		bottom: 0px;
+	}	
+	.book li > div+div {
+		margin-left: 0px;
+		padding-right: 4%;
+		padding-left: 4%;
+		min-height: 147px;
+	}
+	.book li > div+div .arrow {
+		display: none;
+	}
+	.book li > div+div .imgBox { /* 80% */
+		width: 84px;
+		height: 107px;
+		min-height: 107px;
+		background-size: 84px 107px; 
+	}
+	.book li > div+div .textBox {
+		width: calc(100% - 84px);
+		padding-left: 4%;
+	}
+	.book li > div+div .textBox p {
+    	padding: 0px 0 5px 0;
+	}
+	.book li > div+div .textBox dl {
+	    line-height: 20px;
+	}
+	.reference {
+	    margin-top: 17px;
+	}		
+}
+@media screen and (max-width: 414px) {
+	.book li > div+div {
+		min-height: 10px;
+	}	
+	.book li > div+div .imgBox { 
+		display: none;
+	}
+	.book li > div+div .textBox {
+		width: 100%;
+		padding-left: 0%;
+	}
+	.book li > div+div .textBox p {
+    	padding: 0px 0 5px 0;
+	}
+	.book li > div+div .textBox dl {
+	    line-height: 20px;
+	}
+	.reference {
+	    margin-top: 17px;
+	}		
+}
+
+/* 학습방법 - 교수진 소개 */
+.lecture {
+	display: table;
+	width: 100%;
+	border: solid 1px #d9dddf;
+}
+.lecture > div {
+	display: table-cell;
+}
+.lecture .profile {
+	width: 215px;
+	padding: 30px 25px 30px 25px;
+	background: #f9f9f9;
+}
+.lecture .profile .profileBg {
+	background: url('/images/classroom/template1/default/bg_profile.png') 0 0 no-repeat;
+	background-size: 100%;
+}
+.lecture .profile .profileImg.female {
+	display: block;
+	width: 124px;
+	height: 124px;
+	margin: 0 auto;
+	background: url('/images/classroom/template1/default/img_default_profile_female.png') no-repeat;
+}
+.lecture .profile .profileImg.male {
+	display: block;
+	width: 124px;
+	height: 124px;
+	margin: 0 auto;
+	background: url('/images/classroom/template1/default/img_default_profile_male.png') no-repeat;
+}
+.lecture .profile .name {
+	display: block;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	font-weight: 700;
+	border-bottom: solid 1px #d9dddf;
+}
+.lecture .profile .name strong {
+	margin-right: 5px;
+	color: #1d66bf;
+	font-size: 18px;
+}
+.lecture .profile dl {
+	display: block;
+	margin-top: 10px;
+	line-height: 22px;
+}
+.lecture .profile dt {
+	float: left;
+	font-weight: 700;
+}
+.lecture .profile dd {
+	margin-left: 40px;
+}
+.lecture .career {
+	width: 595px;	
+	padding: 45px 40px 45px 40px;
+	background: #ffffff;
+}
+.lecture .career > p {
+	display: table;
+	width: 100%;
+}
+.lecture .career > p > span  {
+	display: table-cell;
+}
+.lecture .career > p > span .line {
+	display: block;
+	height: 1px;
+	border-top: solid 1px #1d66bf;
+}
+.lecture .career > p > strong  {
+	display: table-cell;
+	width: 310px;
+	height: 38px;
+	line-height: 38px;
+	border: solid 1px #1d66bf;
+	-webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+    border-radius: 19px;	
+	color: #1d66bf;
+	font-size: 20px;
+	font-weight: 400;
+	text-align: center;
+	background: #f9f9f9;
+} 
+.lecture .career .title {
+	height: 27px;
+	margin-top: 40px;
+	margin-bottom: 15px;
+	padding-left: 37px;
+	color: #1d66bf;
+	font-size: 18px;
+	font-weight: 700;
+	background: url('/images/classroom/template1/gray/bg_career_title.png') no-repeat;
+}
+.lecture .career dl {
+	display: block;
+	margin-top: 10px;
+}
+.lecture .career dt {
+	float: left;
+	padding-left: 25px;
+	font-weight: 700;
+	background: url('/images/classroom/template1/gray/bg_career_bullet_01.png') 0 5px no-repeat;
+}
+.lecture .career dd {
+	padding-left: 10px;
+	margin-left: 110px;
+	line-height: 22px;
+	background: url('/images/classroom/template1/gray/bg_career_bullet_02.png') 0px 13px no-repeat;
+}
+@media (max-width: 767px) {	
+	.lecture {
+		display: block;
+	}
+	.lecture > div {
+		display: block;
+	}
+	.lecture .career {
+		width: 100%;
+		padding: 20px 4% 20px 4%;
+	}
+	.lecture .career > p {
+		display: none;
+	}
+	.lecture .profile {
+		display: table;
+		width: 100%;
+	}
+	.lecture .profile > div {
+		display: table-cell;
+	}
+	
+}
+@media (max-width: 568px) {	
+	.lecture .profile {
+		display: block;
+		width: 100%;
+	}
+	.lecture .profile > div {
+		display: block;
+	}
+	.lecture .career dt {
+		float: none;
+	}
+	.lecture .career dd {
+		margin-left: 30px;
+		line-height: 18px;
+	}		
+	
+}
+
+
+span.ppt {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/ppt.png') no-repeat;
+}
+span.pdf {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/pdf.png') no-repeat;
+}
+span.doc {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/doc.png') no-repeat;
+}	
+span.xls {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/xls.png') no-repeat;
+}
+span.txt {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/txt.png') no-repeat;
+}
+span.hwp {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/txt.png') no-repeat;
+}	
+span.html {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/html.png') no-repeat;
+}
+span.jpg {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/jpg.png') no-repeat;
+}
+span.gif {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/gif.png') no-repeat;
+}
+span.png {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/png.png') no-repeat;
+}
+span.zip {
+	display: inline-block;
+	height: 24px;
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/zip.png') no-repeat;
+}
+.video {
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+/* 본인인증  */
+.certify { 
+	display: block;
+	width: 100%;
+	border: solid 2px #e7e9ea;
+}
+.certify > .imgBox {
+	float: left;
+	width: 105px;
+	height: 85px;
+	padding: 20px;
+	font-size: 0;
+	background: url('/images/template2/resp/default/usr/icon_certify.png') 20px 20px no-repeat;
+}
+.certify .textBox {
+	display: inline-block;
+	width: auto;
+	padding: 20px;
+}
+.certify .textBox .info {
+	color: #0c50a1;
+}
+.certify .textBox .box {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.certify .textBox .box .imgBox {
+	display: inline-block;
+	width: inherit;
+	padding: 10px 20px 10px 20px;
+	border: solid 1px #8e9599;
+	font-size: 1.54em;
+	font-style: italic;
+	color: #313538;
+	font-weight: 700;
+	letter-spacing: 3px;
+	background: #e7e9ea;
+}
+.certify .textBox .box input {
+	display: inline;
+	width: 30%;
+	margin-left: 10px;
+	margin-right: 2px;
+	vertical-align: middle;	
+}
+.certify .textBox .box button {
+	display: inline;
+	vertical-align: middle;	
+}
+.certify .textBox .success {
+	padding-left: 40px;
+	line-height: 28px;	
+	color: #009d4f;
+	background: url('/images/classroom/template1/default/icon_success.png') 0px 0px no-repeat;
+}
+.certify .textBox .error {
+	padding-left: 40px;
+	line-height: 28px;	
+	color: #f2444a;	
+	background: url('/images/classroom/template1/default/icon_error.png') 0px 0px no-repeat;
+}
+.certify+.btnArea {
+	text-align: center;
+}
+
+/* 과제  */
+.task  {
+}
+.task dt {
+    display: block;
+    float: left;
+    margin-top: 40px;
+	font-weight: 700;    
+}
+.task dt span {
+	float: left;
+	height: 100%;
+	padding-right: 7px;
+}
+.task dt p:first-child {
+	font-weight: 700;
+}
+.task dt p {
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+.task dt p strong {
+	margin-left: 10px;
+	color: #0c50a1;	
+}
+.task dt .listAttach { 
+	font-weight: 400;
+	vertical-align: 0px;
+}
+.task dt .listAttach li > span {
+	line-height: 24px;
+}
+.task dd {
+    margin-left: 20px;
+}
+.popup .task .boardList {
+	margin-top: 15px;
+	border-top: solid 1px #d9dddf; 
+	border-left: solid 1px #d9dddf;
+	border-right: solid 1px #d9dddf; 
+}
+.popup .task .boardList table {
+	border-top: none;
+}
+.popup .task .boardList th {
+	height: 40px;
+}
+.popup .task .boardList td+td {
+	text-align: left;
+}
+.popup .task .boardList td+td+td {
+	text-align: left;
+}
+.popup .task .boardList td+td+td+td {
+	text-align: center;
+}
+.popup .task dd .box {
+	float: none;
+	margin-top: 10px;
+	padding: 0;
+}
+.popup .task dd .box > label {
+	float: left;
+	line-height: 26px;
+	padding-right: 10px;
+}
+.popup .task dd .box > .fileAttach {
+	display: inline-block;
+}
+.popup .task dd .info {
+	color: #1d66bf;
+	padding-left: 70px;
+	line-height: 26px;
+}
+.popup .contentsBox > .box > h6 {
+	margin-top: 40px;
+}
+.popup .contentsBox > .btnArea {
+	display: block;
+}
+
+.popup div.grade {
+	margin-bottom: 10px;
+	text-align: right;
+}
+.popup .grade > p {
+	display: inline-block;
+	font-weight: 700;
+	font-weight: 1.38em;
+	letter-spacing: 1px;
+}
+.popup .grade > p > span {
+	display: inline-block;
+	margin-left: 10px;
+	padding: 0px 20px 0px 20px;
+	line-height: 34px;
+	color: #ffffff;
+	font-size: 1.54em;
+	background: #1d66bf;
+}
+.popup div.time {
+	margin-bottom: 10px;
+	text-align: right;
+}
+.popup .time > p {
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 700;
+	line-height: 34px;
+}
+.popup .time > p > span {
+	float: left;
+	display: inline-block;
+	line-height: 34px;
+	margin-left: 10px;
+	padding: 0 7px 0 7px;
+	color: #ffffff;
+	font-size: 1.54em;
+	text-align: center;
+	background: #f2444a;
+}
+.popup .time > p > span.date {
+	float: left;
+	display: inline-block;
+	line-height: 34px;
+	margin-left: 10px;
+	padding: 0 7px 0 7px;
+	color: #f2444a;
+	font-size: 1.38em;
+	text-align: center;
+	background: #f5f5f5;
+}
+.popup .time > p.info {
+	display: block;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+/* 시험, 설문  */
+.test dt {
+    display: block;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: solid 1px #e5e5e5;
+    font-weight: 700;
+}
+.test dt:first-child {
+	border-top: none;
+}
+.test dt .mark {
+	margin-bottom: 10px;
+	margin-left: 15px;
+	font-weight: 400;
+}
+.test dt .mark > span {
+	margin-right: 10px;
+}
+.test dt .mark > span > strong {
+	color: #1d66bf;
+}
+.test dt .mark > span > span {
+	color: #f2444a;
+}
+.test dd {
+    margin-left: 20px;
+    line-height: 24px;
+}
+.test dd input {
+	margin-top: 1px;
+}
+.test dd label {
+	margin-left: 10px;
+}
+.test dd textarea {
+	margin-top: 5px;
+}
+.test dd > p {
+    margin-top: 5px;
+    line-height: 18px;
+}
+.test dd > p > span  {
+	margin-right: 5px;
+	color: #f2444a;  
+}
+.test dd.answer {
+    margin-top: 20px;  
+}
+.test dd.answer > p {
+	color: #f2444a;
+	font-weight: 700;  
+	font-size: 1.15em;  
+}
+.test dd.answer > p > strong {
+	font-weight: 400;  
+	font-size: 13px;  
+}
+.test dd.answer .explain {
+    margin-top: 10px;
+}
+.test dd.answer .explain .btnView:after {
+	 content: " ▼";
+	font-size: 0.8em;	 
+}
+.test dd.answer .explain.active .btnView:after {	
+	 content: " ▲";
+	font-size: 0.8em;
+}
+.test dd.answer .explain .content {
+	display: none;
+	margin-top: 5px;
+	padding: 15px 20px 15px 20px;
+    background: #f3f4f4;
+}
+
+.memoView {
+
+}
+.memoView li {
+	margin-bottom: 10px;
+	border: solid 1px #d9dddf;	
+}
+.memoView li p {
+	display: block;
+	padding: 0px 10px 0px 10px;
+	line-height: 40px;
+}
+.memoView li p:first-child {
+	position: relative;	
+	border-bottom: solid 1px #dce1e5;
+}
+.memoView li .content {
+	padding: 20px 10px 20px 10px;
+	line-height: 20px;	
+	background: #f3f4f4;
+}
+.memoView li .btnDelete {
+	float: right;
+	min-width: 0;
+	width: 21px;
+	height: 21px;
+	margin-top: 10px;
+	border: none;
+	font-size: 0;
+}
+
+
+
+
+

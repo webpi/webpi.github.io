@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <title>메인페이지</title>
+    <link href="/css/classroom/template2/template2.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template2/navy.css" rel="stylesheet" type="text/css" media="all">
+    <!--[if lt IE 10]>
+        <link href="/css/classroom/template2/ie8-9.css" rel="stylesheet" type="text/css" media="all">
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/classroom/template2/style.js"></script>
+</head>
+<body>
+    <!-- #wrap start -->
+    <div id="wrap">
+        <!-- #header start -->
+        <div id="header" class="sub">
+            
+            <!-- btnArea start -->
+            <div class="btnArea">
+                <button type="button" class="btnMain" onclick="window.open('http://58.233.207.97:18080/publish_2/hihrd/6closed/main.html','_blank');">메인으로</button>
+                <button type="button" class="btnClosed" onclick="window.close();">나가기</button>
+            </div>
+            <!-- //btnArea end -->
+            
+            <!-- logo start -->
+            <h1 class="logo">
+                <img src="/images/classroom/template2/default/logo.png" alt="하이인재원" />
+                <strong>강의실</strong>
+            </h1>
+            <!-- //logo end -->
+
+            <!-- gnbWrap start -->
+            <div class="gnbWrap">
+                <h2>강의실</h2>
+                <!-- gnb start -->
+                <ul class="gnb">
+                    <li class="active">
+                        <a href="main.html">강의실 홈</a>
+                    </li>
+                    <li>
+                        <a href="progress.html">진도/성적</a>
+                    </li>
+                    <li>
+                        <a href="survey.html">설문</a>
+                    </li>
+                    <li>
+                        <a href="task.html">과제</a>
+                    </li>
+                    <li>
+                        <a href="test.html">시험</a>
+                    </li>
+                    <li>
+                        <a href="discussion_list.html">토론</a>
+                    </li>
+                    <li>
+                        <a href="inquiry_list.html">학습문의</a>
+                    </li>
+                    <li>
+                        <a href="data_list.html">자료실</a>
+                    </li>
+                    <li>
+                        <a href="data_list.html">학습오류게시판</a>
+                    </li>
+                </ul>
+                <!-- //gnb end -->
+                
+                <!-- customer start -->			
+	            <div class="customer">
+	                <strong>학습지원문의</strong>
+	                <strong class="tel">1661-9061</strong>
+	                <a class="tel" href="tel:1661-9061">1661-9061</a>
+	                <p>평일 : 09:00~18:00</p>
+	                <div class="btnArea">
+	                    <button type="button">원격지원서비스</button>
+	                </div>
+	            </div>
+	            <!-- //customer end -->
+	            
+            </div>
+            <!-- //gnbWrap end -->
+            <button type="button" class="allMenu" onClick="menuMobile();">메뉴</button>
+        </div> 
+        <!-- //#header end -->
+        
+        <!-- #container start -->
+        <div id="container">
+        	<div id="sub">
+        		<!-- contentsWrap start -->        	
+        		<div class="contentsWrap">
+        			<!-- #contents start -->
+        			<div id="contents">
+                        <!-- userInfo start -->
+                        <div class="userInfo">
+                            <p>
+                                <strong>홍길동</strong>님
+                                <span>(wb1234)</span>
+                            </p>
+                        </div>   
+                        <!-- //userInfo end -->
+                        
+	        			<!-- headingBox start -->
+	        			<div class="headingBox">
+                            <div class="title">
+                                <h3>독서경영 에너지 위기에 강한 기업의 비결!</h3>
+                                <div class="period">
+	        						<span><strong>전체학습기간</strong> 2016.06.01 ~ 2016.08.31</span>
+                                    <span>(4차시 / 12차시)</span>
+	        					</div> 
+                            </div>
+	        				<div class="box">
+                                <div class="btnArea">
+                                    <button type="button" class="btnLearning"  onclick="learning()"><span>학습하기</span></button>
+                                </div>
+	        					<div class="date">
+	        						<strong>남은학습일</strong>
+	        						<p>
+                                        <span>D-</span>
+	        							<span>1</span>
+	        							<span>0</span>
+	        							<span>8</span>
+	        						</p>
+	        					</div>
+	        				</div>
+	        			</div>
+	        			<!-- //headingBox end -->
+	        			
+	        			<script>
+							function learning() {
+// 							    window.open("learning.html");
+// 								window.open("http://hi.hihrd.co.kr/front/Contents.do?cmd=sampleContentsFrame&p_contsid=0000916","example","scrolbars=no,width=1000,height=680,menubar=false");
+							}
+							
+						</script>
+	        			
+	        			
+        				<!-- contentsBox start -->
+	        			<div class="contentsBox">
+	        			<div class="title">강의실 홈</div>
+	        				<div class="learning">
+	                            <ul class="state">
+                          			<li>
+									    <div class="title">강의 진도율</div>
+									    <div class="number">
+									        <a><strong>100%</strong></a>
+									        <p>남은 학습기간 D-30</p>
+									    </div>
+									</li>
+									<li>
+									    <div class="title">과제</div>
+									    <div class="number type2">
+									    	<a href="#">
+										        <strong>미제출<span>1</span>건</strong>
+										        <strong>제출완료<span>1</span>건</strong>
+									    	</a>
+									        <p>마감일 D-30</p>
+									    </div>
+									</li>
+									<li>
+									    <div class="title">진행단계평가</div>
+									    <div class="number">
+									    	<a href="#">
+										        <strong>미응시<span>1</span>건</strong>
+										        <strong>응시완료<span>1</span>건</strong>
+									    	</a>
+									        <p>마감일 D-30</p>
+									    </div>
+									</li>
+									<li>
+									    <div class="title">최종평가</div>
+									    <div class="number">
+									    	<a href="#">
+									        	<strong>미응시<span>1</span>건</strong>
+									    	</a>
+									        <p>마감일 D-30</p>
+									    </div>
+									</li>
+								</ul>
+	        				</div>
+	        				<!-- 
+	        				<div class="learning">
+	                            <ul class="state">
+                          			<li>
+									    <div class="title">강의 진도율</div>
+									    <div class="noData">해당 사항 없음</div>
+									</li>
+									<li>
+									    <div class="title">과제</div>
+									    <div class="noData">해당 사항 없음</div>
+									</li>
+									<li>
+									    <div class="title">진행단계평가</div>
+									    <div class="noData">해당 사항 없음</div>
+									</li>
+									<li>
+									    <div class="title">최종평가</div>
+									    <div class="noData">해당 사항 없음</div>
+									</li>
+								</ul>
+	        				</div>
+							-->
+							
+							
+						<!-- 학습현황 start -->
+						<div class="box">
+							<h4>학습현황</h4>
+							
+							<div class="situation"> 
+								<p>* 환산점수(취득점수)</p>
+								<ul>
+									<li class="state"> 
+										<p class="title">현황</p>
+										<p><strong>수료</strong></p>
+									</li>
+									<li class="total">
+										<p class="title">총점</p>
+										<p><strong>100점</strong></p>
+									</li>
+									<li>
+										<p class="title">진도</p>
+										<p>40점(100점)</p>  
+									</li>
+									<li>
+										<p class="title">과제</p>
+										<p>20점(100점)</p> <!-- 과제가 없을 경우 해당 사항 없음 으로 처리 -->
+									</li>
+									<li>
+										<p class="title">진행단계평가</p>
+										<p>20점(100점)</p> <!-- 진행단계평가가 없을 경우 해당 사항 없음 으로 처리 -->
+									</li>
+									<li>
+										<p class="title">최종평가</p>
+										<p>20점(100점)</p> <!-- 최종평가가 없을 경우 해당 사항 없음 으로 처리 -->
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+						<!-- //학습현황 end -->	
+							
+							
+							
+							<div class="box">
+	        					<h4>수료기준안내</h4>
+	        					<div class="textBox">
+	        						<ul>
+	        							<li>
+	        								<span>1</span>
+	        								<strong class="warning">2016년 8월 8일 부터 2016년 9월 7일 까지 모든학습을 완료하셔야 합니다.</strong>
+	        							</li>
+	        							<li>
+	        								<span>2</span>
+	        								<strong>평가</strong>
+	        								<dl>
+	        									<dt> - 과제 :</dt>
+	        									<dd>학습기간 내 제출(50%)</dd>
+	        									<dt> - 중간단계평가 :</dt>
+	        									<dd>학습기간 내 필수 응시 (10%)</dd>
+	        									<dt> - 최종평가 :</dt>
+	        									<dd>학습기간 내 필수 응시(60분, 1회만 응시, 40%)</dd>
+	        								</dl>
+	        							</li>
+	        							<li>
+	        								<span>3</span>
+	        								<strong>총점 60점 , 진도율 80% 이상 </strong>
+	        							</li>
+	        						</ul>
+	        					</div>
+							</div>
+							<div class="box">
+	        					<h4>공지사항<a href="" class="btnMore">더보기</a></h4>
+		        				<!-- boardList start -->
+			                    <div class="boardList">
+									<table>
+			                            <caption>공지사항</caption>
+			                            <thead>
+			                                <tr>
+			                                    <th width="">NO</th>
+			                                    <th width="">제목</th>
+			                                    <th width="">첨부파일</th>
+			                                    <th width="">등록일</th>
+			                                    <th width="">조회</th>
+			                                </tr>
+			                            </thead>
+										<tbody>
+			                                <tr>
+			                                    <td>2</td>
+			                                    <td class="title">
+			                                        <a href="inquiry_view.html">제목이 출력됩니다.<span class="new">new</span></a>
+			                                    </td>
+			                                    <td class="file">
+			                                         <img src="/images/classroom/template2/default/icon_attach_file.png" alt="" />                                       
+			                                    </td>
+			                                    <td class="date">0000-00-00</td>
+			                                    <td class="hit">99</td>
+			                                </tr>
+			                                <tr>
+			                                    <td>1</td>
+			                                    <td class="title">
+			                                        <a href="inquiry_view.html">제목이 출력됩니다.</a>
+			                                    </td>
+			                                    <td class="file">
+			                                         <img src="/images/classroom/template2/default/icon_attach_file.png" alt="" />                                       
+			                                    </td>
+			                                    <td class="date">0000-00-00</td>
+			                                    <td class="hit">99</td>
+			                                </tr>
+			                            </tbody>
+									</table>
+								</div>
+								<!-- //boardList end -->
+							</div>
+	        			</div>
+	        			<!-- //contentsBox end -->
+	        			
+        			</div>
+        			<!-- //#contents end -->
+        		</div>
+        		<!-- //contentsWrap end -->
+        	</div>
+        	<!-- //#sub end -->        	
+        </div>
+        <!-- //#container end -->
+    </div>
+    <!-- //#wrap end -->
+</body>
+</html>

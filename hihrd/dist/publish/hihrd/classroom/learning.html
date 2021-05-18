@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>학습창</title>
+    <link href="/css/classroom/common.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/contents.css" rel="stylesheet" type="text/css" media="all">
+    
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+		$(document).ready( function() {
+			$('.btnMenu').click( function() {
+				$('.gnb').toggleClass('active');
+			} );
+			$('.btnIndex').click( function() {
+				$('.index').toggleClass('active');
+			} );
+		} );  	
+    </script>
+</head>
+<body>
+	<div class="learningInfo">
+		<button class="btnError" title="콘텐츠오류접수"></button>
+		<button class="btnClose" title="학습창 닫기"></button>
+		<div class="infoText">
+			<p>· 각 사의 사내 network 속도에 따라 콘텐츠 로딩시 다소 시간이 소요 될 수 있습니다. 콘텐츠가 정상적으로 로딩될때까지 기다려 주세요.</p>
+			<p>· 콘텐츠 진도는 학습창을 정상적으로 닫을 경우에만 적용됩니다.</p>
+		</div>
+	</div>
+	<div class="learning">
+		<div class="learningHeader">
+			<div class="title">
+				<h2>강한 조직을 만드는 팀장양성 프로그램 매뉴얼</h2>
+				<div class="subTitle">
+					<h3>5.첨단 시술의 변화</h3>
+					<p>RAND 연구소의 미래첨단 기술에 대한 예측</p>
+				</div>
+			</div>
+			<div class="gnb active">
+				<div class="menu">
+					<a href="" class="btnPrev">이전</a>
+					<ul>	
+						<li>
+							<a href="">공지사항</a>
+						</li>
+						<li class="active">
+							<a href="">진도/목차</a>
+						</li>
+						<li>
+							<a href="">설문</a>
+						</li>
+						<li>
+							<a href="">과제</a>
+						</li>
+						<li>
+							<a href="">시험</a>
+						</li>
+						<li>
+							<a href="">과정Q&A</a>
+						</li>
+						<li>
+							<a href="">과정자료실</a>
+						</li>
+					</ul>
+					<a href="" class="btnNext">다음</a>
+				</div>
+				<div class="time">
+					<div class="box">1:20:20
+					</div>
+				</div>
+				<div class="btnMenu">메뉴</div>
+			</div>
+		</div>
+		<div class="contents">
+		</div>
+		<div class="index active">
+			<div class="tree"></div>
+			<div class="btnIndex"></div>
+		</div>
+	</div>
+</body>
+</html>

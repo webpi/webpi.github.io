@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    @@include('./src/publish/hihrd/comm/head.html')
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header class="header">
+            @@include('./src/publish/hihrd/comm/header.html')
+        </header>
+        <!-- // header -->
+
+        <div class="container">
+            <section class="section-qna">
+                <div class="qna-wrap">
+                    <h2 class="tit-h2">1:1 문의</h2>
+
+                    <div class="qna-write">
+                        <!-- 필요없을시 form 삭제 가능 -->
+                        <form>
+                            <fieldset>
+                                <legend><span>문의하기 내용</span></legend>
+
+                                <table class="qna-write-board">
+                                    <caption><span>문의하기 상세</span></caption>
+                                    <colgroup>
+                                        <col style="width: 140px;">
+                                        <col>
+                                    </colgroup>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="id-category">분류<em class="ico-required">*</em></label>
+                                        </th>
+                                        <td>
+                                            <div class="selectBox">
+                                                <select id="id-category" name="" isnull="" title="선택" class="selectbox">
+                                                    <option>선택</option>
+                                                    <option>과제문의</option>
+                                                    <option>학습문의</option>
+                                                    <option>복습문의</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- <span class="slt slt-large">
+                                                <select id="id-category">
+                                                    <option>선택</option>
+                                                    <option>과제문의</option>
+                                                    <option>학습문의</option>
+                                                    <option>복습문의</option>
+                                                </select>
+                                            </span> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="id-subject">제목<em class="ico-required">*</em></label>
+                                        </th>
+                                        <td>
+                                            <input type="text" id="id-subject" placeholder="제목을 입력하세요" class="istyle istyle-large">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="id-content">내용<em class="ico-required">*</em></label>
+                                        </th>
+                                        <td>
+                                            <textarea id="id-content" cols="50" rows="5" placeholder="내용을 입력하세요" class="itext"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="id-file">첨부파일</label>
+                                        </th>
+                                        <td>
+                                            <div class="file-upload">
+                                                <span class="btn btn-color1 btn-large btn-file-upload">
+                                                    <input type="file" id="id-file" class="ifile">
+                                                    
+                                                    파일찾기
+                                                </span>
+
+                                                <!-- 파일리스트 -->
+                                                <ul class="file-upload-list">
+                                                    <li>
+                                                        <span class="file-upload-name">진도율확인.jpg</span>
+
+                                                        <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                                                    </li>
+                                                    <li>
+                                                        <span class="file-upload-name">진도율확인.jpg</span>
+
+                                                        <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                                                    </li>
+                                                    <li>
+                                                        <span class="file-upload-name">진도율확인.jpg</span>
+
+                                                        <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                                                    </li>
+                                                    <li>
+                                                        <span class="file-upload-name">진도율확인.jpg 진도율확인.jpg 진도율확인.jpg 진도율확인.jpg 진도율확인.jpg 진도율확인.jpg</span>
+
+                                                        <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                                                    </li>
+                                                    <li>
+                                                        <span class="file-upload-name">진도율확인.jpg</span>
+
+                                                        <button type="button" class="btn-file-del"><span class="ir">삭제</span></button>
+                                                    </li>
+                                                </ul>
+                                                <!-- // 파일리스트 -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <div class="qna-write-bot">
+                                    <button type="button" class="btn btn-color1-flat btn-large">저장</button>
+                                    
+                                    <button type="button" class="btn btn-basic btn-large">취소</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            @@include('./src/publish/hihrd/comm/footer.html')
+        </footer>
+        <!-- // footer -->
+    </div>
+
+    <!-- ui 스크립트 -->
+    <link rel="stylesheet" href="/js/template9/slick/slick.css">
+    <script src="/js/template9/slick/slick.js"></script>
+    <script src="/js/template9/style_pub.js"></script>
+</body>
+</html>

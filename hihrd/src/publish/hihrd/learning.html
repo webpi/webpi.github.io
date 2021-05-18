@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    @@include('./src/publish/hihrd/comm/head.html')
+</head>
+<!-- 학습창 호출시 no-scroll -->
+<body class="no-scroll">
+    <div id="wrap">
+        <!-- header -->
+        <header class="header">
+            @@include('./src/publish/hihrd/comm/header.html')
+        </header>
+        <!-- // header -->
+
+        <div class="container">
+            <section class="popup-layer popup-learning">
+                <div class="popup-wrap">
+                    <div class="learning-head">
+                        <h2 class="tit-h2">실습과 함께하는! 데이터베이스 Oracle 12C</h2>
+                    </div>
+
+                    <div class="learning-body js-learning-body">
+                        <!-- 영상 시간 컨트롤 안되게할시 timeline-disabled -->
+                        <div class="learning-media js-learning-media timeline-disabled">
+                            <!-- youtube 및  iframe 영상 -->
+<!--                            <iframe src="https://www.youtube.com/embed/1exxA_zg_-0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="영상" class="learning-media-video"></iframe>-->
+
+                            <!-- mp4 영상 -->
+                            <video width="100%" height="100%" controls playsinline class="learning-media-video">
+                                <source src="/images/template9/resp/default/usr/Girl - 43459.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+
+                            <!-- video 태그 mp3, mp3 클래스 추가 -->
+                            <!-- <video width="100%" height="100%" controls class="learning-media-video mp3">
+                                <source src="/images/template9/resp/default/usr/Girl - 43459.mp3" type="audio/mpeg">
+                                Your browser does not support the video tag.
+                            </video> -->
+                        </div>
+                        <!-- // 영상 -->
+
+                        <div class="learning-menu">
+                            <div class="learning-control">
+                                <button type="button" class="btn-learning btn-prev">
+                                    <span>이전차시</span>
+                                </button>
+
+                                <button type="button" class="btn-learning btn-next">
+                                    <span>다음차시</span>
+                                </button>
+                            </div>
+
+                            <div class="learning-speed">
+                                <button type="button" class="btn-speed js-btn-speed on">X 1.0</button>
+
+                                <ul class="learning-speed-list js-speed-list">
+                                    <li role="button">X 0.6</li>
+                                    <li role="button">X 0.8</li>
+                                    <li role="button" class="select">X 1.0</li>
+                                    <li role="button">X 1.2</li>
+                                    <li role="button">X 1.4</li>
+                                    <li role="button">X 1.8</li>
+                                    <li role="button">X 2.0</li>
+                                </ul>
+                            </div>
+
+                            <div class="learning-tab">
+                                <!-- 맛보기 일때 숨김 -->
+                                <a href="#learningRecm" class="btn-learning btn-recm js-btn-recm"><span class="ir">과정추천</span></a>
+
+                                <a href="#learningInfoPds" data-tab="learningInfoPds" class="btn-learning js-learning-tab btn-pds"><span class="ir">자료실</span></a>
+                                <!-- // 맛보기 일때 숨김 -->
+
+                                <!-- 맛보기 일때 -->
+                                <a href="#learningInfoDetail" data-tab="learningInfoDetail" class="btn-learning btn-info js-learning-tab js-btn-info active"><span class="ir">정보</span></a>
+                                <!-- // 맛보기 일때 -->
+                            </div>
+                        </div>
+
+                        <div class="learning-info js-learning-info">
+                            <!-- 과정 -->
+                            <div data-contents="learningInfoDetail" class="learning-info-detail js-learning-item active">
+                                <div class="learning-info-contents learning-info-index js-learning-slide active">
+                                    <div class="learning-info-head js-btn-learning-slide">
+                                        <h3 class="tit-h3">목차</h3>
+                                    </div>
+
+                                    <div class="learning-info-slide">
+                                        <ol class="learning-info-box">
+                                            <li>
+                                                <h4 class="tit-h4">Section.0 오리엔테이션</h4>
+                                                
+                                                <ol class="learning-info-box-sub">
+                                                    <!-- 완료 complate, 학습중 ing class -->
+                                                    <li role="button" class="complete">학습완료 학습완료 학습완료</li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                <h4 class="tit-h4">머신러닝의 개념과 용어</h4>
+
+                                                <ol class="learning-info-box-sub">
+                                                    <li role="button" class="complete">Machine Learnnig 의 용어</li>
+                                                    <li role="button" class="complete">TensorFlow의 설치 및 기본 Tensor Flow의 설치 및 기본</li>
+                                                    <li role="button" class="ing">학습중 학습중 학습중</li>
+                                                    <li role="button">학습안함 학습안함</li>
+                                                    <li role="button">학습안함 마우스오버 학습안함 마우스오버</li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                <h4 class="tit-h4">Linear Regression의 개념 Linear Regression의 개념 Linear Regression 의 개념</h4>
+
+                                                <ol class="learning-info-box-sub">
+                                                    <li>Linear Regression 의 개념</li>
+                                                    <li>Tensorflow로 간단한 linear 만들기</li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                <h4 class="tit-h4">머신러닝의 개념과 용어</h4>
+
+                                                <ol class="learning-info-box-sub">
+                                                    <li>Linear Regression 의 개념</li>
+                                                    <li>Tensorflow로 간단한 linear 만들기</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="learning-info-contents learning-info-course js-learning-slide">
+                                    <div class="learning-info-head js-btn-learning-slide">
+                                        <h3 class="tit-h3">과정정보</h3>
+                                    </div>
+
+                                    <div class="learning-info-slide">
+                                        <div class="learning-info-box">
+                                            <h4 class="tit-h4">교육개요</h4>
+
+                                            <div class="learning-info-summary">
+                                                창업 10년 만에 세계 최대 전자상거래 업체로 등극한
+                                                알리바바!
+                                                미국 증시 사상 최고가 상장으로 아시아 최대의 자산
+                                                가로 우뚝 선 마윈!
+                                                알리바바의 시가총액은 이미 세계 최대의 유통업체인
+                                                월마트를 추월했고, 알리바바의 2015년 11월 11일
+                                                하루 매출액은 무려 16조 원이었다. 산술적으론 
+                                                삼성전자의 연간 매출액을 보름도 채 안 걸려 
+                                                달성한다는 말이다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 과정 -->
+
+                            <!-- 자료실 -->
+                            <div data-contents="learningInfoPds" class="learning-info-pds js-learning-item">
+                                <!-- 처음 펼쳐보일때 필요한곳 on -->
+                                <div class="learning-info-contents js-accordion-item on">
+                                    <div class="learning-info-head js-btn-accordion">
+                                        <h3 class="tit-h3">교재 피피티 파일</h3>
+                                    </div>
+
+                                    <div class="learning-info-slide js-accordion-box">
+                                        <div class="learning-info-box">
+                                            <div class="dsc">여기에 에디터 내용 넣어주세요 여기에 에디터 내용 넣어주세요 여기에 에디터 내용 넣어주세요</div>
+
+                                            <div class="file-upload file-upload-none">
+                                                <!-- 파일리스트 -->
+                                                <ul class="file-upload-list">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="file-upload-name">진도율확인.jpg</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="file-upload-name">진도율확인진도율확인진도율확인진도율확인진도율확인.jpg</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <!-- // 파일리스트 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="learning-info-contents js-accordion-item">
+                                    <div class="learning-info-head js-btn-accordion">
+                                        <h3 class="tit-h3">교재 피피티 파일</h3>
+                                    </div>
+
+                                    <div class="learning-info-slide js-accordion-box">
+                                        <div class="learning-info-box">
+                                            <p class="dsc">해당 첨부파일을 다운로드해 수강하시면 됩니다.</p>
+
+                                            <div class="file-upload file-upload-none">
+                                                <!-- 파일리스트 -->
+                                                <ul class="file-upload-list">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="file-upload-name">진도율확인.jpg</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="file-upload-name">진도율확인진도율확인진도율확인진도율확인진도율확인.jpg</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <!-- // 파일리스트 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="learning-info-contents js-accordion-item">
+                                    <div class="learning-info-head js-btn-accordion">
+                                        <h3 class="tit-h3">압축파일이 열리지 않으면 이 자료를 다운로드하세요.</h3>
+                                    </div>
+
+                                    <div class="learning-info-slide js-accordion-box">
+                                        <div class="learning-info-box">
+                                            <p class="dsc">해당 첨부파일을 다운로드해 수강하시면 됩니다.</p>
+
+                                            <div class="file-upload file-upload-none">
+                                                <!-- 파일리스트 -->
+                                                <ul class="file-upload-list">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="file-upload-name">진도율확인.jpg</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="file-upload-name">진도율확인.jpg</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="file-upload-name">진도율확인.jpg</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <!-- // 파일리스트 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 자료실 -->
+                        </div>
+
+                        <!-- 추천과정 -->
+                        <div data-contents="learningRecm" class="learning-recm js-learning-recm">
+                            <h3 class="tit-h3">박하이님, 이런 과정은 어떠세요 ?</h3>
+
+                            <div class="media-item">
+                                <div class="item">
+                                    <div class="item-contents">
+                                        <div class="item-thumb">
+                                            <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+                                        </div>
+        
+                                        <!-- 상세 -->
+                                        <div class="item-detail">
+                                            <button type="button" class="btn-item-view"><span class="ir">진행</span>40%</button>
+        
+                                            <h4 class="tit-h4">트레이너 역할</h4>
+                        
+                                            <span class="period">교육기간 : 2020-05-01 ~ 2020-07-20</span>
+                        
+                                            <p class="dsc">과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의 이해와 원리 주요 질병 스토리텔링 상담화법주요 질병 담보 연계 설계 전략 과정 정리 과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의  이해와 원리</p>
+                                        </div>
+                                        <!-- // 상세 -->
+        
+                                        <!-- 과정 시간 -->
+                                        <div class="graph-linear item-time">
+                                            <span title="50%" class="bar" style="width: 50%">
+                                                <span class="bar-ani"></span>
+                                                <em class="ir">수강 시간</em>
+                                            </span>
+                                        </div>
+                                        <!-- // 과정 시간 -->
+                                    </div>
+        
+                                    <div class="item-info">
+                                        <strong class="subject">트레이너 역할</strong>
+        
+                                        <ul class="info">
+                                            <li class="cnt">
+                                                수강생 : 230
+                                            </li>
+                                            <li class="period">
+                                                교육기간 : 2020-05-01 ~ 2020-07-20
+                                            </li>
+                                        </ul>
+                                    </div>
+        
+                                    <a href="view.html" class="lnk"><span class="ir">과정상세 바로가기</span></a>
+                                </div>
+        
+                                <div class="item">
+                                    <div class="item-contents">
+                                        <div class="item-thumb">
+                                            <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+                                        </div>
+        
+                                        <!-- 상세 -->
+                                        <div class="item-detail">
+                                            <button type="button" class="btn-item-view"><span class="ir">진행</span>40%</button>
+        
+                                            <h4 class="tit-h4">트레이너 역할</h4>
+                        
+                                            <span class="period">교육기간 : 2020-05-01 ~ 2020-07-20</span>
+                        
+                                            <p class="dsc">과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의 이해와 원리 주요 질병 스토리텔링 상담화법주요 질병 담보 연계 설계 전략 과정 정리 과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의  이해와 원리</p>
+                                        </div>
+                                        <!-- // 상세 -->
+        
+                                        <!-- 과정 시간 -->
+                                        <div class="graph-linear item-time">
+                                            <span title="50%" class="bar" style="width: 50%">
+                                                <span class="bar-ani"></span>
+                                                <em class="ir">수강 시간</em>
+                                            </span>
+                                        </div>
+                                        <!-- // 과정 시간 -->
+                                    </div>
+        
+                                    <div class="item-info">
+                                        <strong class="subject">트레이너 역할</strong>
+        
+                                        <ul class="info">
+                                            <li class="cnt">
+                                                수강생 : 230
+                                            </li>
+                                            <li class="period">
+                                                교육기간 : 2020-05-01 ~ 2020-07-20
+                                            </li>
+                                        </ul>
+                                    </div>
+        
+                                    <a href="view.html" class="lnk"><span class="ir">과정상세 바로가기</span></a>
+                                </div>
+        
+                                <div class="item">
+                                    <div class="item-contents">
+                                        <div class="item-thumb">
+                                            <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+                                        </div>
+        
+                                        <!-- 상세 -->
+                                        <div class="item-detail">
+                                            <button type="button" class="btn-item-view"><span class="ir">진행</span>40%</button>
+        
+                                            <h4 class="tit-h4">트레이너 역할</h4>
+                        
+                                            <span class="period">교육기간 : 2020-05-01 ~ 2020-07-20</span>
+                        
+                                            <p class="dsc">과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의 이해와 원리 주요 질병 스토리텔링 상담화법주요 질병 담보 연계 설계 전략 과정 정리 과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의  이해와 원리</p>
+                                        </div>
+                                        <!-- // 상세 -->
+        
+                                        <!-- 과정 시간 -->
+                                        <div class="graph-linear item-time">
+                                            <span title="50%" class="bar" style="width: 50%">
+                                                <span class="bar-ani"></span>
+                                                <em class="ir">수강 시간</em>
+                                            </span>
+                                        </div>
+                                        <!-- // 과정 시간 -->
+                                    </div>
+        
+                                    <div class="item-info">
+                                        <strong class="subject">트레이너 역할</strong>
+        
+                                        <ul class="info">
+                                            <li class="cnt">
+                                                수강생 : 230
+                                            </li>
+                                            <li class="period">
+                                                교육기간 : 2020-05-01 ~ 2020-07-20
+                                            </li>
+                                        </ul>
+                                    </div>
+        
+                                    <a href="view.html" class="lnk"><span class="ir">과정상세 바로가기</span></a>
+                                </div>
+        
+                                <div class="item">
+                                    <div class="item-contents">
+                                        <div class="item-thumb">
+                                            <img src="/images/template9/resp/default/usr/thumb/img_hot_thumb1_medium.jpg" alt="'7차월 하이플래너를 위한~' 보상컨설팅과정">
+                                        </div>
+        
+                                        <!-- 상세 -->
+                                        <div class="item-detail">
+                                            <button type="button" class="btn-item-view"><span class="ir">진행</span>40%</button>
+        
+                                            <h4 class="tit-h4">트레이너 역할</h4>
+                        
+                                            <span class="period">교육기간 : 2020-05-01 ~ 2020-07-20</span>
+                        
+                                            <p class="dsc">과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의 이해와 원리 주요 질병 스토리텔링 상담화법주요 질병 담보 연계 설계 전략 과정 정리 과정안내 영업트렌드 및 질병상담 핵심포인트 3대 질환의  이해와 원리</p>
+                                        </div>
+                                        <!-- // 상세 -->
+        
+                                        <!-- 과정 시간 -->
+                                        <div class="graph-linear item-time">
+                                            <span title="50%" class="bar" style="width: 50%">
+                                                <span class="bar-ani"></span>
+                                                <em class="ir">수강 시간</em>
+                                            </span>
+                                        </div>
+                                        <!-- // 과정 시간 -->
+                                    </div>
+        
+                                    <div class="item-info">
+                                        <strong class="subject">트레이너 역할</strong>
+        
+                                        <ul class="info">
+                                            <li class="cnt">
+                                                수강생 : 230
+                                            </li>
+                                            <li class="period">
+                                                교육기간 : 2020-05-01 ~ 2020-07-20
+                                            </li>
+                                        </ul>
+                                    </div>
+        
+                                    <a href="view.html" class="lnk"><span class="ir">과정상세 바로가기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 추천과정 -->
+                    </div>
+
+                    <button type="button" class="btn-popup-clse"><span class="ir">닫기</span></button>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            @@include('./src/publish/hihrd/comm/footer.html')
+        </footer>
+        <!-- // footer -->
+    </div>
+
+    <!-- ui 스크립트 -->
+    <link rel="stylesheet" href="/js/template9/slick/slick.css">
+    <script src="/js/template9/slick/slick.js"></script>
+    <script src="/js/template9/style_pub.js"></script>
+</body>
+</html>

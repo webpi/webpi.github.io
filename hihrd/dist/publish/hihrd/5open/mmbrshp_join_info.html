@@ -1,0 +1,682 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>회원가입-회원정보입력</title>
+    <link href="/css/component_blue.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template5/resp/template5.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template5/resp/blue.css" rel="stylesheet" type="text/css" media="all">
+    <!--[if lt IE 10]>
+        <link href="/css/template5/resp/ie8-9.css" rel="stylesheet" type="text/css" media="all">
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/template5/style.js"></script>   
+</head>
+<body>
+    <!-- #wrap start -->
+    <div id="wrap">
+        <!-- #header start -->
+        <div id="header" class="sub">
+            <!-- component5 start -->
+            <div class="component5">
+                <!-- box start -->
+                <div class="box">
+                    <h1 class="logo">
+                        <a href="main.html">
+                            <img src="/images/template5/resp/default/usr/logo.png" alt="하이인재원" />
+                        </a>
+                    </h1>
+                    <div class="search">
+                        <label for="">검색</label>
+                        <input type="search" id="" name="" placeholder="과정명을 입력하세요" />
+                        <button type="button">검색</button>
+                    </div>
+                    <ul class="zoom">
+                        <li>화면크기설정</li>
+                        <li class="in">
+                            <a href="#" title="화면확대버튼">화면확대버튼</a>
+                        </li>
+                        <li class="out">
+                            <a href="#" title="화면축소버튼">화면축소버튼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //box end -->
+
+                <!-- gnbWrap start -->
+                <div class="gnbWrap">
+                    <!-- gnb start -->
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">교육안내</a>
+                            <ul class="twoDepth">
+                                <li>
+                                    <a href="#">학습방법</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="guide_method_register.html">수강신청</a>
+                                        </li>
+                                        <li>
+                                            <a href="guide_method_learning.html">학습</a>
+                                        </li>
+                                        <li>
+                                            <a href="guide_method_test.html">평가/과제</a>
+                                        </li>
+                                        <li>
+                                            <a href="guide_method_findidpw.html">아이디/비밀번호찾기</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="guide_answer.html">모사답안처리기준</a>
+                                </li>
+                                 <li>
+                                    <a href="guide_refund.html">고용보험환급기준</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육과정</a>
+                            <ul class="twoDepth">
+                            	<li>
+                                    <a href="register_cors_list.html">전체과정</a>
+                                </li>
+                                <li>
+                                    <a href="register_cors_list.html">수강신청과정</a>
+                                </li>
+                                <li>
+                                    <a href="register_openclass_list.html">열린강의</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">마이페이지</a>
+                            <ul class="twoDepth">
+                            	<li>
+                                    <a href="myclassrm_myhome.html">나의 홈</a>
+                                </li>
+                                <li>
+                                    <a href="#">나의 강의실</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="myclassrm_myclassrm_01ing.html">수강중인 과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_myclassrm_02register.html">수강신청 과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_myclassrm_03done.html">수강완료 과정</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_openclass.html">나의 열린강의</a>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_survey.html">나의 설문</a>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_schedule.html">나의 일정관리</a>
+                                </li>
+                                <li>
+                                    <a href="#">개인정보수정</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="myclassrm_modify.html">프로필수정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_withdrawal.html">회원탈퇴</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <a href="myclassrm_delivery.html">배송현황</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                            <ul class="twoDepth">
+                                <li>
+                                    <a href="customer_notice_list.html">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="customer_faq.html">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="customer_inquiry_list.html">1:1상담</a>
+                                </li>
+                                <li>
+                                    <a href="customer_download.html">학습지원프로그램</a>
+                                </li>
+                                <li>
+                                    <a href="customer_sitemap.html">사이트맵</a>
+                                </li>
+                                <li>
+                                    <a href="customer_agrmnt.html">서비스 이용약관</a>
+                                </li>
+                                <li>
+                                    <a href="customer_policy.html">개인정보취급방침</a>
+                                </li>
+                                 <li>
+                                    <a href="http://r.hi.co.kr/nc20/cust/main">원격지원서비스</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- //gnb end -->
+                </div>
+                <!-- //gnbWrap end -->
+                
+                <!-- 로그인 후 start -->
+                <div class="userInfo">
+                    <div class="box">
+                        <ul>
+                            <li><strong>홍길동</strong>님</li>
+                            <li>
+                                <button type="button" class="btnModify" onclick="location.href='/publish/hihrd/5open/myclassrm_modify.html';">회원정보수정</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btnLogout" onclick="location.href='/publish_2/hihrd/5open/login.html';">로그아웃</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //로그인 후 end --> 
+                
+                <button type="button" class="allMenu" onClick="menuMobile();">메뉴</button><!-- 모바일 메뉴 버튼 -->
+            </div>
+            <!-- //component5 end -->
+        </div>
+        <!-- //#header end -->
+        
+        <!-- #container start -->
+        <div id="container">
+       		<!-- #sub start -->
+        	<div id="sub">
+        	
+        		<!-- lnb start -->
+        		<div class="lnb">
+                    <!-- component2 start -->
+        			<div class="component2">
+                        <h2>멤버쉽</h2>
+        				<ul>
+        					<li>
+        						<a href="mmbrshp_login.html">로그인</a>
+        					</li>
+        					<li>
+        						<a href="mmbrshp_findidpw.html">아이디/비밀번호찾기</a>
+        					</li>
+        				</ul>
+                        <div class="banner">
+                            <a href=""><img src="/images/template5/resp/default/usr/lnb_banner01.jpg" alt="정보보안 필수교육 금융정보보호 아카데미" /></a>
+                            <a href=""><img src="/images/template5/resp/default/usr/lnb_banner02.jpg" alt="현대해상 임직원전용 인터넷서점 교보문고" /></a>
+                        </div>
+        			</div>
+                    <!-- //component2 end -->
+        		</div>
+                <!-- //lnb end -->
+        		
+        		<!-- contentsWrap start -->
+        		<div class="contentsWrap">
+        			<!-- #contents start -->
+        			<div id="contents">	
+        			
+	        			<!-- headingBox start -->
+	        			<div class="headingBox">
+	        				<h3>회원가입</h3>
+	        				<span class="location"><span>Home</span>&gt;<span>멤버쉽</span>&gt;<strong>회원가입</strong></span>
+	        			</div>
+	        			<!-- //headingBox end -->
+        				
+        				<!-- nav start -->
+	        			<nav>
+	        				<ul>
+	        					<li>
+	        						<a href="#">HOME</a>
+	        					</li>
+	        					<li>
+        							<a href="#">회원가입</a>
+	        						<ul class="twoDepth">
+	        							<li>
+	        								<a href="mmbrshp_login.html">로그인</a>	
+	        							</li>
+	        							<li>
+	        								<a href="mmbrshp_join_certify.html">회원가입</a>	
+	        							</li>
+	        							<li>
+	        								<a href="mmbrshp_findidpw.html">아이디/비밀번호 찾기</a>	
+	        							</li>
+	        							<li>
+	        								<a href="mmbrshp_agrmnt.html">이용약관</a>	
+	        							</li>
+	        							<li>
+	        								<a href="mmbrshp_policy.html">개인정보취급방침</a>	
+	        							</li>
+	        							<li>
+	        								<a href="mmbrshp_policy2.html">개인정보의 수집, 이용 및 제공</a>	
+	        							</li>
+	        							<li>
+	        								<a href="mmbrshp_refsleml.html">이메일 무단수집 거부</a>	
+	        							</li>
+	        						</ul>
+	        					</li>
+	        				</ul>
+	        			</nav>
+	        			<!-- //nav end -->
+        			
+	        			<!-- contentsBox start -->
+						<div class="contentsBox">
+						
+	        				<!-- step start -->
+	        				<ul class="step">
+		                        <li>
+		                            <div class="step01"><p><span>step1.</span> 본인인증</p></div>
+		                        </li>
+		                        <li>
+		                            <div class="step02"><p><span>step2.</span> 약관동의</p></div>
+		                        </li>
+		                        <li class="active">
+		                            <div class="step03"><p><span>step3.</span> 회원정보입력</p></div>
+		                        </li>
+		                        <li>
+		                            <div class="step04"><p><span>step4.</span> 회원가입완료</p></div>
+		                        </li>
+		                    </ul>
+	        				<!-- //step end -->
+        				
+        					<h5 class="headingBox">아래의 회원정보 입력시 필수정보를 반드시 입력하세요.</h5>
+        				
+        					<h6>필수정보</h6>
+	        				<!-- boardWrite start -->
+	        				<div class="boardWrite">
+	        					<table>
+	        						<caption>필수정보 입력</caption>
+	        						<tbody>
+	        							<tr>
+	        								<th class="asterisk" width="200px">회사선택</th>
+	        								<td>
+	        									<div class="selectBox">
+													<select id="">
+														<option value="" selected>-선택-</option>
+														<option value="">회사선택</option>
+														<option value="">회사선택</option>
+														<option value="">회사선택</option>
+													</select>
+												</div>
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th class="asterisk">아이디</th>
+	        								<td>
+	        									<input type="text" id="" value="1111111" name="" placeholder=""  />
+	        									<button type="button" class="inside btnCheck">중복체크</button>
+												<span class="info">사번을 입력해주세요.</span>
+												<p class="error">이미 사용중인 아이디(이메일)입니다. 다른 아이디(이메일)을 입력해 주세요</p>
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th class="asterisk">성명</th>
+	        								<td>
+	        									<input type="text" id="" name=""  value="홍길동" disabled placeholder="" />
+												<span class="info">한글 2~15자, 영문 4~30자</span>
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th class="asterisk">비밀번호</th>
+	        								<td>
+	        									<input type="password" id="" name="" placeholder="비밀번호" />
+												<span class="info">영문, 숫자, 특수기호(!,@,# 등) 를 모두 사용하여 최소 8자 이상.</span>
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th class="asterisk">비밀번호 확인</th>
+	        								<td>
+	        									<input type="password" id="" name="" placeholder="비밀번호 확인"  />
+												<span class="info">영문, 숫자, 특수기호(!,@,# 등) 를 모두 사용하여 최소 8자 이상.</span>
+												<p class="error">입력하신 비밀번호가 일치하지 않습니다. 다시 입력해 주세요.</p>
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th class="asterisk">생년월일</th>
+	        								<td>
+	        									<label for="" class="hidden">년</label>
+												<div class="selectBox">
+													<select id="">
+														<option value="" selected>1980년</option>
+														<option value="">1981년</option>
+														<option value="">1982년</option>
+														<option value="">1983년</option>
+													</select>
+												</div>
+												<label for="" class="hidden">월</label>
+												<div class="selectBox">
+													<select id="">
+														<option value="" selected>1월</option>
+														<option value="">2월</option>
+														<option value="">3월</option>
+														<option value="">4월</option>
+													</select>
+												</div>
+												<label for="" class="hidden">일</label>
+												<div class="selectBox">
+													<select id="">
+														<option value="" selected>1일</option>
+														<option value="">2일</option>
+														<option value="">3일</option>
+														<option value="">4일</option>
+													</select>
+												</div>
+												<div class="radioncheckbox">
+													(<input type="radio" id="radio01" value="" name="" /><label for="radio01">남</label>
+													<input type="radio" id="radio02" value="" name="" /><label for="radio02">여</label>)
+												</div>
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th class="asterisk">휴대전화</th>
+	        								<td>
+	        									<label for="" class="hidden">휴대전화</label>
+												<div class="selectBox disabled">
+													<select id="" disabled>
+														<option value="" selected>010</option>
+														<option value="">010</option>
+														<option value="">010</option>
+														<option value="">010</option>
+													</select>
+												</div>
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" disabled class="tel" />
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" disabled class="tel" />
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th class="asterisk">이메일</th>
+	        								<td>
+	        									<input type="text" id="" name="" placeholder="" style="width:100px" />
+												@
+												<input type="text" id="" name="" placeholder="" style="width:100px" />
+												<div class="selectBox">
+													<select id="">
+														<option value="" selected>직접입력</option>
+														<option value="">hotmail.com</option>
+														<option value="">gmail.com</option>
+														<option value="">naver.com</option>
+													</select>
+												</div>
+	        								</td>
+	        							</tr>
+	        						</tbody>
+	        					</table>	
+							</div>	
+									
+	        				<h6>부가정보</h6>
+	        				<!-- boardWrite start -->
+	        				<div class="boardWrite">
+	        					<table>
+	        						<caption>부가정보 입력</caption>
+	        						<tbody>			
+	        							<tr>
+	        								<th>직급</th>
+	        								<td>
+	        									<input type="text" id="" name=""  value="홍길동" placeholder="" class="mini" />
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th>회사 전화번호</th>
+	        								<td>
+	        									<label for="" class="hidden">회사 전화번호</label>
+												<div class="selectBox">
+													<select id="">
+														<option value="" selected>02</option>
+														<option value="">031</option>
+														<option value="">032</option>
+														<option value="">033</option>
+													</select>
+												</div>
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th>자택 전화번호</th>
+	        								<td>
+	        									<label for="" class="hidden">자택 전화번호</label>
+												<div class="selectBox">
+													<select id="">
+														<option value="" selected>02</option>
+														<option value="">031</option>
+														<option value="">032</option>
+														<option value="">033</option>
+													</select>
+												</div>
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th>자택 주소</th>
+	        								<td>
+	        									<ul  class="address">
+													<li>
+														<button type="button" class="inside btnZipcode">우편번호</button>
+														<input type="text" id="" name="" class="zipCode" />
+														<span>-</span>
+														<input type="text" id="" name="" class="zipCode" />
+														<span>(</span>
+														<input type="text" id="" name="" class="zipCode" />
+														<span>)</span>
+													</li>
+													<li>	
+														<label>지번주소 : </label>
+														<input type="text" id="" name="" />
+														<input type="text" id="" name="" />
+													</li>
+													<li>
+														<label>도로명주소 : </label>
+														<input type="text" id="" name="" />
+														<input type="text" id="" name="" />
+													</li>
+												</ul>	
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th>프로필 사진</th>
+	        								<td>
+												<div class="profileImg">
+													<div class="profileBg"><span class="hidden">배경이미지</span></div>
+													<img src="/images/common/usr/img_photo.jpg" alt="" />
+												</div>
+												<div class="floatLeft">
+													<div class="fileAttach">
+														<input type="text" id="fileName1" name="" class="textInput" readonly="readonly" />
+														<button type="button" class="inside btnFind">파일찾기</button>
+														<input type="file" id="" name="" onchange="javascript: document.getElementById('fileName1').value = this.value" /> 
+													</div>
+													<p class="info">소셜광장에 사용될 사진을 등록/관리할 수 있습니다.</p>
+												</div>
+	        								</td>
+	        							</tr>
+	        						</tbody>
+	        					</table>
+	        				</div>
+	        				<!-- //boardWrite end -->
+        				
+	        				<h6>배송지 정보( <input type="checkbox" id="check01" name="" /><label for="check01">위의 정보와 동일</label> )</h6>
+	        				<!-- boardWrite start -->
+	        				<div class="boardWrite">
+	        					<table>
+	        						<caption>회원가입 정보입력</caption>
+	        						<tbody>
+	        							<tr>
+	        								<th>주소</th>
+	        								<td>
+	        									<ul  class="address">
+													<li>
+														<button type="button" class="inside btnZipcode">우편번호</button>
+														<input type="text" id="" name="" class="zipCode" />
+														<span>-</span>
+														<input type="text" id="" name="" class="zipCode" />
+														<span>(</span>
+														<input type="text" id="" name="" class="zipCode" />
+														<span>)</span>
+													</li>
+													<li>	
+														<label>지번주소 : </label>
+														<input type="text" id="" name="" />
+														<input type="text" id="" name="" />
+													</li>
+													<li>
+														<label>도로명주소 : </label>
+														<input type="text" id="" name="" />
+														<input type="text" id="" name="" />
+													</li>
+												</ul>	
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th>전화번호</th>
+	        								<td>
+	        									<label for="" class="hidden">전화번호</label>
+												<div class="selectBox">
+													<select id="">
+														<option value="" selected>02</option>
+														<option value="">031</option>
+														<option value="">032</option>
+														<option value="">033</option>
+													</select>
+												</div>
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th>휴대전화</th>
+	        								<td>
+	        									<label for="" class="hidden">휴대전화</label>
+												<div class="selectBox">
+													<select id="">
+														<option value="" selected>02</option>
+														<option value="">031</option>
+														<option value="">032</option>
+														<option value="">033</option>
+													</select>
+												</div>
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+												-
+												<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+	        								</td>
+	        							</tr>
+	        							<tr>
+	        								<th>배송 메세지</th>
+	        								<td>
+	        									<input type="text" id="" name="" class="large" />
+	        								</td>
+	        							</tr>
+	        						</tbody>
+	        					</table>
+	        				</div>
+	        				<!-- //boardWrite end -->
+        				
+	        				<p class="info">*교재 배송지 주소를 관리할 수 있습니다.</p>
+        	
+	        				<!-- btnArea start -->
+		                    <div class="btnArea">
+		                        <button type="button" class="btnJoin" onclick="btnHref()">회원가입하기</button>
+		                    </div>
+		                    <!-- //btnArea end -->
+						
+	        			</div>
+	        			<!-- //contentsBox end -->
+	        			
+        			</div>
+        			<!-- //#contents end -->	
+        		</div>
+        		<!-- //contentsWrap end -->
+        	</div>
+        	<!-- //#sub end -->
+        </div>
+        <!-- //#container end -->
+        
+        <!-- #footer start -->
+        <div id="footer" class="sub">
+            <!-- component3 start -->
+            <div class="component3">
+                <!-- footerWrap start -->
+                <div class="footerWrap">
+                    <!-- logo start -->
+                    <div class="logo">
+                        <img src="/images/template5/resp/default/usr/logo_bottom.png" alt="하이인재원" />
+                    </div>
+                    <!-- //logo end --> 
+                    <!-- box start -->
+                    <div class="box">
+                        <!-- link start -->
+                        <div class="link">
+                            <ul>
+                                <li>
+                                    <a href="#" onclick="openAgrmnt();">이용약관</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="openPolicy();">개인정보취급방침</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="openPolicy2();">개인정보처리방침</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="openRefsleml();">이메일무단수집거부</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //link end -->  
+                        <!-- address start -->
+                        <div class="address">
+                            <address>
+                                <p>
+                                    <span>서울특별시 중구 명동2가 92-3 현대해상빌딩 14층</span>
+                                    <span>대표전화 : 02-3709-5800</span>
+                                    <span>현대씨앤알(주) 대표이사 이성재</span>
+                                </p>
+                                <p>
+                                    <span>사업자등록번호 102-81-32281</span>
+                                    <span>통신판매업신고 제 2010-서울중구-1663호</span>
+                                </p>
+                            </address>
+                            <p class="copyright">COPYRIGHT @HYUNDAI C&amp;R CO.LTD ALL RIGHT RESEARVED.</p>
+                        </div>
+                        <!-- //address end --> 
+                        
+                        <button type="button" class="btnTop">TOP</button>
+                        
+                    </div>
+                    <!-- //box end --> 
+                </div>
+                <!-- //footerWrap end -->
+            </div>
+            <!-- //component3 end -->
+        </div>
+        <!-- //#footer end -->
+    </div>
+    <!-- //#wrap end -->
+</body>
+</html>

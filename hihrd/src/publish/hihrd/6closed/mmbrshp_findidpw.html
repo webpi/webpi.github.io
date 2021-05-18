@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>아이디/비밀번호 찾기</title>
+    <link href="/css/component_blue.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template6/resp/template6.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template6/resp/blue.css" rel="stylesheet" type="text/css" media="all">
+    <!--[if lt IE 10]>
+        <link href="/css/template6/resp/ie8-9.css" rel="stylesheet" type="text/css" media="all">
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/template6/style.js"></script> 
+</head>
+<body>
+    <!-- popup start -->
+	<div class="popup">
+		<h3>아이디/비밀번호 찾기</h3>
+		<button type="button" class="btnClose" onclick="window.close();">닫기</button>
+		
+		<!-- contentsWrap start -->
+		<div class="contentsWrap">
+			<!-- contentsBox start -->
+			<div class="contentsBox">
+			
+				<!-- tab start -->
+				<div class="tab findIdpw">
+					<ul>
+						<li class="active">
+							<a href="#" onclick="tabList(0);">아이디 찾기</a>
+						</li>
+						<li>
+							<a href="#"  onclick="tabList(1);">비밀번호 찾기</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //tab end -->
+
+				<!-- find id start -->
+				<div class="tabLayer0">
+					<div class="boardWrite findIdpw">
+						<p class="bult">회원정보에 입력한 휴대전화 번호와 입력하신 번호가 동일해야 인증번호를 받으실 수 있습니다.</p>
+						<table>
+							<caption>아이디찾기</caption>
+							<tbody>
+								<tr>
+									<th>성명</th>
+									<td>
+										<input type="text" id="" name=""  value="홍길동" placeholder="" style="width:200px" />
+									</td>
+								</tr>
+								<tr>
+									<th>휴대전화</th>
+									<td>
+										<label for="" class="hidden">휴대전화</label>
+										<div class="selectBox">
+											<select id="">
+												<option value="" selected>010</option>
+												<option value="">010</option>
+												<option value="">010</option>
+												<option value="">010</option>
+											</select>
+										</div>
+										-
+										<input type="text" id="" name="" value="" maxlength="4" size="4" class="tel" />
+										-
+										<input type="text" id="" name="" value="" maxlength="4" size="4" class="tel" />
+										<button type="submit" class="inside btnZip">인증번호 받기</button>
+									</td>
+								</tr>
+								<tr>
+									<th>인증번호</th>
+									<td>
+										<input type="text" id="" value="" name="" placeholder="" style="width:200px" />
+										<span class="error">인증번호가 올바르지 않습니다.</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+<!-- 						<div class="info"> -->
+<!-- 							<p> -->
+<!-- 								<span>회원님의 정보와 일치하는 아이디는 "gosomi" 입니다.</span> -->
+<!-- 								<button type="submit" class="btnLogin">로그인하기</button> -->
+<!-- 								<button type="submit" class="btnPwFind">비밀번호 찾기</button> -->
+<!-- 							</p> -->
+<!-- 						</div> -->
+					</div>
+					<!-- btnArea start -->
+					<div class="btnArea">
+						<button type="button" class="btnConfirm">확인</button>
+						<button type="button" class="btnCancel">취소</button>
+					</div>
+					<!-- //btnArea end -->
+				</div>
+				<!-- //find id end -->
+
+				<!-- change pw start -->
+				<div class="tabLayer1" style="display: none;">
+					<div class="boardWrite findIdpw">
+						<p class="bult">영문, 숫자, 특수기호(!,@,# 등) 를 모두 사용하여 최소 8자 이상으로 만들어 주세요.</p>
+						<table>
+							<caption>비밀번호 찾기</caption>
+							<tbody>
+								<tr>
+									<th>아이디</th>
+									<td>kpli@muhan.com</td>
+								</tr>
+								<tr>
+									<th>성명</th>
+									<td>
+										<input type="text" id="" name=""  value="홍길동" placeholder="" style="width:200px" />
+									</td>
+								</tr>
+								<tr>
+									<th>휴대전화</th>
+									<td>
+										<label for="" class="hidden">휴대전화</label>
+										<div class="selectBox">
+											<select id="">
+												<option value="" selected>010</option>
+												<option value="">010</option>
+												<option value="">010</option>
+												<option value="">010</option>
+											</select>
+										</div>
+										-
+										<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+										-
+										<input type="text" id="" name="" value="1234" maxlength="4" size="4" class="tel" />
+										<button type="submit" class="inside btnZip">인증번호 받기</button>
+									</td>
+								</tr>
+								<tr>
+									<th>인증번호</th>
+									<td>
+										<input type="text" id="" value="" name="" placeholder="" style="width:200px" />
+										<span class="error">인증번호가 올바르지 않습니다.</span>
+									</td>
+								</tr>
+<!-- 								<tr> -->
+<!-- 									<th>새로운 비밀번호</th> -->
+<!-- 									<td> -->
+<!-- 										<input type="password" id="" value="" name="" placeholder="" style="width:200px" /> -->
+<!-- 										<span class="error">영문, 숫자, 특수기호를 포함하여 입력해 주세요.</span> -->
+<!-- 									</td> -->
+<!-- 								</tr> -->
+<!-- 								<tr> -->
+<!-- 									<th>비밀번호 확인</th> -->
+<!-- 									<td> -->
+<!-- 										<input type="password" id="" value="" name="" placeholder="" style="width:200px" /> -->
+<!-- 									</td> -->
+<!-- 								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<!-- btnArea start -->
+					<div class="btnArea">
+						<button type="button" class="btnConfirm">확인</button>
+						<button type="button" class="btnCancel">취소</button>
+					</div>
+					<!-- //btnArea end -->
+				</div>
+				<!-- // change pw end -->
+			
+			</div>
+			<!-- //contentsBox end -->
+		</div>
+		<!-- //contentsWrap end -->
+	</div>
+    <!-- //popup end -->
+</body>
+</html>
+
+
+
+
+
+
+
+								

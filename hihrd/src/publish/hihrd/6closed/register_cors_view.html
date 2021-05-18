@@ -1,0 +1,778 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>수강신청과정 - 상세</title>
+    <link href="/css/component_blue.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template6/resp/template6.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template6/resp/blue.css" rel="stylesheet" type="text/css" media="all">
+    <!--[if lt IE 10]>
+        <link href="/css/template6/resp/ie8-9.css" rel="stylesheet" type="text/css" media="all">
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 html5 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+    <!-- ## IE9이하 버전에서 css3 적용 스크립트 ## -->
+    <!--[if lt IE 10]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/template6/style.js"></script> 
+    <script src="/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready( function() {
+	
+			
+			if($(window).width() > 768) {
+				$('.slider').bxSlider({
+	            	auto:false,
+	                slideWidth: 1000,
+	                minSlides: 4,
+	                maxSlides: 4,
+	                pause: 4000
+	            });
+			}
+	
+		} ); 
+		
+		$(window).resize(function() {
+			  if($(window).width() > 768)
+			  {
+				  $( ".slider" ).width($(window).width()*10);
+			  }else
+			  {
+				  $( ".slider" ).width($(".contentsBox").width() - 40);
+			  }
+		});
+    </script>
+</head>
+<body>
+    <!-- #wrap start -->
+    <div id="wrap">
+        <!-- #header start -->
+        <div id="header" class="sub">
+            <!-- component5 start -->
+            <div class="component5">
+                <!-- box start -->
+                <div class="box">
+                    <h1 class="logo">
+                        <a href="main.html">
+                            <img src="/images/template6/resp/default/usr/logo.png" alt="하이인재원" />
+                        </a>
+                    </h1>
+                    <div class="search">
+                        <label for="">검색</label>
+                        <input type="search" id="" name="" placeholder="과정명을 입력하세요" />
+                        <button type="button">검색</button>
+                    </div>
+                    <ul class="zoom">
+                        <li>화면크기설정</li>
+                        <li class="in">
+                            <a href="#" title="화면확대버튼">화면확대버튼</a>
+                        </li>
+                        <li class="out">
+                            <a href="#" title="화면축소버튼">화면축소버튼</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //box end -->
+
+                <!-- gnbWrap start -->
+                <div class="gnbWrap">
+                    <!-- gnb start -->
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">교육안내</a>
+                            <ul class="twoDepth">
+                                <li>
+                                    <a href="#">학습방법</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="guide_method_register.html">수강신청</a>
+                                        </li>
+                                        <li>
+                                            <a href="guide_method_learning.html">학습</a>
+                                        </li>
+                                        <li>
+                                            <a href="guide_method_test.html">평가/과제</a>
+                                        </li>
+                                        <li>
+                                            <a href="guide_method_findidpw.html">아이디/비밀번호찾기</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="guide_answer.html">모사답안처리기준</a>
+                                </li>
+                                 <li>
+                                    <a href="guide_refund.html">고용보험환급기준</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육과정</a>
+                            <ul class="twoDepth">
+                            	<li>
+                                    <a href="register_cors_list.html">전체과정</a>
+                                </li>
+                                <li>
+                                    <a href="register_cors_list.html">수강신청과정</a>
+                                </li>
+                                <li>
+                                    <a href="register_openclass_list.html">열린강의</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">마이페이지</a>
+                            <ul class="twoDepth">
+                            	<li>
+                                    <a href="myclassrm_myhome.html">나의 홈</a>
+                                </li>
+                                <li>
+                                    <a href="#">나의 강의실</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="myclassrm_myclassrm_01ing.html">수강중인 과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_myclassrm_02register.html">수강신청 과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_myclassrm_03done.html">수강완료 과정</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_openclass.html">나의 열린강의</a>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_survey.html">나의 설문</a>
+                                </li>
+                                <li>
+                                    <a href="myclassrm_schedule.html">나의 일정관리</a>
+                                </li>
+                                <li>
+                                    <a href="#">개인정보수정</a>
+                                    <ul class="threeDepth">
+                                        <li>
+                                            <a href="myclassrm_modify.html">프로필수정</a>
+                                        </li>
+                                        <li>
+                                            <a href="myclassrm_withdrawal.html">회원탈퇴</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <a href="myclassrm_delivery.html">배송현황</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                            <ul class="twoDepth">
+                                <li>
+                                    <a href="customer_notice_list.html">공지사항</a>
+                                </li>
+                                <li>
+                                    <a href="customer_faq.html">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="customer_inquiry_list.html">1:1상담</a>
+                                </li>
+                                <li>
+                                    <a href="customer_download.html">학습지원프로그램</a>
+                                </li>
+                                <li>
+                                    <a href="customer_sitemap.html">사이트맵</a>
+                                </li>
+                                <li>
+                                    <a href="customer_agrmnt.html">서비스 이용약관</a>
+                                </li>
+                                <li>
+                                    <a href="customer_policy.html">개인정보취급방침</a>
+                                </li>
+                                 <li>
+                                    <a href="http://r.hi.co.kr/nc20/cust/main">원격지원서비스</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- //gnb end -->
+                </div>
+                <!-- //gnbWrap end -->
+                
+                <!-- 로그인 후 start -->
+                <div class="userInfo">
+                    <div class="box">
+                        <ul>
+                            <li><strong>홍길동</strong>님</li>
+                            <li>
+                                <button type="button" class="btnModify" onclick="location.href='/publish/hihrd/6closed/myclassrm_modify.html';">회원정보수정</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btnLogout" onclick="location.href='/publish/hihrd/6closed/gate.html';">로그아웃</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //로그인 후 end --> 
+                
+                <button type="button" class="allMenu" onClick="menuMobile();">메뉴</button><!-- 모바일 메뉴 버튼 -->
+            </div>
+            <!-- //component5 end -->
+        </div>
+        <!-- //#header end -->
+        
+        <!-- #container start -->
+        <div id="container">
+       		<!-- #sub start -->
+        	<div id="sub">
+        	
+        		<!-- lnb start -->
+        		<div class="lnb">
+                    <!-- component2 start -->
+        			<div class="component2">
+                        <h2>교육과정</h2>
+        				<ul>
+        					<li>
+        						<a href="register_cors_list.html">전체과정</a>
+        					</li>
+							<li class="active">
+								<a href="register_cors_list.html">수강신청과정</a>
+							</li>
+        					<li>
+        						<a href="register_openclass_list.html">열린강의</a>
+        					</li>
+        				</ul>
+                        <div class="banner">
+                            <a href=""><img src="/images/template6/resp/default/usr/lnb_banner01.jpg" alt="정보보안 필수교육 금융정보보호 아카데미" /></a>
+                            <a href=""><img src="/images/template6/resp/default/usr/lnb_banner02.jpg" alt="현대해상 임직원전용 인터넷서점 교보문고" /></a>
+                        </div>
+        			</div>
+                    <!-- //component2 end -->
+        		</div>
+                <!-- //lnb end -->
+        		
+        		<!-- contentsWrap start -->
+        		<div class="contentsWrap">
+        			<!-- #contents start -->
+        			<div id="contents">
+	        			<!-- headingBox start -->
+	        			<div class="headingBox">
+	        				<h3>수강신청과정</h3>
+	        				<span class="location"><span>Home</span>&gt;<span>교육과정</span>&gt;<strong>수강신청과정</strong></span>
+	        			</div>
+	        			<!-- //headingBox end -->
+	        			<!-- contentsBox start -->
+	        			<div class="contentsBox courseView">
+	        			
+	        				<!-- course start -->
+	        				<div class="course">
+	        					<div class="title">
+	        						<div class="iconBox"> 
+										<span class="icon company">기업</span>
+										<span class="icon individual">개인</span>
+										<span class="icon mobile">모바일</span> 
+									</div>
+	        						<h4>위기에 강한 기업의 비결! 독서경영 에너지</h4>
+	        						<p class="location"><span>직무역량</span>&gt;<span>금융</span>&gt;<span>금융공통</span></p>
+	        					</div>
+	        					<div class="imgBox">
+	        						<img src="/images/common/usr/img_02.png" alt="" >
+	        					</div>
+	        					<div class="textBox">
+	        						<dl>
+										<dt>교육일정</dt>
+										<dd>
+											<div class="selectBox">
+												<select id="" name="">
+													<option>0000-00-00 ~ 0000-00-00</option>
+													<option>0000-00-00 ~ 0000-00-00</option>
+													<option>0000-00-00 ~ 0000-00-00</option>
+												</select>
+											</div>										    
+										</dd>
+										<dt>신청기간</dt>
+										<dd>
+											<div class="selectBox">
+												<select id="" name="">
+													<option>0000-00-00 ~ 0000-00-00</option>
+													<option>0000-00-00 ~ 0000-00-00</option>
+													<option>0000-00-00 ~ 0000-00-00</option>
+												</select>
+											</div>
+										</dd>
+										<dt>교육기간</dt>
+										<dd>3개월</dd>
+										<dt>복습기간</dt>
+										<dd>학습종류 후 1년</dd>
+										<dt>학습시간</dt>
+										<dd>400시간</dd>
+										<dt>담당강사</dt>
+										<dd>정홍교 강사</dd>
+										<dt>정원</dt>
+										<dd>20명</dd>
+										<dt>교육비</dt>
+										<dd>170,000원</dd>
+										<dt>환급비</dt>
+										<dd>170,000원</dd>
+									</dl>
+	        					</div>
+	        					<div class="sns">
+	        						<a href="" class="facebook">페이스북</a>
+	        						<a href="" class="twitter">트위터</a>
+	        						<a href="" class="url">url</a>
+	        						<a href="" class="kakaotalk">카카오톡</a>
+									<a href="" class="band">밴드</a>
+	        					</div>
+	        					<div class="btnArea">
+	        						<button type="button" class="btnPreview">맛보기</button>
+	        						
+<!-- 	        						<button type="button" class="btnRegister" onclick="openRefister();">수강신청 (기업)</button> -->
+	        						
+	        						<button type="button" class="btnRegister type2">수강신청 (기업)</button>
+	        						<button type="button" class="btnRegister type2">수강신청 (개인)</button> <!-- 수강신청버튼이 2개일때 type2를 넣어주세요 -->
+	        						
+	        						
+	        						<!-- 
+	        						<button type="button" class="btnRegister disable">수강신청마감</button>
+	        						<button type="button" class="btnRegister">수강신청 (기업)</button> 수강신청 버튼이 하나일때
+									<button type="button" class="btnRegister standby">수강신청대기</button>
+									<button type="button" class="btnRegister disable">로그인후 이용해주세요.</button>
+	        						 -->
+	        					</div>
+	        				</div>
+	        				<!-- //course end -->
+	        				
+	        				<div class="btnArea">
+        						<button type="button" class="btnList" onclick="location.href='register_cors_list.html';">목록</button>
+        					</div>
+        					
+        					<!-- tab start -->	
+							<div class="tab">
+								<ul>
+									<li class="active">
+										<a href="javascript:tabList(0);">과정소개</a>
+									</li>
+									<li>
+										<a href="javascript:tabList(1);">학습목차</a>
+									</li>
+									<li>
+										<a href="javascript:tabList(2);">수강후기</a>
+									</li>
+								</ul>
+							</div>
+							<!-- //tab end -->	
+        					
+        					<!-- tabLayer0 start -->	
+   							<div class="tabLayer0">
+   								<!-- content start -->	
+   								<div class="content">
+	   								<h5>과정소개</h5>
+	   								<h6>과정개요</h6>
+	   								<p>본 과정은 주차별 학습활동이 도입된 과정입니다.</p>
+	
+									<p>주차별 학습활동이란?</p>
+									<ol>
+										<li>1. 주차별 학습계획에 따라 학습교재 개별 독서진행+웹 학습장에서 주차별 학습활동(퀴즈응시필수)참여</li>
+										<li>2. 주차별 퀴즈: 3문제(사지선다형 or OX형) 제공</li>
+										<li>3. 퀴즈는 각 주차별 학습기간에 모두 응시해야 수료되며, 점수는 수료기준에 반영되지 않음</li>
+									</ol>
+						
+	   								<h6>과정소개</h6>
+	   								<div class="imgBox">
+	   									<img src="/images/common/sample3.png" alt="" />
+	   								</div>
+	   								<p>등록 민간자격(등록번호: 2016-000973)* 한국 FPSB 회장 명의 ARPS 자격증 수여 : 과정 內 온라인평가 70점 이상 획득 시* 한국 FPSB 계속교육학점 15학점 부여 : 과정 수료 시<em>※ 본 과정은 저자 강의 동영상이 제공되는 과정입니다.</em></p>
+	   								<p>그 동안 우리나라 고령화 문제와 결부된 수 많은 가설과 연구에 따른 문제제기가 있어왔고 그것을 토대로 수많은 해결방안이 제시되
+										었습니다. 그러나 그 문제를 해결하는 방안에는 도달하지 못한 것이 현실이며 그러는 사이에는 우리 사회를 이끌던 베이비부머 
+										세대가 퇴직을 시작하면서 미흡한 사회안전망 및 노후준비로 인해 각종 사회문제가 발생하고 있습니다. </p>
+				   								<p>부족한 퇴직자금을 들고 이제부터라도 뭔가를 해야한다는 베이비부머 퇴직자들은 어려운 구직활동과 부족한 노후 관련 정보로 인해 
+										막연한 두려움으로 하루를 보내고 있으며, 노후에 대한 생활자금을 충분히 마련한 퇴직자들도 가진 돈을 어떻게 해야할지 모르기에 
+										자산관리에 대한 관심사가 높아지는 추세입니다. 이에 금융권에서는 수많은 사람들이 은퇴를 계획하고 설계할 때 올바른 방향을 
+										제시해 줄 수 있는 은퇴설계 전문가의 확보가 시급한 상황입니다.</p>
+	   								
+	   								<h6>교육대상</h6>
+	   								<p>금융기관(은행, 증권, 보험업 등)의 재무관리 및 재무설계 관련 업무 담당 예정자 및 담당자, 재무 관리 관련 업무 담당자. 은퇴설계 담당 및 실무자</p>
+	   								
+	   								<h6>학습목표</h6>
+	   								<ol>
+	   									<li>1. 은퇴설계의 기본 개념에 대해 설명할 수 있다.</li>
+	   									<li>2. 은퇴설계의 패러다임 변화에 대해 설명할 수 있다.</li>
+	   									<li>3. 은퇴준비기간 및 은퇴생활기간 동안의 현금흐름 확보 전략에 대해 설명할 수 있다.</li>
+	   									<li>4. 은퇴설계 프로세스별 상담 방법에 대해 설명할 수 있다.</li>
+	   									<li>5. 연령 및 상황별 은퇴설계 지침에 대해 설명할 수 있다.</li>
+	   								</ol>
+	   								
+	   								<h6>담당강사</h6>
+	   								<div class="lecture">
+	   									<p class="info">* 본 과정은 과정개발에 참여한 내용전문가와 과정 운영시 평가에 참여하는 훈련강사가 동일합니다.</p>
+	   									<div class="profileImg">
+											<div class="profileBg"><span class="hidden">배경이미지</span></div>
+											<img src="/images/common/sample1.png" alt="">
+										</div>
+	   									<div class="textBox">
+	   										<p class="name">최문길 대표</p>
+	   										<p>
+	   											<span>재태크</span>
+	   											<span>은퇴설계</span>
+	   											<span>취업</span>
+	   										</p>
+	   										<p>100세 시대 자산관리 전략 – 은퇴 경제준비를 통해 미래 투자계획을 수립 …등등 자신의 (간략한 소개 내용 출력)</p>
+	   										<div class="btnArea">
+	   											<button type="button" class="btnView">상세보기</button>
+	   										</div>
+	   									</div>
+	   								</div>
+	   								
+	   								<h6>교재정보</h6>
+	   								<!-- book start -->
+	   								<div class="book">
+	    								<ul>
+	    									<li>
+	    										<div class="box">
+		    										<div class="imgBox">
+		    											<img src="/images/template6/resp/default/usr/img_default_book.png" alt="" />
+		    										</div>
+		    										<div class="textBox">
+		    											<p class="title">위기에 강한 기업의 비결! 독서경영 에너지</p>
+							                    		<p>
+							                    			<span class="writer">저/역자 : 김동엽, 원영웅</span>
+							                    			<span class="publisher">출판사 : 윌비출판사</span>
+							                    		</p>
+							                    		<p>
+							                    			<span class="date">출판일 : 0000-00-00</span>
+							                    			<span class="num">총 페이지 : 249 Pages</span>
+							                    		</p>
+							                    		<p>
+							                    			<span class="price">판매가격 : 14,000원</span>
+							                    		</p>
+		    										</div>
+		    										<button type="button" class="btnView active">교재 상세보기</button>
+	    										</div>
+	    										
+	    										<!-- 교재상세부분 start -->
+	    										<div class="view">
+	    											<h6>도서소개</h6>
+	    											<p>본 도서는 위기에 강한 기업의 비결! 독서경영 에너지 과정의 학습교재입니다.</p>
+	    											<p>본 도서에서는 은퇴설계의 기본 개념과 은퇴설계의 패러다임 변화에 대해서 다루고 있다. 고령화와 저출산으로 인해 경제활동의
+													중심축이 어린이에서 고령자로 옮겨가고 있다. 고령자를 그저 부양의 대상으로 볼 것이 아니라 새로운 경제활동의 주역으로 보고</p>
+	    											
+	    											<h6>도서목차</h6>
+						                    		<ol>
+						                    			<li>1.시퀀스와 시간의 구두법</li>
+						                    			<li>2. 인터벌 및 듀레이션과 레이트 설정</li>
+						                    			<li>3. ...</li>
+						                    		</ol>
+	
+	    											<h6>도서저자</h6>
+	    											<p><strong>김동엽</strong>연세대학교 인지과학 박사(Ph.D. in Cognitive Science). 인지과학을 공부하고 인간의 인식과 마음을 연구하면서 ‘인문학과 자연과학의 융합’이 필요하다는 사실을 절감했다. 장차 두 학문 간의 벽을 허물고 소통하는 일에 기여하고 싶은 꿈을 가지고 있다.</p>
+	    											
+	    											<h6>출판사 서평</h6>
+	    											<p>최근 전 세계적으로 인문학에 대한 관심이 증가하면서, 기업 경영에도 인문학을 활용하려는 추세가 확산되고 있다. 국내 기업들도 자체적으로 인문학 강의를 열어 직원들을 교육하고, 신입사원 채용 면접에서도 지원자들의 ‘인문학적 소양’을 테스트한다. 이러한</p>
+	    										</div>
+	    										<!-- //교재상세부분 end -->
+	    									</li>
+	    								</ul>
+	   								</div>
+	   								<!-- //book end -->
+	   								
+	   								<h6>이수 및 수료기준</h6>
+									<p>평가항목별 이수기준을 달성하고 총점 <em>60점 이상</em> 시 수료 가능합니다.</p>
+	   								<div class="table">
+	   									<table>
+	   										<caption>수료기준</caption>
+	   										<thead>
+	   											<tr>
+	   												<th>내용</th>
+	   												<th>비고</th>
+	   											</tr>
+	   										</thead>
+	   										<tbody>
+	   											<tr>
+	   												<td class="alignLeft">
+	   													<ol>
+	   														<li>
+	   															1. 진도율
+	   															<p>- 60% 이상</p>
+	   														</li>
+	   														<li>
+	   															2. 평가응시(과제 또는 시험)
+	   															<p>- 60점 이상 취득, 1개월 학습기간 내 제출</p>
+	   														</li>
+	   													</ol>
+	   												</td>
+	   												<td>
+	   													학습기간 내에서만 <br />
+														참여가능
+	   												</td>
+	   											</tr>
+	   										</tbody>
+	   									</table>
+	   								</div>
+	   								
+	   								<h6>학습환경</h6>
+	   								<p>
+	   									WBT(웹기반학습) : 100% <br />
+										2FLASH, 음성강의
+	   								</p>
+	   								
+	   								<h6>연관과정</h6>
+									<!-- thumbnList start -->
+									<div class="thumbnList">
+										<ul class="slider">
+											<li>
+												<div>
+													<div class="imgBox">
+														<img src="/images/template6/resp/default/usr/img_default_course.png" alt="" />
+													</div>
+													<div class="textBox">
+														<div class="iconBox"> 
+															<span class="icon company">기업</span>
+															<span class="icon individual">개인</span>
+														</div>
+														<p class="title">
+															<a href="">위기에 강한 기업의 비결! 독서경영 에너지</a>
+															<span class="info">오늘마감</span>
+														</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div>
+													<div class="imgBox">
+														<img src="/images/template6/resp/default/usr/img_default_course.png" alt="" />
+													</div>
+													<div class="textBox">
+														<div class="iconBox"> 
+															<span class="icon company">기업</span>
+															<span class="icon individual">개인</span>
+														</div>
+														<p class="title">
+															<a href="">위기에 강한 기업의 비결! 독서경영 에너지</a>
+															<span class="info">오늘마감</span>
+														</p>
+														<div class="iconBox type2"> 
+															<span class="icon event">이벤트</span>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div>
+													<div class="imgBox">
+														<img src="/images/template6/resp/default/usr/img_default_course.png" alt="" />
+													</div>
+													<div class="textBox">
+														<div class="iconBox"> 
+															<span class="icon company">기업</span>
+															<span class="icon individual">개인</span>
+														</div>
+														<p class="title">
+															<a href="">위기에 강한 기업의 비결! 독서경영 에너지</a>
+															<span class="info">오늘마감</span>
+														</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div>
+													<div class="imgBox">
+														<img src="/images/template6/resp/default/usr/img_default_course.png" alt="" />
+													</div>
+													<div class="textBox">
+														<div class="iconBox"> 
+															<span class="icon company">기업</span>
+															<span class="icon individual">개인</span>
+														</div>
+														<p class="title">
+															<a href="">위기에 강한 기업의 비결! 독서경영 에너지</a>
+															<span class="info">오늘마감</span>
+														</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- //thumbnList end -->
+			       				</div>
+			       				<!-- //content end -->
+   							</div>
+   							<!-- //tabLayer0 end -->
+   							
+   							<!-- tabLayer1 start -->		
+   							<div class="tabLayer1" style="display: none;">
+   								<!-- content start -->
+        						<div class="content">
+   									<h5>학습목차</h5>
+  									<ol>
+  										<li>
+  											<p class="title">1주차</p>
+  											<ol>
+  												<li>1차시 - 스마트한 직장인의 커뮤니케이션 비밀</li>
+  												<li>2차시 – 마음의 문을 여는 경청의 비밀</li>
+  												<li>3차시 – 틀림과 다름의 비밀</li>
+  												<li>4차시 – 통하는 자기 표현의 비밀</li>
+  											</ol>
+  										</li>
+  										<li>
+  											<p class="title">2주차</p>
+  											<ol>
+  												<li>5차시 - 매일하는 지시와 수명, 보고의 비밀 </li>
+  												<li>6차시 – 인정받는 프레젠테이션 준비의 비밀</li>
+  												<li>7차시 – 떨지않고 당당한 프레젠터의 비밀</li>
+  												<li>8차시 – 설득의 꽃, 엘리베이터 스피치 성공의 비밀</li>
+  											</ol>
+  										</li>
+  										<li>
+  											<p class="title">3주차</p>
+  											<ol>
+  												<li>9차시 - 상생하는 협상의 비밀</li>
+  												<li>10차시 – 인정받는 프레젠테이션 준비의 비밀</li>
+  												<li>11차시 – 떨지않고 당당한 프레젠터의 비밀</li>
+  												<li>12차시 – 설득의 꽃, 엘리베이터 스피치 성공의 비밀</li>
+  											</ol>
+  										</li>
+  										<li>
+  											<p class="title">4주차</p>
+  											<ol>
+  												<li>13차시 - 관심을 이끌어내는 스토리의 비밀</li>
+  												<li>14차시 – 직장에서 성공하는 말의 비밀</li>
+  												<li>15차시 – 같이 있고 싶게 만드는 매력 발산의 비밀</li>
+  												<li>16차시 – 성공하는 실행의 비밀</li>
+  											</ol>
+  										</li>
+  									</ol>
+  								</div>
+  								<!-- //content end -->
+   							</div>
+        					<!-- //tabLayer1 end -->
+   							
+   							<!-- tabLayer2 start -->		
+   							<div class="tabLayer2" style="display: none;">
+   								<!-- content start -->
+        						<div class="content">
+	   								<h5>수강후기</h5>
+	   								<div class="courseEplg">
+	   									<ul>
+	   										<li>
+	   											 <p>너무너무 좋은 교육이에요 정말루 추천해요..최고에요 </p>
+	   											 <p class="name">홍길동</p>
+	   											 <div class="grade">
+	   											 	<span class="active">★</span>
+													<span class="active">★</span>
+													<span class="active">★</span>
+													<span>★</span>
+													<span>★</span>
+													<span class="num">5.0</span>
+	   											 </div>
+	   										</li>
+	   										<li>
+	   											 <p>너무너무 좋은 교육이에요 정말루 추천해요..최고에요 </p>
+	   											 <p class="name">홍길동</p>
+	   											 <div class="grade">
+	   											 	<span class="active">★</span>
+													<span class="active">★</span>
+													<span class="active">★</span>
+													<span>★</span>
+													<span>★</span>
+													<span class="num">5.0</span>
+	   											 </div>
+	   										</li>
+	   									</ul>
+	   								</div>
+	   							</div>
+	   							<!-- //content end -->
+   							</div>
+        					<!-- //tabLayer2 end -->
+	        				
+	        			</div>
+	        			<!-- //contentsBox end -->
+        				
+        				<!-- toolBar -->
+        				<div class="toolBar">
+        					<div class="btnArea">
+        						<button type="button" class="btnRegister">수강신청<p>(기업)</p></button>
+        						<!-- 
+        						<button type="button" class="btnRegister disable">수강신청마감</button>
+        						 -->
+        						<button type="button" class="btnTop"><span>Top</span></button>
+        					</div>
+	        			</div>
+	        			<!-- //toolBar end -->
+        			
+        			</div>
+        			<!-- //#contents end -->
+        		</div>
+        		<!-- //contentsWrap end -->
+        	</div>
+        	<!-- //#sub end -->
+        </div>
+        <!-- //#container end -->
+        
+        <!-- #footer start -->
+        <div id="footer" class="sub">
+            <!-- component4 start -->
+            <div class="component4">
+                <!-- footerWrap start -->
+                <div class="footerWrap">
+                    <!-- link start -->
+                    <div class="link">
+                        <ul>
+                            <li>
+                                <a href="#">이용약관</a>
+                            </li>
+                            <li>
+                                <a href="#"><strong>개인정보취급방침</strong></a>
+                            </li>
+                            <li>
+                                <a href="#">개인정보처리방침</a>
+                            </li>
+                            <li>
+                                <a href="#">이메일무단수집거부</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //link end -->
+                    
+                    <!-- box start -->
+                    <div class="box">
+                        <!-- logo start -->
+                        <div class="logo">
+                            <img src="/images/template6/resp/default/usr/logo_bottom.png" alt="하이인재원" />
+                        </div>
+                        <!-- //logo end --> 
+                        <!-- address start -->
+                        <div class="address">
+                            <address>
+                                <p>
+                                    <strong>평생교육시설신고 제110호</strong>
+                                    <strong>통신판매업신고 제 19-3913호</strong>
+                                </p>
+                                <p>
+                                    <span>서울특별시 중구 명동2가 92-3 현대해상빌딩 14층</span>
+                                    <span>TEL : 1661-9061</span>
+                                    <span>FAX : 02-2635-9439</span>
+                                </p>
+                            </address>
+                            <p class="copyright">COPYRIGHT @HYUNDAI C&amp;R CO.LTD ALL RIGHT RESEARVED.</p>
+                        </div>
+                        <!-- //address end -->                         
+                    </div>
+                    <!-- //box end --> 
+                </div>
+                <!-- //footerWrap end -->
+            </div>
+            <!-- //component4 end -->
+        </div>
+        <!-- //#footer end -->
+    </div>
+    <!-- //#wrap end -->
+</body>
+</html>

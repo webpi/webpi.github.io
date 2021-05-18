@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+/* #gate */
+#gate {
+	overflow: auto;
+	margin: 0 auto;
+	width: 1000px;
+	padding-bottom: 60px;
+}
+#gate #cntnr1 {
+	width: 1000px;
+	height: 380px;
+	margin-bottom: 20px;
+}
+#gate #cntnr2 {
+	float:left;
+	width: 385px;
+	height: 250px;
+}
+#gate #cntnr3 {
+	float:left;
+	width: 385px;
+	height: 250px;
+	margin-left: 20px;
+	padding: 30px;
+	border: 1px solid #dddddd;
+}
+#gate #cntnr4 {
+	float:left;
+	width: 190px;
+	height: 250px;
+	margin-left: 20px;
+}
+#main #cntnr1 {
+	widht: 100%;
+	padding: 50px 0;
+}
+#main #cntnr2 {
+	widht: 100%;
+	padding: 50px 0;
+	background: #f5f5f5;
+}
+#main #cntnr3 {
+	float: left;
+	width: 50%;
+	height: ;
+	padding: 70px 30px 70px 30px;
+}
+#main #cntnr4 {
+	float: right;
+	width: 50%;
+	height: ;
+	padding: 70px 20px 70px 40px;
+}
+#main #cntnr3 > div {
+	float: right;
+	width: 440px;
+}
+#main #cntnr4 > div {
+	width: 440px;
+}
+#main #cntnr5 {
+    clear: both;
+	float: left;
+	width: 50%;
+	padding: 0 10px 50px 0;
+}
+#main #cntnr6 {
+	float: right;
+	width: 50%;
+	padding: 0 0 50px 10px;
+}
+#main #cntnr5 > div {
+	float: right;
+}
+
+.layout #main #cntnr1,
+.layout #main #cntnr2,
+.layout #main #cntnr3,
+.layout #main #cntnr4,
+.layout #main #cntnr5,
+.layout #main #cntnr6 {
+	margin-bottom: 15px;
+}
+
+.layout #main #cntnr3,
+.layout #main #cntnr4,
+.layout #main #cntnr5,
+.layout #main #cntnr6 {
+	width: 49.5%;
+}
+
+.layout #main #cntnr1 .textBox {
+	height: 375px !important;
+}
+.layout #main #cntnr2 .textBox {
+	height: 468px !important;
+}
+.layout #main #cntnr3 .textBox {
+	height: 192px !important;
+}
+.layout #main #cntnr4 .textBox {
+	height: 192px !important;
+}
+.layout #main #cntnr5 .textBox {
+	height: 150px !important;
+}
+.layout #main #cntnr6 .textBox {
+	height: 150px !important;
+}
+
+.layout #sub .lnb {
+	width: 235px;
+	float: left;
+}
+.layout #sub .contentsWrap {
+	vertical-align: top;
+}
+
+.layout #footer {
+	height: 200px;
+}
+
+
+@media screen and (max-width: 800px) {
+	#gate {
+	    overflow: hidden;
+		padding-bottom: 0;
+	}
+	#gate, #gate #cntnr1, #gate #cntnr2, #gate #cntnr3, #gate #cntnr4,
+	#main #cntnr1, #main #cntnr2, #main #cntnr3, #main #cntnr4, #main #cntnr5, #main #cntnr6 {
+		width: 100%;
+		margin-left: 0px;
+	}
+	#gate #cntnr3 {
+		border: none;
+	}
+	#gate #cntnr4 {
+		height: auto;
+	}
+	#main #cntnr1 {
+		padding: 0px;
+	} 
+	#main #cntnr3 > div,
+	#main #cntnr4 > div {
+		width: 100%;
+	}
+	#main #cntnr3 {
+		padding: 40px 20px;
+	}
+	#main #cntnr4 {
+		padding:  0 20px 20px;
+	}
+	#main #cntnr5,
+	#main #cntnr6 {
+		padding: 0 0 20px 0;
+	}
+}
+@media screen and (max-width: 520px) {
+	#gate #cntnr1 {
+		height: 250px;
+	}
+}
+
+/* /* 관리자에서 디자인설정시 필요한 css */ */
+/* .layout #main #cntnr1 { */
+/* 	height: auto !important; */
+/* } */
+/* .layout #main, .layout .sub  { */
+/* 	max-width: 100%;	 */
+/* } */
+/* .layout #header.main, .layout #header.sub { */
+/* 	width: 100%; */
+/* 	min-height: 100px; */
+/* 	margin-bottom: 20px; */
+/* } */
+/* .layout #footer.gate, .layout #footer.main, .layout #footer.sub { */
+/* 	width: 100%; */
+/* 	min-height: 100px; */
+/* } */
+/* .layout #sub { */
+/* 	overflow: auto; */
+/* 	margin: 0 auto; */
+/* 	margin-bottom: 20px; */
+/* } */
+/* .layout #sub .lnb { */
+/* 	float:left; */
+/* 	width: 30%; */
+/* 	height: 500px; */
+/* } */
+/* .layout #sub .contentsWrap { */
+/* 	float:left; */
+/* 	width: 70%; */
+/* 	height: 500px; */
+/* } */
+
+/* .layout #main #cntnr1 .textBox { 컨테이너의 height값이 없고 min-height을 주는 경우 min-height값을 textBox에 height로 준다. */
+/* 	height: 200px; */
+/* } */
+/* .layout #header.main .textBox, .layout #header.sub .textBox, .layout #footer.gate .textBox, .layout #footer.main .textBox, .layout #footer.sub .textBox { */
+/* 	height: 100px; */
+/* } */

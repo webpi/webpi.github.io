@@ -1,0 +1,473 @@
+@charset "utf-8";
+
+.totalList {
+	overflow: auto;
+	padding: 8px 10px;
+}
+/* thumbnList */
+.thumbnList {
+	overflow: auto;
+	padding: 0 20px;
+}
+.thumbnList+.btnArea {
+    margin-top: 20px;
+}
+
+.thumbnList li .textBox p.title {
+	display: -webkit-box;
+    overflow: hidden;
+    height: 40px;
+    margin: 6px 0 2px;
+    line-height: 20px;
+    font-size: 1.15em;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.thumbnList li .btnArea {
+	text-align: left;
+}
+.thumbnList li .btnArea .btnBook {
+	display: block;
+	min-width: 76px;
+    margin-top: 5px;
+}
+.thumbnList li .btnArea .btnBook:after {
+	content: ">";
+	padding-left: 5px;
+}
+.thumbnList li .iconBox.type2 {
+	width: 100%;
+	height: 46px;
+	padding: 12px 20px;
+}
+
+/* 과정 리스트 */
+
+#sub .thumbnList.type2 {
+	padding: 0;
+}
+.thumbnList.type2 li { 
+	display: table;	
+	width: 100%;
+	min-height: 52px;
+	margin: 0;
+	padding-bottom: 0;
+	border: none;
+}
+.thumbnList.type2 li:first-child,
+.thumbnList.type2 li:first-child:hover {
+	text-align: center;
+	font-weight: 700;
+}
+.thumbnList.type2 li > div {
+	display: block;
+	padding: 15px 10px;
+}
+.thumbnList.type2 li > div.noData {
+	text-align: center;
+}
+.thumbnList.type2 li .imgBox { /* 180/135 */
+	display:table-cell;
+	vertical-align: top;
+}
+.thumbnList.type2 li .imgBox.type2 { /* 80/60 */
+	width: 80px;
+}
+.thumbnList.type2 li .imgBox img {
+	width: 180px;
+	height: 135px;
+}
+.thumbnList.type2 li .imgBox.type2 img {
+	width: 80px;
+	height: 60px;
+}
+.thumbnList.type2 li .profileImg {
+	display: table-cell;
+}
+.thumbnList.type2 li .textBox {
+	display:table-cell;
+    padding: 0 0 0 10px;
+    vertical-align: top;
+}
+.thumbnList.type2 li .textBox .icon.new,
+.thumbnList.type2 li .textBox .icon.hot {
+	line-height: 23px;
+}
+.thumbnList.type2 li .imgBox.type2+.textBox {
+	vertical-align: middle;
+}
+.thumbnList.type2 li .textBox > .iconBox {
+	margin-top: 10px;
+}
+.thumbnList.type2 li .textBox .title {
+	height: auto;
+	font-size: 1.23em; /* 16/13 */
+	-webkit-box-orient: inherit;
+    white-space: inherit;
+}
+.thumbnList.type2 li .textBox p.content {
+    margin-bottom: 9px;
+}
+.thumbnList.type2 li .textBox .period,
+.thumbnList.type2 li .textBox .month
+.thumbnList.type2 li .textBox p.date {
+	line-height: 24px;
+}
+.thumbnList.type2 li .textBox .period > span,
+.thumbnList.type2 li .textBox .month > span,
+.thumbnList.type2 li .textBox p.writer > span,
+.thumbnList.type2 li .textBox p.date > span {
+	display: inline-block;
+	margin-top: -1px;
+	margin-right: 10px;
+	font-weight: 700;
+}
+.thumbnList.type2 li > div.state {
+	width: 137px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.state .btnClassroom {
+    width: 100%;
+    padding: 0;
+}
+.thumbnList.type2 li > div.state.type2 {
+	width: 90px;
+}
+.thumbnList.type2 li > div p {
+	line-height: 20px;
+}
+.thumbnList.type2 li > div p.follow span {
+	display: inline-block;
+	line-height: 22px;
+}
+.thumbnList.type2 li > div p.follow span+span:before {
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    border-left: 1px solid #d9dddf;
+    margin-left: 10px;
+    vertical-align: middle;
+    padding-left: 13px;
+}
+.thumbnList.type2 li > div p+button {
+	margin-top: 6px;
+}
+.thumbnList.type2 li .progressRate {
+	margin-bottom: 10px;
+}
+.thumbnList.type2 li .progressRate > span {
+	float: left;
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom: 7px;
+}
+.thumbnList.type2 li .progressRate > span.num {
+	float: right;
+}
+.thumbnList.type2 li .progressRate .rate {
+    clear: both;
+	position: relative;
+	width: 100%;
+	height: 15px;
+}
+.thumbnList.type2 li .progressRate .rate > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+}
+.thumbnList.type2 li > div.certificate {
+	width: 118px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.result {
+    width: 70px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.cors .imgBox {
+	width: 82px;
+}
+.thumbnList.type2 li > div.writer,
+.thumbnList.type2 li > div.publisher,
+.thumbnList.type2 li > div.related {
+	width: 100px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.checkBox {
+	width: 37px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.checkBox label {
+	padding-left: 18px;
+}
+.thumbnList.type2 li div.delivery {
+	width: 100%;
+}
+.thumbnList.type2 li > div.sum {
+	width: 100px;
+	text-align: right;
+}
+.thumbnList.type2 li:first-child > div.sum {
+	text-align: center;
+}
+.thumbnList.type2 li .survey {
+	padding: 11px 10px 9px;
+}
+.thumbnList.type2 li .survey .title .icon {
+	margin-left: 5px;
+}
+.thumbnList.type2 li .survey .textBox {
+	padding: 0;
+}
+.thumbnList li .survey .textBox p.title {
+	margin: 0;
+}
+.thumbnList.type2 li > div.schedule,
+.thumbnList.type2 li > div.sort {
+	width: 100px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.period {
+	width: 126px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.price {
+	width: 120px;
+	text-align: center;
+}
+.btnSchedule {
+	min-width: 0;
+	height: auto;
+	padding: 0;
+	text-decoration: underline;
+	font-size: 1em;
+}
+.thumbnList.type2 li > div.number {
+	width: 100px;
+	text-align: center;
+}
+.thumbnList.type2 li > div.number > span {
+	display: inline-block;
+}
+.thumbnList.type2 li > div.number:first-child {
+	width: 60px;
+}
+.thumbnList.type2 li > div.category {
+	width: 95px;
+	text-align: center;
+}
+/**/
+.thumbnList.type2 li:first-child,
+.thumbnList.type2 li > div.number:first-child {
+	display: none;
+}
+
+.thumbnList.type2 li > div > a {
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.thumbnList.type2 li > div+div {
+	padding-top: 0;
+}
+.thumbnList.type2 li > div.number+div {
+	padding-top: 15px;
+}
+.thumbnList.type2 li > div > p {
+	display: inline-block;
+	margin-right: 10px;
+}
+.thumbnList.type2 li > div > p+button {
+	margin-top: 0;
+}
+.thumbnList.type2 li > div.state {
+	text-align: right;
+	width: 100%;
+	padding-top: 0 !important;
+}
+.thumbnList.type2 li > div.result,
+.thumbnList.type2 li > div.certificate {
+	width: auto;
+   	display: inline-block;
+}
+.thumbnList.type2 li > div.result:before {
+	content: "학습결과";
+	padding-right: 10px;
+	font-weight: 700;
+}
+.thumbnList.type2 li > div.certificate {
+	padding-left: 0;
+}
+.thumbnList.type2 li > div.checkBox {
+	display: table-cell;
+	padding-right:0;
+}
+.thumbnList.type2 li > div.checkBox+div {
+	padding-top: 15px;
+}
+
+.thumbnList.type2 li .imgBox {
+	width: 100px;
+	height: 75px;
+}
+.thumbnList.type2 li .imgBox img {
+	width: 100%;
+	height: 75px;
+}
+.thumbnList.type2 li .textBox > .iconBox {
+	margin-top: 0;
+}
+.thumbnList.type2 li > div.writer, 
+.thumbnList.type2 li > div.publisher, 
+.thumbnList.type2 li > div.related {
+	display: inline-block;
+	width: auto;
+	padding: 0 10px 15px 0;
+}
+.thumbnList.type2 li > div.writer {
+	padding: 0 10px 15px;
+}
+.thumbnList.type2 li > div.state.type2,
+.thumbnList.type2 li > div.period,
+.thumbnList.type2 li > div.price,
+.thumbnList.type2 li > div.schedule,
+.thumbnList.type2 li > div.number,
+.thumbnList.type2 li > div.date,
+.thumbnList.type2 li > div.write,
+.thumbnList.type2 li > div.grade,
+.thumbnList.type2 li > div.date {
+	display: inline-block;
+	width: auto;
+	text-align: left;
+}
+.thumbnList.type2 li > div.hit,
+.thumbnList.type2 li > div.recommend {
+	display: none;
+}
+.thumbnList.type2 li .textBox:first-child {
+	padding: 10px 0 0 0;
+}
+.thumbnList.type2 li > div.course {
+	width: 100%;
+	padding: 10px 10px;
+}
+.thumbnList.type2 li > div.category {
+    display: block;
+    width: 100%;
+    padding: 15px 10px 5px;
+    text-align: left;
+}
+.thumbnList.type2 li > div.sort {
+	display: inline-block;
+	width: auto;
+    padding: 15px 10px 5px;
+    text-align: left;
+}
+.thumbnList.type2 li > div.month {
+	display: inline-block;
+	padding: 15px 10px 5px 0;
+	text-align: left;
+}
+.thumbnList.type2 li > div.category:before,
+.thumbnList.type2 li > div.sort:before {
+	content: "["
+}
+.thumbnList.type2 li > div.category:after,
+.thumbnList.type2 li > div.sort:after {
+	content: "]";
+}
+.thumbnList.type2 li > div.state.type2:before,
+.thumbnList.type2 li > div.writer:before,
+.thumbnList.type2 li > div.publisher:before,
+.thumbnList.type2 li > div.related:before,
+.thumbnList.type2 li > div.period:before,
+.thumbnList.type2 li > div.price:before,
+.thumbnList.type2 li > div.schedule:before,
+.thumbnList.type2 li > div.grade:before,
+.thumbnList.type2 li > div.write:before {
+	content: "역/저자";
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: 700;
+}
+.thumbnList.type2 li > div.publisher:before {
+	content: "출판사";
+} 
+.thumbnList.type2 li > div.related:before {
+	content: "연관과정";
+} 
+.thumbnList.type2 li > div.period:before {
+	content: "기간";	
+}
+.thumbnList.type2 li > div.price:before {
+	content: "교육비";
+}
+.thumbnList.type2 li > div.schedule:before {
+	content: "스케줄";
+}
+.thumbnList.type2 li > div.grade:before {
+	content: "만족도"; 
+}
+.thumbnList.type2 li > div.write:before {
+	content: "등록자";
+}
+.thumbnList.type2 li > div.state.type2:before {
+	content: "진행상황";
+}
+
+
+@media screen and (max-width: 600px) { 
+
+	#sub .thumbnList li {
+		width: 49%;
+	}
+	#sub .thumbnList li:nth-child(3n) {
+		margin-right: 2%;
+	}
+	#sub .thumbnList li:nth-child(2n) {
+		margin-right: 0;
+	}
+	#sub .thumbnList.type2 li, #sub .thumbnList.type2 li:nth-child(4n), #sub .thumbnList.type2 li:nth-child(3n) {
+		width: 100%;
+		margin-right: 0%;
+	    margin-bottom: 0%;
+	}
+}
+@media screen and (max-width: 435px) { 
+	.thumbnList.type2 li .imgBox {
+		display: none;
+	}
+	.thumbnList.type2 li {
+		padding-bottom: 10px;
+	}
+	.thumbnList.type2 li > div {
+		padding-bottom: 5px;
+	}
+	.thumbnList.type2 li .textBox {
+		padding: 0;
+	} 
+	.thumbnList.type2 li > div.publisher, 
+	.thumbnList.type2 li > div.related {
+		padding: 0 10px 0 0;
+	}
+	.thumbnList.type2 li > div.writer {
+		padding: 0 10px 0;
+	}
+	.thumbnList.type2 li .btnArea .btnBook {
+		margin-bottom: 8px;
+	}
+	.thumbnList.type2 li .member .profileImg {
+		display: none;
+	}
+}
+@media screen and (max-width: 360px) { 
+	#sub .thumbnList li {
+		width: 100%;
+		margin-right: 0 !important;
+	}
+	.thumbnList.type2 li > div.related {
+	    padding: 0px 10px 0 0;
+	}
+}

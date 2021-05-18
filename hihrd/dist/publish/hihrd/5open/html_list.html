@@ -1,0 +1,805 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>하이인재원 (오픈형)</title>
+	<style type="text/css">
+		body {
+			font-family: sans-serif, dotum, '돋움';
+		}
+		table {
+			width: 100%;
+			min-width: 1000px;
+			color: #333;
+			border-collapse: collapse;
+			border-top: 1px solid #bbb;
+			border-left: 1px solid #bbb;
+		}
+		th, td {
+			border-right: 1px solid #bbb;
+			border-bottom: 1px solid #bbb;
+			font-size: 12px;
+		}
+		th {
+			line-height: 30px;
+			background: #eee;
+		}		
+		td {
+			padding: 5px 10px 5px 10px;
+			line-height: 20px;			
+		}
+		.info {
+			margin-bottom: 40px;
+		}	
+		.info th {
+			padding-left: 10px;
+			padding-right: 10px;
+			text-align: left;	
+			background: none;
+		}			
+		.info td {
+			font-size: 15px;
+			text-align: left;
+			font-weight: bold;
+			padding: 10px 10px 10px 10px;
+		}	
+		a {
+			color: red;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.comp {
+			background: #ffe6e9;
+		}
+		.modify {
+			background: #dcffee;
+		}
+		.ing {
+			background: #fffdc2;
+		}	
+		.del {
+			background: #f2f2f2;
+		}
+	</style>
+</head>
+
+<body>
+	<table class="info">
+		<tr>
+			<th>프로젝트명</th>
+			<th colspan="4">진행현황</th>
+			<th>최근 업데이트</th>
+		</tr>
+		<tr>
+			<td width="400px">하이인재원 통합교육관리시스템 (오픈형)</td>
+			<td width="130px" class="ing">완료(PC)</td>
+			<td width="150px" class="comp">완료(반응형)<br><span style="font-size: 13px;">CSS - 미디어쿼리 작업</span></td>
+			<td width="130px" class="modify">수정</td>
+			<td width="130px" class="del">삭제</td>
+			<td width="" >2016.12.01</td>
+		</tr>		
+	</table>
+	<table>
+		<colgroup>
+			<col width="150px">
+			<col width="150px">
+			<col width="190px">
+			<col width="180px">
+			<col width="150px">
+			<col width="200px">
+			<col width="80px">
+			<col width="">
+		</colgroup>
+		<tr>
+			<th>1depth</th>
+			<th>2depth</th>
+			<th>3depth / tab</th>
+			<th>4depth / tab</th>
+			<th>popup</th>
+			<th>file name</th>
+			<th>최근 완료일</th>
+			<th>참고</th>
+		</tr>
+		<tr class="comp">
+			<td>서브레이아웃</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="layout_sub.html">layout_sub.html</a></td>
+			<td>2016.12.04</td>	
+			<td>lnb영역 학습지원안내 추가 (20161204-현업요청)<br>.lnb 부분의 .banner 부분 html 소스 수정<br>.location 부분 html 수정</td>		
+		</tr>
+		<tr class="comp">
+			<td>메인</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="main.html">main.html</a></td>
+			<td>2016.11.21</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td colspan="4"></td>
+			<td>이용약관 및 개인정보 보호정책 동의</td>
+			<td><a href="popup_policy.html">popup_policy.html</a></td>
+			<td>2016.11.20</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td colspan="4"></td>
+			<td>휴면회원</td>
+			<td><a href="dormant_member.html">dormant_member.html</a></td>
+			<td>2016.11.09</td>
+			<td>.popupLayer 수정 </td>
+		</tr>
+		<tr class="comp">
+			<td colspan="4"></td>
+			<td>휴면해지</td>
+			<td><a href="dormant_cancel.html">dormant_cancel.html</a></td>
+			<td>2016.11.09</td>
+			<td>.popupLayer 수정 </td>
+		</tr>
+		<tr class="comp">
+			<td rowspan="6" valign="top">교육안내</td>
+			<td rowspan="4" valign="top">학습방법</td>
+			<td>수강신청</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="guide_method_register.html">guide_method_register.html</a></td>
+			<td>&nbsp;</td>
+			<td>콘텐츠페이지 (콘텐츠 수급필요)</td>	
+		</tr>
+		<tr class="comp">
+			<td>학습</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="guide_method_learning.html">guide_method_learning.html</a></td>
+			<td>&nbsp;</td>
+			<td>콘텐츠페이지 (콘텐츠 수급필요)</td>	
+		</tr>
+		<tr class="comp">
+			<td>평가/과제</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="guide_method_test.html">guide_method_test.html</a></td>
+			<td>&nbsp;</td>
+			<td>콘텐츠페이지 (콘텐츠 수급필요)</td>	
+		</tr>
+		<tr class="comp">
+			<td>아이디/비밀번호찾기</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="guide_method_findidpw.html">guide_method_findidpw.html</a></td>
+			<td>16.11.29</td>
+			<td>콘텐츠페이지 (콘텐츠 수급필요)</td>	
+		</tr>
+		<tr class="comp">
+			<td>모사답안처리기준</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="guide_answer.html">guide_answer.html</a></td>
+			<td>&nbsp;</td>
+			<td>콘텐츠페이지</td>		
+		</tr>
+		<tr class="comp">
+			<td>고용보험환급기준</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="guide_refund.html">guide_refund.html</a></td>
+			<td>&nbsp;</td>
+			<td>콘텐츠페이지</td>		
+		</tr>
+		<tr class="comp">
+			<td rowspan="9" valign="top">교육과정</td>
+			<td rowspan="3" valign="top">전체과정</td>
+			<td valign="top">목록</td>
+			<td valign="top">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_list.html">register_cors_list.html</a></td>
+			<td></td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td>목록 (썸네일)</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_thumb.html">register_cors_thumb.html</a></td>
+			<td>2016.11.10</td>
+			<td>icon type2  빠진 부분 추가</td>	
+		</tr>
+		<tr class="comp">
+			<td>상세</td>
+			<td valign="top">과정소개/학습목차/수강후기</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_view.html">register_cors_view.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td rowspan="4" valign="top">수강신청과정<br>(전체과정과 동일)</td>
+			<td valign="top">목록</td>
+			<td valign="top">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_list.html">register_cors_list.html</a></td>
+			<td></td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td>목록 (썸네일)</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_thumb.html">register_cors_thumb.html</a></td>
+			<td>2016.11.10</td>
+			<td>icon type2  빠진 부분 추가</td>	
+		</tr>
+		<tr class="comp">
+			<td>상세</td>
+			<td valign="top">과정소개/학습목차/수강후기</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_view.html">register_cors_view.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td>&nbsp;</td>
+			<td valign="top">강사정보</td>
+			<td>&nbsp;</td>
+			<td valign="top"><a href="register_lecturerinfo.html">register_lecturerinfo.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td rowspan="2" valign="top">열린강의</td>
+			<td rowspan="2" valign="top">강좌/동영상(강좌와 동일)/자료</td>
+			<td valign="top">목록</td>
+			<td>&nbsp;</td>
+			<td><a href="register_openclass_list.html">register_openclass_list.html</a></td>
+			<td>2016.11.09</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="modify">
+			<td valign="top">상세</td>
+			<td>&nbsp;</td>
+			<td><a href="register_openclass_view.html">register_openclass_view.html</a></td>
+			<td>2016.11.21</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="modify">
+			<td rowspan="16" valign="top">마이페이지</td>
+			<td>나의 홈</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_myhome_.html">myclassrm_myhome_.html</a></td>
+			<td>16.11.19</td>	
+			<td>고객센터 부분 수정</td>	
+		</tr>
+		<tr class="comp">
+			<td rowspan="6" valign="top">나의 강의실</td>
+			<td rowspan="3" valign="top">수강중인 과정</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_myclassrm_01ing.html">myclassrm_myclassrm_01ing.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>&nbsp;</td>
+			<td>개인정보의 수집,이용 및 제공 </td>
+			<td><a href="myclassrm_policy.html">myclassrm_policy.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>&nbsp;</td>
+			<td>본인인증</td>
+			<td><a href="myclassrm_certify.html">myclassrm_certify.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>수강신청 과정</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_myclassrm_02register.html">myclassrm_myclassrm_02register.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td rowspan="2" valign="top">수강완료 과정</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_myclassrm_03done.html">myclassrm_myclassrm_03done.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>&nbsp;</td>
+			<td>수료증</td>
+			<td><a href="myclassrm_certificate.html">myclassrm_certificate.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>나의 열린강의</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_openclass.html">myclassrm_openclass.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td rowspan="2">나의 설문</td>
+			<td rowspan="2">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_survey.html">myclassrm_survey.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>&nbsp;</td>
+			<td>설문참여</td>
+			<td><a href="myclassrm_survey_participation.html">myclassrm_survey_participation.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td rowspan="2">나의 일정관리</td>
+			<td rowspan="2">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_schedule.html">myclassrm_schedule.html</a></td>
+			<td>2016.11.10</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>&nbsp;</td>
+			<td>일정등록</td>
+			<td><a href="myclassrm_schedule_register.html">myclassrm_schedule_register.html</a></td>
+			<td>2016.11.10</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="modify">
+			<td rowspan="3" valign="top">개인정보수정</td>
+			<td rowspan="2" valign="top">프로필수정</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_modify.html">myclassrm_modify.html</a></td>
+			<td>16.11.21</td>
+			<td>이메일부분 email 클래스명 추가</td>
+		</tr>
+		<tr class="comp">
+			<td>&nbsp;</td>
+			<td>비밀번호 변경</td>
+			<td><a href="myclassrm_modify_pw.html">myclassrm_modify_pw.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td>회원탈퇴</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_withdrawal.html">myclassrm_withdrawal.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td>배송현황</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="myclassrm_delivery.html">myclassrm_delivery.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td rowspan="11" valign="top">고객센터</td>
+			<td rowspan="2" valign="top">공지사항</td>
+			<td>목록</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_notice_list.html">customer_notice_list.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>상세</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_notice_view.html">customer_notice_view.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>FAQ</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_faq.html">customer_faq.html</a></td>
+			<td>2016.11.12</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td rowspan="3">1:1상담</td>
+			<td>목록</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_inquiry_list.html">customer_inquiry_list.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>입력</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_inquiry_write.html">customer_inquiry_write.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>상세</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_inquiry_view.html">customer_inquiry_view.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>학습지원프로그램</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_download.html">customer_download.html</a></td>
+			<td>&nbsp;</td>	
+			<td>콘텐츠페이지</td>
+		</tr>
+		<tr class="comp">
+			<td>사이트맵</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_sitemap.html">customer_sitemap.html</a></td>
+			<td>&nbsp;</td>	
+			<td>콘텐츠페이지</td>
+		</tr>
+		<tr class="comp">
+			<td>서비스 이용약관</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_agrmnt.html">customer_agrmnt.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="comp">
+			<td>개인정보취급방침</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="customer_policy.html">customer_policy.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td>원격지원서비스</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="http://r.hi.co.kr/nc20/cust/main">http://r.hi.co.kr/nc20/cust/main</a></td>
+			<td>&nbsp;</td>
+			<td>http://r.hi.co.kr/nc20/cust/main 새창으로 링크 이동</td>
+		</tr>
+		<tr class="ing">
+			<td rowspan="6" valign="top">수강신청</td>
+			<td rowspan="4" valign="top">수강신청과정</td>
+			<td valign="top">목록</td>
+			<td valign="top">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_list.html">register_cors_list.html</a></td>
+			<td></td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>목록 (썸네일)</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_thumb.html">register_cors_thumb.html</a></td>
+			<td>2016.11.10</td>
+			<td>icon type2  빠진 부분 추가</td>	
+		</tr>
+		<tr class="comp">
+			<td rowspan="2" valign="top">상세</td>
+			<td valign="top">과정소개/학습목차/수강후기</td>
+			<td>&nbsp;</td>
+			<td><a href="register_cors_view.html">register_cors_view.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="comp">
+			<td valign="top">강사정보</td>
+			<td>&nbsp;</td>
+			<td valign="top"><a href="register_lecturerinfo.html">register_lecturerinfo.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="ing">
+			<td rowspan="2" valign="top">열린강의</td>
+			<td rowspan="2" valign="top">강좌 / 동영상(강좌와 동일) /자료</td>
+			<td valign="top">목록</td>
+			<td>&nbsp;</td>
+			<td><a href="register_openclass_list.html">register_openclass_list.html</a></td>
+			<td>2016.11.09</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="modify">
+			<td valign="top">상세</td>
+			<td>&nbsp;</td>
+			<td><a href="register_openclass_view.html">register_openclass_view.html</a></td>
+			<td>2016.11.21</td>
+			<td>상세영역 전체 수정</td>
+		</tr>
+		<tr class="ing">
+			<td rowspan="4" valign="top">수강신청</td>
+			<td rowspan="2" valign="top">기업</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>신청서작성</td>
+			<td valign="top"><a href="register_company_step01.html">register_company_step01.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="ing">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>신청완료</td>
+			<td valign="top"><a href="register_company_step02.html">register_company_step02.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="ing">
+			<td rowspan="2" valign="top">개인</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>신청서작성</td>
+			<td valign="top"><a href="register_individual_step01.html">register_individual_step01.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>
+		<tr class="ing">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>신청완료</td>
+			<td valign="top"><a href="register_individual_step02.html">register_individual_step02.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>	
+		</tr>  
+		<tr class="ing">
+			<td rowspan="10" valign="top">멤버쉽</td>
+			<td>로그인</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_login.html">mmbrshp_login.html</a></td>
+			<td>2016.11.10</td>	
+			<td>디폴트이미지필요(어떤 디폴트이미지인지 확인필요)</td>
+		</tr>
+		<tr class="ing">
+			<td>아이디/비밀번호찾기</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_findidpw.html">mmbrshp_findidpw.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td rowspan="4" valign="top">회원가입</td>
+			<td>step1 본인인증</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_join_certify.html">mmbrshp_join_certify.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>step2 약관동의</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_join_agrmnt.html">mmbrshp_join_agrmnt.html</a></td>
+			<td>2016.11.09</td>
+			<td> </td>
+		</tr>
+		<tr class="ing">
+			<td>step3 회원정보입력</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_join_info.html">mmbrshp_join_info.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>step4 회원가입완료</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_join_done.html">mmbrshp_join_done.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		
+		<tr class="ing">
+			<td>이용약관</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_agrmnt.html">mmbrshp_agrmnt.html</a></td>
+			<td>&nbsp;</td>	
+			<td></td>
+		</tr>
+		<tr class="ing">
+			<td>개인정보취급방침</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_policy.html">mmbrshp_policy.html</a></td>
+			<td>2016.11.09</td>
+			<td>소스재정리</td>
+		</tr>
+		<tr class="ing">
+			<td>개인정보처리방침</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_policy2.html">mmbrshp_policy2.html</a></td>
+			<td>2016.11.09</td>
+			<td>소스재정리</td>
+		</tr> 
+		<tr class="ing">
+			<td>이메일 무단수집거부</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mmbrshp_refsleml.html">mmbrshp_refsleml.html</a></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td colspan="5" valign="top">팝업공지</td>
+			<td><a href="popup_notice.html">popup_notice.html</a></td>
+			<td>2016.11.09</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td colspan="5" valign="top">팝업레이어</td>
+			<td><a href="popup_layer.html">popup_layer.html</a></td>
+			<td>2016.11.09</td>
+			<td>.popupLayer 수정 </td>
+		</tr>
+		<tr class="ing">
+			<td rowspan="13" valign="top">메일링</td>
+			<td>휴면계정</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_quiescence.html">mail_quiescence.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>개인정보 이용내역</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_use.html">mail_use.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>회원가입</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_join.html">mail_join.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>회원탈퇴</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_withdraw.html">mail_withdraw.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>수강신청</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_register.html">mail_register.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>수강취소</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_register_cancel.html">mail_register_cancel.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>수강취소 (관리자)</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_register_cancel_admin.html">mail_register_cancel_admin.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>수료처리</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_complete.html">mail_complete.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>1:1 상담등록</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_consult.html">mail_consult.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>학습독려</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_study.html">mail_study.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>과제제출</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_task.html">mail_task.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>시험응시</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_exam.html">mail_exam.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>
+		<tr class="ing">
+			<td>설문참여</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><a href="mail_survey.html">mail_survey.html</a></td>
+			<td>&nbsp;</td>	
+			<td>&nbsp;</td>
+		</tr>              	               
+	</table>
+</body>
+</html>
