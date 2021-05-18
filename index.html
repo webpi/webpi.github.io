@@ -339,7 +339,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
 
 <script>
-    $(window).scroll(function () {
+    $(window).on("scroll", function () {
         var f = $(this).scrollTop();
         var scrollEnd = $(window).scrollTop() == ($(document).height() - $(window).height());
 
