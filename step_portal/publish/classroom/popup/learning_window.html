@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<div class="videoBtnBox" id="contentsMoving">
+    <button type="button"><i class="icon_arrow"></i><span>이전</span></button>
+    <span class="videoPaging" id="contentPaging">1 / 2</span>
+    <button type="button" onclick="jQuery('#HkmcLeftFrame').get(0).contentWindow.nextPage();" class="btnVideoNext"> <span>다음</span><i class="icon_arrow"></i></button>
+</div>
+
+</body>
+</html>

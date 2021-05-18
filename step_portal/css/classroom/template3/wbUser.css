@@ -1,0 +1,933 @@
+/* topLayout */
+.topLayout { max-width:1200px; margin:0 auto; }
+.topLayout .topLayoutBg { display:none; position:fixed; z-index:29; top:0; left:0; width:100%; height:100%; background:url(../../../images/classroom/template3/resp/default/bg_trans_50.png); }
+.topLayout .topLayoutIn { background:#f5f7f9;  }
+.topLayout .topLayoutIn .topInfo { height:38px; line-height:36px; border-bottom:1px solid #e3e3e3; padding:0 30px 0 0; }
+.topLayout .topLayoutIn .topInfo ul { overflow:hidden; }
+.topLayout .topLayoutIn .topInfo ul li.mobMenu { display:none; }
+.topLayout .topLayoutIn .topInfo ul li.exit { float:left; width:190px; text-align:center; }
+.topLayout .topLayoutIn .topInfo ul li.exit a { position:relative; display:block; }
+.topLayout .topLayoutIn .topInfo ul li.exit a:before { content:''; position:absolute; top:9px; left:60px; display:inline-block; width:20px; height:20px; background:url(../../../images/classroom/template3/resp/default/icon_exit01.png) no-repeat; }
+.topLayout .topLayoutIn .topInfo ul li.exit a:after { content:''; position:absolute; top:9px; left:60px; display:inline-block; width:20px; height:20px; background:url(../../../images/classroom/template3/resp/default/icon_exit02.png) no-repeat; }
+.topLayout .topLayoutIn .topInfo ul li.exit a:hover:after { animation:exit 1.11s infinite; }
+.topLayout .topLayoutIn .topInfo ul li.exit a span { padding:0 0 0 25px; }
+.topLayout .topLayoutIn .topInfo ul li.info { float:right; color: #666;}
+
+.topLayout .topLayoutIn .learnInfo { display:table; table-layout:fixed; width:100%; height:100px; background:#fff; box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1); }
+.topLayout .topLayoutIn .learnInfo .learnInfoL { display:table-cell; vertical-align:middle; width:190px; text-align:center; }
+.topLayout .topLayoutIn .learnInfo .learnInfoL h1 { position: relative; margin:0; }
+.topLayout .topLayoutIn .learnInfo .learnInfoL h1:after {content: ""; position: absolute; right: -1px; top: 15px; bottom: 15px; width: 1px; background: #e3e3e3;}
+.topLayout .topLayoutIn .learnInfo .learnInfoL h1 a { overflow: hidden; display:block; height:100px; }
+.topLayout .topLayoutIn .learnInfo .learnInfoL h1 img { max-width: 160px; max-height: 40px; margin:37px 0 0 0; }
+.topLayout .topLayoutIn .learnInfo .learnInfoL h1 a:hover img { animation:pulsate 0.345s; }
+.topLayout .topLayoutIn .learnInfo .learnInfoC { display:table-cell; vertical-align:middle; padding:6px 30px 0 30px; }
+.topLayout .topLayoutIn .learnInfo .learnInfoC .tit { display:block; height:2.4em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height:1.2em;font-size:20px; }
+
+.topLayout .topLayoutIn .learnInfo .learnInfoC .date { margin:8px 0 0 0; font-size: 14px;}
+.topLayout .topLayoutIn .learnInfo .learnInfoC .date .txt_blue01 {color: #0746c7 !important;}
+
+.topLayout .topLayoutIn .learnInfo .learnInfoR { position:relative; display:table-cell; vertical-align:middle; width:310px; }
+.topLayout .topLayoutIn .learnInfo .learnInfoR .btn_learning { position:absolute; }
+.topLayout .topLayoutIn .learnInfo .learnInfoR .date { margin:0 0 0 140px; text-align:center; }
+.topLayout .topLayoutIn .learnInfo .learnInfoR .date .txt { margin:0 0 3px 0; font-size:14px; font-weight:500; }
+.topLayout .topLayoutIn .learnInfo .learnInfoR .date .count { position:relative; }
+.topLayout .topLayoutIn .learnInfo .learnInfoR .date .count:before { content:'D-'; position:absolute; top:5px; left:-5px; font-size:30px; color:#2e3e4e; font-weight:500; }
+.topLayout .topLayoutIn .learnInfo .learnInfoR .date .count span { position:relative; font-size:30px; font-weight:500; color:#fff; letter-spacing:17px; padding:0 0 0 10px; line-height:44px; display:inline-block; height:44px; width:96px;
+  background: rgb(58,62,77); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(58,62,77,1) 0%, rgba(47,52,67,1) 49%, rgba(58,62,77,1) 50%, rgba(58,62,77,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(58,62,77,1) 0%,rgba(47,52,67,1) 49%,rgba(58,62,77,1) 50%,rgba(58,62,77,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(58,62,77,1) 0%,rgba(47,52,67,1) 49%,rgba(58,62,77,1) 50%,rgba(58,62,77,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#394857', endColorstr='#394857',GradientType=0 ); /* IE6-9 */
+}
+.topLayout .topLayoutIn .learnInfo .learnInfoR .date .count span:before { content:''; position:absolute; top:0; height:100%; left:34px; width:2px; background:#fff; }
+.topLayout .topLayoutIn .learnInfo .learnInfoR .date .count span:after { content:''; position:absolute; top:0; height:100%; left:68px; width:2px; background:#fff; }
+
+.nav_lnb { background:#373b47; float:left; width:190px; padding-bottom: 22px; z-index:30; }
+.nav_lnb .tit { display:block; padding:32px 0; color:#fff; font-size:24px; text-align:center; }
+.nav_lnb .tit button { display:none; }
+.nav_lnb ul {  }
+.nav_lnb ul > li { border-bottom:1px solid #535767; background:#44495a; }
+.nav_lnb ul > li:first-child { border-top:1px solid #535767; }
+.nav_lnb ul > li > a { position:relative; display:block; height:54px; line-height:54px; padding:0 30px; color:#ccc; transition:0.345s ease; }
+.nav_lnb ul > li > a:after { content:''; position:absolute; top:20px; right:20px; width:9px; height:16px; background:url(../../../images/classroom/template3/resp/default/icon_lnb_arrow.png) no-repeat; opacity:0; transition:0.345s ease; }
+.nav_lnb ul > li > a:hover, .nav_lnb ul > li > a:focus  { color:#fff; }
+.nav_lnb ul > li > a:hover:after, .nav_lnb ul > li > a:focus:after { right:15px; opacity:1; }
+.nav_lnb ul > li.active { border-bottom-color: transparent; background:linear-gradient(90deg, rgba(11,140,222,1) 8%, rgba(68,86,235,1) 91%); }
+.nav_lnb ul > li.active:first-child {border-top-color: transparent;}
+.nav_lnb ul > li.active a { color:#fff; }
+.nav_lnb .info { margin:22px 0 0 0; color:#fff; text-align:center; }
+.nav_lnb .info .txt { font-size:15px; }
+.nav_lnb .info .number { display:block; margin:10px 0 8px 0; color:#fff; font-size:24px; }
+.nav_lnb .info .email { display:block; line-height:1.4; font-weight:300; font-size:13px; margin:0 0 18px 0; }
+
+.contentLayout { max-width:1200px; margin:0 auto; overflow:hidden; background:#373b47; }
+.contentLayout .contentLayoutIn {  }
+.contentLayout .contentLayoutIn .contentArea { margin:0 0 0 190px; padding:10px; background:#ebeff2; min-height: 868px;}
+.contentArea {  }
+@keyframes exit {
+  0% { transform:translateX(0); }
+  50% { transform:translateX(5px); }
+  100% { transform:translateX(0); }
+}
+
+@keyframes pulsate {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+}
+/* EOD : topLayout */
+
+
+/* contentLayout */
+.prog_list { display:table; table-layout:fixed; width:100%; }
+.prog_list > li { display:table-cell; }
+.prog_list > li > a { display:block; margin:0 0 0 2px; background:#fff; }
+.prog_list > li > a .tit {display:block;height:46px;line-height:46px;background:#e74c3c;color:#fff;font-weight:500;font-size: 14px;}
+.prog_list > li > a .titIn {display:block; position:relative; padding: 0 18px 0 40px;}
+.prog_list > li > a .titIn:before {content:'';position:absolute;top:50%;right: 10px;margin:-5px 0 0 0;width:6px;height:11px;background:url(../../../images/classroom/template3/resp/default/icon_prog_arrow.png) no-repeat;}
+.prog_list > li > a .titIn:after {content:'';position:absolute;top:50%;right: 10px;margin:-5px 0 0 0;width:6px;height:11px;background:url(../../../images/classroom/template3/resp/default/icon_prog_arrow.png) no-repeat;transition:0.2s ease;}
+.prog_list > li > a .titIn span {position:absolute;top:50%;left: 12px;width:20px;height:20px;margin:-10px 0 0 0;background:url(../../../images/classroom/template3/resp/default/icon_prog_icon01.png) no-repeat 50% 50%;}
+.prog_list > li > a:hover .tit:after { right:6px; }
+.prog_list > li > a .prog_info { display:table; width:100%; height:90px; padding:10px 0; border-bottom:1px solid #e74c3c; }
+.prog_list > li > a .prog_info .prog_infoBox { display:table-cell; vertical-align:middle; text-align:center; padding:0 10px; }
+.prog_list > li > a .prog_info .pointC { color:#e74c3c; font-weight:500; }
+.prog_list > li > a .prog_info .txt01 { display:block; font-size:22px; }
+.prog_list > li > a .prog_info .txt02 { display:block; margin:5px 0 0 0; font-size:14px; color:#666;  }
+.prog_list > li > a .prog_info.prog_noData { background:#f5f7f9; }
+
+.prog_list > li.type02 > a .tit { background:#00b6e3; }
+.prog_list > li.type02 > a .titIn span { background:url(../../../images/classroom/template3/resp/default/icon_prog_icon02.png) no-repeat 50% 50%; }
+.prog_list > li.type02 > a .prog_info { border-bottom:1px solid #00b6e3; }
+.prog_list > li.type02 > a .prog_info .pointC { color:#00b6e3; }
+
+.prog_list > li.type03 > a .tit { background:#00b6e3; }
+.prog_list > li.type03 > a .titIn span { background:url(../../../images/classroom/template3/resp/default/icon_prog_icon03.png) no-repeat 50% 50%; }
+.prog_list > li.type03 > a .prog_info { border-bottom:1px solid #00b6e3; }
+.prog_list > li.type03 > a .prog_info .pointC { color:#00b6e3; }
+
+.prog_list > li.type04 > a .tit { background:#4475db; }
+.prog_list > li.type04 > a .titIn span {width:19px; height:20px; background:url(../../../images/classroom/template3/resp/default/icon_prog_icon04.png) no-repeat 50% 50%; }
+.prog_list > li.type04 > a .prog_info { border-bottom:1px solid #4475db; }
+.prog_list > li.type04 > a .prog_info .pointC { color:#4475db; }
+
+.prog_list > li.type05 > a .tit { background:#4475db; }
+.prog_list > li.type05 > a .titIn span {width:17px; height:20px; background:url(../../../images/classroom/template3/resp/default/icon_prog_icon05.png) no-repeat 50% 50%; }
+.prog_list > li.type05 > a .prog_info { border-bottom:1px solid #4475db; }
+.prog_list > li.type05 > a .prog_info .pointC { color:#4475db; }
+
+.prog_list > li.type06 > a .tit { background:#4475db; }
+.prog_list > li.type06 > a .titIn span {width:19px; height:20px; background:url(../../../images/classroom/template3/resp/default/icon_prog_icon06.png) no-repeat 50% 50%; }
+.prog_list > li.type06 > a .prog_info { border-bottom:1px solid #4475db; }
+.prog_list > li.type06 > a .prog_info .pointC { color:#4475db; font-style: normal; }
+.prog_list > li.type06 > a .prog_info .txt01 {font-size:18px}
+
+.prog_list > li.type07 > a .tit { background:#00b6e3; }
+.prog_list > li.type07 > a .titIn span {width:19px; height:20px; background:url(../../../images/classroom/template3/resp/default/icon_prog_icon07.png) no-repeat 50% 50%; }
+.prog_list > li.type07 > a .prog_info { border-bottom:1px solid #00b6e3; }
+.prog_list > li.type07 > a .prog_info .pointC { color:#00b6e3; }
+
+
+.idxList { margin:10px 0 0 0; }
+.idxList.layout_box .eod_layout02 > li .eod_layoutIn { min-height:510px; }
+.list_viewBox {  }
+.list_viewBox ul { border-top:1px solid #555; }
+.list_viewBox ul li { border-bottom:1px solid #d7d7d7; }
+.list_viewBox ul li:first-child { }
+.list_viewBox ul li a { position:relative; overflow:hidden; display:block; padding:20px 100px 15px 10px; }
+.list_viewBox ul li a .txtBox.ico { display:block; margin:0 45px 0 0; }
+.list_viewBox ul li a .txtBox .txt { position:relative; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:100%; float:left; font-weight:500; padding:0 0 5px 0; }
+.list_viewBox ul li a .txtBox .txt:before { content: ''; position: absolute; bottom: 0; right: 0;  width: 0; transition: width .6s cubic-bezier(0.51, 0.18, 0, 0.88) .1s; background: #1464d9; }
+.list_viewBox ul li a .txtBox .txt:after { content: ''; position: absolute; right: 0; bottom: 0; width: 0; height: 1px;  transition: width .3s cubic-bezier(0.29, 0.18, 0.26, 0.83); background: #1464d9; }
+.list_viewBox ul li a .icon_new { float:left; position:relative; width:24px; height:24px; top:-2px; left:6px; background:url(../../../images/classroom/template3/resp/default/icon_list_new.png) no-repeat; }
+.list_viewBox ul li a .icon_lock { float:left; position:relative; top:-2px; left:6px;}
+.list_viewBox ul li a .date { position:absolute; top:22px; right:10px; color:#666; }
+.list_viewBox ul li a:hover .txtBox .txt:before, .list_viewBox ul li a:hover .txtBox .txt:after { width:100%; left:0; }
+.list_viewBox ul li a:hover  { color:#1464d9; }
+
+.layout_boxs { margin:10px 0 0 0; border:1px solid #d7d7d7; background:#fff; padding:40px 30px; }
+.layout_boxs.edit p { margin:0 !important; line-height:1.8 !important; word-break: break-all; white-space:normal; text-align:justify}
+.layout_boxs .thumbBox { display:table; width:100%; table-layout:fixed; }
+.layout_boxs .thumbBox .thumb { display:table-cell; vertical-align:top; width:130px; }
+.layout_boxs .thumbBox .thumb img { max-width:100%; }
+.layout_boxs .thumbBox .infomation { display:table-cell; vertical-align:top; padding:10px 0 10px 30px; }
+.layout_boxs .thumbBox .infomation .title { display:block; font-size:20px; color:#0746c7; font-weight:400 !important; margin:0 0 20px 0;}
+.list_viewBox .noData { min-height:350px; border-top:1px solid #555; }
+
+.toogleBtn .icon_arrow_down {margin:0 0 2px 5px}
+.toogleBtn.active .icon_arrow_down {transform: rotate(180deg)}
+
+.attend_list { margin:20px 0 0 0; }
+.attend_list > li { margin:10px 0 0 0; border:1px solid #d7d7d7; border-top:1px solid #555; }
+.attend_list > li:first-child { margin:0; }
+.attend_list > li .order { display:table; width:100%; padding:10px 0; background:#f5f7f9; }
+.attend_list > li .order .oderL { position:relative; display:table-cell; vertical-align:middle; width:50px; padding:0 10px; text-align:center; }
+.attend_list > li .order .oderL:after { content:''; position:absolute; right:0; top:50%; margin:-7px 0 0 0; width:1px; height:15px; background:#d7d7d7; }
+.attend_list > li .order .oderC { display:table-cell; vertical-align:middle; padding:0 10px; }
+.attend_list > li .order .oderR { display:table-cell; vertical-align:middle; width:100px; padding:0 10px; }
+.attend_list > li > ul.hide {display: none}
+.attend_list > li > ul > li { padding:20px 10px; border-top:1px solid #d7d7d7; }
+.attend_list > li > ul > li:first-child { border-top:none; }
+.attend_list > li > ul > li .tit { display:block; margin:0 0 5px 0; }
+.attend_list > li > ul > li .txt { position:relative; font-size:14px; margin:0 20px 0 0; float:left; color:#666; }
+.attend_list > li > ul > li .txt:after { content:''; position:absolute; top:5px; right:-10px; width:1px; height:11px; background:#d7d7d7; }
+.attend_list > li > ul > li .txt + .txt:after { display:none; }
+.attend_list > li > ul > li .btn_center { clear:both; text-align:center; padding:10px 0 0 0; }
+
+.attend_list.exam > li > ul { padding:20px 10px; }
+.attend_list.exam > li > ul > li { padding:5px 0 0 0; border:none; }
+.attend_list.exam > li > ul > li:first-child { padding:0; }
+.attend_list.exam > li > ul > li .exam_box { display:table; table-layout:fixed; width:100%; overflow:hidden; font-size:14px; }
+.attend_list.exam > li > ul > li .exam_boxL { display:table-cell; vertical-align:top; width:60px; }
+.attend_list.exam > li > ul > li .exam_boxR { display:table-cell; vertical-align:top; padding:0 0 0 10px; }
+
+.calender_date { overflow:hidden; text-align:center; position:relative; padding:0 40px; }
+.calender_date p { display:inline-block; font-size:20px; margin:0 18px; vertical-align:middle; }
+.calender_date .btn_prev { display:inline-block; }
+.calender_date .btn_next { display:inline-block; }
+.calender_date .btn_right { position:absolute; top:0; right:0; }
+
+.attend_selectBox {text-align:center}
+.attend_selectBox > ul {display:inline-block}
+.attend_selectBox > ul > li {float:left; margin:0 20px}
+.attend_selectBox .circle {display:inline-block; width:130px; height:130px; border-radius:50%;}
+.attend_selectBox .circle .txt {font-size:16px; color:#222; margin:80px 0 0}
+.attend_selectBox .circle:hover .txt {color:white}
+.attend_selectBox .circle.number {background:#ebeff2 url(../../../images/classroom/template3/resp/default/icon_attend_type01.png) center 35px no-repeat}
+.attend_selectBox .circle.number:hover {background:#082ca1 url(../../../images/classroom/template3/resp/default/icon_attend_type01_hover.png) center 35px no-repeat}
+.attend_selectBox .circle.qr {background:#ebeff2 url(../../../images/classroom/template3/resp/default/icon_attend_type02.png) center 35px no-repeat}
+.attend_selectBox .circle.qr:hover {background:#082ca1 url(../../../images/classroom/template3/resp/default/icon_attend_type02_hover.png) center 35px no-repeat}
+
+.table_block {width:100%; border-spacing: 0; border: 1px solid #d7d7d7;border-top: 1px solid #555;}
+.table_block thead tr th {padding:15px 10px; border-left:1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7; font-size:16px; color:#222; text-align:center; font-weight:400; line-height:20px; background-color:#f5f7f9;}
+.table_block thead tr td {padding: 15px 10px;border-left: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;font-size:16px;color:#222;text-align:center;font-weight:400;line-height:20px;background-color: #f5f7f9;}
+.table_block thead tr th:first-child , .table_block thead tr td:first-child , .table_block tbody tr td:first-child {border-left:0}
+.table_block tbody tr th {padding:20px 15px; border-top:1px solid #e7e7e7; font-size:16px; color:#666; font-weight:400; line-height:26px; background-color:#FFFFFF}
+.table_block tbody tr td {padding: 15px 10px;border-left: 1px solid #d7d7d7;border-top: 1px solid #d7d7d7;font-size:16px;color:#222;line-height:26px;background-color:#fff;}
+.table_block tbody tr td .mob_boxL {display:none}
+.table_block tbody tr td.mob_ac {text-align:center !important;}
+.table_block tbody tr:first-child th , .table_block tbody tr:first-child td {border-top:0}
+.table_block thead tr th.bl , .table_block td.bl  {border-left:1px solid #d7d7d7 !important}
+.table_block button {margin:0}
+.table_block tr.active { background:#e9f8fa !important; }
+.table_block tr.active td { background:#e9f8fa !important; }
+
+.table_block.table-debate tbody .mob_boxR .label_s_red,
+.table_block.table-debate tbody .mob_boxR .label_s_blue,
+.table_block.table-debate tbody .mob_boxR .label_s_black {border-radius: 2px;}
+.table_block.table-debate .mob_inline {display: block;}
+.table_block.table-debate .mob_boxR .txt_default {display: block;}
+/* 시험 - 팝업 */
+
+.timeCount {margin:20px 0 0; text-align:right}
+.timeCount .txt {font-size:16px; color:#222; vertical-align:middle; margin:0 2px 0 0}
+.timeCount .countBox {background-color:#1464d9;  display:inline-block; vertical-align:middle; font-size:16px; font-weight:500; color:white; padding:4px 12px}
+.timeCount .countBox .colon {display:inline-block; font-weight:400; margin:0 6px}
+
+.textCount {margin:5px 0 0; text-align:right; font-size:14px; color:#666}
+
+.thumBox_exam {margin:20px 0 0; display:inline-block; width:283px; height:148px; border:1px solid #d7d7d7}
+.thumBox_exam_small {margin:10px 0 0; display:inline-block;}
+.thumBox_exam_small img {width:50%}
+
+.exam_scoreBox {overflow:hidden; font-size:18px; margin:20px 0 0}
+.exam_scoreBox > ul {float:right;}
+.exam_scoreBox > ul > li {position:relative; float:left; padding:0 0 0 22px;}
+.exam_scoreBox > ul > li:before {content:"";position:absolute;top: 50%;left:11px;bottom:0;width: 1px;height: 18px;background: #d7d7d7;margin: -9px 0 0;}
+.exam_scoreBox > ul > li:first-child:before {display:none}
+.exam_scoreBox .txt {margin:0 0 0 10px}
+
+.score_num {font-size:24px; color:#0746c7;}
+.score_num02 {font-size:20px; color:#0746c7;}
+.score_num03 {font-size:20px; color:#666;}
+
+.list_test {margin:30px 0 0; border-bottom:1px solid #d7d7d7}
+.list_test > li {position:relative; padding:20px 0 30px; overflow:hidden; border-top:1px solid #d7d7d7;}
+.list_test > li .txt_num {display:table; width:100%; margin-top:0; line-height:normal; padding:0;}
+.list_test > li .txt_num .num {position:static; display:table-cell; vertical-align:top; white-space:nowrap; text-align:left}
+.list_test > li .txt_num .txt {display:table-cell; width:100%; vertical-align:top; padding:0 0 0 5px}
+.list_test > li .txt_num .txt p {line-height:27px !important; font-size:16px !important; margin:0 10px 0 0}
+.list_test > li .txt_num img {display:block; border:1px solid #d7d7d7; max-width: calc(100% - 15px);}
+.list_test > li .txt_num pre {display:inline-block; margin:0; white-space: pre-wrap; word-break:break-all}
+.list_test > li .thumBox_exam {width:auto; height:auto; margin:0}
+.list_test > li.answerOk:before {content:""; position:absolute; top:20px; left:0; display:inline-block; width:120px; height:92px; background:url(../../../images/classroom/template3/resp/default/exam_answer_o.png) no-repeat; z-index:10}
+.list_test > li.answerNo:before {content:""; position:absolute; top:20px; left:0; display:inline-block; width:120px; height:103px; background:url(../../../images/classroom/template3/resp/default/exam_answer_n.png) no-repeat; z-index:10}
+
+.list_test .checkList , .list_test .radioList {margin:20px 20px 0}
+.list_test .textBox {margin:20px 0 0}
+
+.test_label {display:block; overflow:hidden; margin:0 0 7px}
+.test_label li {position:relative;float:left; margin:0 10px;font-size:16px;color:#666;}
+.test_label li:first-child {margin-left:0}
+.test_label li:before {content: "";position: absolute;top: 50%;left: -10px;width: 1px;height: 14px;margin: -6px 0 0;background-color: #d7d7d7;}
+.test_label li:first-child:before {display:none}
+
+
+/* EOD : 시험 - 팝업 */
+
+
+.calender_date .btn_right { position:absolute; top:0; right:0; }
+/* EOD : contentLayout */
+
+/* 팀프로젝트 */
+.btn_heading { position:relative; }
+.btn_heading .btn_sr_white { position:absolute; top:-8px; right:0; margin:0; }
+.btn_rights { text-align:right; margin:20px 0; }
+.btn_rights button { margin:0; }
+.team_txt_info { overflow:hidden; margin:10px 0 20px 0; }
+.team_txt_info .team_txt_infoL { float:left; margin:10px 0 0 0; position:relative; top:9px; min-height:30px; }
+.team_txt_info .team_txt_infoR { float:right; margin:10px 0 0 0; }
+.team_txt_info .team_txt_infoR button { transition:0.3s background ease; }
+.team_txt_info.type02 { margin:20px 0; position:relative; overflow:inherit; display:inline-block; width:100%; }
+.team_txt_info.type02 .team_txt_infoL { float:none; margin:0 155px 0 0; }
+.team_txt_info.type02 .team_txt_infoR { float:none; position:absolute; bottom:-12px; right:0; }
+
+.commentBox { position:relative; margin:50px 110px 0 0; }
+.commentBox textarea { height:40px; overflow:auto; }
+.commentBox button { position:absolute; top:0; right:-110px; height:60px; width:80px; padding:0; margin:0; }
+.commentList { margin:20px 0 0 0; }
+.commentList > li { margin:10px 0 0 0; border:1px solid #d7d7d7; }
+.commentList > li:first-child { margin:0; }
+.commentList li .info { overflow:hidden; padding:10px 30px; background:#f5f7f9; font-size:14px; }
+.commentList li .info ul { overflow:hidden; }
+.commentList li .info ul li { position:relative; float:left; margin:0 0 0 20px; }
+.commentList li .info ul li:before { content:''; position:absolute; top:5px; left:-10px; width:1px; height:10px; background:#d7d7d7; }
+.commentList li .info ul li:first-child { margin:0; }
+.commentList li .info ul li:first-child:before { display:none; }
+.commentList li .info ul.infoL { float:left;  color:#666; }
+.commentList li .info ul.infoR { float:right; margin:-1px 0 0 0; }
+.commentList li .info ul.infoR a { color:#1464d9; }
+.commentList li .txt { padding:20px 30px; }
+.commentList li .txt .editor_bot {margin-top: 10px; text-align: right;}
+.commentList li .txt .txt_area {margin: 0; padding: 0;}
+.commentList li .txt .file_area {margin-top: 20px; padding: 15px 0 0 0; border-bottom: 0; border-top: 1px solid #d7d7d7;}
+.commentList li .txt .fileBox {margin-top: 10px;}
+.commentList li .txt.modify { padding:10px 20px; }
+.commentList li .dep1 .txt {padding-left:40px}
+.commentList li .dep2 .txt {padding-left:50px}
+.commentList li .dep3 .txt {padding-left:60px}
+
+.team_add { display:table; width:100%; table-layout:fixed; }
+.team_add .tit { margin:0; padding:15px 20px; background:#f5f7f9; border-bottom:1px solid #d7d7d7; font-weight:500; }
+.team_add .team_add_L { display:table-cell; vertical-align:top; border:1px solid #d7d7d7; border-top:1px solid #555; }
+.team_add .team_add_C { display:table-cell; vertical-align:middle; width:60px; text-align:center; }
+.team_add .team_add_R { display:table-cell; vertical-align:top; border:1px solid #d7d7d7; border-top:1px solid #555; }
+
+.team_add_search { position:relative; padding:15px 20px; border-bottom:1px solid #d7d7d7; }
+.team_add_search span { position:absolute; top:22px; left:20px; font-weight:500; }
+.team_add_search button { position:absolute; top:15px; right:20px; width:70px; padding:0; }
+.team_add_search .search { margin:0 108px 0 48px; }
+.team_add_search .search input { width:100%; }
+
+.chk_team { padding:15px 20px; position:relative; }
+.chk_team.active { background:#f5f7f9; border-bottom:1px solid #d7d7d7; }
+.chk_team input[type="checkbox"] { top:50%; left:20px; margin:-6px 0 0 0; }
+.chk_team input[type="checkbox"] + label { padding:0 0 0 60px; line-height:28px; font-size:16px; }
+.chk_team input[type="checkbox"] + label:before { top:50%; margin:-15px 0 0 0; }
+
+.team_listBox { position:relative; overflow-x:hidden; overflow-y:auto; }
+.team_add_R .team_listBox { }
+.team_list {  }
+.team_list > li { border-bottom:1px solid #d7d7d7; }
+.team_list > li:last-child {  }
+.team_list > li:first-child {  }
+.team_listBox .noData { position:absolute; top:0; left:0; padding:0; }
+
+.team_add_btn01 { display:inline-block; width:40px; height:40px; border:1px solid #d8d8d8; border-radius:40px; background:url(../../../images/classroom/template3/resp/default/icon_team_list_right.png) no-repeat 56% 50%; transition:0.3s ease; }
+.team_add_btn02 { margin:5px 0 0 0; display:inline-block; width:40px; height:40px; border:1px solid #d8d8d8; border-radius:40px; background:url(../../../images/classroom/template3/resp/default/icon_team_list_left.png) no-repeat 45% 48%; transition:0.3s ease; }
+.team_add_btn01:hover, .team_add_btn02:hover { background-color:#f5f5f5; }
+
+
+
+/* 학습 창 */
+
+.learningContent {position:relative; margin:60px 0 0; transition: 0.3s ease all}
+.learningContent .learningBtnBox {position: absolute; top:10px; right:17px;}
+.learningContent .full_btn {display:block; width: 40px;  height: 40px; text-align: center; background-color: rgba(132,132,132,0.4);  border-radius: 50%;  position: relative;  z-index: 1; transition:0.3s ease all}
+.learningContent .icon_learning_menu {display: inline-block; width:12px; height:15px; margin: 13px 0 0; background:url('../../../images/classroom/template3/resp/default/icon_learning_menu.png') no-repeat;}
+.learning {position: relative; overflow: hidden; display: table; width: 100%; height:100%; background: #676767;}
+.learning .contents {display:table-cell; width:100%; height:100%; vertical-align:middle}
+
+.learning .videoArea {display: table; width:100%; height:100%; text-align: center}
+.learning .videoBox {display: table-cell; vertical-align: middle; height:100%}
+
+.learningHeader {position:fixed; top:0; left:0; width:100%; z-index: 10;}
+.learningHeader .title {position: relative;	height:60px; line-height:60px; background: #1d2430;}
+.learningHeader .title h2 {margin:0 360px 0 30px; font-size:24px; color: #ffffff; overflow: hidden; line-height:inherit; font-weight:400;}
+.learningHeader .title h2 span {text-overflow:ellipsis; white-space:nowrap; float:left; overflow:hidden; max-width:100%}
+.learningHeader .title_btnBox {position:absolute; top:0; bottom:0; right:8px;}
+.learningHeader .title_btnBox a {display: inline-block; position:relative; float:left; height:60px; margin:0; color:#ccc;  font-size: 18px; padding:0 11px; transition:0.3s all ease}
+.learningHeader .title_btnBox a:before , .learningHeader .title .title_btnBox button:before {content:""; position:absolute; top:50%; left:0; width:1px; height:18px; margin:-9px 0 0; background:#636a75;}
+.learningHeader .title_btnBox a:first-child {height: 46px; padding-top: 14px; font-size: 16px; text-align: left;  line-height: 1;}
+.learningHeader .title_btnBox a:first-child span {display: inline-block;vertical-align: middle;}
+.learningHeader .title_btnBox a:first-child:before {display:none}
+.learningHeader .title_btnBox a:hover {color:white}
+.learningHeader .title_btnBox span {vertical-align:middle}
+.learningHeader .title_btnBox .btnClose {position:relative; color:#ccc; font-size:18px; padding:0 30px}
+.learningHeader .icon_bell , .learning_menu .icon_bell {position:relative; display:inline-block; vertical-align:middle; width:19px; height:18px; margin:0 8px 0 0;  background:url('../../../images/classroom/template3/resp/default/icon_window_bell.png') no-repeat; transition:0.3s all ease}
+.learningHeader .icon_bell:after , .learning_menu .icon_bell:after {content:""; display:inline-block; position:absolute; top:0; left:0; width:19px; height:18px;  background:url('../../../images/classroom/template3/resp/default/icon_window_bell_light.png') no-repeat;}
+.learningHeader .icon_question {position:relative;display: inline-block;vertical-align: middle;width: 16px;height: 20px; margin:0 6px 0 0; box-sizing: border-box; background: url('../../../images/classroom/template3/resp/default/icon_book.png') no-repeat bottom; }
+.learningHeader .icon_question:after {content:"";position:absolute;left: 5px; top:0;width: 6px;height: 9px; background: url('../../../images/classroom/template3/resp/default/icon_question.png') no-repeat; transition:1s all ease;}
+.learningHeader .question_btn:hover .icon_question:after {transform: rotateY(360deg) scale(1.2); top:-2px}
+
+.learningHeader .title_btnBox .menu_error:hover .icon_bell:after , .learning_menu_Header a:hover .icon_bell:after {display:none}
+.learningHeader .title_btnBox .menu_error:hover .icon_bell:before , .learning_menu_Header a:hover .icon_bell:before {content:""; display:inline-block; position:absolute; top:0; left:0; width:19px; height:18px; background:url('../../../images/classroom/template3/resp/default/icon_window_bell_light_hover.png') no-repeat; animation:flash 1s infinite;}
+
+.learningHeader .icon_list {display:inline-block; vertical-align:middle; width:12px; height:12px; margin:0 6px 0 0;  background:url('../../../images/classroom/template3/resp/default/icon_window_list.png') no-repeat; transition:0.3s all ease}
+.learningHeader .icon_close {display:inline-block; vertical-align:middle; width:13px; height:13px; margin:0 0 2px; background:url('../../../images/classroom/template3/resp/default/icon_window_hd_close.png') no-repeat; transition:0.3s all ease}
+.learningHeader .icon_close:hover {background:url('../../../images/classroom/template3/resp/default/icon_window_hd_close_hover.png') no-repeat; transform: rotate(180deg);}
+.learning_menu  .icon_close {display:inline-block; vertical-align:middle; width:13px; height:13px; margin:0 8px 0 0;  background:url('../../../images/classroom/template3/resp/default/icon_window_close.png') no-repeat; transition:0.3s all ease}
+.learningHeader .title .title_btnBox .menu_error:hover .icon_bell {background:url('../../../images/classroom/template3/resp/default/icon_window_bell_hover.png') no-repeat;}
+.learningHeader .title .title_btnBox .menu_btn:hover .icon_list {background:url('../../../images/classroom/template3/resp/default/icon_window_list_hover.png') no-repeat;}
+
+@keyframes flash {
+
+  0% {
+
+    opacity:0;
+
+  }
+  100%{
+
+    opacity:1;
+
+  }
+
+}
+
+.learning_menu {background:#2c323b; position:fixed; top:0; bottom:0; right:-350px; width:350px; z-index:10; transition:0.3s all ease;}
+.learning_menu.active {right:0}
+.learning_menu_Header {height:59px; border-bottom:1px solid #1d2430; text-align:center;}
+.learning_menu_HeaderIn {display: inline-block; line-height: 59px;}
+.learning_menu_HeaderIn > li {float:left; position: relative; display:table-cell; vertical-align:middle; }
+.learning_menu_HeaderIn > li:before {content:""; position:absolute; top:50%; left:0; width:1px; height:18px; margin:-9px 0 0; background:#636a75;}
+.learning_menu_HeaderIn > li:first-child a {font-size: 16px; text-align: left;}
+.learning_menu_HeaderIn > li:first-child:before {display:none}
+.learning_menu_Header a {display:block; color:#ccc; font-size:18px; padding:0 15px; transition:0.3s all ease}
+.learning_menu_Header a:hover {color:white}
+.learning_menu_Header a span {display:inline-block; vertical-align:middle; line-height: 1;}
+.learning_menu_Header .menu_btn:hover .icon_close {transform: rotate(180deg)}
+.learning_menu_Header .menu_error:hover .icon_bell {background:url('../../../images/classroom/template3/resp/default/icon_window_bell_hover.png') no-repeat;}
+.learning_menu_Header .icon_question {position:relative;display: inline-block;vertical-align: middle;width: 16px;height: 20px; margin:0 8px 0 0; box-sizing: border-box; background: url('../../../images/classroom/template3/resp/default/icon_book.png') no-repeat bottom; }
+.learning_menu_Header .icon_question:after {content:"";position:absolute;left: 5px; top:0;width: 6px;height: 9px; background: url('../../../images/classroom/template3/resp/default/icon_question.png') no-repeat; transition:1s all ease;}
+.learning_menu_Header .question_btn:hover .icon_question:after {transform: rotateY(360deg) scale(1.2); top:-2px}
+
+.learning_menu_List {background: #2c323b; color:white; overflow:auto;}
+.learning_menu_List > li {border-bottom: 1px solid #1d2430;}
+.learning_menu_List table { width:100%; table-layout:fixed; border-spacing:0; }
+.learning_menu_List table tr td { padding:0; position:relative; }
+
+.learningBox {padding:30px; border-bottom:1px solid #49505a;}
+.learningBox .info {overflow:hidden}
+.learningBox .infoL {float:left}
+.learningBox .infoR {float:right}
+
+.learningBox .infoR .download .icon_memo {position:relative; display:inline-block; vertical-align:middle; width:22px; height:23px; background:url('../../../images/classroom/template3/resp/default/icon_window_memo.png') no-repeat;}
+.learningBox .infoR .download .icon_memo:before {content: "";	position: absolute;	top: 7px; left: 6px; width: 7px;	height: 2px; background-color: #747b85; transition:0.3s all ease;}
+.learningBox .infoR .download .icon_memo:after {content: ""; position: absolute; bottom: 6px; left: 6px; width: 10px; height: 2px;background-color: #747b85; transition:0.3s all ease;}
+.learningBox .infoR .download.active .icon_memo {background:url('../../../images/classroom/template3/resp/default/icon_window_memo_active.png') no-repeat;}
+.learningBox .infoR .download.active .icon_memo:before {background-color: white;}
+.learningBox .infoR .download.active .icon_memo:after {background-color: white;}
+.learningBox .infoR .download:hover .icon_memo:before {width:10px}
+.learningBox .infoR .download:hover .icon_memo:after {width:5px}
+
+.learningBox .infoR > a {float:left; margin:3px 0 0 10px;}
+.learningBox .infoR .icon_download {position:relative;display:inline-block;vertical-align: top;width:20px;height: 19px;background: url('../../../images/classroom/template3/resp/default/icon_download.png') no-repeat bottom;}
+.learningBox .infoR .icon_download:after {content: ""; display: inline-block; width:10px; height:16px; position:absolute; bottom:3px; left:5px; background:url('../../../images/classroom/template3/resp/default/icon_download_arrow.png') no-repeat; transition:0.3s all ease;}
+.learningBox .infoR > a.download:hover .icon_download:after {animation:down_move 1s infinite;}
+
+.learningBox .infoR .icon_tree_btn {position:relative;display:inline-block;vertical-align: top;width:19px;height:19px; border: 2px solid white;  border-radius: 50%; box-sizing: border-box;}
+.learningBox .infoR .icon_tree_btn:after {content: "";display: inline-block;width:9px;height:6px;position:absolute;top: 5px;left: 3px;background:url('../../../images/classroom/template3/resp/default/icon_tree_open_arrow.png') no-repeat; transition:0.3s all ease;}
+.learning_menu_List table tr.active .icon_tree_btn:after {transform:rotate(180deg); top:4px;}
+
+.learningBox .tit {display: block; line-height:1.3; font-size:20px; color:white; margin:10px 0 0}
+.learningBox .tit:hover {text-decoration:underline}
+.learningBox .le_class {display:inline-block; vertical-align:top; text-align:center; width:58px; height:23px; line-height:23px; margin:0 5px 0 0; border:1px solid #7d8692; color:white;}
+.learningBox .le_state {display:inline-block; vertical-align:top; width:82px; height:25px; line-height:25px; border-radius:3px; background-color:#0d7fa0; font-size:16px; text-align:center;}
+.learningBox .le_state.complete {background-color:#0d7fa0}
+.learningBox .le_state.ing {background-color:#eb6b64; font-weight: bold}
+.learningBox .le_state.wait {background-color:#747b85}
+
+.learning_dep2 {padding:11px 30px; background:#161c27; font-size:18px; position:relative;}
+.learning_dep2 .tit {position:relative; display:block; color:white; margin:0 40px 0 0; padding:0 0 0 30px; line-height:1.2; overflow:hidden}
+.learning_dep2 .tit:before {content:""; position:absolute; top:2px; left:0; display:inline-block; width:18px; height:18px; border-radius:50%; background-color:#747b85}
+.learning_dep2 .tit.complete:before {background-color:#0d7fa0;}
+.learning_dep2 .tit.ing:before {background-color:#eb6b64;}
+.learning_dep2 .tit.this:before {background-color:#eb6b64;}
+.learning_dep2 .tit.this:after {content:"";  position: absolute;  top: 6px;  left: 6px; border-top: 5px solid transparent;  border-bottom: 5px solid transparent;  border-left: 8px solid white;}
+
+/* .learning_dep2 .tit .tit_name {position:relative; overflow: hidden;	text-overflow: ellipsis; white-space: nowrap; float: left;max-width: 100%;} */
+.learning_dep2 .tit .tit_name {position:relative; overflow: hidden;	text-overflow: ellipsis; white-space: nowrap; float: left;max-width: 100%;}
+.learning_dep2 .tit .tit_name:before { content:''; position:absolute; bottom:0; right:0; width:0; height:1px; transition:width .6s cubic-bezier(0.51, 0.18, 0, 0.88) .1s; background:white;}
+.learning_dep2 .tit .tit_name:after { content:''; position:absolute; right:0; bottom:0; width:0; height:1px; transition:width .3s cubic-bezier(0.29, 0.18, 0.26, 0.83); background:white;}
+.learning_dep2 .tit .tit_name:hover:before, .learning_dep2 .tit .ellipsis:hover:after { width:100%; left:0; }
+
+.learning_dep2 .le_bookmark {position:absolute; top:6px; right:30px;}
+.learning_dep2 .le_bookmark:hover .icon_bookmark:before {animation:pen_move 1s;}
+.learning_dep2 .icon_bookmark {position:relative; display:inline-block; vertical-align:middle; width:18px; height:22px; background:url('../../../images/classroom/template3/resp/default/icon_window_bookmark.png') no-repeat;}
+.learning_dep2 .icon_bookmark:before {content:""; display:inline-block; position:absolute; top:1px; right:-7px; width:15px; height:15px; background:url('../../../images/classroom/template3/resp/default/icon_window_pen.png') no-repeat;}
+.learning_dep2 .le_bookmark.active .icon_bookmark {background:url('../../../images/classroom/template3/resp/default/icon_window_bookmark_active.png') no-repeat;}
+.learning_dep2 .le_bookmark.active .icon_bookmark:before {background:url('../../../images/classroom/template3/resp/default/icon_window_pen_active.png') no-repeat;}
+
+
+@keyframes down_move {
+
+  0% {
+    bottom:3px
+  }
+  15% {
+    bottom:4px
+  }
+  30% {
+    bottom:5px
+  }
+  50% {
+    bottom:6px
+  }
+  75% {
+    bottom:5px
+  }
+  85% {
+    bottom:4px
+  }
+  100% {
+    bottom:3px
+  }
+
+}
+
+
+@keyframes pen_move {
+
+  0% {
+    right:-7px;
+  }
+  25% {
+    right:-5px;
+  }
+  50% {
+    right:-7px;
+  }
+  75% {
+    right:-5px;
+  }
+  100% {
+    right:-7px;
+  }
+
+}
+
+.videoBtnBox {position: fixed; bottom: 0; left: 0; right: 0; width: 100%; text-align: center;  padding: 10px 0; z-index:9; background-color: white;}
+.videoPaging {background-color:#eb6b64; font-size:18px; color:white; display:inline-block; width:100px; height:40px; line-height:40px; margin:0 13px; border-radius:20px; vertical-align:middle}
+.videoPaging span {display:inline-block; vertical-align:middle}
+
+.btnVideoPrev {background:none; border: 0; height: auto; color:#2a3340; font-size:18px; font-style:italic; display:inline-block; vertical-align:middle}
+.btnVideoPrev .circle {position:relative; display:inline-block; vertical-align:middle; width:33px; height:33px; margin:0 5px 0 0; background-color:#2a3340; border-radius:50%}
+.btnVideoPrev .icon_prev_arrow {position: absolute; top: 50%; left: 50%; display: inline-block; vertical-align: middle; width: 17px; height: 15px; margin: -7px 0 0 -8px; background: url(../../../images/classroom/template3/resp/default/icon_window_prev.png) no-repeat; transition:0.3s all ease;}
+.btnVideoPrev:hover .icon_prev_arrow {animation:icon_prev_move 0.8s infinite;}
+.btnVideoPrev .txt {display:inline-block; vertical-align:middle}
+
+.btnVideoNext {background:none; border: 0; height: auto; color:#2a3340; font-size:18px; font-style:italic; display:inline-block; vertical-align:middle}
+.btnVideoNext .circle {position:relative; display:inline-block; vertical-align:middle; width:33px; height:33px; margin: 0 0 0 10px; background-color:#298ae5; border-radius:50%}
+.btnVideoNext .icon_next_arrow {position: absolute; top: 50%; left: 50%; display: inline-block; vertical-align: middle; width: 17px; height: 15px; margin: -7px 0 0 -8px; background: url(../../../images/classroom/template3/resp/default/icon_window_next.png) no-repeat;  transition:0.3s all ease;}
+.btnVideoNext:hover .icon_next_arrow {animation:icon_next_move 0.8s infinite;}
+.btnVideoNext .txt {display:inline-block; vertical-align:middle}
+
+@keyframes icon_prev_move {
+
+  0% {
+    margin: -7px 0 0 -8px;
+  }
+  50% {
+    margin:-7px 0 0 -10px
+  }
+  100% {
+    margin: -7px 0 0 -8px;
+  }
+
+}
+
+@keyframes icon_next_move {
+
+  0% {
+    margin: -7px 0 0 -8px;
+  }
+  50% {
+    margin:-7px 0 0 -6px
+  }
+  100% {
+    margin: -7px 0 0 -8px;
+  }
+
+}
+
+body.mob .learningHeader {top:-60px}
+body.mob .videoBtnBox {bottom:-60px}
+body.mob .learningContent .full_btn {transform: rotate(180deg)}
+body.mob .learningContent {margin:0}
+
+
+/* EOD : 학습 창 */
+
+
+/* EOD : 팀프로젝트 */
+
+
+/* otp */
+
+.certify {padding:0 0 120px}
+.certify + div {margin:-120px 0 0}
+
+.otpFrame {margin:30px 0 0;}
+.otpFrame .btnType05 {line-height:30px; padding:0}
+
+.otpBox {position:relative; margin:30px 0; text-align:center}
+.otpBox input[type="password"] {width:176px; height:48px; line-height:48px}
+.otpBox button {vertical-align:middle; margin:0; height:48px; line-height:48px}
+
+.otpBox  .hrdFrameKeyPad {top:55px;  left: 50%;  margin: 0 0 0 -156px;}
+.otpBox  .hrdFrameKeyPad table {width:300px}
+.otpBox  .hrdFrameKeyPad tbody tr {height:50px}
+.otpBox  .hrdFrameKeyPad tbody tr td {width:50px; height:50px}
+.otpBox  .hrdFrameKeyPad tbody tr td button , .otpBox  .hrdFrameKeyPad img {width:48px; height:48px}
+
+/* EOD : otp */
+
+/* 20-08-10 추가 */
+
+.label_s_red {display: inline-block; vertical-align: middle;  background-color: #e74c3c;  font-size: 16px; font-weight: 400; color: white;  padding: 4px;  line-height: 1;}
+.label_s_blue {display: inline-block; vertical-align: middle;  background-color: #1464d9;  font-size: 16px; font-weight: 400;  color: white;  padding: 4px;  line-height: 1;}
+.label_s_black {display: inline-block; vertical-align: middle;  background-color: #555;  font-size: 16px; font-weight: 400;  color: white;  padding: 4px;  line-height: 1;}
+
+.icon_like {display: inline-block; vertical-align:middle;  width: 21px;  height: 24px;  background: url("../../../images/classroom/template3/resp/default/icon_like.png") no-repeat;}
+
+.btn_like {display: inline-block;  min-width: 38px;  height: 48px;  line-height: 1;  background: white;  word-break: keep-all;  border: 1px solid #555;  padding: 0 20px;  text-align: center;  font-size: 16px; color: #222;  transition: 0.3s all ease; border-radius: 2px;}
+.btn_like:hover {background: #e9f8fa;}
+.btn_like .txt {display: inline-block; vertical-align: middle; margin:0 0 0 10px}
+.btn_like.active {border:1px solid #1464d9; background:#1464d9; color: white}
+.btn_like.active .icon_like { background: url("../../../images/classroom/template3/resp/default/icon_like_active.png") no-repeat;}
+.btn_like.active:hover {border-color: #082ca1; background: #082ca1;}
+
+.commentList li .reply {background-color: #fafbfc; border-top:1px dashed #d7d7d7}
+.commentList li .reply .info {background-color: #fafbfc}
+.commentList li .txt small {font-weight: 500}
+
+/* EOD : 20-08-10 추가 */
+
+/* 진도 */
+
+.round_List {position:relative}
+.round_List .download_btn {position: absolute;top:50%;right: 40px;margin:-11px 0 0;line-height:1;}
+.round_List .toggle_btn {position: absolute;top:50%;right: 10px;margin: -10px 0 0;line-height:1;}
+.round_List .round_name {position: relative; margin:0 70px 0 0}
+.round_List .round_name > a {word-break: break-all}
+.table_veti tr.active .round_List .icon , .order.active .oderC .icon {transform:rotate(180deg)}
+.table_veti tr.dep2 {display:none}
+
+/* EOD : 진도 */
+
+
+
+/* tablet */
+@media only all and (max-width: 1199px) and (min-width: 641px) { /* tablet */
+
+  /* topLayout */
+  .topLayout .topLayoutIn .topInfo { padding:0 15px; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu { display:block; float:left; line-height:1; margin:8px 0 0 0; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button { position:relative; width:20px; height:20px; padding:0; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button span { position:absolute; top:10px; left:0; width:20px; height:2px; background:#555; transition:0.333s ease; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button span:before { content:''; position:absolute; top:-7px; left:0; width:20px; height:2px; background:#333; transition:0.3s ease-in-out; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button span:after { content:''; position:absolute; top:7px; left:0; width:20px; height:2px; background:#333; transition:0.3s ease-in-out; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button:hover span { transform:scaleX(0.7); }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button:hover span:before, .topLayout .topLayoutIn .topInfo ul li.mobMenu button:hover span:after { transform:scaleX(1.3); }
+  .topLayout .topLayoutIn .topInfo ul li.exit { width:20px; height:20px; margin:9px 0 0 20px; border-right:none; line-height:1; }
+  .topLayout .topLayoutIn .topInfo ul li.exit a { width:20px; height:20px;  }
+  .topLayout .topLayoutIn .topInfo ul li.exit a span { display:none; }
+  .topLayout .topLayoutIn .topInfo ul li.exit a:before { left:0; top:0; }
+  .topLayout .topLayoutIn .topInfo ul li.exit a:after { left:0; top:0; }
+
+  .topLayout .topLayoutIn .learnInfo .learnInfoL { display:none; }
+
+  .nav_lnb { float:none; width:250px; position:absolute; top:0; left:-350px; height:100%; transition:0.5s left cubic-bezier(0.77,0.2,0.05,1.0); }
+  .nav_lnb .nav_lnb_wrap {overflow-y: auto; height: calc(100vh - 93px); padding-bottom: 30px; box-sizing: border-box; -webkit-overflow-scrolling: touch;}
+  .nav_lnb .tit { padding:30px 20px;}
+  .nav_lnb .tit button { position:absolute; top:20px; right:-50px; width:38px; height:38px; display:inline-block; border-radius:38px; background:url(../../../images/classroom/template3/resp/default/icon_mob_menu_close.png) no-repeat 50% 50% #25323e; padding:0; }
+
+  html.active .contentLayout .contentLayoutIn nav { left:0; }
+  html.active .topLayout .topLayoutBg { display:block; }
+  html.active .topLayout .topLayoutIn .topInfo ul li.mobMenu button span { transform:rotate(45deg); background:#fff; }
+  html.active .topLayout .topLayoutIn .topInfo ul li.mobMenu button span:before { transform:rotate(90deg); top:0; background:#fff; }
+  html.active .topLayout .topLayoutIn .topInfo ul li.mobMenu button span:after { transform:rotate(90deg); top:0; background:#fff;}
+
+  /* EOD : topLayout */
+
+  /* contentLayout */
+  .contentLayout .contentLayoutIn .contentArea { margin:0; padding:10px 15px; min-height:inherit; }
+  .idxList.layout_box .eod_layout02 > li .eod_layoutIn { min-height:inherit; }
+  .list_viewBox .noData { min-height:inherit; }
+
+  .calender_date { text-align:left; padding:0 40px 0 0; }
+
+  .prog_list > li { display:block; margin:2px 0 0 0; }
+  .prog_list > li:first-child { margin:0; }
+  .prog_list > li > a { display:table; table-layout:fixed; width:100%; margin:0; }
+  .prog_list > li > a .tit { display:table-cell; vertical-align:middle; width:192px; padding:0 10px 0 0}
+  .prog_list > li > a .titIn span { left:12px; }
+  .prog_list > li > a .titIn:before, .prog_list > li > a .titIn:after { right:12px; }
+  .prog_list > li > a:hover .tit:after { right:8px; }
+  .prog_list > li > a .prog_info { display:table-cell; height: 54px;  vertical-align: middle;border-bottom:none; border-right:1px solid #e74c3c;}
+  .prog_list > li > a .prog_info .txt01 { font-size:20px; }
+  .prog_list > li > a .prog_info .prog_infoBox { display:block; text-align:left; }
+
+  .prog_list > li.type02 > a .prog_info { border-bottom:none; border-right:1px solid #00b6e3}
+  .prog_list > li.type03 > a .prog_info { border-bottom:none; border-right:1px solid #00b6e3}
+  .prog_list > li.type04 > a .prog_info { border-bottom:none; border-right:1px solid #4475db}
+  .prog_list > li.type05 > a .prog_info { border-bottom:none; border-right:1px solid #4475db}
+  .prog_list > li.type06 > a .prog_info { border-bottom:none; border-right: 1px solid #4475db}
+  .prog_list > li.type07 > a .prog_info { border-bottom:none; border-right: 1px solid #00b6e3}
+
+  /* EOD : contentLayout */
+
+  /*.learning_menu {display: none}*/
+  .learningHeader .title h2 {margin:0 100px 0 30px}
+  /*.learningHeader .title_btnBox a {display: none}*/
+  .learningHeader .title_btnBox .menu_error,
+  .learningHeader .title_btnBox .question_btn {display: none;}
+  .learningHeader .title_btnBox .menu_btn span {overflow: hidden; position: absolute; width: 1px; height: 1px; margin: -1px; font-size: 1%; z-index: -9999; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%);}
+  .learningHeader .title_btnBox a.close_btn {display:block}
+  /*.learningHeader .title_btnBox a.close_btn:before {display: none}*/
+  .learningHeader .icon_list,
+  .learningHeader .icon_close {vertical-align: unset; margin: 0;}
+}
+
+/* mobile */
+@media only all and (max-width: 640px){ /* mobile */
+  /* topLayout */
+  .topLayout .topLayoutIn .topInfo { padding:0 15px; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu { display:block; float:left; line-height:1; margin:8px 0 0 0; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button { position:relative; width:20px; height:20px; padding:0; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button span { position:absolute; top:10px; left:0; width:20px; height:2px; background:#555; transition:0.333s ease; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button span:before { content:''; position:absolute; top:-7px; left:0; width:20px; height:2px; background:#333; transition:0.3s ease-in-out; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button span:after { content:''; position:absolute; top:7px; left:0; width:20px; height:2px; background:#333; transition:0.3s ease-in-out; }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button:hover span { transform:scaleX(0.7); }
+  .topLayout .topLayoutIn .topInfo ul li.mobMenu button:hover span:before, .topLayout .topLayoutIn .topInfo ul li.mobMenu button:hover span:after { transform:scaleX(1.3); }
+  .topLayout .topLayoutIn .topInfo ul li.exit { width:20px; height:20px; margin:9px 0 0 20px; border-right:none; line-height:1; }
+  .topLayout .topLayoutIn .topInfo ul li.exit a { width:20px; height:20px;  }
+  .topLayout .topLayoutIn .topInfo ul li.exit a span { display:none; }
+  .topLayout .topLayoutIn .topInfo ul li.exit a:before { left:0; top:0; }
+  .topLayout .topLayoutIn .topInfo ul li.exit a:after { left:0; top:0; }
+
+  .topLayout .topLayoutIn .learnInfo { display:block; width:inherit; padding:20px 15px; height:inherit; }
+  .topLayout .topLayoutIn .learnInfo .learnInfoL { display:none; }
+  .topLayout .topLayoutIn .learnInfo .learnInfoC { display:block; padding:0; }
+  .topLayout .topLayoutIn .learnInfo .learnInfoR { display:block; padding:15px 0 0 0; width:inherit; }
+  .topLayout .topLayoutIn .learnInfo .learnInfoR .btn_learning { position:static; padding:10px 0; width:100%; }
+  .topLayout .topLayoutIn .learnInfo .learnInfoR .date { display:none; }
+
+  .nav_lnb { float:none; width:250px; position:absolute; z-index:30; top:0; left:-350px; height:100%; padding-bottom: 0; transition:0.5s all cubic-bezier(0.77,0.2,0.05,1.0); }
+  .nav_lnb .nav_lnb_wrap {overflow-y: auto; height: calc(100vh - 93px); padding-bottom: 30px; box-sizing: border-box; -webkit-overflow-scrolling: touch;}
+  .nav_lnb .tit { padding:30px 20px;}
+  .nav_lnb .tit button { position:absolute; top:20px; right:-50px; width:38px; height:38px; display:inline-block; border-radius:38px; background:url(../../../images/classroom/template3/resp/default/icon_mob_menu_close.png) no-repeat 50% 50% #25323e; padding:0; }
+
+  html.active .contentLayout .contentLayoutIn nav { left:0; }
+  html.active .topLayout .topLayoutBg { display:block; }
+  html.active .topLayout .topLayoutIn .topInfo ul li.mobMenu button span { transform:rotate(45deg); background:#fff; }
+  html.active .topLayout .topLayoutIn .topInfo ul li.mobMenu button span:before { transform:rotate(90deg); top:0; background:#fff; }
+  html.active .topLayout .topLayoutIn .topInfo ul li.mobMenu button span:after { transform:rotate(90deg); top:0; background:#fff;}
+
+  /* EOD : topLayout */
+
+  /* contentLayout */
+  html { background:#ebeff2; }
+  .contentLayout .contentLayoutIn .contentArea { margin:0; min-height:inherit; }
+
+  .prog_list > li { display:block; margin:2px 0 0 0; }
+  .prog_list > li:first-child { margin:0; }
+  .prog_list > li > a { display:table; table-layout:fixed; width:100%; margin:0; }
+  .prog_list > li > a .tit { display:table-cell; vertical-align:middle; width:132px; padding:0 10px 0 0}
+  .prog_list > li > a .titIn {padding:0 10px 0 40px}
+  .prog_list > li > a .titIn span { left:12px; }
+  .prog_list > li > a .titIn:before, .prog_list > li > a .titIn:after { right:3px; }
+  .prog_list > li > a:hover .tit:after { right:8px; }
+  .prog_list > li > a .prog_info { display:table-cell; vertical-align: middle; height: 52px; border-bottom:none; border-right:1px solid #d04040}
+  .prog_list > li > a .prog_info .txt01 { font-size:20px; }
+  .prog_list > li > a .prog_info .prog_infoBox { display:block; text-align:left; }
+
+  .prog_list > li.type02 > a .prog_info { border-bottom:none; border-right:1px solid #0d7fa0}
+  .prog_list > li.type03 > a .prog_info { border-bottom:none; border-right:1px solid #448405}
+  .prog_list > li.type04 > a .prog_info { border-bottom:none; border-right:1px solid #3c5bb2}
+  .prog_list > li.type05 > a .prog_info { border-bottom:none; border-right:1px solid #86463d}
+  .prog_list > li.type06 > a .prog_info { border-bottom:none; border-right: 1px solid #5e45af}
+  .prog_list > li.type07 > a .prog_info { border-bottom:none; border-right: 1px solid #aa6412}
+
+  .idxList.layout_box .eod_layout02 > li .eod_layoutIn { min-height:inherit; }
+  .list_viewBox ul li a { padding:17px 10px 12px 10px; }
+  .list_viewBox ul li a .date { position:static; display:block; clear:both; }
+  .list_viewBox ul li a .icon_new { top:0; }
+  .icon_num { margin-top:-1px; }
+
+  .layout_boxs { padding:30px 15px; }
+  .layout_boxs .thumbBox .thumb { width:110px; }
+  .layout_boxs .thumbBox .infomation { padding:5px 0 5px 20px; }
+  .layout_boxs  .thumbBox .infomation .title { font-size:18px; margin:0 0 12px 0; }
+  .list_viewBox .noData { min-height:inherit; }
+  .calender_date { text-align:left; padding:0 40px 0 0; }
+
+  .table_block {border:0}
+  .table_block thead tr td {display:none}
+  .table_block tbody tr {display:block; margin:10px 0 0;  padding:0 0 15px; border: 1px solid #d7d7d7; border-top: 1px solid #555;}
+  .table_block tbody tr td:first-child {display:block; margin:0 0 15px; padding:10px; background:#f5f7f9; font-size:16px; line-height: 1.5; text-align:left !important; color:#0746c7; font-weight:500}
+  .table_block tbody tr td {display:block; border-top:0; border-left:0;padding: 5px 10px; text-align:left !important;line-height: 1;}
+  .table_block tbody tr td .mobBox {display: table;  table-layout: fixed;  width: 100%;  overflow: hidden; font-size: 14px}
+  .table_block tbody tr td .mob_boxL {display:table-cell; vertical-align:middle; width:65px;}
+  .table_block tbody tr td .mob_boxR {display: table-cell; vertical-align:middle; padding: 0 0 0 10px;}
+  .table_block tbody tr td .mob_boxR .txt_default {display: inline-block; vertical-align: middle;}
+  .table_block tbody tr td br {display:none}
+  .table_block tbody tr td:last-child {text-align:center !important;}
+  .table_block tr.active td:first-child { background:#f5f7f9 !important; }
+  .table_block .noData.tb {margin: -10px -10px -40px;}
+  .table_block.no_btn tbody tr td:last-child {text-align:left !important;}
+
+  .attend_selectBox > ul > li {margin:0 5px}
+
+  .table_block tbody tr td .mobBox.type02 .mob_boxL { width:82px; }
+  .table_block.type02 tbody tr td br { display:inherit; }
+  .table_block.type02 tbody tr td .mobBox { line-height:1.5; }
+
+  .table_block tbody tr td .mobBox.type03 .mob_boxL { width:82px; vertical-align:middle; }
+  .table_block tbody tr td .mobBox.type03 { line-height:1.5; }
+  .table_block tbody tr td .mobBox.type04 .mob_boxL { width:110px; }
+  .table_block .mobBox.type03 .w50 input { width:50px !important; }
+
+  /* 강의실 토론 */
+  .table_block.table-debate {min-width: auto;}
+  .table_block.table-debate tbody tr {padding: 0;}
+  .table_block.table-debate tbody tr td {padding: 0; border-top: 1px solid #d7d7d7;}
+  .table_block.table-debate tbody tr td .mob_boxR,
+  .table_block.table-debate tbody tr td .mob_boxL {height: 50px;}
+  .table_block.table-debate tbody tr td .mob_boxL {width: 125px; padding: 0 10px 0 15px; border-right: 1px solid #d7d7d7; box-sizing: border-box;}
+  .table_block.table-debate tbody tr td .mob_boxR {padding: 0 10px; box-sizing: border-box;}
+  .table_block.table-debate tbody tr td:first-child {margin-bottom: 0; border-top: 0; line-height: 1;}
+  .table_block.table-debate tbody tr td:first-child .mob_boxR {height: auto; padding: 15px;}
+  .table_block.table-debate tbody tr td:first-child .mob_boxR .txt_default {line-height: 1.5;}
+  .table_block.table-debate tbody tr td .mobBox.type02 .mob_boxL {width: 125px;}
+  .table_block.table-debate tbody tr td:last-child [class^=btn] {margin: 20px 0;}
+  .table_block.type03.table-debate .mob_boxR {padding-bottom: 0;}
+  .table_block.table-debate .mob_dash_list {padding: 15px;}
+  .table_block.table-debate .mob_dash_list li:before {top: 3px;}
+  .table_block.table-debate .mob_dash_list .link_arrow:after {top: 7px;}
+  .table_block.table-debate .mob_boxR .txt_default {display: inline-block;}
+
+  /* ie */
+  .table_block.table-debate tbody {overflow: hidden\0/;}
+  .table_block.table-debate tbody tr {overflow: hidden\0/; float: left\0/; width: 100%\0/; box-sizing: border-box\0/;}
+  .table_block.table-debate tbody tr td {float: left\0/; width: 100%\0/;}
+
+  /* 시험 - 팝업 */
+
+  .score_num {font-size:20px;}
+  .exam_scoreBox {font-size:16px}
+
+  /* EOD : 시험 - 팝업 */
+  .score_num, .score_num02, .score_num03 { font-size:16px; }
+  /* EOD : contentLayout */
+
+  /* 학습 창 */
+
+  .learningHeader .title h2 {margin:0 100px 0 20px; font-size:18px;}
+  /*.learning_menu {display: none}*/
+  .learningHeader .title h2 {margin:0 100px 0 20px; font-size:18px;}
+  /*.learningHeader .title_btnBox a {display: none}*/
+  .learningHeader .title_btnBox .menu_error,
+  .learningHeader .title_btnBox .question_btn {display: none;}
+  .learningHeader .title_btnBox .menu_btn span {overflow: hidden; position: absolute; width: 1px; height: 1px; margin: -1px; font-size: 1%; z-index: -9999; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%);}
+  .learningHeader .title_btnBox a.close_btn {display:block}
+  /*.learningHeader .title_btnBox a.close_btn:before {display: none}*/
+  .learningHeader .icon_list,
+  .learningHeader .icon_close {vertical-align: unset;margin: 0;}
+
+  .learningHeader .title .title_btnBox .icon_bell {margin:-8px 0 0}
+  .learningBox .infoR .download { top:21px; }
+  .videoBtnBox {position:static}
+  /*.learning_menu {position:static; width:100%; display: none}*/
+  .learning_menu_Header a:hover {color: #ccc }
+  .learning_menu_Header > li:first-child , .learning_menu_Header > li:before , .learning_menu .icon_close {display:none}
+  .learningBox {padding:20px}
+  .learningBox .tit {font-size:18px}
+  .learning_dep2 .tit:before {top:1px}
+  .learning_dep2 {padding:11px 20px}
+  .learning_dep2 .tit {font-size:16px}
+
+  /* EOD : 학습 창 */
+
+  /* 팀프로젝트 */
+  .mob_dash_list { overflow:hidden; }
+  .mob_dash_list li { position:relative; float:left; margin:0 0 0 20px; }
+  .mob_dash_list li:before { content:''; position:absolute; top:7px; left:-10px; width:1px; height:12px; background:#d7d7d7; }
+  .mob_dash_list li:first-child { margin:0; }
+  .mob_dash_list li:first-child:before { display:none; }
+  .mob_dash_list .link_arrow:after { top:11px; }
+  .mob_dash_list.type02 { overflow:inherit; display:inline-block; width:100%; }
+  .mob_dash_txt { color:#666; font-size:14px; font-weight:normal; }
+  .team_txt_info { overflow:inherit; }
+  .team_txt_info .team_txt_infoL { float:none; }
+  .team_txt_info .team_txt_infoR { overflow: hidden; display:block; float:none; margin:18px 0 0 0; }
+  .team_txt_info .team_txt_infoR button { font-size:14px; padding:0; float:left; width:44%; margin:0 0 0 2%; box-sizing: border-box}
+  .team_txt_info .team_txt_infoR button:first-child { margin:0; }
+  .team_txt_info .team_txt_infoR button:nth-child(2) { width:33%; }
+  .team_txt_info .team_txt_infoR button:nth-child(3) { width:19%; }
+  .team_txt_info.type02 { display:block; }
+  .team_txt_info.type02 .team_txt_infoL { margin:0; }
+  .team_txt_info.type02 .team_txt_infoR { position:static; text-align:right; }
+  .team_txt_info.type02 .team_txt_infoR button { width:inherit; padding:0 20px; position:static; float:none; }
+
+  .commentList li .info { padding:10px 15px; }
+  .commentList li .txt { padding:15px; font-size:14px; }
+  .commentList li .txt.modify { padding:10px 15px; }
+  .commentList li .dep1 .txt {padding-left:25px}
+  .commentList li .dep2 .txt {padding-left:35px}
+  .commentList li .dep3 .txt {padding-left:45px}
+  .commentBox { margin:30px 100px 0 0; }
+  .commentBox button { width:70px; height:70px; right:-100px; }
+  .commentBox textarea { font-size:14px; height:50px; }
+
+  .team_add {  }
+  .team_add .team_add_L { display:block; }
+  .team_add .team_add_C { display:block; width:inherit; padding:10px 0; }
+  .team_add_btn01 { background:url(../../../images/classroom/template3/resp/default/icon_team_list_down.png) no-repeat 46% 50%; }
+  .team_add_btn02 { margin:0 0 0 5px; background:url(../../../images/classroom/template3/resp/default/icon_team_list_up.png) no-repeat 50% 47%; }
+  .team_add .team_add_R { display:block; }
+  .team_listBox { height:225px !important; }
+  /* EOD : 팀프로젝트 */
+
+  /* 20-08-10 추가 */
+
+  .table_block.type03 .mob_boxR {padding: 0 0 5px}
+  .table_block tbody tr td.no_dataBox {position: relative;  text-align: center !important;  margin: 0;  padding: 20px 10px 10px;}
+  .table_block tbody tr td.no_dataBox:before {content: ""; position: absolute;  bottom: -15px;  left: 0; width: 100%; height: 15px;  background: #f5f7f9;}
+
+  /* EOD : 20-08-10 추가 */
+
+  .team_scroll .table_hori tbody tr {display:block}
+  .team_scroll .table_hori tbody tr th {display:block; border-width:1px 0; border-color: #e5e6e7; border-style: solid;}
+  .team_scroll .table_hori tbody tr th br {display: none}
+  .team_scroll .table_hori tbody tr td {display:block; border-top: 0;}
+  .team_label  .team_label_L {font-size: 13px; width:100px}
+
+}
+
+@media only all and (max-width: 350px) {
+  /* 학습창 */
+  .learning_menu {width: 100%;}
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>토론</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <!-- floatingBox -->
+                <div class="floatingBox">
+                    <div class="floatingBoxL"><h3 class="mt0">토론주제 정보</h3></div>
+                    <div class="floatingBoxR">
+                        <a href="lecture_debate.html" class="btn_sr_white mg0">토론주제 목록으로 이동</a>
+                    </div>
+                </div>
+                <!-- EOD : floatingBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_hori mob_block mt10">
+                        <caption>토론주제 , 토론유형 , 토론기간 , 내용 , 첨부파일 토론주제 정보 상세</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">토론주제</th>
+                            <td>토론주제입니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">토론유형</th>
+                            <td>찬반토론</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">토론기간</th>
+                            <td>2020-08-11 ~ 2020-08-20</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">내용</th>
+                            <td>
+                                토론주제에 대한 내용입니다.
+                                첨부파일도 있습니다.
+                                내용과 첨부파일을 참고하시고, 찬반 의견을 등록해주세요.
+
+                                등록하신 글의 내용과 참여도를 고려하여 평가에 반영되니, 신중하게 작성 부탁드립니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일</th>
+                            <td>
+                                <div class="file_area mt10">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">2020-04-11 YTN사이언스.png</a></li>
+                                        <li><a href="javascript:void(0);">2020-04-12 YTN사이언스.png</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- floatingBox -->
+                <div class="floatingBox mt20">
+                    <div class="floatingBoxL"><h3 class="mt0">참여 결과</h3></div>
+                </div>
+                <!-- EOD : floatingBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_hori mob_block mt0">
+                        <caption>게시글 , 댓글 , 점수 , 총평 참여 결과 상세</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">게시글</th>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">댓글</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">점수</th>
+                            <td>73점</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">총평</th>
+                            <td>
+                                참 잘했어요.
+                                참 잘했어요.
+                                참 잘했어요.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- floatingBox -->
+                <div class="floatingBox mt20">
+                    <div class="floatingBoxL"><h3>의견 게시판</h3></div>
+                </div>
+                <!-- EOD : floatingBox -->
+
+                <!-- viewBox -->
+                <div class="viewBox mt0">
+                    <div class="info_area">
+                        <div class="tit">
+                            반대합니다.
+                        </div>
+                        <ul class="info">
+                            <li><span class="vertiM">찬반여부</span><span class="label_s_blue ml5">반대</span></li>
+                            <li><span class="vertiM">등록자</span><span class="vertiM txt_black ml5">이학*</span></li>
+                            <li><span class="vertiM">등록일</span><span class="vertiM txt_black ml5">2020.04.13</span></li>
+                            <li><span class="vertiM">조회</span><span class="vertiM txt_black ml5">0</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="file_area">
+                        <ul>
+                            <li><a href="javascript:void(0);">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</a></li>
+                            <li><a href="javascript:void(0);">집합훈련 원격 대체 온라인 강의실2.zip [8259kb]</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- no_data ver -->
+                    <div class="file_area">
+                        <ul>
+                            <li><span class="no_data">첨부파일이 없습니다.</span></li>
+                        </ul>
+                    </div>
+                    <!-- EOD : no_data ver -->
+
+                    <div class="content_area">
+                        <p>저는 토론주제에 대해 반대합니다.</p>
+                        <p>그 이유는 반대하기 때문입니다.</p>
+                        <p>정말 반대합니다.</p>
+                        <p>반대해서 반대입니다. 다른 이유는 없습니다.</p>
+                    </div>
+                </div>
+                <!-- EOD : viewBox -->
+
+                <!-- btnBox -->
+                <div class="btnBox">
+                    <div class="leftBox">
+                        <button type="button" class="btn_like"><i class="icon_like"></i><span class="txt">좋아요 2</span></button>
+                        <button type="button" class="btn_like active"><i class="icon_like"></i><span class="txt">좋아요 3</span></button>
+                    </div>
+                    <div class="rightBox">
+                        <a href="lecture_debate.html" class="btn_m_blue">수정</a>
+                        <a href="lecture_debate.html" class="btn_m_blue">삭제</a>
+                        <a href="lecture_debate.html" class="btn_m_black">목록</a>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+                <!-- commentBox -->
+                <div class="commentBox">
+                    <div class="commentBoxIn">
+                        <textarea placeholder="댓글을 입력하세요."></textarea>
+                        <button class="btn_m_blue">등록</button>
+                    </div>
+                </div>
+                <!-- EOD : commentBox -->
+
+                <!-- commentBox -->
+                <div class="commentBox">
+                    <div class="commentBoxIn">
+                        <textarea placeholder="댓글을 입력하세요." disabled="disabled"></textarea>
+                        <button class="btn_m_blue">등록</button>
+                    </div>
+                </div>
+                <!-- EOD : commentBox -->
+
+
+                <!-- commentList -->
+                <ul class="commentList">
+                    <li>
+                        <!-- replyList -->
+                        <ul class="replyList">
+                            <li>
+                                <div class="info">
+                                    <ul class="infoL">
+                                        <li>이학*</li>
+                                        <li>2020.03.15 00:00:00</li>
+                                        <li><a href="javascript:void(0);" class="txt_blue01"><strong>댓글</strong></a></li>
+                                    </ul>
+                                </div>
+                                <div class="txt">너무 멋진 의견이라고 생각합니다~</div>
+                            </li>
+                            <li class="reply">
+                                <div class="info">
+                                    <ul class="infoL">
+                                        <li>나학*</li>
+                                        <li>2020.03.15 00:00:00</li>
+                                    </ul>
+                                    <ul class="infoR">
+                                        <li><a href="javascript:void(0);">수정</a></li>
+                                        <li><a href="javascript:void(0);">삭제</a></li>
+                                    </ul>
+                                </div>
+                                <div class="txt">저도 멋진 의견이라고 생각해요!!!</div>
+                            </li>
+                            <li class="reply">
+                                <div class="info">
+                                    <ul class="infoL">
+                                        <li>나학*</li>
+                                        <li>2020.03.15 00:00:00</li>
+                                    </ul>
+                                </div>
+                                <div class="txt modify">
+                                    <div class="commentBox mt0">
+                                        <div class="commentBoxIn">
+                                            <textarea>저도 멋진 의견이라고 생각해요!!!</textarea>
+                                            <button class="btn_m_blue">수정</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reply">
+                                <div class="info">
+                                    <ul class="infoL">
+                                        <li>박학*</li>
+                                        <li>2020.03.15 00:00:00</li>
+                                        <li><a href="javascript:void(0);" class="txt_blue01"><strong>댓글</strong></a></li>
+                                    </ul>
+                                </div>
+                                <div class="txt"><small class="txt_blue01">[나학 *]</small> 왜 멋진 의견이라고 생각하는지 알 수 있을까요?</div>
+                            </li>
+                            <!-- 첫번째 덧글 댑스 -->
+                            <li class="reply dep1">
+                                <div class="info">
+                                    <ul class="infoL">
+                                        <li>최김*</li>
+                                        <li>2020.03.15 00:00:00</li>
+                                        <li><a href="javascript:void(0);" class="txt_blue01"><strong>댓글</strong></a></li>
+                                    </ul>
+                                </div>
+                                <div class="txt"><small class="txt_blue01">[박학 *]</small> 댓글의 댓글 테스트</div>
+                            </li>
+                            <!-- EOD : 첫번째 덧글 댑스 -->
+                            <!-- 두번째 덧글 댑스 -->
+                            <li class="reply dep2">
+                                <div class="info">
+                                    <ul class="infoL">
+                                        <li>김모*</li>
+                                        <li>2020.03.15 00:00:00</li>
+                                        <li><a href="javascript:void(0);" class="txt_blue01"><strong>댓글</strong></a></li>
+                                    </ul>
+                                </div>
+                                <div class="txt"><small class="txt_blue01">[최김 *]</small> 댓글의 댓글의 댓글 테스트</div>
+                            </li>
+                            <!-- EOD : 두번째 덧글 댑스 -->
+                            <!-- 세번째 덧글 댑스 -->
+                            <li class="reply dep3">
+                                <div class="info">
+                                    <ul class="infoL">
+                                        <li>박학*</li>
+                                        <li>2020.03.15 00:00:00</li>
+                                        <li><a href="javascript:void(0);" class="txt_blue01"><strong>댓글</strong></a></li>
+                                    </ul>
+                                </div>
+                                <div class="txt"><small class="txt_blue01">[김모 *]</small> 댓글의 댓글의 댓글의 댓글 테스트</div>
+                            </li>
+                            <!-- EOD : 세번째 덧글 댑스 -->
+                            <li class="reply">
+                                <div class="txt modify">
+                                    <div class="commentBox mt0">
+                                        <div class="commentBoxIn">
+                                            <textarea>박학*님께 답글쓰기</textarea>
+                                            <button class="btn_m_blue">작성</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- EOD : replyList -->
+                    </li>
+                    <li>
+                        <!-- replyList -->
+                        <ul class="replyList">
+                            <li>
+                                <div class="info">
+                                    <ul class="infoL">
+                                        <li>장학생</li>
+                                        <li>2020.03.15 00:00:00</li>
+                                    </ul>
+                                    <ul class="infoR">
+                                        <li><a href="javascript:void(0);">수정</a></li>
+                                        <li><a href="javascript:void(0);">삭제</a></li>
+                                    </ul>
+                                </div>
+                                <div class="txt"> 저도 멋진 의견이라고 생각해요!!!</div>
+                            </li>
+                        </ul>
+                        <!-- EOD : replyList -->
+                    </li>
+                </ul>
+                <!-- EOD : commentList -->
+
+                <!-- moreBox -->
+                <div class="moreBox">
+                    <a href="javascript:void(0)" class="more_btn"><i class="icon_more"></i><span class="blind">더보기</span></a>
+                </div>
+                <!-- EOD : moreBox -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+</body>
+</html>

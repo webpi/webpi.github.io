@@ -1,0 +1,1099 @@
+/* 고객지원센터  */
+
+	/* FAQ */
+
+	.faq {margin:40px 0 0}
+	.faq_list li {border: 1px solid #d7d7d7;margin: 10px 0 0;}
+	.faq_list li:first-child {border-top: 1px solid #d7d7d7;margin: 0;}
+	.faq_list li .faqBox {padding: 10px; transition:0.45s ease;}
+	.faq_list li .faqBox > a {position:relative;display:block; padding:9px 50px; font-size: 16px;font-weight:400;transition:0.45s ease;line-height:1.3;}
+	.faq_list li .faqBox > a:before {content:'Q';position:absolute;top:50%;left: 20px;margin: -10px 0 0;text-align:center;font-weight:bold;font-size: 16px;}
+	.faq_list li .faqBox > a:after { content:''; position:absolute; top:50%; right:18px; margin:-5px 0 0 0; width:16px; height:9px; background:url(../../../images/template4/resp/default/icon/icon_faq_arrow.png) no-repeat; }
+	.faq_list li.active a { color:#026c8a; }
+	.faq_list li.active a:after { background:url(../../../images/template4/resp/default/icon/icon_faq_arrow_active.png) no-repeat; }
+	.faq_list li.active .faqBox > a {padding:9px 50px}
+	.faq_list li .faq_contents {display:none;position:relative;background: #f5f7f9; margin:9px 0 0; padding: 30px 30px 30px 50px;font-weight:400;font-size:16px;}
+	.faq_list li .faq_contents:after {content:'A';position:absolute;top:50%;left:22px; margin:-6px 0 0; text-align:center;color:#333;font-weight:bold;font-size: 16px;}
+	.faq_list li .faq_contents p { margin:5px 0; line-height:1.6; }
+	.faq_list li.no_data {background: #f5f7f9; text-align:center;  padding: 60px 15px; font-size: 18px; color: #222;}
+	.faq_list li.no_data .txt {margin:25px 0 0; line-height:1}
+
+	/* EOD : FAQ */
+
+/* EOD : 고객지원센터  */
+
+
+/* 마이페이지 */
+
+	/* 나의 홈 */
+
+	.myH_infoBox {display:table; width:100%; height:158px; margin:0 0 40px; border-top:1px solid #555555; border-bottom:1px solid #d7d7d7}
+	.myH_infoBoxL {display:table-cell; vertical-align:top; padding:40px; background-color:#f5f7f9}
+	.myH_infoBoxL .tit {font-size:18px; color:#222; margin:0 0 20px; line-height:1.4}
+	.myH_infoBoxL .tit strong {font-size:24px}
+	.myH_infoBoxL .tit .btn-step-go {display: inline-block; position: relative; height: 30px; margin-top: -5px; padding: 0 21px 0 10px; border: 1px solid #ccc; font-size: 14px; color: #0746c7; background: #fff; line-height: 28px; vertical-align: middle; border-radius: 2px; box-sizing: border-box;}
+	.myH_infoBoxL .tit .btn-step-go:after {content: ""; position: absolute; right: 10px; top: 50%; width: 6px; height: 11px; margin-top: -5px; background: url("../../../images/template11/resp/default/icon/icon_gt_small.png") no-repeat 0 0; transition: right .25s;}
+	.myH_infoBoxL .tit .btn-step-go:hover:after {right: 7px;}
+
+	.myH_infoBoxL .date {display:inline-block; margin:0 40px 0 0; font-size:16px}
+	.myH_infoBoxL .process {font-size:16px;}
+	.myH_infoBoxL .process .txt_point {display:inline-block; font-size:20px; font-weight:500; margin:0 0 0 10px}
+
+	.myH_infoBoxR {display:table-cell; vertical-align:top; width:320px; padding:20px 40px; background-color:#ebeff2}
+	.myH_infoBoxR .list_notice {margin:20px 0 0}
+	.myH_infoBoxR .list_notice > li {margin:15px 0 0}
+	.myH_infoBoxR .list_notice > li:first-child {margin:0}
+	.myH_infoBoxR .list_notice a {font-size:16px; color:#222; display:block; max-width:320px; transition:0.3s ease}
+	.myH_infoBoxR .list_notice a:hover {color:#026c8a;}
+
+	.table_rao {margin:25px 0 0; width: 100%; border-top: 1px solid #666; border-bottom:1px solid #d7d7d7; border-spacing: 0; border-collapse: collapse; line-height:1.3; }
+	.table_rao thead tr th {padding:20px 10px; background-color:#ebeff2; border-bottom: 1px solid #d7d7d7; color: #222; font-weight: 400; font-size: 16px; text-align: center;}
+	.table_rao tbody tr td {padding:10px 15px; color:#222; font-weight:500; background-color:white; text-align:center;  border-bottom:0; border-top:1px solid #d7d7d7}
+	.table_rao tbody tr td .txt {display:inline-block; color:#222; line-height:1.2; vertical-align: middle;}
+	.table_rao tbody tr:hover td {background:#f5f7f9;}
+	.table_rao tbody tr td button {margin:0}
+	.table_rao tbody tr td .mobBox {display:none}
+	.table_rao .txt_point {margin:3px 0 0}
+	.table_rao tbody tr.detail td {background-color:#f5f7f9; border-top:1px dashed #d7d7d7; position: relative; }
+	.table_rao tbody tr.detail td .txt {padding:0 0 0 35px}
+	.table_rao tbody tr.detail td .txt:before {content: ""; position: absolute; top: 0; bottom:-4px; left:26px; border-left: 1px dashed #a4a4a4;}
+	.table_rao tbody tr.detail td .txt:after {content: ""; position: absolute; top:50%; left:26px; width:13px; border-top:1px dashed #a4a4a4;}
+	.table_rao tbody tr.detail.last td .txt:before {height:30px}
+
+
+.processSlider {border:1px solid #d7d7d7; border-top:1px solid #555;  border-bottom: 0; margin:10px 0 0}
+	.processSlider .no_data {background: #f5f7f9; padding:80px 15px; font-size: 18px; color: #222; text-align:center}
+	.processSlider .no_data .txt {display:block; font-size:16px; font-weight:500; margin:30px 0 0; line-height:1.2}
+	.processSlider .no_data button {margin:10px 0 0}
+	.processSlider .slick-list .slick-track .slick-slide > div , .processSlider .slick-list .slick-track .slick-slide > div > div  {display:block !important}
+
+	.sub_content {margin:50px 0 0}
+	.sub_content > ul {overflow:hidden; margin:-50px 0 0 -60px}
+	.sub_content > ul > li {float:left; width:50%}
+	.sub_contentBox {margin:50px 0 0 60px; min-height: 400px}
+	.sub_contentBox .tit_area {margin:0}
+	.sub_contentBox .SliderBox {min-height:343px}
+	.sub_contentBox .pagination {margin:0; border:1px solid #d7d7d7; border-top:0;}
+	.sub_contentBox .pagination .paging {display:inline-block;line-height:40px;margin:10px 23px;}
+	.sub_contentBox .pagination .paging > li {display:none}
+	.sub_contentBox .pagination .paging > li.slick-active {display: inline-block;}
+	.sub_contentBox .pagination .paging > li > span {margin: 0px 7px; text-align: center;display: inline-block; color: #666; font-size: 16px;}
+	.sub_contentBox .pagination .paging > li > span.now_num {color:#0746c7}
+
+	.pagination .slick-dots {display:inline-block}
+	.pagination .slick-dots > li {float:left; margin: 5px 0 5px 10px;}
+	.pagination .slick-dots button {display: inline-block; background-color: White;	width: 38px;height: 38px;line-height: 38px;	color: #222;font-size: 16px; padding: 0; text-align: center;	vertical-align: middle;	border-radius: 50%;	transition: all 0.3s ease;	border: 1px solid #dddddd;}
+	.pagination .slick-dots li.slick-active button { background:#0746c7; color:#fff; }
+	.pagination .prevBtn {display:inline-block; width:40px; height:40px; background: url("../../../images/template4/resp/default/button/common_page_arrow.png") no-repeat 0 0; background-size:cover; margin:10px -4px 10px 0; padding:0; border:0; cursor:pointer; text-indent:100px; overflow:hidden;  vertical-align:top; transition:0.3s all ease}
+	.pagination .prevBtn:hover {background: url("../../../images/template4/resp/default/button/common_page_arrow_hover.png") no-repeat 0 0; background-size:cover;}
+	.pagination .nextBtn {display:inline-block; width:40px; height:40px; background: url("../../../images/template4/resp/default/button/common_page_arrow.png") no-repeat -40px 0; background-size:cover;  padding:0; border:0; margin:10px 0; cursor:pointer; text-indent:100px; overflow:hidden;  vertical-align:top; transition:0.3s all ease}
+	.pagination .nextBtn:hover {background: url("../../../images/template4/resp/default/button/common_page_arrow_hover.png") no-repeat -40px 0; background-size:cover;}
+	.pagination .prevBtn.slick-hidden , .pagination .nextBtn.slick-hidden {display:none}
+
+	.sub_contentBox .list_area {margin:10px 0 0; border-top:1px solid #222; min-height:300px}
+	.sub_contentBox .list_area .no_data {background: #f5f7f9; border:1px solid #d7d7d7; padding:80px 15px; font-size: 18px; color: #222; text-align:center}
+	.sub_contentBox .list_area .no_data .txt {display:block; font-size:16px; font-weight:500; margin:30px 0 0}
+	.sub_contentBox .listBox {position: relative;}
+	.sub_contentBox .listBoxIn {padding: 31px 20px 32px;border: 1px solid #d7d7d7;border-top: 0;}
+	.sub_contentBox .listBoxIn .txt {font-size: 18px;color:#222; line-height: 1.2;margin: 0 110px 0 0;}
+	.sub_contentBox .listBoxIn .txt > a {display:block}
+	.sub_contentBox .listBoxIn .label_gray {display:inline-block; font-size:14px; background-color:#555; color:white; padding:4px 5px; border:1px solid #555; position:absolute; top:50%; margin:-12px 0 0}
+	.sub_contentBox .listBoxIn .label_white {display:inline-block; font-size:14px; background-color:white; color:#666; padding:4px 5px; border:1px solid #d7d7d7; position:absolute; top:50%; margin:-12px 0 0}
+	.sub_contentBox .listBoxIn a.txt:hover{color: #0746c7; text-decoration: underline;}
+	.sub_contentBox .listBoxIn .txtBox {margin:0 0 0 75px; display: block; min-height: 21px;}
+	.sub_contentBox .listBoxIn .txtBox a {display:block;font-size:18px;color:#222;font-weight:bold;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;}
+	.sub_contentBox .listBoxIn .txtBox a:hover {color: #0746c7; text-decoration: underline;}
+	.sub_contentBox .listBoxIn .txtBox a span {display:inline-block; float:left; line-height:1.2}
+	.sub_contentBox .listBox > button , .sub_content .sub_contentBox .listBox > a {position:absolute;top:50%;right: 20px;margin: -21px 0 0;}
+
+		.infoBox {padding:20px; text-align:left;}
+		.infoBox > .tit {display: inline-block;	font-size: 24px; color: #222; margin:0; font-weight: bold; white-space: nowrap; overflow: hidden;	text-overflow: ellipsis; max-width: 100%;}
+		.infoBox.type02 {padding:20px 20px 53px;}
+
+		.txt_period {margin:3px 0 0; color:#0746c7}
+
+		.infoList {margin:15px 0 0}
+		.infoList .dataBox {font-size:16px; overflow:hidden}
+		.infoList .dataBox .label {display:inline-block; font-weight:bold; color:#222; margin:0 10px 0 0}
+		.infoList .dataBox .data {color:#0746c7}
+		.infoList .dataBox + .dataBox {margin:7px 0 0}
+		.infoList .dataBox .leftBox {float:left}
+		.infoList .dataBox .rightBox {float:right}
+		.infoList .dataBox .rightBox .txt_point {font-size:20px; font-weight:600}
+
+		.slick-slide .grayBox {position:relative; height:164px; padding:0 20px 20px; overflow: auto;}
+		.slick-slide .grayBox:after {content:""; position:absolute; top:20px; left:0; width:100%; bottom:0; background-color:#f5f7f9; z-index:-1;}
+		.slick-slide .grayBox > table {margin:0}
+		.slick-slide .grayBox.type02 {padding:20px; height:auto}
+		.slick-slide .grayBox.type02:after {top:0}
+		.slick-slide .grayBox.type03 {margin:38px 0 0;	padding: 40px 20px 20px; height: auto;}
+
+		/* EOD : 나의 홈 */
+
+		/* 학습자 학습현황 */
+
+			/* 일괄 시험점수 등록 팝업 */
+
+			input[type="number"].score_input {width:56px; margin:0 5px 0 0}
+
+
+			.excel_grayBox {background-color:#f7f7f7;padding:25px 40px;text-align: center;}
+			.excel_findBox {display:inline-block; position:relative}
+			.excel_findBox .label {position:absolute; top:0; left:0; line-height:40px}
+			.excel_findBoxIn {margin:0 0 0 110px}
+			.excel_findBoxIn button {vertical-align:middle; margin:2px 0}
+
+			.filebox {position:relative; display:inline-block; vertical-align:middle;}
+			.filebox input[type="file"] {position: absolute; width: 1px;height: 1px;padding: 0;	margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
+			.filebox label {display: inline-block; cursor:pointer; vertical-align:middle;min-width: 38px; height: 38px;	line-height: 38px;	background: #0746c7;border: 1px solid #0746c7;	margin: 2px 0;
+				padding: 0 20px;text-align: center;	font-size: 16px;color: white;	transition: 0.3s all ease;}
+			.filebox .upload_name {width:192px;	background-color: white; vertical-align: middle;display: inline-block; margin: 2px 0;}
+
+
+			.excel_findBoxIn .fileList .btn_s_blue {margin:5px 11px 5px 0; float:left}
+			.excel_findBoxIn .fileList {display:inline-block; vertical-align:top}
+			.excel_findBoxIn .fileList > li {float:left; margin:5px 5px 5px 0}
+			.excel_findBoxIn .fileList .file {position:relative; background-color:white; border:1px solid #555; padding:6px 30px 6px 10px}
+			.excel_findBoxIn .fileList .file_del {position:absolute; top:50%; right:9px; display: inline-block; width:11px; height:11px; margin:-5px 0 0; background: url(../../../images/template4/resp/default/icon/icon_close_black.png) no-repeat;}
+
+			.excel_textBoxIn {position:relative; max-width:660px; display:inline-block; width:100%; text-align:left; margin:20px 0 0}
+			.excel_textBoxIn button {position:absolute; top:0; right:0; margin:0}
+			.excel_textBoxIn .txt_alert {font-weight:bold}
+			.excel_textBoxIn .txt_default {margin-left:40px}
+
+
+			/* EOD : 일괄 시험점수 등록 팝업 */
+
+
+			/* 총점 팝업 */
+
+			.attendBox {margin:20px 0;}
+			.attendBox ul {display:inline-block}
+			.attendBox ul li {float:left; margin:0 20px 0 0}
+			.attendBox .label {font-size:16px; color:#222; font-weight:500; margin:0 5px 0 0}
+			.attendBox .txt_point {font-size:20px; color:#0746c7}
+
+			.calender_date {position:relative; overflow:hidden; min-height:40px; margin: 40px 0 0; text-align:center; }
+			.calender_date p { display:inline-block; vertical-align:middle; margin:0 25px; font-size:24px; color:#222; font-weight:500; }
+			.calender_date button { display:inline-block; vertical-align:middle;}
+
+			.table_normal.cal { table-layout:fixed; border:1px solid #d7d7d7; border-top: 1px solid #555; margin:0}
+			.table_normal.cal thead tr th {border-left: 1px solid #d7d7d7;border-top: 0;font-weight:500;}
+			.table_normal.cal tbody tr td { position:relative; padding:0; border-left:none; border-bottom:1px solid #d7d7d7; text-align:center; vertical-align:top}
+			.table_normal.cal tbody tr td:before {content:""; position:absolute; top:0; right:-1px; bottom:0; border-right:1px solid #d7d7d7; z-index:1;}
+			.table_normal.cal tbody tr td .Box {display:block; position:relative; height:24px; padding:32px 0 24px;}
+			.table_normal.cal tbody tr td .Box.bg_gray {background:#f4f4f4}
+			.table_normal.cal tbody tr td .Box.active {background-color:#e9f8fa;}
+			.table_normal.cal tbody tr td .Box.active:before {content: ""; position: absolute; top: -1px; bottom: -1px; left:0; right: -1px; border: 2px solid #0746c7; z-index: 1;}
+			.table_normal.cal tbody tr:hover td {background:none}
+			.table_normal.cal thead tr:first-child th:first-child {border-left: 0;}
+			.table_normal.cal tbody tr:last-child td {border-bottom:0}
+			.table_normal.cal tbody tr td:last-child:before {display:none}
+			.table_normal.cal tbody tr:last-child td:before {display:block}
+			.table_normal.cal .dateNo { position:absolute; top: 6px; right: 14px; color:#222; font-weight:500}
+			.table_normal.cal .dateNo.txt_red {color:#c12121}
+			.table_normal.cal .dateNo.txt_blue {color:#2f4c9b}
+			.table_normal.cal .label_red {display:inline-block; background:#d04040; width:38px; height:24px; color:white; font-size:16px;}
+			.table_normal.cal .label_blue {display:inline-block; background:#0746c7; width:38px; height:24px; color:white; font-size:16px;}
+			.table_normal.cal .label_green {display:inline-block; background:#448405; width:38px; height:24px; color:white; font-size:16px;}
+			.table_normal.cal .label_black {display:inline-block; background:#555555; width:38px; height:24px; color:white; font-size:16px;}
+
+			.total_radio_group {margin:30px 0 0}
+			.total_radio_group > ul > li {margin:10px 0 0}
+			.total_radio_group .groupBox {border:1px solid #d7d7d7; border-top:1px solid #555555}
+			.total_radio_group .tit {background:#f5f7f9; font-size:16px; font-weight:500; color:#222; padding:20px;}
+			.total_radio_group .contentBox {padding: 5px 20px;}
+			.total_radio_group .contentBox .radioList {display:inline-block;vertical-align:middle;margin: 0 0 5px;}
+			.total_radio_group .contentBox .txtBox {display:inline-block;vertical-align:middle;margin: 5px 0;}
+			.total_radio_group .contentBox .txtBox input[type="text"] {width:160px}
+			.total_radio_group .contentBox .txtBox .label {display:inline-block; vertical-align:middle; margin:0 10px 0 0; font-size:16px; color:#666;}
+			.total_radio_group .contentBox .txtBox button {margin:0; vertical-align:middle}
+
+			/* EOD : 총점 팝업 */
+
+
+
+			/* sms 팝업 */
+
+			.smsBox {position:relative; min-height:480px}
+			.smsBox .smsBoxL {margin:0 350px 0 0}
+			.smsBox .smsBoxL .sendBox {display:block; height: 312px; padding: 13px 10px; margin: 10px 0; border: 1px solid #a4a4a4; overflow: auto;}
+			.smsBox .smsBoxL .sendBox > li {position:relative}
+			.smsBox .smsBoxL .sendBox > li > span {display:block; margin:0 25px 0 0}
+			.smsBox .smsBoxL .sendBox .btn_del {display:inline-block; position:absolute; top: 50%; right: 9px; margin: -8px 0 0; line-height:1}
+			.smsBox .smsBoxL .sendBox .icon_close {	display: inline-block;	width: 11px; height: 11px;	 background: url(../../../images/template4/resp/default/icon/icon_close_black.png) no-repeat;}
+			.smsBox .smsBoxL .txt_default {margin:10px 0 15px}
+			.smsBox .smsBoxL .txt_point {font-size:20px}
+			.smsBox .smsBoxR {position:absolute; top:0; right:0;}
+			.smsBox .smsBoxR .sms_phone {display: inline-block; width:310px; height:480px; background:url("../../../images/template4/resp/default/bg/bg_phone.png") no-repeat; background-size:cover}
+			.smsBox .smsBoxR .sms_phoneIn {margin:80px 20px 0}
+			.smsBox .smsBoxR .sms_phoneIn button {width:100%; margin:10px 0 0; padding:0; border:0; border-radius:4px}
+			.smsBox .smsBoxR .textBox {background-color:white;border-radius:10px;height:285px;padding:10px}
+			.smsBox .smsBoxR .textBox textarea {border:0;height: 230px;}
+			.smsBox .smsBoxR .textCount {font-size:16px; color:#333; letter-spacing: -1px; margin:0 10px 0 0}
+			.smsBox .smsBoxR .textCount small {font-size:13px}
+
+			/* EOD : sms 팝업 */
+
+			/* 이메일 발송 팝업 */
+
+			.perBox {white-space:nowrap}
+			.perBox .count_num {color:#0746c7}
+			.perBox .count_num:before {content:"("}
+			.perBox .count_num:after {content:")"}
+
+			.list_person {overflow:hidden; margin:0 0 5px -5px}
+			.list_person > li {float:left; margin:5px 0 0 5px}
+
+			.list_person .person {position:relative;background-color:white;border:1px solid #555;padding: 6px 40px 6px 10px;}
+			.list_person .per_del {position:absolute;top:50%;right: 10px;display: inline-block;width:11px;height:11px;margin:-5px 0 0;background: url(../../../images/template4/resp/default/icon/icon_close_black.png) no-repeat;}
+
+			/* EOD : 이메일 발송 팝업  */
+
+		/* EOD : 학습자 학습현황 */
+
+		/* 나의 학습 */
+
+		.ThumBox {position:relative;}
+		.ThumBox .infoBox {margin:0 0 0 210px; min-height:110px; text-align:left}
+		.ThumBox .dayBox {position: absolute;top:-5px;left: -5px;color: white;background-color: #555;font-size: 16px;z-index: 1; display: inline-block;	padding: 2px 4px;}
+		.ThumBox .imgBox {position:absolute; top:0px; left:0; width:188px; height:108px; overflow:hidden; border:1px solid #d7d7d7}
+		.ThumBox .txtBox .label {font-size:14px; color:#0746c7; margin:0}
+		.ThumBox .txtBox .tit {display:inline-block; display: -webkit-box;-webkit-box-orient: vertical; line-height:1.2; font-size:18px; font-weight:500; color:#222; margin:5px 0 0; max-height:41px; overflow: hidden; word-break:break-all; text-overflow: ellipsis; -webkit-line-clamp: 2;}
+		.ThumBox .txtBox a.tit:hover {color:#0746c7; text-decoration:underline}
+		.ThumBox .tag {overflow:hidden; max-height:55px; margin:5px 0 0}
+		.ThumBox .tag > li {float:left; margin:2px 5px 0 0}
+		.ThumBox .tag > li span {display:inline-block; font-size:14px; color:#666; padding:2px 5px; background-color:white; border:1px solid #d7d7d7; overflow:hidden; white-space:nowrap}
+		.ThumBox .tag > li span:before {content:"#"}
+		.ThumBox .likeBox {margin:20px 0 0;}
+		.ThumBox .likeBox .icon_heart {display:inline-block; width:16px; height:15px; margin:0 7px 0 0; background:url("../../../images/template4/resp/blue/icon/icon_heart.png") no-repeat}
+		.ThumBox .likeBox span {font-size:18px; color:#0746c7; font-weight:bold; vertical-align:bottom}
+
+		.table_detail tr.detail td {background:#f5f7f9}
+		.table_detail tr.detail .ThumBox:before {content:""; position:absolute; top:-18px; left:20px; bottom:-18px; border-left:1px dashed #a4a4a4}
+		.table_detail tr.detail .ThumBox:after {content:""; position:absolute; top:34px; left:20px; width:30px; border-top:1px dashed #a4a4a4}
+		/* .table_detail tr.detail.first .ThumBox:before {top:-37px} */
+		.table_detail tr.detail.last .ThumBox:before {bottom:auto; height:52px;}
+		.table_detail tr.detail .ThumBox .infoBox {margin:0 0 0 75px}
+
+		.progressWrap {min-width:120px}
+		.progressWrap .progressPer .text:after {content:"%"}
+		.progressWrap .progressPer .num {font-size:20px; color:#0746c7}
+		.progressWrap .progressBar {margin:15px 0 0}
+		.progressWrap .progressBarIn {position:relative}
+		.progressWrap .progressBarIn:after {content:""; position:absolute; top:3px; left:0; width:100%; height:6px; background-color:#d7d7d7; border-radius:4px}
+		.progressWrap .progressBarIn .bar {position: absolute; top: 0; bottom: 0; left: 0; width:0; height:12px; border-radius:6px; background-color:#0746c7; z-index: 2;}
+
+		.blockTable {display:table; width:100%; text-align:left; font-size:14px;}
+		.blockTable .tr {display:table-row}
+		.blockTable .th {display:table-cell; vertical-align:middle; padding:4px 10px 4px 0; font-weight:bold; white-space:nowrap}
+		.blockTable .td {display:table-cell; vertical-align:middle; word-break: break-word; width:100%; padding:4px 0}
+		.blockTable .icon_heart {display: inline-block;width: 16px;height: 15px;	margin: 0 7px 0 0;background: url(../../../images/template4/resp/blue/icon/icon_heart.png) no-repeat}
+
+
+		/* EOD : 나의 학습 */
+
+		/* 학습메모/북마크 */
+
+		.Listinfo {overflow:hidden; text-align:left; font-size:16px}
+		.Listinfo > li:first-child {margin:0}
+		.Listinfo > li {margin:10px 0 0}
+
+		/* EOD : 학습메모/북마크 */
+
+		/* 교재 배송현황 */
+
+		.ThumBox .infoBox.vertical {display:table}
+		.ThumBox .infoBox.vertical .txtBox {display:table-cell; height:100%; vertical-align:middle}
+		.ThumBox .infoBox.vertical .txtBox .tit {margin:0}
+
+		/* EOD : 교재 배송현황 */
+
+		/* 나의 설문 */
+
+			/* 목록 */
+
+			.list_survey > ul {overflow:hidden; margin:-40px 0 0 -40px;}
+			.list_survey > ul > li {float:left; width:50%; min-height: 318px;}
+			.list_survey .surveyBox {margin:40px 0 0 40px; border:1px solid #d7d7d7; border-top:1px solid #555}
+			.list_survey .surveyHeader {position:relative; padding:18px 19px; background-color:#f5f7f9}
+			.list_survey .surveyHeader .labelBox {position: absolute;top: 50%; left: 19px;margin: -9px 0 0;}
+			.list_survey .surveyHeader .titBox {margin: 0 0 0 50px;}
+			.list_survey .surveyHeader .tit {font-size:18px;color:#222;font-weight:bold;line-height: 1.2;display:inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;}
+
+			.list_survey .surveyContent {padding:19px; background-color:white; max-height: 180px;}
+			.list_survey .surveyContent .content {font-size: 16px;color: #666;line-height: 1.5; margin: 0 0 10px; display: -webkit-box;max-height: 50px;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 2; word-break: break-all;}
+			.list_survey .surveyContent .blockTable {font-size:16px;}
+			.list_survey .surveyContent .blockTable .th {padding:6px 18px 6px 0}
+			.list_survey .surveyContent .blockTable .td {padding:6px 0}
+			.list_survey .surveyContent .blockTable .td .txt_green {font-weight:bold}
+			.list_survey .surveyContent .btnBox {margin: 20px 0 0;}
+			.list_survey .surveyContent .btnBox button {width:100%; margin:0; padding:0; box-sizing:border-box}
+
+			.list_survey .surveyBox.comp .surveyHeader {background-color:#ebeff2}
+			.list_survey .surveyBox.comp .surveyContent {background-color:#f5f7f9}
+			.list_survey > ul > li.no_data {width:100%; margin:40px 0 0}
+			.list_survey > ul > li.no_data .no_dataBox {background: #f5f7f9; border:1px solid #d7d7d7; padding:97px 15px; margin:0 0 0 40px; font-size: 18px; color: #222; text-align:center}
+			.list_survey > ul > li.no_data .no_dataBox .txt {display:block; font-size:16px; font-weight:500; margin:30px 0 0}
+
+			/* EOD : 목록 */
+
+			/* 팝업 */
+
+			.list_test {margin:30px 0 0; border-bottom:1px solid #d7d7d7}
+			.list_test > li {position:relative; padding:20px 0 30px; overflow:hidden; border-top:1px solid #d7d7d7;}
+			.list_test > li .txt_num {margin-top:0; line-height:normal; padding:0;}
+			.list_test > li .txt_num .num {position: static; display:table-cell; vertical-align:top; white-space:nowrap; text-align:center}
+			.list_test > li .txt_num .txt {display:table-cell; vertical-align:top; padding:0 0 0 5px}
+			.list_test > li .txt_num .txt p {display:inline-block; line-height:1.5 !important; font-size:16px !important; margin:0 10px 0 0}
+			.list_test > li .txt_num img {display:block; margin:20px 0 0; max-width:95%; border:1px solid #d7d7d7}
+			.list_test > li .txt_num pre {display:inline-block; margin:0; white-space: inherit;}
+			.list_test > li.answerOk:before {content:""; position:absolute; top:20px; left:0; display:inline-block; width:120px; height:92px; background:url(../../../images/template4/resp/default/usr/exam_answer_o.png) no-repeat; z-index:10}
+			.list_test > li.answerNo:before {content:""; position:absolute; top:20px; left:0; display:inline-block; width:120px; height:103px; background:url(../../../images/template4/resp/default/usr/exam_answer_n.png) no-repeat; z-index:10}
+
+			.list_test .checkList , .list_test .radioList {margin:20px 20px 0}
+			.list_test .textBox {margin:20px 0 0}
+
+			.test_label {display:block; overflow:hidden; margin:0 0 7px}
+			.test_label li {position:relative;float:left; margin:0 10px;font-size:16px;color:#666;}
+			.test_label li:first-child {margin-left:0}
+			.test_label li:before {content: "";position: absolute;top: 50%;left: -10px;width: 1px;height: 14px;margin: -6px 0 0;background-color: #d7d7d7;}
+			.test_label li:first-child:before {display:none}
+
+			/* EOD : 팝업 */
+
+		/* EOD : 나의 설문 */
+
+		/* 훈련비 결제내역 */
+
+
+		.date_searchBox {background-color:#f5f7f9;padding:20px 40px;overflow:hidden;border-top: 1px solid #555555;border-bottom: 1px solid #d7d7d7;}
+		.date_searchBoxIn .label {float:left; margin:0 20px 0 0; line-height:40px; font-size:16px;color:#222;font-weight:500;}
+		.date_searchBoxIn .radioList {float:left; margin:-5px 0 0;}
+
+		.content_Listed {overflow:hidden}
+		.content_Listed > li {float:left; margin:5px 40px 5px 0}
+
+		.dateBox {display:inline-block;vertical-align:middle;}
+		.dateBoxIn {display:table; table-layout:fixed; max-width:320px}
+		.dateBoxIn .inputBox {display:table-cell; vertical-align:middle;}
+		.dateBoxIn .inputBox input {padding:0}
+
+		.datepickerBox {display:inline-block; width:154px}
+
+		.wave {width: 20px; height: 40px; line-height: 40px; font-size: 16px; text-align: center;}
+
+
+
+/* EDO :  훈련비 결제내역 */
+
+/* 학습 문의 */
+
+/* 학습문의 */
+
+.commentBox { position:relative; margin:50px 110px 0 0; }
+.commentBox textarea { height:40px; overflow:auto; }
+.commentBox button { position:absolute; top:0; right:-110px; height:60px; width:80px; padding:0; margin:0; }
+.commentList { margin:20px 0 0 0; }
+.commentList > li { margin:10px 0 0 0; border:1px solid #d7d7d7; }
+.commentList > li:first-child { margin:0; }
+.commentList li .info { overflow:hidden; padding:10px 30px; background:#f5f7f9; font-size:14px; }
+.commentList li .info ul { overflow:hidden; }
+.commentList li .info ul li { position:relative; float:left; margin:0 0 0 20px; }
+.commentList li .info ul li:before { content:''; position:absolute; top:5px; left:-10px; width:1px; height:10px; background:#d7d7d7; }
+.commentList li .info ul li:first-child { margin:0; }
+.commentList li .info ul li:first-child:before { display:none; }
+.commentList li .info ul.infoL { float:left;  color:#666; }
+.commentList li .info ul.infoR { float:right; margin:-1px 0 0 0; }
+.commentList li .info ul.infoR a { color:#026c8a; }
+.commentList li .txt { padding:20px 30px; }
+.commentList li .txt .editor_bot {margin-top: 10px; text-align: right;}
+.commentList li .txt .txt_area {margin: 0; padding: 0;}
+.commentList li .txt .file_area {margin-top: 20px; padding: 15px 0 0 0; border-bottom: 0; border-top: 1px solid #d7d7d7;}
+.commentList li .txt .fileBox {margin-top: 10px;}
+.commentList li .txt.modify { padding:10px 20px; }
+
+/* EOD :  학습문의 */
+
+
+
+
+/* 팀 프로젝트 */
+.tabS { display:none !important; }
+.tableScroll.team table { min-width:1200px; }
+.table_block {width:100%; border-spacing: 0; border: 1px solid #d7d7d7;border-top: 1px solid #555;}
+.table_block thead tr th {padding:16px 10px; border-left:1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7; font-size:16px; color:#222; text-align:center; font-weight:400; line-height:20px; background-color:#f4f4f4;}
+.table_block thead tr td {padding: 15px 10px;border-left: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;font-size:16px;color:#222;text-align:center;font-weight:400;line-height:20px;background-color: #f5f7f9;}
+.table_block thead tr th:first-child , .table_block thead tr td:first-child , .table_block tbody tr td:first-child {border-left:0}
+.table_block tbody tr th {padding:20px 10px; border-top:1px solid #e7e7e7; font-size:16px; color:#666; font-weight:400; line-height:26px; background-color:#FFFFFF}
+.table_block tbody tr td {padding: 15px 10px;border-left: 1px solid #d7d7d7;border-top: 1px solid #d7d7d7;font-size:16px;color:#222;line-height:26px;background-color:#fff;}
+.table_block tbody tr td .mob_boxL {display:none}
+.table_block tbody tr td.mob_ac {text-align:center !important;}
+.table_block tbody tr:first-child th , .table_block tbody tr:first-child td {border-top:0}
+.table_block thead tr th.bl , .table_block td.bl  {border-left:1px solid #d7d7d7 !important}
+.table_block button {margin:0}
+.table_block tr.active { background:#e9f8fa !important; }
+.table_block tr.active td { background:#e9f8fa !important; }
+
+.team_intro { display:table; width:100%; table-layout:fixed; margin:40px 0; padding:30px 0; background:#e9f8fa; }
+.team_intro .team_introL { position:relative; display:table-cell; vertical-align:middle; width:280px; padding:0 40px 0 60px;}
+.team_intro .team_introL img { vertical-align:middle; }
+.team_intro .team_introL .txt { vertical-align:middle; padding:0 0 0 15px; font-size:30px; font-weight:500; }
+.team_intro .team_introL .txt span { font-size:24px; color:#666; font-weight:normal; }
+.team_intro .team_introC { display:table-cell; vertical-align:middle; }
+.team_intro .team_introR { display:table-cell; vertical-align:middle; width:220px; padding:0 60px; }
+.team_intro .team_introR button { margin:0; }
+
+.team_label { display:table; width:100%; tabel-layout:fixed; }
+.team_label .team_label_L { display:table-cell; vertical-align:middle; width:130px; padding:0 10px 0 0; font-weight:500; text-align:left; }
+.team_label .team_label_R { display:table-cell; vertical-align:middle; }
+.team_input_list input { margin:0 5px; }
+.team_input_list button { margin:0 0 0 15px; float:right; }
+.inputBox.team textarea { height:142px; }
+.team_scroll { overflow-x:auto; overflow-y:hidden; }
+.team_scroll table { min-width:1200px; }
+.radioList.solo { display:inline-block; }
+.radioList.solo input[type="radio"] + label { min-height:28px; padding:0 0 0 30px; }
+.radioList.solo li { float:none; margin:10px 0 0 0; }
+
+.team_memberBox { max-height:300px; overflow-x:hidden; overflow-y:auto; }
+.team_add { display:table; width:100%; table-layout:fixed; }
+.team_add .tit { margin:0; padding:15px 20px; background:#f5f7f9; border-bottom:1px solid #d7d7d7; font-weight:500; }
+.team_add .team_add_L { display:table-cell; vertical-align:top; border:1px solid #d7d7d7; border-top:1px solid #555; }
+.team_add .team_add_C { display:table-cell; vertical-align:middle; width:60px; text-align:center; }
+.team_add .team_add_R { display:table-cell; vertical-align:top; border:1px solid #d7d7d7; border-top:1px solid #555; }
+
+.team_add_search { position:relative; padding:15px 20px; border-bottom:1px solid #d7d7d7; }
+.team_add_search span { position:absolute; top:22px; left:20px; font-weight:500; }
+.team_add_search button { position:absolute; top:15px; right:20px; width:70px; padding:0; margin:0; }
+.team_add_search .search { margin:0 108px 0 48px; }
+.team_add_search .search input { width:100%; }
+
+.chk_team { padding:15px 20px; position:relative; }
+.chk_team.active { background:#f5f7f9; border-bottom:1px solid #d7d7d7; }
+.chk_team input[type="checkbox"] { top:50%; left:20px; margin:-6px 0 0 0; }
+.chk_team input[type="checkbox"] + label { padding:0 0 0 60px; line-height:28px; font-size:16px; }
+.chk_team input[type="checkbox"] + label:before { top:50%; margin:-15px 0 0 0; }
+
+.team_listBox { position:relative; /* height:400px; */ overflow-x:hidden; overflow-y:auto; }
+.team_add_R .team_listBox { /* height:460px; */ }
+.team_list {  }
+.team_list > li { border-bottom:1px solid #d7d7d7; }
+.team_list > li:last-child {  }
+.team_list > li:first-child {  }
+.team_listBox .noData { position:absolute; top:0; left:0; padding:0; }
+
+.team_add_btn01 { display:inline-block; width:40px; height:40px; border:1px solid #d8d8d8; border-radius:40px; background:url(../../../images/classroom/template3/resp/default/icon_team_list_right.png) no-repeat 56% 50%; transition:0.3s ease; }
+.team_add_btn02 { margin:5px 0 0 0; display:inline-block; width:40px; height:40px; border:1px solid #d8d8d8; border-radius:40px; background:url(../../../images/classroom/template3/resp/default/icon_team_list_left.png) no-repeat 45% 48%; transition:0.3s ease; }
+.team_add_btn01:hover, .team_add_btn02:hover { background-color:#f5f5f5; }
+
+.team_add_info { display:table; width:100%; table-layout:fixed; min-height:71px; border-bottom:1px solid #d7d7d7; }
+.team_add_info.type02 { border-bottom:none; }
+.team_add_info .team_add_infoL { display:table-cell; vertical-align:middle; padding:10px; border-right:1px solid #d7d7d7; width:80px; }
+.team_add_info .team_add_infoR { display:table-cell; vertical-align:middle; padding:10px; }
+.team_add_info .team_add_infoR .team_add_infoBox { border:1px solid #d7d7d7; padding:15px 10px; min-height:10px; }
+.team_add_name > li { margin:8px 0 0 0; }
+.team_add_name > li:first-child { margin:0; }
+/* EOD : 팀 프로젝트 */
+
+
+/* EOD :  마이페이지 */
+
+/* 콘텐츠 저작도구 */
+.tool-app {padding-top: 40px;}
+.tool-app .tool-app-top {padding: 40px; background: #f4f9fd;}
+.tool-app .tool-app-dsc {position: relative; min-height: 46px; padding-left: 65px; font-size: 18px;}
+.tool-app .tool-app-dsc:before {content: ""; position: absolute; left: 0; top: 0; width: 45px; height: 46px; background: url("../../../images/template4/resp/default/icon/icon_tool.png") no-repeat 0 0;}
+.tool-app .tool-app-dsc li {margin-top: 10px;}
+.tool-app .tool-app-dsc .strong-color {color: #1464d9; font-weight: 400;}
+.tool-app .tool-app-dsc li:first-child {margin-top: 0;}
+.tool-app  .tool-app-top .tool-app-tit {margin: 30px 0 0 0; padding: 0 0 0 25px; font-size: 20px; font-weight: 700; background: url("../../../images/template4/resp/default/icon/app_txt_alert.png") no-repeat 0 0;}
+.tool-app .tool-app-guide {margin-top: 10px; padding-left: 2px; font-size: 16px;}
+.tool-app .tool-app-guide li {margin-top: 10px;}
+.tool-app .tool-app-noti {margin: 14px 0 0 0; padding: 0; font-size: 16px;}
+.tool-app  .tool-app-top-bot {margin-top: 30px; font-size: 0; text-align: center;}
+.tool-app  .tool-app-top-bot .btn-app-tool {height: 50px; margin-left: 10px; padding: 0 40px; border: 0; font-size: 16px; color: #fff; background: #1464d9; text-align: center; vertical-align: top; border-radius: 2px; transition: 0.3s all ease;}
+.tool-app  .tool-app-top-bot a.btn-app-tool {display: inline-block; line-height: 50px;}
+.tool-app  .tool-app-top-bot .btn-app-tool:hover {background: #082ca1;}
+.tool-app  .tool-app-top-bot .btn-app-tool:first-child {margin-left: 0;}
+
+.tool-app .tool-app-list {position: relative; margin-top: 100px;}
+.tool-app .tool-app-list .btn-tool-app {position: absolute; right: 0; top: -60px; margin: 0;}
+
+.tool-app .tool-app-view .viewBox {position: relative; margin-top: 0;}
+.tool-app .tool-app-view .viewBox .tool-app-view-status {position: absolute; right: 40px; top: 32px;}
+.tool-app .tool-app-view .viewBox .tool-app-view-date {padding: 17px 30px; border-bottom: 1px solid #d7d7d7;}
+
+/* 강의실 */
+
+   /* 시험 팝업 */
+
+   .timeCount {margin:20px 0 0; text-align:right}
+   .timeCount .txt {font-size:16px; color:#222; vertical-align:middle; margin:0 2px 0 0}
+   .timeCount .countBox {background-color:#0746c7;  display:inline-block; vertical-align:middle; font-size:16px; font-weight:500; color:white; padding:4px 12px}
+   .timeCount .countBox .colon {display:inline-block; font-weight:400; margin:0 6px}
+
+   .textCount {margin:5px 0 0; text-align:right; font-size:14px; color:#666}
+
+   .thumBox_exam {margin:20px 0 0; display:inline-block; width:283px; height:148px; border:1px solid #d7d7d7}
+   .thumBox_exam_small {margin:10px 0 0; display:inline-block; width:188px; height:108px; border:1px solid #d7d7d7}
+
+   .exam_scoreBox {overflow:hidden; font-size:18px; margin:20px 0 0}
+   .exam_scoreBox > ul {float:right;}
+   .exam_scoreBox > ul > li {position:relative; float:left; padding:0 0 0 22px;}
+   .exam_scoreBox > ul > li:before {content:"";position:absolute;top: 50%;left:11px;bottom:0;width: 1px;height: 18px;background: #d7d7d7;margin: -9px 0 0;}
+   .exam_scoreBox > ul > li:first-child:before {display:none}
+   .exam_scoreBox .txt {margin:0 0 0 10px}
+
+   .score_num {font-size:24px; color:#0746c7}
+
+   /* EOD :  시험 팝업 */
+
+/* EOD :  강의실 */
+
+/* Membership */
+
+	/* 강사신청 */
+
+		/* 작성하기 */
+
+		.tc_terms {margin:40px 0 0}
+		.tc_terms_list .list {margin:10px 0 0}
+		.tc_terms_list .list:first-child {margin:0}
+		.tc_terms_list .list:first-child .stepBox {border-top: 1px solid #d7d7d7; margin: 0;}
+		.tc_terms_list .list.active .stepBox {border:1px solid #555}
+		.tc_terms_list .list.active .stepBox > a {background-color:white; color:#0746c7}
+		.tc_terms_list .stepBox {transition:0.45s ease; margin: 10px 0 0;}
+		.tc_terms_list .stepBox > a {position:relative; display:block; background-color: #0746c7; padding: 19px 50px 19px 30px;font-size: 16px; color:white; font-weight:400;transition:0.45s ease;line-height:1.3;}
+		.tc_terms_list .stepBox > a:after { content:''; position:absolute; top:50%; right:18px; margin:-5px 0 0 0; width:16px; height:9px; background:url(../../../images/template4/resp/default/icon/icon_join_arrow.png) no-repeat 0 0; }
+		.tc_terms_list .stepBox > a > strong {margin:0 10px 0 0}
+		.tc_terms_list .list.active .active a { color:#0746c7; }
+		.tc_terms_list .list.active .stepBox > a:after { background:url(../../../images/template4/resp/default/icon/icon_join_arrow.png) no-repeat 0 -9px;}
+		.tc_terms_list .list.active .terms_contents > a {padding:9px 50px}
+		.tc_terms_list .terms_contents {display:none; position:relative;background: #f5f7f9; padding: 25px 30px;font-weight:400;font-size:16px;}
+		.tc_terms_list .terms_contents p { margin:5px 0; line-height:1.6; }
+		.tc_terms_list .terms_contents .table_hori {margin:0}
+		.tc_terms_list .terms_contentsIn {max-height:450px; overflow:auto}
+		.tc_terms_list .terms_contents textarea {height:98px}
+		.tc_terms_list .input_bank {width:138px}
+		.tc_terms_list .input_ac_number {width:248px}
+		.tc_terms_list .stepBox .btnBox {display:none; text-align:right; margin:0; padding:20px 30px;}
+		.tc_terms_list .stepBox .btnBox button {margin:0}
+		.tc_terms_list .inputList {overflow:hidden}
+		.tc_terms_list .inputList > li {float:left; margin:5px 30px 5px 0}
+		.tc_terms_list .inputList .label {margin:0 10px 0 0; vertical-align:middle}
+
+		.tc_terms .txt_default {display:block; margin:20px 0}
+		.tc_terms .txt_default:first-child {margin-top:0}
+
+			/* NCS 분류 팝업 */
+
+			.ncsTypeBox {display:table; table-layout:fixed; width:100%; border-bottom:1px solid #555;}
+			.ncsTypeBox .typeBox {display:table-cell;}
+			.ncsTypeBox .tit {background-color:#0746c7; line-height:40px; height:40px; color:white; font-size:16px; text-align:center}
+			.ncsTypeBox .typeBox:first-child .list_type {border-left:1px solid #555}
+			.ncsTypeBox .list_type {border-right:1px solid #555; height: 248px; overflow:hidden; overflow-y:auto;}
+			.ncsTypeBox .list_type a {display:block; padding:11px; font-size:16px; color:#666}
+			.ncsTypeBox .list_type li.active {background-color:#e9f8fa}
+			.ncsTypeBox .list_type li.active a {color:#0746c7}
+
+			.ncsTypeList {display:block; overflow:hidden; padding:15px 0; border-bottom:1px solid #d7d7d7}
+			.ncsTypeList > li {float:left; margin:5px 5px 5px 0}
+			.ncsTypeList .type {position:relative; background-color:white; border:1px solid #555; padding:6px 30px 6px 10px}
+			.ncsTypeList .type_del {position:absolute; top:50%; right:9px; display: inline-block; width:11px; height:11px; margin:-5px 0 0; background: url(../../../images/template4/resp/default/icon/icon_close_black.png) no-repeat;}
+
+			/* EOD : NCS 분류 팝업 */
+
+
+		/* EOD : 작성하기 */
+
+		/* 심사중 & 심사완료 */
+
+		.ms_procees {text-align:center; margin:100px 0 0}
+		.ms_procees > ul {display:inline-block; margin:0 0 0 -100px}
+		.ms_procees > ul > li {position:relative; float:left; margin:0 0 0 100px}
+		.ms_procees > ul > li:before {content:"";position:absolute;top:50%;left: -50%; display:inline-block; width:14px;height:26px; margin: -13px 0 0 43px; background:url("../../../images/template4/resp/default/icon/icon_ms_arrow.png") no-repeat; background-size:cover !important;}
+		.ms_procees > ul > li:first-child:before {display:none}
+
+		.ms_Circle {display:table; width:196px; height:196px; background-color:white; border:2px solid #555; border-radius:50%}
+		.ms_CircleIn {display:table-cell; width:100%; height:100%; vertical-align:middle}
+		.ms_Circle .icon {display:inline-block; width:70px; height:60px; background:url("../../../images/template4/resp/default/icon/icon_ms_process01.png") no-repeat; background-size:cover !important;}
+		.ms_Circle .txt {font-size:18px; color:#222; margin:23px 0 0}
+		.ms_Circle.type02 .icon {background:url("../../../images/template4/resp/default/icon/icon_ms_process02.png") no-repeat}
+		.ms_Circle.type03 .icon {background:url("../../../images/template4/resp/default/icon/icon_ms_process03.png") no-repeat}
+
+		.ms_procees > ul > li.active .ms_Circle {background-color:#0746c7; border:2px solid #0746c7}
+		.ms_procees > ul > li.active .ms_Circle .txt {color:white}
+		.ms_procees > ul > li.disabled .ms_Circle {background-color:#d7d7d7; border:2px solid #d7d7d7}
+		.ms_procees > ul > li.disabled .ms_Circle .txt {color:#666}
+		.ms_procees > ul > li.disabled:before {background:url("../../../images/template4/resp/default/icon/icon_ms_arrow.png") no-repeat -14px 0; }
+		.ms_procees > ul > li.active .ms_Circle.type02 .icon {background:url("../../../images/template4/resp/default/icon/icon_ms_process02_active.png") no-repeat}
+		.ms_procees > ul > li.active .ms_Circle.type03 .icon {background:url("../../../images/template4/resp/default/icon/icon_ms_process03_active.png") no-repeat}
+
+		.ms_txtBox {margin:100px 0 0; text-align:center; color:#222;}
+		.ms_txtBox strong {font-size:24px; font-weight:500;}
+		.ms_txtBox p {margin:20px 0 0; font-size:16px; line-height:32px; font-weight:400;}
+		.ms_txtBox p:first-child {margin:0}
+		.ms_txtBox button {margin:40px 0 0}
+
+		/* EOD :  심사중 & 심사완료 */
+
+	/* EOD : 강사신청 */
+/* EOD : Membership */
+
+/* tablet */
+@media only screen and (max-width: 1199px) {
+	.myH_infoBoxL .tit .btn-step-go {display: block; width: 170px; margin-top: 10px;}
+
+	/* 콘텐츠 저작도구 */
+	.tool-app {padding-top: 0;}
+	.tool-app .tool-app-top {padding: 20px;}
+	.tool-app .tool-app-dsc {padding: 0; font-size: 16px; line-height: 1.5;}
+	.tool-app .tool-app-dsc:before {display: none;}
+	.tool-app .tool-app-top .tool-app-tit {margin-top: 15px; font-size: 18px; line-height: 20px;}
+	.tool-app .tool-app-guide {font-size: 14px;}
+	.tool-app .tool-app-noti {font-size: 14px; line-height: 1.5;}
+}
+
+/* tablet */
+@media only all and (max-width: 1199px) and (min-width: 641px) { /* tablet */
+
+
+	/* 고객지원센터  */
+
+
+	/* EOD : 고객지원센터  */
+
+
+	/* 마이페이지 */
+
+
+		/* 나의 홈 */
+
+
+		.sub_content > ul > li {width:100%}
+		.sub_content .sub_contentBox .tit_area {margin:30px 0 0}
+
+		.myH_infoBoxL {padding:20px}
+		.myH_infoBoxL .tit {font-size:16px}
+		.myH_infoBoxL .process {display:block; margin:10px 0 0}
+
+		.sub_contentBox .SliderBox {min-height: auto}
+		.slick-slide .grayBox {height:auto}
+
+		/* EOD : 나의 홈 */
+
+		/* 학습자 학습현황 */
+
+		.smsBox .smsBoxL {margin:0 270px 0 0}
+		.smsBox .smsBoxL .sendBox {height:217px}
+		.smsBox .smsBoxR .sms_phone {width: 240px;height: 370px;}
+		.smsBox .smsBoxR .sms_phoneIn {margin:60px 20px 0;}
+		.smsBox .smsBoxR .textBox {background-color:white;border-radius:10px;height: 215px;padding:10px;}
+		.smsBox .smsBoxR .textBox textarea {border:0;height: 160px;}
+
+		/* EOD : 학습자 학습현황 */
+
+
+
+		/* 나의 학습 */
+
+		.ThumBox {width:auto}
+		.ThumBox .infoBox {margin:0; min-height:auto}
+		.ThumBox .dayBox {font-size:13px; padding:2px 5px}
+		.ThumBox .imgBox {width:98px; height:58px;}
+		.ThumBox .txtBox {margin:0 0 0 110px; min-height:60px}
+		.ThumBox .txtBox .label {font-size:13px}
+		.ThumBox .txtBox .tit {font-size:16px}
+		.ThumBox .tag {max-height:50px}
+		.ThumBox .tag > li span {font-size:12px; padding:2px 5px}
+		.ThumBox .likeBox {display:none}
+
+		.table_detail tr.detail .ThumBox .infoBox {margin:0}
+		.table_detail tr.detail .ThumBox .txtBox , .table_detail tr.detail .ThumBox .tag {margin:0 0 0 70px}
+		.ThumBox .infoBox.vertical, .ThumBox .infoBox.vertical .txtBox {display: block;}
+
+
+		/* 차수 팝업 */
+
+		.windowPopBox .lectureBoxR {margin:280px 0 0}
+
+		/* EOD : 차수 팝업 */
+
+
+		/* EOD : 나의 학습 */
+
+		/* 학습메모/북마크 */
+
+		.Listinfo {font-size:14px}
+		.Listinfo > li {margin:5px 0 0}
+
+		/* EOD : 학습메모/북마크 */
+
+
+
+		/* 훈련비 결제내역 */
+
+		.date_searchBox {padding:15px}
+		.content_Listed > li {margin:5px 10px 5px 0}
+
+		/* EDO :  훈련비 결제내역 */
+
+		/* 팀프로젝트 */
+		.tabH { display:none !important; }
+		.tabS { display:block !important; }
+		.team_intro { display:none; width:inherit; padding:30px; }
+		.team_intro .team_introL { display:block; width:inherit; padding:0; }
+		.team_intro .team_introC { display:block; margin:30px 0 50px 0; }
+		.team_intro .team_introR { display:block; width:inherit; padding:0; }
+		/* EOD : 팀프로젝트 */
+
+		/* 나의 설문 */
+
+		.list_survey > ul {overflow:hidden; margin:-20px 0 0 -20px;}
+		.list_survey > ul > li {min-height:295px}
+		.list_survey .surveyBox {margin:20px 0 0 20px;}
+		.list_survey .surveyHeader {padding:16px 14px}
+		.list_survey .surveyHeader .tit {font-size:16px}
+		.list_survey .surveyContent {padding:19px 14px}
+
+		/* EOD : 나의 설문 */
+
+	/* EOD :  마이페이지 */
+
+	/* 강의실 */
+
+
+
+
+
+	/* EOD : 강의실 */
+
+	/* Membership */
+
+		/* 강사 신청 */
+			/*  심사중 & 심사완료 */
+
+				.ms_procees > ul {margin:0 0 0 -50px}
+				.ms_procees > ul > li {margin:0 0 0 50px}
+				.ms_Circle {width:148px; height:148px}
+				.ms_Circle .txt {font-size:16px; margin:15px 0 0}
+				.ms_txtBox {margin:50px 0 0}
+
+			/* EOD :  심사중 & 심사완료 */
+		/* EOD : 강사 신청 */
+
+	/* EOD : Membership */
+
+}
+
+/* mobile */
+@media only all and (max-width:640px){
+	/* 콘텐츠 저작도구 */
+	.tool-app  .tool-app-top-bot .btn-app-tool {height: 45px; margin-left: 5px; padding: 0 15px;}
+	.tool-app  .tool-app-top-bot a.btn-app-tool {line-height: 45px;}
+
+	.tool-app .tool-app-view .viewBox .info_area .tit {margin-right: 50px;}
+	.tool-app .tool-app-view .viewBox .tool-app-view-status {top: 18px; right: 10px;}
+	.tool-app .tool-app-view .viewBox .tool-app-view-date {padding: 10px; font-size: 14px;}
+
+	/* 고객지원센터 */
+
+		/* faq */
+		
+		.faq_list li .faqBox > a , .faq_list li.active .faqBox > a {padding:9px 50px 9px 20px}
+		.faq_list li .faqBox > a:before {left:0}
+		.faq_list li .faqBox > a:after {right:0}
+		.faq_list li .faq_contents {padding:20px 30px 20px 50px}
+		
+		/* EOD : faq */
+		
+	/* EOD :  고객지원센터 */
+
+	/* 마이페이지 */
+
+		/* 나의 홈 */
+
+		.myH_infoBox {display:block; height:auto}
+		.myH_infoBoxL .tit {font-size:16px}
+		.myH_infoBoxL , .myH_infoBoxR  {display:block; width:auto; padding:20px 20px 30px}
+		.myH_infoBoxL .date {margin:0 30px 0 0}
+		.myH_infoBoxL .process .txt_point {margin:0 0 0 5px}
+		.myH_infoBoxR .list_notice a {max-width:100%}
+
+		.table_rao tbody tr td .mobBox {display:block; overflow:hidden; margin:8px 0 0}
+		.table_rao tbody tr td .mobBox li {position:relative;float:left; margin:0 8px;font-size:13px;color:#666;}
+		.table_rao tbody tr td .mobBox li:first-child {margin-left:0}
+		.table_rao tbody tr td .mobBox li:before {content: "";position: absolute;top: 50%;left: -8px;width: 1px;height: 10px;margin: -5px 0 0;background-color: #d7d7d7;}
+		.table_rao tbody tr td .mobBox li:first-child:before {display:none}
+		.table_rao tbody tr td .mobBox.Top {font-size:13px; margin:0}
+		.table_rao tbody tr td .mobbtnBox {margin:10px 0}
+		.table_rao tbody tr td .mobbtnBox.Full button {width:100%; padding:0}
+
+		.table_rao tbody tr.detail td .txt {padding:0 0 0 25px}
+		.table_rao tbody tr.detail td .mobBox {margin:0 0 0 25px}
+		.table_rao tbody tr.detail td .txt:before {left:15px}
+		.table_rao tbody tr.detail td .txt:after {top:24px; left:15px}
+		.table_rao tbody tr.detail.last td .txt:before {height:24px}
+
+		.processSlider .no_data	{padding:65px 15px}
+
+		.sub_contentBox .SliderBox {min-height:auto}
+
+		.sub_content > ul > li {width:100%}
+		.sub_content > ul {margin:-30px 0 0}
+		.sub_contentBox {margin:30px 0 0}
+		.sub_contentBox .listBoxIn {padding:21px 18px}
+		.sub_contentBox .listBoxIn .txt {font-size:16px; margin:0 120px 0 0}
+		.sub_contentBox .listBoxIn .txt > a {white-space: normal;display: -webkit-box;-webkit-box-orient: vertical;	-webkit-line-clamp: 2;word-break: break-all; max-height: 38px;}
+		.sub_contentBox .listBoxIn .txtBox a {font-size:16px}
+		.sub_contentBox .listBoxIn .label_gray , .sub_contentBox .listBoxIn .label_white {font-size:13px; padding:3px 2px; margin:-10px 0 0}
+		.sub_contentBox .list_area {min-height:auto}
+		.sub_contentBox .list_area .no_data {padding:59px 15px}
+		.sub_contentBox .list_area .no_data .txt {margin:20px 0 0}
+
+		.slick-slide .grayBox {padding:0 0 20px; height:auto}
+		.slick-slide .grayBox.type02 {padding:0}
+
+		.infoBox > .tit {font-size:20px}
+		.infoList .dataBox {font-size:14px}
+		.infoList .dataBox .leftBox {float:none}
+		.infoList .dataBox .rightBox {float:none; margin:10px 0 0; text-align:right}
+		.infoList .dataBox .rightBox .txt_point {font-size:16px}
+
+		/* EOD : 나의 홈 */
+
+		/* 학습자 학습현황 */
+
+			/* 총점 팝업 */
+
+			.attendBox {text-align:center}
+			.attendBox ul li {margin:0}
+			.attendBox ul li:first-child {margin:0 20px 0 0}
+
+			.total_radio_group .contentBox {text-align:center}
+			.table_normal.cal .label_red , .table_normal.cal .label_blue , .table_normal.cal .label_green , .table_normal.cal .label_black {width:30px; height:20px; font-size:14px}
+			.table_normal.cal .dateNo {top:5px; right:5px;}
+
+			/* EOD : 총점 팝업 */
+
+			/* 일괄 시험점수 등록 팝업 */
+
+			input[type="number"].score_input {width:46px;}
+
+			/* EOD : 일괄 시험점수 등록 팝업 */
+
+
+			/* sms 팝업 */
+
+			.smsBox .smsBoxL {margin:0}
+			.smsBox .smsBoxL .sendBox {height:112px; padding:5px 10px; margin:0;}
+
+			.smsBox .smsBoxR {position:static; text-align:center; margin:20px 0 0}
+			.smsBox .smsBoxR .sms_phone {width: 240px;height: 370px;}
+			.smsBox .smsBoxR .sms_phoneIn {margin:60px 20px 0;}
+			.smsBox .smsBoxR .textBox {background-color:white;border-radius:10px;height: 215px;padding:10px;}
+			.smsBox .smsBoxR .textBox textarea {border:0;height: 160px;}
+
+			/* EOD :  sms 팝업 */
+
+		/* EOD : 학습자 학습현황 */
+
+		/* 나의 학습 */
+
+		.ThumBox {width:auto}
+		.ThumBox .infoBox {margin:0; min-height:auto}
+		.ThumBox .dayBox {font-size:13px; padding:2px 5px}
+		.ThumBox .imgBox {width:98px; height:58px;}
+		.ThumBox .txtBox {margin:0 0 0 110px; min-height:60px}
+		.ThumBox .txtBox .label {font-size:13px}
+		.ThumBox .txtBox .tit {font-size:16px}
+		.ThumBox .tag {max-height:50px}
+		.ThumBox .tag > li span {font-size:12px; padding:2px 5px}
+		.ThumBox .likeBox {display:none}
+
+		.table_detail tr.detail td {position:relative}
+		.table_detail tr.detail .ThumBox {position:static; margin:10px 0 0}
+		.table_detail tr.detail .ThumBox .infoBox {margin:0}
+		.table_detail tr.detail .ThumBox .txtBox , .table_detail tr.detail .ThumBox .tag {margin:0 0 0 30px}
+		.table_detail tr.detail .ThumBox:before {bottom:0;}
+		/* .table_detail tr.detail.first .ThumBox:before {top:0} */
+		.table_detail tr.detail .ThumBox:after {width:12px; top:50px; left:21px}
+		.table_detail tr.detail.last .ThumBox:before {top:0; height:51px}
+		.table_normal.table_detail tbody tr.detail td .mobBox {margin: 8px 0 0 30px;}
+
+		.progressWrap.mob {display:table; word-break: normal;}
+			.progressWrap.mob .progressPer {display:table-cell; padding:0 15px 0 0}
+			.progressWrap.mob .progressBar {display:table-cell; width:100%; font-size:16px; padding:6px 0 0}
+			.progressWrap.mob .progressPer .num {font-size:18px}
+
+
+		/* EOD : 나의 학습 */
+
+
+		/* 교재 배송현황 */
+
+		.ThumBox .infoBox.vertical , .ThumBox .infoBox.vertical .txtBox {display:block}
+
+		/* EOD : 교재 배송현황 */
+
+		/* 나의 설문 */
+
+		.list_survey > ul {overflow:hidden; margin:-10px 0 0;}
+		.list_survey > ul > li {width:100%; min-height:auto}
+		.list_survey .surveyBox {margin:10px 0 0;}
+		.list_survey .surveyHeader {padding:16px 14px}
+		.list_survey .surveyHeader .labelBox {left:14px}
+		.list_survey .surveyHeader .titBox {margin:0 0 0 45px}
+		.list_survey .surveyHeader .tit {font-size:16px}
+		.list_survey .surveyContent {padding:19px 14px}
+		.list_survey .surveyContent .content {font-size:14px; max-height:42px;}
+		.list_survey .surveyContent .blockTable {font-size:14px;}
+		.list_survey .surveyContent .blockTable .th {padding:5px 10px 5px 0 }
+		.list_survey .surveyContent .btnBox {margin:15px 0 0}
+
+		.list_survey > ul > li.no_data .no_dataBox {margin:0}
+
+		.test_label li {font-size:14px}
+
+		/* EOD : 나의 설문 */
+
+
+		/* 훈련비 결제내역 */
+
+
+		.date_searchBox {padding:15px}
+		.date_searchBoxIn .label {float:none; display:block; line-height:1; margin:0 0 5px}
+		.content_Listed > li {margin:5px 10px 5px 0}
+	    .search_area .selectBox {margin:0 1px 0 0}
+
+		/* EDO :  훈련비 결제내역 */
+
+		/* 팀프로젝트 */
+		.tabH { display:none !important; }
+		.tabS { display:block !important; }
+		.tableScroll.team table { min-width:inherit; margin:20px 0 0 0;}
+		.txt_dash { font-size:18px; }
+		.tableScroll.team .table_block tbody tr td:first-child { background:#fff; margin:0; }
+		.tableScroll.team .table_block tbody tr td.no_dataBox { padding:30px 0 !important; background:#f5f7f9 !important; margin:0 0 -15px 0; text-align:center !important; font-weight:400 !important; color:#222 !important; }
+		.table_block {border:0}
+		.table_block thead tr td {display:none}
+		.table_block tbody tr {display:block; margin:10px 0 0;  padding:0 0 15px; border: 1px solid #d7d7d7; border-top: 1px solid #555;}
+		.table_block tbody tr td:first-child {display:block; margin:0 0 15px; padding:13px 10px; background:#f5f7f9; font-size:16px; text-align:left !important; color:#0746c7; font-weight:500}
+		.table_block tbody tr td {display:block; border-top:0; border-left:0;padding: 5px 10px; text-align:left !important;line-height: 1;}
+		.table_block tbody tr td .mobBox {display: table;  table-layout: fixed;  width: 100%;  overflow: hidden; font-size: 14px}
+		.table_block tbody tr td .mob_boxL {display:table-cell; vertical-align:top; width:65px;}
+		.table_block tbody tr td .mob_boxR {display: table-cell; vertical-align: top; padding: 0 0 0 10px;}
+		.table_block tbody tr td br {display:none}
+		.table_block tbody tr td.mob_ac {text-align:center !important;}
+		.table_block tr.active td:first-child { background:#f5f7f9 !important; }
+
+		.attend_selectBox > ul > li {margin:0 5px}
+
+		.table_block tbody tr td .mobBox.type02 .mob_boxL { width:82px; }
+		.table_block.type02 tbody tr td br { display:inherit; }
+		.table_block.type02 tbody tr td .mobBox { line-height:1.5; }
+
+		.table_block tbody tr td .mobBox.type03 .mob_boxL { width:82px; vertical-align:middle; }
+		.table_block tbody tr td .mobBox.type03 { line-height:1.5; }
+		.table_block tbody tr td .mobBox.type04 .mob_boxL { width:110px; }
+		.table_block .mobBox.type03 .w50 input { width:50px !important; }
+		.table_block.type03 tbody tr td:last-child {text-align: center !important;}
+
+		.team_intro { width:inherit; display:block; padding:30px; margin:30px 0; }
+		.team_intro .team_introL { display:block; width:inherit; padding:0; }
+		.team_intro .team_introL .txt { font-size:24px; }
+		.team_intro .team_introL .txt span { font-size:20px; }
+		.team_intro .txt_default { font-size:16px; }
+		.team_intro .team_introL img { width:45px; }
+		.team_intro .team_introC { display:block; margin:30px 0 40px 0; }
+		.team_intro .team_introR { display:block; width:inherit; padding:0; }
+
+		.team_add {  }
+		.team_add .team_add_L { display:block; }
+		.team_add .team_add_C { display:block; width:inherit; padding:10px 0; }
+		.team_add_btn01 { background:url(../../../images/classroom/template3/resp/default/icon_team_list_down.png) no-repeat 46% 50%; }
+		.team_add_btn02 { margin:0 0 0 5px; background:url(../../../images/classroom/template3/resp/default/icon_team_list_up.png) no-repeat 50% 47%; }
+		.team_add .team_add_R { display:block; }
+		.team_listBox { height:225px !important; }
+		.team_add_info.type02 { height:225px !important; }
+		.team_add_info.type02 .team_add_infoR .team_add_infoBox { height:inherit !important; min-height:225px; }
+		/* EOD : 팀프로젝트 */
+
+	/* EOD : 마이페이지 */
+
+	/* 강의실 */
+
+	.score_num {font-size:20px;}
+	.exam_scoreBox {font-size:16px}
+
+	/* EOD : 강의실 */
+
+
+	/* Membership */
+
+		/* 강사 신청 */
+
+		.tc_terms_list .terms_contents {padding:13px 9px; font-size:14px}
+		.tc_terms_list .table_veti thead tr td {font-size:14px; padding:10px 5px}
+		.tc_terms_list .table_veti tbody tr td {font-size:14px; padding:10px}
+		.tc_terms_list .table_veti tbody tr td {font-size:14px; padding:10px 5px}
+		.tc_terms_list .table_hori tbody tr th , .tc_terms_list .table_hori tbody tr td {display:block}
+		.tc_terms_list .table_hori tbody tr td inputBox {margin:5px 0}
+		.tc_terms_list .input_bank , .tc_terms_list .input_ac_number {width:110px}
+		.tc_terms_list .terms_contents textarea {height:48px}
+		.tc_terms_list .stepBox .btnBox {padding:9px}
+		.tc_terms_list .stepBox > a {padding:19px 50px 19px 9px}
+		.tc_terms_list .inputList > li {margin:5px 20px 5px 0}
+		.tc_terms_list .inputList input[type="text"] {width:90px}
+		.tc_terms .txt_default {margin:15px 0}
+
+		/* NCS 분류 팝업 */
+
+
+		.ncsTypeBox {display:block; border-top: 0;}
+		.ncsTypeBox .typeBox {display:block;}
+		.ncsTypeBox .tit {position:relative; height: 30px;line-height: 30px;border-top: 0;}
+		.ncsTypeBox .typeBox.active .tit {background: linear-gradient(90deg, rgba(13,127,96,1) 8%, rgba(13,127,160,1) 91%); color:white}
+
+		.ncsTypeBox .list_type {border:0;height:auto; min-height:158px; max-height:158px; border-right: 1px solid #555; border-left: 1px solid #555;}
+		.ncsTypeBox .list_type a {font-size:14px; padding:13px 20px}
+
+
+		/* EOD : NCS 분류 팝업 */
+
+
+		/* EOD : 강사 신청 */
+
+		/*  심사중 & 심사완료 */
+
+		.ms_procees {margin:80px 0 0}
+		.ms_procees > ul {margin:0 0 0 -30px}
+		.ms_procees > ul > li {margin:0 0 0 30px}
+		.ms_procees > ul > li:before {width:10px; height:18px; margin:-9px 0 0 25px;}
+		.ms_procees > ul > li.disabled:before {background:url("../../../images/template4/resp/default/icon/icon_ms_arrow.png") no-repeat -9px 0}
+		.ms_Circle {width:88px; height:88px; border: 1px solid #555;}
+		.ms_Circle .txt {font-size:13px; margin:9px 0 0}
+		.ms_Circle .icon {width:40px; height:35px}
+		.ms_Circle.type02 .icon , .ms_Circle.type03 .icon {height:34px}
+		.ms_txtBox {margin:50px 0 0}
+
+		/* EOD :  심사중 & 심사완료 */
+
+
+	/* EOD : Membership */
+
+	/* 20-08-10 추가 */
+
+	.table_block.type03 .mob_dash_list li {margin:0}
+	.table_block.type03 .mob_dash_list li:before {display: none}
+
+	/* EOD : 20-08-10 추가 */
+
+
+}
+
+/* mobile */
+@media only all and (max-width:320px) {
+	.tool-app  .tool-app-top-bot .btn-app-tool {padding: 0 10px; font-size: 14px;}
+}

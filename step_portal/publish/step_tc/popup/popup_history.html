@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/skin/skin_blue.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        개인 이력
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template4/resp/default/icon/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <!-- tab -->
+            <ul class="tab mt0">
+                <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>기본정보</span></a></li>
+                <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>상담이력</span></a></li>
+                <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab03', this);"><span>수강신청 이력</span></a></li>
+            </ul>
+            <!-- EOD : tab -->
+
+            <!-- 기본정보 -->
+            <div class="tabBox active" id="tab01">
+                <h4 class="mt20 mb0">개인정보</h4>
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_hori -->
+                    <table class="table_hori">
+                        <caption>이름 , 아이디 , 성별 , 생년월일 , 휴대전화 , 자택 전화번호 , 학력 , 재직구분 , 소속회사 , 직급 , 관심분야로 이루어져 있는 개인이력 상세</caption>
+                        <colgroup>
+                            <col width="14%">
+                            <col width="36%">
+                            <col width="14%">
+                            <col width="36%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>이름</th>
+                                <td>홍길동</td>
+                                <th>아이디</th>
+                                <td>hong@step.co.kr</td>
+                            </tr>
+                            <tr>
+                                <th>성별</th>
+                                <td>남</td>
+                                <th>생년월일</th>
+                                <td>2020-10-50</td>
+                            </tr>
+                            <tr>
+                                <th>휴대전화</th>
+                                <td>010-2213-2353</td>
+                                <th>자택 전화번호</th>
+                                <td>031-2335-2342</td>
+                            </tr>
+                            <tr>
+                                <th>학력</th>
+                                <td>대졸</td>
+                                <th>재직구분</th>
+                                <td>재직자</td>
+                            </tr>
+                            <tr>
+                                <th>소속회사</th>
+                                <td>한국기술교육대학교</td>
+                                <th>직급</th>
+                                <td>과장급</td>
+                            </tr>
+                            <tr>
+                                <th>관심분야</th>
+                                <td colspan="3">과정분류(대분류> 중분류), 과정분류(대분류> 중분류), 과정분류(대분류> 중분류)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_hori -->
+                </div>
+                <!-- EOD : tableScroll -->
+            </div>
+            <!-- EOD : 기본정보 -->
+
+            <!-- 상담이력 -->
+            <div class="tabBox" id="tab02">
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>건
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_normal mt0">
+                        <caption>번호,상담유형,상담구분,제목,상담자,상담일로 구성된 상담이력 상세</caption>
+                        <colgroup>
+                            <col width="7%">
+                            <col class="mobH" width="8%">
+                            <col class="mobH" width="12%">
+                            <col width="*">
+                            <col class="mobH" width="9%">
+                            <col class="mobH" width="9%">
+                        </colgroup>
+                        <thead>
+                            <tr class="mobH">
+                                <th scope="col">NO</th>
+                                <th scope="col">상담유형</th>
+                                <th scope="col">상담구분</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">상담자</th>
+                                <th scope="col">상담일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <td class="mobH">인바운드</td>
+                                <td class="mobH">수료</td>
+                                <td class="al">
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox Top">
+                                        <li>인바운드</li>
+                                        <li>수료</li>
+                                    </ul>
+                                    <!-- EOD -->
+                                    <div class="linkBox">
+                                        <a href="javascript:void(0)"><span class="txt">수료기준에 대한 상담</span></a>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>운영자</li>
+                                        <li>2020.02.04</li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">운영자</td>
+                                <td class="mobH">2020.02.04</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="mobH">인바운드</td>
+                                <td class="mobH">학습현황</td>
+                                <td class="al">
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox Top">
+                                        <li>인바운드</li>
+                                        <li>학습현황</li>
+                                    </ul>
+                                    <!-- EOD -->
+                                    <div class="linkBox">
+                                        <a href="javascript:void(0)"><span class="txt">평가점수에 대한 상담</span></a>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>취업담당자</li>
+                                        <li>2020.02.04</li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">취업담당자</td>
+                                <td class="mobH">2020.02.04</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="mobH">인바운드</td>
+                                <td class="mobH">입과</td>
+                                <td class="al">
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox Top">
+                                        <li>인바운드</li>
+                                        <li>입과</li>
+                                    </ul>
+                                    <!-- EOD -->
+                                    <div class="linkBox">
+                                        <a href="javascript:void(0)"><span class="txt">수강생 등록 상담</span></a>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>취업담당자</li>
+                                        <li>2020.02.04</li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">취업담당자</td>
+                                <td class="mobH">2020.02.04</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+
+                <!-- 상세 -->
+
+                <div class="viewBox">
+                    <div class="info_area">
+                        <div class="tit">
+                            수료기준에 대한 상담
+                        </div>
+                        <div class="info">
+                            <ul class="left_area">
+                                <li>인베이드</li>
+                                <li>수료</li>
+                            </ul>
+                            <ul class="right_area">
+                                <li>상담자 : 운영자</li>
+                                <li>상담일 : 2020.04.13</li>
+                                <li>상담시간 : 20:30</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content_area">
+                        <p>수료기준에 미달되는 이유가 무엇인가요?</p>
+                    </div>
+                </div>
+
+                <div class="btnBox">
+                    <div class="rightBox">
+                        <a href="javascript:void(0);" class="btn_m_black">목록</a>
+                    </div>
+                </div>
+
+                <!-- no_data -->
+
+                <div class="viewBox">
+                    <div class="no_dataBox">
+                        등록된 답변내용이 없습니다.
+                    </div>
+                </div>
+
+                <!-- EOD : no_data -->
+
+                <!-- EOD : 상세 -->
+            </div>
+            <!-- EOD : 상담 이력 -->
+
+            <!-- 수강신청 이력 -->
+            <div class="tabBox" id="tab03">
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>건
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_normal mt0">
+                        <caption>번호,교육년도,과정명,교육기간,신청일,수강상태,수료여부 수강신청 이력 상세</caption>
+                        <colgroup>
+                            <col width="7%">
+                            <col class="mobH" width="8%">
+                            <col width="*">
+                            <col class="mobH" width="12%">
+                            <col class="mobH" width="9%">
+                            <col class="mobH" width="9%">
+                            <col class="mobH" width="9%">
+                        </colgroup>
+                        <thead>
+                            <tr class="mobH">
+                                <th scope="col">NO</th>
+                                <th scope="col">교육년도</th>
+                                <th scope="col">과정명</th>
+                                <th scope="col">교육기간</th>
+                                <th scope="col">신청일</th>
+                                <th scope="col">수강상태</th>
+                                <th scope="col">수료여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <td class="mobH">2020년</td>
+                                <td class="al">
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox Top">
+                                        <li>교육년도 : 2020년</li>
+                                        <li>교육기간 : 2020.02.04~2020.02.06</li>
+                                    </ul>
+                                    <!-- EOD -->
+                                    <span class="txt">한국교육기술대학교 온라인강의 과정2차</span>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>신청일 : 2020.02.10</li>
+                                        <li>수강상태 : 학습중</li>
+                                        <li>수료여부 : 수료</li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">2020.02.04~2020.02.06</td>
+                                <td class="mobH">2020.02.10</td>
+                                <td class="mobH">학습중</td>
+                                <td class="mobH">수료</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="mobH">2020년</td>
+                                <td class="al">
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox Top">
+                                        <li>교육년도 : 2020년</li>
+                                        <li>교육기간 : 2020.02.04~2020.02.06</li>
+                                    </ul>
+                                    <!-- EOD -->
+                                    <span class="txt">한국교육기술대학교 온라인강의 과정2차</span>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>신청일 : 2020.02.10</li>
+                                        <li>수강상태 : 수강대기</li>
+                                        <li>수료여부 : 수료</li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">2020.02.04~2020.02.06</td>
+                                <td class="mobH">2020.02.10</td>
+                                <td class="mobH">수강대기</td>
+                                <td class="mobH">수료</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="mobH">2020년</td>
+                                <td class="al">
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox Top">
+                                        <li>교육년도 : 2020년</li>
+                                        <li>교육기간 : 2020.02.04~2020.02.06</li>
+                                    </ul>
+                                    <!-- EOD -->
+                                    <span class="txt">한국교육기술대학교 온라인강의 과정2차</span>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>신청일 : 2020.02.10</li>
+                                        <li>수강상태 : 수강반려</li>
+                                        <li>수료여부 : 미수료</li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">2020.02.04~2020.02.06</td>
+                                <td class="mobH">2020.02.10</td>
+                                <td class="mobH">수강반려</td>
+                                <td class="mobH">미수료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+            </div>
+            <!-- EOD : 수강신청 이력 -->
+        </div>
+    </div>
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_white" onclick="window.close(); return false;">확인</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

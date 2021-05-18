@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>팀 프로젝트</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+                <!-- team_intro -->
+                <div class="team_intro">
+                    <div class="team_introL">
+                        <img src="../../../images/classroom/template4/resp/default/icon_team_intro.png" alt="step">
+                        <span class="txt">팀 프로젝트<span>란?</span></span>
+                    </div>
+                    <div class="team_introC">
+                        <p class="txt_default mt0">강사의 평가 뿐만 아니라 팀원의 평가가 반영되는 조별과제로 팀 활동(의견/자료 공유 및 화상채팅)과 팀프로젝트 과제를 평가 받습니다.</p>
+                    </div>
+                    <div class="team_introR">
+                        <button class="btn_m_blue" onclick="location.href='lecture_team_write.html'">팀프로젝트 개설하기</button>
+                    </div>
+                </div>
+                <!-- EOD : team_intro -->
+
+                <div class="tableScroll mt20">
+                    <!-- table_veti -->
+                    <table class="table_veti mobH">
+                        <caption>프로젝트 주제,프로젝트 기간,개설팀 수,과제 제출,팀원 평가기간,주제 수정으로 이루어진 팀 프로젝트 상세</caption>
+                        <colgroup>
+                            <col width="50px">
+                            <col width="*">
+                            <col width="20%">
+                            <col width="10%">
+                            <col width="20%">
+                            <col width="10%">
+                            <col width="20%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td scope="col" colspan="2">프로젝트 주제</td>
+                                <td scope="col">프로젝트 기간</td>
+                                <td scope="col">개설팀 수</td>
+                                <td scope="col" colspan="2">과제 제출</td>
+                                <td scope="col">팀원 평가기간</td>
+                                <td scope="col">주제 수정</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="active">
+                                <td class="ac">
+                                    <div class="radioBox">
+                                        <input type="radio" checked="checked" id="radio01_01" name="radioGroup">
+                                        <label for="radio01_01"></label>
+                                    </div>
+                                </td>
+                                <td>빅데이터분석 (2020년)</td>
+                                <td class="ac">2020.05.01 00:20 ~<br>2020.05.01 00:20</td>
+                                <td class="ac">10</td>
+                                <td class="ac">2020.05.01 00:20 ~<br>2020.05.01 00:20</td>
+                                <td class="ac">개별제출</td>
+                                <td class="ac">2020.05.01 00:20 ~<br>2020.05.01 00:20</td>
+                                <td class="ac">
+                                    <a href="lecture_team_modify.html" class="btn_s_blue">수정</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">
+                                    <div class="radioBox">
+                                        <input type="radio" id="radio01_02" name="radioGroup">
+                                        <label for="radio01_02"></label>
+                                    </div>
+                                </td>
+                                <td>4차 산업혁명</td>
+                                <td class="ac">2020.05.01 00:20 ~<br>2020.05.01 00:20</td>
+                                <td class="ac">10</td>
+                                <td class="ac">2020.05.01 00:20 ~<br>2020.05.01 00:20</td>
+                                <td class="ac">개별제출</td>
+                                <td class="ac">2020.05.01 00:20 ~<br>2020.05.01 00:20</td>
+                                <td class="ac">
+                                    <a href="lecture_team_modify.html" class="btn_s_blue">수정</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+
+
+                <!-- 모바일에서 보여지는 화면 -->
+
+                <div class="mobS">
+                    <ul class="mob_radioWrap">
+                        <li class="active">
+                            <div class="mob_radioArea">
+                                <div class="mob_radioBox">
+                                    <input type="radio" checked="checked" id="radio02_01" name="radioGroup02">
+                                    <label for="radio02_01">빅데이터 수집 Part2</label>
+                                    <a href="javascript:void(0)" class="info_btn" onclick="popupS('#popup01','show','800','auto');"><i class="icon_info"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mob_radioArea">
+                                <div class="mob_radioBox">
+                                    <input type="radio" id="radio02_02" name="radioGroup02">
+                                    <label for="radio02_02">4차 산업혁명</label>
+                                    <a href="javascript:void(0)" class="info_btn" onclick="popupS('#popup01','show','800','auto');"><i class="icon_info"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- EOD : 모바일에서 보여지는 화면 -->
+
+
+                <script>
+
+                    $(".layout_boxs input[type=radio]").change(function() {
+
+                        $(this).closest("tr").siblings().removeClass("active");
+                        $(this).closest("tr").addClass("active");
+
+                    });
+
+                    $(".mob_radioWrap input[type=radio]").change(function() {
+
+                        $(this).closest("li").siblings().removeClass("active");
+                        $(this).closest("li").addClass("active");
+
+                    });
+
+                </script>
+
+            </div>
+            <!-- EOD : layout_boxs -->
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs">
+                <!-- floatBox -->
+                <div class="floatBox mt0">
+                    <div class="floatBoxL">
+                        <span class="countBox">
+                            총 <strong>2</strong>건
+                        </span>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll team -->
+                <div class="tableScroll team">
+                    <table class="table_block mob_button mt0">
+                        <caption>팀 , 과제 제출 , 팀원 평가 , 강사 평가 , 게시글 수 , 화상채팅 횟수 , 상세보기로 이루어져 있는 팀프로젝트 상세</caption>
+                        <colgroup>
+                            <col width="5%">
+                            <col width="*">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="9%">
+                        </colgroup>
+                        <thead class="mobH">
+                            <tr>
+                                <th scope="col" colspan="2">팀</th>
+                                <th scope="col" colspan="3">과제 제출</th>
+                                <th scope="col" colspan="2">팀원 평가</th>
+                                <th scope="col" colspan="2">강사 평가</th>
+                                <th scope="col" rowspan="2">게시글 수</th>
+                                <th scope="col" rowspan="2">화상채팅 횟수</th>
+                                <th scope="col" rowspan="2">상세보기</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">팀명</th>
+                                <th scope="col">팀장</th>
+                                <th scope="col">제출</th>
+                                <th scope="col">미제출</th>
+                                <th scope="col">미첨삭</th>
+                                <th scope="col">평가완료</th>
+                                <th scope="col">미평가</th>
+                                <th scope="col">평가완료</th>
+                                <th scope="col">미평가</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ac">
+                                    <!-- pc 영역 -->
+                                    <span class="txt_black mobH">A팀</span>
+                                    <!-- EOD : pc 영역 -->
+                                    <!-- 모바일 보여지는 영역 -->
+                                    <ul class="mob_dash_list mobS">
+                                        <li>
+                                            <span class="txt_black">A팀</span>
+                                        </li>
+                                        <li>
+                                            <span class="txt_gray01">팀장</span>
+                                            <span class="txt_dash txt_black">홍길동</span>
+                                        </li>
+                                    </ul>
+                                    <!-- EOD : 모바일 보여지는 영역 -->
+                                </td>
+                                <td class="ac mobH">홍길동</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">과제제출</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">5명</span>
+                                            <span class="mobS">
+                                                제출 5명 / 미제출 5명 / 미첨삭 0건
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">5명</td>
+                                <td class="ac mobH">0건</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">팀원평가</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">5명</span>
+                                            <span class="mobS">
+                                                 평가완료 5명 / 미평가 5명
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">5명</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">강사평가</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">5명</span>
+                                            <span class="mobS">
+                                                 평가완료 5명 / 미평가 5명
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">5명</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">게시글 수</span>
+                                        <span class="mob_boxR">10</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">화상채팅 횟수</span>
+                                        <span class="mob_boxR">1</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxR">
+                                            <button class="btn_s_blue" onclick="location.href='lecture_team_list.html'">상세보기</button>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">
+                                    <!-- pc 영역 -->
+                                    <span class="txt_black mobH">B팀</span>
+                                    <!-- EOD : pc 영역 -->
+                                    <!-- 모바일 보여지는 영역 -->
+                                    <ul class="mob_dash_list mobS">
+                                        <li>
+                                            <span class="txt_black">B팀</span>
+                                        </li>
+                                        <li>
+                                            <span class="txt_gray01">팀장</span>
+                                            <span class="txt_dash txt_black">남학생</span>
+                                        </li>
+                                    </ul>
+                                    <!-- EOD : 모바일 보여지는 영역 -->
+                                </td>
+                                <td class="ac mobH">남학생</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">과제제출</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">10명</span>
+                                            <span class="mobS">
+                                                제출 10명 / 미제출 0명 / 미첨삭 10건
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">0명</td>
+                                <td class="ac mobH">10건</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">팀원평가</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">10명</span>
+                                            <span class="mobS">
+                                                 평가완료 10명 / 미평가 0명
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">0명</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">강사평가</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">10명</span>
+                                            <span class="mobS">
+                                                 평가완료 10명 / 미평가 0명
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">0명</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">게시글 수</span>
+                                        <span class="mob_boxR">0</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">화상채팅 횟수</span>
+                                        <span class="mob_boxR">0</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxR">
+                                            <button class="btn_s_blue" onclick="location.href='lecture_team_list.html'">상세보기</button>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">
+                                    <!-- pc 영역 -->
+                                    <span class="txt_black mobH">C팀</span>
+                                    <!-- EOD : pc 영역 -->
+                                    <!-- 모바일 보여지는 영역 -->
+                                    <ul class="mob_dash_list mobS">
+                                        <li>
+                                            <span class="txt_black">C팀</span>
+                                        </li>
+                                        <li>
+                                            <span class="txt_gray01">팀장</span>
+                                            <span class="txt_dash txt_black">노학생</span>
+                                        </li>
+                                    </ul>
+                                    <!-- EOD : 모바일 보여지는 영역 -->
+                                </td>
+                                <td class="ac mobH">노학생</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">과제제출</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">0명</span>
+                                            <span class="mobS">
+                                                제출 0명 / 미제출 10명 / 미첨삭 0건
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">10명</td>
+                                <td class="ac mobH">0건</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">팀원평가</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">0명</span>
+                                            <span class="mobS">
+                                                 평가완료 0명 / 미평가 10명
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">10명</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">강사평가</span>
+                                        <span class="mob_boxR">
+                                            <span class="mobH">0명</span>
+                                            <span class="mobS">
+                                                 평가완료 0명 / 미평가 10명
+                                            </span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">10명</td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">게시글 수</span>
+                                        <span class="mob_boxR">5</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxL">화상채팅 횟수</span>
+                                        <span class="mob_boxR">3</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox type02">
+                                        <span class="mob_boxR">
+                                            <button class="btn_s_blue" onclick="location.href='lecture_team_list.html'">상세보기</button>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!--
+                            <tr>
+                              <td class="ac no_dataBox" colspan="12">
+                                <img src="/images/template9/resp/default/icon/icon_no_data_board.png" alt="">
+                                <p class="txt">등록된 팀 프로젝트가 없습니다.</p>
+                              </td>
+                            </tr>
+                            -->
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll team -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD :  pagination -->
+            </div>
+            <!-- EOD : layout_boxs -->
+
+            <!-- popup_wrap -->
+            <section class="popup_wrap" id="popup01">
+                <!-- popup_Box -->
+                <div class="popup_Box">
+                    <!-- popup_BoxIn -->
+                    <div class="popup_BoxIn">
+                        <div class="popupH">빅데이터 수집 Part2<a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup01','close');" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a></div>
+                        <div class="popupCBox">
+                            <div class="popupCBoxIn">
+
+                                <!-- table_hori -->
+                                <table class="table_hori mt0">
+                                    <caption>프로젝트 기간 , 과제 제출방법 , 과제 제출기간 , 팀원 평가기간으로 이루어진 프로젝트 정보</caption>
+                                    <colgroup>
+                                        <col width="120px">
+                                        <col width="*">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>프로젝트 기간</th>
+                                            <td>2020.05.01 00:20 ~
+                                                2020.05.01 00:20</td>
+                                        </tr>
+                                        <tr>
+                                            <th>과제 제출방법</th>
+                                            <td>개별 제출</td>
+                                        </tr>
+                                        <tr>
+                                            <th>과제 제출기간</th>
+                                            <td>2020.05.01 00:20 ~
+                                                2020.05.01 00:20</td>
+                                        </tr>
+                                        <tr>
+                                            <th>팀원 평가기간</th>
+                                            <td>2020.05.01 00:20 ~
+                                                2020.05.01 00:20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- EOD : table_hori -->
+
+                            </div>
+                        </div>
+                        <div class="popupF">
+                            <button type="button" class="btn_m_blue" onclick="popupS('#popup01','close');">확인</button>
+                            <button type="button" class="btn_m_white" onclick="popupS('#popup01','close');">취소</button>
+                        </div>
+                    </div>
+                    <!-- popup_BoxIn -->
+                </div>
+                <!-- EOD : popup_Box -->
+                <div class="popup_bg" onclick="popupS('#popup01','close');"></div>
+            </section>
+            <!-- EOD : popup_wrap -->
+
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

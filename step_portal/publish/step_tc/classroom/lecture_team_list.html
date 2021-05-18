@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>팀 프로젝트</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs">
+
+                <!-- team_info_wrap -->
+                <div class="team_info_wrap">
+                    <ul class="team_info_area">
+                        <li><span class="team">A팀</span></li>
+                        <li><strong class="label">과제</strong><span class="data">개별제출</span></li>
+                        <li><strong class="label">팀장</strong><span class="data">홍길동</span></li>
+                    </ul>
+                    <div class="team_info_member">
+                        <strong>팀원</strong><span>가학생, 나학생, 다학생, 라학생, 마학생, 바학생, 사학생, 아학생, 자학생 </span>
+                    </div>
+                </div>
+                <!-- EOD : team_info_wrap -->
+
+                <!-- btn_rights -->
+                <div class="btn_rights">
+                    <button type="button" class="btn_sr_white" onclick="location.href='lecture_team.html'">팀 목록</button>
+                </div>
+                <!-- EOD : btn_rights -->
+
+                <!-- tab_arrowBox -->
+                <div class="tab_arrowBox">
+                    <ul class="tab_arrow" role="tablist">
+                        <li class="active"><a href="lecture_team_list.html"><span>게시판</span></a></li>
+                        <li><a href="lecture_team_assign.html"><span>과제물</span></a></li>
+                        <li><a href="lecture_team_eval.html"><span>팀원평가</span></a></li>
+                        <li><a href="lecture_team_info.html"><span>팀 구성원</span></a></li>
+                    </ul>
+                </div>
+                <!-- EOD : tab_arrowBox -->
+
+                <!-- searchBox -->
+                <div class="searchBox bt0">
+                    <div class="selectBox width_m">
+                        <label for="select_type01"><span>제목</span></label>
+                        <select id="select_type01">
+                            <option>제목</option>
+                        </select>
+                    </div>
+                    <div class="search_area">
+                        <div class="search_areaIn">
+                            <input type="text">
+                        </div>
+                        <button type="button" class="btn_s_blue">검색</button>
+                    </div>
+                </div>
+                <!-- EOD : searchBox -->
+
+                <!-- team_txt_info -->
+                <div class="team_txt_info">
+                    <div class="team_txt_infoR">
+                        <button class="btn_s_blue">화상채팅방 개설</button>
+                        <button class="btn_s_blue" onclick="popupS('#popup01','show','800','auto','scroll-x');">화상채팅하기</button>
+                        <button class="btn_s_point" onclick="location.href='lecture_team_list_write.html'">등록</button>
+                    </div>
+                </div>
+                <!-- EOD : team_txt_info -->
+
+                <table class="table_normal mt0">
+                    <caption>NO,제목,첨부파일,등록자,등록일,조회로 구성된 팀 프로젝트 상세</caption>
+                    <colgroup>
+                        <col width="9%">
+                        <col width="*">
+                        <col class="mobH" width="9%">
+                        <col class="mobH" width="9%">
+                        <col class="mobH" width="12%">
+                        <col class="mobH" width="10%">
+                    </colgroup>
+                    <thead>
+                    <tr class="mobH">
+                        <th>NO</th>
+                        <th>제목</th>
+                        <th>첨부파일</th>
+                        <th>등록자</th>
+                        <th>등록일</th>
+                        <th>조회</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>4</td>
+                        <td class="al">
+                            <div class="label_title icon">
+                                <div class="label_titleR">
+                                    <a class="label_titleLink" href="lecture_team_list_view.html">
+                        <span class="label_titleLinkIn">
+                            <span class="txt">O월 O일에 화상 채팅하려고 하는데 괜찮은가요?</span>
+                        </span>
+                                        <i class="icon_new"><span class="blind">new</span></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <ul class="mobBox">
+                                <li>등록자 이학생</li>
+                                <li>등록일 2020.02.04</li>
+                                <li>조회 13</li>
+                                <li>
+                                    <div class="iconBox">
+                                        <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        </td>
+                        <td class="mobH">
+                            <div class="iconBox">
+                                <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                            </div>
+                        </td>
+                        <td class="mobH">이학생</td>
+                        <td class="mobH">2020.04.13</td>
+                        <td class="mobH">13</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td class="al">
+                            <div class="label_title icon">
+                                <div class="label_titleR">
+                                    <a class="label_titleLink" href="lecture_team_list_view.html">
+                        <span>
+                            <span class="txt">카카오톡 오픈채팅방을 개설했어요.카카오톡 오픈채팅방을 개설했어요.카카오톡 오픈채팅방을 개설했어요.카카오톡 오픈채팅방을 개설했어요.</span>
+                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <ul class="mobBox">
+                                <li>등록자 김학생</li>
+                                <li>등록일 2020.02.04</li>
+                                <li>조회 13</li>
+                            </ul>
+                            <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        </td>
+                        <td class="mobH"></td>
+                        <td class="mobH">김학생</td>
+                        <td class="mobH">2020.04.13</td>
+                        <td class="mobH">13</td>
+                    </tr>
+
+                    <tr class="reple">
+                        <td>2</td>
+                        <td class="al">
+                            <div class="label_title icon">
+                                <div class="label_titleR">
+                                    <a class="label_titleLink" href="lecture_team_list_view.html">
+                        <span>
+                            <span class="txt">카카오톡 오픈채팅방을 개설했어요.</span>
+                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <ul class="mobBox">
+                                <li>등록자 김학생</li>
+                                <li>등록일 2020.02.04</li>
+                                <li>조회 13</li>
+                            </ul>
+                            <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        </td>
+                        <td class="mobH"></td>
+                        <td class="mobH">김학생</td>
+                        <td class="mobH">2020.04.13</td>
+                        <td class="mobH">13</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>1</td>
+                        <td class="al">
+                            <div class="label_title icon">
+                                <div class="label_titleR">
+                                    <a class="label_titleLink" href="lecture_team_list_view.html">
+                        <span>
+                            <span class="txt">제가 이것도 찾았는데 참고 부탁드립니다.</span>
+                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <ul class="mobBox">
+                                <li>등록자 박학생</li>
+                                <li>등록일 2020.02.04</li>
+                                <li>조회 13</li>
+                                <li>
+                                    <div class="iconBox">
+                                        <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        </td>
+                        <td class="mobH">
+                            <div class="iconBox">
+                                <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                            </div>
+                        </td>
+                        <td class="mobH">박학생</td>
+                        <td class="mobH">2020.04.13</td>
+                        <td class="mobH">13</td>
+                    </tr>
+
+                    <!-- noData
+                    <tr>
+                      <td colspan="6" class="no_dataBox">
+                        <img src="/images/template9/resp/default/icon/icon_no_data_board.png" alt="">
+                        <p class="txt">등록된 게시글이 없습니다.</p>
+                      </td>
+                    </tr>
+                    -->
+                    </tbody>
+                </table>
+
+                <!-- popup_wrap -->
+                <section class="popup_wrap" id="popup01">
+                    <!-- popup_Box -->
+                    <div class="popup_Box">
+                        <!-- popup_BoxIn -->
+                        <div class="popup_BoxIn">
+                            <div class="popupH">레이어팝업<a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup01','close');" title="닫기"><img src="/images/template11/resp/default/icon/icon_popup_close.png"></a></div>
+                            <div class="popupCBox">
+                                <div class="popupCBoxIn">
+
+                                    <h4 class="mt0">시험정보</h4>
+
+                                    <div class="tableScroll">
+                                        <!-- table_hori -->
+                                        <table class="table_hori">
+                                            <caption>시험구분 , 시험기간 , 시험시간(분) , 제한진도율 , 문항수로 이루어진 테이블</caption>
+                                            <colgroup>
+                                                <col width="14%">
+                                                <col width="36%">
+                                                <col width="14%">
+                                                <col width="36%">
+                                            </colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <th><span>상담분류</span></th>
+                                                <td colspan="3">
+                                                    최종평가
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span>시험기간</span></th>
+                                                <td>2020.04.13~2020.05.13</td>
+                                                <th><span>시험시간(분)</span></th>
+                                                <td>60 분</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span>제한진도율</span></th>
+                                                <td>00 %</td>
+                                                <th><span>문항수</span></th>
+                                                <td>20</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    <!-- EOD : table_hori -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="popupF">
+                                <button type="button" class="btn_m_blue" onclick="popupS('#popup01','close');">확인</button>
+                                <button type="button" class="btn_m_white" onclick="popupS('#popup01','close');">취소</button>
+                            </div>
+                        </div>
+                        <!-- popup_BoxIn -->
+                    </div>
+                    <!-- EOD : popup_Box -->
+                    <div class="popup_bg" onclick="popupS('#popup01','close');"></div>
+                </section>
+                <!-- EOD : popup_wrap -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

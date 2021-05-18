@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <link href="/css/classroom/template3/skin/skin_blueClass.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>라이브세미나</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs">
+
+                <p class="mt0 txt_info">진행 중인 라이브세미나의 [참석하기] 버튼을 클릭하면 라이브세미나에 입장할 수 있습니다. <br>
+                    참석하지 못한 라이브세미나가 있는 경우에는 추후에 동영상이 업로드 되면 [학습하기] 버튼을 클릭하여 학습할 수 있습니다.
+                </p>
+
+                <div class="tableScroll">
+                    <table class="table_block type03 mt20 table-debate">
+                        <caption>제목 ,일정 , 참석여부 , 점수 , 참석하기로 구성된 라이브세미나 상세</caption>
+                        <colgroup>
+                            <col width="*">
+                            <col width="15%">
+                            <col width="12%">
+                            <col width="5%">
+                            <col width="120px">
+                        </colgroup>
+                        <thead class="mobH">
+                        <tr>
+                            <th scope="col">제목</th>
+                            <th scope="col">일정</th>
+                            <th scope="col">참석여부</th>
+                            <th scope="col">점수</th>
+                            <th scope="col">참석하기</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="al">
+                                <span class="mob_boxR">
+                                    <span class="label_s_black mg0 vertiM">On Air</span>
+                                    <span class="mob_inline vertiM">
+                                        <span class="txt">첫번째 라이브 세미나</span>
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">일정</span>
+                                    <span class="mob_boxR">
+                                            2020-06-10 <br> 09:00 ~ 12:00
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">참석여부</span>
+                                    <span class="mob_boxR">
+                                            <span class="txt_blue01 mg0 vertiM">참석</span> <br>
+                                            <span class="txt_default mg0 vertiM">00:00:00</span>
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <span class="mobH"></span>
+                                <div class="mobBox">
+                                    <span class="mob_boxL">점수</span>
+                                    <span class="mob_boxR">
+                                            <span class="txt_default mg0">80점</span>
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <button type="button" class="btn_s_red">참석하기</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="al">
+                                <span class="mob_boxR">
+                                    <span class="label_s_black mg0">On Air</span>
+                                    <span class="mob_inline vertiM">
+                                        <span class="txt">두번째 라이브 세미나</span>
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">일정</span>
+                                    <span class="mob_boxR">
+                                            2020-06-10 <br> 09:00 ~ 12:00
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">참석여부</span>
+                                    <span class="mob_boxR">
+                                            <span class="txt_red01 mg0 vertiM">불참</span>
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <span class="mobH"></span>
+                                <div class="mobBox">
+                                    <span class="mob_boxL">점수</span>
+                                    <span class="mob_boxR">
+                                            <span class="txt_default mg0">80점</span>
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <button type="button" class="btn_s_red">참석하기</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="al">
+                                <span class="mob_boxR">
+                                    <span class="label_s_red mg0">On Air</span>
+                                    <span class="mob_inline vertiM">
+                                        <span class="txt">세번째 라이브 세미나</span>
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">일정</span>
+                                    <span class="mob_boxR">
+                                            2020-06-10 <br> 09:00 ~ 12:00
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">참석여부</span>
+                                    <span class="mob_boxR">
+                                            <span class="txt_default mg0 vertiM">-</span>
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <span class="mobH"></span>
+                                <div class="mobBox">
+                                    <span class="mob_boxL">점수</span>
+                                    <span class="mob_boxR">
+                                            <span class="txt_default mg0 vertiM">-</span>
+                                        </span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <span class="mobH"></span>
+                                <div class="mobBox">
+                                    <span class="mob_boxR">
+                                            <button type="button" class="btn_s_black" onclick="window.open('popup/popup_serminar_notattend.html','','width=800, height=650');">불참사유</button>
+                                        </span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- noData
+                        <tr>
+                          <td class="ac no_dataBox" colspan="7">
+                            <img src="/images/template4/resp/default/icon/icon_no_data_board.png" alt="">
+                            <p class="txt">라이브세미나 일정이 없습니다.</p>
+                          </td>
+                        </tr>
+                        -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!-- sub_visual -->
+<section class="sub_visual">
+    <!-- sub_visualIn -->
+    <div class="sub_visualIn">
+        <p class="location"></p>
+        <nav class="lnb"></nav>
+    </div>
+    <!-- EOD : sub_visualIn -->
+</section>
+<!-- EOD : sub_visual -->
+
+<script>
+    if(window.location.href.indexOf("course_") > -1) {
+
+        $(".sub_visual").find(".location").text("전체과정");
+        $(".sub_visual").addClass("sub_visual01");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+            lnb += "<li class='active'><a href='course_process.html'><span>이러닝과정</span></a></li>";
+            lnb += "<li><a href='course_process.html'><span>가상현실(VR)과정</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if (window.location.href.indexOf("course_") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }
+
+    }else if(window.location.href.indexOf("wiki_") > -1){
+
+        $(".sub_visual").find(".location").text("STEP위키");
+        $(".sub_visual").addClass("sub_visual02");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+            lnb += "<li><a href='wiki_all.html'><span>전체 위키</span></a></li>";
+            lnb += "<li><a href='wiki_my.html'><span>나의 위키</span></a></li>";
+            lnb += "<li><a href='wiki_club.html'><span>전체 인클럽</span></a></li>";
+            lnb += "<li><a href='wiki_introduce.html'><span>STEP위키 소개</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if(window.location.href.indexOf("all") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }else if(window.location.href.indexOf("my") > -1) {
+
+            $(".lnb").find("li:nth-child(2)").addClass("active")
+
+        }else if(window.location.href.indexOf("club") > -1) {
+
+            $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        }else if(window.location.href.indexOf("introduce") > -1) {
+
+            $(".lnb").find("li:nth-child(4)").addClass("active")
+
+        }
+
+    }else if(window.location.href.indexOf("customer_") > -1){
+
+        $(".sub_visual").find(".location").text("고객센터");
+        $(".sub_visual").addClass("sub_visual03");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+        lnb += "<li><a href='customer_notice.html'><span>공지사항</span></a></li>";
+        lnb += "<li><a href='customer_file.html'><span>자료실</span></a></li>";
+        lnb += "<li><a href='customer_faq.html'><span>자주묻는 질문</span></a></li>";
+        lnb += "<li><a href='customer_question.html'><span>질의응답</span></a></li>";
+        lnb += "<li><a href='customer_news.html'><span>STEP 뉴스</span></a></li>";
+        lnb += "<li><a href='customer_pr_hall.html'><span>홍보관</span></a></li>";
+        lnb += "<li><a href='customer_event.html'><span>이벤트</span></a></li>";
+        lnb += "<li><a href='customer_edu_apply.html'><span>기업교육신청게시판</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if(window.location.href.indexOf("notice") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }else if(window.location.href.indexOf("file") > -1) {
+
+            $(".lnb").find("li:nth-child(2)").addClass("active")
+
+        }else if(window.location.href.indexOf("faq") > -1) {
+
+            $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        }else if(window.location.href.indexOf("question") > -1) {
+
+            $(".lnb").find("li:nth-child(4)").addClass("active")
+
+        }else if(window.location.href.indexOf("news") > -1) {
+
+            $(".lnb").find("li:nth-child(5)").addClass("active")
+
+        }else if(window.location.href.indexOf("pr_hall") > -1) {
+
+            $(".lnb").find("li:nth-child(6)").addClass("active")
+
+        }else if(window.location.href.indexOf("event") > -1) {
+
+            $(".lnb").find("li:nth-child(7)").addClass("active")
+
+        }else if(window.location.href.indexOf("edu_apply") > -1) {
+
+            $(".lnb").find("li:nth-child(8)").addClass("active")
+
+        }
+
+    }else if(window.location.href.indexOf("lecture_") > -1){
+
+        $(".sub_visual").find(".location").text("스토어강의실");
+        $(".sub_visual").addClass("sub_visual04");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+            lnb += "<li><a href='lecture_home.html'><span>나의 홈</span></a></li>";
+            lnb += "<li><a href='lecture_learning.html'><span>나의 학습</span></a></li>";
+            lnb += "<li><a href='lecture_survey.html'><span>설문</span></a></li>";
+            lnb += "<li><a href='lecture_question.html'><span>문의내역</span></a></li>";
+            lnb += "<li><a href='lecture_bookmark.html'><span>학습메모/북마크</span></a></li>";
+            lnb += "<li><a href='lecture_interest.html'><span>관심과정</span></a></li>";
+            lnb += "<li><a href='lecture_cash.html'><span>훈련과정 결제정보</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if(window.location.href.indexOf("home") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }else if(window.location.href.indexOf("learning") > -1) {
+
+            $(".lnb").find("li:nth-child(2)").addClass("active")
+
+        }else if(window.location.href.indexOf("survey") > -1) {
+
+            $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        }else if(window.location.href.indexOf("question") > -1) {
+
+            $(".lnb").find("li:nth-child(4)").addClass("active")
+
+        }else if(window.location.href.indexOf("bookmark") > -1) {
+
+            $(".lnb").find("li:nth-child(5)").addClass("active")
+
+        }else if(window.location.href.indexOf("interest") > -1) {
+
+            $(".lnb").find("li:nth-child(6)").addClass("active")
+
+        }else if(window.location.href.indexOf("cash") > -1) {
+
+            $(".lnb").find("li:nth-child(7)").addClass("active")
+
+        }
+
+    }else if(window.location.href.indexOf("intro_") > -1){
+
+        $(".sub_visual").find(".location").text("STEP소개");
+        $(".sub_visual").addClass("sub_visual05");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+            lnb += "<li><a href='intro_step.html'><span>스마트플랫폼 STEP 소개</span></a></li>";
+            lnb += "<li><a href='intro_agency.html'><span>기관소개</span></a></li>";
+            // lnb += "<li><a href='intro_vt.html'><span>가상훈련(VT)소개</span></a></li>";
+            lnb += "<li><a href='intro_greeting.html'><span>인사말</span></a></li>";
+            lnb += "<li><a href='intro_history.html'><span>연혁</span></a></li>";
+            lnb += "<li><a href='intro_directions.html'><span>찾아오시는길</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if(window.location.href.indexOf("step") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }else if(window.location.href.indexOf("agency") > -1) {
+
+            $(".lnb").find("li:nth-child(2)").addClass("active")
+
+        // }else if(window.location.href.indexOf("vt") > -1) {
+        //
+        //     $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        }else if(window.location.href.indexOf("greeting") > -1) {
+
+            $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        }else if(window.location.href.indexOf("history") > -1) {
+
+            $(".lnb").find("li:nth-child(4)").addClass("active")
+
+        }else if(window.location.href.indexOf("directions") > -1) {
+
+            $(".lnb").find("li:nth-child(5)").addClass("active")
+
+        }
+
+    }else if(window.location.href.indexOf("membership_") > -1) {
+
+        $(".sub_visual").find(".location").text("Membership");
+        $(".sub_visual").addClass("sub_visual06");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+        lnb += "<li><a href='membership_privacy.html'><span>개인정보처리방침</span></a></li>";
+        lnb += "<li><a href='membership_terms.html'><span>이용약관</span></a></li>";
+        lnb += "<li><a href='membership_mail.html'><span>이메일무단수집거부</span></a></li>";
+        lnb += "<li><a href='membership_video.html'><span>영상정보처리기기 운영관리방침</span></a></li>";
+        lnb += "<li><a href='membership_sitemap.html'><span>사이트맵</span></a></li>";
+        lnb += "<li><a href='membership_remote.html'><span>원격지원</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if (window.location.href.indexOf("privacy") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        } else if (window.location.href.indexOf("terms") > -1) {
+
+            $(".lnb").find("li:nth-child(2)").addClass("active")
+
+        } else if (window.location.href.indexOf("mail") > -1) {
+
+            $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        } else if (window.location.href.indexOf("video") > -1) {
+
+            $(".lnb").find("li:nth-child(4)").addClass("active")
+
+        } else if (window.location.href.indexOf("sitemap") > -1) {
+
+            $(".lnb").find("li:nth-child(5)").addClass("active")
+
+        } else if (window.location.href.indexOf("remote") > -1) {
+
+            $(".lnb").find("li:nth-child(6)").addClass("active")
+
+        }
+    }
+
+</script>

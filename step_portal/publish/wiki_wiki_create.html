@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- header -->
+<header class="header headerInclude"></header>
+<!-- EOD : header -->
+
+<!-- lnb -->
+<section class="lnbInclude"></section>
+<!-- EOD : lnb -->
+
+<!-- contentLayout -->
+<div class="sub_contentLayout" id="content">
+    <!-- content_wrap -->
+    <div class="content_wrap">
+        <h2 class="ir">위키 등록</h2>
+
+        <div class="wiki-blueBox">
+            <p class="main_txt"><span class="txt_point">게시글 등록 운영 원칙</span></p>
+
+            <p class="txt_bullet">운영원칙에 어긋나는 내용은 경고 및 통보 없이 삭제될 수 있습니다.</p>
+
+            <p class="txt_bullet">방송통신심의위원회의 ‘정보통신에 관한 심의 규정’, 한국인터넷자율정책기구의 ‘정책규정’ 등을 기반으로 문제 게시물은 삭제될 수 있습니다.</p>
+
+            <p class="txt_bullet">자극적이고 혐오스러운 내용, 비속어, 폭력적 내용, 특정 대상을 비하하거나 차별을 조장하는 내용, 개인정보 유출을 비롯해 타인의 권리를 침해하는 내용,
+            반복되는 내용 등은 경고 없이 삭제 또는 제재될 수 있습니다.</p>
+
+            <p class="txt_bullet">댓글이 있는 글은 수정/삭제 될 수 없습니다.</p>
+        </div>
+
+        <table class="table_hori">
+            <caption>게시글 제목 , 공지여부 , 제목 , 내용 , 태그로 이루어진 위키등록 상세</caption>
+            <colgroup>
+                <col width="14%">
+                <col width="*">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>게시글 제목</th>
+                    <td>
+                        <div class="selectBox Full">
+                            <label for="select_name"><span>사용자 제목</span></label>
+                            <select id="select_name">
+                                <option>사용자 제목</option>
+                                <option>사용자 제목2</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>공지여부</th>
+                    <td>
+                        <div class="checkBox">
+                            <input type="checkbox" id="chk_notice">
+                            <label for="chk_notice">공지</label>
+                        </div>
+                        <span class="txt_asterisk txt_notice">공지 체크 시, 인클럽 상단에 [공지]로 고정됩니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="asterisk">제목</span></th>
+                    <td>
+                        <div class="inputBox Full">
+                            <input type="text">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="asterisk">내용</span></th>
+                    <td>
+                        <div class="inputBox Full">
+                            <textarea></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>태그</th>
+                    <td>
+                        <div class="inputBox Full">
+                            <input type="text">
+                        </div>
+                        <p class="txt_asterisk"><span class="txt_gray">태그는 콤마(,)로 구분하여 등록해주세요.</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- EOD : table_hori -->
+
+        <div class="btnBox">
+            <div class="rightBox">
+                <button type="button" class="btn_m_blue">저장</button>
+                <button type="button" class="btn_m_black">목록</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- EOD : content_wrap -->
+</div>
+<!-- EOD : contentLayout -->
+
+<!-- footer -->
+<footer class="footer footerInclude"></footer>
+<!-- EOD : footer -->
+
+<script>
+
+    // 로그인후 유저 학습 과정
+    function socialWikiBanner() {
+
+        var socialWikiSlider = $(".social-wiki-Slider");
+
+        socialWikiSlider.slick({
+            infinite: true,
+            autoplay: true,
+            customDots: true,
+            speed: 1000,
+            prevArrow: '.social-wiki-control .btn-social-wiki-prev',
+            nextArrow: '.social-wiki-control .btn-social-wiki-next',
+            focusOnSelect: true,
+            dots: true,
+            dotsClass: 'control_paging',
+            customPaging: function (slider, i) {
+                return  '<span class="now_num">' + (numberPad(i + 1, 2)) + '</span>' + '<em class="slash">/</em>' + '<span class="all_num">' + numberPad(slider.slideCount, 2) + '</span>';
+            },
+        });
+    }
+
+    socialWikiBanner();
+</script>
+
+
+</body>
+</html>

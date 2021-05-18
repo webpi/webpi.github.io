@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>라이브세미나</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <h3 class="mt0">라이브세미나 일정 정보</h3>
+
+                <div class="tableScroll">
+                    <table class="table_hori mob_block mt0">
+                        <caption>제목 , 일정 , 시작 전 입장가능 시간 , 불참사유 접수여부 , 불참사유 접수기간 , 제한 진도율 , 안내사항 , 동영상 첨부 , 라이브세미나 코드 , 등록자 , 등록일 , 최종 수정일로 이루어진 라이브세미나 일정정보 작성</caption>
+                        <colgroup>
+                            <col width="200px">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="asterisk">제목</span></th>
+                                <td>
+                                    <div class="inputBox Full">
+                                        <input type="text">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="asterisk">일정</span></th>
+                                <td>
+                                    <div class="dateBox">
+                                        <div class="dateBoxIn">
+                                            <div class="inputBox">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- timeWrap -->
+                                    <div class="timeWrap">
+                                        <!-- timeBox -->
+                                        <div class="timeBox">
+                                            <!-- timeBoxIn -->
+                                            <div class="timeBoxIn">
+                                                <div class="selectBox">
+                                                    <label for="select_before_time"><span>0</span></label>
+                                                    <select id="select_before_time">
+                                                        <option>0</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                        <option>13</option>
+                                                        <option>14</option>
+                                                        <option>15</option>
+                                                        <option>16</option>
+                                                        <option>17</option>
+                                                        <option>18</option>
+                                                        <option>19</option>
+                                                        <option>20</option>
+                                                        <option>21</option>
+                                                        <option>22</option>
+                                                        <option>23</option>
+                                                        <option>24</option>
+                                                    </select>
+                                                </div>
+                                                <div class="txt">
+                                                    시
+                                                </div>
+                                                <div class="selectBox">
+                                                    <label for="select_before_min"><span>00</span></label>
+                                                    <select id="select_before_min">
+                                                        <option>00</option>
+                                                        <option>10</option>
+                                                        <option>20</option>
+                                                        <option>30</option>
+                                                        <option>40</option>
+                                                        <option>50</option>
+                                                        <option>60</option>
+                                                    </select>
+                                                </div>
+                                                <div class="txt">
+                                                    분
+                                                </div>
+                                            </div>
+                                            <!-- EOD : timeBoxIn -->
+                                        </div>
+                                        <!-- EOD : timeBox -->
+
+                                        <div class="wave">
+                                            ~
+                                        </div>
+
+                                        <!-- timeBox -->
+                                        <div class="timeBox">
+                                            <!-- timeBoxIn -->
+                                            <div class="timeBoxIn">
+                                                <div class="selectBox">
+                                                    <label for="select_after_time"><span>0</span></label>
+                                                    <select id="select_after_time">
+                                                        <option>0</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                        <option>13</option>
+                                                        <option>14</option>
+                                                        <option>15</option>
+                                                        <option>16</option>
+                                                        <option>17</option>
+                                                        <option>18</option>
+                                                        <option>19</option>
+                                                        <option>20</option>
+                                                        <option>21</option>
+                                                        <option>22</option>
+                                                        <option>23</option>
+                                                        <option>24</option>
+                                                    </select>
+                                                </div>
+                                                <div class="txt">
+                                                    시
+                                                </div>
+                                                <div class="selectBox">
+                                                    <label for="select_after_min"><span>00</span></label>
+                                                    <select id="select_after_min">
+                                                        <option>00</option>
+                                                        <option>10</option>
+                                                        <option>20</option>
+                                                        <option>30</option>
+                                                        <option>40</option>
+                                                        <option>50</option>
+                                                        <option>60</option>
+                                                    </select>
+                                                </div>
+                                                <div class="txt">
+                                                    분
+                                                </div>
+                                            </div>
+                                            <!-- EOD : timeBoxIn -->
+                                        </div>
+                                        <!-- EOD : timeBox -->
+                                    </div>
+                                    <!-- EOD : timeWrap -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="asterisk">시작 전 입장가능 시간</span></th>
+                                <td>
+                                    <div class="inputBox width_s vertiM">
+                                        <input type="text">
+                                    </div>
+                                    <span class="vertiM">분</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="asterisk">불참사유 접수여부</span></th>
+                                <td>
+                                    <ul class="radioList">
+                                        <li>
+                                            <input type="radio" id="radio01_01" name="radioGroup">
+                                            <label for="radio01_01">사용</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio01_02" name="radioGroup">
+                                            <label for="radio01_02">사용안함</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="asterisk">불참사유 접수기간</span></th>
+                                <td>
+                                    <div class="dateBox">
+                                        <div class="dateBoxIn">
+                                            <div class="inputBox Full">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                            <div class="wave">~</div>
+                                            <div class="inputBox Full">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="asterisk">제한 진도율</span></th>
+                                <td>
+                                    <div class="inputBox width_s vertiM">
+                                        <input type="text">
+                                    </div>
+                                    <span class="vertiM">차시</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="asterisk">안내사항</span></th>
+                                <td>
+                                    <div class="inputBox Full">
+                                        <textarea placeholder="내용"></textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">동영상 첨부</th>
+                                <td>
+                                    <div class="fileBox">
+                                        <button type="button" class="btn_s_blue">파일찾기</button>
+                                        <ul class="fileList">
+                                            <li>
+                                                <div class="file">
+                                                    <span class="txt">동영상 파일1</span>
+                                                    <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="file">
+                                                    <span class="txt">동영상 파일2</span>
+                                                    <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">라이브세미나 코드</th>
+                                <td>
+                                    <div class="inputBox">
+                                        <input type="text" readonly="readonly" value="code_sample">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">등록자</th>
+                                <td> - </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">등록일</th>
+                                <td> - </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">최종 수정일</th>
+                                <td> - </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- btnBox -->
+                <div class="btnBox">
+                    <div class="rightBox">
+                        <a href="lecture_seminar.html" class="btn_m_blue">저장</a>
+                        <a href="lecture_seminar.html" class="btn_m_black">취소</a>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+                <!-- btnBox -->
+                <div class="btnBox">
+                    <div class="rightBox">
+                        <a href="lecture_seminar.html" class="btn_m_blue">저장</a>
+                        <a href="lecture_seminar.html" class="btn_m_blue_gra">삭제</a>
+                        <a href="lecture_seminar.html" class="btn_m_black">취소</a>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

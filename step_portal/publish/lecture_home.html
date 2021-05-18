@@ -1,0 +1,911 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet" type="text/css">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet" type="text/css">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <!-- content_wrap -->
+        <div class="content_wrap">
+            <!-- lecture_section -->
+            <section class="lecture_section">
+                <!-- tit_area -->
+                <div class="tit_area">
+                    <div class="left_area">
+                        <span class="tit">나의 학습활동</span>
+                    </div>
+                </div>
+                <!-- EOD : tit_area -->
+
+                <!-- myHome_InfoBox -->
+                <div class="myH_InfoBox">
+                    <!-- myH_InfoBox_Select -->
+                    <div class="myH_InfoBox_Select">
+                        <div class="selectBox">
+                            <label for="select_year"><span>2020년</span></label>
+                            <select id="select_year">
+                                <option>2020년</option>
+                                <option>2019년</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn_s_blue">검색</button>
+                    </div>
+                    <!-- EOD : myH_InfoBox_Select -->
+
+                    <div class="myH_cntBox">
+                        <ul class="myH_circle">
+                           <li>
+                               <div class="obj">
+                                   <div class="txt">
+                                       <div class="txtIn">
+                                           수강신청
+                                       </div>
+                                   </div>
+                                   <div class="cnt">
+                                       10
+                                   </div>
+                               </div>
+                           </li>
+                            <li>
+                                <div class="obj type02">
+                                    <div class="txt">
+                                        <div class="txtIn">
+                                          학습 중
+                                        </div>
+                                    </div>
+                                    <div class="cnt">
+                                        12
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="obj type03">
+                                    <div class="txt">
+                                       <div class="txtIn">
+                                           수료
+                                           <small>(복습과정)</small>
+                                       </div>
+                                    </div>
+                                    <div class="cnt">
+                                        15
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- EOD : myHome_InfoBox -->
+
+                <!-- sub_content -->
+                <div class="sub_content">
+                    <!-- 클래스 추가 -->
+                    <ul class="myH_status">
+                        <li class="oneRow">
+                            <!-- sub_contentBox -->
+                            <div class="sub_contentBox">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <div class="left_area">
+                                        <span class="tit">학습중인 과정</span>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- EOD : tit_area -->
+
+                                <!-- processSliderBox -->
+                                <div class="processSliderBox">
+                                    <!-- processSlider -->
+                                    <div class="processSlider" id="slider01">
+                                        <!-- 데이터가 있을때 -->
+                                        <div class="slide">
+                                            <div class="wgBox">
+                                                <div class="wgBoxIn">
+                                                    <p class="tit">위기에 강한 기업의 비결! 독서경영 에너지 텍스트 생략 테스트 입니다.</p>
+                                                    <ul class="tag">
+                                                        <li><span>국가기간전략훈련</span></li>
+                                                        <li><span>가상훈련</span></li>
+                                                        <li><span>환급</span></li>
+                                                        <li><span>초급</span></li>
+                                                        <li><span>무료</span></li>
+                                                        <li><span>모바일</span></li>
+                                                    </ul>
+                                                    <div class="infoBox">
+                                                        <div class="leftBox">
+                                                            <span class="label">교육기간</span>
+                                                            <span class="data">2020.01.15~2020.02.14</span>
+                                                        </div>
+                                                        <div class="dateBox">
+                                                            <span class="label">잔여기간</span>
+                                                            <span class="data"><strong class="num">51</strong>일</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progressBox">
+                                                        <div class="progressBoxIn">
+                                                            <div class="progresLabel">
+                                                                진도율
+                                                            </div>
+                                                            <div class="progressBar">
+                                                                <div class="progressBarIn">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="progressPer">
+                                                                <span class="text"><strong class="num">75</strong></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="buttonBox">
+                                                        <a href="javascript:void(0)" class="btn_m_blue_gra">강의실 바로가기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- EOD : wgBox -->
+                                        </div>
+                                        <div class="slide">
+                                            <div class="wgBox">
+                                                <div class="wgBoxIn">
+                                                    <p class="tit">위기에 강한 기업의 비결! 22222</p>
+                                                    <ul class="tag">
+                                                        <li><span>국가기간전략훈련</span></li>
+                                                        <li><span>가상훈련</span></li>
+                                                        <li><span>환급</span></li>
+                                                        <li><span>초급</span></li>
+                                                        <li><span>무료</span></li>
+                                                        <li><span>모바일</span></li>
+                                                    </ul>
+                                                    <div class="infoBox">
+                                                        <div class="leftBox">
+                                                            <span class="label">교육기간</span>
+                                                            <span class="data">2020.01.15~2020.02.14</span>
+                                                        </div>
+                                                        <div class="dateBox">
+                                                            <span class="label">잔여기간</span>
+                                                            <span class="data"><strong class="num">120</strong>일</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progressBox">
+                                                        <div class="progressBoxIn">
+                                                            <div class="progresLabel">
+                                                                진도율
+                                                            </div>
+                                                            <div class="progressBar">
+                                                                <div class="progressBarIn">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="progressPer">
+                                                                <span class="text"><strong class="num">10</strong></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="buttonBox">
+                                                        <a href="javascript:void(0)" class="btn_m_blue_gra">강의실 바로가기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- EOD : wgBox -->
+                                        </div>
+                                        <div class="slide">
+                                            <div class="wgBox">
+                                                <div class="wgBoxIn">
+                                                    <p class="tit">위기에 강한 기업의 비결! 333333</p>
+                                                    <ul class="tag">
+                                                        <li><span>국가기간전략훈련</span></li>
+                                                        <li><span>가상훈련</span></li>
+                                                        <li><span>환급</span></li>
+                                                        <li><span>초급</span></li>
+                                                        <li><span>무료</span></li>
+                                                        <li><span>모바일</span></li>
+                                                    </ul>
+                                                    <div class="infoBox">
+                                                        <div class="leftBox">
+                                                            <span class="label">교육기간</span>
+                                                            <span class="data">2020.01.15~2020.02.14</span>
+                                                        </div>
+                                                        <div class="dateBox">
+                                                            <span class="label">잔여기간</span>
+                                                            <span class="data"><strong class="num">5</strong>일</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progressBox">
+                                                        <div class="progressBoxIn">
+                                                            <div class="progresLabel">
+                                                                진도율
+                                                            </div>
+                                                            <div class="progressBar">
+                                                                <div class="progressBarIn">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="progressPer">
+                                                                <span class="text"><strong class="num">36</strong></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="buttonBox">
+                                                        <a href="javascript:void(0)" class="btn_m_blue_gra">강의실 바로가기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- EOD : wgBox -->
+                                        </div>
+                                        <div class="slide">
+                                            <div class="wgBox">
+                                                <div class="wgBoxIn">
+                                                    <p class="tit">위기에 강한 기업의 비결! 444444</p>
+                                                    <ul class="tag">
+                                                        <li><span>국가기간전략훈련</span></li>
+                                                        <li><span>가상훈련</span></li>
+                                                        <li><span>환급</span></li>
+                                                        <li><span>초급</span></li>
+                                                        <li><span>무료</span></li>
+                                                        <li><span>모바일</span></li>
+                                                    </ul>
+                                                    <div class="infoBox">
+                                                        <div class="leftBox">
+                                                            <span class="label">교육기간</span>
+                                                            <span class="data">2020.01.15~2020.02.14</span>
+                                                        </div>
+                                                        <div class="dateBox">
+                                                            <span class="label">잔여기간</span>
+                                                            <span class="data"><strong class="num">21</strong>일</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progressBox">
+                                                        <div class="progressBoxIn">
+                                                            <div class="progresLabel">
+                                                                진도율
+                                                            </div>
+                                                            <div class="progressBar">
+                                                                <div class="progressBarIn">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="progressPer">
+                                                                <span class="text"><strong class="num">59</strong></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="buttonBox">
+                                                        <a href="javascript:void(0)" class="btn_m_blue_gra">강의실 바로가기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- EOD : wgBox -->
+                                        </div>
+                                         EOD : 데이터가 있을때
+                                        <!-- no_data -->
+        <!--                                <div class="slide">-->
+        <!--                                    <div class="no_data">-->
+        <!--                                        <img src="/images/template11/resp/default/icon/icon_no_data_myhome01.png" alt="">-->
+        <!--                                        <span class="txt">현재 학습중인 과정이 없습니다.</span>-->
+        <!--                                    </div>-->
+        <!--                                </div>-->
+                                       <!-- EOD : no_data -->
+                                    </div>
+                                    <!-- EOD : processSlider -->
+
+                                    <!--  pagination -->
+                                    <div class="pagination" id="paging01">
+                                        <div class="paginationIn">
+                                            <button class="prevBtn" title="이전"></button>
+                                            <button class="nextBtn" title="다음"></button>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : pagination -->
+                                </div>
+                                <!-- EOD : processSliderBox -->
+
+                                <script>
+                                    $(function() {
+
+                                        var slider_len01 = $('#slider01').find(".slide").length;
+
+                                        if (slider_len01 > 1) {
+
+                                            $('#slider01').slick({
+
+                                                infinite: true,
+                                                autoplay: false,
+                                                customDots: true,
+                                                speed: 1000,
+                                                slidesToShow: 2,
+                                                prevArrow: '#paging01 .prevBtn',
+                                                nextArrow: '#paging01 .nextBtn',
+                                                dots: true,
+                                                dotsClass: 'paging',
+                                                customPaging: function (slider, i) {
+                                                    return '<span class="now_num">' + (i + 1) + '</span>' + '/' + '<span class="all_num">' + slider.slideCount + '</span>';
+                                                },
+                                                responsive: [
+                                                    {
+                                                        breakpoint: 1200,
+                                                        settings: {
+                                                            slidesToShow: 1,
+                                                            slidesToScroll: 1
+                                                        }
+                                                    }
+                                                ]
+
+                                            });
+
+                                        } else {
+
+                                            var tag = "";
+                                            tag += "";
+                                            tag += "<ul class='paging' role='tablist'>";
+                                            tag += "<li class='slick-active' role='presentation'><span class='now_num'>1</span>/<span class='all_num'>1</span></li>";
+                                            tag += "</ul>";
+
+                                            $("#paging01").find(".nextBtn").before(tag);
+
+                                        }
+                                    });
+
+                                 </script>
+
+                            </div>
+                            <!-- EOD : sub_contentBox -->
+                        </li>
+                        <li>
+                            <!-- sub_contentBox -->
+                            <div class="sub_contentBox">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <div class="left_area">
+                                        <span class="tit">학습완료 과정</span>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- EOD : tit_area -->
+
+                                <!-- processSliderBox -->
+                                <div class="processSliderBox">
+                                    <!-- processSlider -->
+                                    <div class="processSlider type02" id="slider02">
+                                        <!-- 데이터가 있을때 -->
+                                        <div class="slide">
+                                            <!-- wgBox -->
+                                            <div class="wgBox type02">
+                                                <div class="wgBoxIn">
+                                                    <p class="tit">[평생훈련] 2020년도 하반기 운영 직업능력개발훈련 2020년도 하반기 운영 직업능력개발훈련</p>
+                                                    <ul class="tag">
+                                                        <li><span>국가기간전략훈련</span></li>
+                                                        <li><span>가상훈련</span></li>
+                                                        <li><span>환급</span></li>
+                                                        <li><span>초급</span></li>
+                                                        <li><span>무료</span></li>
+                                                        <li><span>모바일</span></li>
+                                                        <li><span>환급</span></li>
+                                                        <li><span>초급</span></li>
+                                                        <li><span>무료</span></li>
+                                                        <li><span>모바일</span></li>
+                                                    </ul>
+                                                    <div class="infoBox">
+                                                        <div class="leftBox">
+                                                            <span class="label">교육기간</span>
+                                                            <span class="data">2020.01.15~2020.02.14</span>
+                                                        </div>
+                                                        <div class="dateBox">
+                                                            <span class="label">잔여기간</span>
+                                                            <span class="data"><strong class="num">51</strong>일</span>
+                                                            <button type="button" class="btn_s_black">수료증 출력</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="buttonBox">
+                                                        <a href="javascript:void(0)" class="btn_m_blue_gra">강의실 바로가기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- EOD : wgBox -->
+                                        </div>
+                                        <div class="slide">
+                                            <!-- wgBox -->
+                                            <div class="wgBox type02">
+                                                <div class="wgBoxIn">
+                                                    <p class="tit">[평생훈련] 2020년도 하반기 운영 직업능력개발훈련 2020년도 하반기 운영 직업능력개발훈련</p>
+                                                    <ul class="tag">
+                                                        <li><span>국가기간전략훈련</span></li>
+                                                        <li><span>가상훈련</span></li>
+                                                        <li><span>환급</span></li>
+                                                        <li><span>초급</span></li>
+                                                        <li><span>무료</span></li>
+                                                        <li><span>모바일</span></li>
+                                                        <li><span>환급</span></li>
+                                                        <li><span>초급</span></li>
+                                                        <li><span>무료</span></li>
+                                                        <li><span>모바일</span></li>
+                                                    </ul>
+                                                    <div class="infoBox">
+                                                        <div class="leftBox">
+                                                            <span class="label">교육기간</span>
+                                                            <span class="data">2020.01.15~2020.02.14</span>
+                                                        </div>
+                                                        <div class="dateBox">
+                                                            <span class="label">잔여기간</span>
+                                                            <span class="data"><strong class="num">51</strong>일</span>
+                                                            <button type="button" class="btn_s_black">수료증 출력</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="buttonBox">
+                                                        <a href="javascript:void(0)" class="btn_m_blue_gra">강의실 바로가기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- EOD : wgBox -->
+                                        </div>
+                                        <!-- EOD : 데이터가 있을때 -->
+
+                                        <!-- no_data -->
+        <!--                                <div class="slide">-->
+        <!--                                    <div class="no_data">-->
+        <!--                                        <img src="/images/template11/resp/default/icon/icon_no_data_myhome01.png" alt="">-->
+        <!--                                        <span class="txt">학습완료 과정이 없습니다.</span>-->
+        <!--                                    </div>-->
+        <!--                                </div>-->
+                                         <!-- EOD : no_data -->
+                                    </div>
+                                    <!-- EOD : processSlider -->
+
+                                    <!--  pagination -->
+                                    <div class="pagination" id="paging02">
+                                        <div class="paginationIn">
+                                            <button class="prevBtn" title="이전"></button>
+                                            <button class="nextBtn" title="다음"></button>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : pagination -->
+                                </div>
+                                <!-- EOD : processSliderBox -->
+
+                                <script>
+
+                                    $(function() {
+
+                                        var slider_len02 = $('#slider02').find(".slide").length;
+
+                                        if(slider_len02 > 1){
+
+                                            $('#slider02').slick({
+
+                                                infinite: true,
+                                                autoplay: false,
+                                                customDots: true,
+                                                speed: 1000,
+                                                prevArrow: '#paging02 .prevBtn',
+                                                nextArrow: '#paging02 .nextBtn',
+                                                dots: true,
+                                                dotsClass: 'paging',
+                                                customPaging: function (slider, i) {
+                                                    return  '<span class="now_num">' + (i + 1) + '</span>' + '/' + '<span class="all_num">' + slider.slideCount + '</span>';
+                                                }
+
+                                            });
+
+                                        }else{
+
+                                            var tag = "";
+                                            tag += "";
+                                            tag += "<ul class='paging' role='tablist'>";
+                                            tag += "<li class='slick-active' role='presentation'><span class='now_num'>1</span>/<span class='all_num'>1</span></li>";
+                                            tag += "</ul>";
+                                            tag += "";
+
+                                            $("#paging02").find(".nextBtn").before(tag);
+
+                                        }
+                                    });
+                                </script>
+                            </div>
+                            <!-- EOD : sub_contentBox -->
+                        </li>
+                        <li>
+                            <!-- sub_contentBox -->
+                            <div class="sub_contentBox">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <div class="left_area">
+                                        <span class="tit">문의내역</span>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- EOD : tit_area -->
+                                <!-- list_area -->
+                                <ul class="list_area">
+                                    <li>
+                                        <div class="listBox">
+                                            <div class="listBoxIn">
+                                                <span class="label_gray">답변완료</span>
+                                                <div class="txtBox">
+                                                    <a href="javascript:void(0)">과정 시험 재응시 가능한가요?</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listBox">
+                                            <div class="listBoxIn">
+                                                <span class="label_white">답변대기</span>
+                                                <div class="txtBox">
+                                                    <a href="javascript:void(0)">과제를 잘못 제출했어요.</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listBox">
+                                            <div class="listBoxIn">
+                                                <span class="label_white">답변대기</span>
+                                                <div class="txtBox">
+                                                    <a href="javascript:void(0)">유교과정 수강취소했는데, 환불은 언제 가능한가요?</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listBox">
+                                            <div class="listBoxIn">
+                                                <span class="label_white">답변대기</span>
+                                                <div class="txtBox">
+                                                    <a href="javascript:void(0)">STEP 위키 멘토에 대해 궁금한 점이 있는데요</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- no_data
+                                    <li class="no_data">
+                                        <img src="/images/template11/resp/default/icon/icon_no_data_myhome07.png" alt="">
+                                        <span class="txt">나의 문의 내역이 없습니다.</span>
+                                    </li>
+                                    EOD : no_data -->
+                                </ul>
+                                <!-- EOD : list_area -->
+                            </div>
+                            <!-- EOD : sub_contentBox -->
+                        </li>
+                        <li>
+                            <!-- sub_contentBox -->
+                            <div class="sub_contentBox">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <div class="left_area">
+                                        <span class="tit">문의내역</span>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="#" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- EOD : tit_area -->
+                                <!-- list_area -->
+                                <ul class="list_area">
+
+
+                                    <li class="no_data">
+                                        <img style="" src="/images/template11/resp/default/icon/icon_no_data_myhome07.png" alt="" border="0">
+                                        <span class="txt">문의내역이 없습니다.</span>
+                                    </li>
+
+                                </ul>
+                                <!-- EOD : list_area -->
+                            </div>
+                            <!-- EOD : sub_contentBox -->
+                        </li>
+                        <li>
+                            <!-- sub_contentBox -->
+                            <div class="sub_contentBox">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <div class="left_area">
+                                        <span class="tit">관심과정</span>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- EOD : tit_area -->
+                                <!-- list_area -->
+                                <ul class="list_area">
+                                    <li>
+                                        <!-- wgBox -->
+                                        <div class="wgBox type04">
+                                            <div class="wgBoxIn">
+                                                <div class="thumBox">
+                                                    <div class="imgBox">
+                                                        <img src="../../images/template11/resp/default/usr/tum_sample01.png" class="cropImg">
+                                                    </div>
+                                                    <div class="txtBox">
+                                                        <a href="javascript:void(0)" class="tit">효율적인 빅데이터 분석방법 효율적인 빅데이터 분석방법 효율적인 빅데이터 분석방법</a>
+                                                        <ul class="tag">
+                                                            <li><span>국가기간전략훈련</span></li>
+                                                            <li><span>가상훈련</span></li>
+                                                            <li><span>환급</span></li>
+                                                            <li><span>초급</span></li>
+                                                            <li><span>무료</span></li>
+                                                            <li><span>모바일</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : wgBox -->
+                                    </li>
+                                    <li>
+                                        <!-- wgBox -->
+                                        <div class="wgBox type04">
+                                            <div class="wgBoxIn">
+                                                <div class="thumBox">
+                                                    <div class="imgBox">
+                                                        <!-- no_img -->
+
+                                                        <img src="../../images/template11/resp/default/usr/no_img_wgBox.png" class="cropImg">
+
+                                                        <!-- EOD : no_img -->
+                                                    </div>
+                                                    <div class="txtBox">
+                                                        <a href="javascript:void(0)" class="tit">파이썬 프로그래밍(2019년)</a>
+                                                        <ul class="tag">
+                                                            <li><span>국가기간전략훈련</span></li>
+                                                            <li><span>가상훈련</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : wgBox -->
+                                    </li>
+                                    <!-- no_data
+                                    <li class="no_data">
+                                        <img src="/images/template11/resp/default/icon/icon_no_data_myhome04.png" alt="">
+                                        <span class="txt">관심과정이 없습니다.</span>
+                                    </li>
+                                    EOD : no_data -->
+                                </ul>
+                                <!-- EOD : list_area -->
+                            </div>
+                            <!-- EOD : sub_contentBox -->
+                        </li>
+                        <li>
+                            <!-- sub_contentBox -->
+                            <div class="sub_contentBox">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <div class="left_area">
+                                        <span class="tit">관심과정</span>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="#" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- EOD : tit_area -->
+                                <!-- list_area -->
+                                <ul class="list_area">
+
+
+                                    <li class="no_data">
+                                        <img style="" src="/images/template11/resp/default/icon/icon_no_data_myhome04.png" alt="" border="0">
+                                        <span class="txt">관심과정이 없습니다.</span>
+                                    </li>
+
+                                </ul>
+                                <!-- EOD : list_area -->
+                            </div>
+                            <!-- EOD : sub_contentBox -->
+                        </li>
+                        <li>
+                            <!-- sub_contentBox -->
+                            <div class="sub_contentBox">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <div class="left_area">
+                                        <span class="tit">과정 결제내역</span>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- EOD : tit_area -->
+                                <!-- list_area -->
+                                <ul class="list_area">
+                                    <li>
+                                        <!-- wgBox -->
+                                        <div class="wgBox type04">
+                                            <div class="wgBoxIn">
+                                                <div class="thumBox">
+                                                    <div class="imgBox">
+                                                        <img src="../../images/template11/resp/default/usr/tum_sample01.png" class="cropImg">
+                                                    </div>
+                                                    <div class="txtBox">
+                                                        <ul class="labelBox">
+                                                            <li><span class="label_white">결제대기</span></li>
+                                                        </ul>
+                                                        <p class="tit">무선통신 설비 설계 part1_ 모듈1. 무선 중계 설비설계</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : wgBox -->
+                                    </li>
+                                    <li>
+                                        <!-- wgBox -->
+                                        <div class="wgBox type04">
+                                            <div class="wgBoxIn">
+                                                <div class="thumBox">
+                                                    <div class="imgBox">
+                                                        <!-- no_img -->
+
+                                                        <img src="../../images/template11/resp/default/usr/no_img_wgBox.png" class="cropImg">
+
+                                                        <!-- EOD : no_img -->
+                                                    </div>
+                                                    <div class="txtBox">
+                                                        <ul class="labelBox">
+                                                            <li><span class="label_blue">결제완료</span></li>
+                                                            <li><span class="label_white">환불요청</span></li>
+                                                            <li><span class="label_gray">환불완료</span></li>
+                                                        </ul>
+                                                        <p class="tit">기계재료및 열처리 기초 (2020년)</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- EOD : wgBox -->
+                                    </li>
+
+                                    <!-- no_data
+
+                                    <li class="no_data">
+                                        <img src="/images/template11/resp/default/icon/icon_no_data_myhome08.png" alt="">
+                                        <span class="txt">결제 내역이 없습니다.</span>
+                                    </li>
+
+                                     EOD : no_data -->
+                                </ul>
+                                <!-- EOD : list_area -->
+                            </div>
+                            <!-- EOD : sub_contentBox -->
+                        </li>
+                        <li>
+                            <!-- sub_contentBox -->
+                            <div class="sub_contentBox">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <div class="left_area">
+                                        <span class="tit">과정 결제정보</span>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="#" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                    </div>
+                                </div>
+                                <!-- EOD : tit_area -->
+                                <!-- list_area -->
+                                <ul class="list_area">
+                                    <!-- no_data -->
+                                    <li class="no_data">
+                                        <img style="" src="/images/template11/resp/default/icon/icon_no_data_myhome08.png" alt="" border="0">
+                                        <span class="txt">결제 내역이 없습니다.</span>
+                                    </li>
+                                    <!-- EOD : no_data -->
+
+                                </ul>
+                                <!-- EOD : list_area -->
+                            </div>
+                            <!-- EOD : sub_contentBox -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- EOD : sub_content -->
+                <script>
+                    // 나의 학습 활동 수치에 따른 animation
+                    $(function(){
+
+                        $(".myH_cntBox .cnt").each(function(index) {
+
+                            var txtTurm = 1000 + (index * 500);
+
+                            $(this).prop('Counter',0).animate({
+                                Counter: $(this).text()
+                            }, {
+                                duration: txtTurm,
+                                easing: 'swing',
+                                step: function (now) {
+                                    $(this).text(now.toFixed(0));
+                                }
+                            });
+                        });
+
+                        // 잔여기간 수치에 따른 animation
+
+                        $(".dateBox").each(function(index){
+
+                            var num_data = $(this).find(".data .num").text();
+                            var day_Turm = 1000 + (index * 250);
+
+                            $(this).find(".data .num").prop('Counter',0).animate({
+                                Counter: $(this).find(".num").text()
+                            }, {
+                                duration: day_Turm,
+                                easing: 'swing',
+                                step: function (now) {
+                                    $(this).text(now.toFixed(0));
+                                }
+                            });
+
+                        });
+
+
+                        $(".progressBox").each(function(index){
+
+                            var progress = $(this).find(".progressPer .num").text();
+                            var speedTurm = 1 + (0.25 * index);
+                            var txtTurm = speedTurm * 1000;
+
+                            $(this).find(".progressBar .bar").css({
+                                "width" : progress + "%",
+                                "transition" : "width " + speedTurm +"s ease"
+                            });
+
+                            $(this).find(".progressPer .num").prop('Counter',0).animate({
+                                Counter: $(this).find(".num").text()
+                            }, {
+                                duration: txtTurm,
+                                easing: 'swing',
+                                step: function (now) {
+                                    $(this).text(now.toFixed(1));
+                                }
+                            });
+                        });
+                    });
+
+                </script>
+            </section>
+            <!-- EOD : lecture_section -->
+        </div>
+        <!-- EOD : content_wrap -->
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>

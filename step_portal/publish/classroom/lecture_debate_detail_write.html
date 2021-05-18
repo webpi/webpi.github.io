@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>토론</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <!-- floatingBox -->
+                <div class="floatingBox">
+                    <div class="floatingBoxL"><h3 class="mt0">토론주제 정보</h3></div>
+                    <div class="floatingBoxR">
+                        <a href="lecture_debate.html" class="btn_sr_white mg0">토론주제 목록으로 이동</a>
+                    </div>
+                </div>
+                <!-- EOD : floatingBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_hori mob_block mt10">
+                        <caption>토론주제 , 토론유형 , 토론기간 , 내용 , 첨부파일 토론주제 정보 상세</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">토론주제</th>
+                            <td>토론주제입니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">토론유형</th>
+                            <td>찬반토론</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">토론기간</th>
+                            <td>2020-08-11 ~ 2020-08-20</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">내용</th>
+                            <td>
+                                토론주제에 대한 내용입니다.
+                                첨부파일도 있습니다.
+                                내용과 첨부파일을 참고하시고, 찬반 의견을 등록해주세요.
+
+                                등록하신 글의 내용과 참여도를 고려하여 평가에 반영되니, 신중하게 작성 부탁드립니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일</th>
+                            <td>
+                                <div class="file_area mt10">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">2020-04-11 YTN사이언스.png</a></li>
+                                        <li><a href="javascript:void(0);">2020-04-12 YTN사이언스.png</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <h3>의견 게시판</h3>
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_hori mob_block mt10">
+                        <caption>찬반여부 , 제목 , 내용 , 첨부파일로 이루어져 있는 의견 게시판 작성하기</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="asterisk">찬반여부</span></th>
+                                <td>
+                                    <ul class="radioList">
+                                        <li>
+                                            <input type="radio" id="confirm01" value="y" name="score_confirm" checked="checked">
+                                            <label for="confirm01">찬성</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="confirm02" value="n" name="score_confirm">
+                                            <label for="confirm02">반대</label>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><span class="asterisk">제목</span></th>
+                                <td>
+                                    <div class="inputBox Full">
+                                        <input type="text">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">내용</th>
+                                <td>
+                                    <div class="inputBox Full">
+                                        <textarea></textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">첨부파일</th>
+                                <td>
+                                    <div class="fileBox">
+                                        <button type="button" class="btn_s_blue">파일찾기</button>
+                                        <ul class="fileList">
+                                            <li>
+                                                <div class="file">
+                                                    <span class="txt">첨부파일1</span>
+                                                    <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="file">
+                                                    <span class="txt">첨부파일2</span>
+                                                    <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <div class="btnBox">
+                    <div class="rightBox">
+                        <a href="lecture_debate_detail_list.html" class="btn_m_blue">등록</a>
+                        <a href="lecture_debate_detail_list.html" class="btn_m_black">취소</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- EOD : layout_boxs -->
+
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+</body>
+</html>

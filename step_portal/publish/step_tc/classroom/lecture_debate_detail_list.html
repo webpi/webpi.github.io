@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>토론</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <!-- floatingBox -->
+                <div class="floatingBox">
+                    <div class="floatingBoxL"><h3 class="mt0">토론주제 정보</h3></div>
+                    <div class="floatingBoxR">
+                        <a href="lecture_debate.html" class="btn_sr_white mg0">토론주제 목록으로 이동</a>
+                    </div>
+                </div>
+                <!-- EOD : floatingBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_hori mt10">
+                        <caption>토론주제 , 토론유형 , 토론기간 , 내용 , 첨부파일 토론주제 정보 상세</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">토론주제</th>
+                                <td>토론주제입니다.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">토론유형</th>
+                                <td>찬반토론</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">토론기간</th>
+                                <td>2020-08-11 ~ 2020-08-20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">내용</th>
+                                <td>
+                                    토론주제에 대한 내용입니다.
+                                    첨부파일도 있습니다.
+                                    내용과 첨부파일을 참고하시고, 찬반 의견을 등록해주세요.
+
+                                    등록하신 글의 내용과 참여도를 고려하여 평가에 반영되니, 신중하게 작성 부탁드립니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">첨부파일</th>
+                                <td>
+                                    <div class="file_area mt10">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">2020-04-11 YTN사이언스.png</a></li>
+                                            <li><a href="javascript:void(0);">2020-04-12 YTN사이언스.png</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <h3>의견 게시판</h3>
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!--  table_normal -->
+                    <table class="table_normal mt0">
+                        <caption>NO,제목,첨부파일,등록자,등록일,조회수,좋아요로 이루어진 의견 게시판 상세</caption>
+                        <colgroup>
+                            <col width="70px">
+                            <col width="*">
+                            <col class="mobH" width="10%">
+                            <col class="mobH" width="10%">
+                            <col class="mobH" width="12%">
+                            <col class="mobH" width="10%">
+                            <col class="mobH" width="10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>제목</th>
+                                <th class="mobH">첨부파일</th>
+                                <th class="mobH">등록자</th>
+                                <th class="mobH">등록일</th>
+                                <th class="mobH">조회수</th>
+                                <th class="mobH">좋아요</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>4</td>
+                                <td class="al">
+                                    <div class="label_title">
+                                        <div class="label_titleL">
+                                            <span class="label_s_red">찬성</span>
+                                        </div>
+                                        <div class="label_titleR">
+                                            <a class="label_titleLink" href="lecture_debate_detail_view.html">
+                                                <span class="label_titleLinkIn">
+                                                    <span class="txt">찬성합니다. 찬성합니다. 찬성합니다. 찬성합니다. 찬성합니다. 찬성합니다. 찬성합니다.</span>
+                                                </span>
+                                                <span class="cnt">[3]</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="mobBox">
+                                        <li>등록자 이구*</li>
+                                        <li>등록일 2020.06.15</li>
+                                        <li>조회수 13</li>
+                                        <li>좋아요 13</li>
+                                        <li>
+                                            <div class="iconBox">
+                                                <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="mobH">
+                                    <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                </td>
+                                <td class="mobH">이구*</td>
+                                <td class="mobH">2020.06.15</td>
+                                <td class="mobH">13</td>
+                                <td class="mobH">13</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="al">
+                                    <div class="label_title">
+                                        <div class="label_titleL">
+                                            <span class="label_s_blue">반대</span>
+                                        </div>
+                                        <div class="label_titleR">
+                                            <a class="label_titleLink" href="lecture_debate_detail_view.html">
+                                                <span class="label_titleLinkIn">
+                                                    <span class="txt">반대합니다. 반대합니다. 반대합니다.</span>
+                                                </span>
+                                                <span class="cnt">[3]</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="mobBox">
+                                        <li>등록자 한지*</li>
+                                        <li>등록일 2020.05.16</li>
+                                        <li>조회수 12</li>
+                                        <li>좋아요 12</li>
+                                    </ul>
+                                </td>
+                                <td class="mobH"></td>
+                                <td class="mobH">한지*</td>
+                                <td class="mobH">2020.05.16</td>
+                                <td class="mobH">12</td>
+                                <td class="mobH">12</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="al">
+                                    <div class="label_title">
+                                        <div class="label_titleL">
+                                            <span class="label_s_red">찬성</span>
+                                        </div>
+                                        <div class="label_titleR">
+                                            <a class="label_titleLink" href="lecture_debate_detail_view.html">
+                                                <span class="label_titleLinkIn">
+                                                    <span class="txt">찬성합니다. 찬성합니다. 찬성합니다. 찬성합니다. 찬성합니다. 찬성합니다. 찬성합니다.</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="mobBox">
+                                        <li>등록자 김이*</li>
+                                        <li>등록일 2020.04.13</li>
+                                        <li>조회수 12</li>
+                                        <li>좋아요 12</li>
+                                    </ul>
+                                </td>
+                                <td class="mobH"></td>
+                                <td class="mobH">김이*</td>
+                                <td class="mobH">2020.04.13</td>
+                                <td class="mobH">12</td>
+                                <td class="mobH">12</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="al">
+                                    <div class="label_title">
+                                        <div class="label_titleL">
+                                            <span class="label_s_red">찬성</span>
+                                        </div>
+                                        <div class="label_titleR">
+                                            <a class="label_titleLink" href="lecture_debate_detail_view.html">
+                                                <span class="label_titleLinkIn">
+                                                    <span class="txt">찬성합니다. </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="mobBox">
+                                        <li>등록자 홍길*</li>
+                                        <li>등록일 2020.03.12</li>
+                                        <li>조회수 11</li>
+                                        <li>좋아요 23</li>
+                                        <li>
+                                            <div class="iconBox">
+                                                <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="mobH">
+                                    <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                </td>
+                                <td class="mobH">홍길*</td>
+                                <td class="mobH">2020.03.12</td>
+                                <td class="mobH">11</td>
+                                <td class="mobH">23</td>
+                            </tr>
+
+                            <!-- no_data -->
+
+                            <!--                            <tr>-->
+                            <!--                                <td colspan="7" class="no_dataBox">-->
+                            <!--                                    <img src="/images/classroom/template4/resp/default/icon_nodata.png" alt="">-->
+                            <!--                                    <p class="txt">등록된 게시글이 없습니다.</p>-->
+                            <!--                                </td>-->
+                            <!--                            </tr>-->
+
+                            <!-- no_data -->
+                        </tbody>
+                    </table>
+                    <!--  EOD : table_normal -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+</body>
+</html>

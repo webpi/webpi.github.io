@@ -1,0 +1,1341 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <div class="content_wrap">
+
+            <h3><span>나의 홈</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+            <!-- myHome_infoBox -->
+            <div class="myH_infoBox">
+                <!-- myH_infoBoxL -->
+                <div class="myH_infoBoxL">
+                    <p class="tit"><strong>김선생</strong>님(teacher@korea.kr) 안녕하세요! <a href="#" target="_blank" class="btn-step-go">학습자 사이트 바로가기</a></p>
+                    <span class="date">2020년 05월 26일</span>
+                    <span class="process"><strong>담당 과정</strong><span class="txt_point">3</span>개</span>
+               </div>
+               <!-- EOD : myH_infoBoxL -->
+               <!-- EOD : myH_infoBoxR -->
+               <div class="myH_infoBoxR">
+                   <!-- tit_area -->
+                   <div class="tit_area mt0">
+                       <div class="left_area">
+                           <span class="tit">강사 공지사항</span>
+                       </div>
+                       <div class="right_area">
+                           <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                       </div>
+                   </div>
+                   <!-- EOD : tit_area -->
+
+                   <!-- list_notice -->
+                   <ul class="list_notice">
+                       <li><a href="javascript:void(0)"><div class="ellipsis">운영자가 작성한 강사 공지사항1</div></a></li>
+                       <li><a href="javascript:void(0)"><div class="ellipsis">운영자가 작성한 강사 공지사항2</div></a></li>
+                   </ul>
+                   <!-- EOD : list_notice -->
+
+               </div>
+               <!-- EOD : myH_infoBoxR -->
+            </div>
+            <!-- EOD : myHome_infoBox -->
+
+            <!-- tab -->
+            <ul class="tab">
+                <li class="active"><a href="javascript:void(0);"><span>담당 과정</span></a></li>
+                <li><a href="javascript:void(0);"><span>대기 과정</span></a></li>
+                <li><a href="javascript:void(0);"><span>종료 과정</span></a></li>
+            </ul>
+            <!-- EOD : tab -->
+
+            <!-- boardTop_area -->
+            <div class="boardTop_area mb0">
+                <!-- btnBox -->
+                <div class="btnBox">
+                    <div class="rightBox">
+                        <span class="label">년도</span>
+                        <div class="selectBox">
+                            <label for="select_year"><span>2020년</span></label>
+                            <select id="select_year">
+                                <option>2020년</option>
+                                <option>2019년</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn_s_blue">검색</button>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+            </div>
+            <!-- EOD : boardTop_area -->
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <table class="table_rao">
+                    <caption>과정명 , 교육기간 , 수강인원 강의실 바로가기로 이루어진 게시판</caption>
+                    <colgroup>
+                        <col width="*">
+                        <col class="mobH" width="25%">
+                        <col class="mobH" width="15%">
+                        <col class="mobH" width="15%">
+                    </colgroup>
+                    <thead>
+                        <tr class="mobH">
+                            <th scope="col">과정명</th>
+                            <th scope="col">교육기간</th>
+                            <th scope="col">수강인원</th>
+                            <th scope="col">강의실 바로가기</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="al">
+                                <span class="txt">한국기술대학교 온라인강의 과정</span>
+                                <!-- 모바일에서만 보이는 영역 -->
+                                <div class="mobBox">
+                                    <!-- blockTable -->
+                                    <div class="blockTable">
+                                        <div class="tr">
+                                            <span class="th">2020.04.13~2020.05.15 <span class="txt_green">(잔여기간 : 10일)</span></span>
+                                        </div>
+                                        <div class="tr">
+                                            <span class="th">수강인원 <span class="txt_gray">100명</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : blockTable -->
+                                    <!-- mobbtnBox -->
+                                    <div class="mobbtnBox Full">
+                                        <button type="button" class="btn_m_blue_gra">강의실 바로가기</button>
+                                    </div>
+                                    <!-- EOD : mobbtnBox -->
+                                </div>
+                                <!-- EOD : 모바일에서만 보이는 영역 -->
+                            </td>
+                            <td class="mobH">
+                                2020.04.13~2020.05.15
+                                <p class="txt_point">(잔여기간:10일)</p>
+                            </td>
+                            <td class="mobH"><span class="txt_gray">100명</span></td>
+                            <td class="mobH"><button type="button" class="btn_s_blue_gra">바로가기</button></td>
+                        </tr>
+                        <tr>
+                            <td class="al">
+                                <span class="txt">한국기술대학교 온라인강의 과정</span>
+                                <!-- 모바일에서만 보이는 영역 -->
+                                <div class="mobBox">
+                                    <!-- blockTable -->
+                                    <div class="blockTable">
+                                        <div class="tr">
+                                            <span class="th">2020.04.13~2020.05.15 <span class="txt_green">(잔여기간 : 10일)</span></span>
+                                        </div>
+                                        <div class="tr">
+                                            <span class="th">수강인원 <span class="txt_gray">100명</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : blockTable -->
+                                    <!-- mobbtnBox -->
+                                    <div class="mobbtnBox Full">
+                                        <button type="button" class="btn_m_blue_gra">강의실 바로가기</button>
+                                    </div>
+                                    <!-- EOD : mobbtnBox -->
+                                </div>
+                                <!-- EOD : 모바일에서만 보이는 영역 -->
+                            </td>
+                            <td class="mobH">
+                                2020.04.13~2020.05.15
+                                <p class="txt_point">(잔여기간:10일)</p>
+                            </td>
+                            <td class="mobH"><span class="txt_gray">100명</span></td>
+                            <td class="mobH"><button type="button" class="btn_s_blue_gra">바로가기</button></td>
+                        </tr>
+                        <tr>
+                            <td class="al">
+                                <span class="txt">한국교육기술대학교 혼합훈련 과정 – 윌비</span>
+                                <!-- 모바일에서만 보이는 영역 -->
+                                <div class="mobBox">
+                                    <!-- blockTable -->
+                                    <div class="blockTable">
+                                        <div class="tr">
+                                            <span class="th">2020.04.13~2020.05.15 <span class="txt_green">(잔여기간 : 10일)</span></span>
+                                        </div>
+                                        <div class="tr">
+                                            <span class="th">수강인원 <span class="txt_gray">100명</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : blockTable -->
+                                </div>
+                                <!-- EOD : 모바일에서만 보이는 영역 -->
+                            </td>
+                            <td class="mobH">
+                                2020.04.13~2020.05.15
+                                <p class="txt_point">(잔여기간:10일)</p>
+                            </td>
+                            <td class="mobH"><span class="txt_gray">100명</span></td>
+                            <td class="mobH"></td>
+                        </tr>
+                        <!-- 상세 과정에 detail 클래스 추가 -->
+                        <tr class="detail">
+                            <td class="al">
+                                <span class="txt">한국교육기술대학교 온라인 - 윌비</span>
+                                <!-- 모바일에서만 보이는 영역 -->
+                                <div class="mobBox">
+                                    <!-- blockTable -->
+                                    <div class="blockTable">
+                                        <div class="tr">
+                                            <span class="th">2020.04.13~2020.05.15 <span class="txt_green">(잔여기간 : 10일)</span></span>
+                                        </div>
+                                        <div class="tr">
+                                            <span class="th">수강인원 <span class="txt_gray">100명</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : blockTable -->
+                                    <!-- mobbtnBox -->
+                                    <div class="mobbtnBox Full">
+                                        <button type="button" class="btn_m_blue_gra">강의실 바로가기</button>
+                                    </div>
+                                    <!-- EOD : mobbtnBox -->
+                                </div>
+                                <!-- EOD : 모바일에서만 보이는 영역 -->
+                            </td>
+                            <td class="mobH">
+                                2020.04.13~2020.05.15
+                                <p class="txt_point">(잔여기간:10일)</p>
+                            </td>
+                            <td class="mobH"><span class="txt_gray"></span></td>
+                            <td class="mobH"><button type="button" class="btn_s_blue_gra">바로가기</button></td>
+                        </tr>
+                        <!-- EOD : 상세 과정에 detail 클래스 추가 -->
+                        <!-- 상세 과정에 detail 클래스 추가 -->
+                        <tr class="detail">
+                            <td class="al">
+                                <span class="txt">한국교육기술대학교 온라인 - 윌비</span>
+                                <!-- 모바일에서만 보이는 영역 -->
+                                <div class="mobBox">
+                                    <!-- blockTable -->
+                                    <div class="blockTable">
+                                        <div class="tr">
+                                            <span class="th">2020.04.13~2020.05.15 <span class="txt_green">(잔여기간 : 10일)</span></span>
+                                        </div>
+                                        <div class="tr">
+                                            <span class="th">수강인원 <span class="txt_gray">100명</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : blockTable -->
+                                    <!-- mobbtnBox -->
+                                    <div class="mobbtnBox Full">
+                                        <button type="button" class="btn_m_blue_gra">강의실 바로가기</button>
+                                    </div>
+                                    <!-- EOD : mobbtnBox -->
+                                </div>
+                                <!-- EOD : 모바일에서만 보이는 영역 -->
+                            </td>
+                            <td class="mobH">
+                                2020.04.13~2020.05.15
+                                <p class="txt_point">(잔여기간:10일)</p>
+                            </td>
+                            <td class="mobH"><span class="txt_gray"></span></td>
+                            <td class="mobH"><button type="button" class="btn_s_blue_gra">바로가기</button></td>
+                        </tr>
+                        <!-- EOD : 상세 과정에 detail 클래스 추가 -->
+                        <!-- 상세 과정중 마지막에 detail last 클래스 추가 -->
+                        <tr class="detail last">
+                            <td class="al">
+                                <span class="txt">한국교육기술대학교 오프라인 – 윌비</span>
+                                <!-- 모바일에서만 보이는 영역 -->
+                                <div class="mobBox">
+                                    <!-- blockTable -->
+                                    <div class="blockTable">
+                                        <div class="tr">
+                                            <span class="th">2020.04.13~2020.05.15 <span class="txt_green">(잔여기간 : 10일)</span></span>
+                                        </div>
+                                        <div class="tr">
+                                            <span class="th">수강인원 <span class="txt_gray">100명</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : blockTable -->
+                                    <!-- mobbtnBox -->
+                                    <div class="mobbtnBox Full">
+                                        <button type="button" class="btn_m_blue_gra">강의실 바로가기</button>
+                                    </div>
+                                    <!-- EOD : mobbtnBox -->
+                                </div>
+                                <!-- EOD : 모바일에서만 보이는 영역 -->
+                            </td>
+                            <td class="mobH">
+                                2020.04.13~2020.05.15
+                                <p class="txt_point">(잔여기간:10일)</p>
+                            </td>
+                            <td class="mobH"><span class="txt_gray"></span></td>
+                            <td class="mobH"><button type="button" class="btn_s_blue_gra">바로가기</button></td>
+                        </tr>
+                        <tr>
+                            <td class="al">
+                                <span class="txt">한국기술대학교 온라인강의 과정</span>
+                                <!-- 모바일에서만 보이는 영역 -->
+                                <div class="mobBox">
+                                    <!-- blockTable -->
+                                    <div class="blockTable">
+                                        <div class="tr">
+                                            <span class="th">2020.04.13~2020.05.15 <span class="txt_green">(잔여기간 : 10일)</span></span>
+                                        </div>
+                                        <div class="tr">
+                                            <span class="th">수강인원 <span class="txt_gray">100명</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : blockTable -->
+                                    <!-- mobbtnBox -->
+                                    <div class="mobbtnBox Full">
+                                        <button type="button" class="btn_m_blue_gra">강의실 바로가기</button>
+                                    </div>
+                                    <!-- EOD : mobbtnBox -->
+                                </div>
+                                <!-- EOD : 모바일에서만 보이는 영역 -->
+                            </td>
+                            <td class="mobH">
+                                2020.04.13~2020.05.15
+                                <p class="txt_point">(잔여기간:10일)</p>
+                            </td>
+                            <td class="mobH"><span class="txt_gray">100명</span></td>
+                            <td class="mobH"><button type="button" class="btn_s_blue_gra">바로가기</button></td>
+                        </tr>
+                        <!-- EOD : 상세 과정중 마지막에 detail last 클래스 추가 -->
+                        <!-- no_data
+                        <tr>
+                            <td colspan="5" class="no_dataBox">
+                                <p class="txt">담당과정이 없습니다.</p>
+                            </td>
+                        </tr>
+                        EOD : no_data -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- moreBox -->
+            <div class="moreBox">
+                <button type="button" class="more_btn"><i class="icon_more"></i><span class="blind">더보기</span></button>
+            </div>
+            <!-- EOD : moreBox -->
+
+            <!-- tit_area -->
+            <div class="tit_area">
+                <div class="left_area">
+                    <span class="tit">담당 과정별 참여정보 - 원격훈련</span>
+                </div>
+            </div>
+            <!-- EOD : tit_area -->
+
+        <!-- mobH -->
+            <div class="tableScroll mobH">
+                <table class="table_veti">
+                    <caption>참여비율(참여인원)의 평균 진도율 , 중간평가 , 최종평가 , 과제 팀프로젝트는 과제제출,팀원평가,강사평가 라이브세미나로 이루어져 있고 수료여부를 보여주는 담당 과정별 참여정보 - 원격훈련 테이블</caption>
+                    <colgroup>
+                        <col width="11%">
+                        <col width="11%">
+                        <col width="11%">
+                        <col width="11%">
+                        <col width="11%">
+                        <col width="11%">
+                        <col width="11%">
+                        <col width="11%">
+                        <col width="11%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="8" scope="colgroup">참여비율(참여인원)</th>
+                            <th rowspan="3" scope="col">수료여부</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" scope="col">평균진도율</th>
+                            <th rowspan="2" scope="col">중간평가</th>
+                            <th rowspan="2" scope="col">최종평가</th>
+                            <th rowspan="2" scope="col">과제</th>
+                            <th colspan="3" scope="colgroup">팀프로젝트</th>
+                            <th rowspan="2" scope="col">라이브세미나</th>
+                        </tr>
+                        <tr>
+                            <th class="bl">과제제출</th>
+                            <th>팀원평가</th>
+                            <th>강사평가</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac">10.0%</td>
+                            <td class="ac">30%(30명)</td>
+                            <td class="ac">40%(40명)</td>
+                            <td class="ac">50%(50명)</td>
+                            <td class="ac">100%(10명)</td>
+                            <td class="ac">40%(40명)</td>
+                            <td class="ac">100%(100명)</td>
+                            <td class="ac">100%(100명)</td>
+                            <td class="ac">10%(10명)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : mobH -->
+
+            <!-- mobS -->
+            <div class="mobS">
+                <table class="table_veti">
+                    <caption>항목 , 참여비율 , 참여인원으로 이루어진 담당 과정별 참여정보 테이블</caption>
+                    <colgroup>
+                        <col width="25%">
+                        <col width="25%">
+                        <col width="25%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="2">항목</th>
+                            <th>참여비율</th>
+                            <th>참여인원</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="ac">평가 진도율</td>
+                            <td class="ac">00.0%</td>
+                            <td class="ac"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="ac">중간평가</td>
+                            <td class="ac">30%</td>
+                            <td class="ac">30명</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="ac">최종평가</td>
+                            <td class="ac">40%</td>
+                            <td class="ac">40명</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="ac">과제</td>
+                            <td class="ac">50%</td>
+                            <td class="ac">50명</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" rowspan="3">팀프로젝트</td>
+                            <td class="ac">과제제출</td>
+                            <td class="ac">100%</td>
+                            <td class="ac">50명</td>
+                        </tr>
+                        <tr>
+                            <td class="ac bl">팀원평가</td>
+                            <td class="ac">40%</td>
+                            <td class="ac">40명</td>
+                        </tr>
+                        <tr>
+                            <td class="ac bl">강사평가</td>
+                            <td class="ac">100%</td>
+                            <td class="ac">10명</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="ac">라이브세미나</td>
+                            <td class="ac">100%</td>
+                            <td class="ac">100명</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="ac" colspan="2">수료여부</td>
+                            <td class="ac">100%</td>
+                            <td class="ac">10명</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- EOD : mobS -->
+
+
+            <!-- sub_content -->
+            <div class="sub_content">
+                <ul>
+                    <li>
+                        <!-- sub_contentBox -->
+                        <div class="sub_contentBox">
+                            <!-- tit_area -->
+                            <div class="tit_area">
+                                <div class="left_area">
+                                    <span class="tit">채점관리-시험</span>
+                                </div>
+                                <div class="right_area">
+                                    <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                </div>
+                            </div>
+                            <!-- EOD : tit_area -->
+
+                            <!-- SliderBox -->
+                            <div class="SliderBox">
+                                <!-- processSlider -->
+                                <div class="processSlider" id="slider01">
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox -->
+                                        <div class="infoBox">
+                                            <p class="tit">한국교육기술대학교 온라인강의 과정</p>
+                                            <div class="infoList">
+                                                <div class="dataBox">
+                                                    <div class="leftBox">
+                                                        <span class="label">응시 기간</span>
+                                                        <span class="txt_point">2020.01.15~2020.02.14</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+                                        <!-- grayBox -->
+                                        <div class="grayBox">
+                                            <table class="table_veti">
+                                                <caption>이름(아이디) , 응시상태 , 채점여부로 이루어진 채점관리 테이블</caption>
+                                                <colgroup>
+                                                    <col width="*">
+                                                    <col width="35%">
+                                                    <col width="15%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">이름(아이디)</th>
+                                                        <th scope="col">응시상태</th>
+                                                        <th scope="col">채점여부</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="al">홍길동(Hong@korea.kr)</td>
+                                                        <td class="ac">응시완료(2020.02.10)</td>
+                                                        <td class="ac">미채점</td>
+                                                    </tr>
+                                                    <tr>
+                                                       <td class="al">김유신(KYS@korea.kr)</td>
+                                                        <td class="ac">응시완료(2020.02.10)</td>
+                                                        <td class="ac">미채점</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="al">김학생(KIM@korea.kr)</td>
+                                                        <td class="ac">미응시</td>
+                                                        <td class="ac">미채점</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox -->
+                                    </div>
+                                    <!-- EOD : slide -->
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox -->
+                                        <div class="infoBox">
+                                            <p class="tit">한국교육기술대학교 온라인강의 과정 길이테스트 길이테스트 길이테스트</p>
+                                            <div class="infoList">
+                                                <div class="dataBox">
+                                                    <div class="leftBox">
+                                                        <span class="label">응시 기간</span>
+                                                        <span class="txt_point">2020.03.25~2020.04.05</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+                                        <!-- grayBox -->
+                                        <div class="grayBox">
+                                            <table class="table_veti">
+                                                <caption>이름(아이디) , 응시상태 , 채점여부로 이루어진 채점관리 테이블</caption>
+                                                <colgroup>
+                                                    <col width="*">
+                                                    <col width="35%">
+                                                    <col width="15%">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">이름(아이디)</th>
+                                                    <th scope="col">응시상태</th>
+                                                    <th scope="col">채점여부</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="al">홍길동(Hong@korea.kr)</td>
+                                                    <td class="ac">응시완료(2020.02.10)</td>
+                                                    <td class="ac">미채점</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="al">김유신(KYS@korea.kr)</td>
+                                                    <td class="ac">응시완료(2020.02.10)</td>
+                                                    <td class="ac">미채점</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="al">김학생(KIM@korea.kr)</td>
+                                                    <td class="ac">미응시</td>
+                                                    <td class="ac">미채점</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox -->
+                                    </div>
+                                    <!-- EOD : slide -->
+                                    <!-- EOD : 데이터가 있을때 -->
+                                    <!-- no_data
+                                    <div>
+                                        <div class="no_data">
+                                            <img src="/images/template9/resp/default/icon/icon_no_data_myhome02.png" alt="">
+                                            <span class="txt">채점기간이 아닙니다.</span>
+                                        </div>
+                                    </div>
+                                    EOD : no_data -->
+                                </div>
+                                <!-- EOD : processSlider -->
+
+                                <!--  pagination -->
+                                <div class="pagination" id="paging01">
+                                    <div class="paginationIn">
+                                        <button class="prevBtn" title="이전"></button>
+                                        <button class="nextBtn" title="다음"></button>
+                                    </div>
+                                </div>
+                                <!-- EOD : pagination -->
+                            </div>
+                            <!-- EOD : SliderBox -->
+
+                            <script>
+
+                                $('#slider01').slick({
+
+                                    infinite: true,
+                                    autoplay: false,
+                                    customDots: true,
+                                    speed: 1000,
+                                    prevArrow: '#paging01 .prevBtn',
+                                    nextArrow: '#paging01 .nextBtn',
+                                    dots: true,
+                                    dotsClass: 'paging',
+                                    customPaging: function (slider, i) {
+                                        return  '<span class="now_num">' + (i + 1) + '</span>' + '/' + '<span class="all_num">' + slider.slideCount + '</span>';
+                                    }
+
+                                });
+
+                            </script>
+
+
+                        </div>
+                        <!-- EOD : sub_contentBox -->
+                    </li>
+                    <li>
+                        <!-- sub_contentBox -->
+                        <div class="sub_contentBox">
+                            <!-- tit_area -->
+                            <div class="tit_area">
+                                <div class="left_area">
+                                    <span class="tit">채점관리-과제</span>
+                                </div>
+                                <div class="right_area">
+                                    <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                </div>
+                            </div>
+                            <!-- EOD : tit_area -->
+
+                            <!-- SliderBox -->
+                            <div class="SliderBox">
+                                <!-- processSlider -->
+                                <div class="processSlider" id="slider02">
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox -->
+                                        <div class="infoBox">
+                                            <p class="tit">한국교육기술대학교 온라인강의 과정 채점과제</p>
+                                            <div class="infoList">
+                                                <div class="dataBox">
+                                                    <div class="leftBox">
+                                                        <span class="label">제출 기간</span>
+                                                        <span class="txt_point">2020.01.25~2020.03.14</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+                                        <!-- grayBox -->
+                                        <div class="grayBox">
+                                            <table class="table_veti">
+                                                <caption>이름(아이디) , 제출상태 , 첨삭여부로 이루어진 채점관리 테이블</caption>
+                                                <colgroup>
+                                                    <col width="*">
+                                                    <col width="35%">
+                                                    <col width="15%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">이름(아이디)</th>
+                                                        <th scope="col">제출상태</th>
+                                                        <th scope="col">첨삭여부</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="al">홍길동(Hong@korea.kr)</td>
+                                                        <td class="ac">응시완료(2020.02.10)</td>
+                                                        <td class="ac">미채점</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox -->
+                                    </div>
+                                    <!-- EOD : slide -->
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox -->
+                                        <div class="infoBox">
+                                            <p class="tit">한국교육기술대학교 온라인강의 과정 길이테스트 길이테스트 길이테스트</p>
+                                            <div class="infoList">
+                                                <div class="dataBox">
+                                                    <div class="leftBox">
+                                                        <span class="label">응시 기간</span>
+                                                        <span class="txt_point">2020.03.25~2020.04.05</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+                                        <!-- grayBox -->
+                                        <div class="grayBox">
+                                            <table class="table_veti">
+                                                <caption>이름(아이디) , 응시상태 , 채점여부로 이루어진 채점관리 테이블</caption>
+                                                <colgroup>
+                                                    <col width="*">
+                                                    <col width="35%">
+                                                    <col width="15%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">이름(아이디)</th>
+                                                        <th scope="col">응시상태</th>
+                                                        <th scope="col">채점여부</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="al">홍길동(Hong@korea.kr)</td>
+                                                        <td class="ac">제출완료(2020.02.10)</td>
+                                                        <td class="ac">미첨삭</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox -->
+                                    </div>
+                                    <!-- EOD : slide -->
+                                    <!-- EOD : 데이터가 있을때 -->
+                                    <!-- no_data
+                                    <div>
+                                        <div class="no_data">
+                                            <img src="/images/template9/resp/default/icon/icon_no_data_myhome02.png" alt="">
+                                            <span class="txt">첨삭기간이 아닙니다.</span>
+                                        </div>
+                                    </div>
+                                    EOD : slide -->
+                                </div>
+                                <!-- EOD : processSlider -->
+
+                                <!--  pagination -->
+                                <div class="pagination" id="paging02">
+                                    <div class="paginationIn">
+                                        <button class="prevBtn" title="이전"></button>
+                                        <button class="nextBtn" title="다음"></button>
+                                    </div>
+                                </div>
+                                <!-- EOD : pagination -->
+                            </div>
+                            <!-- EOD : SliderBox -->
+
+                            <script>
+
+                                $('#slider02').slick({
+
+                                    infinite: true,
+                                    autoplay: false,
+                                    customDots: true,
+                                    speed: 1000,
+                                    prevArrow: '#paging02 .prevBtn',
+                                    nextArrow: '#paging02 .nextBtn',
+                                    dots: true,
+                                    dotsClass: 'paging',
+                                    customPaging: function (slider, i) {
+                                        return  '<span class="now_num">' + (i + 1) + '</span>' + '/' + '<span class="all_num">' + slider.slideCount + '</span>';
+                                    }
+
+                                });
+
+
+                            </script>
+                        </div>
+                        <!-- EOD : sub_contentBox -->
+                    </li>
+                    <li>
+                        <!-- sub_contentBox -->
+                        <div class="sub_contentBox">
+
+                            <!-- tit_area -->
+                            <div class="tit_area">
+                                <div class="left_area">
+                                    <span class="tit">토론</span>
+                                </div>
+                                <div class="right_area">
+                                    <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                </div>
+                            </div>
+                            <!-- EOD : tit_area -->
+
+                            <!-- SliderBox -->
+                            <div class="SliderBox">
+                                <!-- processSlider -->
+                                <div class="processSlider" id="slider04">
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox type02 -->
+                                        <div class="infoBox type02">
+                                            <p class="tit">원격훈련과정명</p>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+
+                                        <!-- grayBox -->
+                                        <div class="grayBox">
+                                            <table class="table_veti fixed">
+                                                <caption>토론주제 , 상태로 이루어져 있는 토론 상세</caption>
+                                                <colgroup>
+                                                    <col width="*">
+                                                    <col width="20%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">토론주제</th>
+                                                        <th scope="col">상태</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="al ellipsis">찬반토론 주제입니다.</td>
+                                                        <td class="ac">진행중</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="al ellipsis">
+                                                            일반 주제입니다. 일반 주제입니다. 일반 주제입니다. 일반 주제입니다.
+                                                        </td>
+                                                        <td class="ac">완료</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox  -->
+                                    </div>
+                                    <!-- EOD : slide -->
+
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox type02 -->
+                                        <div class="infoBox type02">
+                                            <p class="tit">토론 제목길이 테스트 토론 제목길이 테스트 토론 제목길이 테스트</p>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+
+                                        <!-- grayBox -->
+                                        <div class="grayBox">
+                                            <table class="table_veti fixed">
+                                                <caption>토론주제 , 상태 테이블</caption>
+                                                <colgroup>
+                                                    <col width="*">
+                                                    <col width="20%">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">토론주제</th>
+                                                    <th scope="col">상태</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="al ellipsis">찬반토론 주제입니다.</td>
+                                                    <td class="ac">진행중</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="al ellipsis">
+                                                        일반 주제입니다. 일반 주제입니다. 일반 주제입니다. 일반 주제입니다.
+                                                    </td>
+                                                    <td class="ac">완료</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox  -->
+                                    </div>
+                                    <!-- EOD : slide -->
+
+                                    <!-- EOD : 데이터가 있을때 -->
+
+    <!--                                &lt;!&ndash; no_data &ndash;&gt;-->
+    <!--                                <div>-->
+    <!--                                    <div class="no_data">-->
+    <!--                                        <img src="/images/template9/resp/default/icon/icon_no_data_myhome02.png" alt="">-->
+    <!--                                        <span class="txt">등록된 토론주제가 없습니다.</span>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                                &lt;!&ndash;  EOD : slide &ndash;&gt;-->
+
+                                </div>
+                                <!-- EOD : processSlider -->
+
+                                <!--  pagination -->
+                                <div class="pagination" id="paging04">
+                                    <div class="paginationIn">
+                                        <button class="prevBtn" title="이전"></button>
+                                        <button class="nextBtn" title="다음"></button>
+                                    </div>
+                                </div>
+                                <!-- EOD : pagination -->
+                            </div>
+                            <!-- EOD : SliderBox -->
+
+                            <script>
+
+                                $('#slider04').slick({
+
+                                    infinite: true,
+                                    autoplay: false,
+                                    customDots: true,
+                                    speed: 1000,
+                                    prevArrow: '#paging04 .prevBtn',
+                                    nextArrow: '#paging04 .nextBtn',
+                                    dots: true,
+                                    dotsClass: 'paging',
+                                    customPaging: function (slider, i) {
+                                        return  '<span class="now_num">' + (i + 1) + '</span>' + '/' + '<span class="all_num">' + slider.slideCount + '</span>';
+                                    }
+
+                                });
+
+
+                            </script>
+
+                        </div>
+                        <!-- EOD : sub_contentBox -->
+                    </li>
+                    <li>
+                        <!-- sub_contentBox -->
+                        <div class="sub_contentBox">
+                            <!-- tit_area -->
+                            <div class="tit_area">
+                                <div class="left_area">
+                                    <span class="tit">팀 프로젝트</span>
+                                </div>
+                                <div class="right_area">
+                                    <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                </div>
+                            </div>
+                            <!-- EOD : tit_area -->
+
+                            <!-- SliderBox -->
+                            <div class="SliderBox">
+                                <!-- processSlider -->
+                                <div class="processSlider type02" id="slider03">
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox -->
+                                        <div class="infoBox">
+                                            <p class="tit">한국교육기술대학교 온라인강의 과정 채점과제</p>
+                                            <div class="infoList">
+                                                <div class="dataBox">
+                                                    <div class="leftBox">
+                                                        <span class="label">프로젝트 주제</span>
+                                                        <span class="txt_point">파이썬 프로그래밍(2019년)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="dataBox">
+                                                    <div class="leftBox">
+                                                        <span class="label">프로젝트 기간</span>
+                                                        <span class="txt_point">2020.01.15~2020.02.14</span>
+                                                    </div>
+                                                    <div class="rightBox">
+                                                        총 <span class="txt_point">10</span>개 팀
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+                                        <!-- grayBox -->
+                                        <div class="grayBox type02">
+                                            <table class="table_veti type02">
+                                                <caption>과제 미첨삭 , 강사 미평가로 이루어진 팀 프로젝트 테이블</caption>
+                                                <colgroup>
+                                                    <col width="50%">
+                                                    <col width="50%">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="ac">과제 미첨삭</th>
+                                                        <td class="ac"><span class="txt_point">00명</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="ac">강사 미평가</th>
+                                                        <td class="ac"><span class="txt_point">00명</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox -->
+                                    </div>
+                                    <!-- EOD : slide -->
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox -->
+                                        <div class="infoBox">
+                                            <p class="tit">한국교육기술대학교 온라인강의 과정 채점과제</p>
+                                            <div class="infoList">
+                                                <div class="dataBox">
+                                                    <div class="leftBox">
+                                                        <span class="label">프로젝트 주제</span>
+                                                        <span class="txt_point">파이썬 프로그래밍(2019년)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="dataBox">
+                                                    <div class="leftBox">
+                                                        <span class="label">프로젝트 기간</span>
+                                                        <span class="txt_point">2020.01.15~2020.02.14</span>
+                                                    </div>
+                                                    <div class="rightBox">
+                                                        총 <span class="txt_point">10</span>개 팀
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+                                        <!-- grayBox -->
+                                        <div class="grayBox type02">
+                                            <table class="table_hori type02">
+                                                <caption>과제 미첨삭 , 강사 미평가로 이루어진 팀 프로젝트 테이블</caption>
+                                                <colgroup>
+                                                    <col width="50%">
+                                                    <col width="50%">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="ac">과제 미첨삭</th>
+                                                        <td class="ac"><span class="txt_point">00명</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="ac">강사 미평가</th>
+                                                        <td class="ac"><span class="txt_point">00명</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox -->
+                                    </div>
+                                    <!-- EOD : slide -->
+
+                                    <!-- EOD : 데이터가 있을때 -->
+
+    <!--                                -->
+    <!--                                <div>-->
+    <!--                                    <div class="no_data">-->
+    <!--                                        <img src="/images/template9/resp/default/icon/icon_no_data_myhome03.png" alt="">-->
+    <!--                                        <span class="txt">진행 중인 팀 프로젝트가 없습니다.&lt;!&ndash; <br> 팀 프로젝트를 개설해보세요! &ndash;&gt;</span>-->
+    <!--                                        &lt;!&ndash; <button type="button" class="btn_s_blue">팀프로젝트 개설하기</button> &ndash;&gt;-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+                                </div>
+                                <!-- EOD : processSlider -->
+
+                                <!--  pagination -->
+                                <div class="pagination" id="paging03">
+                                    <div class="paginationIn">
+                                        <button class="prevBtn" title="이전"></button>
+                                        <button class="nextBtn" title="다음"></button>
+                                    </div>
+                                </div>
+                                <!-- EOD : pagination -->
+                            </div>
+                            <!-- EOD : SliderBox -->
+
+                            <script>
+
+                                $('#slider03').slick({
+
+                                    infinite: true,
+                                    autoplay: false,
+                                    customDots: true,
+                                    speed: 1000,
+                                    prevArrow: '#paging03 .prevBtn',
+                                    nextArrow: '#paging03 .nextBtn',
+                                    dots: true,
+                                    dotsClass: 'paging',
+                                    customPaging: function (slider, i) {
+                                        return  '<span class="now_num">' + (i + 1) + '</span>' + '/' + '<span class="all_num">' + slider.slideCount + '</span>';
+                                    }
+
+                                });
+
+
+                            </script>
+                        </div>
+                        <!-- EOD : sub_contentBox -->
+                    </li>
+                    <li>
+                        <!-- sub_contentBox -->
+                        <div class="sub_contentBox">
+
+                            <!-- tit_area -->
+                            <div class="tit_area">
+                                <div class="left_area">
+                                    <span class="tit">라이브세미나</span>
+                                </div>
+                                <div class="right_area">
+                                    <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                </div>
+                            </div>
+                            <!-- EOD : tit_area -->
+
+                            <!-- SliderBox -->
+                            <div class="SliderBox">
+                                <!-- processSlider -->
+                                <div class="processSlider" id="slider05">
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox type02 -->
+                                        <div class="infoBox type02">
+                                            <p class="tit">한국교육기술대학교 온라인강의 과정</p>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+
+                                        <!-- grayBox -->
+                                        <div class="grayBox">
+                                            <table class="table_veti fixed">
+                                                <caption>제목,상태로 이루어져 있는 라이브세미나 상세</caption>
+                                                <colgroup>
+                                                    <col width="*">
+                                                    <col width="20%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">제목</th>
+                                                        <th scope="col">상태</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="al ellipsis">세번째 라이브세미나</td>
+                                                        <td class="ac">대기</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="al ellipsis">두번째 라이브세미나</td>
+                                                        <td class="ac">진행</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="al ellipsis">첫번째 라이브세미나</td>
+                                                        <td class="ac">종료</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox  -->
+                                    </div>
+                                    <!-- EOD : slide -->
+
+                                    <!-- slide -->
+                                    <div>
+                                        <!-- infoBox type02 -->
+                                        <div class="infoBox type02">
+                                            <p class="tit">라이브세미나 제목 길이 테스트 라이브세미나 제목 길이 테스트 라이브세미나 제목 길이 테스트</p>
+                                        </div>
+                                        <!-- EOD : infoBox -->
+
+                                        <!-- grayBox -->
+                                        <div class="grayBox">
+                                            <table class="table_veti fixed">
+                                                <caption>제목,상태로 이루어져 있는 라이브세미나 상세</caption>
+                                                <colgroup>
+                                                    <col width="*">
+                                                    <col width="20%">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">제목</th>
+                                                    <th scope="col">상태</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="al ellipsis">세번째 라이브세미나</td>
+                                                    <td class="ac">대기</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="al ellipsis">두번째 라이브세미나</td>
+                                                    <td class="ac">진행</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="al ellipsis">첫번째 라이브세미나</td>
+                                                    <td class="ac">종료</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- EOD : grayBox  -->
+                                    </div>
+                                    <!-- EOD : slide -->
+
+                                    <!-- EOD : 데이터가 있을때 -->
+
+    <!--                                &lt;!&ndash; no_data &ndash;&gt;-->
+    <!--                                <div>-->
+    <!--                                    <div class="no_data">-->
+    <!--                                        <img src="/images/template9/resp/default/icon/icon_no_data_myhome02.png" alt="">-->
+    <!--                                        <span class="txt">등록된 라이브세미나가 없습니다.</span>-->
+    <!--                                    </div>-->
+    <!--                                </div>-->
+    <!--                                &lt;!&ndash;  EOD : slide &ndash;&gt;-->
+
+                                </div>
+                                <!-- EOD : processSlider -->
+
+                                <!--  pagination -->
+                                <div class="pagination" id="paging05">
+                                    <div class="paginationIn">
+                                        <button class="prevBtn" title="이전"></button>
+                                        <button class="nextBtn" title="다음"></button>
+                                    </div>
+                                </div>
+                                <!-- EOD : pagination -->
+                            </div>
+                            <!-- EOD : SliderBox -->
+
+                            <script>
+
+                                $('#slider05').slick({
+
+                                    infinite: true,
+                                    autoplay: false,
+                                    customDots: true,
+                                    speed: 1000,
+                                    prevArrow: '#paging05 .prevBtn',
+                                    nextArrow: '#paging05 .nextBtn',
+                                    dots: true,
+                                    dotsClass: 'paging',
+                                    customPaging: function (slider, i) {
+                                        return  '<span class="now_num">' + (i + 1) + '</span>' + '/' + '<span class="all_num">' + slider.slideCount + '</span>';
+                                    }
+
+                                });
+
+
+                            </script>
+
+                        </div>
+                        <!-- EOD : sub_contentBox -->
+                    </li>
+                    <li>
+                        <!-- sub_contentBox -->
+                        <div class="sub_contentBox">
+                            <!-- tit_area -->
+                            <div class="tit_area">
+                                <div class="left_area">
+                                    <span class="tit">과정Q&A</span>
+                                </div>
+                                <div class="right_area">
+                                    <a href="javascript:void(0)" class="more_btn"><span class="txt">더보기</span><i class="icon_plus"></i></a>
+                                </div>
+                            </div>
+                            <!-- EOD : tit_area -->
+                            <!-- list_area -->
+                            <ul class="list_area">
+                                <li>
+                                    <div class="listBox">
+                                        <div class="listBoxIn">
+                                            <div class="txt"><a href='javascript:void(0)' class="ellipsis">[시험] 과정 시험 재응시 가능한가요?</a></div>
+                                        </div>
+                                        <button type="button" class="btn_s_blue">답변대기</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="listBox">
+                                        <div class="listBoxIn">
+                                            <div class="txt"><a href='javascript:void(0)' class="ellipsis">[과제] 과제를 잘못 제출했어요</a></div>
+                                        </div>
+                                        <button type="button" class="btn_s_blue">답변대기</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="listBox">
+                                        <div class="listBoxIn">
+                                            <div class="txt"><a href='javascript:void(0)' class="ellipsis">[교재] 교재배송 관련 문의드립니다.</a></div>
+                                        </div>
+                                        <button type="button" class="btn_s_black">답변완료</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="listBox">
+                                        <div class="listBoxIn">
+                                            <div class="txt"><a href='javascript:void(0)' class="ellipsis">[환불]유교과정 수강취소했는데, 환불은 언제 되는지 알수 있을가여?</a></div>
+                                        </div>
+                                        <button type="button" class="btn_s_black">답변완료</button>
+                                    </div>
+                                </li>
+                                <!-- no_data
+                                <li class="no_data">
+                                    <img src="/images/template9/resp/default/icon/icon_no_data_myhome04.png" alt="">
+                                    <div class="txt">문의 내역이 없습니다.</span>
+                                </li>
+                                -->
+                            </ul>
+                            <!-- EOD : list_area -->
+                        </div>
+                        <!-- EOD : sub_contentBox -->
+                    </li>
+                </ul>
+            </div>
+            <!-- EOD : sub_content -->
+
+        </div>
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>
+

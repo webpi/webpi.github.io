@@ -1,0 +1,505 @@
+@charset "utf-8";
+
+/* layout */
+#wrap {
+	border-color: #d9dddf;
+}
+#header {
+	border-color: #d9dddf;
+	background: #ebeced;
+}
+#header .logo { 
+	border-color: #d9dddf;
+}
+#header .booklearning {
+	background: url('/images/classroom/template1/gray/logo_booklearning.png') center 0 no-repeat;	
+}
+#header .smartlearning {
+	background: url('/images/classroom/template1/gray/logo_smartlearning.png') center 0 no-repeat;	
+}
+#header .elearning {
+	background: url('/images/classroom/template1/gray/logo_elearning.png') center 0 no-repeat;	
+}
+#header .userInfo {
+	border-color: #d9dddf;
+	background: #e2e5e6;
+}
+#header .userInfo .name > span {
+	color: #f2444a;
+}
+#header .userInfo .btnArea button {
+	border-color: #9da4a8;
+	color: #494f54;
+	background: #ffffff;
+}
+#header .userInfo .btnArea button:hover {
+	border-color: #8e9599;
+	color: #ffffff;
+	background: #9da4a8;
+}
+
+.gnb, .gnb li, .gnb ul li, .gnb ul ul, .gnb ul ul li {
+	border-color: #d9dddf;
+}
+.gnb li a {
+	color: #3d4246;
+}
+.gnb ul {
+	background: #ebeced;
+}
+.gnb li:hover, .gnb > li.active {
+	background: #7f868b;
+}
+.gnb li:hover > a, .gnb > li.active > a {
+	color: #ffffff;
+}
+.gnb li li:hover {
+	border-color: #3981d7;
+	background: #3981d7;
+}
+.gnb li li li:hover {
+	border-color: #1d66bf;
+	background: #1d66bf;
+}
+.gnb li a.icon,
+.gnb li.active li a.icon {
+	background: url('/images/classroom/template1/gray/icon_gnb.png') no-repeat right 21px;
+}
+.gnb li:hover > a.icon,
+.gnb li.active a.icon,
+.gnb li.active li:hover > a.icon {
+	background: url('/images/classroom/template1/gray/icon_gnb_active.png') no-repeat right 21px;
+}
+
+#header .customer p, #header .customer p a {
+	color: #61696f;
+}
+#header .customer button {
+	border-color: #9da4a8;
+	color: #ffffff;
+	background: #9da4a8;
+}
+#header .customer button:hover {
+	border-color: #9da4a8;
+	color: #8e9599;
+	background: #ffffff;
+}
+
+.contentsWrap .headingBox {
+	border-color: #d9dddf;
+}
+.contentsWrap .headingBox .box .period span {
+	color: #494f54;
+}
+.contentsWrap .headingBox .box .period span em {
+    color: #f2444a;
+}
+.contentsWrap .headingBox .box .share .btnLike {
+	border-color: #656d72;
+	background: url('/images/classroom/template1/button/btn_share_like.png') center 13px no-repeat;
+}
+.contentsWrap .headingBox .box .share .btnRecommend {
+	border-color: #1b76cb;
+	background: url('/images/classroom/template1/button/btn_share_recommend.png') center 15px no-repeat;
+}
+.contentsWrap .headingBox .box .share .btnLike.active {
+	background: url('/images/classroom/template1/button/btn_share_like_active.png') center 13px no-repeat;
+}
+.contentsWrap .headingBox .box .share .btnRecommend.active {
+	background: url('/images/classroom/template1/button/btn_share_recommend_active.png') center 15px no-repeat;
+}
+.contentsWrap .headingBox .box .share button:hover:before {
+    color: #ffffff;
+    background: #4c4c4c;
+}
+.contentsWrap .headingBox .box .share button:hover:after {
+	content: " ";
+    position: absolute;
+ 	top: -9px; 
+    left: 22px;
+    margin-left: -5px;
+	border-top-color: #4c4c4c;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.contentsWrap .headingBox .box .share .active .number {
+    color: #f2444a;
+}
+.contentsWrap .headingBox .box .date strong {
+    color: #61696f;
+}
+.contentsWrap .headingBox .box .date p > span {
+	color: #ffffff;
+}
+.contentsWrap .headingBox .box .date p > span:before {
+	background: #494f54;
+}
+.contentsWrap .headingBox .box .date p > span:after {
+	background: #61696f;
+}
+
+
+@media screen and (max-width: 1000px) {
+	#wrap {
+		background: none;
+	}	
+	#header .logo {
+		border-bottom-color: #494f54;
+		background: #ffffff;
+	}
+	#header .gnbWrap {
+	    background: #ebeced;
+	}
+	.contentsWrap .headingBox {
+		border-bottom-color: #c0c4c7;
+		background: #f3f4f4;
+	}
+	.gnb {
+		 background: #ebeced;
+	}
+	.gnb li a.icon,
+	.gnb li.active li a.icon {
+		background: url('/images/classroom/template1/gray/icon_resp_gnb.png') no-repeat right 21px;
+	}
+	.gnb li:hover > a.icon,
+	.gnb li.active a.icon,
+	.gnb li.active li:hover > a.icon {
+		background: url('/images/classroom/template1/gray/icon_gnb_resp_active.png') no-repeat right 21px;
+	}
+	
+}
+
+
+
+/*popup*/
+ .popup > h3 {
+ 	color: #ffffff;
+    background: #61696f;
+}
+.popup > .btnClose,
+.popup > .btnClose:hover {
+	border: none;
+	background: url('/images/template2/resp/default/button/popup_btn_close.png') center center no-repeat;
+}
+.popup .contentsWrap .contentsBox {
+	background: #ffffff;
+}
+ /* popupNotice */
+/* .popupNotice {
+    background: #9fc7e3;  
+}
+.popupNotice h3 {
+    color: #ffffff;
+	background: #0057a8;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* 버튼 */
+.btnJoin, .btnLearning, h3 > .btnLearning, .btnSubmit, .btnSurvey, 
+.btnSave, .btnWrite, .btnModify, .btnResubmit, .popup .btnTest, .inside.btnReceive {
+	border-color: #1d66bf;
+    color: #ffffff;
+    background: #1d66bf;
+}
+.btnJoin:hover, .btnLearning:hover, h3 > .btnLearning:hover, .btnSubmit:hover, .btnSurvey:hover, 
+.btnSave:hover, .btnWrite:hover, .btnModify:hover, .btnResubmit:hover, .popup .btnTest:hover,
+.inside.btnReceive:hover {
+	border-color: #1d66bf;
+    color: #0c50a1;
+    background: #f9f9f9;
+}
+.activity a.btnView,
+.contentsBox > .title .btnDownload, 
+.delivery button.btnModify, .btnResult, 
+.btnStudy, .inside.btnView, .btnTemporaryDone, 
+.btnClose, .btnFind, .btnCancel,
+.search .btnSearch, .btnList, .btnDelete, .btnCertify, .inside.btnModify,
+.btnPrev, .btnNext,
+.btnRefresh, .btnViewer, .btnContinuing, .btnSituation, .inside.btnDelivery, .inside.btnReview {
+	border-color: #61696f;	
+    color: #ffffff;	
+    background: #61696f;
+}
+.activity a.btnView:hover,
+.contentsBox > .title .btnDownload:hover, 
+.delivery button.btnModify:hover,
+.btnResult:hover, 
+.btnStudy:hover, .inside.btnView:hover, .btnTemporaryDone:hover,
+.btnClose:hover, .btnFind:hover, .btnCancel:hover 
+.search .btnSearch:hover, .btnList:hover, .btnDelete:hover, .btnCertify:hover, 
+.inside.btnModify:hover,
+.btnPrev:hover, .btnNext:hover,
+.btnRefresh:hover, .btnViewer:hover, .btnContinuing:hover, .btnSituation:hover,
+.inside.btnDelivery:hover, .inside.btnReview:hover {
+	border-color: #61696f;	
+    color: #494f54;	
+    background: #f9f9f9;
+}
+.btnTest {
+	border-color: #f2444a;	
+    color: #ffffff;	
+    background: #f2444a;
+}
+.test dd.answer .explain .btnView {
+	min-width: 82px;
+	height: 23px;
+	line-height: 21px;
+	padding: 0 7px 0 10px;
+    border: 1px solid #8e9599;
+    color: #292f37;
+    background: #f9f9f9;
+}
+.btnTest:hover,
+.test dd.answer .explain .btnView:hover {
+    border: 1px solid #8e9599;
+    color: #292f37;
+    background: #f9f9f9;
+}
+
+
+
+
+/*tab*/	
+
+/* .tab ul li {
+	border-top:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+}
+.tab ul li:first-child {
+	border-left:1px solid #cccccc;
+}
+.tab ul li.active, .tab ul li.active:first-child {
+	border: 1px solid #448bc9;
+}
+.tab li a {
+    color: #808084;
+}
+.tab li.active {
+	border-color: #448bc9;
+	background: #448bc9;
+}
+.tab li.active a {
+	color: #ffffff;
+}
+.tab {
+	border-bottom: 2px solid #448bc9;	
+}
+.badge {
+    background: #ee5a5a;
+}
+.badge span {
+    color: #ffffff;
+} */
+
+
+
+
+/* agora */
+.contentsBox > .comment {
+	margin-top: 20px;
+	border: solid 1px #d9dddf;
+	background: #f9f9f9;
+}
+.comment .btnArea .btnAttach {
+	border: 1px solid #8e9599;
+}
+.comment .btnArea .btnAttach.file {
+	background: #ffffff url('/images/template3/resp/default/button/btn_attach_file.png') center center no-repeat;
+}
+.comment .btnArea .btnAttach.photo {
+	background: #ffffff url('/images/template3/resp/default/button/btn_attach_photo.png') center center no-repeat;
+}
+.profileImg {
+	background: url('/images/template3/resp/default/usr/bg_default_profile.png') center center no-repeat;
+	background-size: 100%;
+}
+.profileBg {
+	background: url('/images/template3/resp/default/usr/bg_profile.png') 0 0 no-repeat;
+	background-size: 100%;
+}
+.feed li {
+	border-top: 1px solid #d9dddf;
+}
+.feed li:first-child {
+	border-top: none;
+}
+.feed li .btnDelete, .memoView li .btnDelete {
+	background:	url('/images/template3/resp/default/button/btn_delete_mini.png') center center no-repeat;
+}
+.feed li .textBox .share .icon {
+	color: #333333;
+}
+.feed li .textBox .share .icon.like {
+	background: url('/images/template3/resp/default/usr/icon_like.png') 0 center no-repeat;
+}
+.feed li .textBox .share .icon.select {
+	background: url('/images/template3/resp/default/usr/icon_select.png') 0 center no-repeat;
+}
+.feed li .textBox .share .icon.comment {
+	border-left: 1px solid #d9dddf;
+	background: url('/images/template3/resp/default/usr/icon_comment.png') 15px center no-repeat;
+}
+.feed li .textBox .box .date {
+	color: #8e9599;
+}
+.feed li .view li {
+	border-top: 1px solid #e7e9ea;
+}
+.feed li > .box {
+	border: 1px solid #dddddd;
+}
+.feed li>.box .imgBox img {
+	border: 1px solid #d9dddf;
+}
+.feed li>.box .textBox {
+	border: none;
+}
+.feed li .listAttach li {
+	border-top: none;
+}
+.feed>.btnArea {
+	border-top: 1px solid #d9dddf;
+}
+.feed>.btnArea .btnMore {
+	border: 1px solid #d9dddf;
+	border-top: none;
+}
+.sort li a,
+.sort li:before {
+	color: #8e9599;
+}
+.sort li.active a {
+	color: #333333;
+	background:	url('/images/template2/resp/default/usr/tab_sort_active.png') 0 center no-repeat;
+}
+.commentList {
+	border-top: solid 1px #1d66bf;	
+}
+.commentList li {
+	border-bottom: solid 1px #d9dddf;
+}
+.commentList li .btnDelete {
+	background:	url('/images/classroom/template1/button/btn_delete_mini.png') center center no-repeat;
+}
+.commentList li .btnModify {
+	background:	url('/images/classroom/template1/button/btn_modify_mini.png') center center no-repeat;
+}
+.commentList li .btnCancel {
+	background:	url('/images/classroom/template1/button/btn_cancel_mini.png') center center no-repeat;
+}
+.commentList li p+p span {
+	color: #8e9599;
+}
+.commentList li p+p .date:before {
+	border-left: 1px solid #a0a5a9;
+}
+
+
+
+
+/* icon */
+.icon {
+	color: #ffffff;
+}
+.icon.book {
+	border: 1px solid #f2444a;
+	color: #f2444a;
+	background: #feeced;	
+}
+.icon.smart {
+	border: 1px solid #1d69cc;
+	color: #1d69cc;
+	background: #e8f0fa;
+}
+.icon.elearning {
+	border: 1px solid #61696f;
+	color: #61696f;
+	background: #eff0f0;
+}
+.icon.package {
+	border: 1px solid #ff9c00;
+	color: #e48b00;
+	background: #fff5e5;
+}
+.icon.refund {
+	border: 1px solid #003464;
+	color: #003464;
+	background: #ffffff;
+}
+.icon.noRefund {
+	border: 1px solid #009d4f;
+	color: #009d4f;
+	background: #ffffff;
+}
+.icon.present {
+	border: 1px solid #ff9c00;
+	background: #ff9c00;	
+}
+.icon.event {
+	border: 1px solid #0c50a1;
+	background: #0c50a1;
+}
+.icon.pc {
+	background: #acb2b5 url('/images/template3/resp/default/usr/icon_pc.png') center center no-repeat;
+}
+.icon.mobile {
+	background: #acb2b5 url('/images/template3/resp/default/usr/icon_mobile.png') center center no-repeat;
+}
+.icon.tablet {
+	background: #acb2b5 url('/images/template3/resp/default/usr/icon_tablet.png') center center no-repeat;
+}
+.icon.new,
+.icon.hot {
+	color: #f2444a; 
+}
+.icon.lock {
+	background: url('/images/classroom/template1/default/icon_lock.png') 5px 2px no-repeat;
+}
+.icon.normal {
+	border: 1px solid #e7e9ea;
+	color: #61696f;
+	background: #e7e9ea;
+}
+.icon.question {
+	border: 1px solid #e5eef6;
+	color: #0057a8;
+	background: #e5eef6;
+}
+.icon.progress {
+	border: 1px solid #40b67b;
+	color: #009d4f;
+	background: #ffffff;
+}
+.icon.standby {
+	border: 1px solid #f57377;
+	color: #f2444a;
+	background: #ffffff;
+}
+.icon.end {
+	border: 1px solid #aab0b3;
+	color: #8e9599;
+	background: #ffffff;
+}
+.icon.member {
+	color: #292f37;
+	background: url('/images/template3/resp/default/usr/icon_member.png') 0 2px no-repeat;
+}
+.icon.feed {
+	color: #292f37;
+	background: url('/images/template3/resp/default/usr/icon_feed.png') 0 3px no-repeat;
+}
+.icon.notice {
+	border: 1px solid #8e9599;
+	color: #61696f;
+	background: #ffffff;
+}

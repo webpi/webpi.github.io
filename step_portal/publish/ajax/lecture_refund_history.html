@@ -1,0 +1,291 @@
+<!-- date_searchBox -->
+<div class="date_searchBox">
+    <!-- date_searchBoxIn -->
+    <div class="date_searchBoxIn">
+        <!-- content_Listed -->
+        <ul class="content_Listed">
+            <li>
+                <span class="label">기간별 조회</span>
+                <!-- radioList -->
+                <ul class="radioList">
+                    <li>
+                        <input type="radio" id="radio01_01" name="radioDay" onclick="dateSet(7)">
+                        <label for="radio01_01">1주일</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="radio01_02" name="radioDay" onclick="dateSet(15)">
+                        <label for="radio01_02">15일</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="radio01_03" name="radioDay" onclick="dateSet(30)">
+                        <label for="radio01_03">1개월</label>
+                    </li>
+                </ul>
+                <!-- EOD : radioList -->
+            </li>
+            <li>
+                <!-- dateBox -->
+                <div class="dateBox">
+                    <div class="dateBoxIn">
+                        <div class="inputBox Full">
+                            <input type="text" class="datepicker first_date">
+                        </div>
+                        <div class="wave">~</div>
+                        <div class="inputBox Full">
+                            <input type="text" class="datepicker end_date">
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : dateBox -->
+            </li>
+            <li>
+                <!-- search_area -->
+                <div class="search_area">
+                    <div class="selectBox">
+                        <label for="select_status02"><span>결제상태</span></label>
+                        <select id="select_status02">
+                            <option>결제취소</option>
+                            <option>환불신청</option>
+                            <option>환불완료</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn_s_blue">검색</button>
+                </div>
+                <!-- EDO : search_area -->
+            </li>
+        </ul>
+        <!-- EOD : content_Listed -->
+    </div>
+    <!-- EOD : date_searchBoxIn -->
+</div>
+<!-- EOD : date_searchBox -->
+
+<div class="tableScroll">
+    <table class="table_normal payment">
+        <caption>결제일,과정명,결제금액,결제상태으로 이루어진 결제내역 상세</caption>
+        <colgroup>
+            <col class="mobH" width="15%">
+            <col width="*">
+            <col class="mobH" width="10%">
+            <col class="mobH" width="10%">
+        </colgroup>
+        <thead>
+            <tr class="mobH">
+                <th>결제일</th>
+                <th>과정명</th>
+                <th>결제금액</th>
+                <th>결제상태</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr class="row">
+            <td rowspan="3">
+                <div class="orderInfo">
+                    <p><strong class="dismobS">결제 일</strong><span>2020.10.21</span></p>
+                    <p><strong class="dismobS">주문번호</strong><span>[0000000000]</span></p>
+                </div>
+                <button type="button" class="btn_s_black" onclick="view()">주문 상세보기</button>
+            </td>
+            <td>
+                <div class="ThumBox">
+                    <div class="imgBox">
+                        <img src="/images/template11/resp/default/usr/tum_sample01.png" class="cropImg">
+                    </div>
+                    <div class="infoBox vertical">
+                        <div class="txtBox">
+                            <a href="javascript:void(0)" class="tit">파이썬 프로그래밍(2019년)</a>
+                            <ul class="tag">
+                                <li><span>이러닝</span></li>
+                                <li><span>초급</span></li>
+                                <li><span>모바일지원</span></li>
+                                <li><span>유료</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 금액</span><span class="data"><strong class="txt_red">10,000</strong>원</span>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 상태</span><span class="data">결제완료</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="ThumBox">
+                    <div class="imgBox">
+                        <img src="/images/template11/resp/default/usr/tum_sample02.png" class="cropImg">
+                    </div>
+                    <div class="infoBox vertical">
+                        <div class="txtBox">
+                            <a href="javascript:void(0)" class="tit">디자인 아이디어 발상 기초</a>
+                            <ul class="tag">
+                                <li><span>이러닝</span></li>
+                                <li><span>초급</span></li>
+                                <li><span>모바일지원</span></li>
+                                <li><span>유료</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 금액</span><span class="data"><strong class="txt_red">180,000</strong>원</span>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 상태</span><span class="data">결제완료</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="ThumBox">
+                    <div class="imgBox">
+                        <img src="/images/template11/resp/default/usr/tum_sample03.png" class="cropImg">
+                    </div>
+                    <div class="infoBox vertical">
+                        <div class="txtBox">
+                            <a href="javascript:void(0)" class="tit">무선통신 설비 설계</a>
+                            <ul class="tag">
+                                <li><span>이러닝</span></li>
+                                <li><span>초급</span></li>
+                                <li><span>모바일지원</span></li>
+                                <li><span>유료</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 금액</span><span class="data"><strong class="txt_red">240,000</strong>원</span>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 상태</span><span class="data">결제완료</span>
+                </div>
+            </td>
+        </tr>
+        <tr class="row">
+            <td>
+                <div class="orderInfo">
+                    <p><strong class="dismobS">결제 일</strong><span>2020.10.25</span></p>
+                    <p><strong class="dismobS">주문번호</strong><span>[0000000000]</span></p>
+                </div>
+                <button type="button" class="btn_s_black" onclick="view()">주문 상세보기</button>
+            </td>
+            <td>
+                <div class="ThumBox">
+                    <div class="imgBox">
+                        <img src="/images/template11/resp/default/usr/tum_sample01.png" class="cropImg">
+                    </div>
+                    <div class="infoBox vertical">
+                        <div class="txtBox">
+                            <a href="javascript:void(0)" class="tit">리눅스 서버 구축(기본)</a>
+                            <ul class="tag">
+                                <li><span>이러닝</span></li>
+                                <li><span>초급</span></li>
+                                <li><span>모바일지원</span></li>
+                                <li><span>유료</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 금액</span><span class="data"><strong class="txt_red">240,000</strong>원</span>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 상태</span><span class="data">결제대기</span>
+                </div>
+            </td>
+        </tr>
+        <tr class="row">
+            <td>
+                <div class="orderInfo">
+                    <p><strong class="dismobS">결제 일</strong><span>2020.10.25</span></p>
+                    <p><strong class="dismobS">주문번호</strong><span>[0000000000]</span></p>
+                </div>
+                <button type="button" class="btn_s_black" onclick="view()">주문 상세보기</button>
+            </td>
+            <td>
+                <div class="ThumBox">
+                    <div class="imgBox">
+                        <img src="/images/template11/resp/default/usr/tum_sample03.png" class="cropImg">
+                    </div>
+                    <div class="infoBox vertical">
+                        <div class="txtBox">
+                            <a href="javascript:void(0)" class="tit">리눅스 서버 구축(기본)</a>
+                            <ul class="tag">
+                                <li><span>이러닝</span></li>
+                                <li><span>초급</span></li>
+                                <li><span>모바일지원</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 금액</span><span class="data"><strong class="txt_red">15,000</strong>원</span>
+                </div>
+            </td>
+            <td>
+                <div class="mob_label">
+                    <span class="label">결제 상태</span><span class="data">결제취소</span>
+                </div>
+            </td>
+        </tr>
+        <!-- no_data -->
+        <tr>
+            <td colspan="5" class="no_dataBox">
+                <img src="/images/template11/resp/default/icon/icon_no_data_myhome07.png" alt="">
+                <p class="txt">취소/환불 내역이 없습니다.</p>
+            </td>
+        </tr>
+        <!-- EOD : no_data -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+    /* 기간 검색 날짜 세팅 */
+
+    function dateSet(day){
+
+        $( ".first_date" ).datepicker( "setDate", '0' );
+
+        $( ".end_date" ).datepicker( "setDate", day );
+
+    }
+
+    /* EOD : 기간 검색 날짜 세팅 */
+
+    function view(){
+        $.ajax({
+            url : "ajax/lecture_refund_history_view.html",
+            dataType : "html",
+            success : function(result){
+
+                $(".tab_Content").html(result);
+
+                cropS()
+
+            }
+        });
+    }
+
+</script>

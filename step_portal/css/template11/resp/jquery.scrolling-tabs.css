@@ -1,0 +1,65 @@
+/**
+ * jquery-bootstrap-scrolling-tabs
+ * @version v2.6.1
+ * @link https://github.com/mikejacobson/jquery-bootstrap-scrolling-tabs
+ * @author Mike Jacobson <michaeljjacobson1@gmail.com>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
+.scrtabs-tab-container * {
+  box-sizing: border-box; }
+
+.scrtabs-tab-container {
+  position:relative; height: 60px;  }
+  .scrtabs-tab-container .tab-content {
+    clear: left; }
+
+.scrtabs-tab-container.scrtabs-bootstrap4 .scrtabs-tabs-movable-container > .navbar-nav {
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.scrtabs-tabs-fixed-container {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 100%; }
+
+.scrtabs-tabs-movable-container {
+  position: relative; height: 100% }
+  .scrtabs-tabs-movable-container .tab-content {
+    display: none; }
+
+.scrtabs-tab-container.scrtabs-rtl .scrtabs-tabs-movable-container > ul.nav-tabs {
+  padding-right: 0; }
+
+.scrtabs-tab-scroll-arrow {display:inline-block; width: 40px; height: 40px; padding: 0; border: 0; overflow: hidden; position:absolute; z-index:1; cursor: pointer;}
+.scrtabs-tab-scroll-arrow-left {top:10px; left:-20px;}
+.scrtabs-tab-scroll-arrow .icon_left_arrow {display:inline-block; width: 40px; height: 40px; background: url(/images/template9/resp/default/button/common_page_arrow.png) no-repeat 0 0; transition: 0.3s all ease;}
+.scrtabs-tab-scroll-arrow .icon_left_arrow:hover {
+     background: url(/images/template9/resp/default/button/common_page_arrow_hover.png) no-repeat 0 0; }
+
+.scrtabs-tab-scroll-arrow-right {top:10px; right:-20px}
+.scrtabs-tab-scroll-arrow .icon_right_arrow {display:inline-block; width: 40px; height: 40px; background: url(/images/template9/resp/default/button/common_page_arrow.png) no-repeat -40px 0; transition: 0.3s all ease;}
+.scrtabs-tab-scroll-arrow .icon_right_arrow:hover {
+     background: url(/images/template9/resp/default/button/common_page_arrow_hover.png) no-repeat -40px 0; }
+
+
+.scrtabs-tab-scroll-arrow-right {}
+.scrtabs-tab-scroll-arrow-right:hover {background: url(/images/template9/resp/default/button/common_page_arrow_hover.png) no-repeat -40px 0; }
+
+.scrtabs-tab-scroll-arrow,
+.scrtabs-tab-scroll-arrow .scrtabs-click-target {
+  cursor: pointer; }
+
+.scrtabs-tab-scroll-arrow.scrtabs-with-click-target {
+  cursor: default; }
+
+.scrtabs-tab-scroll-arrow.scrtabs-disable,
+.scrtabs-tab-scroll-arrow.scrtabs-disable .scrtabs-click-target {
+  color: #ddd;
+  cursor: default; }
+
+.scrtabs-tab-scroll-arrow.scrtabs-disable:hover {
+  background-color: initial; }
+
+.scrtabs-tabs-fixed-container ul.nav-tabs > li {
+  white-space: nowrap; }

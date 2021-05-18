@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>토론</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <div class="floatingBox">
+                    <div class="floatingBoxL"><h3 class="mt0">토론주제 정보</h3></div>
+                </div>
+
+                <!-- table_hori -->
+                <table class="table_hori mob_block write mt0">
+                    <caption>토론주제 , 토론유형 , 토론기간 , 내용 , 첨부파일 , 사용여부</caption>
+                    <colgroup>
+                        <col width="16%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <span class="asterisk">토론주제</span>
+                            </th>
+                            <td>
+                                <div class="inputBox Full">
+                                    <input type="text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="asterisk">토론유형</span>
+                            </th>
+                            <td>
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio01_01" name="radioGroup">
+                                        <label for="radio01_01">일반토의</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio01_02" name="radioGroup">
+                                        <label for="radio01_02">찬반토론</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="asterisk">토론기간</span>
+                            </th>
+                            <td>
+                                <!-- selectBox -->
+                                <div class="selectBox type02">
+                                    <label for="start_selectBox"><span>학습시작일</span></label>
+                                    <select id="start_selectBox">
+                                        <option value="start">학습시작일</option>
+                                        <option value="end">학습종료일</option>
+                                        <option value="equal">학습기간과 동일</option>
+                                        <option value="write">직접입력</option>
+                                    </select>
+                                </div>
+                                <!-- EOD : selectBox -->
+
+
+                                <script type="text/javascript">
+
+                                    $(function(){
+
+                                        $('#start_selectBox').on('change',function(){
+
+                                            $(".date_selectWrap .dayBox").removeClass('active');
+
+                                            if(this.value === "start"){
+
+                                                $("#start_dayBox").addClass('active');
+
+                                            }else if(this.value === "end"){
+
+                                                $("#end_dayBox").addClass('active');
+
+                                            }else if(this.value === "write"){
+
+                                                $("#write_dayBox").addClass('active');
+
+                                            }
+
+                                        });
+                                    });
+
+                                </script>
+
+
+                                <div class="date_selectWrap">
+                                    <!-- 학습 시작일 -->
+                                    <div class="dayBox active" id="start_dayBox">
+                                        <div class="inputBox">
+                                            <input type="text">
+                                        </div>
+                                        <span class="vertiM">일 후 부터</span>
+                                        <div class="inputBox">
+                                            <input type="text">
+                                        </div>
+                                        <span class="vertiM">일 후 까지</span>
+                                    </div>
+                                    <!-- 학습 시작일 -->
+
+                                    <!-- 학습 종료일 -->
+                                    <div class="dayBox" id="end_dayBox">
+                                        <div class="inputBox">
+                                            <input type="text">
+                                        </div>
+                                        <span class="vertiM">일 전 부터</span>
+                                        <div class="inputBox">
+                                            <input type="text">
+                                        </div>
+                                        <span class="vertiM">일 전 까지</span>
+                                    </div>
+                                    <!-- 학습 종료일 -->
+
+                                    <!-- 직접입력 -->
+                                    <div class="dayBox dateBox" id="write_dayBox">
+                                        <div class="dateBoxIn">
+                                            <div class="inputBox Full">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                            <div class="wave">~</div>
+                                            <div class="inputBox Full">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- EOD : 직접입력 -->
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr class="mobB">
+                            <th class="mobH">
+                                <span class="asterisk">내용</span>
+                            </th>
+                            <td colspan="2">
+                                <div class="inputBox Full">
+                                    <textarea placeholder="내용"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span>첨부파일</span></th>
+                            <td>
+                                <div class="fileBox">
+                                    <button type="button" class="btn_s_blue">파일찾기</button>
+                                    <ul class="fileList">
+                                        <li>
+                                            <div class="file">
+                                                <span class="txt">첨부파일1</span>
+                                                <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="file">
+                                                <span class="txt">첨부파일2</span>
+                                                <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>사용여부</th>
+                            <td>
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio02_01" name="radioGroup02">
+                                        <label for="radio02_01">사용</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio02_02" name="radioGroup02">
+                                        <label for="radio02_02">사용안함</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_hori -->
+
+                <!-- btnBox -->
+                <div class="btnBox">
+                    <div class="rightBox">
+                        <a href="lecture_debate.html" class="btn_m_blue">저장</a>
+                        <a href="lecture_debate.html" class="btn_m_black">취소</a>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+                <!-- btnBox -->
+                <div class="btnBox">
+                    <div class="leftBox">
+                        <a href="lecture_debate.html" class="btn_m_blue">삭제</a>
+                    </div>
+                    <div class="rightBox">
+                        <a href="lecture_debate.html" class="btn_m_blue">저장</a>
+                        <a href="lecture_debate.html" class="btn_m_black">취소</a>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+</body>
+</html>

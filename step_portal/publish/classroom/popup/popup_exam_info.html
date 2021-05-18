@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+
+<section class="windowPop">
+    <div class="windowPopH">
+        시험 응시하기
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <h3 class="mt0">시험정보</h3>
+
+            <!-- table_hori -->
+            <table class="table_hori mob_block mt0">
+                <caption>시험구분,시험기간,시험시간(분),제한진도율,문항수로 이루어진 시험정보 테이블</caption>
+                <colgroup>
+                    <col width="20%">
+                    <col width="30%">
+                    <col width="20%">
+                    <col width="30%">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th>시험구분</th>
+                    <td colspan="3">최종평가</td>
+                </tr>
+                <tr>
+                    <th>시험기간</th>
+                    <td>2020.04.13 ~ 2020.05.13</td>
+                    <th>시험시간(분)</th>
+                    <td>60분</td>
+                </tr>
+                <tr>
+                    <th>제한진도율</th>
+                    <td>60%</td>
+                    <th>문항수</th>
+                    <td>20</td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- EOD : table_hori -->
+
+            <h3>시험 시 주의사항 및 체크리스트</h3>
+
+            <!-- table_hori -->
+            <table class="table_hori mob_block mt0">
+                <caption>체크리스트 , 주의사항으로 이루어진 시험 시 주의사항 및 체크리스트 테이블</caption>
+                <colgroup>
+                    <col width="20%">
+                    <col width="*">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th>체크리스트</th>
+                    <td>
+                        <p class="txt_info">
+                            <strong>컴퓨터와 인터넷이 잘 되는가?</strong>
+                        </p>
+
+                        <p class="txt_default">휴대폰을 이용한 테더링, 공유기를 사용하지 말고 안정된 인터넷 환경에서 시험에 응시해야 함</p>
+
+                        <p class="txt_info">
+                            <strong>시험은 반드시 한 개의 브라우저만 해야함</strong>
+                        </p>
+
+                        <p class="txt_default ml30">여러 개의 브라우저로 시험을 볼 경우 답안이 정상적으로 등록되지 않음</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>주의사항</th>
+                    <td>
+                        <p class="txt_bullet02 mt0">1대의 컴퓨터에서 동시에 여러명이 시험을 볼 수 없습니다.</p>
+                        <p class="txt_bullet02">중간에 시험을 빠져나오거나 브라우저를 닫아도 시험시간은 계속 진행되므로 비정상적으로 시험이 종료된 경우 재접속하여 남은 시간동안 시험에 응시해야 합니다.</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- EOD : table_hori -->
+
+            <p class="txt_bullet02">시험정보와 시험 시 주의사항 및 체크리스트를 확인하셨다면 [응시환경 점검] 버튼을 클릭하여 응시환경을 점검해주세요.</p>
+            <p class="txt_bullet02">응시환경 점검 완료 후 [응시하기] 버튼을 클릭하여 시험에 응시해주세요.</p>
+
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_black"  onclick="window.open('popup_exam_test.html','','width=800, height=700');">응시환경 점검</button>
+        <button type="button" class="btn_m_blue" onclick="window.open('popup_exam_result.html','','width=800, height=700');">응시하기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+</body>
+</html>

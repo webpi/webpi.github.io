@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <!-- content_wrap -->
+        <div class="content_wrap">
+
+            <!-- searchBox  -->
+            <div class="searchBox">
+                <ul class="selectList">
+                    <li>
+                        <div class="listBox">
+                            <div class="selectBox">
+                                <label for="search_select02"><span>답변상태</span></label>
+                                <select id="search_select02">
+                                    <option>답변완료</option>
+                                    <option>답변대기</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="textBox">
+                    <div class="textBoxIn">
+                        <div class="inputBox">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                        </div>
+                        <button type="button">
+                            <span class="blind">검색</span>
+                            <i class="icon_search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- EOD : searchBox type02 -->
+
+
+            <!-- floatBox -->
+            <div class="floatBox">
+                <div class="floatBoxL">
+                    <div class="countBox">
+                        총 <strong>5</strong>건
+                    </div>
+                </div>
+                <div class="floatBoxR">
+                    <button type="button" class="btn_s_blue" onclick="location.href='customer_question_write.html'">문의하기</button>
+                </div>
+            </div>
+            <!-- EOD : floatBox -->
+
+            <!--  table_normal -->
+            <div class="tableScroll">
+                <table class="table_normal mt0">
+                    <caption>NO,제목,첨부파일,답변상태,등록자,등록일로 이루어진 질의응답 게시판</caption>
+                    <colgroup>
+                        <col width="9%">
+                        <col width="*">
+                        <col class="mobH" width="5%">
+                        <col class="mobH" width="9%">
+                        <col class="mobH" width="12%">
+                        <col class="mobH" width="10%">
+                    </colgroup>
+                    <thead>
+                        <tr class="mobH">
+                            <th>NO</th>
+                            <th>제목</th>
+                            <th>첨부파일</th>
+                            <th>답변상태</th>
+                            <th>등록자</th>
+                            <th>등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="customer_edu_apply_view.html">
+                                            <span class="label_titleLinkIn">
+                                                <span class="txt">윌비소프트 기업 교육을 신청하고 싶습니다.</span>
+                                            </span>
+                                            <i class="icon_lock"><span class="blind">비밀글</span></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>
+                                        <span class="label_s_white">답변대기</span>
+                                    </li>
+                                    <li>등록자 김학도</li>
+                                    <li>등록일 2020.02.04</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                </div>
+                            </td>
+                            <td class="mobH"><span class="label_s_white">답변대기</span></td>
+                            <td class="mobH">김학도</td>
+                            <td class="mobH">2020.02.04</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="customer_edu_apply_view.html">
+                                            <span class="label_titleLinkIn">
+                                                <span class="txt">기업교육신청을 신청하고 싶습니다.</span>
+                                            </span>
+                                            <i class="icon_lock"><span class="blind">비밀글</span></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>
+                                        <span class="label_s_white">답변대기</span>
+                                    </li>
+                                    <li>등록자 이학도</li>
+                                    <li>등록일 2020.02.04</li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH"></td>
+                            <td class="mobH"><span class="label_s_white">답변대기</span></td>
+                            <td class="mobH">이학도</td>
+                            <td class="mobH">2020.02.04</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="al">
+                                <div class="label_title">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="customer_edu_apply_view.html">
+                                            <span class="label_titleLinkIn">
+                                                <span class="txt">기업교육신청을 신청하고 싶습니다.</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>
+                                        <span class="label_s_gray">답변완료</span>
+                                    </li>
+                                    <li>등록자 이학도</li>
+                                    <li>등록일 2020.02.04</li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH"></td>
+                            <td class="mobH"><span class="label_s_gray">답변완료</span></td>
+                            <td class="mobH">이학도</td>
+                            <td class="mobH">2020.02.04</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="al">
+                                <div class="label_title">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="customer_edu_apply_view.html">
+                                            <span class="label_titleLinkIn">
+                                                <span class="txt">기업교육신청을 신청하고 싶습니다.</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>
+                                        <span class="label_s_gray">답변완료</span>
+                                    </li>
+                                    <li>등록자 장학생</li>
+                                    <li>등록일 2020.02.04</li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH"></td>
+                            <td class="mobH"><span class="label_s_gray">답변완료</span></td>
+                            <td class="mobH">장학생</td>
+                            <td class="mobH">2020.02.04</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="customer_edu_apply_view.html">
+                                            <span class="label_titleLinkIn">
+                                                <span class="txt">기업교육신청을 신청하고 싶습니다.</span>
+                                            </span>
+                                            <i class="icon_lock"><span class="blind">비밀글</span></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>
+                                        <span class="label_s_gray">답변완료</span>
+                                    </li>
+                                    <li>등록자 김박사</li>
+                                    <li>등록일 2020.02.04</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file" title="첨부파일 다운로드"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </td>
+                            <td class="mobH"><span class="label_s_gray">답변완료</span></td>
+                            <td class="mobH">김박사</td>
+                            <td class="mobH">2020.02.04</td>
+                        </tr>
+                        <!-- no_data -->
+                        <tr>
+                            <td class="no_dataBox" colspan="7">
+                                <img src="/images/template11/resp/default/icon/icon_no_data_board.png" alt="">
+                                <p class="txt">게시된 글이 없습니다.</p>
+                            </td>
+                        </tr>
+                        <!-- EOD : no_data -->
+                    </tbody>
+                </table>
+                <!--  EOD : table_normal -->
+            </div>
+
+            <!-- pagination -->
+            <div class="pagination">
+                <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                <a class="active" href="javascript:void(0);">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+                <a href="javascript:void(0);">5</a>
+                <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+            </div>
+            <!-- EOD : pagination -->
+
+        </div>
+        <!-- EOD : content_wrap -->
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>

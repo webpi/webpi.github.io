@@ -1,0 +1,496 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <!-- content_wrap -->
+        <div class="content_wrap">
+            <div class="social-wiki-club">
+                <h2 class="ir">전체 인클럽</h2>
+
+                <ul class="tab">
+                    <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>전체 인클럽</span></a></li>
+                    <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>나의 인클럽</span></a></li>
+                </ul>
+
+                <div id="tab01" class="tabBox active">
+                    <h3 class="ir">전체 인클럽</h3>
+
+                    <div class="searchBox type02">
+                        <ul class="selectList">
+                            <li>
+                                <div class="listBox">
+                                    <div class="selectBox">
+                                        <label for="id-select"><span>선택</span></label>
+                                        <select id="id-select">
+                                            <option>카테고리 전체</option>
+                                            <option>스텝위키 멘토's</option>
+                                            <option>일반직무지식</option>
+                                            <option>4차산업혁명</option>
+                                            <option>정책 취업·일자리</option>
+                                            <option>직업훈련</option>
+                                            <option>JOB담 기타</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="listBox">
+                                    <div class="selectBox">
+                                        <label for="id-select2"><span>선택</span></label>
+                                        <select id="id-select2">
+                                            <option>전체</option>
+                                            <option>인클럽명</option>
+                                            <option>인클럽소개</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="textBox">
+                            <div class="textBoxIn">
+                                <div class="inputBox">
+                                    <input type="text" placeholder="검색어를 입력하세요" title="검색어">
+                                </div>
+                                <button type="button">
+                                    <span class="blind">검색</span>
+                                    <i class="icon_search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_hd select">
+                        <span class="sub">총 <strong>24</strong>건</span>
+
+                        <div class="section_hd_aside">
+                            <div class="selectBox">
+                                <label for="id-select3"><span>선택</span></label>
+                                <select id="id-select3">
+                                    <option>개설일순</option>
+                                    <option>위키 많은순</option>
+                                </select>
+                            </div>
+
+                            <a href="popup/popup_club_create.html" class="btn_s_blue btn-inclub-open">인클럽 개설하기</a>
+                        </div>
+                    </div>
+
+                    <div class="wiki-list-club">
+                        <table class="table_normal mt0">
+                            <caption><span>인클럽명, 위키수, 즐겨찾기로 구성된 리스트</span></caption>
+                            <colgroup>
+                                <col>
+                                <col style="width: 100px;">
+                                <col class="mobH" style="width: 160px;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">인클럽명</th>
+                                <th scope="col">위키수</th>
+                                <th scope="col">즐겨찾기</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <article class="list-contents-media list-contents-wiki">
+                                        <div class="list-contents-thumb">
+                                            <img src="../../../images/template11/resp/default/usr/wiki_img_sample01.png" alt="4차산업혁명 기술전쟁 승자는?" class="img cropImg">
+                                            <a href="wiki_club_view.html" class="lnk"><span class="ir">바로가기</span></a>
+                                        </div>
+
+                                        <div class="list-contents-info">
+                                            <a href="wiki_club_view.html" class="lnk">
+                                                <strong class="theme">스텝위키멘토’s</strong>
+                                                <h4 class="subject"><span>Data Creative, 생각하는 마케터 - 데이터 마케팅과 그로스해킹</span></h4>
+
+                                                <p class="summary">상대의 마음을 사로잡기 위해선 무엇을 해야하는 것일까?무엇이 마케팅을 똑바로 하는 것일까? 마케터가 되려면 어떻게 해야 하는 것일까? 상대의 마음을 사로잡기...</p>
+                                            </a>
+
+                                            <div class="list-contents-bot">
+                                                <ul class="writer">
+                                                    <li>개설자<strong>ggqqjjpp(ho**)</strong></li>
+                                                    <li>개설일<strong>2020.11.14</strong></li>
+                                                </ul>
+
+                                                <span class="cnt-wiki">위키수 <strong>324</strong>건</span>
+
+                                                <ul class="tag">
+                                                    <li><a href="#">#4차 산업혁명</a></li>
+                                                    <li><a href="#">#미국</a></li>
+                                                    <li><a href="#">#중국</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </td>
+                                <td class="mobH"><span class="wiki-cnt"><em>11</em>건</span></td>
+                                <td class="club-menu">
+                                    <span class="btn-favo" role="button">
+                                        <input type="checkbox" id="id-favo" class="icheck">
+                                        <label for="id-favo" class="btn-favo-icon"><span class="ir">즐겨찾기</span></label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <article class="list-contents-media list-contents-wiki">
+                                        <div class="list-contents-thumb">
+                                            <img src="../../../images/template11/resp/default/usr/wiki_img_sample01.png" alt="4차산업혁명 기술전쟁 승자는?" class="img cropImg">
+                                            <a href="wiki_club_step.html" class="lnk"><span class="ir">바로가기</span></a>
+                                        </div>
+
+                                        <div class="list-contents-info">
+                                            <a href="wiki_club_step.html" class="lnk">
+                                                <strong class="theme">스텝위키멘토’s</strong>
+                                                <h4 class="subject"><span>Data Creative, 생각하는 마케터 - 데이터 마케팅과 그로스해킹</span></h4>
+
+                                                <p class="summary">상대의 마음을 사로잡기 위해선 무엇을 해야하는 것일까?무엇이 마케팅을 똑바로 하는 것일까? 마케터가 되려면 어떻게 해야 하는 것일까? 상대의 마음을 사로잡기...</p>
+                                            </a>
+
+                                            <div class="list-contents-bot">
+                                                <ul class="writer">
+                                                    <li>개설자<strong>홍짱짱(ho**)</strong></li>
+                                                    <li>개설일<strong>2020.11.14</strong></li>
+                                                </ul>
+
+                                                <span class="cnt-wiki">위키수 <strong>324</strong>건</span>
+
+                                                <ul class="tag">
+                                                    <li><a href="#">#4차 산업혁명</a></li>
+                                                    <li><a href="#">#미국</a></li>
+                                                    <li><a href="#">#중국</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- 클럽상태 -->
+                                        <div class="club-badge">
+                                            <span class="badge badge-operating">운영</span>
+                                        </div>
+                                        <!-- // 클럽상태 -->
+                                    </article>
+                                </td>
+                                <td class="mobH"><span class="wiki-cnt"><em>11</em>건</span></td>
+                                <td class="club-menu">
+                                    <a href="wiki_club_step.html" class="btn_s_black">운영하기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <article class="list-contents-media list-contents-wiki">
+                                        <div class="list-contents-thumb">
+                                            <img src="../../../images/template11/resp/default/usr/wiki_img_sample01.png" alt="4차산업혁명 기술전쟁 승자는?" class="img cropImg">
+                                            <a href="wiki_club_view.html" class="lnk"><span class="ir">바로가기</span></a>
+                                        </div>
+
+                                         <div class="list-contents-info">
+                                            <a href="wiki_club_view.html" class="lnk">
+                                                <strong class="theme">스텝위키멘토’s</strong>
+                                                <h4 class="subject"><span>Data Creative, 생각하는 마케터 - 데이터 마케팅과 그로스해킹</span></h4>
+
+                                                <p class="summary">상대의 마음을 사로잡기 위해선 무엇을 해야하는 것일까?무엇이 마케팅을 똑바로 하는 것일까? 마케터가 되려면 어떻게 해야 하는 것일까? 상대의 마음을 사로잡기...</p>
+                                            </a>
+
+                                            <div class="list-contents-bot">
+                                                <ul class="writer">
+                                                    <li>개설자<strong>홍짱짱(ho**)</strong></li>
+                                                    <li>개설일<strong>2020.11.14</strong></li>
+                                                </ul>
+
+                                                <span class="cnt-wiki">위키수 <strong>324</strong>건</span>
+
+                                                <ul class="tag">
+                                                    <li><a href="#">#4차 산업혁명</a></li>
+                                                    <li><a href="#">#미국</a></li>
+                                                    <li><a href="#">#중국</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- 클럽상태 -->
+                                        <div class="club-badge">
+                                            <span class="badge badge-wait">대기</span>
+                                            <span class="badge badge-reject">반려</span>
+                                        </div>
+                                        <!-- // 클럽상태 -->
+                                    </article>
+                                </td>
+                                <td class="mobH"><span class="wiki-cnt"><em>11</em>건</span></td>
+                                <td class="club-menu">
+                                    <span class="club-status">개설대기</span>
+                                    <div class="club-menu-box">
+                                        <button type="button" class="btn_s_black btn-club-status">반려사유</button>
+
+                                        <!-- 레이어 -->
+                                        <div class="layer-reason">
+                                            관리자가 작성한 반려사유를 확인합니다.
+
+                                            <button type="button" class="btn-reason-clse"><img src="../../../images/template11/resp/default/icon/icon_layer_clse.png" alt="닫기"></button>
+                                        </div>
+                                        <!-- //레이어 -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <!-- 내용없음 -->
+                                    <div class="list-contents-empty">
+                                        클럽이 없습니다.
+                                    </div>
+                                    <!-- // 내용없음 -->
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="moreBox">
+                        <button type="button" class="more_btn"><i class="icon_more"></i><span class="blind">더보기</span></button>
+                    </div>
+                </div>
+
+                <div id="tab02" class="tabBox">
+                    <h3 class="ir">나의 인클럽</h3>
+
+                    <div class="searchBox type02">
+                        <ul class="selectList">
+                            <li>
+                                <div class="listBox">
+                                    <div class="selectBox">
+                                        <label for="id-select4"><span>선택</span></label>
+                                        <select id="id-select4">
+                                            <option>카테고리 전체</option>
+                                            <option>스텝위키 멘토's</option>
+                                            <option>일반직무지식</option>
+                                            <option>4차산업혁명</option>
+                                            <option>정책 취업·일자리</option>
+                                            <option>직업훈련</option>
+                                            <option>JOB담 기타</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="listBox">
+                                    <div class="selectBox">
+                                        <label for="id-select5"><span>선택</span></label>
+                                        <select id="id-select5">
+                                            <option>전체</option>
+                                            <option>인클럽명</option>
+                                            <option>인클럽소개</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="textBox">
+                            <div class="textBoxIn">
+                                <div class="inputBox">
+                                    <input type="text" placeholder="검색어를 입력하세요" title="검색어">
+                                </div>
+                                <button type="button">
+                                    <span class="blind">검색</span>
+                                    <i class="icon_search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_hd select">
+                        <span class="sub">총 <strong>24</strong>건</span>
+
+                        <div class="section_hd_aside">
+                            <div class="selectBox">
+                                <label for="id-select6"><span>선택</span></label>
+                                <select id="id-select6">
+                                    <option>개설일순</option>
+                                    <option>위키 많은순</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="btn_s_blue btn-inclub-open">인클럽 개설하기</button>
+                        </div>
+                    </div>
+
+                    <div class="wiki-list-club">
+                        <table class="table_normal mt0">
+                            <caption><span>인클럽명, 위키수, 즐겨찾기로 구성된 리스트</span></caption>
+                            <colgroup>
+                                <col>
+                                <col style="width: 100px;">
+                                <col class="mobH" style="width: 160px;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">인클럽명</th>
+                                <th scope="col">위키수</th>
+                                <th scope="col">즐겨찾기</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <article class="list-contents-media list-contents-wiki">
+                                        <div class="list-contents-thumb">
+                                            <img src="../../../images/template11/resp/default/usr/wiki_img_sample01.png" alt="4차산업혁명 기술전쟁 승자는?" class="img cropImg">
+                                            <a href="wiki_all_view.html" class="lnk"><span class="ir">바로가기</span></a>
+                                        </div>
+
+                                        <div class="list-contents-info">
+                                            <a href="wiki_all_view.html" class="lnk">
+                                                <strong class="theme">스텝위키멘토’s</strong>
+                                                <h4 class="subject"><span>Data Creative, 생각하는 마케터 - 데이터 마케팅과 그로스해킹</span></h4>
+
+                                                <p class="summary">상대의 마음을 사로잡기 위해선 무엇을 해야하는 것일까?무엇이 마케팅을 똑바로 하는 것일까? 마케터가 되려면 어떻게 해야 하는 것일까? 상대의 마음을 사로잡기...</p>
+                                            </a>
+
+                                            <div class="list-contents-bot">
+                                                <ul class="writer">
+                                                    <li>개설자<strong>홍짱짱(ho**)</strong></li>
+                                                    <li>개설일<strong>2020.11.14</strong></li>
+                                                </ul>
+
+                                                <span class="cnt-wiki">위키수 <strong>324</strong>건</span>
+
+                                                <ul class="tag">
+                                                    <li><a href="#">#4차 산업혁명</a></li>
+                                                    <li><a href="#">#미국</a></li>
+                                                    <li><a href="#">#중국</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- 클럽상태 -->
+                                        <div class="club-badge">
+                                            <span class="badge badge-operating">운영</span>
+                                        </div>
+                                        <!-- // 클럽상태 -->
+                                    </article>
+                                </td>
+                                <td class="mobH"><span class="wiki-cnt"><em>11</em>건</span></td>
+                                <td class="club-menu">
+                                    <a href="wiki_club_step.html" class="btn_s_black">운영하기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <article class="list-contents-media list-contents-wiki">
+                                        <div class="list-contents-thumb">
+                                            <img src="../../../images/template11/resp/default/usr/wiki_img_sample01.png" alt="4차산업혁명 기술전쟁 승자는?" class="img cropImg">
+                                            <a href="wiki_all_view.html" class="lnk"><span class="ir">바로가기</span></a>
+                                        </div>
+
+                                        <div class="list-contents-info">
+                                            <a href="wiki_all_view.html" class="lnk">
+                                                <strong class="theme">스텝위키멘토’s</strong>
+                                                <h4 class="subject"><span>Data Creative, 생각하는 마케터 - 데이터 마케팅과 그로스해킹</span></h4>
+
+                                                <p class="summary">상대의 마음을 사로잡기 위해선 무엇을 해야하는 것일까?무엇이 마케팅을 똑바로 하는 것일까? 마케터가 되려면 어떻게 해야 하는 것일까? 상대의 마음을 사로잡기...</p>
+                                            </a>
+
+                                            <div class="list-contents-bot">
+                                                <ul class="writer">
+                                                    <li>개설자<strong>홍짱짱(ho**)</strong></li>
+                                                    <li>개설일<strong>2020.11.14</strong></li>
+                                                </ul>
+
+                                                <span class="cnt-wiki">위키수 <strong>324</strong>건</span>
+
+                                                <ul class="tag">
+                                                    <li><a href="#">#4차 산업혁명</a></li>
+                                                    <li><a href="#">#미국</a></li>
+                                                    <li><a href="#">#중국</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- 클럽상태 -->
+                                        <div class="club-badge">
+                                            <span class="badge badge-wait">대기</span>
+                                            <span class="badge badge-reject">반려</span>
+                                        </div>
+                                        <!-- // 클럽상태 -->
+                                    </article>
+                                </td>
+                                <td class="mobH"><span class="wiki-cnt"><em>11</em>건</span></td>
+                                <td class="club-menu">
+                                    <span class="club-status">개설대기</span>
+                                    <div class="club-menu-box">
+                                        <button type="button" class="btn_s_black btn-club-status">반려사유</button>
+
+                                        <!-- 레이어 -->
+                                        <div class="layer-reason">
+                                            관리자가 작성한 반려사유를 확인합니다.
+
+                                            <button type="button" class="btn-reason-clse"><img src="../../../images/template11/resp/default/icon/icon_layer_clse.png" alt="닫기"></button>
+                                        </div>
+                                        <!-- //레이어 -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <!-- 내용없음 -->
+                                    <div class="list-contents-empty">
+                                        클럽이 없습니다.
+                                    </div>
+                                    <!-- // 내용없음 -->
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="moreBox">
+                        <button type="button" class="more_btn"><i class="icon_more"></i><span class="blind">더보기</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- EOD : content_wrap -->
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+<!-- EOD : footer -->
+</div>
+
+</body>
+</html>

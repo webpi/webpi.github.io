@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>팀 프로젝트</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs">
+
+                <!-- team_info_wrap -->
+                <div class="team_info_wrap">
+                    <ul class="team_info_area">
+                        <li><span class="team">A팀</span></li>
+                        <li><strong class="label">과제</strong><span class="data">개별제출</span></li>
+                        <li><strong class="label">팀장</strong><span class="data">홍길동</span></li>
+                    </ul>
+                    <div class="team_info_member">
+                        <strong>팀원</strong><span>가학생, 나학생, 다학생, 라학생, 마학생, 바학생, 사학생, 아학생, 자학생 </span>
+                    </div>
+                </div>
+                <!-- EOD : team_info_wrap -->
+
+
+                <div class="btn_rights">
+                    <button type="button" class="btn_sr_white" onclick="location.href='lecture_team.html'">팀 목록</button>
+                </div>
+
+                <!-- tab_arrowBox -->
+                <div class="tab_arrowBox">
+                    <!-- tab_arrow -->
+                    <ul class="tab_arrow" role="tablist">
+                        <li><a href="lecture_team_list.html"><span>게시판</span></a></li>
+                        <li><a href="lecture_team_assign.html"><span>과제물</span></a></li>
+                        <li class="active"><a href="lecture_team_eval.html"><span>팀원평가</span></a></li>
+                        <li><a href="lecture_team_info.html"><span>팀 구성원</span></a></li>
+                    </ul>
+                    <!-- EOD : tab_arrow -->
+                </div>
+                <!-- EOD : tab_arrowBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_normal">
+                        <caption>항목,본인평가,팀원평가,과제평가,강사평가로 이루어진 팀원평가 상세</caption>
+                        <colgroup>
+                            <col width="20%">
+                            <col width="20%">
+                            <col width="20%">
+                            <col width="20%">
+                            <col width="20%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col" rowspan="2">항목</th>
+                            <th scope="col" rowspan="2">본인평가</th>
+                            <th scope="col" rowspan="2">팀원평가</th>
+                            <th scope="col" rowspan="2">과제평가</th>
+                            <th scope="col" rowspan="2">강사평가</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>반영비율</th>
+                            <td>70%</td>
+                            <td>10%</td>
+                            <td>10%</td>
+                            <td>10%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>명
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_normal mt0">
+                        <caption>이름,본인 평가,팀원 평가,과제평가,강사평가,총점</caption>
+                        <colgroup>
+                            <col width="*">
+                            <col width="16%">
+                            <col width="16%">
+                            <col width="16%">
+                            <col width="16%">
+                            <col width="16%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">이름</th>
+                                <th scope="col">본인평가</th>
+                                <th scope="col">팀원평가</th>
+                                <th scope="col">과제평가</th>
+                                <th scope="col">강사평가</th>
+                                <th scope="col">총점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                               <td class="al">
+                                   <p class="nowrap">김리더<span class="icon_leader"></span></p>
+                               </td>
+                               <td class="ac">50</td>
+                               <td class="ac">
+                                   <div class="linkBox arrow">
+                                       <a href="javascript:void(0)" onclick="window.open('popup/popup_team_eval_score.html','','width=800, height=750');">
+                                           <span class="txt type02">76</span>
+                                       </a>
+                                   </div>
+                               </td>
+                               <td class="ac">50</td>
+                               <td class="ac">
+                                   <div class="inputBox width_s">
+                                       <input type="number">
+                                   </div>
+                               </td>
+                               <td class="ac">
+                                   <span class="txt_blue01">76</span>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="al">
+                                   <p class="nowrap">가학생</p>
+                               </td>
+                               <td class="ac">70</td>
+                               <td class="ac">
+                                   <div class="linkBox arrow">
+                                       <a href="javascript:void(0)" onclick="window.open('popup/popup_team_eval_score.html','','width=800, height=750');">
+                                           <span class="txt type02">32</span>
+                                       </a>
+                                   </div>
+                               </td>
+                               <td class="ac">75</td>
+                               <td class="ac">
+                                   <div class="inputBox width_s">
+                                       <input type="number">
+                                   </div>
+                               </td>
+                               <td class="ac">
+                                   <span class="txt_blue01">100</span>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td class="al">
+                                   <p class="nowrap">나학생</p>
+                               </td>
+                               <td class="ac">50</td>
+                               <td class="ac">
+                                   <div class="linkBox arrow">
+                                       <a href="javascript:void(0)" onclick="window.open('popup/popup_team_eval_score.html','','width=800, height=750');">
+                                           <span class="txt type02">62</span>
+                                       </a>
+                                   </div>
+                               </td>
+                               <td class="ac">55</td>
+                               <td class="ac">
+                                   <div class="inputBox width_s">
+                                       <input type="number">
+                                   </div>
+                               </td>
+                               <td class="ac">
+                                   <span class="txt_blue01">70</span>
+                               </td>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <div class="btn_rights">
+                    <button type="button" class="btn_m_blue">저장</button>
+                </div>
+
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

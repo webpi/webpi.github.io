@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        불참사유
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <!-- windowPopBoxIn -->
+        <div class="windowPopBoxIn">
+            <!-- table_hori -->
+            <table class="table_hori">
+                <caption>이름 , 아이디 , 내용 , 첨부파일 , 등록일시로 이루어져 있는 불참사유 상세</caption>
+                <colgroup>
+                    <col width="120px">
+                    <col width="*">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>이름</th>
+                        <td>박학생</td>
+                    </tr>
+                    <tr>
+                        <th>아이디</th>
+                        <td>hspark@step.or.kr</td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>
+                        <td>
+                            <div class="inputBox Full">
+                                <textarea></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>첨부파일</th>
+                        <td>
+                            <div class="fileBox">
+                                <button type="button" class="btn_s_blue">파일 첨부</button>
+                                <ul class="fileList">
+                                    <li>
+                                        <div class="file">
+                                            <span class="txt">첨부파일1</span>
+                                            <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="file">
+                                            <span class="txt">첨부파일2</span>
+                                            <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>등록일시</th>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- EOD : table_hori -->
+        </div>
+        <!-- EOD : windowPopBoxIn -->
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">저장</button>
+        <button type="button" class="btn_m_blue" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

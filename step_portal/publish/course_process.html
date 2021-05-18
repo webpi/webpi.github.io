@@ -1,0 +1,903 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- header -->
+<header class="header headerInclude"></header>
+<!-- EOD : header -->
+
+<!-- lnb -->
+<section class="lnbInclude"></section>
+<!-- EOD : lnb -->
+
+<!-- contentLayout -->
+<div class="sub_contentLayout" id="content">
+    <!-- content_wrap -->
+    <div class="content_wrap">
+        <!-- process_searchBox -->
+        <div class="process_searchBox">
+            <!-- typeBox -->
+            <div class="typeBox">
+                <ul class="list">
+                    <li>
+                        <div class="label">
+                            <span>검색어</span>
+                        </div>
+                        <div class="dataBox">
+                            <div class="process_search">
+                                <div class="inputBox Full">
+
+                                    <input type="text" placeholder="검색어를 입력하세요">
+
+                                </div>
+
+                                <button type="button" class="btn_s_blue detail_btn">상세검색</button>
+
+                                <!-- search-comm -->
+                                <div class="search-comm">
+                                    <ul class="search-list-contents">
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <div class="thumb">
+                                                    <img src="/images/template11/resp/default/usr/tum_sample01.png" alt="사진명" class="cropImg">
+                                                </div>
+                                                <div class="info">
+                                                        <span class="subject">
+                                                            <strong class="search-word">프</strong>로그래밍(2020년)
+                                                        </span>
+                                                    <ul class="tag">
+                                                        <li>#모바일지원</li>
+                                                        <li>#초급</li>
+                                                        <li>#무료</li>
+                                                        <li>#이러닝</li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <div class="thumb">
+                                                    <img src="/images/template11/resp/default/usr/tum_sample01.png" alt="사진명" class="cropImg">
+                                                </div>
+                                                <div class="info">
+                                                        <span class="subject">
+                                                            <strong class="search-word">프</strong>로그래밍(2020년)
+                                                        </span>
+                                                    <ul class="tag">
+                                                        <li>#모바일지원</li>
+                                                        <li>#초급</li>
+                                                        <li>#무료</li>
+                                                        <li>#이러닝</li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <div class="thumb">
+                                                    <img src="/images/template11/resp/default/usr/tum_sample01.png" alt="사진명" class="cropImg">
+                                                </div>
+                                                <div class="info">
+                                                        <span class="subject">
+                                                            <strong class="search-word">프</strong>로그래밍(2020년)
+                                                        </span>
+                                                    <ul class="tag">
+                                                        <li>#모바일지원</li>
+                                                        <li>#초급</li>
+                                                        <li>#무료</li>
+                                                        <li>#이러닝</li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- // 썸네일 포함 -->
+                                    <button type="button" class="btn-search-clse js-btn-search-clse"><span class="ir">자동검색 닫기</span></button>
+                                </div>
+                                <!-- EOD : search-comm -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="label">
+                            <span>NCS 분류</span>
+                        </div>
+                        <div class="dataBox">
+                            <ul class="select_list">
+                                <li>
+                                    <div class="selectBox">
+                                        <label for="ncs01"><span>전체</span></label>
+                                        <select id="ncs01">
+                                            <option value="">전체</option>
+                                            <option value="1">사업관리</option>
+                                            <option value="276">경영·회계·사무</option>
+                                            <option value="1687">금융·보험</option>
+                                            <option value="3479">교육·자연·사회과학</option>
+                                            <option value="4167">법률·경찰·소방·교도·국방</option>
+                                            <option value="5239">보건·의료</option>
+                                            <option value="5938">사회복지·종교</option>
+                                            <option value="7238">문화·예술·디자인·방송</option>
+                                            <option value="11098">운전·운송</option>
+                                            <option value="13259">영업판매</option>
+                                            <option value="14378">경비·청소</option>
+                                            <option value="14770">이용·숙박·여행·오락·스포츠</option>
+                                            <option value="17985">음식서비스</option>
+                                            <option value="18818">건설</option>
+                                            <option value="25638">기계</option>
+                                            <option value="33028">재료</option>
+                                            <option value="35864">화학</option>
+                                            <option value="38664">섬유·의복</option>
+                                            <option value="40097">전기·전자</option>
+                                            <option value="45542">정보통신</option>
+                                            <option value="49859">식품가공</option>
+                                            <option value="51690">인쇄·목재·가구·공예</option>
+                                            <option value="53840">환경·에너지·안전</option>
+                                            <option value="57091">농림어업222</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="selectBox">
+                                        <label for="ncs02"><span>전체</span></label>
+                                        <select id="ncs02">
+                                            <option>카테고리3</option>
+                                            <option>카테고리4</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="selectBox">
+                                        <label for="ncs03"><span>전체</span></label>
+                                        <select id="ncs03">
+                                            <option>카테고리1</option>
+                                            <option>카테고리2</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="selectBox">
+                                        <label for="ncs04"><span>전체</span></label>
+                                        <select id="ncs04">
+                                            <option>카테고리3</option>
+                                            <option>카테고리4</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="selectBox">
+                                        <label for="ncs05"><span>전체</span></label>
+                                        <select id="ncs05">
+                                            <option>카테고리3</option>
+                                            <option>카테고리4</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="label">
+                            <span>카테고리</span>
+                        </div>
+                        <div class="dataBox">
+                            <ul class="select_list">
+                                <li>
+                                    <div class="selectBox">
+                                        <label for="category01"><span>전체</span></label>
+                                        <select id="category01">
+                                            <option>카테고리1</option>
+                                            <option>카테고리2</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="selectBox">
+                                        <label for="category02"><span>전체</span></label>
+                                        <select id="category02">
+                                            <option>카테고리3</option>
+                                            <option>카테고리4</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="label">
+                            <span>기간 검색</span>
+                        </div>
+                        <div class="dataBox">
+                            <ul class="select_list">
+                                <li>
+                                    <ul class="radioList">
+                                        <li>
+                                            <input type="radio" id="radio01_01" name="radioGroup">
+                                            <label for="radio01_01">신청기간</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="radio01_02" name="radioGroup">
+                                            <label for="radio01_02">학습기간</label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="dateBox">
+                                        <div class="dateBoxIn">
+                                            <div class="inputBox Full">
+                                                <input type="text" class="datepicker first_date">
+                                            </div>
+                                            <div class="wave">~</div>
+                                            <div class="inputBox Full">
+                                                <input type="text" class="datepicker end_date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="dayBox">
+                                        <li>
+                                            <button type="button" class="btn_s_white" onclick="dateSet(7)">7일</button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_s_white" onclick="dateSet(15)">15일</button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_s_white" onclick="dateSet(30)">30일</button>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- EOD : typeBox -->
+            <!-- typeBox -->
+            <div class="typeBox mobC">
+                <ul class="divi">
+                    <li>
+                       <div class="area">
+                            <div class="label">
+                                <span>운영방식</span>
+                            </div>
+                            <div class="dataBox">
+                                <ul class="checkList button">
+                                    <li>
+                                        <input type="checkbox" id="chk_type01">
+                                        <label for="chk_type01">정시</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk_type02">
+                                        <label for="chk_type02">상시</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="area">
+                            <div class="label">
+                                <span>난이도</span>
+                            </div>
+                            <div class="dataBox">
+                                <ul class="checkList button">
+                                    <li>
+                                        <input type="checkbox" id="chk_level01">
+                                        <label for="chk_level01">초급</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk_level02">
+                                        <label for="chk_level02">중급</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk_level03">
+                                        <label for="chk_level03">고급</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="area">
+                            <div class="label">
+                                <span>교육비</span>
+                            </div>
+                            <div class="dataBox">
+                                <ul class="checkList button">
+                                    <li>
+                                        <input type="checkbox" id="chk_price01">
+                                        <label for="chk_price01">무료</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk_price02">
+                                        <label for="chk_price02">유료</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="area">
+                            <div class="label">
+                                <span>지원기기</span>
+                            </div>
+                            <div class="dataBox">
+                                <ul class="checkList button">
+                                    <li>
+                                        <input type="checkbox" id="chk_device01">
+                                        <label for="chk_device01">PC</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk_device02">
+                                        <label for="chk_device02">PC+모바일</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="area">
+                            <div class="label">
+                                <span>정렬</span>
+                            </div>
+                            <div class="dataBox">
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio02_01" name="radioGroup" >
+                                        <label for="radio02_01">최신순</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio02_02" name="radioGroup" >
+                                        <label for="radio02_02">인기순</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio02_03" name="radioGroup">
+                                        <label for="radio02_03">평점순</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- EOD : typeBox -->
+
+            <!-- buttonBox -->
+            <div class="buttonBox ac">
+                <button type="button" class="btn_m_blue_gra">검색</button>
+                <button type="button" class="btn_m_black">초기화</button>
+
+                <!-- 모바일에서만 보여지는 영역 -->
+                <div class="mobBox">
+                    <button type="button" class="btn_mob_detail"><span class="txt">상세검색</span><i class="icon"></i><span class="blind">상세 검색 조건 노출</span></button>
+                </div>
+                <!-- EOD : 모바일에서만 보여지는 영역 -->
+            </div>
+            <!-- EOD :  buttonBox -->
+        </div>
+        <!-- EOD: process_searchBox -->
+
+
+        <!-- section_hd -->
+        <div class="section_hd">
+            <span class="tit">과정 검색결과</span><span class="sub">총 <strong>6</strong>건</span>
+        </div>
+        <!-- EOD : section_hd -->
+
+        <!-- process_listBox -->
+        <div class="process_listBox">
+            <ul>
+                <li>
+                    <div class="Box">
+                        <!-- thumBox -->
+                        <div class="thumBox">
+                            <!-- linkBox -->
+                            <div class="linkBox">
+                                <!-- imgBox -->
+                                <a href="course_process_view.html" class="imgBox" title="과정 상세로 이동">
+                                    <img src="/images/template9/resp/default/usr/tum_sample01.png" class="cropImg">
+                                </a>
+                                <!-- EOD : imgBox -->
+
+                                <button type="button" class="btn_like" title="관심 과정 등록"><i class="icon_heart"></i></button>
+
+                                <!-- contentBox -->
+                                <a href="course_process_view.html" class="contentBox"  title="과정 상세로 이동">
+                                    <div class="thum_label">
+                                        윌비소프트(주)
+                                    </div>
+                                    <p class="thum_tit">HMI프로그램 개발 - 모듈2. HMI 시스템 응용 HMI프로그램 개발 - 모듈2. HMI 시스템 응용 하겠습니다 테스트입니다.</p>
+
+                                    <div class="thum_date">
+                                        <ul>
+                                            <li>
+                                                <span class="t">교육비</span> <strong class="price">30,000원</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="thum_tag">
+                                        <ul>
+                                            <li><span>이러닝
+</span></li>
+                                            <li><span>고급</span></li>
+                                            <li><span>상시</span></li>
+                                            <li><span>모바일</span></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <!-- EOD : contentBox -->
+                            </div>
+                            <!-- EOD : linkBox -->
+
+                            <!-- serviceBox -->
+                            <div class="serviceBox">
+                                <div class="star_service">
+                                    <div class="star_score">
+                                        <span class="point"><span class="blind">강의 평점<span class="num">2.5</span>점</span></span>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="demo_service">맛보기</a>
+                            </div>
+                            <!-- EOD : serviceBox -->
+                        </div>
+                        <!-- EOD : thumBox -->
+                    </div>
+                </li>
+                <li>
+                    <div class="Box">
+                        <!-- thumBox -->
+                        <div class="thumBox">
+                            <!-- linkBox -->
+                            <div class="linkBox">
+                                <!-- imgBox -->
+                                <a href="course_process_view.html" class="imgBox" title="과정 상세로 이동">
+                                    <img src="/images/template9/resp/default/usr/tum_sample01.png" class="cropImg">
+                                </a>
+                                <!-- EOD : imgBox -->
+
+                                <button type="button" class="btn_like" title="관심 과정 등록"><i class="icon_heart"></i></button>
+
+                                <!-- contentBox -->
+                                <a href="course_process_view.html" class="contentBox"  title="과정 상세로 이동">
+                                    <div class="thum_label">
+                                        윌비소프트(주)
+                                    </div>
+                                    <p class="thum_tit">HMI프로그램 개발 - 모듈2. HMI 시스템 응용 HMI프로그램 개발 - 모듈2. HMI 시스템 응용 하겠습니다 테스트입니다.</p>
+
+                                    <div class="thum_date">
+                                        <ul>
+                                            <li>
+                                                <span class="t">교육비</span> <strong class="price">30,000원</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="thum_tag">
+                                        <ul>
+                                            <li><span>이러닝
+</span></li>
+                                            <li><span>고급</span></li>
+                                            <li><span>상시</span></li>
+                                            <li><span>모바일</span></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <!-- EOD : contentBox -->
+                            </div>
+                            <!-- EOD : linkBox -->
+
+                            <!-- serviceBox -->
+                            <div class="serviceBox">
+                                <div class="star_service">
+                                    <div class="star_score">
+                                        <span class="point"><span class="blind">강의 평점<span class="num">2.5</span>점</span></span>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="demo_service">맛보기</a>
+                            </div>
+                            <!-- EOD : serviceBox -->
+                        </div>
+                        <!-- EOD : thumBox -->
+                    </div>
+                </li>
+                <li>
+                    <div class="Box">
+                        <!-- thumBox -->
+                        <div class="thumBox">
+                            <!-- linkBox -->
+                            <div class="linkBox">
+                                <!-- imgBox -->
+                                <a href="course_process_view.html" class="imgBox" title="과정 상세로 이동">
+                                    <img src="/images/template9/resp/default/usr/tum_sample01.png" class="cropImg">
+                                </a>
+                                <!-- EOD : imgBox -->
+
+                                <button type="button" class="btn_like" title="관심 과정 등록"><i class="icon_heart"></i></button>
+
+                                <!-- contentBox -->
+                                <a href="course_process_view.html" class="contentBox"  title="과정 상세로 이동">
+                                    <div class="thum_label">
+                                        윌비소프트(주)
+                                    </div>
+                                    <p class="thum_tit">HMI프로그램 개발 - 모듈2. HMI 시스템 응용 HMI프로그램 개발 - 모듈2. HMI 시스템 응용 하겠습니다 테스트입니다.</p>
+
+                                    <div class="thum_date">
+                                        <ul>
+                                            <li>
+                                                <span class="t">교육비</span> <strong class="price">30,000원</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="thum_tag">
+                                        <ul>
+                                            <li><span>이러닝
+</span></li>
+                                            <li><span>고급</span></li>
+                                            <li><span>상시</span></li>
+                                            <li><span>모바일</span></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <!-- EOD : contentBox -->
+                            </div>
+                            <!-- EOD : linkBox -->
+
+                            <!-- serviceBox -->
+                            <div class="serviceBox">
+                                <div class="star_service">
+                                    <div class="star_score">
+                                        <span class="point"><span class="blind">강의 평점<span class="num">2.5</span>점</span></span>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="demo_service">맛보기</a>
+                            </div>
+                            <!-- EOD : serviceBox -->
+                        </div>
+                        <!-- EOD : thumBox -->
+                    </div>
+                </li>
+                <li>
+                    <div class="Box">
+                        <!-- thumBox -->
+                        <div class="thumBox">
+                            <!-- linkBox -->
+                            <div class="linkBox">
+                                <!-- imgBox -->
+                                <a href="course_process_view.html" class="imgBox" title="과정 상세로 이동">
+                                    <img src="/images/template9/resp/default/usr/tum_sample01.png" class="cropImg">
+                                </a>
+                                <!-- EOD : imgBox -->
+
+                                <button type="button" class="btn_like" title="관심 과정 등록"><i class="icon_heart"></i></button>
+
+                                <!-- contentBox -->
+                                <a href="course_process_view.html" class="contentBox"  title="과정 상세로 이동">
+                                    <div class="thum_label">
+                                        윌비소프트(주)
+                                    </div>
+                                    <p class="thum_tit">HMI프로그램 개발 - 모듈2. HMI 시스템 응용 HMI프로그램 개발 - 모듈2. HMI 시스템 응용 하겠습니다 테스트입니다.</p>
+
+                                    <div class="thum_date">
+                                        <ul>
+                                            <li>
+                                                <span class="t">교육비</span> <strong class="price">30,000원</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="thum_tag">
+                                        <ul>
+                                            <li><span>이러닝
+</span></li>
+                                            <li><span>고급</span></li>
+                                            <li><span>상시</span></li>
+                                            <li><span>모바일</span></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <!-- EOD : contentBox -->
+                            </div>
+                            <!-- EOD : linkBox -->
+
+                            <!-- serviceBox -->
+                            <div class="serviceBox">
+                                <div class="star_service">
+                                    <div class="star_score">
+                                        <span class="point"><span class="blind">강의 평점<span class="num">2.5</span>점</span></span>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="demo_service">맛보기</a>
+                            </div>
+                            <!-- EOD : serviceBox -->
+                        </div>
+                        <!-- EOD : thumBox -->
+                    </div>
+                </li>
+                <li>
+                    <div class="Box">
+                        <!-- thumBox -->
+                        <div class="thumBox">
+                            <!-- linkBox -->
+                            <div class="linkBox">
+                                <!-- imgBox -->
+                                <a href="course_process_view.html" class="imgBox" title="과정 상세로 이동">
+                                    <img src="/images/template9/resp/default/usr/tum_sample01.png" class="cropImg">
+                                </a>
+                                <!-- EOD : imgBox -->
+
+                                <button type="button" class="btn_like" title="관심 과정 등록"><i class="icon_heart"></i></button>
+
+                                <!-- contentBox -->
+                                <a href="course_process_view.html" class="contentBox"  title="과정 상세로 이동">
+                                    <div class="thum_label">
+                                        윌비소프트(주)
+                                    </div>
+                                    <p class="thum_tit">HMI프로그램 개발 - 모듈2. HMI 시스템 응용 HMI프로그램 개발 - 모듈2. HMI 시스템 응용 하겠습니다 테스트입니다.</p>
+
+                                    <div class="thum_date">
+                                        <ul>
+                                            <li>
+                                                <span class="t">교육비</span> <strong class="price">30,000원</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="thum_tag">
+                                        <ul>
+                                            <li><span>이러닝
+</span></li>
+                                            <li><span>고급</span></li>
+                                            <li><span>상시</span></li>
+                                            <li><span>모바일</span></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <!-- EOD : contentBox -->
+                            </div>
+                            <!-- EOD : linkBox -->
+
+                            <!-- serviceBox -->
+                            <div class="serviceBox">
+                                <div class="star_service">
+                                    <div class="star_score">
+                                        <span class="point"><span class="blind">강의 평점<span class="num">2.5</span>점</span></span>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="demo_service">맛보기</a>
+                            </div>
+                            <!-- EOD : serviceBox -->
+                        </div>
+                        <!-- EOD : thumBox -->
+                    </div>
+                </li>
+                <li>
+                    <div class="Box">
+                        <!-- thumBox -->
+                        <div class="thumBox">
+                            <!-- linkBox -->
+                            <div class="linkBox">
+                                <!-- imgBox -->
+                                <a href="course_process_view.html" class="imgBox" title="과정 상세로 이동">
+                                    <img src="/images/template9/resp/default/usr/tum_sample01.png" class="cropImg">
+                                </a>
+                                <!-- EOD : imgBox -->
+
+                                <button type="button" class="btn_like" title="관심 과정 등록"><i class="icon_heart"></i></button>
+
+                                <!-- contentBox -->
+                                <a href="course_process_view.html" class="contentBox"  title="과정 상세로 이동">
+                                    <div class="thum_label">
+                                        윌비소프트(주)
+                                    </div>
+                                    <p class="thum_tit">HMI프로그램 개발 - 모듈2. HMI 시스템 응용 HMI프로그램 개발 - 모듈2. HMI 시스템 응용 하겠습니다 테스트입니다.</p>
+
+                                    <div class="thum_date">
+                                        <ul>
+                                            <li>
+                                                <span class="t">교육비</span> <strong class="price">30,000원</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="thum_tag">
+                                        <ul>
+                                            <li><span>이러닝
+</span></li>
+                                            <li><span>고급</span></li>
+                                            <li><span>상시</span></li>
+                                            <li><span>모바일</span></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                                <!-- EOD : contentBox -->
+                            </div>
+                            <!-- EOD : linkBox -->
+
+                            <!-- serviceBox -->
+                            <div class="serviceBox">
+                                <div class="star_service">
+                                    <div class="star_score">
+                                        <span class="point"><span class="blind">강의 평점<span class="num">2.5</span>점</span></span>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="demo_service">맛보기</a>
+                            </div>
+                            <!-- EOD : serviceBox -->
+                        </div>
+                        <!-- EOD : thumBox -->
+                    </div>
+                </li>
+
+                <!-- no_data -->
+                <li class="no_data">
+                    <img src="/images/template11/resp/default/icon/icon_no_data_board.png" alt="">
+                    <p class="txt">과정 검색결과가 없습니다.</p>
+                </li>
+                <!-- EOD : no_data -->
+            </ul>
+        </div>
+        <!-- EOD : process_listBox  -->
+
+        <!-- pagination -->
+        <div class="pagination">
+            <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+            <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+            <a class="active" href="javascript:void(0);">1</a>
+            <a href="javascript:void(0);">2</a>
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>
+            <a href="javascript:void(0);">5</a>
+            <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+            <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+        </div>
+        <!-- EOD : pagination -->
+
+        <!-- moreBox -->
+
+        <div class="moreBox">
+            <a href="javascript:void(0)" class="more_btn"><i class="icon_more"></i><span class="blind">더보기</span></a>
+        </div>
+
+        <!-- EOD : moreBox -->
+
+    </div>
+    <!-- EOD : content_wrap -->
+</div>
+<!-- EOD : contentLayout -->
+
+<!-- footer -->
+<footer class="footer footerinclude"></footer>
+<!-- EOD : footer -->
+
+
+
+<script>
+
+    /* 기간 검색 날짜 세팅 */
+
+    $(function() {
+
+        $( ".first_date" ).datepicker( "setDate", '0' );
+
+        $( ".end_date" ).datepicker( "setDate", "1m" );
+
+    });
+
+
+    function dateSet(day){
+
+        $( ".first_date" ).datepicker( "setDate", '0' );
+
+        $( ".end_date" ).datepicker( "setDate", day );
+
+    }
+
+    /* EOD : 기간 검색 날짜 세팅 */
+
+
+    /* 상세검색 버튼 기능 */
+
+    $(document).on("click", ".process_searchBox .detail_btn", function () {
+
+        var searchBox = $(this).closest(".process_searchBox");
+
+        if(searchBox.hasClass("active")){
+
+            searchBox.removeClass("active");
+
+        }else{
+
+            searchBox.addClass("active");
+        }
+
+    });
+
+    /* EOD : 상세검색 버튼 기능 */
+
+    /* 모바일에서의 상세 검색조건 show / hide 스크립트 */
+
+    $(document).on("click", ".btn_mob_detail", function () {
+
+        var searchBox = $(this).closest(".process_searchBox");
+
+        if(searchBox.hasClass("active")){
+
+            searchBox.removeClass("active");
+            $(this).find(".blind").text("상세 검색 조건 노출");
+
+        }else{
+
+            searchBox.addClass("active");
+            $(this).find(".blind").text("상세 검색 조건 숨김");
+        }
+
+    });
+
+    /* EOD : 모바일에서의 상세 검색조건 show / hide 스크립트 */
+
+    // 통합검색
+    function searchForm() {
+        var searchInput = $(".js-search-input");
+        var searchInputIstyle = $(".js-search-input-istyle");
+        var searchInputFocus  = $(".js-search-input-focus");
+        var btnSearchClose = $(".js-btn-search-clse");
+
+        searchInputIstyle.on("click", function() {
+            searchInput.addClass("is-on");
+            searchInputFocus.fadeIn();
+        });
+
+        // 자동검색 닫기
+        function searchClose() {
+            searchInputIstyle.blur();
+            searchInputFocus.fadeOut();
+            searchInput.removeClass("is-on");
+        }
+
+        searchInput.on("mouseleave", function() {
+            searchClose();
+        });
+
+        btnSearchClose.on("click", function() {
+            searchClose();
+        });
+    }
+
+
+    var proSearch = $(".process_searchBox").find(".search-comm");
+    var proSearchInput = $(".process_search").find("input");
+
+    proSearchInput.focus(function(){
+
+        proSearch.show();
+
+    });
+
+    proSearchInput.blur(function(){
+
+        proSearch.hide();
+
+    });
+
+</script>
+
+
+</body>
+</html>

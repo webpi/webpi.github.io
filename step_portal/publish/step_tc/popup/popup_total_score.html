@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/skin/skin_blue.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        총점 팝업
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template4/resp/default/icon/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <table class="table_hori mob_block">
+                    <caption>이름,아이디,휴대전화,과정명으로 이루어진 학생별 학습현황 상세</caption>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="25%">
+                        <col width="10%">
+                        <col width="*">
+                        <col width="10%">
+                        <col width="25%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>이름</th>
+                            <td>홍길동</td>
+                            <th>아이디</th>
+                            <td>hong@korean.com</td>
+                            <th>휴대전화</th>
+                            <td>010-2356-4349</td>
+                        </tr>
+                        <tr>
+                            <th>과정명</th>
+                            <td colspan="5">한국교육기술대학교 혼합훈련 과정 – 윌비> 오프라인과정 – 윌비</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <div class="mt40">
+
+                <!-- tab -->
+                <ul class="tab">
+                    <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>출석</span></a></li>
+                    <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>평가</span></a></li>
+                    <!-- <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab03', this);"><span>팀프로젝트</span></a></li>-->
+                    <!-- <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab04', this);"><span>라이브세미나</span></a></li>-->
+                </ul>
+                <!-- EOD : tab -->
+
+                <!-- 출석 -->
+                <div class="tabBox active" id="tab01">
+
+                    <!-- calendar_date -->
+                    <div class="calender_date">
+
+                        <button class="btn_i_prev" title="이전달" onclick="prevDate();" id="prevDate"></button>
+                        <p><span id="yearDate"></span></p>
+                        <button class="btn_i_next" title="다음달" onclick="nextDate();" id="nextDate"></button>
+
+                    </div>
+                    <!-- EOD : calendar_date -->
+
+                    <!-- attendBox -->
+                    <div class="attendBox">
+                        <ul>
+                            <li><span class="label">출석</span><span class="txt_point" id="num_attend"></span>일</li>
+                            <li><span class="label">결석</span><span class="txt_point" id="num_absent"></span>일</li>
+                        </ul>
+                    </div>
+                    <!-- EOD : attendBox -->
+
+                    <!-- calender_table -->
+                    <div class="calender_table">
+                        <table class="table_normal cal">
+                            <caption>일,월,화,수,목,금,토로 구성된 월별 출결현황 상세</caption>
+                            <colgroup>
+                                <col width="14.2857%">
+                                <col width="14.2857%">
+                                <col width="14.2857%">
+                                <col width="14.2857%">
+                                <col width="14.2857%">
+                                <col width="14.2857%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">일<span class="mobH">요일</span></th>
+                                    <th scope="col">월<span class="mobH">요일</span></th>
+                                    <th scope="col">화<span class="mobH">요일</span></th>
+                                    <th scope="col">수<span class="mobH">요일</span></th>
+                                    <th scope="col">목<span class="mobH">요일</span></th>
+                                    <th scope="col">금<span class="mobH">요일</span></th>
+                                    <th scope="col">토<span class="mobH">요일</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendarMonth">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- EOD : calender_table -->
+
+                    <script>
+
+                        $(function(){
+                            build();
+                        });
+
+                        var today = new Date(); // 오늘 날짜
+                        var date = new Date();
+
+                        function prevDate(){
+                            today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+                            build();
+                        }
+
+                        function nextDate(){
+                            today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+                            build();
+                        }
+
+
+                        function build(){
+                            var nMonth = new Date(today.getFullYear(), today.getMonth(), 1); //현재달의 첫째 날
+                            var lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0); //현재 달의 마지막 날
+                            var tbcal = document.getElementById("calendarMonth"); // 테이블 달력을 만들 테이블
+                            var yearmonth = document.getElementById("yearDate"); //  년도와 월 출력할곳
+
+                            zero = "";
+                            if(today.getMonth()+1 < 10){
+                                zero = "0";
+                            }
+
+                            yearmonth.innerHTML = today.getFullYear() + ". " + zero + (today.getMonth() + 1); //년도와 월 출력
+
+                            if(today.getMonth()+1==12){ //  눌렀을 때 월이 넘어가는 곳
+                                prevDate.innerHTML=(today.getMonth())+"월";
+                                nextDate.innerHTML="01월";
+                            }
+                            else if(today.getMonth()+1==1){ //1월 일 때
+                                prevDate.innerHTML="12월";
+                                nextDate.innerHTML=(today.getMonth()+2)+"월";
+                            }
+                            else { //12월 일 때
+                                prevDate.innerHTML= (today.getMonth())+ "월";
+                                nextDate.innerHTML= (today.getMonth()+2)+ "월";
+                            }
+
+                            // 남은 테이블 줄 삭제
+                            while (tbcal.rows.length > 0){
+                                tbcal.deleteRow(tbcal.rows.length - 1);
+                            }
+
+                            var row = null;
+                            row = tbcal.insertRow();
+                            var cnt = 0;
+
+                            // 1일 시작칸 찾기
+                            for (i = 0; i < nMonth.getDay(); i++){
+                                cell = row.insertCell();
+                                cnt = cnt + 1;
+                            }
+
+                            // 달력 출력
+                            for (i = 1; i <= lastDate.getDate(); i++){ // 1일부터 마지막 일까지\
+
+                                cell = row.insertCell();
+                                cnt = cnt + 1;
+
+                                tag = "";
+
+
+                                if (cnt % 7 == 1){ //일요일 계산
+                                    tag += "<a href='javascript:void(0)' class='Box bg_gray'><div class='dateNo txt_red'>" + i + "</div>";
+                                }else if (cnt % 7 == 0){ // 토요일
+                                    tag += "<a href='javascript:void(0)' class='Box bg_gray'><div class='dateNo txt_blue'>" + i + "</div>";
+                                    row = calendarMonth.insertRow();// 줄 추가
+
+                                }else if (today.getFullYear()==date.getFullYear()&&today.getMonth()==date.getMonth()&&i==date.getDate()){ // 오늘
+
+                                    tag += "<a href='javascript:void(0)' class='Box active'><div class='dateNo'>" + i + "</div>";
+
+                                }else{
+                                    tag += "<a href='javascript:void(0)' class='Box'><div class='dateNo'>" + i + "</div>";
+                                }
+
+
+                                if(i == 1){
+
+                                    tag += "<div class='label_red'>" + "출석" + "</div>";
+
+
+                                }else if(i == 2){
+
+                                    tag += "<div class='label_blue'>" + "조퇴" + "</div>";
+
+                                }else if(i == 3){
+
+                                    tag += "<div class='label_green'>" + "지각" + "</div>";
+
+                                }else if(i == 4){
+
+                                    tag += "<div class='label_red'>" + "출석" + "</div>";
+
+                                }else if(i == 5){
+
+                                    tag += "<div class='label_black'>" + "결석" + "</div>";
+
+                                }else if(i == 8){
+
+                                    tag += "<div class='label_black'>" + "결석" + "</div>";
+
+                                }else if(i == 9){
+
+                                    tag += "<div class='label_red'>" + "출석" + "</div>";
+
+                                }else if(i == 10){
+
+                                    tag += "<div class='label_red'>" + "출석" + "</div>";
+
+                                }
+
+                                tag += "</a>";
+
+                                cell.innerHTML=tag;
+
+                            }
+
+                            var attend = $("#calendarMonth .label_red").length;
+                            var absent = $("#calendarMonth .label_black").length;
+
+                            $("#num_attend").text(attend);
+                            $("#num_absent").text(absent);
+                        }
+
+                        $(document).on('click',".calender_table .Box",function(){
+
+
+                           $(".calender_table .Box").removeClass("active");
+                           $(this).addClass("active");
+
+                        });
+
+                    </script>
+
+                    <p class="txt_bullet mobH">지각:지각한 교시가 1개라도 있는 경우 해당함</p>
+
+                    <p class="txt_bullet mt0 mobH">지각/조퇴로 1일 훈련시간의 ½미만으로 훈련한 경우 결석처리됨</p>
+
+                    <!-- total_radio_group -->
+                    <div class="total_radio_group">
+                        <ul>
+                            <li>
+                                <!-- groupBox -->
+                                <div class="groupBox">
+                                    <!-- tit -->
+                                    <div class="tit">
+                                        <div class="txt">[1교시] R을 사용한 데이터 수집</div>
+                                    </div>
+                                    <!-- EOD : tit -->
+                                    <!-- contentBox -->
+                                    <div class="contentBox">
+                                        <!-- radioList -->
+                                        <ul class="radioList">
+                                            <li>
+                                                <input type="radio" id="radio01_01" name="radio_group">
+                                                <label for="radio01_01">출석</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio01_02" name="radio_group">
+                                                <label for="radio01_02">결석</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio01_03" name="radio_group">
+                                                <label for="radio01_03">지각</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio01_04" name="radio_group">
+                                                <label for="radio01_04">조퇴</label>
+                                            </li>
+                                        </ul>
+                                        <!-- EOD : radioList -->
+
+                                        <!-- txtBox -->
+                                        <div class="txtBox">
+                                            <span class="label">사유</span>
+                                            <input type="text">
+                                            <button type="button" class="btn_s_blue">저장</button>
+                                        </div>
+                                        <!-- EOD : txtBox -->
+                                    </div>
+                                    <!-- EOD : contentBox -->
+                                </div>
+                                <!-- EOD : groupBox -->
+                            </li>
+                            <li>
+                                <!-- groupBox -->
+                                <div class="groupBox">
+                                    <!-- tit -->
+                                    <div class="tit">
+                                        <div class="txt">[2교시] R을 사용한 데이터 수집</div>
+                                    </div>
+                                    <!-- EOD : tit -->
+                                    <!-- contentBox -->
+                                    <div class="contentBox">
+                                        <!-- radioList -->
+                                        <ul class="radioList">
+                                            <li>
+                                                <input type="radio" id="radio02_01" name="radio_group">
+                                                <label for="radio02_01">출석</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio02_02" name="radio_group">
+                                                <label for="radio02_02">결석</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio02_03" name="radio_group">
+                                                <label for="radio02_03">지각</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio02_04" name="radio_group">
+                                                <label for="radio02_04">조퇴</label>
+                                            </li>
+                                        </ul>
+                                        <!-- EOD : radioList -->
+
+                                        <!-- txtBox -->
+                                        <div class="txtBox">
+                                            <span class="label">사유</span>
+                                            <input type="text">
+                                            <button type="button" class="btn_s_blue">저장</button>
+                                        </div>
+                                        <!-- EOD : txtBox -->
+                                    </div>
+                                    <!-- EOD : contentBox -->
+                                </div>
+                                <!-- EOD : groupBox -->
+                            </li>
+                            <li>
+                                <!-- groupBox -->
+                                <div class="groupBox">
+                                    <!-- tit -->
+                                    <div class="tit">
+                                        <div class="txt">[3교시] R을 사용한 데이터 수집</div>
+                                    </div>
+                                    <!-- EOD : tit -->
+                                    <!-- contentBox -->
+                                    <div class="contentBox">
+                                        <!-- radioList -->
+                                        <ul class="radioList">
+                                            <li>
+                                                <input type="radio" id="radio03_01" name="radio_group">
+                                                <label for="radio03_01">출석</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio03_02" name="radio_group">
+                                                <label for="radio03_02">결석</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio03_03" name="radio_group">
+                                                <label for="radio03_03">지각</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio03_04" name="radio_group">
+                                                <label for="radio03_04">조퇴</label>
+                                            </li>
+                                        </ul>
+                                        <!-- EOD : radioList -->
+
+                                        <!-- txtBox -->
+                                        <div class="txtBox">
+                                            <span class="label">사유</span>
+                                            <input type="text">
+                                            <button type="button" class="btn_s_blue">저장</button>
+                                        </div>
+                                        <!-- EOD : txtBox -->
+                                    </div>
+                                    <!-- EOD : contentBox -->
+                                </div>
+                                <!-- EOD : groupBox -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- EOD : total_radio_group -->
+                </div>
+                <!-- EOD : 출석 -->
+
+                <!-- 평가 -->
+                <div class="tabBox" id="tab02">
+                    <!-- table_normal -->
+                    <table class="table_normal">
+                        <caption>실습평가 , 실무평가 , 토론 , 과제로 이루어진 평가 상세</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col width="25%">
+                            <col width="25%">
+                            <col width="25%">
+                        </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">실습평가</th>
+                                    <th scope="col">실무평가</th>
+                                    <th scope="col">토론</th>
+                                    <th scope="col">과제</th>
+                                </tr>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong class="txt_point">30</strong>점
+                                </td>
+                                <td>
+                                    <strong class="txt_point">30</strong>점
+                                </td>
+                                <td>
+                                    <strong class="txt_point">60</strong>점
+                                </td>
+                                <td>
+                                    <strong class="txt_point">70</strong>점
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_normal -->
+
+
+                    <!-- btnBox -->
+                    <div class="btnBox">
+                        <div class="rightBox">
+                            <a href="javascript:void(0)" class="btn_m_blue">저장</a>
+                        </div>
+                    </div>
+                    <!-- EOD : btnBox -->
+                </div>
+                <!-- EOD : 평가 -->
+
+                <!-- 팀프로젝트
+                <div class="tabBox" id="tab03">
+
+                </div>
+                EOD : 팀프로젝트 -->
+
+                <!-- 라이브세미나
+                <div class="tabBox" id="tab04">
+
+                </div>
+                EOD : 라이브세미나 -->
+
+                <script>
+
+                    $(document).ready(function(){
+
+
+                        for(time  = 0; time < 25; time++) {
+
+                            jQuery(".select_time").append('<option>' + time + '</option>');
+                        }
+
+                        for(min = 0; min < 60;) {
+
+                            jQuery(".select_min").append('<option>' + min + '</option>');
+
+                            min = min + 10;
+
+                        }
+
+                    });
+
+                </script>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_white" onclick="window.close(); return false;">확인</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

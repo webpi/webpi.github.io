@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>강의실</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        팀원평가 상세보기
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <ul class="view_info">
+                <li><span class="label">이름</span><span class="data">홍길동</span></li>
+                <li><span class="label">직책</span><span class="data">팀장</span></li>
+                <li><span class="label">본인평가 총점</span><span class="data txt_blue01">100</span></li>
+                <li><span class="label">팀원평가 총점</span><span class="data txt_blue01">100</span></li>
+            </ul>
+
+            <div class="tableScroll">
+                <table class="table_veti">
+                    <caption>이름,팀원평가,기타의견으로 이루어져있는 팀원 상세보기 상세</caption>
+                    <colgroup>
+                        <col width="13%">
+                        <col width="13%">
+                        <col width="13%">
+                        <col width="13%">
+                        <col width="13%">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <td scope="col" rowspan="2">이름</td>
+                        <td scope="col" colspan="4">팀원평가 (100)</td>
+                        <td scope="col" rowspan="2">기타의견</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" class="bl">참여도<br>(25)</td>
+                        <td scope="col">적극성<br>(25)</td>
+                        <td scope="col">책임감<br>(25)</td>
+                        <td scope="col">협동성<br>(25)</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac">가학생</td>
+                            <td class="ac">20</td>
+                            <td class="ac">20</td>
+                            <td class="ac">22</td>
+                            <td class="ac">15</td>
+                            <td>매우 성실합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ac">나학생</td>
+                            <td class="ac">12</td>
+                            <td class="ac">14</td>
+                            <td class="ac">20</td>
+                            <td class="ac">15</td>
+                            <td>매우 불성실합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ac">다학생</td>
+                            <td class="ac">10</td>
+                            <td class="ac">10</td>
+                            <td class="ac">5</td>
+                            <td class="ac">10</td>
+                            <td>기타의견입니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ac">라학생</td>
+                            <td class="ac">20</td>
+                            <td class="ac">15</td>
+                            <td class="ac">20</td>
+                            <td class="ac">20</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="ac">평균</td>
+                            <td class="ac">15.5</td>
+                            <td class="ac">14.75</td>
+                            <td class="ac">16.75</td>
+                            <td class="ac">15</td>
+                            <td>-</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_blue" onclick="window.close(); return false;">저장</button>
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

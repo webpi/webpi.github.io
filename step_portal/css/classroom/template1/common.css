@@ -1,0 +1,653 @@
+@charset "utf-8";
+
+/* 웹폰트 CSS */
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/font/NanumGothic.woff) format('woff'),
+		 url(/font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 700;
+	src: url(/font/NanumGothicBold.woff) format('woff'),
+		 url(/font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Nanum Gothic';
+	font-style: normal;
+	font-weight: 800;
+	src: url(/font/NanumGothicExtraBold.woff) format('woff'),
+		 url(/font/NanumGothicExtraBold.ttf) format('truetype');
+}
+
+/* CSS 초기화 */
+*, html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Nanum Gothic','dotum', serif, arial;
+	box-sizing: border-box;
+	outline: 0;
+	vertical-align: middle;
+/* 	background: transparent; */
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+	display: block;
+}
+nav ul, li, ul, ol {
+	list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+address {
+	font-style: normal;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+caption, legend, .hidden {
+	visibility: hidden;
+	position: absolute;
+	left: -9999em;
+	width: 1px;
+	height: 1px;
+	background: none;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999em;
+}
+body {
+	line-height: 1;
+	color: #313538;
+	font-size: 0.81em; /* 13/16 */
+	line-height: 20px;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    margin: 0;
+    padding: 0;
+	color: #313538;
+    font-size: 100%;
+    text-decoration: none;
+}
+a:hover {
+	color: #1d66bf;
+	text-decoration: underline;
+}
+
+/* h */
+h3 > .btnLearning {
+	display: inline-block;
+    width: 120px;
+    height: 40px;
+    margin-left: 25px;
+	line-height: 36px;
+    font-size: 0.7em;
+}
+h4 {
+	margin-bottom: 30px;
+    font-size: 1.38em;	
+}
+h5 {
+	margin-top: 30px;	
+	margin-bottom: 10px;
+	font-size: 1.15em;
+	line-height: 1.54em;	
+}
+h5:first-child {
+	margin-top: 0px;	
+}
+h5 > em {
+    color: #f2444a;
+    font-style: normal;
+}
+h5.title {
+	margin-bottom: 20px;	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 40px;
+	background: url('/images/classroom/template1/gray/bullet_title_h5.png') 0px 0px no-repeat;
+}
+h5.info { /* 스마트러닝 학습목차/진도 */
+	margin-top: -20px;
+}
+
+h6 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 1.15em;
+	line-height: 1.54em;	
+}
+h6:first-child {
+	margin-top: 0px;	
+}
+/* .info {
+	margin-top: 10px;
+	margin-bottom: 10px;
+} */
+
+/* box */
+.boxGray {
+/* 	line-height: 25px; */
+	margin-bottom: 30px;
+/* 	padding: 30px 40px; */
+	padding: 4% 4.94% 3% 4.94%;
+    background: #f5f5f5;	
+}
+.textBox {
+	display: table;
+	width: 100%;
+}
+.textBox .info {
+	color: #1d66bf;
+}
+.popup .textBox { /*보충/심화학습 팝업 */
+	 margin-bottom: 10px;
+}
+.popup .boardList + .textBox { 
+	 margin-top: 20px;
+}
+.textBox .imgBox, .textBox .box {
+	display: table-cell;
+}
+.textBox .imgBox {
+	width: 74px;
+}
+.textBox .imgBox + .box {
+	padding-left: 10px;
+}
+@media screen and (max-width: 568px) {
+	.textBox .imgBox, .textBox .box {
+		display: block;
+		vertical-align: top;
+	}
+	.textBox .imgBox {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 3%;
+	}
+}
+.textBox .box p  {
+/* 	margin-top: 10px; */
+	margin-top: 1%;	
+}
+.content > .textBox > p  {
+	margin-bottom: 5px;
+}
+.textBox .box p:first-child  {
+	margin-top: 0px;
+}
+.textBox .box p em {
+	font-style: normal;
+    color: #f2444a;	
+}
+
+/* 정렬 */
+.alignLeft {
+    text-align: left !important;
+}
+.alignRight {
+    text-align: right !important;
+}
+.alignCenter {
+    text-align: center !important;
+}
+.floatLeft {
+	float: left !important;
+}
+.floatRight {
+	float: right !important;
+}
+
+
+/* form */
+input[type="text"], input[type="search"] {
+	width: 100%;
+	height: 26px;
+	line-height: 24px;
+	padding: 0 10px 1px;
+	border: 1px solid #c0c4c7;
+	box-sizing: border-box;
+	vertical-align: middle;
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance:none;
+	appearance:none;
+	background: #ffffff;
+}
+input[type="checkbox"] {
+	vertical-align: middle;
+}
+textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #c0c0c0;
+}
+.selectBox {
+	display: inline-block;
+	height: 26px;
+	border: 1px solid #c0c4c7;
+	background: #ffffff;	
+}
+select {
+	height: 20px;	
+	line-height: 26px;
+	margin-top: 2px;
+	padding: 0px 5px 0;
+}
+input.large {
+	display: inline-block;
+	width: 100%;	
+}
+input.medium {
+	display: inline-block;
+	width: 60%;	
+}
+input.small {
+	display: inline-block;
+	width: 40%;	
+}
+input.mini {
+	display: inline-block;
+	width: 20%;	
+}
+/* .selectBox {
+	display: inline-block;
+    width: 100px;
+    height: 24px;
+    vertical-align: bottom;
+    position: relative;
+    top: 0px;
+    border: 1px solid #c0c4c7;
+    background: #ffffff url('/images/common/classroom/bg_select.png') no-repeat;
+    background-position: 75px 3px;
+}
+.selectBox select {
+    position: relative;
+ 	top: -1px;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	padding: 0px 28px 0px 5px;
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance:none;
+	appearance:none;
+}
+.selectBox select::-ms-expand {  For IE10
+	display:none;
+} */
+
+
+
+.searchBox {
+/*     margin-bottom: 10px; */
+    text-align: right;	
+}
+.radioncheckbox {
+	display: inline-block;
+}
+.radioncheckbox input:first-child {
+	margin-left: 10px;
+}
+.radioncheckbox label {
+	margin: 0 15px 0 5px ;
+}
+
+
+/* search */
+.search {
+	margin-bottom: 15px;
+	text-align: right;
+}
+.search label {
+	display: none;
+}
+
+@media screen and (min-width: 769px) {
+	.search input {
+		width: 200px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.search {
+		text-align: center;
+	}
+	.search input {
+		width: calc(100% - 160px);
+	}
+}
+
+/* fileAttach */
+.fileAttach {
+	position: relative;
+	width: auto;
+}
+.fileAttach .textInput {
+	width: 400px;
+}
+@media screen and (max-width: 568px) {
+	.fileAttach .textInput {
+		width: calc(100% - 100px);
+	}	
+}
+.fileAttach input[type="file"] {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;
+    border: none;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.fileAttach .btnFind {
+	display: inline-block;
+	margin-left: 5px;
+}
+.listAttach {
+	padding: 10px 0;
+}
+.listAttach li {
+	margin-top: 7px;
+}
+.listAttach li:first-child {
+	margin-top: 0;
+}
+.listAttach .btnDownload, .softwareDown .btnDownload {
+	min-width: 82px;
+	height: 23px;
+	line-height: 21px;
+	padding: 0 10px 0 10px;
+	margin-left: 5px;
+	text-align: left;
+	font-size: 0.92em;
+}
+.listAttach .btnDelete, .listAttach .btnDelete:hover {
+	min-width: 0;
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	font-size: 0;
+	border: none;
+}
+.listAttach .btnDownload, .softwareDown .btnDownload {
+	border: 1px solid #8e9599;
+	color: #292f37;
+	background: #f9f9f9 url('/images/template3/resp/default/button/btn_download.png') 61px center no-repeat;
+}
+.listAttach .btnDelete, .listAttach .btnDelete:hover {
+	background: url('/images/template3/resp/default/button/btn_delete.png') 0 0 no-repeat;
+}
+
+.ppt {
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/ppt.png') no-repeat;
+}
+.pdf {
+	padding-left: 30px;
+	background: url('/images/classroom/template1/default/pdf.png') no-repeat;
+}
+.doc {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/doc.png') no-repeat;
+}	
+.xls {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/xls.png') no-repeat;
+}
+.txt {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/txt.png') no-repeat;
+}
+.hwp {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/hwp.png') no-repeat;
+}	
+.html {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/html.png') no-repeat;
+}
+.jpg {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/jpg.png') no-repeat;
+}
+.gif {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/gif.png') no-repeat;
+}
+.png {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/png.png') no-repeat;
+}
+.zip {
+	padding-left: 30px;	
+	background: url('/images/classroom/template1/default/zip.png') no-repeat;
+}
+
+
+
+
+
+
+/* 버튼 */
+.btnArea {
+	margin-top: 20px;
+	margin-bottom: 15px;	
+	text-align: right;
+}
+button {
+	display: inline-block;
+	min-width: 80px;
+	height: 34px;
+    padding: 0px 15px 0px 15px;
+	border: 1px solid;
+	line-height: 34px;
+	font-size: 13px;
+	text-align: center;	
+	cursor: pointer; 
+}
+.btnArea > button {
+	min-width: 80px;
+}
+.inside, .btnRefresh, .btnViewer, .btnContinuing, .btnSituation, .popup .btnCertify {
+	min-width: 60px;
+    height: 26px;
+    padding: 0px 12px 0 12px;
+    line-height: 22px;
+}
+.inside.btnResubmit {
+	padding: 0px 8px 0 8px;
+	letter-spacing: -0.2px;
+}
+.btnTop {
+	float: right;
+	display: block;
+	width: 46px;
+	height: 49px;
+	margin: 10px -10px 0 0;
+	padding: 0;
+	font-size: 0;
+	border: none;
+	background: url('/images/classroom/template1/button/btn_top.png') no-repeat;
+}
+.btnCertificate, .textBox .btnDelivery, .feed .btnCommentWrite {
+    border: 1px solid #8e9599;
+    color: #292f37;
+    background-color: #f9f9f9;	
+	height: 23px;
+	line-height: 21px;
+	padding: 0 10px;
+	text-align: left;
+	font-size: 0.92em;
+	background: #f9f9f9 url('/images/template3/resp/default/button/btn_delivery.png') 60px center no-repeat;
+	
+}
+.btnCertificate, .textBox .btnDelivery.active, .feed .btnCommentWrite.active {
+	background: #f9f9f9 url('/images/template3/resp/default/button/btn_delivery_active.png') 60px center no-repeat;
+}
+
+
+
+/*
+
+
+.contentsBox > .title .btnDownload {
+	float: left;
+    height: 26px;
+    margin-left: 8px;
+    line-height: 24px;
+    padding: 0 12px;
+    font-size: 0.59em;
+    background: #61696f;
+} */
+
+
+/* paging */
+.paging {
+	margin-top: 20px;
+    text-align: center;
+}
+.paging a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+}
+.paging a:hover,
+.paging a.active {
+	line-height: 27px;
+} 
+.paging a { /* paging */
+	border: 1px solid #ffffff;
+}
+.paging a:hover {
+	color: #ffffff;
+	text-decoration: none;
+    border: 1px solid #9da4a8;	
+	background: #9da4a8;
+}
+.paging a.active { 
+    border: 1px solid #9da4a8;
+}
+.paging > a.btnFirst {
+    background: #ffffff url('/images/template3/resp/default/button/btn_paging.png') -3px -3px no-repeat;    
+}
+.paging > a.btnPrev {
+    background: #ffffff url('/images/template3/resp/default/button/btn_paging.png') -38px -3px no-repeat;
+}
+.paging > a.btnNext {
+    background: #ffffff url('/images/template3/resp/default/button/btn_paging.png') -73px -3px no-repeat;
+}
+.paging a.btnLast {
+    background: #ffffff url('/images/template3/resp/default/button/btn_paging.png') -108px -3px no-repeat;
+}
+
+
+/* icon */
+.iconBox {
+	line-height: 1;
+	font-size: 0;
+}
+.iconBox .icon+.icon {
+	margin-left: 3px;
+}
+.iconBox .icon {
+	display: inline-block;
+/* 	height: 21px;
+	line-height: 22px;
+	padding: 0 5px; */
+	height: 18px;
+	line-height: 18px;	
+	padding: 0 2px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	vertical-align: top;
+/* 	font-size: 12px; */
+	font-size: 11px;
+	font-family: '돋움','dotum';
+	letter-spacing: -0.8px;
+}
+.icon.smart {
+	letter-spacing: -1px;
+}
+.device {
+	display: inline-block;
+	margin-left: 5px;
+}
+.thumbnList.type2 .device, .register .device {
+	margin: 0px 5px 0 5px;
+}
+.device .icon {
+/* 	width: 21px; */
+	width: 18px;
+	margin: 0;
+	padding: 0;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	text-indent: -99999px;
+}
+.iconBox .device .icon+.icon {
+	margin-left: 2px;
+}
+.icon.new,
+.icon.hot {
+	padding: 0 2px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.icon.lock {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	font-size: 0;
+}
+.icon.progress,
+.icon.standby {
+	border-radius: 0;
+	font-weight: 400;
+}
+.icon.end {
+	border-radius: 0;
+	font-weight: 400;
+}
+.icon.member,
+.icon.feed {
+    padding-left: 25px;
+	font-size: 1em;
+}
+.icon.notice {
+	padding: 2px 4px 2px 4px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;	
+}
+
+
+@media screen and (max-width: 768px) { 
+	.hide {
+		display: none !important;
+	}
+	
+}
+
+
+

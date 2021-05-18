@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+	<title>STEP</title>
+	<link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/templaye4/resp/skin/skin_blue.css" rel="stylesheet" type="text/css" media="all"><script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+	<script src="/js/template4/wbCommon.js"></script>
+	<script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/template4/jquery.scrolling-tabs.js"></script>
+	<script src="/js/template4/slick.js"></script>
+
+	<!-- ie9 이하 적용 -->
+	<!--[if lt IE 9]>
+		<script src="/js/html5.js"></script>
+		<script src="/js/respond.min.js"></script>
+	<![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+
+
+<section class="windowPop">
+	<div class="windowPopH">
+		과제물 선택
+		<a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a>
+	</div>
+
+	<!-- windowPopBox -->
+	<div class="windowPopBox">
+		<div class="windowPopBoxIn">
+			
+			<!-- table_hori -->
+			<table class="table_hori">
+				<caption>과제 제출방법으로 구성된 과제물 선택 상세</caption>
+				<colgroup>
+					<col width="20%">
+					<col width="*">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>과제 제출 방법</th>
+						<td>
+							<ul class="radioList">
+								<li>
+									<input type="radio" id="radio01_01" name="radioGroup01">
+									<label for="radio01_01">팀장 제출</label>
+								</li>
+								<li>
+									<input type="radio" id="radio01_02" name="radioGroup01">
+									<label for="radio01_02">개별 제출</label>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- EOD : table_hori -->
+
+			<h4>과제물 목록</h4>
+			<table class="table_veti">
+				<caption>선택</caption>
+				<colgroup>
+					<col width="80px">
+					<col width="15%">
+					<col width="*">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>선택</th>
+						<th>과제유형</th>
+						<th>과제제출</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="ac">
+							<ul class="radioList solo">
+								<li>
+									<input type="radio" id="radio02_01" name="radioGroup02">
+									<label for="radio02_01"></label>
+								</li>
+							</ul>
+						</td>
+						<td class="ac">A</td>
+						<td>팀프로젝트 과제명 1</td>
+					</tr>
+
+					<tr>
+						<td class="ac">
+							<ul class="radioList solo">
+								<li>
+									<input type="radio" id="radio02_02" name="radioGroup02">
+									<label for="radio02_02"></label>
+								</li>
+							</ul>
+						</td>
+						<td class="ac">B</td>
+						<td>팀프로젝트 과제명 2</td>
+					</tr>
+
+					<tr>
+						<td class="ac">
+							<ul class="radioList solo">
+								<li>
+									<input type="radio" id="radio02_03" name="radioGroup02">
+									<label for="radio02_03"></label>
+								</li>
+							</ul>
+						</td>
+						<td class="ac">C</td>
+						<td>팀프로젝트 과제명 3</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h4>과제물 내용</h4>
+			<!-- table_hori -->
+			<table class="table_hori">
+				<caption>과제구분,과제유형,과제명,내용,모범답안,참고파일,정답파일,채점기준내용으로 구성된 과제물 내용 상세</caption>
+				<colgroup>
+					<col width="20%">
+					<col width="*">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>과제구분</th>
+						<td>팀프로젝트 과제명 1</td>
+					</tr>
+					<tr>
+						<th>과제유형</th>
+						<td>A</td>
+					</tr>
+					<tr>
+						<th>내용</th>
+						<td>운영자가 등록한 팀프로젝트 과제와 관련된 내용이 노출됩니다.</td>
+					</tr>
+					<tr>
+						<th>모범답안</th>
+						<td>모범답안이 노출됩니다.</td>
+					</tr>
+					<tr>
+						<th>참고파일</th>
+						<td>
+							<div class="file_area">
+								<ul>
+									<li><a href="javascript:void(0);">참고파일.zip [8259kb]</a></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>정답파일</th>
+						<td>
+							<div class="file_area">
+								<ul>
+									<li><span class="no_data">첨부파일이 없습니다.</span></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>채점기준내용</th>
+						<td>채점기준내용이 노출됩니다.</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- EOD : table_hori -->
+		</div>
+	</div>
+
+	<div class="windowPopBtn">
+		<button type="button" class="btn_m_blue">저장</button>
+		<button type="button" class="btn_m_white" onclick="window.close(); return false;">확인</button>
+	</div>
+	<!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+        						      			

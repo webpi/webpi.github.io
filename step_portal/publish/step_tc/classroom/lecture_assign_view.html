@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>과제</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+                <!-- searchBox -->
+                <div class="searchBox">
+                    <ul>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">과제명</span></span>
+                                <span class="txt">과제물A 프로젝트</span>
+                            </div>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">제출기간</span></span>
+                                <span class="txt">2020-05-04 00:00 ~ 2020-05-15 12:00</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">검색</span></span>
+                                <div class="selectBox">
+                                    <label for="select_status"><span>제출여부</span></label>
+                                    <select id="select_status">
+                                        <option>미제출</option>
+                                        <option>임시저장</option>
+                                        <option>제출완료</option>
+                                        <option>재제출</option>
+                                        <option>재제출완료</option>
+                                    </select>
+                                </div>
+                                <div class="selectBox">
+                                    <label for="select_edit"><span>첨삭여부</span></label>
+                                    <select id="select_edit">
+                                        <option>미첨삭</option>
+                                        <option>반려</option>
+                                        <option>첨삭완료</option>
+                                    </select>
+                                </div>
+                                <div class="search_area">
+                                    <div class="search_areaIn">
+                                        <input type="text" placeholder="이름/아이디">
+                                    </div>
+                                    <button type="button" class="btn_s_blue">검색</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- EOD : searchBox -->
+
+
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL mobH">
+                        <div class="countBox Bot">
+                            총 <strong>18</strong>명
+                        </div>
+                    </div>
+                    <div class="floatBoxR">
+                        <button type="button" class="btn_s_black mobH">모사 확정</button>
+                        <button type="button" class="btn_s_black mobH">모사 답안 제외</button>
+                        <button type="button" class="btn_s_black mobH">제출파일 다운로드</button>
+                        <button type="button" class="btn_s_black">참고파일 다운로드</button>
+                        <button type="button" class="btn_s_black">정답파일 다운로드</button>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <p class="mt0 txt_info mobS">모사율은 PC에서만 확인 할 수 있습니다.</p>
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_block type02 mt0">
+                        <caption>No , 이름/아이디 , 제출상태 , 첨삭상태 , 점수 , 모사율 , 모사답안여부 , 첨삭하기로 구성된 과제 상세</caption>
+                        <colgroup>
+                            <col width="8%">
+                            <col width="*">
+                            <col width="9%">
+                            <col width="10%">
+                            <col width="9%">
+                            <col width="12%">
+                            <col width="15%">
+                            <col width="9%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkBox">
+                                    <input type="checkbox" id="chk_all">
+                                    <label for="chk_all">No</label>
+                                </div>
+                            </td>
+                            <td scope="col">이름/아이디</td>
+                            <td scope="col">제출상태</td>
+                            <td scope="col">첨삭상태</td>
+                            <td scope="col">점수</td>
+                            <td scope="col">모사율</td>
+                            <td scope="col">모사답안여부</td>
+                            <td scope="col">첨삭하기</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ac mobH">
+                                    <div class="checkBox">
+                                        <input type="checkbox" id="chk_num33">
+                                        <label for="chk_num33">33</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"><span>홍길동</span><p class="txt_default mt0">hong@step.co.kr</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">제출완료</span><p class="txt_default mt0">2020.01.01</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">첨삭완료</span><p class="txt_default mt0">2020.01.01</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">50</span>점</span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <div class="linkBox arrow">
+                                            <a href="javascript:void(0)">
+                                                <span class="txt">00.0%</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <p class="txt_default mt0">모사 확정</p>
+                                    </div>
+                                </td>
+                                <td class="mob_ac"><button class="btn_s_black">결과보기</button></td>
+                            </tr>
+                            <tr>
+                                <td class="ac mobH">
+                                    <div class="checkBox">
+                                        <input type="checkbox" id="chk_num32">
+                                        <label for="chk_num32">32</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"><span>문학생</span><p class="txt_default mt0">hsmoon@step.co.kr</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">재제출완료</span><p class="txt_default mt0">2020.01.01</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">첨삭완료</span><p class="txt_default mt0">2020.01.01</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">40</span>점</span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <div class="linkBox arrow">
+                                            <a href="javascript:void(0)">
+                                                <span class="txt">00.0%</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <p class="txt_default mt0">모사 답안 제외</p>
+                                    </div>
+                                </td>
+                                <td class="mob_ac"><button class="btn_s_black">결과보기</button></td>
+                            </tr>
+                            <tr>
+                                <td class="ac mobH">
+                                    <div class="checkBox">
+                                        <input type="checkbox" id="chk_num31">
+                                        <label for="chk_num31">31</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"><span>강학생</span><p class="txt_default mt0">kang@step.co.kr</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">임시저장</span></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">미첨삭</span></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR"><span class="txt_blue01"></span></span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">                                       
+                                        <span class="mob_boxR"></span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"></span>
+                                    </div>
+                                </td>
+                                <td class="mob_ac"></td>
+                            </tr>
+                            <tr>
+                                <td class="ac mobH">
+                                    <div class="checkBox">
+                                        <input type="checkbox" id="chk_num30">
+                                        <label for="chk_num30">30</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"><span>김학생</span><p class="txt_default mt0">kim@step.co.kr</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">미제출</span><p class="txt_default mt0"></p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">미첨삭</span><p class="txt_default mt0"></p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR"><span class="txt_blue01"></span></span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"></span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"></span>
+                                    </div>
+                                </td>
+                                <td class="mob_ac"></td>
+                            </tr>
+                            <tr>
+                                <td class="ac mobH">
+                                    <div class="checkBox">
+                                        <input type="checkbox" id="chk_num29">
+                                        <label for="chk_num29">29</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"><span>김유신</span><p class="txt_default mt0">KYS@step.co.kr</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">제출완료</span><p class="txt_default mt0">2020.01.01</p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01">미첨삭</span><p class="txt_default mt0"></p></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR"><span class="txt_blue01"></span></span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"></span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <span class="mob_boxR"></span>
+                                    </div>
+                                </td>
+                                <td class="mob_ac"><button type="button" class="btn_s_blue_gra" onclick="window.open('popup/popup_assign_edit.html','','width=800, height=750');">첨삭하기</button></td>
+                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <script>
+
+                    $(document).on('click', "#chk_all", function () {
+
+                        $(this).closest("table").find("input[type='checkBox']").prop( 'checked', this.checked );
+
+                    });
+
+                </script>
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>강의실</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+
+<section class="windowPop">
+    <div class="windowPopH">
+        지각/조퇴/결석 사유
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template4/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <table class="table_hori">
+                <caption>사유 / 최초 등록일시 , 최종 등록일시로 이루어져 있는 지각/조퇴/결석 사유</caption>
+                <colgroup>
+                    <col width="25%">
+                    <col width="*">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="ac"> <span class="asterisk">사유</span></th>
+                        <td>
+                            <div class="inputBox Full reason">
+                                <textarea></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="ac">최초 등록일시</th>
+                        <td>2020-07-08 12:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="ac">최종 등록일시</th>
+                        <td>2020-07-08 14:40</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_blue">저장</button>
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">취소</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+</body>
+</html>

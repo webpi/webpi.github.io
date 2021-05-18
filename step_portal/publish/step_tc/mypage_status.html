@@ -1,0 +1,1045 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+    <div class="content_wrap">
+
+        <h3><span>학습자 학습현황</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+        <!-- tab -->
+        <ul class="tab">
+            <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>진행과정</span></a></li>
+            <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>종료과정</span></a></li>
+        </ul>
+        <!-- tab -->
+
+        <!-- 진행 과정 -->
+        <div class="tabBox active" id="tab01">
+            <!-- searchWrap -->
+            <div class="searchWrap">
+                <ul>
+                    <li>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">과정명</span></span>
+                            <div class="selectBox">
+                                <label for="select_process"><span>과정명</span></label>
+                                <select id="select_process">
+                                    <option>한국교육기술대학교 온라인강의 과정</option>
+                                    <option>한국교육기술대학교 온라인강의 과정</option>
+                                </select>
+                            </div>
+                            <div class="selectBox">
+                                <label for="select_process02"><span>통합과정>세부과정</span></label>
+                                <select id="select_process02">
+                                    <option>통합과정 > 세부과정</option>
+                                    <option>혼합과정 > 세부과정</option>
+                                </select>
+                            </div>
+                            <div class="selectBox disabled">
+                                <label for="select_process04"><span>통합과정>세부과정</span></label>
+                                <select id="select_process04">
+                                    <option>비활성화 버전</option>
+                                    <option>비활성화 버전</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">수료가능여부</span></span>
+                            <ul class="checkList">
+                                <li>
+                                    <input type="checkbox" id="search_chk01">
+                                    <label for="search_chk01">가능</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="search_chk02">
+                                    <label for="search_chk02">불가능</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">검색</span></span>
+                            <div class="search_area">
+                                <div class="search_areaIn">
+                                    <input type="text">
+                                </div>
+                                <button type="button" class="btn_s_blue">검색</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- EOD : searchWrap -->
+
+            <!-- floatBox -->
+            <div class="floatBox">
+                <div class="floatBoxL">
+                    <h4>평가기준정보</h4>
+                </div>
+                <div class="floatBoxR">
+                    <ul class="float_infoBox">
+                        <li><span class="label">교육기간</span><span class="txt_point">2020.01.15 ~ 2020.02.14</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- EOD : floatBox -->
+
+            <h5 class="txt_point">원격훈련</h5>
+
+            <!-- tableScroll -->
+            <div class="tableScroll mobH">
+                <!-- table_veti -->
+                <table class="table_veti mt0">
+                    <caption>항목,진도,중간평가,최종평가,토론,과제,팀프로젝트,라이브세미나,총점 수료기준 상세</caption>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">항목</th>
+                            <th scope="col">진도</th>
+                            <th scope="col">중간평가</th>
+                            <th scope="col">최종평가</th>
+                            <th scope="col">토론</th>
+                            <th scope="col">과제</th>
+                            <th scope="col">팀프로젝트</th>
+                            <th scope="col">라이브세미나</th>
+                            <th scope="col">총점 수료기준</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ac">
+                        <tr>
+                            <th>수료기준</th>
+                            <td><span class="txt_point">50</span>%</td>
+                            <td><span class="txt_point">70</span>점</td>
+                            <td><span class="txt_point">70</span>점</td>
+                            <td><span class="txt_point">100</span>점</td>
+                            <td><span class="txt_point">100</span>점</td>
+                            <td><span class="txt_point">100</span>점</td>
+                            <td><span class="txt_point">100</span>%</td>
+                            <td rowspan="2"><span class="txt_point">100</span>점</td>
+                        </tr>
+                        <tr>
+                            <th>반영비율</th>
+                            <td><span class="txt_point">50</span>%</td>
+                            <td><span class="txt_point">70</span>%</td>
+                            <td><span class="txt_point">70</span>%</td>
+                            <td><span class="txt_point">20</span>%</td>
+                            <td><span class="txt_point">30</span>%</td>
+                            <td><span class="txt_point">70</span>%</td>
+                            <td><span class="txt_point">50</span>%</td>
+                        </tr>
+                        <!-- no_data
+                            <tr>
+                                <td colspan="9" class="no_dataBox">
+                                    <p class="txt">데이터가 없습니다.</p>
+                                </td>
+                            </tr>
+                        -->
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- mobS 모바일에서 보이는 영역 -->
+            <div class="mobS">
+                <table class="table_veti">
+                    <caption>항목,수료기준,반영비율로 이루어진 평가기준정보 상세</caption>
+                    <colgroup>
+                        <col width="*">
+                        <col width="25%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">항목</th>
+                        <th scope="col">수료기준</th>
+                        <th scope="col">반영비율</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac" scope="row">진도</td>
+                            <td class="ac">50%</td>
+                            <td class="ac">50%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">중간평가</td>
+                            <td class="ac">70점</td>
+                            <td class="ac">70%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">최종평가</td>
+                            <td class="ac">70점</td>
+                            <td class="ac">70%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">토론</td>
+                            <td class="ac">100점</td>
+                            <td class="ac">20%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">과제</td>
+                            <td class="ac">100점</td>
+                            <td class="ac">30%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">팀 프로젝트</td>
+                            <td class="ac">100점</td>
+                            <td class="ac">70%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">라이브 세미나</td>
+                            <td class="ac">100%</td>
+                            <td class="ac">50%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">총점 수료기준</td>
+                            <td class="ac" colspan="2">100점</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : mobS 모바일에서 보이는 영역 -->
+
+            <h5 class="txt_point">집체훈련</h5>
+
+            <!-- tableScroll -->
+            <div class="tableScroll mobH">
+                <!-- table_veti -->
+                <table class="table_veti mt0">
+                    <caption>항목,출석,실습평가,실무평가,태도평가,토론,과제,팀프로젝트,라이브세미나,총점 수료기준 상세</caption>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">항목</th>
+                            <th scope="col">출석</th>
+                            <th scope="col">실습평가</th>
+                            <th scope="col">실무평가</th>
+                            <th scope="col">태도평가</th>
+                            <th scope="col">토론</th>
+                            <th scope="col">과제</th>
+                            <th scope="col">팀프로젝트</th>
+                            <th scope="col">라이브세미나</th>
+                            <th scope="col">총점 수료기준</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ac">
+                    <tr>
+                        <th>수료기준</th>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td><span class="txt_point">70</span>점</td>
+                        <td><span class="txt_point">70</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td rowspan="2"><span class="txt_point">100</span>점</td>
+                    </tr>
+                    <tr>
+                        <th>반영비율</th>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">20</span>%</td>
+                        <td><span class="txt_point">30</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td><span class="txt_point">30</span>%</td>
+                    </tr>
+                    <!-- no_data
+                        <tr>
+                            <td colspan="10" class="no_dataBox">
+                                <p class="txt">데이터가 없습니다.</p>
+                            </td>
+                        </tr>
+                     no_data -->
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- mobS 모바일에서 보이는 영역 -->
+            <div class="mobS">
+                <table class="table_veti">
+                    <caption>항목,수료기준,반영비율로 이루어진 평가기준정보 상세</caption>
+                    <colgroup>
+                        <col width="*">
+                        <col width="25%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">항목</th>
+                        <th scope="col">수료기준</th>
+                        <th scope="col">반영비율</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac" scope="row">출석</td>
+                            <td class="ac">50%</td>
+                            <td class="ac">50%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">실습평가</td>
+                            <td class="ac">70점</td>
+                            <td class="ac">70%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">실무평가</td>
+                            <td class="ac">70점</td>
+                            <td class="ac">70%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">태도평가</td>
+                            <td class="ac">100점</td>
+                            <td class="ac">20%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">토론</td>
+                            <td class="ac">100점</td>
+                            <td class="ac">30%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">과제</td>
+                            <td class="ac">100점</td>
+                            <td class="ac">70%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">팀 프로젝트</td>
+                            <td class="ac">100점</td>
+                            <td class="ac">50%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">라이브세미나</td>
+                            <td class="ac">50%</td>
+                            <td class="ac">30%</td>
+                        </tr>
+                        <tr>
+                            <td class="ac" scope="row">총점 수료기준</td>
+                            <td class="ac" colspan="2">100점</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : mobS 모바일에서 보이는 영역 -->
+
+            <!-- floatBox -->
+            <div class="floatBox">
+                <div class="floatBoxL">
+                    <h4>학습자 목록</h4>
+                    <span class="countBox">
+                    총 <strong>2</strong>명
+                </span>
+                </div>
+                <div class="floatBoxR t_mobH">
+                    <button type="button" class="btn_s_disabled" disabled="disabled">일괄 시험점수 등록</button>
+                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_sms.html','','width=800, height=750');">SMS 발송</button>
+                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_email.html','','width=800, height=750');">이메일 발송</button>
+                </div>
+            </div>
+            <!-- EOD : floatBox -->
+
+            <p class="txt_alert">일괄 시험점수 등록은 집체훈련만 등록할 수 있습니다.</p>
+            <p class="txt_alert">집체훈련의 수료/조기취업자는 시험점수를 등록하지 않습니다.</p>
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <!-- table_veti -->
+                <table class="table_veti">
+                    <caption>NO,이름/아이디 , 평가항목 취득 점수 / 가중치 환산 점수 ,총점,수료 가능여부로 이루어진 평가기준정보 상세</caption>
+                    <colgroup>
+                        <col width="5%">
+                        <col width="*">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="8%">
+                        <col width="5%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" rowspan="2">
+                                <div class="checkBox">
+                                    <input type="checkbox" id="chk_all" class="chk_all">
+                                    <label for="chk_all">No</label>
+                                </div>
+                            </th>
+                            <th scope="col" rowspan="2">이름/아이디</th>
+                            <th scope="colgroup" colspan="6" class="mobH">평가항목 취득 점수 / 가중치 환산 점수</th>
+                            <th scope="col" rowspan="2">총점</th>
+                            <th scope="col" rowspan="2">수료 가능여부</th>
+                        </tr>
+                        <tr class="mobH">
+                            <th>진도율</th>
+                            <th>중간평가</th>
+                            <th>최종평가</th>
+                            <th>과제</th>
+                            <th>팀 프로젝트</th>
+                            <th>라이브 세미나</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac">
+                                <div class="checkBox">
+                                    <input type="checkbox" id="chk_num01_20">
+                                    <label for="chk_num01_20">20</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_history.html','','width=800, height=750');">
+                                        <span class="txt">홍길동</span>
+                                    </a>
+                                </div>
+                                <p class="txt_default mt0">hong@korea.com</p>
+                            </td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac">
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_total_score.html','','width=800, height=750');">
+                                        <span class="txt">100</span>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="ac">가능</td>
+                        </tr>
+                        <tr>
+                            <td class="ac">
+                                <div class="checkBox">
+                                    <input type="checkbox" id="chk_num01_19">
+                                    <label for="chk_num01_19">19</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_history.html','','width=800, height=750');">
+                                        <span class="txt">홍길동</span>
+                                    </a>
+                                </div>
+                                <p class="txt_default mt0">hong@korea.com</p>
+                            </td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac">
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_total_score_type02.html','','width=800, height=750');">
+                                        <span class="txt">100</span>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="ac">가능</td>
+                        </tr>
+                        <!-- no data
+                        <td colspan="10" class="no_dataBox">
+                            <p class="txt">학습자가 없습니다.</p>
+                        </td>
+                        -->
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- pagination -->
+            <div class="pagination">
+                <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                <a class="active" href="javascript:void(0);">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+                <a href="javascript:void(0);">5</a>
+                <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+            </div>
+            <!-- EOD : pagination -->
+        </div>
+        <!-- EOD : 진행 과정 -->
+
+        <!-- 종료 과정 -->
+        <div class="tabBox" id="tab02">
+            <!-- searchWrap -->
+            <div class="searchWrap">
+                <ul>
+                    <li>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">교육년도</span></span>
+                            <div class="selectBox">
+                                <label for="select_year"><span>2020</span></label>
+                                <select id="select_year">
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">과정명</span></span>
+                            <div class="selectBox">
+                                <label for="select_process05"><span>과정명</span></label>
+                                <select id="select_process05">
+                                    <option>한국교육기술대학교 온라인강의 과정</option>
+                                    <option>한국교육기술대학교 온라인강의 과정</option>
+                                </select>
+                            </div>
+                            <div class="selectBox">
+                                <label for="select_process06"><span>과정명</span></label>
+                                <select id="select_process06">
+                                    <option>한국교육기술대학교 온라인강의 과정</option>
+                                    <option>한국교육기술대학교 온라인강의 과정</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">수료가능여부</span></span>
+                            <ul class="checkList">
+                                <li>
+                                    <input type="checkbox" id="search_chk03">
+                                    <label for="search_chk03">가능</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="search_chk04">
+                                    <label for="search_chk04">불가능</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">검색</span></span>
+                            <div class="search_area">
+                                <div class="search_areaIn">
+                                    <input type="text">
+                                </div>
+                                <button type="button" class="btn_s_blue">검색</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- EOD : searchWrap -->
+
+            <!-- floatBox -->
+            <div class="floatBox">
+                <div class="floatBoxL">
+                    <h4>평가기준정보</h4>
+                </div>
+                <div class="floatBoxR">
+                    <ul class="float_infoBox">
+                        <li><span class="label">교육기간</span><span class="txt_point">2020.01.15 ~ 2020.02.14</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- EOD : floatBox -->
+
+            <h5 class="txt_point">원격훈련</h5>
+
+            <!-- tableScroll -->
+            <div class="tableScroll mobH">
+                <!-- table_veti -->
+                <table class="table_veti mt0">
+                    <caption>항목,진도,중간평가,최종평가,토론,과제,팀프로젝트,라이브세미나,총점 수료기준 상세</caption>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">항목</th>
+                        <th scope="col">진도</th>
+                        <th scope="col">중간평가</th>
+                        <th scope="col">최종평가</th>
+                        <th scope="col">토론</th>
+                        <th scope="col">과제</th>
+                        <th scope="col">팀프로젝트</th>
+                        <th scope="col">라이브세미나</th>
+                        <th scope="col">총점 수료기준</th>
+                    </tr>
+                    </thead>
+                    <tbody class="ac">
+                    <tr>
+                        <th>수료기준</th>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td><span class="txt_point">70</span>점</td>
+                        <td><span class="txt_point">70</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>%</td>
+                        <td rowspan="2"><span class="txt_point">100</span>점</td>
+                    </tr>
+                    <tr>
+                        <th>반영비율</th>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">20</span>%</td>
+                        <td><span class="txt_point">30</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">50</span>%</td>
+                    </tr>
+                    <!-- no_data
+                        <tr>
+                            <td colspan="9" class="no_dataBox">
+                                <p class="txt">데이터가 없습니다.</p>
+                            </td>
+                        </tr>
+                    -->
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- mobS 모바일에서 보이는 영역 -->
+            <div class="mobS">
+                <table class="table_veti">
+                    <caption>항목,수료기준,반영비율로 이루어진 평가기준정보 상세</caption>
+                    <colgroup>
+                        <col width="*">
+                        <col width="25%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">항목</th>
+                        <th scope="col">수료기준</th>
+                        <th scope="col">반영비율</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="ac" scope="row">진도</td>
+                        <td class="ac">50%</td>
+                        <td class="ac">50%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">중간평가</td>
+                        <td class="ac">70점</td>
+                        <td class="ac">70%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">최종평가</td>
+                        <td class="ac">70점</td>
+                        <td class="ac">70%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">토론</td>
+                        <td class="ac">100점</td>
+                        <td class="ac">20%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">과제</td>
+                        <td class="ac">100점</td>
+                        <td class="ac">30%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">팀 프로젝트</td>
+                        <td class="ac">100점</td>
+                        <td class="ac">70%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">라이브 세미나</td>
+                        <td class="ac">100%</td>
+                        <td class="ac">50%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">총점 수료기준</td>
+                        <td class="ac" colspan="2">100점</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : mobS 모바일에서 보이는 영역 -->
+
+            <h5 class="txt_point">집체훈련</h5>
+
+            <!-- tableScroll -->
+            <div class="tableScroll mobH">
+                <!-- table_veti -->
+                <table class="table_veti mt0">
+                    <caption>항목,출석,실습평가,실무평가,태도평가,토론,과제,팀프로젝트,라이브세미나,총점 수료기준 상세</caption>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">항목</th>
+                        <th scope="col">출석</th>
+                        <th scope="col">실습평가</th>
+                        <th scope="col">실무평가</th>
+                        <th scope="col">태도평가</th>
+                        <th scope="col">토론</th>
+                        <th scope="col">과제</th>
+                        <th scope="col">팀프로젝트</th>
+                        <th scope="col">라이브세미나</th>
+                        <th scope="col">총점 수료기준</th>
+                    </tr>
+                    </thead>
+                    <tbody class="ac">
+                    <tr>
+                        <th>수료기준</th>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td><span class="txt_point">70</span>점</td>
+                        <td><span class="txt_point">70</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">100</span>점</td>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td rowspan="2"><span class="txt_point">100</span>점</td>
+                    </tr>
+                    <tr>
+                        <th>반영비율</th>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">20</span>%</td>
+                        <td><span class="txt_point">30</span>%</td>
+                        <td><span class="txt_point">70</span>%</td>
+                        <td><span class="txt_point">50</span>%</td>
+                        <td><span class="txt_point">30</span>%</td>
+                    </tr>
+                    <!-- no_data
+                        <tr>
+                            <td colspan="10" class="no_dataBox">
+                                <p class="txt">데이터가 없습니다.</p>
+                            </td>
+                        </tr>
+                     no_data -->
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- mobS 모바일에서 보이는 영역 -->
+            <div class="mobS">
+                <table class="table_veti">
+                    <caption>항목,수료기준,반영비율로 이루어진 평가기준정보 상세</caption>
+                    <colgroup>
+                        <col width="*">
+                        <col width="25%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">항목</th>
+                        <th scope="col">수료기준</th>
+                        <th scope="col">반영비율</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="ac" scope="row">출석</td>
+                        <td class="ac">50%</td>
+                        <td class="ac">50%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">실습평가</td>
+                        <td class="ac">70점</td>
+                        <td class="ac">70%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">실무평가</td>
+                        <td class="ac">70점</td>
+                        <td class="ac">70%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">태도평가</td>
+                        <td class="ac">100점</td>
+                        <td class="ac">20%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">토론</td>
+                        <td class="ac">100점</td>
+                        <td class="ac">30%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">과제</td>
+                        <td class="ac">100점</td>
+                        <td class="ac">70%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">팀 프로젝트</td>
+                        <td class="ac">100점</td>
+                        <td class="ac">50%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">라이브세미나</td>
+                        <td class="ac">50%</td>
+                        <td class="ac">30%</td>
+                    </tr>
+                    <tr>
+                        <td class="ac" scope="row">총점 수료기준</td>
+                        <td class="ac" colspan="2">100점</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : mobS 모바일에서 보이는 영역 -->
+
+            <!-- floatBox -->
+            <div class="floatBox">
+                <div class="floatBoxL">
+                    <h4>학습자 목록</h4>
+                    <span class="countBox">
+                    총 <strong>2</strong>명
+                </span>
+                </div>
+                <div class="floatBoxR t_mobH">
+                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_exam_write.html','','width=800, height=750');">일괄 시험점수 등록</button>
+                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_sms.html','','width=800, height=750');">SMS 발송</button>
+                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_email.html','','width=800, height=750');">이메일 발송</button>
+                </div>
+            </div>
+            <!-- EOD : floatBox -->
+
+            <p class="txt_alert">일괄 시험점수 등록은 집체훈련만 등록할 수 있습니다.</p>
+            <p class="txt_alert">집체훈련의 수료/조기취업자는 시험점수를 등록하지 않습니다.</p>
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <!-- table_veti -->
+                <table class="table_veti">
+                    <caption>NO,이름/아이디 , 평가항목 취득 점수 / 가중치 환산 점수 ,총점,수료 가능여부로 이루어진 평가기준정보 상세</caption>
+                    <colgroup>
+                        <col width="5%">
+                        <col width="*">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="8%">
+                        <col width="5%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col" rowspan="2">
+                            <div class="checkBox">
+                                <input type="checkbox" id="chk_all02" class="chk_all">
+                                <label for="chk_all02">No</label>
+                            </div>
+                        </th>
+                        <th scope="col" rowspan="2">이름/아이디</th>
+                        <th scope="colgroup" colspan="6" class="mobH">평가항목 취득 점수 / 가중치 환산 점수</th>
+                        <th scope="col" rowspan="2">총점</th>
+                        <th scope="col" rowspan="2">수료 가능여부</th>
+                    </tr>
+                    <tr class="mobH">
+                        <th>진도율</th>
+                        <th>중간평가</th>
+                        <th>최종평가</th>
+                        <th>과제</th>
+                        <th>팀 프로젝트</th>
+                        <th>라이브 세미나</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac">
+                                <div class="checkBox">
+                                    <input type="checkbox" id="chk_num02_20">
+                                    <label for="chk_num02_20">20</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_history.html','','width=800, height=750');">
+                                        <span class="txt">홍길동</span>
+                                    </a>
+                                </div>
+                                <p class="txt_default mt0">hong@korea.com</p>
+                            </td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac">
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_total_score.html','','width=800, height=750');">
+                                        <span class="txt">100</span>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="ac">가능</td>
+                        </tr>
+                        <tr>
+                            <td class="ac">
+                                <div class="checkBox">
+                                    <input type="checkbox" id="chk_num02_19">
+                                    <label for="chk_num02_19">19</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_history.html','','width=800, height=750');">
+                                        <span class="txt">홍길동</span>
+                                    </a>
+                                </div>
+                                <p class="txt_default mt0">hong@korea.com</p>
+                            </td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac mobH"><span class="txt_black">100 / </span><span class="txt_point">100</span></td>
+                            <td class="ac">
+                            <div class="linkBox arrow">
+                                <a href="javascript:void(0)" onclick="window.open('popup/popup_total_score_type02.html','','width=800, height=750');">
+                                    <span class="txt">100</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="ac">가능</td>
+                    </tr>
+                    <!-- no data
+                    <td colspan="10" class="no_dataBox">
+                        <p class="txt">학습자가 없습니다.</p>
+                    </td>
+                    -->
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- pagination -->
+            <div class="pagination">
+                <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                <a class="active" href="javascript:void(0);">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+                <a href="javascript:void(0);">5</a>
+                <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+            </div>
+            <!-- EOD : pagination -->
+
+
+        </div>
+        <!-- EOD : 종료 과정 -->
+
+        <script>
+
+            $(document).on('click', ".chk_all", function () {
+
+                $(this).closest("table").find("input[type='checkBox']").prop( 'checked', this.checked );
+
+            });
+
+        </script>
+
+
+
+
+    </div>
+</div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>
+

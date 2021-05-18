@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <div class="content_wrap">
+
+            <h3><span>1:1문의</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+            <!-- searchBox type02 -->
+            <div class="searchBox type02">
+                <ul class="selectList">
+                    <li>
+                        <div class="selectBox">
+                            <label for="select"><span>분류</span></label>
+                            <select id="select">
+                                <option>분류1</option>
+                                <option>분류2</option>
+                                <option>분류3</option>
+                                <option>분류4</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="selectBox">
+                            <label for="select02"><span>답변상태</span></label>
+                            <select id="select02">
+                                <option>상태1</option>
+                                <option>상태2</option>
+                                <option>상태3</option>
+                                <option>상태4</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+                <div class="textBox">
+                    <div class="textBoxIn">
+                        <div class="inputBox">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                        </div>
+                        <button type="button">
+                            <span class="blind">검색</span>
+                            <i class="icon_search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- EOD : searchBox type02 -->
+
+            <div class="boardTop_area">
+                <!-- btnBox -->
+                <div class="btnBox">
+                    <div class="rightBox">
+                        <a href="customer_question_write.html" class="btn_m_blue">문의하기</a>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+            </div>
+
+            <!-- table_normal -->
+            <table class="table_normal">
+                <caption>NO,분류,제목,첨부파일,답변상태,등록자,등록일로 이루어진 1:1문의 게시판</caption>
+                <colgroup>
+                    <col width="9%">
+                    <col class="mobH" width="9%">
+                    <col width="*">
+                    <col class="mobH" width="12%">
+                    <col class="mobH" width="10%">
+                    <col class="mobH" width="10%">
+                    <col class="mobH" width="10%">
+                </colgroup>
+                <thead>
+                <tr class="mobH">
+                    <th>NO</th>
+                    <th>분류</th>
+                    <th>제목</th>
+                    <th>첨부파일</th>
+                    <th>답변상태</th>
+                    <th>등록자</th>
+                    <th>등록일</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        5
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox">
+                            <span class="blind">답변상태</span><span class="txtBox_s_white">답변대기</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH">
+                        수강신청
+                    </td>
+                    <td class="al">
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox Top">
+                            <span class="blind">분류</span><span class="txt_green">수강신청</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="linkBox">
+                            <a href="javascript:void(0)"><span class="txt">수강신청 관련 문의 드립니다. 두줄테스트 두줄테스트 두줄테스트 두줄테스트</span></a>
+                            <i class="icon_new"><span class="blind">new</span></i><i class="icon_lock"><span class="blind">비밀글</span></i>
+                        </div>
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <ul class="mobBox">
+                            <li>등록자 박한*</li>
+                            <li>등록일 2020.02.04</li>
+                            <li>
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH">
+                        <div class="iconBox">
+                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                        </div>
+                    </td>
+                    <td class="mobH"><span class="txtBox_s_white">답변대기</span></td>
+                    <td class="mobH">박한*</td>
+                    <td class="mobH">2020.02.04</td>
+                </tr>
+                <tr>
+                    <td>
+                        4
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox">
+                            <span class="blind">답변상태</span><span class="txtBox_s_white">답변대기</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH">
+                        학습문의
+                    </td>
+                    <td class="al">
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox Top">
+                            <span class="blind">분류</span><span class="txt_green">학습문의</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="linkBox">
+                            <a href="javascript:void(0)"><span class="txt">학습문의 관련 문의 드립니다.</span></a>
+                            <i class="icon_new"><span class="blind">new</span></i><i class="icon_lock"><span class="blind">비밀글</span></i>
+                        </div>
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <ul class="mobBox">
+                            <li>등록자 신모*</li>
+                            <li>등록일 2020.02.04</li>
+                            <li>
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH">
+                        <div class="iconBox">
+                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                        </div>
+                    </td>
+                    <td class="mobH"><span class="txtBox_s_white">답변대기</span></td>
+                    <td class="mobH">신모*</td>
+                    <td class="mobH">2020.02.04</td>
+                </tr>
+                <tr>
+                    <td>
+                        3
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox">
+                            <span class="blind">답변상태</span><span class="txtBox_s_gray">답변완료</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH">
+                        교재배송
+                    </td>
+                    <td class="al">
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox Top">
+                            <span class="blind">분류</span><span class="txt_green">교재배송</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="linkBox">
+                            <a href="javascript:void(0)"><span class="txt">교재배송 관련 문의 드립니다.</span></a>
+                            <i class="icon_lock"><span class="blind">비밀글</span></i>
+                        </div>
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <ul class="mobBox">
+                            <li>등록자 김모*</li>
+                            <li>등록일 2020.02.04</li>
+                            <li>
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH">
+                        <div class="iconBox">
+                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                        </div>
+                    </td>
+                    <td class="mobH"><span class="txtBox_s_gray">답변완료</span></td>
+                    <td class="mobH">김모*</td>
+                    <td class="mobH">2020.02.04</td>
+                </tr>
+                <tr>
+                    <td>
+                        2
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox">
+                            <span class="blind">분류</span><span class="blind">답변상태</span><span class="txtBox_s_gray">답변완료</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH">
+                        평가문의
+                    </td>
+                    <td class="al">
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox Top">
+                            <span class="txt_green">평가문의</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="linkBox">
+                            <a href="javascript:void(0)"><span class="txt">평가문의 관련 문의 드립니다.</span></a>
+                            <i class="icon_lock"><span class="blind">비밀글</span></i>
+                        </div>
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <ul class="mobBox">
+                            <li>등록자 유학*</li>
+                            <li>등록일 2020.02.04</li>
+                        </ul>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH"></td>
+                    <td class="mobH"><span class="txtBox_s_gray">답변완료</span></td>
+                    <td class="mobH">유학*</td>
+                    <td class="mobH">2020.02.04</td>
+                </tr>
+                <tr>
+                    <td>
+                        1
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox">
+                            <span class="blind">답변상태</span><span class="txtBox_s_gray">답변완료</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH">
+                        수료문의
+                    </td>
+                    <td class="al">
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="mobBox Top">
+                            <span class="blind">분류</span><span class="txt_green">수료문의</span>
+                        </div>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        <div class="linkBox">
+                            <a href="javascript:void(0)"><span class="txt">수료문의 관련 문의 드립니다.</span></a>
+                            <i class="icon_lock"><span class="blind">비밀글</span></i>
+                        </div>
+                        <!-- 모바일에서만 출력되는 데이터 영역 -->
+                        <ul class="mobBox">
+                            <li>등록자 김한*</li>
+                            <li>등록일 2020.02.04</li>
+                        </ul>
+                        <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                    </td>
+                    <td class="mobH"></td>
+                    <td class="mobH"><span class="txtBox_s_gray">답변완료</span></td>
+                    <td class="mobH">김한*</td>
+                    <td class="mobH">2020.02.04</td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- EOD : table_normal -->
+
+        </div>
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>
+

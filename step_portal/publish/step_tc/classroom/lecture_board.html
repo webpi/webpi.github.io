@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>과정게시판</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+                <!-- tab -->
+                <ul class="tab">
+                    <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>공지사항</span></a></li>
+                    <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>자료실</span></a></li>
+                </ul>
+                <!-- EOD : tab -->
+
+                <!-- 공지사항 내용 -->
+                <div class="tabBox active" id="tab01">
+                    <!-- searchBox -->
+                    <div class="searchBox">
+                        <ul>
+                            <li>
+                                <div class="dataBox">
+                                    <div class="selectBox">
+                                        <label for="select_data"><span>제목</span></label>
+                                        <select id="select_data">
+                                            <option>제목</option>
+                                            <option>제목+내용</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="dataBox">
+                                    <div class="search_area">
+                                        <div class="search_areaIn">
+                                            <input type="text">
+                                        </div>
+                                        <button type="button" class="btn_s_blue">검색</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- EOD : searchBox -->
+
+                    <!--  table_normal -->
+                    <table class="table_normal">
+                        <caption>NO,제목,첨부파일,등록일,조회로 이루어진 공지사항 게시판</caption>
+                        <colgroup>
+                            <col width="9%">
+                            <col width="*">
+                            <col class="mobH" width="9%">
+                            <col class="mobH" width="12%">
+                            <col class="mobH" width="10%">
+                        </colgroup>
+                        <thead>
+                        <tr class="mobH">
+                            <th>NO</th>
+                            <th>제목</th>
+                            <th>첨부파일</th>
+                            <th>등록일</th>
+                            <th>조회</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="notice">
+                            <td>공지</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_board_view.html">
+                                            <span class="label_titleLinkIn">
+                                                <span class="txt">★ STEP 위키 수다 이벤트 #3 당첨자 ★</span>
+                                            </span>
+                                            <i class="icon_new"><span class="blind">new</span></i><i class="icon_lock"><span class="blind">비밀글</span></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>등록일 2020.02.04</li>
+                                    <li>조회 13</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </td>
+                            <td class="mobH">2020.04.13</td>
+                            <td class="mobH">13</td>
+                        </tr>
+                        <tr class="notice">
+                            <td>공지</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_board_view.html">
+                                            <span>
+                                                <span class="txt">★ STEP(step.go.kr)을 활용한 국가기간·전략산업직종 혼합훈련 과정 수강신청 텍스트 생략</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>등록일 2020.02.04</li>
+                                    <li>조회 13</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            </td>
+                            <td class="mobH"></td>
+                            <td class="mobH">2020.04.13</td>
+                            <td class="mobH">13</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_board_view.html">
+                                            <span>
+                                                <span class="txt">★ STEP 위키 수다 이벤트 #3 당첨자 ★</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>등록일 2020.02.04</li>
+                                    <li>조회 13</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </td>
+                            <td class="mobH">2020.02.04</td>
+                            <td class="mobH">13</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_board_view.html">
+                                            <span>
+                                                <span class="txt">STEP 위키 멘토 2기를 모집합니다.</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>등록일 2020.01.10</li>
+                                    <li>조회 20</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </td>
+                            <td class="mobH">2020.01.10</td>
+                            <td class="mobH">20</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_board_view.html">
+                                            <span>
+                                                <span class="txt">★ 오직 당신만을 위한 맞춤형 직무/취업 상담 이벤트 당첨자★</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>등록일 2020.01.15</li>
+                                    <li>조회 13</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH"></td>
+                            <td class="mobH">2020.01.05</td>
+                            <td class="mobH">13</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="al">
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_board_view.html">
+                                            <span>
+                                                <span class="txt">집합훈련 원격 대체 온라인 강의실 신청</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>등록일 2020.01.01</li>
+                                    <li>조회 35</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH"></td>
+                            <td class="mobH">2020.01.01</td>
+                            <td class="mobH">35</td>
+                        </tr>
+                        <td colspan="5" class="no_dataBox">
+                            <img src="/images/template9/resp/default/icon/icon_no_data_board.png" alt="">
+                            <p class="txt">게시된 글이 없습니다.</p>
+                        </td>
+                        </tbody>
+                    </table>
+                    <!--  EOD : table_normal -->
+
+                    <!-- btnBox -->
+                    <div class="btnBox">
+                        <div class="rightBox">
+                            <a href="lecture_board_write.html" class="btn_m_blue">등록</a>
+                        </div>
+                    </div>
+                    <!-- EOD : btnBox -->
+
+                    <!-- pagination -->
+                    <div class="pagination">
+                        <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                        <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                        <a class="active" href="javascript:void(0);">1</a>
+                        <a href="javascript:void(0);">2</a>
+                        <a href="javascript:void(0);">3</a>
+                        <a href="javascript:void(0);">4</a>
+                        <a href="javascript:void(0);">5</a>
+                        <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                        <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                    </div>
+                    <!-- EOD : pagination -->
+                </div>
+                <!-- EOD : 공지사항 내용 -->
+
+                <div class="tabBox" id="tab02">
+                    <!-- searchBox -->
+                    <div class="searchBox">
+                        <ul>
+                            <li>
+                                <div class="dataBox">
+                                    <div class="selectBox">
+                                        <label for="select_data02"><span>제목</span></label>
+                                        <select id="select_data02">
+                                            <option>제목</option>
+                                            <option>제목+내용</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="dataBox">
+                                    <div class="search_area">
+                                        <div class="search_areaIn">
+                                            <input type="text">
+                                        </div>
+                                        <button type="button" class="btn_s_blue">검색</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- EOD : searchBox -->
+
+                    <!-- tableScroll -->
+                    <div class="tableScroll">
+                        <!--  table_normal -->
+                        <table class="table_normal">
+                            <caption>NO,제목,첨부파일,등록일,조회로 이루어진 자료실 게시판</caption>
+                            <colgroup>
+                                <col width="9%">
+                                <col width="*">
+                                <col class="mobH" width="9%">
+                                <col class="mobH" width="12%">
+                                <col class="mobH" width="10%">
+                            </colgroup>
+                            <thead>
+                            <tr class="mobH">
+                                <th>NO</th>
+                                <th>제목</th>
+                                <th>첨부파일</th>
+                                <th>등록일</th>
+                                <th>조회</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>4</td>
+                                <td class="al">
+                                    <div class="linkBox">
+                                        <a href="lecture_board_view.html"><span class="txt">4차시 실습파일</span></a>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>등록일 2020.02.04</li>
+                                        <li>조회 13</li>
+                                        <li>
+                                            <div class="iconBox">
+                                                <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">
+                                    <div class="iconBox">
+                                        <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                    </div>
+                                </td>
+                                <td class="mobH">2020.02.04</td>
+                                <td class="mobH">13</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="al">
+                                    <div class="linkBox">
+                                        <a href="lecture_board_view.html"><span class="txt">보충자료</span></a>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>등록일 2020.01.10</li>
+                                        <li>조회 20</li>
+                                        <li>
+                                            <div class="iconBox">
+                                                <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">
+                                    <div class="iconBox">
+                                        <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                    </div>
+                                </td>
+                                <td class="mobH">2020.01.10</td>
+                                <td class="mobH">20</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="al">
+                                    <div class="linkBox">
+                                        <a href="lecture_board_view.html"><span class="txt">4차시 추가 학습자료</span></a>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>등록일 2020.01.15</li>
+                                        <li>조회 13</li>
+                                        <li>
+                                            <div class="iconBox">
+                                                <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH"></td>
+                                <td class="mobH">2020.01.05</td>
+                                <td class="mobH">13</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="al">
+                                    <div class="linkBox">
+                                        <a href="lecture_board_view.html"><span class="txt">3차시 추가 학습자료</span></a>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>등록일 2020.01.01</li>
+                                        <li>조회 35</li>
+                                        <li>
+                                            <div class="iconBox">
+                                                <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH"></td>
+                                <td class="mobH">2020.01.01</td>
+                                <td class="mobH">35</td>
+                            </tr>
+                            <td colspan="5" class="no_dataBox">
+                                <img src="/images/template9/resp/default/icon/icon_no_data_board.png" alt="">
+                                <p class="txt">게시된 글이 없습니다.</p>
+                            </td>
+                            </tbody>
+                        </table>
+                        <!--  EOD : table_normal -->
+                    </div>
+
+                    <!-- btnBox -->
+                    <div class="btnBox">
+                        <div class="rightBox">
+                            <a href="lecture_board_write.html" class="btn_m_blue">등록</a>
+                        </div>
+                    </div>
+                    <!-- EOD : btnBox -->
+
+
+                    <!-- pagination -->
+
+                    <div class="pagination">
+                        <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                        <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                        <a class="active" href="javascript:void(0);">1</a>
+                        <a href="javascript:void(0);">2</a>
+                        <a href="javascript:void(0);">3</a>
+                        <a href="javascript:void(0);">4</a>
+                        <a href="javascript:void(0);">5</a>
+                        <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                        <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                    </div>
+
+                    <!-- EOD : pagination -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+
+            </div>
+            <!-- EOD : layout_boxs -->
+
+
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

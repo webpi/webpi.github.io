@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>강의실</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        채점하기
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <!-- tableScroll -->
+            <div class="tableScroll mobH">
+                <!-- table_veti -->
+                <table class="table_veti mt0">
+                    <caption>과정명,구분,시험시간(분),문항수,취득점수로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="*">
+                        <col width="12%">
+                        <col width="20%">
+                        <col width="5%">
+                        <col width="10%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <td>과정명</td>
+                        <td>구분</td>
+                        <td>시험시간(분)</td>
+                        <td>문항수</td>
+                        <td>취득점수</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="ac">빅데이터 수집 Part2</td>
+                        <td class="ac">최종평가</td>
+                        <td class="ac">60분</td>
+                        <td class="ac">10</td>
+                        <td class="ac"><span class="score_num">70</span>점</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- mobS / 모바일에서만 보이는 영역 -->
+            <div class="mobS">
+                <!-- table_hori -->
+                <table class="table_hori mt0">
+                    <caption>과정명,구분,시험시간(분),문항수,취득점수로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="35%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>과정명</th>
+                        <td>빅데이터 수집 Part2</td>
+                    </tr>
+                    <tr>
+                        <th>구분</th>
+                        <td>최종평가</td>
+                    </tr>
+                    <tr>
+                        <th>시험시간(분)</th>
+                        <td>60분</td>
+                    </tr>
+                    <tr>
+                        <th>문항수</th>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th>취득점수</th>
+                        <td><span class="score_num">70</span>점</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_hori -->
+            </div>
+            <!-- EOD : mobS -->
+
+            <!-- list_test -->
+            <ul class="list_test">
+                <li>
+                    <div class="txt_num">
+                        <span class="num">1.</span><span class="txt">다음 중 여름 과일은 무엇인가요?</span>
+                    </div>
+
+                    <ul class="radioList vertical">
+                        <li>
+                            <input type="radio" id="radio01_01" name="q_radio01" disabled>
+                            <label for="radio01_01">1) 사과</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio01_02" name="q_radio01" checked disabled>
+                            <label for="radio01_02">2) 배</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio01_03" name="q_radio01" disabled>
+                            <label for="radio01_03">3) 참외</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio01_04" name="q_radio01" disabled>
+                            <label for="radio01_04">4) 감</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="txt_num">
+                        <span class="num">2.</span><span class="txt">다음 중 여름 과일을 모두 고르시오.</span>
+                    </div>
+
+                    <ul class="checkList vertical">
+                        <li>
+                            <input type="checkbox" id="q_chk01_01" disabled>
+                            <label for="q_chk01_01">1) 딸기</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chk01_02" checked disabled>
+                            <label for="chk01_02">2) 수박</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chk01_03" disabled>
+                            <label for="chk01_03">3) 참외</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chk01_04" checked disabled>
+                            <label for="chk01_04">4) 감</label>
+                        </li>
+                    </ul>
+
+                    <!-- exam_scoreBox -->
+                    <div class="exam_scoreBox">
+                        <ul>
+                            <li><span class="label">득점</span><span class="txt"><strong class="txt_blue01">0</strong>점</span></li>
+                        </ul>
+                    </div>
+                    <!-- EOD : exam_scoreBox -->
+                </li>
+                <li>
+                    <div class="txt_num">
+                        <span class="num">3.</span><span class="txt">사과는 맛있다.</span>
+                    </div>
+
+                    <ul class="radioList vertical">
+                        <li>
+                            <input type="radio" id="radio02_01" name="q_radio02" disabled>
+                            <label for="radio02_01">1) O</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio02_02" name="q_radio02" checked disabled>
+                            <label for="radio02_02">2) X</label>
+                        </li>
+                    </ul>
+
+                    <!-- exam_scoreBox -->
+                    <div class="exam_scoreBox">
+                        <ul>
+                            <li><span class="label">득점</span><span class="txt"><strong class="txt_blue01">0</strong>점</span></li>
+                        </ul>
+                    </div>
+                    <!-- EOD : exam_scoreBox -->
+                </li>
+                <li>
+                    <div class="txt_num">
+                        <span class="num">4.</span><span class="txt"> 대한민국이 위치한 지역의 이름은?</span>
+                    </div>
+
+                    <div class="textBox">
+                        <div class="inputBox Full">
+                            <input type="text" placeholder="의견을 입력하세요" value="학습자가 입력한 답안이 노출됩니다." disabled>
+                        </div>
+                    </div>
+
+                    <!-- exam_scoreBox -->
+                    <div class="exam_scoreBox">
+                        <ul>
+                            <li><span class="label">득점</span><span class="txt"><strong class="txt_blue01">15</strong>점</span></li>
+                        </ul>
+                    </div>
+                    <!-- EOD : exam_scoreBox -->
+
+                    <!-- AnswerBox -->
+                    <div class="AnswerBox">
+                        <div class="AnswerBoxIn">
+                            <!-- titBox -->
+                            <div class="titBox">
+                                <div>정답: <strong class="txt_blue01">아시아</strong></div>
+                            </div>
+                            <!-- EOD : titBox -->
+                            <!-- contentsBox -->
+                            <div class="contentsBox">
+                                <p>해설내용이 출력됩니다.</p>
+                                <p>여름에 자주 먹는 과일을 생각해보세요..</p>
+                            </div>
+                            <!-- EOD : contentsBox -->
+                        </div>
+                    </div>
+                    <!-- EOD : AnswerBox -->
+                </li>
+                <li>
+                    <div class="txt_num">
+                        <span class="num">5.</span><span class="txt"> 대한민국의 정치적 위치에 대하여 서술하시오</span>
+                    </div>
+
+                    <div class="textBox">
+                        <div class="inputBox Full">
+                            <textarea placeholder="의견을 입력하세요" disabled>러시아 vs 미국, 일본의 구도로 되어있음.</textarea>
+                        </div>
+                    </div>
+
+                    <!-- exam_scoreBox -->
+                    <div class="exam_scoreBox">
+                        <ul>
+                            <li>
+                                <div class="selectBox">                                    <label for="select_answer01"><span>맞음</span></label>
+                                    <select id="select_answer01">
+                                        <option>맞음</option>
+                                        <option>틀림</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li><span class="label">득점</span><span class="txt"><strong class="txt_blue01">25</strong>점</span></li>
+                        </ul>
+                    </div>
+                    <!-- EOD : exam_scoreBox -->
+
+                    <!-- AnswerBox -->
+                    <div class="AnswerBox">
+                        <div class="AnswerBoxIn">
+                            <!-- titBox -->
+                            <div class="titBox">
+                                <a href="javascript:void(0);" title="해설 보기">정답 : <strong class="txt_blue01">정답</strong></a>
+                            </div>
+                            <!-- EOD : titBox -->
+                            <!-- contentsBox -->
+                            <div class="contentsBox">
+                                <p>해설내용이 출력됩니다.</p>
+                                <p>여름에 자주 먹는 과일을 생각해보세요..</p>
+                            </div>
+                            <!-- EOD : contentsBox -->
+                        </div>
+                    </div>
+                    <!-- EOD : AnswerBox -->
+                </li>
+                <li>
+                    <div class="txt_num">
+                        <span class="num">6.</span><span class="txt"> 다음 중 여름 과일은 무엇인가요?</span>
+                    </div>
+
+                    <div class="thumBox_exam">
+                        <img src="../../../../images/classroom/template3/resp/default/no_img_exam.png" class="cropImg">
+                    </div>
+
+                    <ul class="radioList vertical">
+                        <li>
+                            <input type="radio" id="radio03_01" name="q_radio03" checked disabled>
+                            <label for="radio03_01">1) 사과</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio03_02" name="q_radio03" disabled>
+                            <label for="radio03_02">2) 배</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio03_03" name="q_radio03" disabled>
+                            <label for="radio03_03">3) 참외</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio03_04" name="q_radio03" disabled>
+                            <label for="radio03_04">4) 감</label>
+                        </li>
+                    </ul>
+
+                    <!-- exam_scoreBox -->
+                    <div class="exam_scoreBox">
+                        <ul>
+                            <li><span class="label">득점</span><span class="txt"><strong class="txt_blue01">20</strong>점</span></li>
+                        </ul>
+                    </div>
+                    <!-- EOD : exam_scoreBox -->
+
+                    <!-- AnswerBox -->
+                    <div class="AnswerBox">
+                        <div class="AnswerBoxIn">
+                            <!-- titBox -->
+                            <div class="titBox">
+                                <a href="javascript:void(0);" title="해설 보기">정답: <strong class="txt_blue01">3) 번</strong></a>
+                            </div>
+                            <!-- EOD : titBox -->
+                            <!-- contentsBox -->
+                            <div class="contentsBox">
+                                <p>해설내용이 출력됩니다.</p>
+                                <p>여름에 자주 먹는 과일을 생각해보세요..</p>
+                            </div>
+                            <!-- EOD : contentsBox -->
+                        </div>
+                    </div>
+                    <!-- EOD : AnswerBox -->
+                </li>
+                <li>
+                    <div class="txt_num">
+                        <span class="num">7.</span><span class="txt">다음 중 여름 과일은 무엇인가요?</span>
+                    </div>
+
+                    <ul class="checkList vertical">
+                        <li>
+                            <input type="checkbox" id="q_chk03_01" disabled>
+                            <label for="q_chk03_01">
+                                <p class="txt">1) 사과</p>
+                                <div class="thumBox_exam_small">
+                                    <img src="../../../../images/classroom/template3/resp/default/no_img_exam.png" class="cropImg">
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="q_chk03_02" checked disabled>
+                            <label for="q_chk03_02">
+                                <p class="txt">2) 수박</p>
+                                <div class="thumBox_exam_small">
+                                    <img src="../../../../images/classroom/template3/resp/default/no_img_exam.png" class="cropImg">
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="q_chk03_03" disabled>
+                            <label for="q_chk03_03">
+                                <p class="txt">3) 참외</p>
+                                <div class="thumBox_exam_small">
+                                    <img src="../../../../images/classroom/template3/resp/default/no_img_exam.png" class="cropImg">
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="q_chk03_04" checked  disabled>
+                            <label for="q_chk03_04">
+                                <p class="txt">4) 감</p>
+                                <div class="thumBox_exam_small">
+                                    <img src="../../../../images/classroom/template3/resp/default/no_img_exam.png" class="cropImg">
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <!-- exam_scoreBox -->
+                    <div class="exam_scoreBox">
+                        <ul>
+                            <li><span class="label">득점</span><span class="txt"><strong class="txt_blue01">10</strong>점</span></li>
+                        </ul>
+                    </div>
+                    <!-- EOD : exam_scoreBox -->
+
+                    <!-- AnswerBox -->
+                    <div class="AnswerBox">
+                        <div class="AnswerBoxIn">
+                            <!-- titBox -->
+                            <div class="titBox">
+                                <a href="javascript:void(0);" title="해설 보기">정답: <strong class="txt_blue01">2) , 4) 번</strong></a>
+                            </div>
+                            <!-- EOD : titBox -->
+                            <!-- contentsBox -->
+                            <div class="contentsBox">
+                                <p>해설내용이 출력됩니다.</p>
+                                <p>여름에 자주 먹는 과일을 생각해보세요..</p>
+                            </div>
+                            <!-- EOD : contentsBox -->
+                        </div>
+                    </div>
+                    <!-- EOD : AnswerBox -->
+                </li>
+            </ul>
+            <!-- EOD : list_test -->
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <table class="table_hori mob_block">
+                    <caption>채점여부 , 강사총평 , 재응시 사유로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="18%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">채점여부</th>
+                        <td>
+                            <ul class="radioList">
+                                <li>
+                                    <input type="radio" id="score_confirm01" value="confirm" name="score_confirm" checked="checked">
+                                    <label for="score_confirm01">채점완료</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="score_confirm02" value="retry" name="score_confirm" >
+                                    <label for="score_confirm02">재응시 요청</label>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">강사총평</th>
+                        <td>
+                            <div class="inputBox Full">
+                                <textarea placeholder="강사총평을 작성합니다. 등록한 경우, 학습자 시험 결과지에 노출됩니다."></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="control">
+                        <th scope="row">재응시 사유</th>
+                        <td>
+                            <div class="inputBox Full">
+                                <textarea placeholder="재응시 사유을 작성합니다. 등록한 경우, 학습자 시험 결과지에 노출되고 재응시를 진행합니다."></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <script>
+
+                $("input[name=score_confirm]").change(function() {
+
+                    var radioValue = $(this).val();
+
+                    if (radioValue == "retry") {
+
+                        $(this).closest("table").find("tr.control").css('display','table-row');
+
+                    } else {
+
+                        $(this).closest("table").find("tr.control").css('display','none');
+
+                    }
+                });
+
+            </script>
+
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_blue" onclick="window.close(); return false;">저장</button>
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

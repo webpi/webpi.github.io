@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>강의실</title>
+  <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+  <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+  <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+  <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+  <link href="/css/classroom/template3/skin/skin_blueClass.css" rel="stylesheet">
+  <script src="/js/jquery-1.8.3.min.js"></script>
+  <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+  <script src="/js/classroom/template3/wbCommon.js"></script>
+  <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+  <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+  <script src="/js/classroom/template3/slick.js"></script>
+
+  <!-- ie9 이하 적용 -->
+  <!--[if lt IE 9]>
+  <script src="/js/html5.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+  <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+  <!-- headerInclude -->
+  <section class="headerInclude"></section>
+  <!-- EOD : headerInclude -->
+
+  <!-- contentLayout -->
+  <section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+      <!-- lnb -->
+      <section class="lnbInclude"></section>
+      <!-- EOD : lnb -->
+
+      <!-- contentArea -->
+      <div class="contentArea" id="contentArea">
+        <h2><span>팀프로젝트</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+        <!-- layout_boxs -->
+        <div class="layout_boxs">
+          <h3 class="mt0">팀 프로젝트 내용</h3>
+          <!-- table_hori -->
+          <table class="table_hori type02">
+            <caption>프로젝트 주제, 프로젝트 기간, 과제 제출기간, 팀원 평가기간, 내용, 첨부파일로 구성된 팀 프로젝트 내용 상세</caption>
+            <colgroup>
+              <col width="18%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="ac">프로젝트 주제</th>
+                <td>효율적인 빅데이터 분석 방법</td>
+              </tr>
+              <tr>
+                <th class="ac">프로젝트 기간</th>
+                <td>2020.06.01 00:00 ~ <span class="mobS"></span>2020.06.21 00:00</td>
+              </tr>
+              <tr>
+                <th class="ac">과제 제출기간</th>
+                <td>2020.06.01 00:00 ~ <span class="mobS"></span>2020.06.21 00:00</td>
+              </tr>
+              <tr>
+                <th class="ac">팀원 평가기간</th>
+                <td colspan="3">2020.06.01 00:00 ~ <span class="mobS"></span>2020.06.21 00:00</td>
+              </tr>
+              <tr>
+                <th class="ac">내용</th>
+                <td>빅데이터 분석 방법에는 R을 활용하는 방법, 파이썬을 활용하는 방법 등 여러가지 방법이 있습니다.<br/>각 팀에서는 이 중 가장 효율적이라고 생각되는 방법을 선정하여 그 이유와 사례를 조사해서 제출해주세요.</td>
+              </tr>
+              <tr>
+                <th class="ac">첨부파일</th>
+                <td>
+                  <div class="file_area type02 mt5">
+                    <ul>
+                      <li><a href="javascript:void(0);">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</a></li>
+                      <!-- <li><span class="no_data">첨부파일이 없습니다.</span></li> -->
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- EOD : table_hori -->
+
+          <div class="btn_rights">
+            <button type="button" class="btn_sr_white" onclick="history.back(); return false;">팀 목록</button>
+          </div>
+
+          <!-- tab_arrowBox -->
+          <div class="tab_arrowBox">
+            <!-- tab_arrow -->
+            <ul class="tab_arrow" role="tablist">
+              <li class="active"><a href="lecture_team_list.html"><span>게시판</span></a></li>
+              <li><a href="lecture_team_assign.html"><span>과제물</span></a></li>
+              <li><a href="lecture_team_eval.html"><span>팀원평가</span></a></li>
+              <li><a href="lecture_team_info.html"><span>팀 구성원</span></a></li>
+            </ul>
+            <!-- EOD : tab_arrow -->
+          </div>
+          <!-- EOD : tab_arrowBox -->
+
+          <div class="searchBox bt0">
+            <div class="selectBox width_m">
+              <label for="select_type01"><span>제목</span></label>
+              <select id="select_type01">
+                <option>제목</option>
+              </select>
+            </div>
+            <div class="search_area">
+              <div class="inputBox">
+                <div class="inputBoxIn">
+                  <input type="text">
+                </div>
+              </div>
+              <button type="button" class="btn_s_blue">검색</button>
+            </div>
+          </div>
+
+          <div class="team_txt_info">
+            <div class="team_txt_infoL">
+              <p class="txt_info mt0">팀원들과 자유롭게 의견 및 자료를 공유하세요.</p>
+            </div>
+          </div>
+
+          <table class="table_hori write">
+            <caption>분류 , 제목 , 내용 , 첨부파일로 , 비밀글 사용으로 이루어진 문의내용 작성 테이블</caption>
+            <colgroup>
+              <col width="14%">
+              <col width="*%">
+            </colgroup>
+            <tbody>
+
+            <tr>
+              <th><span class="asterisk">제목</span></th>
+              <td>
+                <div class="inputBox Full">
+                  <input type="text" placeholder="제목">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="asterisk">내용</span></th>
+              <td>
+                <div class="inputBox Full">
+                  <textarea placeholder="내용"></textarea>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><span>첨부파일</span></th>
+              <td>
+                <div class="fileBox">
+                  <button type="button" class="btn_s_blue">파일찾기</button>
+                  <ul class="fileList">
+                    <li>
+                      <div class="file">
+                        <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                        <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="file">
+                        <span class="txt">집합훈련 원격 대체 온라인 강의실2.zip [853kb]</span>
+                        <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+          <div class="btnBox">
+            <div class="rightBox">
+              <a href="javascript:void(0);" class="btn_m_blue">저장</a>
+              <a href="javascript:void(0);" class="btn_m_black">취소</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- EOD : layout_boxs -->
+
+      </div>
+      <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+  </section>
+  <!-- EOD : contentLayout -->
+
+
+</body>
+</html>

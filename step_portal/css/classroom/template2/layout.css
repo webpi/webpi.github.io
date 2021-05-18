@@ -1,0 +1,579 @@
+@charset "utf-8";
+
+#wrap {
+    position: absolute;
+    display: table;
+    left: 50%;
+    width: 1000px;
+    height: 100%;
+    margin-left: -500px;
+}
+#header { 
+    display: table-cell;
+    float: left;
+    *display: inline-block;
+    width: 190px;
+    height: 100%;
+    vertical-align: top;
+}
+#container {
+    display: table-cell;
+	width: 810px;
+	vertical-align: top;
+}
+#header > .btnArea { 
+	height: 34px;
+	 margin-bottom: 0;
+}
+#header > .btnArea button {
+    float: left;
+    display: inline-block;
+    width: 50%;
+    height: 34px;
+    padding-left: 20px;
+    border: solid 1px;
+    font-size: 0.92em;
+    font-weight: 700;
+}
+/* #header > .btnArea button:before {
+    content: " ";
+    display: inline-block;
+    width: 14px; 
+    margin-right: 6px;
+    vertical-align: -1px;
+}
+.btnMain:before {
+    height: 12px;
+}
+#header .btnClosed:before {
+    height: 11px;
+} */
+#header .logo {
+    height: 99px;
+    text-align: center;
+    border-right: 1px solid; 
+}
+#header .logo img {
+	margin-top: 35px;
+}
+#header .logo strong {
+    display: none;
+}
+.gnbWrap h2 {
+    height: 110px;
+    line-height: 110px;
+    padding-left: 92px;	
+    border-bottom: solid 1px;
+    font-size: 1.69em;
+    font-weight: 400;
+}
+.gnbWrap .gnb li {
+    padding: 0 20px 0 30px;
+    border-bottom: solid 1px;
+}
+.gnbWrap .gnb li a {
+    display: block;
+    height: 54px;
+    line-height: 54px;
+    font-weight: 400;
+    font-size: 1.15em;
+}
+.gnbWrap .gnb li.active a {
+	font-weight: 700;
+}
+#header .allMenu {
+    display: none;
+}
+#header .customer {
+    padding: 27px 0;
+    text-align: center;
+}
+#header .customer strong {
+    display: block;
+    font-size: 1.15em;
+}
+#header .customer strong.tel {
+    display: block;
+    margin: 12px 0 10px;
+    font-size: 1.84em;
+    font-weight: 700;
+}
+#header .customer a.tel {
+    display: none;
+    margin: 12px 0 10px;
+    font-size: 1.84em;
+    font-weight: 700;
+	cursor: default;
+}
+#header .customer > p {
+	line-height: 18px;
+}
+#header .customer .btnArea {
+    margin-top: 17px;
+    text-align: center;
+}
+#header .customer button {
+    width: 120px;
+    height: 30px;
+    border: solid 1px;
+}
+.userInfo {
+    height: 34px;
+    padding: 0 26px;
+    line-height: 34px;
+    border-bottom: solid 1px #e3e3e3;
+    background: #f8f8f8;
+}
+.userInfo p {
+	float: right;
+    display: inline-block;
+    height: 18px;
+    margin-top: 8px;
+    line-height: 18px;
+    padding-left: 16px;
+    font-family: 'dotum';
+    background: url('/images/classroom/template2/default/icon_userinfo.png') 0 2px no-repeat;
+}
+.userInfo p > strong,
+.userInfo p > span {
+    font-family: 'dotum';
+    height: 18px;
+    line-height: 18px; 
+    vertical-align: 0;
+}
+.userInfo p > strong {
+	letter-spacing: -1px;
+}
+
+.headingBox {
+	position: relative;
+	height: 100px;
+	padding-left: 25px;
+    border-bottom: solid 1px #e0e0e0;
+    background: #ffffff;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);    
+}
+.headingBox > div { 
+	display: table-cell;
+}
+.headingBox .title {
+	width: 480px;
+}
+.headingBox .title h3 {
+	display: table-cell;
+	height: 60px;
+    font-size: 1.54em;
+    line-height: 1.2em;
+}
+.headingBox .title .period {
+	position: absolute;
+	bottom: 10px;
+	line-height: 24px;
+    font-size: 1.15em; 
+    font-weight: 700;
+} 
+.headingBox .title .period span:first-child {
+    color: #ff4c4c;
+}
+.headingBox .title .period span > strong {
+    margin-right: 4px;
+    color: #2c2c2c;
+    font-weight: 700;
+}
+.headingBox .title .period span+span {
+    font-size: 0.86em;
+    font-weight: 400;
+}
+.headingBox > .box .btnLearning {
+	position: absolute;
+	right: 180px;
+	bottom: 14px;
+    width: 120px;
+    height: 66px;
+    padding-top: 25px;
+    font-size: 1.38em;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-bottom: solid 2px #d02924; 
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f46e61+1,ec4038+100 */
+	background: #f46e61; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f46e61 1%, #ec4038 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f46e61 1%,#ec4038 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f46e61 1%,#ec4038 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f46e61', endColorstr='#ec4038',GradientType=0 ); /* IE6-9 */    
+}
+.headingBox > .box .btnLearning > span { 
+	width: 100px;
+	height: 46px;
+	margin-top: 10px;
+	padding-top: 25px;
+	background: url('/images/classroom/template2/button/btn_learning.png') center 0px no-repeat;
+}
+.headingBox > .box .btnLearning:hover > span {
+	color: #ffffff;
+}
+.headingBox > .box .btnLearning:hover {
+	background: #ef5349;
+}
+#contents > .headingBox > .box .date { 
+	position: absolute;
+	right: 26px;
+	bottom: 15px;
+}
+#contents > .headingBox > .box .date strong {
+    display: inline-block;
+    width: 106px;
+    margin-left: 22px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#contents > .headingBox > .box .date p {
+	font-size: 0;
+}
+#contents > .headingBox > .box .date p > span {
+	position:relative;
+	float: left;
+	width: 34px;
+	height: 44px;
+	margin-left: 2px;
+	padding: 13px 0 10px;
+	text-align: center;
+	color: #ffffff;
+    font-size: 30px;
+	font-weight: 700;
+    z-index: 10;
+}
+#contents > .headingBox > .box .date p > span:first-child {
+	display: inline-block;
+	width: 45px;
+	margin-left: 0;
+    color: #2e3e4e;
+}
+#contents > .headingBox > .box .date p > span:before,
+#contents > .headingBox > .box .date p > span:after {
+	content: " ";
+	position:absolute;
+	left: 0;
+	display: block;
+	width: 34px;
+	height: 24px;
+}
+#contents > .headingBox > .box .date p > span:first-child:before,
+#contents > .headingBox > .box .date p > span:first-child:after {
+    display: none;
+}
+#contents > .headingBox > .box .date p > span:before {
+	top: 0;
+	z-index: -1;
+	background: #2e3e4e;
+}
+#contents > .headingBox > .box .date p > span:after {
+	bottom: 0;
+	z-index: -2;
+	background: #394857;
+}
+
+
+/*popup*/
+.popup {
+	position: relative;
+}
+.popup > h3 {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 1.54em;
+}
+.popup > .btnClose,
+.popup > .btnClose:hover {
+	position: absolute;
+	top: 17px;
+	right: 20px;
+	min-width: 16px;
+	height: 16px;
+	padding:0;
+    font-size: 0;
+}
+.popup .contentsWrap .contentsBox {
+	width: 100%;
+	padding: 20px;
+	min-height: 0;
+}
+ 
+
+@media screen and (max-width: 1023px) {
+	.dim {
+ 		position: fixed;
+		top: 0;
+		z-index: 30;
+		width: 100%;
+		height: 100%;
+		background: url('/images/common/usr/bg_dimmed.png') repeat;
+	}		
+	#wrap {
+		display: block;
+		left: 0%;
+		width: 100%;
+		margin-left: 0;
+		border-right: none;
+	}
+	#header {
+		display: block;
+	    width: 100%;
+	    height: 50px;
+	    border-bottom: solid 1px #e3e3e3;
+	    background: #ffffff;
+	}
+	#container {
+	    display: block;
+		width: 100%;
+/* 		height: calc(100% - 50px); */
+	}
+	#header > .btnArea { 
+		height: auto;
+		 margin-bottom: 0;
+	}
+	#header > .btnArea .btnMain {
+		display: none;
+	}
+	#header > .btnArea .btnClosed {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+		display: block;
+		width: 50px;
+		height: 50px;
+		border: none;	
+		text-indent: -999999px;
+		background: url('/images/classroom/template2/button/btn_mobile_logout.png') center center no-repeat;
+		background-size: 18px 18px;
+	}
+	#header .allMenu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 50px;
+		height: 50px;
+		font-size: 0;
+		background: url('/images/classroom/template2/button/btn_mobile_menu.png') center center no-repeat;
+		background-size: 18px 14px;
+	}
+	#header .logo {
+	    height: 50px;
+		line-height: 50px;
+	    padding-top: 0;
+	    border-right: none;
+	    border-bottom: 1px solid; 
+	}
+	#header .logo img {
+	    display: none;
+	}	
+	#header .logo strong {
+	    display: inline;
+    	font-size: 1.15em;
+    	font-weight: 700;
+	}
+	#header .gnbWrap {
+	    position: absolute;
+	    top: 0;
+	    left: -100%;
+	    bottom: 0;
+	    width: 70%;
+	    height: 100%;
+	    z-index: 9999;
+	    transition: all .5s;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+	}
+	#header .gnbWrap.active {
+	    position: absolute;
+	    left: 0;
+	    transition: all .4s;
+		-webkit-transition: all .4s;
+		-moz-transition: all .4s;
+	}
+	#header .customer {
+		width: 100%;
+		padding: 27px 4% 50px 4%;
+		background: #25323e;
+	}
+	.contentsWrap .userInfo {
+		display: none;
+	}
+	.contentsWrap .headingBox {
+		margin-top: 50px;
+		height: inherit;
+		padding: 2% 4% 0% 4%;
+		border-bottom: 1px solid;
+	}
+	.headingBox .title {
+		display: block;
+		width: calc(100% - 140px);
+		padding-right: 0px;
+	}
+	.headingBox .title h3 {
+/* 		display: block;
+		width: 100%; */
+		font-size: 1.23em; /* 16/13 */
+		line-height: 1.3em;
+	}
+	.headingBox > .box .btnLearning {
+		right: 20px;
+		bottom: 15px;
+		font-size: 1.15em;
+	}
+	.contentsWrap .headingBox .box .share {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: auto;
+	}
+	.contentsWrap .headingBox .box .share button {
+		margin-right: 0px;
+	}
+	.contentsWrap .headingBox .box .share .btnRecommend {
+		display: none;
+	}
+	.contentsWrap .headingBox .box .date {
+		display: none;
+	}
+	#header .customer strong.tel {
+	    display: none;
+	}
+	#header .customer a.tel {
+	    display: block;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+}
+@media screen and (max-width: 767px) {
+
+}
+@media screen and (max-width: 640px) {
+	#container {
+	    display: table;
+	    width: 100%;
+	    height: 100%;
+	}
+	.contentsWrap .headingBox {
+		margin-top: 0px;
+	}	
+	.headingBox .title {
+		width: 100%;
+	}
+	.headingBox .title h3 {
+		padding-top: 10px;
+		height: auto;
+	}	
+	.headingBox .title .period {
+		position: relative;
+		bottom: 0px;
+		line-height: 1.38em;
+	    font-size: 1em; 
+		margin-top: 10px;
+	}
+	.headingBox .box {
+		position: relative;
+		display: block;
+	}
+	.headingBox .box .btnArea {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.headingBox > .box .btnLearning {
+		position: inherit;
+		width: 100%;
+		height: 40px;
+		padding-top: 0;
+	}
+	.headingBox > .box .btnLearning > span {
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		margin-left: -60px;
+		width: 120px;
+		height: 40px;
+		line-height: 40px;
+		padding-top: 0px;
+		padding-left: 20px;
+		background: url('/images/classroom/template2/button/btn_learning.png') 0px 9px no-repeat;
+	}	
+}
+@media screen and (max-width: 414px) {
+	.headingBox .title .period {
+	}
+	.headingBox .title .period span strong {
+		display: block;
+	}
+}
+
+/* 레이어 팝업 */
+.popupLayer {
+    position: absolute;
+    display: table;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin-left: -300px;
+}
+.popup.modal {
+    display: table-cell;
+    width: 600px;
+    vertical-align: middle;
+	z-index: 999;
+}
+.popup.modal > .btnClose {
+	position: relative;
+	top: inherit;
+	right: inherit;
+	float: right;
+	margin-top: -40px;
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 1023px) {
+	.popupLayer {
+		margin-left: -50%;
+		padding-left: 4%;
+	}
+	.popup.modal {	
+		width: 96%;
+	}
+	.popup.modal > h3 { 
+		font-size: 1.38em;
+	}
+	.popup.modal p.info {
+		line-height: 18px;
+	}
+	.popup.modal h5 {
+		margin: 20px 0 5px;
+	}
+	.popup.modal .scrollBox {
+		overflow-y: auto;
+		height: 85px;
+		padding: 20px 10px;
+	}
+}
+
+.dim2 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('/images/common/usr/bg_dimmed.png') repeat;	
+	z-index: 99;
+}

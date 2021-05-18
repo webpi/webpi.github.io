@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/skin/skin_green.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        수강 후기
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <!-- star_review -->
+            <div class="star_review">
+
+                <p class="txt_default mt0">과정에 대한 별점을 입력해주세요.</p>
+
+                <!-- starList -->
+                <div class="starList">
+                    <input type="radio" class="rating1" id="rate1" name="rating" value="1" />
+                    <label for="rate1"><span class="blind">1점</span></label>
+                    <input type="radio" class="rating2" id="rate2" name="rating" value="2" />
+                    <label for="rate2"><span class="blind">2점</span></label>
+                    <input type="radio" class="rating3" id="rate3" name="rating" value="3" />
+                    <label for="rate3"><span class="blind">3점</span></label>
+                    <input type="radio" class="rating4" id="rate4" name="rating" value="4" />
+                    <label for="rate4"><span class="blind">4점</span></label>
+                    <input type="radio" class="rating5" id="rate5" name="rating" value="5" />
+                    <label for="rate5"><span class="blind">5점</span></label>
+                </div>
+                <!-- EOD : starList -->
+
+                <p class="review_txt"></p>
+
+            </div>
+            <!-- EOD : star_review -->
+
+            <script>
+
+                $("input[name=rating]").change(function() {
+
+                    var radioV = $(this).val();
+                    var inputArea = $(this).closest(".starList").siblings(".review_txt");
+
+                    if(radioV == "1"){
+
+                        inputArea.text("그저그래요")
+
+                    }else if(radioV == "2"){
+
+                        inputArea.text("조금 아쉬워요")
+
+                    }else if(radioV == "3"){
+
+                        inputArea.text("보통이에요")
+
+                    }else if(radioV == "4"){
+
+                        inputArea.text("아주 좋아요")
+
+                    }else if(radioV == "5"){
+
+                        inputArea.text("완전 최고에요!")
+
+                    }
+
+                });
+
+            </script>
+
+            <div class="inputBox Full">
+                <textarea placeholder="수강후기를 작성해주세요"></textarea>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_blue">등록</button>
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">취소</button>
+
+        <!--        <button type="button" class="btn_m_blue">수정</button>-->
+        <!--        <button type="button" class="btn_m_blue">삭제</button>-->
+        <!--        <button type="button" class="btn_m_black" onclick="window.close(); return false;">취소</button>-->
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+</body>
+</html>

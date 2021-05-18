@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/skin/skin_blue.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+
+
+<section class="windowPop">
+    <div class="windowPopH">
+        이메일 발송
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template4/resp/default/icon/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+            <!-- table_hori -->
+            <table class="table_hori write mt0">
+                <caption>발송 대상자 , 제목 , 내용 , 첨부파일로 이루어진 이메일 발송</caption>
+                <colgroup>
+                    <col width="14%">
+                    <col width="*%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><div class="perBox">받는사람 <span class="count_num">0</span></div></th>
+                        <td>
+                            <ul class="list_person">
+                                <li>
+                                    <div class="person">
+                                        <span class="txt">홍길동</span>
+                                        <a href="javascript:void(0)" class="per_del" title="받는사람 제거"><i class="icon_close"></i></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="person">
+                                        <span class="txt">홍길동</span>
+                                        <a href="javascript:void(0)" class="per_del" title="받는사람 제거"><i class="icon_close"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="mobB">
+                        <th class="mobH">제목</th>
+                        <td colspan="2">
+                            <div class="inputBox Full">
+                                <input type="text" placeholder="제목">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="mobB">
+                        <th class="mobH">내용</th>
+                        <td colspan="2">
+                            <div class="inputBox Full">
+                                <textarea placeholder="내용"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>첨부파일</th>
+                        <td>
+                            <div class="fileBox">
+                                <button type="button" class="btn_s_blue">파일찾기</button>
+                                <ul class="fileList">
+                                    <li>
+                                        <div class="file">
+                                            <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                                            <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="file">
+                                            <span class="txt">집합훈련 원격 대체 온라인 강의실2.zip [853kb]</span>
+                                            <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- EOD : table_hori -->
+
+            <script>
+
+                $(document).ready(function(){
+
+
+                    var count = $(".table_hori .list_person li").length;
+
+                    $(".table_hori .count_num").text(count);
+
+
+                });
+
+                $(document).on('click', ".list_person .per_del", function (e) {
+
+                    e.preventDefault();
+
+                    var stat = $(this).closest("table").find(".count_num").text();
+                    var num = parseInt(stat,10);
+
+                    num--;
+
+                    $(this).closest("table").find(".count_num").text(num);
+                    $(this).closest("li").remove();
+
+                });
+
+
+            </script>
+
+        </div>
+    </div>
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_white" onclick="window.close(); return false;">확인</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

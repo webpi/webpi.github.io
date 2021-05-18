@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        화상채팅방 개설
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <h3 class="mt10">화상채팅방 정보</h3>
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <table class="table_hori mt0">
+                    <caption>제목,일정,시작 전 입장가능 시간,화상채팅방 코드 , 개설자 , 개설일 , 최종 수정일로 이루어져 있는 화상채팅방 등록 상세</caption>
+                    <colgroup>
+                        <col width="220px">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><span class="asterisk">제목</span></th>
+                            <td>
+                                <div class="inputBox Full">
+                                    <input type="text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="asterisk">일정</span></th>
+                            <td>
+                                <div class="inputBox size_s">
+                                    <input type="text" class="datepicker">
+                                </div>
+
+                                <div class="selectBox auto">
+                                    <label for="select_time"><span>0</span></label>
+                                    <select id="select_time" class="select_time"></select>
+                                </div>
+
+                                <span class="vertiM">시</span>
+
+                                <div class="selectBox auto">
+                                    <label for="select_min"><span>0</span></label>
+                                    <select id="select_min" class="select_min"></select>
+                                </div>
+
+                                <span class="vertiM">분</span>
+
+                                <span class="vertiM">~</span>
+
+                                <div class="selectBox auto">
+                                    <label for="select_time"><span>0</span></label>
+                                    <select id="select_time02" class="select_time"></select>
+                                </div>
+
+                                <span class="vertiM">시</span>
+
+                                <div class="selectBox auto">
+                                    <label for="select_min"><span>0</span></label>
+                                    <select id="select_min02" class="select_min"></select>
+                                </div>
+
+                                <span class="vertiM">분</span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="asterisk">시작 전 입장가능 시간</span></th>
+                            <td>
+                                <div class="inputBox size_xs">
+                                    <input type="text">
+                                </div>
+
+                                <span class="vertiM">분</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>화상채팅방 코드</th>
+                            <td>
+                                <div class="inputBox Full">
+                                    <input type="text" readonly="readonly">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>개설자</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>개설일</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>최종 수정일</th>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <script>
+
+                $(document).ready(function(){
+
+
+                    for(time  = 0; time < 25; time++) {
+
+                        jQuery(".select_time").append('<option>' + time + '</option>');
+                    }
+
+                    for(min = 0; min < 60; min+=10) {
+
+                        jQuery(".select_min").append('<option>' + min + '</option>');
+
+                    }
+
+                });
+
+            </script>
+
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_blue">저장</button>
+        <button type="button" class="btn_m_black" onclick="location.href='popup_video_chat.html'">취소</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

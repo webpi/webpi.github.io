@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <div class="content_wrap">
+
+            <h3><span>과정Q&A 관리</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+            <!-- searchWrap -->
+            <div class="searchWrap">
+                <ul>
+                    <li>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">과정명</span></span>
+                            <div class="selectBox">
+                                <label for="select_process"><span>과정명</span></label>
+                                <select id="select_process">
+                                    <option>한국교육기술대학교 온라인강의 과정</option>
+                                    <option>한국교육기술대학교 온라인강의 과정</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">검색</span></span>
+                            <div class="selectBox">
+                                <label for="select_type"><span>분류 선택</span></label>
+                                <select id="select_type">
+                                    <option>2020</option>
+                                    <option>2019</option>
+                                </select>
+                            </div>
+                            <div class="selectBox">
+                                <label for="select_reply_status"><span>답변 상태</span></label>
+                                <select id="select_reply_status">
+                                    <option>답변완료</option>
+                                    <option>답변대기</option>
+                                </select>
+                            </div>
+                            <div class="selectBox">
+                                <label for="select_name"><span>제목</span></label>
+                                <select id="select_name">
+                                    <option>제목1</option>
+                                    <option>제목2</option>
+                                </select>
+                            </div>
+                            <div class="search_area">
+                                <div class="search_areaIn">
+                                    <input type="text">
+                                </div>
+                                <button type="button" class="btn_s_blue">검색</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- EOD : searchWrap -->
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <table class="table_normal">
+                    <caption>No,분류,과정명,제목,첨부파일,답변상태,등록자,등록일로 이루어진 과정Q&A 관리 게시판</caption>
+                    <colgroup>
+                        <col width="7%">
+                        <col class="mobH" width="8%">
+                        <col class="mobH" width="12%">
+                        <col width="*">
+                        <col class="mobH" width="9%">
+                        <col class="mobH" width="9%">
+                        <col class="mobH" width="9%">
+                        <col class="mobH" width="12%">
+                        <col class="mobH" width="10%">
+                    </colgroup>
+                    <thead>
+                        <tr class="mobH">
+                            <th scope="col">NO</th>
+                            <th scope="col">분류</th>
+                            <th scope="col">과정명</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">첨부파일</th>
+                            <th scope="col">답변상태</th>
+                            <th scope="col">등록자</th>
+                            <th scope="col">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td class="mobH">시험</td>
+                            <td class="al mobH">한국교육기술대학교 온라인강의 과정</td>
+                            <td class="al">
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox Top">
+                                   <li>시험</li>
+                                   <li>한국교육기술대학교 온라인강의 과정</li>
+                                </ul>
+                                <!-- EOD -->
+                                <div class="linkBox">
+                                    <a href="mypage_qa_view.html"><span class="txt">팀프로젝트에 올려주신 첨부파일 다운로드가 안되요.</span></a>
+                                    <i class="icon_lock"><span class="blind">비밀글</span></i>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>답변대기</li>
+                                    <li>김유신</li>
+                                    <li>2020.02.04</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                </div>
+                            </td>
+                            <td class="mobH">답변대기</td>
+                            <td class="mobH">김유신</td>
+                            <td class="mobH">2020.02.04</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="mobH">프로젝트</td>
+                            <td class="al mobH">한국교육기술대학교 온라인강의 과정</td>
+                            <td class="al">
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox Top">
+                                    <li>프로젝트</li>
+                                    <li>한국교육기술대학교 온라인강의 과정</li>
+                                </ul>
+                                <!-- EOD -->
+                                <div class="linkBox">
+                                    <a href="mypage_qa_view.html"><span class="txt">팀프로젝트에 올려주신 첨부파일 다운로드가 안되요.</span></a>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>답변완료</li>
+                                    <li>율곡이이</li>
+                                    <li>2020.02.04</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                </div>
+                            </td>
+                            <td class="mobH">답변완료</td>
+                            <td class="mobH">율곡이이</td>
+                            <td class="mobH">2020.02.04</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="mobH">진도</td>
+                            <td class="al mobH">한국교육기술대학교 온라인강의 과정</td>
+                            <td class="al">
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox Top">
+                                    <li>진도</li>
+                                    <li>한국교육기술대학교 온라인강의 과정</li>
+                                </ul>
+                                <!-- EOD -->
+                                <div class="linkBox">
+                                    <a href="mypage_qa_view.html"><span class="txt">팀프로젝트에 올려주신 첨부파일 다운로드가 안되요.</span></a>
+                                    <i class="icon_lock"><span class="blind">비밀글</span></i>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>답변대기</li>
+                                    <li>홍길동</li>
+                                    <li>2020.02.04</li>
+                                    <li>
+                                        <div class="iconBox">
+                                            <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                </div>
+                            </td>
+                            <td class="mobH">답변대기</td>
+                            <td class="mobH">홍길동</td>
+                            <td class="mobH">2020.02.04</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- pagination -->
+            <div class="pagination">
+                <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                <a class="active" href="javascript:void(0);">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+                <a href="javascript:void(0);">5</a>
+                <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+            </div>
+            <!-- EOD : pagination -->
+
+        </div>
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>
+

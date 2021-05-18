@@ -1,0 +1,90 @@
+<nav class="nav_lnb">
+    <strong class="tit">강의실<button title="전체메뉴 닫기"></button></strong>
+
+    <div class="nav_lnb_wrap">
+        <div class="nav_lnbBox">
+            <ul>
+                <li><a id="nav" href="index.html">강의실 홈</a></li>
+                <li><a href="lecture_plan.html">강의계획서</a></li>
+                <li><a href="lecture_attend.html">진도</a></li>
+                <li><a href="lecture_exam.html">시험</a></li>
+                <li><a href="lecture_assign.html">과제</a></li>
+                <li><a href="lecture_team.html">팀 프로젝트</a></li>
+                <li><a href="lecture_seminar.html">라이브세미나</a></li>
+                <li><a href="lecture_debate.html">토론</a></li>
+                <li><a href="lecture_survey.html">설문</a></li>
+                <li><a href="lecture_record.html">성적확인</a></li>
+                <li><a href="lecture_notice.html">공지사항/자료실</a></li>
+                <li><a href="lecture_question.html">학습문의</a></li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <span class="txt">고객센터</span>
+            <a class="number" href="tel:041-580-4500">041.580.4500</a>
+            <span class="email">e-koreatech@step.or.kr<br/>평일 09:00 ~ 18:00<br/>점심시간 12:00 ~ 13:00</span>
+            <button class="btn_service">원격지원서비스</button>
+        </div>
+    </div>
+</nav>
+<script>
+  $(function(){
+    menuS();
+  });
+
+  $(window).load(function(){
+    titleS();
+  });
+  function menuS(){
+    $(".topInfo .mobMenu button").click(function(){
+      $("html").addClass("active");
+    });
+
+    $(".nav_lnb .tit button, .topLayoutBg").click(function(){
+      $("html").removeClass("active");
+    });
+  }
+
+  function titleS() {
+    var urlName = location.href;
+
+    if(urlName.indexOf("index") > -1) {
+      document.title = "강의실";
+      $(".nav_lnbBox > ul > li").eq(0).addClass("active");
+    }else if(urlName.indexOf("lecture_plan") > -1){
+      document.title = "강의실 | 강의계획서";
+      $(".nav_lnbBox > ul > li").eq(1).addClass("active");
+    }else if(urlName.indexOf("lecture_attend") > -1){
+      document.title = "강의실 | 진도";
+      $(".nav_lnbBox > ul > li").eq(2).addClass("active");
+    }else if(urlName.indexOf("lecture_exam") > -1){
+      document.title = "강의실 | 시험";
+      $(".nav_lnbBox > ul > li").eq(3).addClass("active");
+    }else if(urlName.indexOf("lecture_assign") > -1){
+      document.title = "강의실 | 과제";
+      $(".nav_lnbBox > ul > li").eq(4).addClass("active");
+    }else if(urlName.indexOf("lecture_team") > -1){
+      $(".nav_lnbBox > ul > li").eq(5).addClass("active");
+      document.title = "강의실 | 팀프로젝트";
+    }else if(urlName.indexOf("lecture_seminar") > -1){
+      $(".nav_lnbBox > ul > li").eq(6).addClass("active");
+      document.title = "강의실 | 라이브세미나";
+    }else if(urlName.indexOf("lecture_debate") > -1) {
+      document.title = "강의실 | 토론";
+      $(".nav_lnbBox > ul > li").eq(7).addClass("active");
+    }else if(urlName.indexOf("lecture_survey") > -1){
+      $(".nav_lnbBox > ul > li").eq(8).addClass("active");
+      document.title = "강의실 | 설문";
+    }else if(urlName.indexOf("lecture_record") > -1){
+      $(".nav_lnbBox > ul > li").eq(9).addClass("active");
+      document.title = "강의실 | 성적확인";
+    }else if(urlName.indexOf("lecture_notice") > -1){
+      $(".nav_lnbBox > ul > li").eq(10).addClass("active");
+      document.title = "강의실 | 공지사항/자료실";
+    }else if(urlName.indexOf("lecture_question") > -1){
+      $(".nav_lnbBox > ul > li").eq(11).addClass("active");
+      document.title = "강의실 | 학습문의";
+    }
+  }
+
+</script>

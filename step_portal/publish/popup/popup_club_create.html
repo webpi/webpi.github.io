@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        인클럽 개설하기
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <table class="table_hori mob_block">
+                <caption>카테고리 , 인클럽명 , 인클럽 사진 , 인클럽 소개 , 인클럽 태그로 이루어진 인클럽 개설하기 상세</caption>
+                <colgroup>
+                    <col width="14%">
+                    <col width="*">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="asterisk">카테고리</span></th>
+                        <td>
+                            <div class="selectBox">
+                                <label for="select_category"><span>분류</span></label>
+                                <select id="select_category">
+                                    <option>스텝위키 멘토's</option>
+                                    <option>일반 직무지식</option>
+                                    <option>4차 산업혁명</option>
+                                    <option>정책/취업·일자리</option>
+                                    <option>직업훈련</option>
+                                    <option>JOB담/기타</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="asterisk">인클럽명</span></th>
+                        <td>
+                            <div class="inputBox Full">
+                                <input type="text">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="asterisk">인클럽 사진</span></th>
+                        <td>
+                            <div class="thumb_FileBox">
+                                <div class="thumb_area">
+                                    <div class="thumb">
+                                        <img src="/images/template11/resp/default/usr/no_img_thumBox.png" class="cropImg">
+                                    </div>
+                                </div>
+                                <div class="btn_area">
+                                    <button type="button" class="btn_s_gray">파일첨부</button>
+                                </div>
+                            </div>
+                            <p class="txt_asterisk"><span class="txt_gray">인클럽 사진 권장크기는 가로240 x 세로160 픽셀입니다.</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span class="asterisk">인클럽 소개</span></th>
+                        <td>
+                            <div class="inputBox Full">
+                                <textarea></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>인클럽 태그</th>
+                        <td>
+                            <div class="inputBox Full">
+                                <input type="text">
+                            </div>
+                            <p class="txt_asterisk"><span class="txt_gray">태그는 콤마(,)로 구분하여 등록해주세요.</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="checkBox mt30">
+                <input type="checkbox" id="chk_agree">
+                <label for="chk_agree"><strong class="txt_underline">STEP 개인정보보호정책</strong>에 동의합니다.</label>
+            </div>
+
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_blue">인클럽 개설 요청</button>
+        <button type="button" class="btn_m_white" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>

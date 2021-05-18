@@ -1,0 +1,515 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <div class="content_wrap">
+
+            <h3><span>채점관리</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+            <!-- tab -->
+            <ul class="tab">
+                <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>중간평가</span></a></li>
+                <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>최종평가</span></a></li>
+                <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab03', this);"><span>과제</span></a></li>
+            </ul>
+            <!-- EOD : tab -->
+
+            <!-- 중간평가 -->
+            <div class="tabBox active" id="tab01">
+                <!-- searchWrap -->
+                <div class="searchWrap">
+                    <ul>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">과정명</span></span>
+                                <div class="selectBox">
+                                    <label for="select_process01"><span>과정명</span></label>
+                                    <select id="select_process01">
+                                        <option>한국교육기술대학교 온라인강의 과정</option>
+                                        <option>한국교육기술대학교 온라인강의 과정</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">검색</span></span>
+                                <div class="selectBox">
+                                    <label for="select_search01_1"><span>응시여부</span></label>
+                                    <select id="select_search01_1">
+                                        <option>미응시</option>
+                                        <option>재응시</option>
+                                        <option>응시완료</option>
+                                    </select>
+                                </div>
+                                <div class="selectBox">
+                                    <label for="select_search02_2"><span>채점여부</span></label>
+                                    <select id="select_search02_2">
+                                        <option>미채점</option>
+                                        <option>반려</option>
+                                        <option>채점완료</option>
+                                    </select>
+                                </div>
+                                <div class="search_area">
+                                    <div class="search_areaIn">
+                                        <input type="text" placeholder="이름/아이디 검색">
+                                    </div>
+                                    <button type="button" class="btn_s_blue">검색</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- EOD : searchWrap -->
+
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>건
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_veti -->
+                    <table class="table_veti mt0">
+                        <caption>No,이름/아이디,응시상태 , 채점상태 , 점수 , 채점하기로 이루어진 중간평가 상세</caption>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="*">
+                            <col class="mobH" width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col class="mobH" width="8%">
+                            <col class="mobH" width="8%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th rowspan="2" scope="col">NO</th>
+                            <th rowspan="2" scope="col">이름 / 아이디</span></th>
+                            <th rowspan="2" scope="col" class="mobS">응시여부</th>
+                            <th rowspan="2" scope="col" class="mobS">채점여부</th>
+                            <th scope="colgroup" colspan="2" class="mobH">응시상태</th>
+                            <th scope="colgroup" colspan="2" class="mobH">채점상태</th>
+                            <th rowspan="2" scope="col">점수</th>
+                            <th rowspan="2" scope="col">채점하기</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="mobH">응시여부</th>
+                            <th scope="col" class="mobH">응시일</th>
+                            <th scope="col" class="mobH">채점여부</th>
+                            <th scope="col" class="mobH">채점일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ac">3</td>
+                                <td class="al">홍길동 <p class="txt_default mt0">hong@step.co.kr</p></td>
+                                <td class="ac"><span class="txt_point">응시완료</span><span class="txt_default mobS">2020-05-15</span></td>
+                                <td class="ac mobH">2020-05-15</td>
+                                <td class="ac"><span class="txt_point">채점완료</span><span class="txt_default mobS">2020-06-10</span></td>
+                                <td class="ac mobH">2020-06-10</td>
+                                <td class="ac"><strong class="txt_point">30</strong>점</td>
+                                <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                            </tr>
+                            <tr>
+                                <td class="ac">2</td>
+                                <td class="al">김유신 <p class="txt_default mt0">KYS@step.co.kr</p></td>
+                                <td class="ac"><span class="txt_point">응시완료</span><span class="txt_default mobS">2020-04-22</span></td>
+                                <td class="ac mobH">2020-04-22</td>
+                                <td class="ac"><span class="txt_point">채점완료</span><span class="txt_default mobS">2020-06-02</span></td>
+                                <td class="ac mobH">2020-06-02</td>
+                                <td class="ac"><strong class="txt_point">50</strong>점</td>
+                                <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                            </tr>
+                            <tr>
+                                <td class="ac">1</td>
+                                <td class="al">율곡이이 <p class="txt_default mt0">YU@step.co.kr</p></td>
+                                <td class="ac">미응시 <span class="txt_default mobS">2020-04-25</span></td>
+                                <td class="ac mobH">2020-04-25</td>
+                                <td class="ac">미채점 <span class="txt_default mobS">2020-06-20</span></td>
+                                <td class="ac mobH">2020-06-20</td>
+                                <td class="ac"><strong class="txt_point">70</strong>점</td>
+                                <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+            </div>
+            <!-- EOD : 중간평가 -->
+
+            <!-- 최종평가 -->
+            <div class="tabBox" id="tab02">
+                <!-- searchWrap -->
+                <div class="searchWrap">
+                    <ul>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">과정명</span></span>
+                                <div class="selectBox">
+                                    <label for="select_process02"><span>과정명</span></label>
+                                    <select id="select_process02">
+                                        <option>한국교육기술대학교 온라인강의 과정</option>
+                                        <option>한국교육기술대학교 온라인강의 과정</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">검색</span></span>
+                                <div class="selectBox">
+                                    <label for="select_search02_3"><span>응시여부</span></label>
+                                    <select id="select_search02_3">
+                                        <option>미응시</option>
+                                        <option>재응시</option>
+                                        <option>응시완료</option>
+                                    </select>
+                                </div>
+                                <div class="selectBox">
+                                    <label for="select_search02_4"><span>채점여부</span></label>
+                                    <select id="select_search02_4">
+                                        <option>미채점</option>
+                                        <option>반려</option>
+                                        <option>채점완료</option>
+                                    </select>
+                                </div>
+                                <div class="search_area">
+                                    <div class="search_areaIn">
+                                        <input type="text" placeholder="이름/아이디 검색">
+                                    </div>
+                                    <button type="button" class="btn_s_blue">검색</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- EOD : searchWrap -->
+
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>건
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_veti -->
+                    <table class="table_veti mt0">
+                        <caption>No,이름/아이디,응시상태 , 채점상태 , 점수 , 채점하기로 이루어진 중간평가 상세</caption>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="*">
+                            <col class="mobH" width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col class="mobH" width="8%">
+                            <col class="mobH" width="8%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th rowspan="2" scope="col">NO</th>
+                            <th rowspan="2" scope="col">이름 / 아이디</span></th>
+                            <th rowspan="2" scope="col" class="mobS">응시여부</th>
+                            <th rowspan="2" scope="col" class="mobS">채점여부</th>
+                            <th scope="colgroup" colspan="2" class="mobH">응시상태</th>
+                            <th scope="colgroup" colspan="2" class="mobH">채점상태</th>
+                            <th rowspan="2" scope="col">점수</th>
+                            <th rowspan="2" scope="col">채점하기</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="mobH">응시여부</th>
+                            <th scope="col" class="mobH">응시일</th>
+                            <th scope="col" class="mobH">채점여부</th>
+                            <th scope="col" class="mobH">채점일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="ac">3</td>
+                            <td class="al">홍길동 <p class="txt_default mt0">hong@step.co.kr</p></td>
+                            <td class="ac"><span class="txt_point">응시완료</span><span class="txt_default mobS">2020-05-15</span></td>
+                            <td class="ac mobH">2020-05-15</td>
+                            <td class="ac"><span class="txt_point">채점완료</span><span class="txt_default mobS">2020-06-10</span></td>
+                            <td class="ac mobH">2020-06-10</td>
+                            <td class="ac"><strong class="txt_point">30</strong>점</td>
+                            <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                        </tr>
+                        <tr>
+                            <td class="ac">2</td>
+                            <td class="al">김유신 <p class="txt_default mt0">KYS@step.co.kr</p></td>
+                            <td class="ac"><span class="txt_point">응시완료</span><span class="txt_default mobS">2020-04-22</span></td>
+                            <td class="ac mobH">2020-04-22</td>
+                            <td class="ac"><span class="txt_point">채점완료</span><span class="txt_default mobS">2020-06-02</span></td>
+                            <td class="ac mobH">2020-06-02</td>
+                            <td class="ac"><strong class="txt_point">50</strong>점</td>
+                            <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                        </tr>
+                        <tr>
+                            <td class="ac">1</td>
+                            <td class="al">율곡이이 <p class="txt_default mt0">YU@step.co.kr</p></td>
+                            <td class="ac">미응시 <span class="txt_default mobS">2020-04-25</span></td>
+                            <td class="ac mobH">2020-04-25</td>
+                            <td class="ac">미채점 <span class="txt_default mobS">2020-06-20</span></td>
+                            <td class="ac mobH">2020-06-20</td>
+                            <td class="ac"><strong class="txt_point">70</strong>점</td>
+                            <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+            </div>
+            <!-- EOD : 최종평가 -->
+
+            <!-- 과제 -->
+            <div class="tabBox" id="tab03">
+                <!-- searchWrap -->
+                <div class="searchWrap">
+                    <ul>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">과정명</span></span>
+                                <div class="selectBox">
+                                    <label for="select_process03"><span>과정명</span></label>
+                                    <select id="select_process03">
+                                        <option>한국교육기술대학교 온라인강의 과정</option>
+                                        <option>한국교육기술대학교 온라인강의 과정</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">검색</span></span>
+                                <div class="selectBox">
+                                    <label for="select_search03_1"><span>제출여부</span></label>
+                                    <select id="select_search03_1">
+                                        <option>미제출</option>
+                                        <option>재제출</option>
+                                        <option>제출완료</option>
+                                    </select>
+                                </div>
+                                <div class="selectBox">
+                                    <label for="select_search03_2"><span>첨삭여부</span></label>
+                                    <select id="select_search03_2">
+                                        <option>미첨삭</option>
+                                        <option>반려</option>
+                                        <option>첨삭완료</option>
+                                    </select>
+                                </div>
+                                <div class="search_area">
+                                    <div class="search_areaIn">
+                                        <input type="text" placeholder="이름/아이디 검색">
+                                    </div>
+                                    <button type="button" class="btn_s_blue">검색</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- EOD : searchWrap -->
+
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>건
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <colgroup>
+                    <col width="7%">
+                    <col width="*">
+                    <col class="mobH" width="10%">
+                    <col class="mobH" width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col class="mobH" width="10%">
+                    <col class="mobH" width="8%">
+                    <col width="10%">
+                </colgroup>
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_veti -->
+                    <table class="table_veti mt0">
+                        <caption>No , 과제명 , 이름/아이디 , 제출상태 , 첨삭상태 , 점수 , 첨삭하기로 이루어진 과제 상세</caption>
+                        <colgroup>
+                            <col width="8%">
+                            <col width="*">
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col class="mobH" width="10%">
+                            <col class="mobH" width="10%">
+                            <col class="mobH" width="8%">
+                            <col class="mobH" width="15%">
+                            <col class="mobH" width="8%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th rowspan="2" scope="col">NO</th>
+                            <th rowspan="2" scope="col" class="mobH">과제명</th>
+                            <th rowspan="2" scope="col">이름 / 아이디</th>
+                            <th rowspan="2" scope="col" class="mobS">제출여부</th>
+                            <th rowspan="2" scope="col" class="mobS">첨삭여부</th>
+                            <th scope="colgroup" colspan="2" class="mobH">제출상태</th>
+                            <th scope="colgroup" colspan="2" class="mobH">첨삭상태</th>
+                            <th rowspan="2" scope="col">점수</th>
+                            <th rowspan="2" scope="col">첨삭하기</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="mobH">제출여부</th>
+                            <th scope="col" class="mobH">제출일</th>
+                            <th scope="col" class="mobH">첨삭여부</th>
+                            <th scope="col" class="mobH">첨삭일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="ac">3</td>
+                            <td class="ac mobH">과제물A</td>
+                            <td class="al">홍길동 <p class="txt_default mt0">hong@step.co.kr</p></td>
+                            <td class="ac"><span class="txt_point">제출완료</span><span class="txt_default mobS">2020-05-15</span></td>
+                            <td class="ac mobH">2020-05-15</td>
+                            <td class="ac"><span class="txt_point">첨삭완료</span><span class="txt_default mobS">2020-06-10</span></td>
+                            <td class="ac mobH">2020-06-10</td>
+                            <td class="ac"><strong class="txt_point">30</strong>점</td>
+                            <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                        </tr>
+                        <tr>
+                            <td class="ac">2</td>
+                            <td class="ac mobH">과제물B</td>
+                            <td class="al">김유신 <p class="txt_default mt0">KYS@step.co.kr</p></td>
+                            <td class="ac"><span class="txt_point">제출완료</span><span class="txt_default mobS">2020-04-22</span></td>
+                            <td class="ac mobH">2020-04-22</td>
+                            <td class="ac"><span class="txt_point">첨삭완료</span><span class="txt_default mobS">2020-06-02</span></td>
+                            <td class="ac mobH">2020-06-02</td>
+                            <td class="ac"><strong class="txt_point">50</strong>점</td>
+                            <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                        </tr>
+                        <tr>
+                            <td class="ac">1</td>
+                            <td class="ac mobH">과제물C</td>
+                            <td class="al">율곡이이 <p class="txt_default mt0">YU@step.co.kr</p></td>
+                            <td class="ac">미응시 <span class="txt_default mobS">2020-04-25</span></td>
+                            <td class="ac mobH">2020-04-25</td>
+                            <td class="ac">미채점 <span class="txt_default mobS">2020-06-20</span></td>
+                            <td class="ac mobH">2020-06-20</td>
+                            <td class="ac"><strong class="txt_point">70</strong>점</td>
+                            <td class="ac"><button type="button" class="btn_s_blue">바로가기</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+            </div>
+            <!-- EOD : 과제 -->
+        </div>
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>
+

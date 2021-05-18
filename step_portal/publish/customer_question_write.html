@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <!-- content_wrap -->
+        <div class="content_wrap">
+
+            <h4>문의내용</h4>
+
+            <table class="table_hori write">
+                <caption>상담분류 , 제목 , 내용 , 첨부파일로 이루어진 글쓰기 테이블</caption>
+                <colgroup>
+                    <col width="14%">
+                    <col width="*%">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th><span class="asterisk">상담분류</span></th>
+                    <td>
+                        <div class="selectBox">
+                            <label for="select"><span>선택</span></label>
+                            <select id="select">
+                                <option>분류1</option>
+                                <option>분류2</option>
+                                <option>분류3</option>
+                                <option>분류4</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="mobB">
+                    <th><span class="asterisk">제목</span></th>
+                    <td colspan="2">
+                        <div class="inputBox Full">
+                            <input type="text" placeholder="제목">
+                        </div>
+                    </td>
+                </tr>
+                <tr class="mobB">
+                    <th><span class="asterisk">내용</span></th>
+                    <td colspan="2">
+                        <div class="inputBox Full">
+                            <textarea placeholder="내용"></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span>첨부파일</span></th>
+                    <td>
+                        <div class="fileBox">
+                            <button type="button" class="btn_s_gray">파일찾기</button>
+                            <ul class="fileList">
+                                <li>
+                                    <div class="file">
+                                        <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                                        <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="file">
+                                        <span class="txt">집합훈련 원격 대체 온라인 강의실2.zip [853kb]</span>
+                                        <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span>비밀글<span class="mobBr">사용</span></span></th>
+                    <td>
+                        <div class="lockBox">
+                            <ul class="checkList">
+                                <li>
+                                    <input type="checkbox" id="chk_lock_write">
+                                    <label for="chk_lock_write">사용</label>
+                                </li>
+                            </ul>
+                            <input type="password" placeholder="비밀번호 입력" />
+                        </div>
+                    </td>
+                </tr>
+                <!-- 비활성화 버전 -->
+                <tr>
+                    <th><span>비밀글<span class="mobBr">사용</span></span></th>
+                    <td>
+                        <div class="lockBox">
+                            <ul class="checkList">
+                                <li>
+                                    <input type="checkbox" id="chk_lock_write02" disabled>
+                                    <label for="chk_lock_write02">사용</label>
+                                </li>
+                            </ul>
+                            <input type="password" placeholder="비밀번호 입력" readonly="readonly" />
+                        </div>
+                    </td>
+                </tr>
+                <!-- EOD : 비활성화 버전 -->
+                </tbody>
+            </table>
+
+            <!-- btnBox -->
+            <div class="btnBox">
+                <div class="rightBox">
+                    <a href="customer_question.html" class="btn_m_blue">등록</a>
+                    <a href="customer_question.html" class="btn_m_black">취소</a>
+                </div>
+            </div>
+            <!-- EOD : btnBox -->
+
+        </div>
+        <!-- EOD : content_wrap -->
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>

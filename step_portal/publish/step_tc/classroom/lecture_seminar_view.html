@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>라이브세미나</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <!-- floatingBox -->
+                <div class="floatingBox">
+                    <div class="floatingBoxL"><h3 class="mt0">라이브세미나 정보</h3></div>
+                    <div class="floatingBoxR">
+                        <a href="lecture_seminar.html" class="btn_sr_white mg0">일정 목록으로 이동</a>
+                    </div>
+                </div>
+                <!-- EOD : floatingBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_hori">
+                        <caption>제목 , 일정 , 불참사유 접수여부 , 불참사유 접수기간 라이브세미나 정보</caption>
+                        <colgroup>
+                            <col width="200px">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>제목</th>
+                                <td>세번째 라이브세미나</td>
+                            </tr>
+                            <tr>
+                                <th>일정</th>
+                                <td>2020-07-15 12:00 ~ 15:00</td>
+                            </tr>
+                            <tr>
+                                <th>불참사유 접수여부</th>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <th>불참사유 접수기간</th>
+                                <td>2020-08-27 ~ 2020-08-29</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- searchBox -->
+                <div class="searchBox mt40">
+                    <ul>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">참석여부</span></span>
+                                <div class="selectBox">
+                                    <label for="select_year"><span>참석</span></label>
+                                    <select id="select_year">
+                                        <option>참석</option>
+                                        <option>불참</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">동영상 학습여부</span></span>
+                                <div class="selectBox">
+                                    <label for="select_process"><span>학습</span></label>
+                                    <select id="select_process">
+                                        <option>학습</option>
+                                        <option>미학습</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dataBox">
+                                <span class="label"><span class="labelIn">검색</span></span>
+                                <div class="search_area">
+                                    <div class="search_areaIn">
+                                        <input type="text" placeholder="이름/아이디 검색">
+                                    </div>
+                                    <button type="button" class="btn_s_blue">검색</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- EOD : searchBox -->
+
+                <!-- floatBox -->
+                <div class="floatBox mt20">
+                    <div class="floatBoxR">
+                        <button type="button" class="btn_s_blue">점수저장</button>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_veti -->
+                    <table class="table_veti mt0">
+                        <caption>No , 이름/아이디 , 참석여부 , 동영상 학습여부 , 불참사유 , 점수 상세</caption>
+                        <colgroup>
+                            <col width="50px"  class="mobH">
+                            <col width="*">
+                            <col width="15%">
+                            <col width="20%">
+                            <col width="15%">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="mobH">No</th>
+                                <th>이름/아이디</th>
+                                <th>참석여부</th>
+                                <th>동영상 학습여부</th>
+                                <th>불참사유</th>
+                                <th>점수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ac mobH">3</td>
+                                <td>김학생
+                                    <p class="txt_default mt0">hskim@step.or.kr</p>
+                                </td>
+                                <td class="ac">
+                                    <p class="txt_blue01 mg0">참석</p>
+                                    <p class="txt_default mg0">00:00:00</p>
+                                </td>
+                                <td class="ac">
+                                    <p class="txt_red01 mg0">미학습</p>
+                                </td>
+                                <td class="ac">-</td>
+                                <td class="ac">
+                                    <div class="inputBox width_s">
+                                        <input type="text" value="100">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac mobH">2</td>
+                                <td>이학생
+                                    <p class="txt_default mt0">hslee@step.or.kr</p>
+                                </td>
+                                <td class="ac">
+                                    <p class="txt_red01 mg0">불참</p>
+                                </td>
+                                <td class="ac">
+                                    <p class="txt_blue01 mg0">학습</p>
+                                    <p class="txt_default mg0">00:00:00</p>
+                                </td>
+                                <td class="ac">-</td>
+                                <td class="ac">
+                                    <div class="inputBox width_s">
+                                        <input type="text" value="0">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac mobH">1</td>
+                                <td>박학생
+                                    <p class="txt_default mt0">park@step.or.kr</p>
+                                </td>
+                                <td class="ac">
+                                    <p class="txt_red01 mg0">불참</p>
+                                </td>
+                                <td class="ac">
+                                    <p class="txt_red01 mg0">미학습</p>
+                                </td>
+                                <td class="ac">
+                                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_serminar_notattend.html','','width=800, height=600');">상세보기</button>
+                                </td>
+                                <td class="ac">
+                                    <div class="inputBox width_s">
+                                        <input type="text" value="0">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

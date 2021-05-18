@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <!-- content_wrap -->
+        <div class="content_wrap">
+
+            <!-- searchBox -->
+            <div class="searchBox">
+                <ul class="selectList">
+                    <li>
+                        <div class="listBox">
+                            <div class="selectBox">
+                                <label for="select_select02"><span>전체</span></label>
+                                <select id="select_select02">
+                                    <option>전체</option>
+                                    <option>제목</option>
+                                    <option>제목+내용</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="textBox">
+                    <div class="textBoxIn">
+                        <div class="inputBox">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                        </div>
+                        <button type="button">
+                            <span class="blind">검색</span>
+                            <i class="icon_search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- EOD : searchBox type02 -->
+
+            <!-- floatBox -->
+            <div class="floatBox">
+                <div class="floatBoxL">
+                    <dwiv class="countBox">
+                        총 <strong>18</strong>건
+                    </dwiv>
+                </div>
+
+                <div class="floatBoxR">
+                    <ul class="thumLinkBox">
+                        <li class="thumType active"><a href="javascript:void(0)" onclick="ThumLoading()"></a></li>
+                        <li class="listType"><a href="javascript:void(0)" onclick="ListLoading()"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- EOD : floatBox -->
+
+            <script>
+
+                function ThumLoading(){
+                    $.ajax({
+                        url : "ajax/thum_list_event.html",
+                        dataType : "html",
+                        success : function(result){
+
+                            $(".list_content").html(result);
+                            $(".thumLinkBox").find("li").removeClass("active");
+                            $(".thumLinkBox").find(".thumType").addClass("active");
+
+                            cropS()
+                        }
+                    });
+                }
+
+                function ListLoading(){
+                    $.ajax({
+                        url : "ajax/board_list_event.html",
+                        dataType : "html",
+                        success : function(result){
+
+                            $(".list_content").html(result);
+                            $(".thumLinkBox").find("li").removeClass("active");
+                            $(".thumLinkBox").find(".listType").addClass("active");
+                        }
+                    });
+                }
+
+                ThumLoading();
+            </script>
+
+            <div class="list_content">
+
+
+            </div>
+
+        </div>
+        <!-- EOD : content_wrap -->
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>

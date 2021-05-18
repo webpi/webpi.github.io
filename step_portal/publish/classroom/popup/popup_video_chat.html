@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        화상채팅방 목록
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <div class="floatingBox">
+                <div class="floatingBoxL"><h3>화상채팅방 목록</h3></div>
+                <div class="floatingBoxR"><button class="btn_more" onclick="location.href='popup_video_chat_write.html'");>개설</button></div>
+            </div>
+
+            <div class="tableScroll">
+                <table class="table_normal mt0">
+                    <caption>No,제목,일정,개설자,상태, 참석하기 , 학습하기로 구성된 라이브세미나 상세</caption>
+                    <colgroup>
+                        <col width="5%">
+                        <col width="300px">
+                        <col width="200px">
+                        <col width="8%">
+                        <col width="5%">
+                        <col width="10%">
+                        <col width="10%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">일정</th>
+                            <th scope="col">개설자</th>
+                            <th scope="col">상태</th>
+                            <th scope="col">참석하기</th>
+                            <th scope="col">참석여부</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac">
+                               4
+                            </td>
+                            <td class="al nowrap">
+                               <a href="javascript:void(0)" class="link_arrow">화상채팅 화상채팅 화상채팅 화상채팅 화상채팅</a>
+                            </td>
+                            <td class="ac nowrap">
+                                <p class="txt_default mt0">2020-06-10</p><p class="txt_default">09:00 ~ 12:00</p>
+                            </td>
+                            <td class="ac">
+                                팀장
+                            </td>
+                            <td class="ac">
+                                진행
+                            </td>
+                            <td class="ac">
+                                <button type="button" class="btn_s_blue">참석하기</button>
+                            </td>
+                            <td class="ac">
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac">
+                                3
+                            </td>
+                            <td class="al nowrap">
+                                <a href="javascript:void(0)" class="link_arrow">화상채팅 화상채팅 화상채팅 화상채팅 화상채팅</a>
+                            </td>
+                            <td class="ac nowrap">
+                                <p class="txt_default mt0">2020-06-10</p><p class="txt_default">09:00 ~ 12:00</p>
+                            </td>
+                            <td class="ac">
+                                팀장
+                            </td>
+                            <td class="ac">
+                                진행
+                            </td>
+                            <td class="ac">
+
+                            </td>
+                            <td class="ac">
+                                -
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac">
+                                2
+                            </td>
+                            <td class="al nowrap">
+                                <a href="javascript:void(0)" class="link_arrow">화상채팅 화상채팅 화상채팅 화상채팅 화상채팅</a>
+                            </td>
+                            <td class="ac nowrap">
+                                <p class="txt_default mt0">2020-06-10</p><p class="txt_default">09:00 ~ 12:00</p>
+                            </td>
+                            <td class="ac">
+                                강사
+                            </td>
+                            <td class="ac">
+                                종료
+                            </td>
+                            <td class="ac"></td>
+                            <td class="ac">
+                                참석
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac">
+                                1
+                            </td>
+                            <td class="al nowrap">
+                                <a href="javascript:void(0)" class="link_arrow">화상채팅111</a>
+                            </td>
+                            <td class="ac nowrap">
+                                <p class="txt_default mt0">2020-06-10</p><p class="txt_default">09:00 ~ 12:00</p>
+                            </td>
+                            <td class="ac">
+                                팀장
+                            </td>
+                            <td class="ac">
+                                종료
+                            </td>
+                            <td class="ac"></td>
+                            <td class="ac">
+                                -
+                            </td>
+                        </tr>
+
+                        <!-- noData
+                        <tr>
+                          <td class="ac no_dataBox" colspan="7">
+                            <img src="/images/template4/resp/default/icon/icon_no_data_board.png" alt="">
+                            <p class="txt">개설된 화상채팅방이 없습니다.</p>
+                          </td>
+                        </tr>
+                        -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

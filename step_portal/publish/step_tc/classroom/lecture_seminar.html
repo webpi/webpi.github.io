@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>라이브세미나</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <!-- seminar_info -->
+                <div class="seminar_info">
+                    <div class="seminar_infoL">
+                        <p class="txt01">라이브세미나란?</p>
+                        <p class="txt02">
+                            학습자와 실시간으로 화상강의를 할 수 있는 학습도구입니다. <br/>
+                            학습자가 라이브세미나 입장 시 100점이 부여되고, 강사가 점수를 수정해서 채점할 수 있습니다.
+                        </p>
+                    </div>
+                    <div class="seminar_infoR">
+                        <button class="btn_m_blue_gra" onclick="location.href='lecture_seminar_write.html'">라이브세미나<br>일정등록</button>
+                    </div>
+                </div>
+                <!-- EOD : seminar_info -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_block type03 mt40">
+                        <caption>No, 제목 ,일정 , 불참사유 접수기간 , 상태 , 참여현황 , 입장/채점으로 구성된 라이브세미나 상세</caption>
+                        <colgroup>
+                            <col width="60px">
+                            <col width="*">
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="120px">
+                        </colgroup>
+                        <thead class="mobH">
+                            <tr>
+                                <th scope="col" rowspan="2">No</th>
+                                <th scope="col" rowspan="2">제목</th>
+                                <th scope="col" rowspan="2">일정</th>
+                                <th scope="col" rowspan="2">불참사유 <br/> 접수기간</th>
+                                <th scope="col" rowspan="2">상태</th>
+                                <th scope="col" colspan="2">참여현황</th>
+                                <th scope="col" rowspan="2">입장/채점</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="bl">참여</th>
+                                <th scope="col">불참</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ac">
+                                    <ul class="mob_dash_list">
+                                        <li class="mobH">3</li>
+                                        <li class="mobS">
+                                            <span class="label_s_black mr5">On Air</span><span class="vertiM"><a href="lecture_seminar_view.html" class="txt_blue01">첫번째 라이브세미나</a></span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="al mobH">
+                                    <p class="label_s_black mg0">On Air</p>
+                                    <div class="linkBox arrow">
+                                        <a href="lecture_seminar_view.html"><span class="txt">첫번째 라이브 세미나</span></a>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">일정</span>
+                                        <span class="mob_boxR">
+                                            2020-06-10 <br/>
+                                            09:00 ~ 12:00
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">불참사유 접수기간</span>
+                                        <span class="mob_boxR">
+                                            2020-07-23 ~ <br/> 2020-07-30
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">상태</span>
+                                        <span class="mob_boxR">
+                                            종료
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <span class="mobH"></span>
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여</span>
+                                        <span class="mob_boxR">
+                                            28
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <span class="mobH"></span>
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">불참</span>
+                                        <span class="mob_boxR">
+                                            <span class="txt_red01">2</span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <button type="button" class="btn_s_black" onclick="location.href='lecture_seminar_view.html'">참여정보</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">
+                                    <ul class="mob_dash_list">
+                                        <li class="mobH">2</li>
+                                        <li class="mobS">
+                                            <span class="label_s_black mr5">On Air</span><span class="vertiM"><a href="lecture_seminar_view.html" class="txt_blue01">두번째 라이브세미나</a></span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="al mobH">
+                                    <p class="label_s_black mg0">On Air</p>
+                                    <div class="linkBox arrow">
+                                        <a href="lecture_seminar_view.html"><span class="txt">두번째 라이브세미나</span></a>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">일정</span>
+                                        <span class="mob_boxR">
+                                            2020-08-15 <br/>
+                                            10:00 ~ 17:00
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">불참사유 <br/> 접수기간</span>
+                                        <span class="mob_boxR">
+                                            2020-08-17 ~ <br/> 2020-08-30
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">상태</span>
+                                        <span class="mob_boxR">
+                                            <span class="txt_blue01">진행</span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <span class="mobH"></span>
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여</span>
+                                        <span class="mob_boxR">
+                                            0
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <span class="mobH"></span>
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">불참</span>
+                                        <span class="mob_boxR">
+                                            <span class="txt_red01">30</span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <button type="button" class="btn_s_blue">입장</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">
+                                    <ul class="mob_dash_list">
+                                        <li class="mobH">1</li>
+                                        <li class="mobS">
+                                            <span class="label_s_red mr5">On Air</span><span class="vertiM"><a href="lecture_seminar_view.html" class="txt_blue01">세번째 라이브세미나</a></span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="al mobH">
+                                    <p class="label_s_red mg0">On Air</p>
+                                    <div class="linkBox arrow">
+                                        <a href="lecture_seminar_view.html"><span class="txt">세번째 라이브 세미나</span></a>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">일정</span>
+                                        <span class="mob_boxR">
+                                            2020-04-30 <br/>
+                                            14:00 ~ 16:00
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac mobH">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">불참사유 접수기간</span>
+                                        <span class="mob_boxR">
+                                            2020-05-23 ~ <br/> 2020-06-15
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">상태</span>
+                                        <span class="mob_boxR">
+                                            <span class="txt_red01">대기</span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <span class="mobH"></span>
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여</span>
+                                        <span class="mob_boxR">
+                                            -
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <span class="mobH"></span>
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">불참</span>
+                                        <span class="mob_boxR">
+                                            <span class="txt_red01">-</span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac"></td>
+                            </tr>
+
+                            <!-- noData
+                            <tr>
+                              <td class="ac no_dataBox" colspan="8">
+                                <img src="/images/template4/resp/default/icon/icon_no_data_board.png" alt="">
+                                <p class="txt">라이브세미나 일정이 없습니다.</p>
+                              </td>
+                            </tr>
+                            -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

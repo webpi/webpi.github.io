@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<title>STEP</title>
+	<link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+	<script src="/js/classroom/template4/wbCommon.js"></script>
+	<script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+	<script src="/js/classroom/template4/slick.js"></script>
+
+	<!-- ie9 이하 적용 -->
+	<!--[if lt IE 9]>
+		<script src="/js/html5.js"></script>
+		<script src="/js/respond.min.js"></script>
+	<![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+  <!-- headerInclude -->
+  <section class="headerInclude"></section>
+  <!-- EOD : headerInclude -->
+
+  <!-- contentLayout -->
+  <section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+      <!-- lnb -->
+      <section class="lnbInclude"></section>
+      <!-- EOD : lnb -->
+
+      <!-- contentArea -->
+      <div class="contentArea" id="contentArea">
+        <h2><span>시험</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+        <!-- layout_boxs -->
+        <div class="layout_boxs mt0">
+          <!-- tab -->
+          <ul class="tab">
+            <li class="active"><a href="javascript:void(0);"><span>중간평가</span></a></li>
+            <li><a href="javascript:void(0);"><span>최종평가</span></a></li>
+          </ul>
+          <!-- EOD : tab -->
+
+          <!-- searchBox -->
+          <div class="searchBox">
+            <ul>
+              <li>
+                <div class="dataBox">
+                  <span class="label"><span class="labelIn">시험기간</span></span>
+                  <span class="txt">2020-05-04 00:00 ~ 2020-05-15 12:00</span>
+                </div>
+                <div class="dataBox">
+                  <span class="label"><span class="labelIn">문항수</span></span>
+                  <span class="txt">10문항</span>
+                </div>
+              </li>
+              <li>
+                <div class="dataBox">
+                  <span class="label"><span class="labelIn">검색</span></span>
+                  <div class="selectBox">
+                    <label for="select_exam"><span>응시여부</span></label>
+                    <select id="select_exam">
+                      <option>미응시</option>
+                      <option>임시저장</option>
+                      <option>응시완료</option>
+                      <option>재응시</option>
+                      <option>재응시완료</option>
+                    </select>
+                  </div>
+                  <div class="selectBox">
+                    <label for="select_score"><span>채점여부</span></label>
+                    <select id="select_score">
+                      <option>미채점</option>
+                      <option>재응시요청</option>
+                      <option>채점완료</option>
+                    </select>
+                  </div>
+                  <div class="search_area">
+                    <div class="search_areaIn">
+                      <input type="text" placeholder="이름/아이디 검색">
+                    </div>
+                    <button type="button" class="btn_s_blue">검색</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- EOD : searchBox -->
+
+          <script>
+            $(".tab li a").click(function(){
+              $(".tab li").removeClass("active");
+              $(this).parent().addClass("active");
+            });
+          </script>
+
+          <!-- floatBox -->
+          <div class="floatBox">
+            <div class="floatBoxL">
+              <div class="countBox">
+                총 <strong>3</strong>명
+              </div>
+            </div>
+          </div>
+          <!-- EOD : floatBox -->
+
+          <!-- tableScroll -->
+          <div class="tableScroll">
+            <!-- table_veti -->
+            <table class="table_veti mt0">
+              <caption>No,이름/아이디,응시상태 , 채점상태 , 점수 , 채점하기로 이루어진 중간평가 상세</caption>
+              <colgroup>
+                <col width="10%">
+                <col width="*">
+                <col class="mobH" width="12%">
+                <col width="12%">
+                <col width="12%">
+                <col width="12%">
+                <col class="mobH" width="8%">
+                <col class="mobH" width="8%">
+                <col width="10%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th rowspan="2" scope="col">NO</th>
+                  <th rowspan="2" scope="col">이름 / 아이디</th>
+                  <th rowspan="2" scope="col" class="mobS">응시여부</th>
+                  <th rowspan="2" scope="col" class="mobS">채점여부</th>
+                  <th scope="colgroup" colspan="2" class="mobH">응시상태</th>
+                  <th scope="colgroup" colspan="2" class="mobH">채점상태</th>
+                  <th rowspan="2" scope="col">점수</th>
+                  <th rowspan="2" scope="col">채점하기</th>
+                </tr>
+                <tr>
+                  <th scope="col" class="mobH">응시여부</th>
+                  <th scope="col" class="mobH">응시일</th>
+                  <th scope="col" class="mobH">채점여부</th>
+                  <th scope="col" class="mobH">채점일</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="ac">6</td>
+                <td class="al">율곡이이 <p class="txt_default mt0">YU@step.co.kr</p></td>
+                <td class="ac"><span class="txt_blue01">재응시완료</span><span class="txt_default mobS">2020-05-15</span></td>
+                <td class="ac mobH">2020-05-15</td>
+                <td class="ac"><span class="txt_blue01">채점완료</span><span class="txt_default mobS">2020-06-10</span></td>
+                <td class="ac mobH">2020-06-10</td>
+                <td class="ac"><strong class="txt_blue01">30</strong>점</td>
+                <td class="ac"><button type="button" class="btn_s_blue" onclick="window.open('popup/popup_exam_score.html','','width=800, height=750');">채점하기</button></td>
+              </tr>
+              <tr>
+                <td class="ac">5</td>
+                <td class="al">김유신 <p class="txt_default mt0">KYS@step.co.kr</p></td>
+                <td class="ac">임시저장<span class="txt_default mobS">2020-05-15</span></td>
+                <td class="ac mobH">2020-05-15</td>
+                <td class="ac">미채점<span class="txt_default mobS">2020-06-10</span></td>
+                <td class="ac mobH">2020-06-10</td>
+                <td class="ac"><strong class="txt_blue01">30</strong>점</td>
+                <td class="ac"><button type="button" class="btn_s_black" onclick="window.open('popup/popup_exam_result.html','','width=800, height=750');">결과확인</button></td>
+              </tr>
+              <tr>
+                <td class="ac">4</td>
+                <td class="al">홍길동 <p class="txt_default mt0">hong@step.co.kr</p></td>
+                <td class="ac"><span class="txt_blue01">응시완료</span><span class="txt_default mobS">2020-05-15</span></td>
+                <td class="ac mobH">2020-05-15</td>
+                <td class="ac"><span class="txt_blue01">채점완료</span><span class="txt_default mobS">2020-06-10</span></td>
+                <td class="ac mobH">2020-06-10</td>
+                <td class="ac"><strong class="txt_blue01">30</strong>점</td>
+                <td class="ac"><button type="button" class="btn_s_blue" onclick="window.open('popup/popup_exam_score.html','','width=800, height=750');">채점하기</button></td>
+              </tr>
+              <tr>
+                <td class="ac">3</td>
+                <td class="al">홍길동 <p class="txt_default mt0">hong@step.co.kr</p></td>
+                <td class="ac"><span class="txt_blue01">응시완료</span><span class="txt_default mobS">2020-05-15</span></td>
+                <td class="ac mobH">2020-05-15</td>
+                <td class="ac"><span class="txt_blue01">채점완료</span><span class="txt_default mobS">2020-06-10</span></td>
+                <td class="ac mobH">2020-06-10</td>
+                <td class="ac"><strong class="txt_blue01">30</strong>점</td>
+                <td class="ac"><button type="button" class="btn_s_blue" onclick="window.open('popup/popup_exam_score.html','','width=800, height=750');">채점하기</button></td>
+              </tr>
+              <tr>
+                <td class="ac">2</td>
+                <td class="al">김유신 <p class="txt_default mt0">KYS@step.co.kr</p></td>
+                <td class="ac"><span class="txt_blue01">응시완료</span><span class="txt_default mobS">2020-04-22</span></td>
+                <td class="ac mobH">2020-04-22</td>
+                <td class="ac"><span class="txt_blue01">채점완료</span><span class="txt_default mobS">2020-06-02</span></td>
+                <td class="ac mobH">2020-06-02</td>
+                <td class="ac"><strong class="txt_blue01">50</strong>점</td>
+                <td class="ac"><button type="button" class="btn_s_black" onclick="window.open('popup/popup_exam_result.html','','width=800, height=750');">결과확인</button></td>
+              </tr>
+              <tr>
+                <td class="ac">1</td>
+                <td class="al">율곡이이 <p class="txt_default mt0">YU@step.co.kr</p></td>
+                <td class="ac">미응시 <span class="txt_default mobS">2020-04-25</span></td>
+                <td class="ac mobH">2020-04-25</td>
+                <td class="ac">미채점 <span class="txt_default mobS">2020-06-20</span></td>
+                <td class="ac mobH">2020-06-20</td>
+                <td class="ac"><strong class="txt_blue01">70</strong>점</td>
+                <td class="ac"><button type="button" class="btn_s_blue" onclick="window.open('popup/popup_exam_score.html','','width=800, height=750');">채점하기</button></td>
+              </tr>
+              </tbody>
+            </table>
+            <!-- EOD : table_veti -->
+          </div>
+          <!-- EOD : tableScroll -->
+
+
+          <!-- pagination -->
+          <div class="pagination">
+            <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+            <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+            <a class="active" href="javascript:void(0);">1</a>
+            <a href="javascript:void(0);">2</a>
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>
+            <a href="javascript:void(0);">5</a>
+            <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+            <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+          </div>
+          <!-- EOD : pagination -->
+
+        </div>
+        <!-- EOD : layout_boxs -->
+      </div>
+      <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+  </section>
+    <!-- EOD : contentLayout -->
+
+  <!-- popup_wrap -->
+  <section class="popup_wrap" id="popup01">
+    <!-- popup_Box -->
+    <div class="popup_Box">
+      <!-- popup_BoxIn -->
+      <div class="popup_BoxIn">
+        <div class="popupH">인증하기<a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup01','close');" title="닫기"><img src="/images/classroom/template4/resp/default/icon_popup_close.png"></a></div>
+        <div class="popupCBox">
+          <div class="popupCBoxIn">
+
+            <h4 class="mt0 txt_black">인증번호 입력</h4>
+            <div class="inputBox Full">
+              <input type="password" placeholder="" id="">
+            </div>
+
+          </div>
+        </div>
+        <div class="popupF">
+          <button type="button" class="btn_m_blue" onclick="popupS('#popup01','close');">확인</button>
+        </div>
+      </div>
+      <!-- popup_BoxIn -->
+    </div>
+    <!-- EOD : popup_Box -->
+    <div class="popup_bg" onclick="popupS('#popup01','close');"></div>
+  </section>
+  <!-- EOD : popup_wrap -->
+
+</body>
+</html>

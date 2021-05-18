@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>학습문의</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <!-- tab -->
+                <ul class="tab">
+                    <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>과정 Q&A</span></a></li>
+                    <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>콘텐츠 오류신고</span></a></li>
+                </ul>
+                <!-- EOD : tab -->
+
+                <!-- 과정 Q&A -->
+                <div class="tabBox active" id="tab01">
+                    <!-- searchBox -->
+                    <div class="searchBox bt0 select_two">
+                        <div class="selectBox width_m">
+                            <label for="select_type"><span>분류</span></label>
+                            <select id="select_type">
+                                <option>분류</option>
+                                <option>진도</option>
+                                <option>시험</option>
+                                <option>과제</option>
+                                <option>팀프로젝트</option>
+                                <option>콘텐츠 오류</option>
+                                <option>기타</option>
+                            </select>
+                        </div>
+                        <div class="selectBox width_m">
+                            <label for="select_reply"><span>답변상태</span></label>
+                            <select id="select_reply">
+                                <option>답변상태</option>
+                                <option>답변완료</option>
+                                <option>답변대기</option>
+                            </select>
+                        </div>
+                        <div class="search_area">
+                            <div class="inputBox">
+                                <div class="inputBoxIn">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <button type="button" class="btn_s_blue">검색</button>
+                        </div>
+                    </div>
+                    <!-- EOD : searchBox -->
+
+                    <p class="txt_info qna-guide">
+                        HTML5/동영상 콘텐츠를 학습하시면서 발생한 문제(재생 오류, 버튼 동작 오류 등)에 대한 문의는 학습창의 문제가 있는 화면에서 직접 “콘텐츠 오류신고”로 등록해주셔야 빠른 처리가 가능합니다.
+                    </p>
+
+                    <!-- boardTop_area -->
+                    <div class="boardTop_area">
+                         <a href="lecture_question_write.html" class="btn_s_blue">문의하기</a>
+                    </div>
+                    <!-- EOD : boardTop_area -->
+
+                    <!--  table_normal -->
+                    <table class="table_normal">
+                        <caption>NO,분류,제목,첨부파일,답변상태,등록자,등록일로 이루어진 학습문의 게시판</caption>
+                        <colgroup>
+                            <col width="9%">
+                            <col class="mobH" width="12%">
+                            <col width="*">
+                            <col class="mobH" width="9%">
+                            <col class="mobH" width="12%">
+                            <col class="mobH" width="12%">
+                            <col class="mobH" width="12%">
+                        </colgroup>
+                        <thead>
+                            <tr class="mobH">
+                                <th>NO</th>
+                                <th>분류</th>
+                                <th>제목</th>
+                                <th>첨부파일</th>
+                                <th>답변상태</th>
+                                <th>등록자</th>
+                                <th>등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td class="mobH">시험</td>
+                                <td class="al">
+                                    <div class="mobBox Top">
+                                        시험
+                                    </div>
+                                    <div class="label_title icon">
+                                        <div class="label_titleR">
+                                            <a class="label_titleLink" href="lecture_question_view.html">
+                                            <span class="label_titleLinkIn">
+                                                <span class="txt">최종평가 관련 문의드립니다.</span>
+                                            </span>
+                                                <i class="icon_new"><span class="blind">new</span></i><i class="icon_lock"><span class="blind">비밀글</span></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>답변대기</li>
+                                        <li>홍*동</li>
+                                        <li>2020.06.05</li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">
+                                    <div class="iconBox">
+                                        <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                    </div>
+                                </td>
+                                <td class="mobH">답변대기</td>
+                                <td class="mobH">홍*동</td>
+                                <td class="mobH">2020.06.05</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="mobH">시험</td>
+                                <td class="al">
+                                    <div class="mobBox Top">
+                                        시험
+                                    </div>
+                                    <div class="label_title icon">
+                                        <div class="label_titleR">
+                                            <a class="label_titleLink" href="lecture_question_view.html">
+                                            <span class="label_titleLinkIn">
+                                                <span class="txt">최종평가 관련 문의드립니다.</span>
+                                            </span>
+                                                <i class="icon_new"><span class="blind">new</span></i><i class="icon_lock"><span class="blind">비밀글</span></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                    <ul class="mobBox">
+                                        <li>답변대기</li>
+                                        <li>홍*동</li>
+                                        <li>2020.06.05</li>
+                                    </ul>
+                                    <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                                </td>
+                                <td class="mobH">
+                                    <div class="iconBox">
+                                        <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                    </div>
+                                </td>
+                                <td class="mobH">답변대기</td>
+                                <td class="mobH">홍*동</td>
+                                <td class="mobH">2020.06.05</td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="no_dataBox">
+                                    <img src="/images/template9/resp/default/icon/icon_no_data_board.png" alt="">
+                                    <p class="txt">게시된 글이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--  EOD : table_normal -->
+
+                    <!-- pagination -->
+
+                    <div class="pagination">
+                        <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                        <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                        <a class="active" href="javascript:void(0);">1</a>
+                        <a href="javascript:void(0);">2</a>
+                        <a href="javascript:void(0);">3</a>
+                        <a href="javascript:void(0);">4</a>
+                        <a href="javascript:void(0);">5</a>
+                        <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                        <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                    </div>
+                    <!-- EOD : pagination -->
+                </div>
+                <!-- // 과정 Q&A -->
+
+                <!-- 콘텐츠 오류신고 -->
+                <div class="tabBox" id="tab02">
+                    <!-- searchBox -->
+                    <div class="searchBox bt0">
+                         <div class="selectBox width_m">
+                            <label for="select_reply"><span>답변상태</span></label>
+                            <select id="select_reply">
+                                <option>답변상태</option>
+                                <option>답변완료</option>
+                                <option>답변대기</option>
+                            </select>
+                        </div>
+                        <div class="search_area">
+                            <div class="inputBox">
+                                <div class="inputBoxIn">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <button type="button" class="btn_s_blue">검색</button>
+                        </div>
+                    </div>
+                    <!-- EOD : searchBox -->
+
+                    <!--  table_normal -->
+                    <table class="table_normal">
+                        <caption>NO,제목,첨부파일,답변상태,등록자,등록일로 이루어진 콘텐츠 오류신고 게시판</caption>
+                        <colgroup>
+                            <col width="9%">
+                            <col width="*">
+                            <col class="mobH" width="9%">
+                            <col class="mobH" width="12%">
+                            <col class="mobH" width="12%">
+                            <col class="mobH" width="12%">
+                        </colgroup>
+                        <thead>
+                        <tr class="mobH">
+                            <th>NO</th>
+                            <th>제목</th>
+                            <th>첨부파일</th>
+                            <th>답변상태</th>
+                            <th>등록자</th>
+                            <th>등록일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td class="al">
+                                <!-- 차시 / 페이지 -->
+                                <div class="label_top">
+                                    <span>블록체인이란 블록체인이란 블록체인이란 블록체인이란 블록체인이란블록체인이란블록체인이란</span>
+                                    <em></em>
+                                    <span>블록체인의 개념과 원리</span>
+                                </div>
+                                <!-- // 차시 / 페이지 -->
+
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_question_view.html">
+                                                <span class="label_titleLinkIn">
+                                                    <span class="txt">영상이 깨져요</span>
+                                                </span>
+                                            <i class="icon_new"><span class="blind">new</span></i><i class="icon_lock"><span class="blind">비밀글</span></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>답변대기</li>
+                                    <li>홍*동</li>
+                                    <li>2020.06.05</li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </td>
+                            <td class="mobH">답변대기</td>
+                            <td class="mobH">홍*동</td>
+                            <td class="mobH">2020.06.05</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="al">
+                                <!-- 차시 / 페이지 -->
+                                <div class="label_top">
+                                    <span>블록체인이란 블록체인이란 블록체인이란 블록체인이란 블록체인이란블록체인이란블록체인이란</span>
+                                    <em></em>
+                                    <span>블록체인의 개념과 원리</span>
+                                </div>
+                                <!-- // 차시 / 페이지 -->
+
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_question_view.html">
+                                                <span class="label_titleLinkIn">
+                                                    <span class="txt">영상이 깨져요</span>
+                                                </span>
+                                            <i class="icon_new"><span class="blind">new</span></i><i class="icon_lock"><span class="blind">비밀글</span></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>답변대기</li>
+                                    <li>홍*동</li>
+                                    <li>2020.06.05</li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </td>
+                            <td class="mobH">답변대기</td>
+                            <td class="mobH">홍*동</td>
+                            <td class="mobH">2020.06.05</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="al">
+                                <!-- 차시 / 페이지 -->
+                                <div class="label_top">
+                                    <span>블록체인이란 블록체인이란 블록체인이란 블록체인이란 블록체인이란블록체인이란블록체인이란</span>
+                                    <em></em>
+                                    <span>블록체인의 개념과 원리</span>
+                                </div>
+                                <!-- // 차시 / 페이지 -->
+
+                                <div class="label_title icon">
+                                    <div class="label_titleR">
+                                        <a class="label_titleLink" href="lecture_question_view.html">
+                                                <span class="label_titleLinkIn">
+                                                    <span class="txt">영상이 깨져요</span>
+                                                </span>
+                                            <i class="icon_new"><span class="blind">new</span></i><i class="icon_lock"><span class="blind">비밀글</span></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li>답변완료</li>
+                                    <li>홍*동</li>
+                                    <li>2020.06.05</li>
+                                </ul>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </td>
+                            <td class="mobH">
+                                <div class="iconBox">
+                                    <a href="javascript:void(0)" class="icon_file"><span class="blind">첨부파일</span></a>
+                                </div>
+                            </td>
+                            <td class="mobH">처리중</td>
+                            <td class="mobH">홍*동</td>
+                            <td class="mobH">2020.06.05</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8" class="no_dataBox">
+                                <img src="/images/template9/resp/default/icon/icon_no_data_board.png" alt="">
+                                <p class="txt">게시된 글이 없습니다.</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--  EOD : table_normal -->
+
+                    <!-- pagination -->
+                    <div class="pagination">
+                        <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                        <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                        <a class="active" href="javascript:void(0);">1</a>
+                        <a href="javascript:void(0);">2</a>
+                        <a href="javascript:void(0);">3</a>
+                        <a href="javascript:void(0);">4</a>
+                        <a href="javascript:void(0);">5</a>
+                        <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                        <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                    </div>
+                    <!-- EOD : pagination -->
+                </div>
+                <!-- // 콘텐츠 오류신고 -->
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

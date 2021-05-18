@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>과정게시판</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+                <table class="table_hori write mt0">
+                    <caption>고정공지여부 , 고정공지 게시기간 , 제목 , 내용 ,첨부파일로 이루어진 과정게시판 작성</caption>
+                    <colgroup>
+                        <col width="16%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>고정공지여부</th>
+                        <td>
+                            <ul class="radioList">
+                                <li>
+                                    <input type="radio" id="radio01_01" name="radioGroup">
+                                    <label for="radio01_01">사용</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="radio01_02" name="radioGroup">
+                                    <label for="radio01_02">사용안함</label>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>고정공지 게시기간</th>
+                        <td>
+                            <div class="dateBox">
+                                <div class="dateBoxIn">
+                                    <div class="inputBox Full">
+                                        <input type="text" class="datepicker">
+                                    </div>
+                                    <div class="wave">~</div>
+                                    <div class="inputBox Full">
+                                        <input type="text" class="datepicker">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="mobB">
+                        <th class="mobH">제목</th>
+                        <td colspan="2">
+                            <div class="inputBox Full">
+                                <input type="text" placeholder="제목">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="mobB">
+                        <th class="mobH">내용</th>
+                        <td colspan="2">
+                            <div class="inputBox Full">
+                                <textarea placeholder="내용"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span>첨부파일</span></th>
+                        <td>
+                            <div class="fileBox">
+                                <button type="button" class="btn_s_blue">파일찾기</button>
+                                <ul class="fileList">
+                                    <li>
+                                        <div class="file">
+                                            <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                                            <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="file">
+                                            <span class="txt">집합훈련 원격 대체 온라인 강의실2.zip [853kb]</span>
+                                            <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <!-- btnBox -->
+                <div class="btnBox">
+                    <div class="rightBox">
+                        <a href="lecture_board.html" class="btn_m_blue">저장</a>
+                        <a href="lecture_board.html" class="btn_m_black">취소</a>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+            </div>
+            <!-- EOD : layout_boxs -->
+
+
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

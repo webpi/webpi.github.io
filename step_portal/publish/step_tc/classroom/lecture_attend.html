@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<title>STEP</title>
+	<link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+	<script src="/js/classroom/template4/wbCommon.js"></script>
+	<script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+	<script src="/js/classroom/template4/slick.js"></script>
+
+	<!-- ie9 이하 적용 -->
+	<!--[if lt IE 9]>
+		<script src="/js/html5.js"></script>
+		<script src="/js/respond.min.js"></script>
+	<![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+  <!-- headerInclude -->
+  <section class="headerInclude"></section>
+  <!-- EOD : headerInclude -->
+
+  <!-- contentLayout -->
+  <section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+      <!-- lnb -->
+      <section class="lnbInclude"></section>
+      <!-- EOD : lnb -->
+
+      <!-- contentArea -->
+      <div class="contentArea" id="contentArea">
+        <h2><span>출석</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+        <!-- layout_boxs -->
+        <div class="layout_boxs mobH">
+          <div class="calender_date">
+            <button class="btn_prev" title="이전" onclick="prevDate();"></button>
+            <p>
+                <span id="thisWeekFirst"></span> ~
+                <span id="thisWeekLast"></span>
+            </p>
+            <button class="btn_next" title="다음" onclick="nextDate();"></button>
+          </div>
+          <!-- tableScroll -->
+          <div class="tableScroll">
+            <table class="table_veti mt20">
+              <caption>교시,월요일,화요일,수요일,목요일,금요일,토요일,일요일로 구성된 진도/출석 상세</caption>
+              <colgroup>
+                <col width="*"/>
+                <col width="13%"/>
+                <col width="13%"/>
+                <col width="13%"/>
+                <col width="13%"/>
+                <col width="13%"/>
+                <col width="13%"/>
+                <col width="13%"/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td scope="col">교시</td>
+                  <td scope="col">월요일</td>
+                  <td scope="col">화요일</td>
+                  <td scope="col">수요일</td>
+                  <td scope="col">목요일</td>
+                  <td scope="col">금요일</td>
+                  <td scope="col">토요일</td>
+                  <td scope="col">일요일</td>
+                </tr>
+              </thead>
+              <tbody id="calndar_attend">
+                <!--
+                <tr>
+                  <td class="ac">1</td>
+                  <td class="ac">
+                    <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                    <button class="btn_s_black mt5">출결정보</button>
+                  </td>
+                  <td class="ac">
+                    <p class="txt_default mt0">하둡 척와(Hadoop Chukwa)</p>
+                    <button class="btn_s_black mt5">출결정보</button>
+                  </td>
+                  <td class="ac">
+                    <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                    <button class="btn_s_blue mt5">출석체크</button>
+                  </td>
+                  <td class="ac">
+                    <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                    <button class="btn_s_blue mt5">출석체크</button>
+                  </td>
+                  <td class="ac">
+                    <p class="txt_default mt0">아파치 스쿱(Apache Sqoop)</p>
+                  </td>
+                  <td class="ac bg_gray01"></td>
+                  <td class="ac bg_gray01"></td>
+                </tr>
+                -->
+              </tbody>
+            </table>
+            <script>
+              $(function(){
+                build();
+              });
+
+              var today = new Date(); // 오늘 날짜
+              var date = new Date();
+              var todayYear = today.getFullYear(); //nowYear
+              var todayMonth = today.getMonth(); //nowMonth
+              var todayDate = today.getDate(); //nowDay
+              var todayOfweek = today.getDay(); //nowDayOfWeek
+              todayYear += (todayYear < 2000) ? 1900 : 0;
+              if(today.getMonth()+1 < 10){
+                todayMonth = "0" + (today.getMonth()+1);
+              }
+              if(todayDate < 10){
+                todayDate = "0" + todayDate;
+              }
+              var todays = todayYear + "-" + todayMonth + "-" + todayDate;
+
+              function prevDate(){
+                today = new Date(today.getFullYear(), today.getMonth(), (today.getDate() - today.getDay()-7));
+                build();
+              }
+
+              function nextDate(){
+                today = new Date(today.getFullYear(), today.getMonth(), (today.getDate() - today.getDay()+7));
+                build();
+              }
+
+              function build(){
+                var nMonth = new Date(today.getFullYear(), today.getMonth(), 1); //현재달의 첫째 날
+                var lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0); //현재 달의 마지막 날
+                var thisWeekFirst = (today.getDate() - today.getDay()+1);
+                var thisWeekLast = (today.getDate() + (7-today.getDay()));
+                var prevMonth = (today.getMonth()+1);
+                var nextMonth = (today.getMonth()+1);
+                var prevYear = today.getFullYear();
+                var nextYear = today.getFullYear();
+
+                if ( thisWeekFirst > lastDate.getDate()) {
+                  firstN = thisWeekFirst - lastDate.getDate();
+                  thisWeekFirst = firstN;
+                  prevMonth = today.getMonth()+2;
+                  if(thisWeekLast > lastDate.getDate()){
+                    lastN = thisWeekLast - lastDate.getDate();
+                    thisWeekLast = lastN;
+                    nextMonth = today.getMonth()+2;
+                  }
+
+                }else if( thisWeekLast > lastDate.getDate() ) {
+                  lastN = thisWeekLast - lastDate.getDate();
+                  thisWeekLast = lastN;
+                  nextMonth = today.getMonth()+2;
+                  if ( thisWeekFirst > lastDate.getDate()) {
+
+                  }
+                }
+
+                if(nextMonth == 13){
+                  nextMonth = 1;
+                  nextYear = today.getFullYear()+1;
+                }
+
+                if(prevMonth < 10){
+                  prevMonth = "0" + prevMonth;
+                }
+                if(nextMonth < 10){
+                  nextMonth = "0" + nextMonth;
+                }
+
+                if( thisWeekFirst < 10 ){
+                  thisWeekFirst = "0" + thisWeekFirst;
+                }
+                if( thisWeekLast < 10 ){
+                  thisWeekLast = "0" + thisWeekLast;
+                }
+
+                $("#thisWeekFirst").text(prevYear + "." + prevMonth + "." + thisWeekFirst) ;
+                $("#thisWeekLast").text(nextYear + "." + nextMonth + "." + thisWeekLast);
+
+                period = 8;
+                tdN = "";
+                //dateN = today.getFullYear() + "." + today.getMonth() + "." + today.getDate() - today.getDay();
+
+                //today = new Date(today.getFullYear(), today.getMonth(), (today.getDate() - today.getDay()-7));
+                $("#calndar_attend").html("");
+
+                function getDateRange(startDate, endDate, listDate) {
+                  var dateMove = new Date(startDate);
+                  var strDate = startDate;
+                  if (startDate == endDate) {
+                    var strDate = dateMove.toISOString().slice(0,10);
+                    listDate.push(strDate);
+                  }else{
+                    while (strDate < endDate) {
+                      var strDate = dateMove.toISOString().slice(0, 10);
+                      listDate.push(strDate);
+                      dateMove.setDate(dateMove.getDate() + 1);
+                    }
+                  }
+                  return listDate;
+                };
+
+                var listDate = [];
+                startDay = today.getFullYear() + "-" + prevMonth + "-" + thisWeekFirst;
+                endDay = today.getFullYear() + "-" + nextMonth + "-" + thisWeekLast;
+                getDateRange( startDay, endDay, listDate);
+
+                for(i=0; i<period; i++){
+                  tag = "";
+                  tag += "<tr>";
+                  tag += "<td class='ac'>" + parseInt(i+1) + "</td>";
+                  for(tdN=0; tdN<7; tdN++){
+                    if(tdN == 0){
+                      tag += "<td class='ac' data-dateN=" + listDate[tdN] + ">";
+                    }else if(tdN == 1){
+                      tag += "<td class='ac' data-dateN=" + listDate[tdN] + ">";
+                    }else if(tdN == 2){
+                      tag += "<td class='ac' data-dateN=" + listDate[tdN] + ">";
+                    }else if(tdN == 3){
+                      tag += "<td class='ac' data-dateN=" + listDate[tdN] + ">";
+                    }else if(tdN == 4){
+                      tag += "<td class='ac' data-dateN=" + listDate[tdN] + ">";
+                    }else if(tdN == 5){
+                      tag += "<td class='ac bg_gray01' data-dateN=" + listDate[tdN] + ">";
+                    }else if(tdN == 6){
+                      tag += "<td class='ac bg_gray01' data-dateN=" + listDate[tdN] + ">";
+                    }
+
+                    if(tdN == 0){
+                      tag += "<p class='txt_default mt0'>R을 사용한 데이터수집</p>";
+                      tag += "<a href='lecture_attend_list.html' class='btn_s_black mt5'>출결정보</a>";
+                    }else if(tdN == 1){
+                      tag += "<p class='txt_default mt0'>R을 사용한 데이터수집</p>";
+                      tag += "<a href='lecture_attend_list.html' class='btn_s_black mt5'>출결정보</a>";
+                    }else if(tdN == 2){
+                      tag += "<p class='txt_default mt0'>R을 사용한 데이터수집</p>";
+                      tag += "<a href='lecture_attend_list.html' class='btn_s_blue mt5'>출석체크</a>";
+                    }else if(tdN == 3){
+                      tag += "<p class='txt_default mt0'>R을 사용한 데이터수집</p>";
+                      tag += "<a href='lecture_attend_list.html' class='btn_s_blue mt5'>출석체크</a>";
+                    }else if(tdN == 4){
+                      tag += "<p class='txt_default mt0'>R을 사용한 데이터수집</p>";
+                    }
+
+                    tag += "</td>";
+                  }
+                  tag += "</tr>";
+                  $("#calndar_attend").append(tag);
+                }
+
+                $("#calndar_attend tr td").each(function(){
+                  if($(this).attr("data-dateN") == todays){
+                    $(this).css("background","#e9f8fa");
+                  }
+                });
+              }
+            </script>
+          </div>
+          <!-- EOD : tableScroll -->
+        </div>
+        <!-- EOD : layout_boxs -->
+
+        <div class="layout_boxs mobS">
+          <div class="calender_date">
+            <button class="btn_prev" title="이전" onclick="prevDateMob();"></button>
+            <p>
+              <span id="thisWeekFirstMob"></span>
+            </p>
+            <button class="btn_next" title="다음" onclick="nextDateMob();"></button>
+          </div>
+
+          <table class="table_veti mt20">
+            <caption>교시,요일로 구성된 진도/출석 상세</caption>
+            <colgroup>
+              <col width="80px"/>
+              <col width="*"/>
+            </colgroup>
+            <thead>
+            <tr>
+              <td>교시</td>
+              <td>수요일</td>
+            </tr>
+            </thead>
+            <tbody id="calndar_attendMob">
+            <!--
+              <tr>
+                <td class="ac">1</td>
+                <td class="ac">
+                  <span class="ico_cal01">출석</span>
+                  <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="ac">2</td>
+                <td class="ac">
+                  <span class="ico_cal02">지각</span>
+                  <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="ac">3</td>
+                <td class="ac">
+                  <span class="ico_cal03">조퇴</span>
+                  <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                  <button class="btn_s_black mt5">사유</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="ac">4</td>
+                <td class="ac">
+                  <span class="ico_cal04">결석</span>
+                  <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                  <button class="btn_s_black mt5">사유</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="ac">5</td>
+                <td class="ac">
+                  <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                  <button class="btn_s_blue mt5">현장체크하기</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="ac">6</td>
+                <td class="ac">
+                  <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="ac">7</td>
+                <td class="ac">
+                  <p class="txt_default mt0">R을 사용한 데이터수집</p>
+                </td>
+              </tr>
+            -->
+            </tbody>
+          </table>
+        </div>
+
+        <script>
+          $(function(){
+            buildMob();
+          });
+
+          var todayS = new Date(); // 오늘 날짜
+          var dateS = new Date();
+          var todayYearM = today.getFullYear(); //nowYear
+          var todayMonthM = (today.getMonth()+1); //nowMonth
+          var todayDateM = today.getDate(); //nowDay
+          var todayOfweekM = today.getDay(); //nowDayOfWeek
+          todayYearM += (todayYearM < 2000) ? 1900 : 0;
+          if(todayMonthM < 10){
+            todayMonthM = "0" + todayMonthM;
+          }
+          if(todayDateM < 10){
+            todayDateM = "0" + todayDateM;
+          }
+          var todayM = todayYearM + "-" + todayMonthM + "-" + todayDateM;
+
+          function prevDateMob(){
+            todayS = new Date(todayS.getFullYear(), todayS.getMonth(), todayS.getDate()-1);
+            buildMob();
+          }
+
+          function nextDateMob(){
+            todayS = new Date(todayS.getFullYear(), todayS.getMonth(), todayS.getDate()+1);
+            buildMob();
+          }
+
+          function buildMob(){
+            var nMonthM = new Date(today.getFullYear(), today.getMonth(), 1); //현재달의 첫째 날
+            var lastDateM = new Date(today.getFullYear(), today.getMonth() + 1, 0); //현재 달의 마지막 날
+
+            period = 7;
+            weekM = ["일","월","화","수","목","금","토"];
+            dateN = todayS.getDay();
+            dayOfWeekM = weekM[dateN];
+            todaysDate = todayS.getDate();
+            todayMonthM = (todayS.getMonth()+1);
+
+            if(todayMonthM < 10){
+              todayMonthM = "0" + todayMonthM;
+            }
+            if(todaysDate < 10){
+              todaysDate = "0" + todaysDate;
+            }
+
+            $("#thisWeekFirstMob").text(todayS.getFullYear() + "." + todayMonthM + "." + todaysDate);
+
+            $("#calndar_attendMob").html("");
+            tag = "";
+            for(i=0; i<period; i++){
+              tag += "<tr>";
+              tag += "<td class='ac'>" + parseInt(i+1) + "</td>";
+
+              if(i == 0){
+                tag += "<td class='ac' data-dateN=" +  $("#thisWeekFirstMob").text().replace(/\./g,'-') + ">";
+              }else if (i == 1){
+                tag += "<td class='ac' data-dateN=" +  $("#thisWeekFirstMob").text().replace(/\./g,'-') + ">";
+              }else if (i == 2){
+                tag += "<td class='ac bg_gray01' data-dateN=" +  $("#thisWeekFirstMob").text().replace(/\./g,'-') + ">";
+              }else if (i == 3){
+                tag += "<td class='ac bg_gray01' data-dateN=" +  $("#thisWeekFirstMob").text().replace(/\./g,'-') + ">";
+              }else if (i > 3){
+                tag += "<td class='ac' data-dateN=" +  $("#thisWeekFirstMob").text().replace(/\./g,'-') + ">";
+              }
+              tag += "<p class='txt_default mt0'>R을 사용한 데이터수집</p>";
+              if(i == 2){
+                tag += "<a href='lecture_attend_list.html' class='btn_s_black mt5'>출결정보</a>";
+              }else if (i == 3){
+                tag += "<a href='lecture_attend_list.html' class='btn_s_black mt5'>출결정보</a>";
+              }else if (i == 4){
+                tag += "<a href='lecture_attend_list.html' class='btn_s_blue mt5'>출석체크</a>";
+              }
+              tag += "</tr>";
+            }
+            $("#calndar_attendMob").append(tag);
+
+            $("#calndar_attendMob").siblings("thead").find("td").eq(1).text(dayOfWeekM + "요일");
+
+            $("#calndar_attendMob tr td").each(function(){
+              if($(this).attr("data-dateN") == todayM){
+                $(this).css("background","#e9f8fa");
+              }
+            });
+          }
+        </script>
+
+      </div>
+      <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+  </section>
+    <!-- EOD : contentLayout -->
+
+  <!-- popup_wrap -->
+  <section class="popup_wrap" id="popup01">
+    <!-- popup_Box -->
+    <div class="popup_Box">
+      <!-- popup_BoxIn -->
+      <div class="popup_BoxIn">
+        <div class="popupH">인증하기<a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup01','close');" title="닫기"><img src="/images/classroom/template4/resp/default/icon_popup_close.png"></a></div>
+        <div class="popupCBox">
+          <div class="popupCBoxIn">
+
+            <h4 class="mt0 txt_black">인증번호 입력</h4>
+            <div class="inputBox Full">
+              <input type="password" placeholder="" id="">
+            </div>
+
+          </div>
+        </div>
+        <div class="popupF">
+          <button type="button" class="btn_m_blue" onclick="popupS('#popup01','close');">확인</button>
+        </div>
+      </div>
+      <!-- popup_BoxIn -->
+    </div>
+    <!-- EOD : popup_Box -->
+    <div class="popup_bg" onclick="popupS('#popup01','close');"></div>
+  </section>
+  <!-- EOD : popup_wrap -->
+
+</body>
+</html>

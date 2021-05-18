@@ -1,0 +1,1509 @@
+@charset "utf-8";
+
+table {
+	width: 100%;
+}
+.boardList table, .boardWrite, .boardView { 
+	border-top: solid 1px #1d66bf;	
+}
+.boardWrite th, .boardView th  {
+	border-bottom: solid 1px #d9dddf;
+	border-left: solid 1px #d9dddf;
+	background: #f5f7fa;	
+}
+.boardList td, .boardWrite td, .boardView td {
+	border-bottom: solid 1px #d9dddf;
+	border-left: solid 1px #d9dddf;
+}
+.boardList th:first-child, .boardWrite th:first-child, .boardView th:first-child,
+.boardList td:first-child, .boardWrite td:first-child, .boardView td:first-child {
+	border-left: none;
+}
+
+/* boardList - table */
+.boardList th  {
+	height: 45px;
+	border-bottom: solid 1px #d9dddf;	
+	text-align: center;
+	background: #f5f7fa;	
+}
+.boardList td  {
+	padding: 13px 10px 13px 10px;
+	text-align: center;
+}
+.boardList td.title {
+	text-align: left;
+}
+
+/* boardView */
+.boardView thead th  {
+	padding: 15px 15px 15px 15px;	
+	text-align: left;
+}
+.boardView td  {
+	padding: 13px 15px 13px 15px;
+}
+.boardView td .info span {
+	padding-right: 15px;
+	color: #313538;
+}
+.boardView td .info span:before {
+	color: #8e9599;
+}
+.boardView td .info .writer:before {
+	padding-right: 5px;
+    content: '등록자 :'; 
+}
+.boardView td .info .date:before {
+	padding-right: 5px;
+    content: '등록일 :';
+}
+.boardView td .info .hits:before {
+    padding-right: 5px;
+    content: '조회수 :';
+}
+.boardView + .boardList, .boardView + .boardWrite {
+	margin-top: 30px;
+}
+
+/* boardWrite */
+.boardWrite thead th {
+	width: auto;
+}
+.boardWrite th {
+	width: 20%;
+	padding: 10px 0 10px 0;
+}
+.boardWrite th.asterisk:before {
+	padding-right: 5px;
+	content: '*';
+    color: #f2444a;
+    font-weight: 400;
+}
+.boardWrite td  {
+	padding: 10px 10px 10px 10px;
+}
+.boardWrite td.month {
+	text-align: center;
+}
+.boardWrite td.week p span {
+	display: block;
+}
+.boardWrite td p.info {
+    color: #f2444a;
+}
+.boardWrite td.week,
+.boardWrite td.category {
+	border-left: 1px solid #d9dddf;
+}
+
+
+
+@media screen and (max-width: 767px) {
+	.boardList thead th, .boardList tbody td {
+		display: none;
+	}
+	.boardList tbody {
+	    border-top: solid 1px #d9dddf;
+	}
+	.boardList td.title {
+	    display: block;
+	    padding: 13px 10px 5px 10px;
+	    border-bottom: none;
+		border-left: none;
+	}	
+	.boardList td.date {
+		display: block;
+		padding: 0px 10px 13px 10px;
+		border-left: none;
+		text-align: left;
+		color: #7f868b;
+	 }
+	 .popup .boardList table {
+	 	display: table;
+	 	margin:  0px 0px 0px 0px;
+	 }
+	 .popup h6 + .boardList thead, .popup h6 + .boardList tbody {
+		display: table;
+		width: 100%;
+	}
+	.popup h6 + .boardList thead th, .popup h6 + .boardList tbody td {
+		display: table-cell;
+		width: 25%;
+	}
+	.popup h6 + .boardList thead th {
+		border-bottom: none;
+	}
+	.popup .contentsBox > .boardList thead {
+		display: none;
+	}
+	.popup .contentsBox > .boardList tbody {
+		display: block;
+		border-top: none;
+	}
+	.popup .contentsBox > .boardList tbody tr {
+		display: table;
+		width: 100%;
+	}
+	.popup .boardList .title {
+		display: block;
+	    width: 100%;
+	    padding: 13px 10px 13px 10px;
+	    border-bottom: solid 1px #d9dddf;
+		background: #f5f7fa;
+	}
+	.popup .boardList .period,
+	.popup .boardList .total,
+	.popup .boardList .grade,
+	.popup .boardList .time, 
+	.popup .boardList .sort,
+	.popup .boardList .number {
+		float: left;
+		display: inline-block;
+	}
+	.popup .boardList .title + .period {width: 50%; border-left: none;}
+	.popup .boardList .title + .period + .total {width: 25%; }
+	.popup .boardList .title + .period + .total + .grade {width: 25%; }
+	
+	.popup .boardList .title + .sort {width: 25%; border-left: none;}
+	.popup .boardList .title + .sort + .time {width: 25%; }
+	.popup .boardList .title + .sort + .time + .total {width: 25%; }
+	.popup .boardList .title + .sort + .time + .total + .grade {width: 25%; }
+
+	.popup .boardList .title + .period {width: 50%; border-left: none;}
+	.popup .boardList .title + .period + .sort {width: 25%; }
+	.popup .boardList .title + .period + .sort + .total {width: 25%; }
+
+
+	.popup .task .boardList tbody {
+		border-top: none;
+	}
+	.popup .task .boardList tbody tr {
+		clear: both;
+		position: relative;
+		display: block;
+	}
+	.popup .task .boardList .number {
+		width: 10%; 
+		background: #f5f7fa;
+	}
+	.popup .task .boardList .number + .sort {
+		width: 90%; 
+		padding-right: 80px;
+		background: #f5f7fa;
+	}
+	.popup .task .boardList .number + .sort  + .title {
+		display: inline-block;
+	    width: 100%;
+	    background: #ffffff;
+	}
+	.popup .task .boardList .number + .sort  + .title + .grade {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 80px;
+		border-bottom: solid 1px #d9dddf;
+		background: #f5f7fa;
+}
+ 
+
+	.boardWrite th, .boardView th {
+		white-space: nowrap;
+		padding: 0 10px 0 10px;
+	}
+	.boardView th.title {
+		display: block;
+		white-space: normal;
+	}
+	.boardWrite td, .boardView td {
+		border-left: none;
+	}
+	.boardWrite tbody td {
+		display: block;
+	}
+	.boardWrite tbody .month, .boardWrite .week {
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+	.boardWrite tbody .month {
+		font-weight: 700;
+	    background: #f5f7fa;
+	}
+	.boardWrite .week {
+		font-weight: bold;
+		background: #f9f9f9;
+	}
+	.boardWrite td.week p {
+		line-height: 22px;
+	}
+	.boardWrite td.week p span {
+		display: inline-block;
+		margin-left: 10px;
+		margin-top: -4px;
+	}
+	.boardWrite table thead {
+		display: none;
+	}
+	.boardWrite td.category {
+		font-weight: 700;
+	}
+	
+	
+	
+/* 	.boardWrite .week + td, .boardWrite tbody tr+tr td:first-child { */
+/* 		display: none; */;
+/* 	} */
+	.content .info {
+		padding-bottom: 10px;
+		color: #1d66bf;
+	}
+}
+@media screen and (max-width: 414px) {
+	.popup .boardList .title + .period {width: 100%; border-left: none;}
+	.popup .boardList .title + .period + .total {width: 50%; border-left: none;}
+	.popup .boardList .title + .period + .total + .grade {width: 50%; }
+	
+	.popup .boardList .title + .sort {width: 30%; border-left: none;}
+	.popup .boardList .title + .sort + .time {width: 25%; }
+	.popup .boardList .title + .sort + .time + .total {width: 20%; }
+	.popup .boardList .title + .sort + .time + .total + .grade {width: 20%; }
+
+	.popup .boardList .title + .period {width: 100%; border-left: none;}
+	.popup .boardList .title + .period + .sort {width: 50%; border-left: none;}
+	.popup .boardList .title + .period + .sort + .total {width: 50%; }	
+}
+
+
+
+/* 공통 - boardList ul type */
+.content .info {
+	color: #1d66bf;
+}
+.warning {
+    color: #f2444a;
+}
+.boardList ul li div {
+	min-height: 40px;
+	line-height: 18px;
+padding: 10px 10px 10px 10px;	
+}
+.boardList .state > p {
+	margin-top: 3px;	
+}
+.boardList .state > p:first-child {
+	margin-top: 0px;	
+}
+.boardList .point {
+	margin-top: 8px;
+	padding: 15px;
+	color: #1d66bf;
+	background: #f9f9f9;
+}
+.boardList .check {
+	vertical-align: top;
+}
+.check .radioncheckbox label {
+	display: inline-block;
+	margin: 0 5px 0 10px ;
+}
+.check .radioncheckbox label:first-child {
+	margin: 0 5px 0 0px ;
+}
+.check .radioncheckbox input {
+	margin-right: 5px;
+}
+.boardList ul li div.content {
+    padding: 15px;
+    color: #1d66bf;
+    background: #f9f9f9;
+}
+.boardList ul li div.content ul li {
+	text-align: left;
+	border: none;
+	padding: 3px 0 3px 0;
+}
+.boardList.type3 .title p {
+	color: #61696f;
+}
+.boardList.type3 .content > p > span {
+	color: #f2444a;
+}
+.boardList.type3 .content > p > span:before {
+	content: '[';
+}
+.boardList.type3 .content > p > span:after {
+	content: ']';
+	margin-right: 5px;
+}
+
+@media screen and (min-width: 1001px) {
+	/* boardList - ul */
+	.boardList > ul { 
+		border-top: solid 1px #d9dddf;	
+	}
+	.boardList ul li {
+		display: table;
+		width: 100%;
+		border-top: solid 1px #d9dddf;
+	}
+	.boardList ul li div {
+		display: table-cell;
+		
+		border-left: solid 1px #d9dddf;
+		text-align: center;
+	}
+	.boardList ul li div:first-child {
+		border-left: none;	
+	}
+	.boardList > ul {
+		border-bottom: solid 1px #d9dddf;	
+	}
+	.boardList > ul > li:first-child div {
+		height: 45px;	
+		line-height: 1.2em;
+		font-weight: 700;
+		letter-spacing: 0;
+		text-align: center;
+		vertical-align: middle;
+		background: #e9f1fb;
+	}
+	.boardList > ul > li:first-child, 
+	.week > ul > li:first-child,
+	.period > ul > li:first-child {border-top: none;}
+	
+	/* 평가참여방법  */
+	.boardList.standard ul li div {
+		padding: 8px 10px 8px 10px;
+	}
+	.boardList.standard ul li div:first-child {
+		letter-spacing: -0.5px;	
+	}
+	.boardList ul li div.number { 
+		width: 120px;
+	}
+	.boardList .title {
+		text-align: left;
+	}
+	.boardList .month {
+		width: 70px;
+	}
+	.boardList .week {
+		width: 690px;
+	}
+	.boardList ul li div.week {
+		padding: 0;
+	}
+	.boardList > ul > li:first-child .week {
+		width: 70px;
+	}
+	.boardList ul li div.period {
+		width: 200px;
+	}
+	.boardList .range { 
+		width: 140px;
+	}
+	.boardList .state { 
+		width: 140px;
+	}
+	.boardList ul li div.total {
+		width: 140px;
+	}
+	.boardList .grade {
+		width: 100px;
+	}
+	.boardList ul li div.sort {
+		width: 70px;
+	}
+	.boardList .check {
+		width: 150px;
+	}
+	.boardList .check .radioncheckbox {
+		padding: 0;
+	}
+	.boardList .state.type2 {
+		width: 280px;
+	}
+	.boardList ul li div.week li div:first-child {
+		width: 69px;
+	}
+	.boardList ul li div.time  {
+		width: 120px;
+	}
+	.boardList.type2 .month {
+		width: 70px;
+	}
+	.boardList.type2 .period {
+		width: 180px;
+		letter-spacing: -0.2px;
+		padding: 0px 8px 0px 8px;
+	}
+	.boardList.type2 .period.type2 {
+		width: 110px;
+	}
+	.boardList.type2 ul li div.period {
+		padding: 0;
+	}
+	.boardList.type2 ul li div.period ul li div.period {
+		padding: 11px 8px 11px 8px;
+	}
+	.boardList.type2 .state {
+		width: 80px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.boardList.type2 .state + .state {
+		width: 100px;
+	}
+	.boardList.type2 .state .date {
+		letter-spacing: -0.5px;
+	}
+	.boardList.type2 .state.type2 {
+		width: 180px;
+	}
+	.boardList.type2 .state.type3 {
+		width: 345px;
+	}
+	.boardList.type2 .state.type4 {
+		width: 100px;
+	}
+	.boardList.type2 .state .warning {
+	    color: #f2444a;
+	}
+	.boardList.type2 > ul > li > .date {
+		width: 165px;
+	}
+	.boardList.type2 .grade {
+		width: 70px;
+	}
+	.boardList.type2 .grade.type2 {
+		width: 120px;
+		padding: 8px 5px 8px 5px;
+	}
+	.boardList.type2 .grade.type3 {
+		width: 130px;
+	}
+	.boardList.type2 .sort {
+		width: 90px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.boardList.type2 .sort.type2 {
+		width: 65px;
+	}
+	.boardList.type2 .sort.type3 {
+		width: 75px;
+	}
+	.boardList.type2 .total {
+		width: 75px;
+	}
+	.boardList.type2 .title {
+		text-align: center;
+	}
+	
+	/* 표준학습 계획서  */
+	.boardList.type3 .month, .boardList.type3 .sort {
+		width: 70px;
+	}
+	.boardList.type3 .title {
+		width: 200px;
+	}
+	.boardList.type3 > ul > li:first-child .content {
+		text-align: center;
+		background: #e9f1fb;
+	}
+	.boardList.type3 .content {
+		width: 240px;
+		text-align: left;
+		line-height: 18px;
+	    padding: 10px 10px 10px 10px;
+	    color: #313538;
+	    background: none;	
+	}
+	.boardList.type3 .period {
+		width: 110px;
+	}
+	.boardList.type3 .state {
+		width: 70px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.boardList > ul {
+		border-bottom: solid 1px #d9dddf;
+	}
+	.boardList li {
+		display: table;
+		width: 100%;
+		border-top: solid 1px #d9dddf;
+	}	
+	.boardList li:first-child {
+		border-top: none;
+	}	
+	.boardList li div:first-child {
+		border-left: none;
+	}	
+	.boardList li div {
+		display: table-cell;
+		padding: 10px 0px 10px 0px;
+		text-align: center;
+	}
+	.boardList > ul > li:first-child > div, 
+	.boardList > ul > li:first-child div.week,
+	.boardList > ul > li:first-child div.month,
+	.boardList > ul > li:first-child > .title,
+	.boardList > ul > li:first-child > .title +.grade,
+	.boardList > ul > li:first-child > .title +.grade + .number,
+	.boardList > ul > li:first-child > .title +.grade + .number + .time,
+	.boardList > ul > li:first-child > .title +.grade + .number + .time + .state { 
+		display: none;	
+	}
+	.boardList ul li .number + .title, .boardList ul li .sort + .title  {
+		width: auto;
+		border-bottom: none;
+		text-align: left;
+		background: none;
+	}
+
+	/* 학습 수행 활동 */
+	.boardList li > div.number {width: 20%; /* border-left: none; */	}
+	.boardList li > div.number + .title {width: 80%;	}	
+	/* 학습 체크 포인트 */
+	.boardList li > div.sort {width: 10%; border-left: none;	}
+	.boardList li > div.sort + .title {width: inherit;	}		
+	.boardList li > div.sort + .title + .check {width: 20%; padding: 10px 0px 10px 0px; }
+	.boardList li > div.sort + .title + .check .radioncheckbox {border-left: none; }
+	/* 보충/심화학습 */	
+	.boardList li > div.number + .total {width: 30%; }
+	.boardList li > div.number + .total + .study  {width: 50%; }
+	/* 학습목차/진도 */
+	.boardList > ul > li > .title {
+		display: block;
+		width: 100%;
+		border-bottom: solid 1px #d9dddf;
+		text-align: left;
+		background: #e9f1fb;
+	}
+	.boardList > ul > li > .title + .state {
+		display: block;
+		width: 100%;
+		text-align: right; 
+	}
+	
+	.boardList > ul > li > .title +.grade,
+	.boardList > ul > li > .title +.grade + .number,
+	.boardList > ul > li > .title +.grade + .number + .time,
+	.boardList > ul > li > .title +.grade + .number + .time + .state {
+		display: inline-block;
+	}
+	.boardList > ul > li > .title +.grade {width: 20%; }
+	.boardList > ul > li > .title +.grade + .number {width: 20%; }
+	.boardList > ul > li > .title +.grade + .number + .time {width: 30%; }
+	.boardList > ul > li > .title +.grade + .number + .time + .state {width: 30%; text-align: right; }		
+	/* 부가강의 */
+	.boardList li div.month { 
+		clear: both;
+		display: block;	
+		width: 100%;
+		border-left : none;
+		border-bottom: solid 1px #d9dddf;
+		text-align: left;
+		padding-left: 20px;
+		font-weight: 700;
+		background: #e9f1fb;
+	}	
+	.boardList li div.week {
+		clear: both;
+		display: block;
+		padding: 0px 0px 0px 0px;
+		border: none;
+	}
+	.boardList li div.week li {
+		display: table;
+		width: 100%;
+	}
+	/* .boardList li div.week li:first-child {  width: 10%;	border-top: none;	} */
+	.boardList li div.week li div:first-child + .title { width: 70%; }	
+	.boardList li div.week li div:first-child + .title + .state {  width: 20%;}	
+	/* 주차별학습(진행단계평가) */
+	.boardList li div.week li div:first-child + .period {width: 40%;}
+	.boardList li div.week li div:first-child + .period + .range { width: 15%;}
+	.boardList li div.week li div:first-child + .period + .range + .state {width: 15%;}
+	.boardList li div.week li div:first-child + .period + .range + .state + .state {width: 20%;}
+	/* 학습 수행 활동 - 주차별학습 */
+	.boardList li div.week li div:first-child + .period + .range + .state + .total {width: 20%;}
+	
+	.boardList.type2 > ul > li div {
+		float: left;
+		display: block;
+	}
+	
+	/* 과정설문 */
+	.boardList.type2 li:first-child .month,
+	.boardList.type2 li:first-child .number,
+	.boardList.type2 li:first-child .sort,
+	.boardList.type2 li:first-child .title,
+	.boardList.type2 li:first-child .period,
+	.boardList.type2 li:first-child .total,
+	.boardList.type2 li:first-child .state,
+	.boardList.type2 li:first-child .grade,
+	.boardList.type2 .state p.date {
+		display: none;
+	}	
+	.boardList.type2 .month,
+	.boardList.type2 .sort,
+	.boardList.type2 .title,
+	.boardList.type2 .period,
+	.boardList.type2 .total,
+	.boardList.type2 .state,
+	.boardList.type2 .grade {
+		display: inline-block;
+		border-left: none; 
+	}
+	.boardList.type2 > ul > li > .month {width: 50%; 
+		border-bottom: solid 1px #d9dddf; 
+		background: #e9f1fb;
+	}
+	.boardList.type2 > ul > li > .month + .sort {width: 50%; 
+		border-bottom: solid 1px #d9dddf;  
+		border-left: solid 1px #d9dddf; 
+		text-align: left; 
+		background: #e9f1fb;
+	}
+	.boardList.type2 > ul > li > .month + .sort + .title {width: 100%; 
+		border-bottom: solid 1px #d9dddf;
+	}
+	.boardList.type2 > ul > li > .month + .sort + .title + .period { width: 100%;
+		border-bottom: solid 1px #d9dddf; 
+		text-align: left;
+	}
+	.boardList.type2 > ul > li > .month + .sort + .title + .period + .state {width: 50%;}
+	.boardList.type2 > ul > li > .month + .sort + .title + .period + .state + .state {width: 50%;}
+	
+	/* 설문조사 */
+	.boardList.type2 > ul > li > .sort {width: 100%;
+		text-align: left;
+		border-bottom: solid 1px #d9dddf;
+    	background: #e9f1fb;	
+	} 
+	.boardList.type2 > ul > li > .sort + .grade {width: 50%;
+		position: relative;
+		float: right;
+		margin-top: -40px;
+		text-align: left;    
+		border-bottom: solid 1px #d9dddf;    
+		border-left: solid 1px #d9dddf;
+    	background: #e9f1fb;
+	}
+	.boardList.type2 > ul > li > .sort + .grade + .title {
+		background: #ffffff;
+	}
+	.boardList.type2 > ul > li > .sort + .grade + .title + .period + .state { width: 50%;}
+	.boardList.type2 > ul > li > .sort + .grade + .title + .period + .state + .state  { width: 50%;}
+	
+	.boardList.type2 > ul > li > .sort + .title {
+		background: #ffffff; 
+		border-bottom: solid 1px #d9dddf ; 
+		text-align: left;
+	}
+	.boardList.type2 > ul > li > .sort + .title + .period { width: 100%;
+		border-bottom: solid 1px #d9dddf; 
+		text-align: left;
+	}
+	.boardList.type2 > ul > li > .sort + .title + .period + .grade { width: 50%;}
+	.boardList.type2 > ul > li > .sort + .title + .period + .grade + .state  { width: 50%; }
+	
+	/* 토론 */
+	.boardList.type2 > ul > li > .sort.type2 {width: 100%;
+		text-align: left;
+		border-bottom: solid 1px #d9dddf;
+    	background: #e9f1fb;	
+	}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 {width: 100%;
+		text-align: left;
+		border-bottom: solid 1px #d9dddf;
+    	background: #ffffff;;	
+	}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title {width: 100%;
+		text-align: left;
+		border-bottom: solid 1px #d9dddf;
+    	background: #ffffff;;	
+	}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title + .state {width: 25%;}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title + .state + .state {width: 25%;}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title + .state + .state + .state {width: 25%;}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title + .state + .state + .state + .grade {width: 25%;}
+
+	/* 과제 */
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2  { width: 50%; padding-left: 20px;
+		border-left: solid 0px #d9dddf; }
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 { display: none;}
+	
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total {width: 50%;
+		border-bottom: solid 1px #d9dddf;
+		border-left: solid 1px #d9dddf;
+		text-align: left; } 
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total + .state {width: 25%;}
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total + .state + .state {width: 25%;}
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total + .state + .state + .state {width: 25%;}
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total + .state + .state + .state + .grade {width: 25%;}
+
+	/* 북러닝 - 최종평가 */
+	.boardList.type2 > ul > li > .sort + .sort.type2  { width: 50%; 
+		background: #f9f9f9;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period  {  display: none;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total { width: 50%;
+		border-left: solid 1px #d9dddf;
+		border-bottom: solid 1px #d9dddf;
+		background: #f9f9f9;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total + .state { width: 25%;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total + .state + .state { width: 25%;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total + .state + .state + .state { width: 25%;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total + .state + .state + .state + .grade { width: 25%;}
+
+	/* 이러닝 - 과제 */
+	.boardList.type2 > ul > li > .title {width: 100%;
+		border-bottom: solid 1px #d9dddf; 
+		text-align: left;
+	}
+	.boardList.type2 > ul > li > .title + .period  { width: 100%;
+		border-bottom: solid 1px #d9dddf; 
+		text-align: left;
+	}
+	.boardList.type2 > ul > li > .title + .period + .state  { width: 20%;}
+	.boardList.type2 > ul > li > .title + .period + .state + .state { width: 30%;}
+	.boardList.type2 > ul > li > .title + .period + .state + .state + .state { width: 20%;}
+	.boardList.type2 > ul > li > .title + .period + .state + .state + .state  + .grade,
+	.boardList.type2 > ul > li > .title + .period + .state + .state + .state  + .grade.type2  { width: 25%;}
+	/* 이러닝 - 평가 */
+	.boardList.type2 > ul > li > .sort + .sort.type3 { width: 50%;
+		position: relative;
+		float: right;
+		margin-top: -40px;
+		text-align: left;    
+		border-bottom: solid 1px #d9dddf;    
+		border-left: solid 1px #d9dddf;
+    	background: #e9f1fb;
+	}
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 { width: 70%;
+		border-bottom: solid 1px #d9dddf; 
+		background: #f9f9f9;}
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total { width: 30%; 
+		border-bottom: solid 1px #d9dddf; 
+		background: #f9f9f9;}
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total + .state { width: 20%; }
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total + .state + .state { width: 30%;}
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total + .state + .state + .state { width: 20%;}
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total + .state + .state + .state + .grade.type3 { width: 30%;}
+		
+	/* 스마트러닝  -진행단계평가,최종평가 */
+	.boardList.type2 > ul > li > .number {width: 25%; 
+		height: 40px;
+		display: inline-block;
+		border-bottom: solid 1px #d9dddf;
+		background: #e9f1fb;
+	}
+	.boardList.type2 > ul > li > .number + .total {width: 25%; 
+		border-bottom: solid 1px #d9dddf; 
+		background: #e9f1fb;
+	}
+	.boardList.type2 > ul > li > .number + .total + .date {width: 50%; 
+		border-bottom: solid 1px #d9dddf; 
+		display: inline-block;
+		background: #e9f1fb;
+	}
+	.boardList.type2 > ul > li > .number + .total + .date + .state {width: 25%;}
+	.boardList.type2 > ul > li > .number + .total + .date + .state + .state {width: 25%;}
+	.boardList.type2 > ul > li > .number + .total + .date + .state + .state + .state {width: 25%;}
+	.boardList.type2 > ul > li > .number + .total + .date + .state + .state + .state + .grade.type2 {width: 25%;}
+	
+	/* 표준학습계획서 */
+	.boardList.type3 > ul {
+		border-bottom: none; 
+	}	
+	.boardList.type3 li > div {
+		clear: both;
+		display: inline-block;
+		width: 100%;
+	}
+	.boardList.type3 li div.week {
+		margin-bottom: 20px;
+		border-bottom: solid 1px #d9dddf; 
+	}
+	.boardList.type3 li > div {		
+		border-left: none;
+	}
+	.boardList.type3 li:first-child > div {
+		display: none;
+	}	
+	.boardList.type3 li > div.sort {
+		width: 100%;
+		text-align: left;
+		border-bottom: solid 1px #d9dddf; 
+		background: #f9f9f9;
+	}
+	.boardList.type3 li div.week li div:first-child + .title {
+		width: 100%;
+		text-align: left;
+	}
+	.boardList.type3 li div.week li div:first-child + .title > p {
+		display: inline; 
+		margin-left: 5px; 
+	}
+	.boardList.type3 li > div.content {
+		width: 100%;
+		border-top: solid 1px #d9dddf; 
+		color: inherit;
+		text-align: left;
+		background: #ffffff;
+	}
+	.boardList.type3 li > div.period, .boardList.type3 li > div.state {
+		width: 50%;
+		border-top: solid 1px #d9dddf; 
+		color: inherit;
+	}
+	.boardList.type3 li > div.state {
+		border-left: solid 1px #d9dddf;
+	}	
+}
+
+
+@media screen and (max-width: 800px) {
+	.boardList li div.check {
+		width: 15%;
+	}
+	.boardList li div.check .radioncheckbox {
+		min-width: 80px;
+	}	
+	.boardList li div.check .radioncheckbox > label { 
+	    display: block;
+	    margin-left: 0;
+	    margin-bottom: 5px;
+	    text-align: left;
+	}
+	.btnArea button {
+	   margin: 3px 0 3px 0;
+	}
+	.info + .btnArea {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.boardList li div {
+		padding: 0px 7px 0px 7px;
+	}	
+	.boardList li div.week {
+		display: block;
+		width: 100%;
+	}
+	.boardList li div.week li {
+		position: relative;
+	}
+	.boardList li div.week li div { 
+		float: left;
+		border: none;
+		background: #ffffff;
+	}
+	.boardList li div.week li div:first-child { 
+		width: 100%;
+		padding-left: 20px;
+		border-bottom: solid 1px #d9dddf;
+		text-align: left;
+		background: #f9f9f9;
+	}
+ 	/* 부가강의 */
+	.boardList li div.week li div:first-child + .title { width: 100%; }	
+	.boardList li div.week li div:first-child + .title + .state { 
+		width: 40%;	
+		display: block;
+		position: absolute;
+		top: -4px;
+		right: 0;
+		text-align: right;
+		background: transparent;
+	}	
+	/* 주차별학습(진행단계평가) */
+	.boardList li div.week li div:first-child + .period {
+		width: 70%;
+		position: relative;
+		float: right;
+		margin-top: -40px;
+		border-bottom: solid 1px #d9dddf;
+		text-align: left;
+		background: #f9f9f9;	
+	}
+	.boardList li div.week li div:first-child + .period + .range { width: 30%;}
+	.boardList li div.week li div:first-child + .period + .range + .state {width: 35%;}
+	.boardList li div.week li div:first-child + .period + .range + .state + .state {width: 35%;}	
+	/* 학습 수행 활동 - 주차별학습 */
+	.boardList li div.week li div:first-child + .period + .range + .state + .total {width: 35%;}
+	/* 학습목차/진도 */
+	.boardList > ul > li > .title +.grade {width: 20%; }
+	.boardList > ul > li > .title +.grade + .number {width: 15%; }
+	.boardList > ul > li > .title +.grade + .number + .time {width: 30%; }
+	.boardList > ul > li > .title +.grade + .number + .time + .state {width: 35%; }	
+	.inside {padding: 0 7px 0 7px;}	
+	.boardList.type3 li > div.period, .boardList.type3 li > div.state {
+		width: 100%;
+		border-left: none;
+		text-align: left;
+	}
+	.boardList.type3 li div.week li div:first-child + .title > p {
+		display: block; 
+		margin-left: 0px; 
+	}
+}
+
+@media screen and (max-width: 414px) {
+	/* 토론 */
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title + .state {width: 50%;}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title + .state + .state {width: 50%;}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title + .state + .state + .state {width: 50%; border-top: solid 1px #d9dddf;}
+	.boardList.type2 > ul > li > .sort.type2 + .period.type2 + .title + .state + .state + .state + .grade {width: 50%; border-top: solid 1px #d9dddf;}
+		 	
+	/* 과제 */
+	.boardList.type2 > ul > li > .month { width: 50%;}
+	.boardList.type2 > ul > li > .month + .sort  { width: 50%;}
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2  { width: 50%; background: #f9f9f9;} 
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total {width: 50%;  background: #f9f9f9;} 
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total + .state {width: 50%;}
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total + .state + .state {width: 50%;}
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total + .state + .state + .state {width: 50%; border-top: solid 1px #d9dddf;}
+	.boardList.type2 > ul > li > .month + .sort + .sort.type2 + .period.type2 + .total + .state + .state + .state + .grade {width: 50%; border-top: solid 1px #d9dddf;}
+	
+	/* 북러닝 - 최종평가 */
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total + .state { width: 50%;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total + .state + .state { width: 50%;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total + .state + .state + .state { width: 50%; border-top: solid 1px #d9dddf;}
+	.boardList.type2 > ul > li > .sort + .sort.type2 + .period + .total + .state + .state + .state + .grade { width: 50%; border-top: solid 1px #d9dddf;}
+	
+	/* 이러닝 - 과제 */
+	.boardList.type2 > ul > li > .title + .period + .state  { width: 50%;}
+	.boardList.type2 > ul > li > .title + .period + .state + .state { width: 50%;}
+	.boardList.type2 > ul > li > .title + .period + .state + .state + .state { width: 50%; border-top: solid 1px #d9dddf;}
+	.boardList.type2 > ul > li > .title + .period + .state + .state + .state  + .grade,
+	.boardList.type2 > ul > li > .title + .period + .state + .state + .state  + .grade.type2  { width: 50%; border-top: solid 1px #d9dddf;}	
+	
+	/* 이러닝 - 평가 */
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total + .state { width: 50%; }
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total + .state + .state { width: 50%;}
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total + .state + .state + .state { width: 50%; border-top: solid 1px #d9dddf;}
+	.boardList.type2 > ul > li > .sort + .sort.type3 + .period.type2 + .total + .state + .state + .state + .grade.type3 { width: 50%; border-top: solid 1px #d9dddf;}
+	
+	/* 스마트러닝  -진행단계평가,최종평가 */
+	.boardList.type2 > ul > li > .number + .total + .date + .state {width: 50%;}
+	.boardList.type2 > ul > li > .number + .total + .date + .state + .state {width: 50%;}
+	.boardList.type2 > ul > li > .number + .total + .date + .state + .state + .state {width: 50%; border-top: solid 1px #d9dddf;}
+	.boardList.type2 > ul > li > .number + .total + .date + .state + .state + .state + .grade.type2 {width: 50%; border-top: solid 1px #d9dddf;}
+}
+
+
+
+
+ /* agora */
+.comment {
+	overflow: auto;
+	position: relative;
+	padding: 20px;
+}
+.comment .box {
+	position: relative;
+}
+.comment .box+.box {
+	margin-top: 10px;
+}
+.comment div.category {
+	float: left;
+	width: 70%;
+	margin-top: 10px;
+}
+.comment textarea {
+	padding-right: 90px;
+	height: 66px;
+}
+.comment .listAttach {
+	position: relative;
+	float: left;
+	width: 70%;
+	padding: 0 0 0 70px;
+	margin-top: 15px;
+}
+.comment .listAttach li {
+	float: left;
+	margin-top: 0;
+	margin-bottom: 10px;
+	margin-right: 15px;
+}
+.comment .listAttach:before {
+	content: "첨부파일";
+	position: absolute;
+	top: 1px;
+	left: 0;
+	font-weight: 700;
+}
+.comment .listAttach.photo {
+	margin-top: 0;
+}
+.comment .listAttach.photo:before {
+	content: "첨부사진";
+}
+.comment .btnWrite {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 80px;
+	height: 66px;
+	padding: 0;
+	font-size: 1em;
+}
+.comment .btnArea {
+	float: right;
+	margin-top: 15px;
+}
+.comment .btnArea .btnAttach {
+	min-width: 36px;
+	height: 36px;
+	padding: 0;
+	font-size: 0;
+}
+.comment .btnArea .btnAttach.file {
+	margin-left: 4px;
+}
+.comment+.tab.type2 {
+	margin-top: 30px;
+}
+.profileImg {
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+.profileImg img {
+	width: 100%;
+	height: 100%;
+}
+.profileBg {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+.comment+.feed {
+	margin-top: 20px;
+}
+.feed li {
+	position: relative;
+	padding: 20px 0 20px 100px;
+}
+.feed li div.noData {
+	padding-right: 100px;
+	text-align: center;
+}
+.feed li .profileImg {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+.feed li .textBox {
+	display: inline-block;
+
+}
+.feed li .textBox .iconBox {
+	display: inline-block;
+}
+.feed li .textBox .name {
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.feed li .textBox>.iconBox {
+	margin-right: 4px;
+}
+.feed li .textBox>.name+button {
+	margin-left: 4px;
+}
+.feed li .btnFollow {
+	min-width: 69px;
+	height: 23px;
+	padding: 0;
+	font-size: 0.92em;
+}
+.feed li .btnUnfollow {
+	min-width: 83px;
+	height: 23px;
+	padding: 0;
+	font-size: 0.92em;
+}
+.feed li .btnDelete {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	min-width: 0;
+	width: 21px;
+	height: 21px;
+	padding: 0;
+	font-size: 0;
+}
+.feed li .textBox .content {
+	margin-top: 15px;
+}
+.feed li .textBox .content .category {
+    display: inline-block;
+    margin-top: -3px;
+    margin-right: 5px;
+}
+.feed li .textBox .share {
+	display: inline-block;
+	margin-right: 11px;
+	line-height: 1;
+}
+.feed li .textBox .share .icon {
+	padding: 0;
+	height: 13px;
+	line-height: 13px;
+	font-size: 13px;
+	font-family: 'Nanum Gothic','dotum', serif, arial;
+}
+.feed li .textBox .share .icon+.icon {
+	margin-left: 5px;
+} 
+.feed li .textBox .share .icon.like {
+	padding-left: 22px;
+}
+.feed li .textBox .share .icon.comment {
+	overflow: hidden;
+	margin-left: 15px;
+	padding-left: 35px;
+}
+.feed li .textBox .share .icon > strong {
+	display: inline-block;
+    margin-top: -3px;
+}
+.feed li .textBox .box { 
+	display: block;
+	margin-top: 15px;
+}
+.feed li .textBox .box .date {
+	float: right;
+}
+.feed li>.textBox .imgBox {
+	max-width: 50%;
+	margin: 15px 0 5px;
+}
+.feed li>.textBox .imgBox img {
+	width: auto;
+	max-width: 100%;
+}
+.feed li .view {
+	padding: 0;
+}
+.feed li>.box {
+	display: table;
+	width: 100%;
+	margin-top: 15px;
+	padding: 15px;
+}
+.feed li>.box .imgBox {
+	display: table-cell;
+	width: 180px;
+	vertical-align: top;
+}
+.feed li>.box .imgBox img {
+	width: 180px;
+	height: 135px;
+}
+.feed li>.box .textBox {
+	display: table-cell;
+	padding: 0 15px;
+	vertical-align: top;
+}
+.feed li>.box .textBox .title {
+	font-size: 1.15em;
+	font-weight: 700;
+}
+.feed li>.box .textBox p>strong {
+	display: inline-block;
+	margin-right: 10px;
+}
+.feed li>.box .textBox .share .icon {
+	height: 21px;
+	line-height: 21px;
+	padding-left: 21px;
+}
+.feed li .listAttach li {
+	padding: 0;
+}
+.feed li .view .comment {
+	margin-top: 20px;
+	padding: 0;
+}
+.feed li .view li {
+	margin-top: 20px;
+	padding-top: 20px;
+}
+.feed li .view li .profileImg {
+	width: 60px;
+	height: 60px;
+}
+.feed li .view li {
+	padding-left: 75px;
+}
+.feed li .view li .box {
+	overflow: auto;
+}
+.feed>.btnArea {
+	text-align: center;
+}
+ul.sort {
+	float: right;
+}
+.sort li {
+	float: left;
+}
+.sort li a {
+	display: inline-block;
+}
+.sort li:before {
+	content: "|";
+	margin-left: 10px;
+	padding-right: 8px;
+	font-size: 11px;
+	font-weight: 400;
+}
+.sort li:first-child:before {
+	display: none;
+}
+.sort li.active a {
+	padding-left: 19px;
+	font-weight: 700;
+}
+.commentList {
+	margin-top: 20px;
+}
+.commentList li {
+	display: table;
+    width: 100%;
+	padding: 13px 15px 13px 15px;
+}
+.commentList li.noData {
+	padding: 13px 0;
+	text-align: center;
+}
+.commentList li .icon.comment {
+	position: absolute;
+	top: 13px;
+	left: 20px;
+	overflow: visible;
+	display: block;
+	width: 26px;
+	height: 27px;
+	padding: 0;
+}
+.commentList li .btnDelete, .commentList li .btnModify, .commentList li .btnCancel {
+	min-width: 0;
+	width: 21px;
+	height: 21px;
+	border: none;
+	margin: 0 3px 0 3px;
+	padding: 0;
+	font-size: 0;
+}
+.commentList li p {
+	display: inline;
+	line-height: 25px;
+}
+.commentList li p:first-child > span {
+	display: inline-block;
+	padding-right: 10px;
+	margin-bottom: 5px;
+	line-height: 18px;
+	word-break: break-all;
+	
+}
+.commentList li p:first-child > input {
+	margin-bottom: 5px;
+}
+.commentList li p+p {
+	float: right;
+}
+.commentList li p+p .date:before {
+	content: " ";
+	display: inline-block;
+	height: 10px;
+	padding-left: 10px;
+	margin-left: 8px;
+}
+
+
+.totalList {
+	
+}
+.totalList em {
+	padding: 0 3px 0 0;
+	color: #f2444a;
+	font-style: normal;
+	font-weight: 700;
+}
+
+
+
+/* 도서배송현황 */
+.thumbnList.type2 { 
+/* 	margin-top: 20px; */
+	border-top: solid 1px #1d66bf;
+}
+.thumbnList.type2 ul li  {
+	border-bottom: solid 1px #d9dddf;
+	display: table;
+	width: 100%;
+}
+.thumbnList.type2 ul li:first-child div {
+	height: 45px;	
+	line-height: 45px;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-align: center;
+	vertical-align: middle;
+	background: #f5f7fa;
+}
+.thumbnList.type2 ul li > div  {
+}
+.thumbnList.type2 li .imgBox {
+	display: table-cell;
+    padding: 10px 10px 10px 10px;
+}
+.thumbnList.type2 li .textBox {
+	display: table-cell;
+    padding: 10px 10px 10px 10px;
+    vertical-align: top;
+}
+.thumbnList.type2 li .textBox > .iconBox {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.thumbnList.type2 li .textBox .title {
+	height: auto;
+	margin-bottom: 10px;
+	font-size: 1.23em; 
+	-webkit-box-orient: inherit;
+    white-space: inherit;
+    font-weight: 700;
+}
+.thumbnList.type2 li .textBox > .iconBox .device {
+	display: inline-block;
+	margin-left: 10px;
+}
+.thumbnList.type2 li .textBox .period,
+.thumbnList.type2 li .textBox .month
+.thumbnList.type2 li .textBox p.date {
+	line-height: 20px;
+}
+.thumbnList.type2 li .textBox .period > span,
+.thumbnList.type2 li .textBox .month > span,
+.thumbnList.type2 li .textBox p.writer > span,
+.thumbnList.type2 li .textBox p.date > span {
+	display: inline-block;
+	margin-top: -3px;
+	margin-right: 10px;
+	font-weight: 700;
+}
+
+.thumbnList.type2 li .table.delivery {
+	display: table;
+	width: 100%;
+	margin-bottom: 20px;
+	border-top: solid 1px #d9dddf;
+}
+.thumbnList.type2 li .table.delivery th {
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-bottom: solid 1px #d9dddf;
+	background: #f5f7fa;
+}
+.thumbnList.type2 li .table.delivery td {
+	padding: 13px 10px 13px 10px;
+	text-align: center;
+	border-bottom: solid 1px #d9dddf;
+	border-left: solid 1px #d9dddf;
+}
+.thumbnList.type2 li .table.delivery .delivery {
+	width: auto;
+}
+.thumbnList.type2 li .table.delivery .month  {
+	border-left: none;
+}
+
+@media screen and (max-width: 800px) {
+.thumbnList.type2 li .imgBox {
+		display: table-cell;
+		width: 100px;
+		height: 75px;
+	}
+	.thumbnList.type2 li .imgBox img {
+		width: 100px;
+		height: 75px;
+	}
+	.thumbnList.type2 li .textBox {
+		display: table-cell;
+	}
+	.thumbnList.type2 li .textBox > .iconBox {
+		margin-top: 0px;
+		margin-bottom: 5px;
+	}
+	.thumbnList.type2 li .textBox .title {
+		margin-bottom: 5px;
+	}	
+	.thumbnList.type2 li .table.delivery td {
+		padding: 5px;
+	}
+	.thumbnList.type2 li .table.delivery .date,
+	.thumbnList.type2 li .table.delivery .month {
+		display: none;
+	}
+	.thumbnList.type2 li .table.delivery .title  {
+		border-left: none;
+	}
+	.thumbnList.type2 li .table.delivery td.state > p + p {
+		display: none;
+	}
+	.thumbnList.type2 li .table.delivery td .btnReceive {
+		letter-spacing: -0.5px;
+		padding: 0 5px 0 5px;		
+	}
+	.thumbnList.type2 li .table.delivery td .period > span,
+	.thumbnList.type2 li .table.delivery td .month > span {
+		display: none;
+	}
+}
+@media screen and (max-width: 480px) {
+	.thumbnList.type2 li .table.delivery {
+		margin-top: 10px;
+	}
+	.thumbnList.type2 li .table.delivery th {
+		display: none;
+	}
+	.thumbnList.type2 li .table.delivery td.title  {
+		display: block;
+		width: 100%;
+		padding: 10px 10px 10px 10px;
+		text-align: left;
+		line-height: 20px;
+		background: #f5f7fa;
+	}
+	.thumbnList.type2 li .table.delivery td.state, 
+	.thumbnList.type2 li .table.delivery td.delivery  {
+		display: inline-block;
+		width: 50%;
+		line-height: 26px;
+	}
+	.thumbnList.type2 li .table.delivery td.state {
+		border-left: none;
+	}
+	
+}
+
+
+

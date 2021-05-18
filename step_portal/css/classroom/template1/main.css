@@ -1,0 +1,832 @@
+@charset "utf-8";
+
+/* 강의실 홈  */
+.contentsBox.main { 
+    padding: 0px;	
+}
+.contentsBox.main  > .title {
+	display: block;
+	padding: 20px 26px 20px 50px;
+	border-bottom: solid 1px #e7e9ea;
+	line-height: 26px;
+	color: #3d4246;
+	font-size: 1.69em;
+	font-weight: 400;
+	background: url('/images/classroom/template1/gray/bullet_title.png') 25px 28px no-repeat;
+}
+
+.contentsBox.main > .box {
+	display: table;
+	width: 100%;
+}
+.contentsBox.main > .box > div {
+	display: table-cell;
+	width: 50%;
+	padding: 28px 25px 28px 25px;
+	vertical-align: top;
+	border-bottom: 1px solid #e7e9ea;	
+}
+.contentsBox.main > .box .learning, .contentsBox.main > .box .standard, .contentsBox.main > .box .question, .contentsBox.main > .box .agora,
+.contentsBox.main > .box .progressRate {
+	border-right: 1px solid #e7e9ea;	
+}
+.contentsBox.main > .box .activity, .contentsBox.main > .box .delivery, .contentsBox.main > .box .notice {
+}
+.contentsBox.main > .box .situation, .contentsBox.main > .box .situation.type2 {
+	width: 100%;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/*  그대로 */
+}
+@media screen and (max-width: 1000px) {
+	.contentsBox.main > .box .situation, .contentsBox.main > .box .situation.type2 {
+		display: none;
+	}
+}
+@media screen and (max-width: 767px) {
+	.contentsBox.main > .box {
+		display: block;
+		width: 100%;
+		border-bottom: 0px solid #e7e9ea;
+	}
+	.contentsBox.main > .box > div {
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 28px 25px 28px 25px;
+		border-right: none;
+		border-top: solid 1px #d9dddf;
+		border-bottom: solid 1px #c0c4c7;
+		background: #ffffff;
+	}
+	.contentsBox.main > .box .situation, .contentsBox.main > .box .situation.type2 {
+		display: none;
+	}
+	.contentsBox.main { 
+		background: #e7e9ea;
+		overflow: hidden;
+	}	
+	.contentsBox.main  > .title { 
+		overflow: hidden;
+	}
+	.contentsBox.main  > .title > .floatRight {
+		display: block;
+	}
+	.contentsBox.main > .box > div.learning {
+		min-height: 293px;
+		border-top: none;
+	}
+}
+@media screen and (max-width: 480px) {
+	.contentsBox.main  > .title { 
+		padding: 20px 26px 10px 50px;
+	}
+	.contentsBox.main  > .title > .floatRight {
+		clear: both;
+		width: 100%;
+		margin-top: 10px;
+		text-align: center;
+	}
+	.contentsBox.main  > .title > .floatRight > button {
+		min-width: 70%;
+		width: 70%;
+		margin: 3px 0 2px 0;
+	}
+}
+
+
+/* 주차별학습 (진행단계평가) */
+.learning.default {
+	width: 404px;
+	height: 293px;
+	background: url('/images/classroom/template1/default/img_default_learning.png') no-repeat;		
+}
+.learning .box {
+	position: relative;
+	display: block;
+	padding: 0 25px 0 25px;
+}
+.learning .box button {
+	position: absolute;	
+	top: 35px;
+	display: block;
+	min-width: 20px;
+	height: 107px;
+	padding: 0 10px 0 10px;
+	border: none;
+	font-size: 0;
+}
+.learning .box .btnPrev {
+	left: -10px;
+	background: url('/images/classroom/template1/button/btn_prev.png') 0px 0px no-repeat;
+}
+.learning .box .btnPrev:hover {
+	background: url('/images/classroom/template1/button/btn_prev.png') -20px 0px no-repeat;
+}
+.learning .box .btnNext {
+	right: -10px;	
+	background: url('/images/classroom/template1/button/btn_next.png') 0px 0px no-repeat;
+}
+.learning .box .btnNext:hover {
+	background: url('/images/classroom/template1/button/btn_next.png') -20px 0px no-repeat;
+}
+.learning ul {
+	margin-bottom: -18px;
+}
+.learning li {
+	display: table;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.learning li > div {
+	display: table-cell;
+	width: calc(25% - 38px);
+	background: url('/images/classroom/template1/gray/bg_learning.png') repeat-x 0 18px;	
+}
+.learning li > div:first-child {
+	width: 38px;
+}
+.learning li > div > div, .learning li > div > a {
+	display: block;
+	width: 38px;
+	height: 38px;
+	margin-left: calc(100% - 38px);
+	line-height: 38px;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-weight: 700;
+    text-align: center; 
+}
+.learning li > div > a:hover {    
+    text-decoration: none;
+}
+.learning li div > p {
+	display: block;
+	width: 38px;
+	margin-left: calc(100% - 38px);
+	text-align: center;
+	letter-spacing: -1px;
+}
+.learning li div .done {
+    color: #494f54;
+    border: solid 1px #e2e5e6;
+    background: #e2e5e6;
+}
+.learning li div .done:hover {
+    color: #494f54;
+    border: solid 1px #494f54;
+    background: #e2e5e6;
+}
+.learning li div .not {
+    color: #ffffff;
+    letter-spacing: -1px;
+    border: solid 1px #61696f;
+    background: #61696f;
+}
+.learning li div .not:hover {
+    color: #61696f;
+    letter-spacing: -1px;
+    border: solid 1px #61696f;
+    background: #ffffff;
+}
+.learning li div .join {
+    color: #ffffff;
+    border: solid 1px #f2444a;
+    background: #f2444a;
+}
+.learning li div .join:hover {
+    color: #f2444a;
+    border: solid 1px #f2444a;
+    background: #ffffff;
+}
+.learning li div .ready {
+    font-size: 0;
+    border: solid 3px #c3c7ca;
+	background: url('/images/classroom/template1/gray/bg_learning_ready.png') no-repeat -3px -3px;		    
+}
+
+/* 학습진도율 */
+.contentsBox.main > .box .progressRate h4 {
+	line-height: 34px;
+}
+.contentsBox.main > .box .progressRate h4 > .btnLearning {
+	float: right;
+	font-size: 15px;
+}
+.progressRate > div {
+	display: table;
+	width: 100%;
+	margin-bottom: 20px;	
+}
+.progressRate .present {
+	margin-bottom: 40px;	
+}
+.progressRate > div > span {
+	display: table-cell;
+	width: 85px;
+	padding-right: 10px;
+	font-weight: 700;
+	text-align: right;
+}
+.progressRate .present > span {
+	font-size: 15px;	
+}
+.progressRate .average > span,
+.progressRate .recommend > span {
+	color: #494f54;
+}
+.progressRate .graph {
+	display: table-cell;
+	position: relative;
+	padding-right: 50px;
+}
+.progressRate .graph:after {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	width: 40px;
+	content: '100%';
+	color: #9da4a8;	
+}
+.progressRate .present .graph:after {
+	top: 10px;	
+}
+.progressRate .graph .rate {
+	clear: both;
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 15px;
+	background: #ebebeb;
+}
+.progressRate .present .graph .rate {
+	height: 40px;
+}
+.progressRate .graph .rate > span {
+	position: absolute;
+	top: 0;
+	left: 0;	
+	height: inherit;
+}
+.progressRate .graph .rate > span > span {
+	position: absolute;
+	bottom: -105%;
+	right: -20px;
+	height: inherit;
+	font-weight: 700;
+}
+.progressRate .present .graph .rate > span {
+	font-size: 20px;
+	color: #f2444a;
+	background: #f2444a;	
+}
+.progressRate .present .graph .rate > span > span {
+	bottom: -110%;	
+	right: -30px;
+}
+.progressRate .average .graph .rate > span {
+	color: #40b67d;	
+	background: #40b67d;
+}
+.progressRate .recommend .graph .rate > span {
+	color: #40b699;	
+	background: #40b699;
+}
+
+
+/* 강의실 홈 - table style */
+.main .box table {
+	border : solid 1px #d9dddf;
+	border-bottom: none;
+} 
+.main .box th {
+	line-height: 1.2em;
+	background: #e9f1fb;
+}
+.main .box th, .main .box td {
+	border-bottom : solid 1px #dce1e5;
+}
+
+
+/* 평가활동 */
+.activity h4 { 
+	line-height: 26px;
+}
+.activity h4 > a.btnView {
+    padding: 5px 14px 6px 14px;
+	border: 1px solid;
+	font-weight: 400;
+	font-size: 13px;
+	text-decoration: none;
+}
+/* .activity h4 > a.btnView:hover {
+	font-weight: 700;	
+} */
+.activity .btnView {
+	min-width: 20px;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    padding: 0;
+    border: none;
+    text-indent: -99999px;
+	background: url('/images/classroom/template1/button/btn_view.png') no-repeat;	
+}
+.activity .title {
+	width: 140px;
+	height: 46px;
+	border-right : solid 1px #d9dddf;
+}
+.activity .state {
+	width: 90px;
+	color: #f2444a;
+	font-weight: 700;
+	text-align: center;
+}
+.activity .number {
+	text-align: center;
+	font-size: 15px;
+	font-weight: 700;	
+}
+.activity .number p {
+	color: #494f54;
+}
+.activity .number p:first-child {
+	color: #7f868b;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: -1px;	
+}
+.activity .number p > span {
+	display: inline-block;
+	margin-top: -4px;
+	color: #f2444a;
+	vertical-align: 0px;
+}
+
+@media screen and (max-width: 413px) {
+	.main .box .activity table {
+		border: solid 1px #d9dddf;
+		border-top: none;
+		border-left: none;
+	} 
+	.main .box .activity th {
+		display: block;
+		width: 100%;
+		line-height: 45px;
+		text-align: left;
+		padding-left: 20px;
+		
+	}
+	.main .box .activity td {
+		display: inline-block;
+		width: 50%;
+		height: inherit;
+		padding: 15px 0 15px 0;
+	}	
+	.main .box .activity th, .main .box .activity td {
+		border  : none;
+		border-top : solid 1px #d9dddf;
+		border-left : solid 1px #d9dddf;
+}
+	.main .box .activity .title {
+		
+	}
+	.main .box .activity .state {
+		
+	}
+	.activity .number p {
+		display: inline;
+		margin: 0 5px 0 5px;
+	}	
+}	
+
+/* 수료기준안내 */
+.main .standard th {
+	height: 45px;
+	border-left : solid 1px #d9dddf;	
+}
+.main .standard th:first-child {
+	width: 100px;
+	border-left : none;		
+}
+.main .standard td {
+	padding: 5px 10px 5px 10px;
+	border-right : solid 1px #d9dddf;
+	letter-spacing: -0.5px;
+	color: #494f54;	
+}
+.main .standard td:first-child {
+	line-height: 15px;
+}
+.main .standard td p {
+	margin-top: 3px;
+}
+.main .standard td p:first-child {
+	margin-top: 0px;
+}
+.main .standard td p > span {
+	display: block;
+}
+.main .standard td strong {
+	margin-right: 10px;
+	color: #313538;	
+}
+
+/* 도서 배송 현황 */
+.delivery > .box {
+	 margin-top: 31px;
+}
+.delivery .imgBox {
+	display: table-cell;
+	float: left;
+	width: 105px;
+	height: 154px;
+	border: solid 1px #d9dddf;
+	background: url('/images/classroom/template1/default/img_default_book.png') no-repeat;
+}
+.delivery .imgBox img {
+	width: 100%;
+	height: 100%;
+}
+.delivery .textBox {
+	display: table-cell;
+	padding-left: 14px;
+	vertical-align: top;
+}
+.delivery .textBox .title {
+	height: 40px;
+	margin-bottom: 10px;
+	vertical-align: middle;
+	color: #313538;
+	font-size: 1.15em;
+	line-height: 20px;
+	font-weight: 700;	
+}
+.delivery .textBox .state {
+	margin-bottom: 10px;
+	color: #f2444a;
+	line-height: 26px;
+}
+.delivery .btnModify {
+	height: 26px;
+	margin-left: 12px;
+    padding: 0px 14px 0px 14px;
+	line-height: 22px;
+}
+.delivery .info > span {
+	display: block;
+	padding-left: 30px;
+	line-height: 22px;
+	background: url('/images/classroom/template1/gray/icon_delivery_info.png') no-repeat;		
+}
+.delivery .info {
+	color: inherit;
+}
+.delivery .info .address {
+	background-position: 0px 0px;
+}
+.delivery .info .tel {
+	background-position: 0px -22px;
+}
+.delivery .info .email {
+	background-position: 0px -44px;
+}
+.delivery .paging {
+	text-align: right;
+}
+.delivery .paging a {
+	width: 10px;
+	height: 10px;
+	margin-left: 5px;
+	font-size: 0;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+	border: 1px solid #c0c4c7;    
+	background: #c0c4c7;	
+}
+.delivery .paging a.active {
+	border: 1px solid #1d66bf;  	
+	background: #1d66bf;	
+}
+
+@media screen and (max-width: 767px) {
+	.delivery .imgBox {
+		display: none;
+	}
+	.delivery .textBox {
+		padding-left: 0px;
+	}
+	.delivery .textBox .title {
+		height:  auto;
+		margin-bottom: 10px;
+	}
+	.delivery .paging {
+		margin-top: 5px;
+	}	
+}
+
+/* 학습현황 */
+.main .situation .boardList > ul { 
+	border-top: solid 1px #d9dddf;	
+}
+.main .situation .boardList ul li {
+	display: table;
+	width: 100%;
+	border-top: solid 1px #d9dddf;
+}
+.main .situation .boardList ul li div {
+	display: table-cell;
+	padding: 10px 10px 10px 10px;
+	border-left: solid 1px #d9dddf;
+	text-align: center;
+}
+/* .main .situation .boardList ul li div:first-child {
+	border-left: solid 1px #d9dddf;
+} */
+.main .situation .boardList > ul {
+	border-bottom: solid 1px #d9dddf;	
+}
+.main .situation .boardList > ul > li:first-child div {
+	height: 45px;	
+	line-height: 1.2em;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-align: center;
+	vertical-align: middle;
+	background: #e9f1fb;
+}
+.main .situation .boardList > ul > li:first-child, 
+.main .situation .week > ul > li:first-child,
+.main .situation .period > ul > li:first-child {
+	border-top: none;
+}
+/* */
+.main .situation .boardList {
+	border-right: solid 1px #d9dddf;
+}
+.main .situation .boardList ul li,
+.main .situation .boardList ul li .final {
+	border-top: solid 1px #d9dddf;
+}
+.main .situation .boardList > ul > li:first-child,
+.main .situation .boardList ul li ul li:first-child,
+.main .situation .boardList ul li:first-child .final,
+.main .situation .boardList ul li .final .final {
+	border-top: none;
+}
+.main .situation .boardList > ul > li:first-child div {
+/* 	height: 45px; */
+	text-align: center;
+}
+.main .situation .boardList ul ul div ul {
+	border-bottom: none;
+}
+.main .situation .boardList ul li div { /* height */
+	height: 50px;
+	padding: 0px 0px 0px 0px;
+	border-left: solid 1px #d9dddf;
+}
+.main .situation .boardList ul li div.month,
+.main .situation .boardList ul li .final .title, 
+.main .situation .boardList ul li .final > ul > li > div.period {
+	border-left: none;
+}
+.main .situation .boardList ul li div.week {
+	border-left: none;
+	border-right: solid 1px #d9dddf;	
+}
+.main .situation .boardList > ul > li:first-child div {
+	vertical-align: inherit;
+	background: #e9f1fb;
+}
+/* th - width */
+.main .situation .boardList > ul > li:first-child .sort,
+.main .situation .boardLis ul li .sort {
+	width: 55px; 
+}
+.main .boardList .sort {
+	width: 55px;
+}
+.main .situation .boardList > ul > li:first-child .book,
+.main .situation .boardList ul li .book {
+	width: 137px;
+}
+.main .situation .boardList > ul > li:first-child .period,
+.main .situation .boardList ul li .month .week div:first-child .period {
+	width: 210px;
+}
+.main .situation .boardList > ul > li:first-child .study,
+.main .situation .boardList ul li .month .week div:first-child .study {
+	width: 97px;
+}
+.main .situation .boardList > ul > li:first-child .task,
+.main .situation .boardList > ul > li:first-child .test,
+.main .situation .boardList > ul > li:first-child .final,
+.main .situation .boardList > ul > li:first-child .grade,
+.main .situation .boardList ul li .grade {
+	width: 65px;
+	color: inherit;
+}
+.main .situation li .week div ul li .period,
+.main .situation li .week div ul li .study,
+.main .situation li .final .period li div { /* height */
+/* 	padding: 8px 0 8px 0; */
+}
+.main .situation .boardList ul li .grade {
+/* 	font-weight: 700; */
+	color: #f2444a;
+}
+.main .situation .boardList ul li .month {
+	width: 502px;
+}
+.main .situation .boardList ul li .month .week {
+	width: 438px;
+}
+.main .situation .boardList ul li .month .week div:first-child {
+	width: 307px;
+}
+.main .situation .boardList ul li .month .week div:first-child .period {
+	border-left: none;
+	letter-spacing: -0.5px;
+}
+.main .situation .boardList ul li .month .week .task,
+.main .situation .boardList ul li .month .week .test {
+	width: 65px;	
+}
+.main .situation .boardList ul li .month .week .study p {
+	color: #f2444a;
+}
+.main .situation .boardList ul li .month .week .study span {
+	display: block;
+	color: #313538;
+}
+.main .situation .boardList ul li .box.final {
+	display: table;
+	width: 694px; 
+}
+.main .situation .boardList ul li .box.final .period .time {
+	margin-left: 10px;
+}
+.main .situation .boardList ul li .box.final .title {
+	width: 191px;
+	text-align: center;
+/* 	padding: 8px 13px 8px 13px;
+	vertical-align: top; */
+}
+.main .situation .boardList ul li .box.final .period {
+	width: 437px;
+}
+.main .situation .boardList ul li .box.final .final {
+	width: 65px;
+}
+.main .situation .btnJoin {
+	min-width: 50px;
+	width: 50px;
+	height: 26px;
+	padding: 0px;
+	line-height: 22px;
+}
+
+/* 학습현황 - type2 */
+.main .situation.type2 .boardList {
+	border-right: none;
+}
+.main .situation.type2 .boardList th {
+	border-left: solid 1px #d9dddf;
+}
+.main .situation.type2 .boardList th:first-child {
+	border-left: none;
+}
+.main .situation.type2 .sort {
+	width: 16%;
+}
+.main .situation.type2 .grade {
+/* 	width: 16%; */
+	width: 20%;
+}
+.main .situation.type2 .rate {
+	width: 14%;
+}
+.main .situation.type2 .state {
+	width: 14%;
+}
+.main .situation.type2 .grade span {
+/* 	display: block; */
+	margin-right: 3px;
+    color: #f2444a;
+}
+.main .situation.type2 td.sort:first-child {
+	background: #f9f9f9;
+}
+
+
+
+/* 학습질문방, 공지사항 */
+.question, .notice, .agora {
+	position: relative;
+}
+.question li, .notice li {
+	line-height: 2.15em;
+}
+.question li a, .notice li a {
+	width: 260px;
+	display: inline-block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	line-height: 1;	
+}
+.question li span, .notice li span {
+	float: right;
+	color: #7f868b;
+}
+.question .btnMore, .notice .btnMore, .agora .btnMore {
+    position: absolute;
+    top: 24px;
+    right: 25px;
+    width: 26px;
+    height: 26px;
+    text-indent: -99999px;
+	background: url('/images/classroom/template1/button/btn_more.png') no-repeat 0 0;
+}
+.question .btnMore:hover, .notice .btnMore:hover, .agora .btnMore:hover {
+	background: url('/images/classroom/template1/button/btn_more.png') no-repeat 0 -27px;
+}
+
+/* 지식광장(아고라) */
+.agora ul li {
+	display: table;
+	width: 100%;
+	padding: 20px 0 20px 0;
+	border-bottom: solid 1px #f3f4f4;
+}
+.agora ul li:first-child {
+	padding: 0px 0 20px 0;
+}
+.agora .profileImg, .agora .textBox {
+	display: table-cell;
+}
+.agora .textBox {
+	padding-left: 15px;
+}
+.agora .textBox .name {
+	color: #494f54;
+	font-size: 15px;
+	font-weight: 700;
+}
+.agora .textBox .date {
+	float: right;
+	color: #7f868b;
+}
+.agora .textBox p {
+	margin-top: 5px;
+}
+.agora .profileImg {
+	margin: 0 auto;
+	width: 36px;
+	height: 36px;
+	background: url('/images/classroom/template1/default/img_default_profile.png') center center no-repeat;
+}
+.agora .profileImg img {
+	width: 100%;
+	height: 100%;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 799px) {
+	.question li a, .notice li a {
+		width: 230px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.question li, .notice li {
+		padding: 15px 0 0px 0;
+		border-top: solid 1px #e7e9ea;
+	}
+	.question li:first-child, .notice li:first-child {
+		padding: 0;
+		border-top: none;
+	}
+	.question li a, .notice li a {
+		width: 100%;
+		display: block;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		line-height: 1;	
+	}
+	.question li span, .notice li span {
+		float: none;
+		display: block;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+}
+

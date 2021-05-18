@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        팀원추가
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <!-- windowPopBoxIn -->
+        <div class="windowPopBoxIn">
+            <h3 class="mt0">빅데이터 수집 Part2</h3>
+            <div class="team_add">
+                <div class="team_add_L">
+                    <p class="tit">전체 학습자(80)</p>
+                    <div class="team_add_search">
+                        <span>검색</span>
+                        <div class="search"><input type="text"/></div>
+                        <button class="btn_s_blue">검색</button>
+                    </div>
+
+                    <div class="chk_team active">
+                        <input type="checkbox" id="chkAll" class="chk_all">
+                        <label for="chkAll">이름 / 아이디</label>
+                    </div>
+
+                    <div class="team_listBox">
+                        <ul class="team_list">
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk01">
+                                    <label for="teamChk01">김학생<br/>hsna@step.or.kr</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk02">
+                                    <label for="teamChk02">박학생<br/>hsna@step.or.kr</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk03">
+                                    <label for="teamChk03">이학생<br/>lee@step.or.kr</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk04">
+                                    <label for="teamChk04">최학생<br/>choi@step.or.kr</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk05">
+                                    <label for="teamChk05">정학생<br/>jeong@step.or.kr</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk06">
+                                    <label for="teamChk06">강학생<br/>kang@step.or.kr</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk07">
+                                    <label for="teamChk07">김학생<br/>hsna@step.or.kr</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk08">
+                                    <label for="teamChk08">박학생<br/>hsna@step.or.kr</label>
+                                </div>
+                            </li>
+                            <!-- 데이터가 없을때
+                            <li>
+                                <div class="noData">
+                                    <div class="noDataBox">
+                                        <span class="ico"></span>
+                                        <span class="txt">검색 결과가 없습니다.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            데이터가 없을때 -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="team_add_C">
+                    <a href="javascript:void(0)" class="team_add_btn01"></a>
+                    <a href="javascript:void(0)" class="team_add_btn02"></a>
+                </div>
+                <div class="team_add_R">
+                    <p class="tit">팀원(1)</p>
+                    <div class="team_add_search">
+                        <span>검색</span>
+                        <div class="search"><input type="text"/></div>
+                        <button class="btn_s_blue">검색</button>
+                    </div>
+                    <div class="chk_team active">
+                        <input type="checkbox" id="chkAll2" class="chk_all">
+                        <label for="chkAll2">이름 / 아이디</label>
+                    </div>
+                    <div class="team_listBox">
+                        <ul class="team_list">
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk09">
+                                    <label for="teamChk09">김학생<br/>hsna@step.or.kr</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="chk_team">
+                                    <input type="checkbox" id="teamChk10">
+                                    <label for="teamChk10">박학생<br/>hsna@step.or.kr</label>
+                                </div>
+                            </li>
+                            <!--
+                            <li>
+                                <div class="noData">
+                                  <div class="noDataBox">
+                                    <span class="ico"></span>
+                                    <span class="txt">검색 결과가 없습니다.</span>
+                                  </div>
+                                </div>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <script>
+
+                $(function(){
+                    teamArea();
+                    chkAll();
+                });
+
+                $(window).resize(function(){
+                    teamArea();
+                });
+
+                function teamArea(){
+                    teamH = $(".windowPopBox").outerHeight() - ($("h3").outerHeight() + $(".team_add_L .tit").outerHeight() + $(".team_add_search").outerHeight() + 25);
+                    $(".team_add").find(".team_listBox").eq(0).css("height", (teamH - $(".chk_team.active").outerHeight()) + "px");
+                    $(".team_add").find(".team_listBox").eq(1).css("height", (teamH - $(".chk_team.active").outerHeight()) + "px");
+                }
+
+                function chkAll(){
+
+                    $("input[class='chk_all']").click(function(){
+
+                        var chkA = $(this).closest("div").siblings(".team_listBox").find(".chk_team input[type='checkbox']");
+
+                        chkA.not(this).prop('checked', this.checked);
+
+                   })
+                }
+
+
+            </script>
+
+        </div>
+        <!-- EOD : windowPopBoxIn -->
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_black" onclick="">저장</button>
+        <button type="button" class="btn_m_blue" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

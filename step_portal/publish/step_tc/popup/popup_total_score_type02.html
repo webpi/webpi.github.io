@@ -1,0 +1,555 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/skin/skin_blue.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        총점 팝업
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template4/resp/default/icon/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <table class="table_hori mob_block">
+                    <caption>이름,아이디,휴대전화,과정명으로 이루어진 학생별 학습현황 상세</caption>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="25%">
+                        <col width="10%">
+                        <col width="*">
+                        <col width="10%">
+                        <col width="25%">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>이름</th>
+                        <td>홍길동</td>
+                        <th>아이디</th>
+                        <td>hong@korean.com</td>
+                        <th>휴대전화</th>
+                        <td>010-2356-4349</td>
+                    </tr>
+                    <tr>
+                        <th>과정명</th>
+                        <td colspan="5">한국교육기술대학교 혼합훈련 과정 – 윌비> 오프라인과정 – 윌비</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <div class="mt40">
+
+                <!-- tab_arrowBox -->
+                <div class="tab_arrowBox">
+                    <!-- tab_arrow -->
+                    <ul class="tab_arrow" role="tablist">
+                        <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>진도율</span></a></li>
+                        <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>중간평가</span></a></li>
+                        <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab03', this);"><span>최종평가</span></a></li>
+                        <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab04', this);"><span>과제</span></a></li>
+                        <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab05', this);"><span>토론</span></a></li>
+                        <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab06', this);"><span>팀프로젝트</span></a></li>
+                        <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab07', this);"><span>라이브세미나</span></a></li>
+                    </ul>
+                    <!-- EOD : tab_arrow -->
+                </div>
+                <!-- EOD : tab_arrowBox -->
+
+                <!-- 진도율 -->
+                <div class="tabBox active" id="tab01">
+                    <div class="tableScroll">
+                        <table class="table_veti mt40">
+                            <caption>차시,학습목차,진도율,학습횟수,최종학습일시로 이루어진 진도율 상세</caption>
+                            <colgroup>
+                                <col width="10%">
+                                <col width="*">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="25%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <td>차시</td>
+                                <td>학습목차</td>
+                                <td>진도율</td>
+                                <td>학습횟수</td>
+                                <td>최종학습일시</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="ac"><strong class="txt_point">1차시</strong></td>
+                                <td colspan="4"><strong class="txt_point">암호화폐(비트코인)</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">암호화폐(비트코인)</td>
+                                <td class="ac">100%</td>
+                                <td class="ac">2</td>
+                                <td class="ac">2020-04-23 23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="ac"><strong class="txt_point">2차시</strong></td>
+                                <td colspan="4"><strong class="txt_point">암호화폐(비트코인)</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">암호화폐(비트코인)</td>
+                                <td class="ac">100%</td>
+                                <td class="ac">2</td>
+                                <td class="ac">2020-04-23 23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="ac"><strong class="txt_point">3차시</strong></td>
+                                <td colspan="4"><strong class="txt_point">암호화폐(비트코인)</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">암호화폐(비트코인)</td>
+                                <td class="ac">100%</td>
+                                <td class="ac">2</td>
+                                <td class="ac">2020-04-23 23:00</td>
+                            </tr>
+                            <tr>
+                                <td class="ac"><strong class="txt_point">4차시</strong></td>
+                                <td colspan="4"><strong class="txt_point">암호화폐(비트코인)</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">암호화폐(비트코인)</td>
+                                <td class="ac">100%</td>
+                                <td class="ac">2</td>
+                                <td class="ac">2020-04-23 23:00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <!-- EOD : 진도율 -->
+
+                <!-- 중간평가 -->
+                <div class="tabBox" id="tab02">
+                    <!-- tableScroll -->
+                    <div class="tableScroll">
+                        <table class="table_normal">
+                            <caption>시험기간,문항수,응시여부,응시일,채점여부,채점일,점수로 이루어진 중간평가 상세</caption>
+                            <colgroup>
+                                <col width="*">
+                                <col width="7%">
+                                <col width="8%">
+                                <col width="12%">
+                                <col width="9%">
+                                <col width="12%">
+                                <col width="9%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">시험기간</th>
+                                <th scope="col">문항수</th>
+                                <th scope="col">응시여부</th>
+                                <th scope="col">응시일</th>
+                                <th scope="col">채점여부</th>
+                                <th scope="col">채점일</th>
+                                <th scope="col">점수</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>10</td>
+                                <td>응시완료</td>
+                                <td>2020.02.04</td>
+                                <td>채점완료</td>
+                                <td>2020.02.04</td>
+                                <td>32점</td>
+                            </tr>
+                            <tr>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>10</td>
+                                <td>응시완료</td>
+                                <td>2020.02.04</td>
+                                <td>채점완료</td>
+                                <td>2020.02.04</td>
+                                <td>72점</td>
+                            </tr>
+                            <tr>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>10</td>
+                                <td>응시완료</td>
+                                <td>2020.02.04</td>
+                                <td>채점완료</td>
+                                <td>2020.02.04</td>
+                                <td>52점</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- EOD : tableScroll -->
+                </div>
+                <!-- EOD : 중간평가 -->
+
+                <!-- 최종평가 -->
+                <div class="tabBox" id="tab03">
+                    <!-- tableScroll -->
+                    <div class="tableScroll">
+                        <table class="table_normal">
+                            <caption>시험기간,문항수,응시여부,응시일,채점여부,채점일,점수로 이루어진 최종평가 상세</caption>
+                            <colgroup>
+                                <col width="*">
+                                <col width="7%">
+                                <col width="8%">
+                                <col width="12%">
+                                <col width="9%">
+                                <col width="12%">
+                                <col width="9%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">시험기간</th>
+                                <th scope="col">문항수</th>
+                                <th scope="col">응시여부</th>
+                                <th scope="col">응시일</th>
+                                <th scope="col">채점여부</th>
+                                <th scope="col">채점일</th>
+                                <th scope="col">점수</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>10</td>
+                                <td>응시완료</td>
+                                <td>2020.02.04</td>
+                                <td>채점완료</td>
+                                <td>2020.02.04</td>
+                                <td>32점</td>
+                            </tr>
+                            <tr>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>10</td>
+                                <td>응시완료</td>
+                                <td>2020.02.04</td>
+                                <td>채점완료</td>
+                                <td>2020.02.04</td>
+                                <td>72점</td>
+                            </tr>
+                            <tr>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>10</td>
+                                <td>응시완료</td>
+                                <td>2020.02.04</td>
+                                <td>채점완료</td>
+                                <td>2020.02.04</td>
+                                <td>52점</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- EOD : tableScroll -->
+                </div>
+                <!-- EOD : 최종평가 -->
+
+                <!-- 과제 -->
+                <div class="tabBox" id="tab04">
+                    <!-- tableScroll -->
+                    <div class="tableScroll">
+                        <table class="table_normal">
+                            <caption>과제명,제출기간,제출여부,제출일,제출일,첨삭여부,첨삭일,점수로 이루어진 과제 상세</caption>
+                            <colgroup>
+                                <col width="7%">
+                                <col width="*">
+                                <col width="8%">
+                                <col width="12%">
+                                <col width="9%">
+                                <col width="12%">
+                                <col width="9%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">과제명</th>
+                                <th scope="col">제출기간</th>
+                                <th scope="col">제출여부</th>
+                                <th scope="col">제출일</th>
+                                <th scope="col">첨삭여부</th>
+                                <th scope="col">첨삭일</th>
+                                <th scope="col">점수</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>과제물A</td>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>제출완료</td>
+                                <td>2020.02.04</td>
+                                <td>미첨삭</td>
+                                <td>-</td>
+                                <td>32점</td>
+                            </tr>
+                            <tr>
+                                <td>과제물A</td>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>제출완료</td>
+                                <td>2020.02.04</td>
+                                <td>미첨삭</td>
+                                <td>-</td>
+                                <td>42점</td>
+                            </tr>
+                            <tr>
+                                <td>과제물A</td>
+                                <td>2020.02.04 ~ 2020.02.06</td>
+                                <td>제출완료</td>
+                                <td>2020.02.04</td>
+                                <td>첨삭완료</td>
+                                <td>-</td>
+                                <td>72점</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- EOD : tableScroll -->
+                </div>
+                <!-- EOD : 과제 -->
+
+                <!-- 토론 -->
+                <div class="tabBox" id="tab05">
+                    <!-- tableScroll -->
+                    <div class="tableScroll">
+                        <table class="table_normal">
+                            <caption>구분,중간평가,최종평가,과제,토론,팀프로젝트,라이브세미나 상세</caption>
+                            <colgroup>
+                                <col width="8%">
+                                <col width="*">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">토론주제</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">게시글</th>
+                                <th scope="col">댓글</th>
+                                <th scope="col">점수</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>찬반토론</td>
+                                <td>찬반토론 주제입니다.</td>
+                                <td><span class="txt_default">종료</span></td>
+                                <td>2개</td>
+                                <td>2개</td>
+                                <td>50점</td>
+                            </tr>
+                            <tr>
+                                <td>찬반토론</td>
+                                <td>찬반토론 주제입니다.</td>
+                                <td><span class="txt_point">진행</span></td>
+                                <td>2개</td>
+                                <td>2개</td>
+                                <td>50점</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- EOD : tableScroll -->
+                </div>
+                <!-- EOD : 토론 -->
+
+                <!-- 팀프로젝트 -->
+                <div class="tabBox" id="tab06">
+                    <!-- tableScroll -->
+                    <div class="tableScroll">
+                        <table class="table_normal">
+                            <caption>항목 , 강사평가 , 팀원평가 , 과제평가 , 본인평가로 이루어져 있는 팀 프로젝트 상세</caption>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">항목</th>
+                                <th scope="col">강사평가</th>
+                                <th scope="col">팀원평가</th>
+                                <th scope="col">과제평가</th>
+                                <th scope="col">본인평가</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>반영비율</th>
+                                <td>40%</td>
+                                <td>20%</td>
+                                <td>20%</td>
+                                <td>20%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- EOD : tableScroll -->
+
+                    <!-- tableScroll -->
+                    <div class="tableScroll">
+                        <table class="table_normal">
+                            <caption>구분 , 프로젝트 주제 , 게시글 수 , 화상채팅 횟수 , 과제점수 , 팀원평가 , 강사평가 , 총점으로 이루어진 팀 프로젝트 상세</caption>
+                            <colgroup>
+                                <col width="5%">
+                                <col width="*">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">진행</th>
+                                <th scope="col">프로젝트 주제</th>
+                                <th scope="col">게시글 수</th>
+                                <th scope="col">화상채팅 횟수</th>
+                                <th scope="col">과제점수</th>
+                                <th scope="col">팀원평가</th>
+                                <th scope="col">강사평가</th>
+                                <th scope="col">총점</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="txt_green">진행</span></td>
+                                <td class="al">중간평가 대체 과제</td>
+                                <td>5개</td>
+                                <td>3개</td>
+                                <td>30점</td>
+                                <td>50점</td>
+                                <td>30점</td>
+                                <td><span class="txt_green">100점</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="txt_black">종료</span></td>
+                                <td class="al">효율적인 빅데이터 분석방법에 대해서 알아보자</td>
+                                <td>3개</td>
+                                <td>3개</td>
+                                <td>미제출</td>
+                                <td>50점</td>
+                                <td>30점</td>
+                                <td><span class="txt_green">100점</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- EOD : 팀프로젝트 -->
+
+                <!-- 라이브세미나 -->
+                <div class="tabBox" id="tab07">
+                    <!-- tableScroll -->
+                    <div class="tableScroll">
+                        <table class="table_normal">
+                            <caption>제목 , 상태 , 참석여부 , 동영상 학습여부 , 점수로 이루어진 라이브세미나 상세</caption>
+                            <colgroup>
+                                <col width="*">
+                                <col width="5%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="10%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">제목</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">참석여부</th>
+                                <th scope="col">동영상 학습여부</th>
+                                <th scope="col">점수</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="al">첫번째 라이브 세미나</td>
+                                <td><span class="txt_red">대기</span></td>
+                                <td>
+                                    <p class="txt_default mg0">참석</p>
+                                    <p class="txt_default mg0">00:00:00</p>
+                                </td>
+                                <td>
+                                    <p class="txt_default mg0">미학습</p>
+                                </td>
+                                <td>53점</td>
+                            </tr>
+                            <tr>
+                                <td class="al">두번째 라이브 세미나</td>
+                                <td><span class="txt_green">진행</span></td>
+                                <td>
+                                    <p class="txt_default mg0">불참</p>
+                                    <p class="txt_default mg0">00:00:00</p>
+                                </td>
+                                <td>
+                                    <p class="txt_default mg0">학습</p>
+                                    <p class="txt_default mg0">00:00:00</p>
+                                </td>
+                                <td>53점</td>
+                            </tr>
+                            <tr>
+                                <td class="al">세번째 라이브 세미나</td>
+                                <td><span class="txt_black">종료</span></td>
+                                <td>
+                                    <p class="txt_default mg0">불참</p>
+                                </td>
+                                <td>
+                                    <p class="txt_default mg0">미학습</p>
+                                </td>
+                                <td>53점</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- EOD : tableScroll -->
+                </div>
+                <!-- EOD : 라이브세미나 -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_white" onclick="window.close(); return false;">확인</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+</body>
+</html>
+

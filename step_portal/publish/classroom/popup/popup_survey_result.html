@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        설문 참여
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <!-- table_veti -->
+                <table class="table_veti mobH">
+                    <caption>구분,설문지명,설문기간,문항수로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="14%">
+                        <col width="*">
+                        <col width="30%">
+                        <col width="3%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <td>구분</td>
+                        <td>설문지명</td>
+                        <td>설문기간</td>
+                        <td>문항수</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac">과정 만족도</td>
+                            <td>2020년 과정 만족도 설문</td>
+                            <td class="ac">2020-06-01 ~ 2020-06-03</td>
+                            <td class="ac">5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- mobS / 모바일에서만 보이는 영역 -->
+            <div class="mobS">
+                <!-- table_hori -->
+                <table class="table_hori">
+                    <caption>구분,설문지명,설문기간,문항수로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="30%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>구분</th>
+                        <td>과정 만족도</td>
+                    </tr>
+                    <tr>
+                        <th>설문지명</th>
+                        <td>2020년 과정 만족도 설문</td>
+                    </tr>
+                    <tr>
+                        <th>설문기간</th>
+                        <td>2020-06-01 ~ 2020-06-03</td>
+                    </tr>
+                    <tr>
+                        <th>문항수</th>
+                        <td>5</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_hori -->
+            </div>
+            <!-- EOD : mobS -->
+
+            <!-- list_test -->
+            <ul class="list_test">
+                <li>
+                    <ul class="test_label">
+                        <li><span class="txt_blue01">과정 만족도</span></li>
+                        <li>홍길동</li>
+                    </ul>
+
+                    <p class="txt_num">
+                        <span class="num">1.</span>조사대상자는 문제상황이 발생하였을 때, 추측은 제외하고 현장의 사실만을 구분하여 파악해야 한다고 주장한다.
+                    </p>
+
+                    <ul class="radioList vertical">
+                        <li>
+                            <input type="radio" id="radio01_01" name="q_radio01"  disabled>
+                            <label for="radio01_01">1) 의사결정과 관련된 현장상황을 명확히 이해한 후 의사결정을 한다.</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio01_02" name="q_radio01" checked disabled>
+                            <label for="radio01_02">2) 사안의 효과를 정확하게 예측하고, 장단점을 검토하여 합리적인 의사결정을 한다.</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio01_03" name="q_radio01" disabled>
+                            <label for="radio01_03">3) 사안의 다양한 결과를 예측하고 대안의 장단점을 파악하여 의사결정을 한다.</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio01_04" name="q_radio01" disabled>
+                            <label for="radio01_04">4) 자신의 의사결정 사안에 대해 철저한 사후관리를 통해 오너십을 가진다.</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="test_label">
+                        <li><span class="txt_blue01">과정 만족도</span></li>
+                        <li>홍길동</li>
+                    </ul>
+
+                    <p class="txt_num">
+                        <span class="num">2.</span>조사대상자는 문제상황이 발생하였을 때, 추측은 제외하고 현장의 사실만을 구분하여 파악해야 한다고 주장한다.
+                    </p>
+
+                    <ul class="radioList vertical">
+                        <li>
+                            <input type="radio" id="radio02_01" name="q_radio02"  checked disabled>
+                            <label for="radio02_01">O) 의사결정과 관련된 현장상황을 명확히 이해한 후 의사결정을 한다.</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio02_02" name="q_radio02"  disabled>
+                            <label for="radio02_02">X) 사안의 효과를 정확하게 예측하고, 장단점을 검토하여 합리적인 의사결정을 한다.</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="test_label">
+                        <li><span class="txt_blue01">과정 만족도</span></li>
+                        <li>홍길동</li>
+                    </ul>
+
+                    <p class="txt_num">
+                        <span class="num">3.</span>조사대상자는 문제상황이 발생하였을 때, 추측은 제외하고 현장의 사실만을 구분하여 파악해야 한다고 주장한다.
+                    </p>
+
+                    <ul class="checkList vertical">
+                        <li>
+                            <input type="checkbox" id="q_chk01_01" checked disabled>
+                            <label for="q_chk01_01">1) 의사결정과 관련된 현장상황을 명확히 이해한 후 의사결정을 한다.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chk01_02" disabled>
+                            <label for="chk01_02">2) 사안의 효과를 정확하게 예측하고, 장단점을 검토하여 합리적인 의사결정을 한다.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chk01_03" checked disabled>
+                            <label for="chk01_03">3) 사안의 다양한 결과를 예측하고 대안의 장단점을 파악하여 의사결정을 한다.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="chk01_04"  disabled>
+                            <label for="chk01_04">4) 자신의 의사결정 사안에 대해 철저한 사후관리를 통해 오너십을 가진다.</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="test_label">
+                        <li><span class="txt_blue01">과정 만족도</span></li>
+                        <li>홍길동</li>
+                    </ul>
+
+                    <p class="txt_num">
+                        <span class="num">4.</span> 대한민국이 위치한 지역의 이름은?
+                    </p>
+
+                    <div class="textBox">
+                        <div class="inputBox Full">
+                            <textarea placeholder="의견을 입력하세요" disabled>정치적, 군사적으로도 매우 중요한 위치임. 보통 해양세력과 대륙세력이 충돌하게 되는데, 한반도의 경우에는 중국,러시아 vs 미국, 일본의 구도로 되어있음.</textarea>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <ul class="test_label">
+                        <li><span class="txt_blue01">과정 만족도</span></li>
+                        <li>홍길동</li>
+                    </ul>
+
+                    <p class="txt_num">
+                        <span class="num">5.</span> 조사대상자는 문제상황이 발생하였을 때, 추측은 제외하고 현장의 사실만을 구분하여 파악해야 한다고 주장한다.
+                    </p>
+
+                    <div class="textBox">
+                        <div class="inputBox Full">
+                            <textarea placeholder="서술형 작성 영역 (최대 2000자)" disabled>서술 의견을 작성내용입니다. 최대 2000자 까지 가능하답니다. 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 스크롤 테스트 스크롤 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트 스크롤 테스트</textarea>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <ul class="test_label">
+                        <li><span class="txt_blue01">과정 만족도</span></li>
+                        <li>홍길동</li>
+                    </ul>
+
+                    <p class="txt_num">
+                        <span class="num">6.</span> 다음 중 여름 과일은 무엇인가요?
+                    </p>
+
+                    <div class="thumBox_exam">
+                        <img src="/images/template9/resp/default/usr/no_img_exam.png" class="cropImg">
+                    </div>
+
+                    <ul class="radioList vertical">
+                        <li>
+                            <input type="radio" id="radio03_01" name="q_radio03" checked disabled>
+                            <label for="radio03_01">1) 사과</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio03_02" name="q_radio03" disabled>
+                            <label for="radio03_02">2) 배</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio03_03" name="q_radio03" disabled>
+                            <label for="radio03_03">3) 참외</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="radio03_04" name="q_radio03" disabled>
+                            <label for="radio03_04">4) 감</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="test_label">
+                        <li><span class="txt_blue01">과정 만족도</span></li>
+                        <li>홍길동</li>
+                    </ul>
+
+                    <p class="txt_num">
+                        <span class="num">7.</span> 다음 중 여름 과일은 무엇인가요?
+                    </p>
+
+                    <ul class="checkList vertical">
+                        <li>
+                            <input type="checkbox" id="q_chk03_01" disabled>
+                            <label for="q_chk03_01">
+                                <p class="txt">1) 사과</p>
+                                <div class="thumBox_exam_small">
+                                    <img src="/images/template9/resp/default/usr/no_img_exam.png" class="cropImg">
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="q_chk03_02" checked disabled>
+                            <label for="q_chk03_02">
+                                <p class="txt">2) 수박</p>
+                                <div class="thumBox_exam_small">
+                                    <img src="/images/template9/resp/default/usr/no_img_exam.png" class="cropImg">
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="q_chk03_03" disabled>
+                            <label for="q_chk03_03">
+                                <p class="txt">3) 참외</p>
+                                <div class="thumBox_exam_small">
+                                    <img src="/images/template9/resp/default/usr/no_img_exam.png" class="cropImg">
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="q_chk03_04" checked  disabled>
+                            <label for="q_chk03_04">
+                                <p class="txt">4) 감</p>
+                                <div class="thumBox_exam_small">
+                                    <img src="/images/template9/resp/default/usr/no_img_exam.png" class="cropImg">
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- EOD : list_test -->
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_blue">설문참여</button>
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

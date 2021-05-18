@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <div class="content_wrap">
+
+            <h3><span>팀 프로젝트</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+            <h4>팀 프로젝트 등록</h4>
+
+            <!-- team_scroll -->
+            <div class="team_scroll">
+                <table class="table_hori mt0">
+                    <caption>과정 선택, 학습기간, 총 수강생 수, 과제점수 반영비율, 프로젝트 주제, 프로젝트 기간, 게시판 오픈 여부, 과제물 등록, 과제 제출 기간, 팀원 평가 익명 여부,팀원 평가 기간, 팀 구성하기, 내용, 첨부파일로 구성된 팀 프로젝트 등록 상세</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>과정선택 <span class="txt_point">*</span></th>
+                            <td colspan="3">
+                                <div class="dataBox">
+                                    <div class="selectBox w380">
+                                        <label for="select_process"><span>과정명</span></label>
+                                        <select id="select_process">
+                                            <option>한국교육기술대학교 온라인강의 과정</option>
+                                            <option>한국교육기술대학교 온라인강의 과정</option>
+                                        </select>
+                                    </div>
+                                    <!-- 비활성
+                                    <div class="selectBox disabled w380">
+                                        <label for="select_process04"><span>과정명</span></label>
+                                        <select id="select_process04" disabled="disabled">
+                                            <option>한국교육기술대학교 온라인강의 과정</option>
+                                        </select>
+                                    </div>
+                                    -->
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>학습기간</th>
+                            <td>2020.04.01 ~ 2020.06.30</td>
+                            <th>총 수강생 수</th>
+                            <td>100명</td>
+                        </tr>
+                        <tr>
+                            <th>과제점수<br/>반영비율</th>
+                            <td colspan="3">강사평가 <span class="txt_point txt_big">50</span>% + 팀원평가 <span class="txt_point txt_big">20</span>% + 과제평가 <span class="txt_point txt_big">30</span>%</td>
+                        </tr>
+                        <tr>
+                            <th>프로젝트 주제 <span class="txt_point">*</span></th>
+                            <td>
+                                <div class="inputBox Full">
+                                    <input type="text" placeholder="">
+                                </div>
+
+                            </td>
+                            <th>프로젝트 기간 <span class="txt_point">*</span></th>
+                            <td>
+                                <div class="dateBox">
+                                    <div class="dateBoxIn">
+                                        <div class="inputBox Full">
+                                            <input id="p_srch_strt" name="p_srch_strt" type="text" class="datepicker">
+                                        </div>
+                                        <div class="wave">~</div>
+                                        <div class="inputBox Full">
+                                            <input id="p_srch_end" name="p_srch_end" type="text" class="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>게시판 오픈 여부 <span class="txt_point">*</span></th>
+                            <td colspan="3">
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio01_01" name="radioGroup">
+                                        <label for="radio01_01">개방형</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio01_02" name="radioGroup">
+                                        <label for="radio01_02">비개방형</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>과제물 등록 <span class="txt_point">*</span></th>
+                            <td>
+                                <div class="fileBox">
+                                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_project_choice.html','','width=1000, height=800');">과제물 선택</button>
+                                    <ul class="fileList">
+                                        <li>
+                                            <div class="file">
+                                                <span class="txt">등록된 과제명.zip [8259kb]</span>
+                                                <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <th>과제 제출 기간 <span class="txt_point">*</span></th>
+                            <td>
+                                <div class="dateBox">
+                                    <div class="dateBoxIn">
+                                        <div class="inputBox Full">
+                                            <input type="text" class="datepicker">
+                                        </div>
+                                        <div class="wave">~</div>
+                                        <div class="inputBox Full">
+                                            <input  type="text" class="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>팀원 평가<br>익명 여부 <span class="txt_point">*</span></th>
+                            <td>
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio02_01" name="radioGroup02">
+                                        <label for="radio02_01">익명</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio02_02" name="radioGroup02">
+                                        <label for="radio02_02">실명</label>
+                                    </li>
+                                </ul>
+                            </td>
+                            <th>팀원 평가 기간 <span class="txt_point">*</span></th>
+                            <td>
+                                <div class="dateBox">
+                                    <div class="dateBoxIn">
+                                        <div class="inputBox Full">
+                                            <input type="text" class="datepicker">
+                                        </div>
+                                        <div class="wave">~</div>
+                                        <div class="inputBox Full">
+                                            <input  type="text" class="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">팀 구성하기 <span class="txt_point">*</span></th>
+                            <td colspan="3">
+                                <div class="team_label">
+                                    <div class="team_label_L">개설할 팀 수</div>
+                                    <div class="team_label_R">
+                                        <div class="floatBox table">
+                                            <div class="floatBoxL">
+                                                <input class="w30 mr5" type="text"/> 개
+                                            </div>
+                                            <div class="floatBoxR">
+                                                <ul class="txt_list type02 mt0">
+                                                    <li class="txt_gray"><span class="txt">*</span>1개 팀에 1명의 팀장이 배정되며 프로젝트가 시작되면 팀장 변경은 불가능합니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="team_label">
+                                    <div class="team_label_L">팀명 만들기 규칙</div>
+                                    <div class="team_label_R">
+                                        <ul class="radioList">
+                                            <li>
+                                                <input type="radio" id="radio03_01" name="radioGroup03">
+                                                <label for="radio03_01">A,B,C...</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio03_02" name="radioGroup03">
+                                                <label for="radio03_02">1,2,3...</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio03_03" name="radioGroup03">
+                                                <label for="radio03_03">가,나,다...</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="team_label">
+                                    <div class="team_label_L">팀 생성 기준</div>
+                                    <div class="team_label_R">
+                                        <div class="floatBox table">
+                                            <div class="floatBoxL">
+                                                <ul class="radioList">
+                                                    <li>
+                                                        <input type="radio" id="radio04_01" name="radioGroup04">
+                                                        <label for="radio04_01">팀장+팀원 선택</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="radio04_02" name="radioGroup04">
+                                                        <label for="radio04_02">팀장 선택</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="floatBoxR">
+                                                <ul class="txt_list type02 mt0">
+                                                    <li class="txt_gray"><span class="txt">*</span>[팀장선택]은 팀장이 직접 팀원을 선택합니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="team_label">
+                                    <div class="team_label_L">구성원 배정</div>
+                                    <div class="team_label_R">
+                                        <ul class="radioList">
+                                            <li>
+                                                <input type="radio" id="radio05_01" name="radioGroup05">
+                                                <label for="radio05_01">자동배정</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio05_02" name="radioGroup05">
+                                                <label for="radio05_02">수동배정</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="team_label">
+                                    <div class="team_label_L">구성원 미리보기</div>
+                                    <div class="team_label_R">
+                                        <ul class="radioList">
+                                            <li><div class="team_input_list">팀장 <input class="w30" type="text"/> 명</div></li>
+                                            <li><div class="team_input_list">최대 팀원 수 <input class="w30" type="text"/> 명 <button class="btn_s_blue" onclick="window.open('popup/popup_project_member.html','','width=1200, height=850');">명단보기</button> </div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>내용 <span class="txt_point">*</span></th>
+                            <td colspan="3">
+                                <div class="inputBox Full team">
+                                    <textarea></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>첨부파일</th>
+                            <td colspan="3">
+                                <div class="fileBox">
+                                    <button type="button" class="btn_s_blue">파일 첨부</button>
+                                    <ul class="fileList">
+                                        <li>
+                                            <div class="file">
+                                                <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                                                <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="file">
+                                                <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                                                <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : team_scroll -->
+
+            <!-- btnBox -->
+            <div class="btnBox">
+                <div class="rightBox">
+                    <a href="javascript:void(0);" class="btn_m_black">삭제</a>
+                    <a href="javascript:void(0);" class="btn_m_blue">저장</a>
+                    <a href="mypage_project.html" class="btn_m_blue">목록</a>
+                </div>
+            </div>
+            <!-- EOD : btnBox -->
+        </div>
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>
+

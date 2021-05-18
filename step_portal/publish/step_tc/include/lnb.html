@@ -1,0 +1,157 @@
+<!-- sub_visual -->
+<section class="sub_visual">
+    <!-- sub_visualIn -->
+    <div class="sub_visualIn">
+        <p class="location"></p>
+        <nav class="lnb"></nav>
+    </div>
+    <!-- EOD : sub_visualIn -->
+</section>
+<!-- EOD : sub_visual -->
+
+<script>
+    // 콘텐츠 저작도구
+    if (window.location.href.indexOf("contents_") > -1) {
+        $(".sub_visual").find(".location").text("콘텐츠 저작도구");
+        $(".sub_visual").addClass("sub_visual08");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+        lnb += "<li><a href='contents_tool.html'><span>저작도구 사용 신청</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if(window.location.href.indexOf("tool") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }
+    // 고객센터
+    } else if (window.location.href.indexOf("customer_") > -1) {
+        $(".sub_visual").find(".location").text("고객지원센터");
+        $(".sub_visual").addClass("sub_visual03");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+        lnb += "<li><a href='customer_notice.html'><span>강사 공지사항</span></a></li>";
+        lnb += "<li><a href='customer_library.html'><span>자료실</span></a></li>";
+        lnb += "<li><a href='customer_faq.html'><span>FAQ</span></a></li>";
+        lnb += "<li><a href='customer_question.html'><span>1:1문의</span></a></li>";
+        lnb += "<li><a href='customer_consult.html'><span>취업상담신청</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if(window.location.href.indexOf("notice") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }else if(window.location.href.indexOf("library") > -1) {
+
+            $(".lnb").find("li:nth-child(2)").addClass("active")
+
+        }else if(window.location.href.indexOf("faq") > -1) {
+
+            $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        }else if(window.location.href.indexOf("question") > -1) {
+
+            $(".lnb").find("li:nth-child(4)").addClass("active")
+
+        }else if(window.location.href.indexOf("consult") > -1) {
+
+            $(".lnb").find("li:nth-child(5)").addClass("active")
+
+        }
+    }else if(window.location.href.indexOf("mypage_") > -1){
+
+        $(".sub_visual").find(".location").text("마이페이지");
+        $(".sub_visual").addClass("sub_visual04");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+            lnb += "<li><a href='mypage_home.html'><span>나의 홈</span></a></li>";
+            lnb += "<li><a href='mypage_status.html'><span>학습자 학습현황</span></a></li>";
+            lnb += "<li><a href='mypage_board.html'><span>과정게시판 관리</span></a></li>";
+            lnb += "<li><a href='mypage_qa.html'><span>과정Q&A 관리</span></a></li>";
+            lnb += "<li><a href='mypage_score.html'><span>채점관리</span></a></li>";
+            lnb += "<li><a href='mypage_debate.html'><span>토론</span></a></li>";
+            lnb += "<li><a href='mypage_project.html'><span>팀 프로젝트</span></a></li>";
+            lnb += "<li><a href='mypage_seminar.html'><span>라이브 세미나</span></a></li>";
+            lnb += "<li><a href='mypage_survey.html'><span>설문</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if(window.location.href.indexOf("home") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }else if(window.location.href.indexOf("status") > -1) {
+
+            $(".lnb").find("li:nth-child(2)").addClass("active")
+
+        }else if(window.location.href.indexOf("board") > -1) {
+
+            $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        }else if(window.location.href.indexOf("qa") > -1) {
+
+            $(".lnb").find("li:nth-child(4)").addClass("active")
+
+        }else if(window.location.href.indexOf("score") > -1) {
+
+            $(".lnb").find("li:nth-child(5)").addClass("active")
+
+        }else if(window.location.href.indexOf("debate") > -1) {
+
+            $(".lnb").find("li:nth-child(6)").addClass("active")
+
+        }else if(window.location.href.indexOf("project") > -1) {
+
+            $(".lnb").find("li:nth-child(7)").addClass("active")
+
+        }else if(window.location.href.indexOf("seminar") > -1) {
+
+            $(".lnb").find("li:nth-child(8)").addClass("active")
+
+        }else if(window.location.href.indexOf("survey") > -1) {
+
+            $(".lnb").find("li:nth-child(9)").addClass("active")
+
+        }
+    }else if(window.location.href.indexOf("membership_") > -1){
+
+        $(".sub_visual").find(".location").text("Membership");
+        $(".sub_visual").addClass("sub_visual06");
+
+        var lnb = "";
+
+        lnb += "<ul>";
+        lnb += "<li><a href='membership_terms.html'><span>이용약관</span></a></li>";
+        lnb += "<li><a href='membership_privacy.html'><span>개인정보처리방침</span></a></li>";
+        lnb += "<li><a href='membership_mail.html'><span>이메일무단수집거부</span></a></li>";
+        lnb += "</ul>";
+
+        $(".lnb").append(lnb);
+
+        if(window.location.href.indexOf("terms") > -1) {
+
+            $(".lnb").find("li:first-child").addClass("active")
+
+        }else if(window.location.href.indexOf("privacy") > -1) {
+
+            $(".lnb").find("li:nth-child(2)").addClass("active")
+
+        }else if(window.location.href.indexOf("mail") > -1) {
+
+            $(".lnb").find("li:nth-child(3)").addClass("active")
+
+        }
+    }
+
+</script>

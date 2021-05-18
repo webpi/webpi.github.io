@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- header -->
+<header class="header headerInclude"></header>
+<!-- EOD : header -->
+
+<!-- lnb -->
+<section class="lnbInclude"></section>
+<!-- EOD : lnb -->
+
+<!-- contentLayout -->
+<div class="sub_contentLayout" id="content">
+    <!-- content_wrap -->
+    <div class="content_wrap">
+        <!-- lecture_section -->
+        <section class="lecture_section">
+            <!-- tableScroll -->
+            <div class="tableScroll">
+                <table class="table_normal type02 mt0">
+                    <caption>과정명 회차 학습메모로 이루어진 학습메모/북마크 게시판</caption>
+                    <colgroup>
+                        <col width="*">
+                        <col class="mobH" width="30%">
+                        <col class="mobH" width="20%">
+                    </colgroup>
+                    <thead>
+                    <tr class="mobH">
+                        <th>과정명</th>
+                        <th>회차</th>
+                        <th>학습메모</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="ThumBox">
+                                <div class="imgBox">
+                                    <img src="/images/template9/resp/default/usr/tum_sample01.png" class="cropImg">
+                                </div>
+                                <div class="infoBox vertical">
+                                    <div class="txtBox">
+                                        <p class="tit">위기에 강한 기업의 비결!</p>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li><strong>회차</strong> 1회차</li>
+                                    <li><strong>파이썬 언어의 기본 ></strong> 인트로</li>
+                                </ul>
+                                <div class="mobBox mobbtnBox Full">
+                                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_bookmark_memo.html','','width=600, height=450');">학습메모</button>
+                                </div>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </div>
+                        </td>
+                        <td class="mobH">
+                            <ul class="Listinfo">
+                                <li><strong>회차</strong> 1회차</li>
+                                <li><strong>파이썬 언어의 기본 ></strong> 인트로</li>
+                            </ul>
+                        </td>
+                        <td class="mobH">
+                            <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_bookmark_memo.html','','width=600, height=450');">학습메모</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ThumBox">
+                                <div class="imgBox">
+                                    <img src="/images/template9/resp/default/usr/no_img_thumBox.png" class="cropImg">
+                                </div>
+                                <div class="infoBox vertical">
+                                    <div class="txtBox">
+                                        <p class="tit">위기에 강한 기업의 비결!</p>
+                                    </div>
+                                </div>
+                                <!-- 모바일에서만 출력되는 데이터 영역 -->
+                                <ul class="mobBox">
+                                    <li><strong>회차</strong> 2회차</li>
+                                    <li><strong>파이썬 언어의 기본 ></strong> 인트로</li>
+                                </ul>
+                                <div class="mobBox mobbtnBox Full">
+                                    <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_bookmark_memo.html','','width=600, height=450');">학습메모</button>
+                                </div>
+                                <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                            </div>
+                        </td>
+                        <td class="mobH">
+                            <ul class="Listinfo">
+                                <li><strong>회차</strong> 2회차</li>
+                                <li><strong>파이썬 언어의 기본 ></strong> 인트로</li>
+                            </ul>
+                        </td>
+                        <td class="mobH">
+                            <button type="button" class="btn_s_blue" onclick="window.open('popup/popup_bookmark_memo.html','','width=600, height=450');">학습메모</button>
+                        </td>
+                    </tr>
+                    <!-- no_data -->
+                    <tr>
+                        <td colspan="3" class="no_dataBox">
+                            <img src="/images/template11/resp/default/icon/icon_no_data_myhome03.png" alt="">
+                            <p class="txt">학습메모/북마크가 없습니다.</p>
+                        </td>
+                    </tr>
+                    <!-- EOD : no_data -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- pagination -->
+            <div class="pagination">
+                <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                <a class="active" href="javascript:void(0);">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+                <a href="javascript:void(0);">5</a>
+                <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+            </div>
+            <!-- EOD : pagination -->
+        </section>
+        <!-- EOD : lecture_section -->
+    </div>
+    <!-- EOD : content_wrap -->
+</div>
+<!-- EOD : contentLayout -->
+
+<!-- footer -->
+<footer class="footer footerInclude"></footer>
+<!-- EOD : footer -->
+
+
+</body>
+</html>

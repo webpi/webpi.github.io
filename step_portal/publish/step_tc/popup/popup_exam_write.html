@@ -1,0 +1,469 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/skin/skin_blue.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/jquery-ui-timepicker.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+
+
+<section class="windowPop">
+    <div class="windowPopH">
+        일괄 시험점수 등록
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template4/resp/default/icon/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <!-- table_hori -->
+            <table class="table_hori mt0">
+                <caption>과정명,시험일시로 이루어진 일괄 시험정수 상세</caption>
+                <colgroup>
+                    <col width="14%">
+                    <col width="*">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>과정명</th>
+                        <td>한국교육기술대학교 혼합훈련 과정 – 윌비> 오프라인과정 – 윌비</td>
+                    </tr>
+                    <tr>
+                        <th>시험일시</th>
+                        <td>
+                            <div class="dateBox">
+                                <div class="dateBoxIn">
+                                    <div class="inputBox Full">
+                                        <input id="p_srch_strt" name="p_srch_strt" type="text" class="datepicker">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="selectBox auto">
+                                <label for="select_time"><span>0</span></label>
+                                <select id="select_time" class="select_time"></select>
+                            </div>
+
+                            <span class="verticalM">시</span>
+
+                            <div class="selectBox auto">
+                                <label for="select_min"><span>0</span></label>
+                                <select id="select_min" class="select_min"></select>
+                            </div>
+
+                            <span class="verticalM">분</span>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- EOD : table_hori -->
+
+            <script>
+
+                $(document).ready(function(){
+
+
+                    for(time  = 0; time < 25; time++) {
+
+                        jQuery(".select_time").append('<option>' + time + '</option>');
+                    }
+
+                    for(min = 0; min < 60;) {
+
+                        jQuery(".select_min").append('<option>' + min + '</option>');
+
+                        min = min + 10;
+
+                    }
+
+                });
+
+            </script>
+
+            <!-- tab -->
+            <ul class="tab mt20">
+                <li class="active"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab01', this);"><span>실습평가</span></a></li>
+                <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab02', this);"><span>시험평가</span></a></li>
+                <li><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab03', this);"><span>태도평가</span></a></li>
+                <li class="mobH"><a href="javascript:void(0);" onclick="tabsClick('tabBox' , '#tab04', this);"><span>일괄 엑셀파일 등록</span></a></li>
+            </ul>
+            <!-- EOD : tab -->
+
+            <!-- 실습평가 -->
+            <div class="tabBox active" id="tab01">
+
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>건
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_veti -->
+                    <table class="table_veti mt0">
+                        <caption>이름/아이디 휴대전화 , 점수로 이루어진 채점관리 테이블</caption>
+                        <colgroup>
+                            <col width="*">
+                            <col width="25%">
+                            <col width="25%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">이름/아이디</th>
+                            <th scope="col">휴대전화</th>
+                            <th scope="col">점수</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>실습평가 홍길동 <p class="txt_default mt0">Hong@korea.kr</p></td>
+                                <td class="ac">010-1234-6342</td>
+                                <td class="ac">
+                                    <input type="number" class="score_input"><span class="verticalM">점</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>강학생<p class="txt_default mt0">KiM@korea.kr</p></td>
+                                <td class="ac">010-1234-6342</td>
+                                <td class="ac">
+                                    <input type="number" class="score_input"><span class="verticalM">점</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>홍길동<p class="txt_default mt0">Hong@korea.kr</p></td>
+                                <td class="ac">010-1234-6342</td>
+                                <td class="ac">
+                                    <input type="number" class="score_input"><span class="verticalM">점</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+            </div>
+            <!-- EOD : 실습평가 -->
+
+            <!-- 시험평가 -->
+            <div class="tabBox" id="tab02">
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>건
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_veti -->
+                    <table class="table_veti mt0">
+                        <caption>이름/아이디 휴대전화 , 점수로 이루어진 채점관리 테이블</caption>
+                        <colgroup>
+                            <col width="*">
+                            <col width="25%">
+                            <col width="25%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">이름/아이디</th>
+                            <th scope="col">휴대전화</th>
+                            <th scope="col">점수</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>시험평가 홍길동 <p class="txt_default mt0">Hong@korea.kr</p></td>
+                            <td class="ac">010-1234-6342</td>
+                            <td class="ac">
+                                <input type="number" class="score_input"><span class="verticalM">점</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>강학생<p class="txt_default mt0">KiM@korea.kr</p></td>
+                            <td class="ac">010-1234-6342</td>
+                            <td class="ac">
+                                <input type="number" class="score_input"><span class="verticalM">점</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>홍길동<p class="txt_default mt0">Hong@korea.kr</p></td>
+                            <td class="ac">010-1234-6342</td>
+                            <td class="ac">
+                                <input type="number" class="score_input"><span class="verticalM">점</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+            </div>
+            <!-- EOD : 시험평가 -->
+
+            <!-- 태도평가 -->
+            <div class="tabBox" id="tab03">
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox">
+                            총 <strong>3</strong>건
+                        </div>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_veti -->
+                    <table class="table_veti mt0">
+                        <caption>이름/아이디 휴대전화 , 점수로 이루어진 채점관리 테이블</caption>
+                        <colgroup>
+                            <col width="*">
+                            <col width="25%">
+                            <col width="25%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">이름/아이디</th>
+                                <th scope="col">휴대전화</th>
+                                <th scope="col">점수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>태도평가 홍길동 <p class="txt_default mt0">Hong@korea.kr</p></td>
+                                <td class="ac">010-1234-6342</td>
+                                <td class="ac">
+                                    <input type="number" class="score_input"><span class="verticalM">점</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>강학생<p class="txt_default mt0">KiM@korea.kr</p></td>
+                                <td class="ac">010-1234-6342</td>
+                                <td class="ac">
+                                    <input type="number" class="score_input"><span class="verticalM">점</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>홍길동<p class="txt_default mt0">Hong@korea.kr</p></td>
+                                <td class="ac">010-1234-6342</td>
+                                <td class="ac">
+                                    <input type="number" class="score_input"><span class="verticalM">점</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+
+            </div>
+            <!-- EOD : 태도평가 -->
+
+            <!-- 일괄 엑셀파일 등록 -->
+            <div class="tabBox" id="tab04">
+               <!-- excel_grayBox -->
+               <div class="excel_grayBox">
+                   <!-- excel_findBox -->
+                   <div class="excel_findBox">
+                       <span class="label">엑셀파일 선택</span>
+                       <div class="excel_findBoxIn">
+                           <div class="filebox">
+                               <label for="ex_filename">파일 찾기</label>
+                               <input class="upload_name" disabled="disabled">
+                               <input type="file" id="ex_filename" class="upload_hidden">
+                           </div>
+                           <button type="button" class="btn_s_blue_gra">데이터 정합성체크</button>
+                       </div>
+                   </div>
+                   <!-- EOD : excel_findBox -->
+
+                   <!-- excel_textBox -->
+                   <div class="excel_textBox">
+                       <div class="excel_textBoxIn">
+                           <p class="txt_alert mt0">주의사항</p>
+                           <button type="button" class="btn_s_blue">샘플파일 다운로드</button>
+                           <p class="txt_default">1. 샘플 파일을 다운로드 받아 작성하세요.</p>
+                           <p class="txt_default mt0">2. 저장 시 엑셀 형식으로 저장하여 사용하세요(.xls .xlsx)</p>
+                           <p class="txt_default mt0">3. 양식 폼을 변경할 시 치명적인 오류가 발생할 수 있습니다.</p>
+                           <p class="txt_default mt0">4. 파일 업로드 후, [데이터 정합성 체크]를 통해 데이터 오류 유무를 확인합니다.</p>
+                           <p class="txt_default mt0">5. 결과 확인 후, 업로드 시 학습자별 시험 점수가 일괄 등록됩니다.</p>
+                       </div>
+                   </div>
+                   <!-- EOD: excel_textBox -->
+               </div>
+                <!-- EOD : excel_grayBox -->
+
+                <script>
+
+                    $(document).ready(function(){
+                        var fileTarget = $('.filebox .upload_hidden');
+
+                        fileTarget.on('change', function(){
+                            if(window.FileReader){
+                                var filename = $(this)[0].files[0].name;
+                            } else {
+                                var filename = $(this).val().split('/').pop().split('\\').pop();
+                            }
+
+                            $(this).siblings('.upload_name').val(filename);
+                        });
+                    });
+
+                </script>
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_veti -->
+                    <table class="table_veti">
+                        <caption>시험일,시험시간,이름/아이디,실습평가 점수,시험평가 점수 , 태도평가 점수 , 결과로 이루어진 정합성결과 상세</caption>
+                        <colgroup>
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="*">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">시험일</th>
+                                <th scope="col">시험시간</th>
+                                <th scope="col">이름/아이디</th>
+                                <th scope="col">실습평가 점수</th>
+                                <th scope="col">시험평가 점수</th>
+                                <th scope="col">태도평가 점수</th>
+                                <th scope="col">결과</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ac">20.04.16</td>
+                                <td class="ac">10:00</td>
+                                <td>홍길동 <p class="txt_default mt0">Hong@korea.kr</p></td>
+                                <td class="ac">100</td>
+                                <td class="ac">100</td>
+                                <td class="ac">100</td>
+                                <td class="ac">OK</td>
+                            </tr>
+                            <tr>
+                                <td class="ac">20.04.16</td>
+                                <td class="ac">10:00</td>
+                                <td>홍길동 <p class="txt_default mt0">Hong@korea.kr</p></td>
+                                <td class="ac">100</td>
+                                <td class="ac">100</td>
+                                <td class="ac"></td>
+                                <td class="ac">태도점수는 필수 입력값입니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ac">20.04.16</td>
+                                <td class="ac">10:00</td>
+                                <td>홍길동 <p class="txt_default mt0">Hong@korea.kr</p></td>
+                                <td class="ac">50</td>
+                                <td class="ac">10</td>
+                                <td class="ac">50</td>
+                                <td class="ac">OK</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_veti -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <div class="btnBox ac">
+                    <button type="button" class="btn_m_blue mg0">일괄등록</button>
+                </div>
+
+            </div>
+            <!-- EOD : 일괄 엑셀파일 등록 -->
+
+        </div>
+    </div>
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

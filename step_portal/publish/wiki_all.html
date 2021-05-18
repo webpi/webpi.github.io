@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <!-- content_wrap -->
+        <div class="content_wrap">
+            <div class="social-wiki-all">
+                <h2 class="ir">전체 위키</h2>
+
+                <div class="social-wiki-head">
+                    <div class="social-wiki-Banner">
+                        <div class="social-wiki-Slider">
+                            <div class="social-wiki-item">
+                                <div class="thumb">
+                                    <a href="javascript:void(0)">
+                                        <img src="/images/template11/resp/default/usr/wiki_banner01.png" alt="멘토에게 물어봐~! 멘토에게 물어보고 싶은 글을 적어주세요. 좋은글은 인클럽 멘토자료방에 업로드 됩니다." class="img">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="social-wiki-item">
+                                <div class="thumb">
+                                    <a href="javascript:void(0)">
+                                        <img src="/images/template11/resp/default/usr/wiki_banner01.png" alt="멘토에게 물어봐~! 멘토에게 물어보고 싶은 글을 적어주세요. 좋은글은 인클럽 멘토자료방에 업로드 됩니다." class="img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination social-wiki-control">
+                            <div class="paginationIn">
+                                <button type="button" class="prevBtn btn-social-wiki-prev"><span class="ir">이전</span></button>
+                                <button type="button" class="nextBtn btn-social-wiki-next"><span class="ir">다음</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-utilWrap">
+                    <div class="social-utilArea">
+                        <div class="social-utilBox">
+                            <span class="txt">서로의 의견을 공유하고 공감하면서 <br>학습한 내용을 자기의 것으로 만들고, 학습 이외의 다양한 분야의 <br>지식을 얻어보세요!</span>
+                            <div class="utilBox">
+                                <a href="wiki_wiki_create.html" class="btn_s_blue">위키 등록</a>
+                                <a href="popup/popup_wiki_name.html" class="btn_s_black btn-nickname-set">닉네임 설정</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_arrowBox mt40">
+                    <ul class="tab_arrow nolimit" role="tablist">
+                        <li class="active"><a href="javascript:void(0)"><span>전체</span></a></li>
+                        <li><a href="javascript:void(0)"><span>스텝위키 멘토‘s</span></a></li>
+                        <li><a href="javascript:void(0)"><span>일반 직무지식</span></a></li>
+                        <li><a href="javascript:void(0)"><span>4차 산업혁명</span></a></li>
+                        <li><a href="javascript:void(0)"><span>정책/취업·일자리</span></a></li>
+                        <li><a href="javascript:void(0)"><span>직업훈련</span></a></li>
+                        <li><a href="javascript:void(0)"><span>JOB담/기타</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="searchBox">
+                    <div class="listBox">
+                        <div class="selectBox">
+                            <label for="select"><span>선택</span></label>
+                            <select id="select">
+                                <option>전체</option>
+                                <option>제목</option>
+                                <option>제목 + 내용</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="textBox">
+                        <div class="textBoxIn">
+                            <div class="inputBox">
+                                <input type="text" placeholder="검색어를 입력하세요" title="검색어">
+                            </div>
+                            <button type="button">
+                                <span class="blind">검색</span>
+                                <i class="icon_search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section_hd select">
+                    <span class="sub">총 <strong>24</strong>건</span>
+                    <div class="selectBox">
+                        <label for="process_type"><span>인기순</span></label>
+                        <select id="process_type">
+                            <option>인기순</option>
+                            <option>추천순</option>
+                            <option>최신순</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="wiki-list">
+                    <article class="list-contents-media">
+                        <div class="list-contents-thumb">
+                            <img src="../../../images/template11/resp/default/usr/wiki_img_sample01.png" alt="4차산업혁명 기술전쟁 승자는?" class="img cropImg">
+                            <a href="wiki_all_view.html" class="lnk"><span class="ir">바로가기</span></a>
+                        </div>
+
+                        <div class="list-contents-info">
+                            <a href="wiki_all_view.html" class="lnk">
+                                <h4 class="subject"><span>4차산업혁명 기술전쟁 승자는? 4차산업혁명 기술전쟁 승자는? 4차산업혁명 기술전쟁 승자는? 4차산업혁명 기술전쟁 승자는? 4차산업혁명 기술전쟁 승자는? 4차산업혁명 기술전쟁 승자는? 4차산업혁명 기술전쟁 승자는? 4차산업혁명 기술전쟁 승자는? 4차산업혁명 기술전쟁 승자는?</span></h4>
+
+                                <p class="summary">미중 무역전쟁은 단순한 관세 전쟁이 아닌, 4차 산업혁명 기술 우위를 선점하려는 것이라는 해석이 있습니다.윌스트리트저널이 5가지 첨단 기술 분야에서 미국 vs 중국 우열을 가렸습니다.  [5G] "중국이 5G 시장 점유율 높이는 걸 막으려면 미국과 동맹국이 화웨이 경쟁사에 투자해야한다."  중국의 1승을 인정하는 미국 법무부…</p>
+                            </a>
+
+                            <div class="list-contents-bot">
+                                <strong class="theme">4차 산업혁명</strong>
+
+                                <ul class="tag">
+                                    <li><a href="#">#4차 산업혁명</a></li>
+                                    <li><a href="#">#미국</a></li>
+                                    <li><a href="#">#중국</a></li>
+                                </ul>
+
+                                <ul class="cnt">
+                                    <li class="cnt-like"><em class="ir">좋아요</em>48</li>
+                                    <li class="cnt-hate"><em class="ir">싫어요</em>9</li>
+                                    <li class="cnt-cmnt"><em class="ir">댓글</em>36</li>
+                                    <!-- 뷰수 추가 -->
+                                    <li class="cnt-view"><em class="ir">확인</em>999</li>
+                                    <!-- // 뷰수 추가 -->
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="list-contents-media">
+                        <div class="list-contents-thumb">
+                            <img src="../../../images/template11/resp/default/usr/wiki_img_sample01.png" alt="4차산업혁명 기술전쟁 승자는?" class="img cropImg">
+                            <a href="wiki_all_view.html" class="lnk"><span class="ir">바로가기</span></a>
+                        </div>
+
+                        <div class="list-contents-info">
+                            <a href="wiki_all_view.html" class="lnk">
+                                <h4 class="subject"><span>saffsdasdasdasdaㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇasdasdasdasdㅁㄴㅇㅁㄴㅇㅁㄴㅇasdasdasdㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁsdasdasdasㅇㅁㄴㅇㅁㄴㅇㅁㄴdadsaffsdasdasdasdaㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇasdasdasdasdㅁㄴㅇㅁㄴㅇㅁㄴㅇasdasdasdㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁsdasdasdasㅇㅁㄴㅇㅁㄴㅇㅁㄴdad</span></h4>
+
+                                <p class="summary">saffsdasdasdasdaㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇasdasdasdasdㅁㄴㅇㅁㄴㅇㅁㄴㅇasdasdasdㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁsdasdasdasㅇㅁㄴㅇㅁㄴㅇㅁㄴdadsaffsdasdasdasdaㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇasdasdasdasdㅁㄴㅇㅁㄴㅇㅁㄴㅇasdasdasdㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁsdasdasdasㅇㅁㄴㅇㅁㄴㅇㅁㄴdad</p>
+                            </a>
+
+                            <div class="list-contents-bot">
+                                <strong class="theme">4차 산업혁명</strong>
+
+                                <ul class="tag">
+                                    <li><a href="#">#4차 산업혁명</a></li>
+                                    <li><a href="#">#미국</a></li>
+                                    <li><a href="#">#중국</a></li>
+                                </ul>
+
+                                <ul class="cnt">
+                                    <li class="cnt-like"><em class="ir">좋아요</em>48</li>
+                                    <li class="cnt-hate"><em class="ir">싫어요</em>9</li>
+                                    <li class="cnt-cmnt"><em class="ir">댓글</em>36</li>
+                                    <!-- 뷰수 추가 -->
+                                    <li class="cnt-view"><em class="ir">확인</em>999</li>
+                                    <!-- // 뷰수 추가 -->
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="list-contents-media">
+                        <div class="list-contents-info">
+                            <a href="wiki_all_view.html" class="lnk">
+                                <h4 class="subject"><span>대외활동 좀 아시는 분 있나요?</span></h4>
+
+                                <p class="summary">요즘엔 블라인드 채용이 대세다보니까 아무래도 경험/경력사항이 중요하잖아요? 그래서 관련 대외활동좀 해보려고 하는데 이게 워낙 많기도 하고 뭐 하나 골라서 열심히 해도 막상 실제론 도움이 안될까봐 선뜻 시작을 못하겠는데 혹시 대외활동 해본거나 들어본 것 중에 괜찮은거 있으신분 조금만 알려주세요ㅠㅠ 특정 전공 관련된것도 좋고 전공이랑 무관한것도 좋아요~ 요즘엔 블라인드 채용이 대세다보니까 아무래도 경험/경력사항이 중요하잖아요? 그래서 관련 대외활동좀 해보려고 하는데 이게 워낙 많기도 하고 뭐 하나 골라서 열심히 해도 막상 실제론 도움이 안될까봐 선뜻 시작을 못하겠는데 혹시 대외활동 해본거나 들어본 것 중에 괜찮은거 있으신분 조금만 알려주세요ㅠㅠ 특정 전공 관련된것도 좋고 전공이랑 무관한것도 좋아요~</p>
+                            </a>
+
+                            <div class="list-contents-bot">
+                                <strong class="theme">스텝위키멘토’s</strong>
+
+                                <!-- tag 링크 아닐경우 삭제 -->
+                                <ul class="tag">
+                                    <li><a href="#">#대외활동</a></li>
+                                    <li><a href="#">#전공</a></li>
+                                    <li><a href="#">#경력</a></li>
+                                </ul>
+
+                                <ul class="cnt">
+                                    <li class="cnt-like"><em class="ir">좋아요</em>48</li>
+                                    <li class="cnt-hate"><em class="ir">싫어요</em>9</li>
+                                    <li class="cnt-cmnt"><em class="ir">댓글</em>36</li>
+                                    <!-- 뷰수 추가 -->
+                                    <li class="cnt-view"><em class="ir">확인</em>999</li>
+                                    <!-- // 뷰수 추가 -->
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 내용없음 -->
+                    <div class="list-contents-empty">
+                        게시된 글이 없습니다.
+                    </div>
+                    <!-- // 내용없음 -->
+                </div>
+
+                <div class="moreBox">
+                    <button type="button" class="more_btn"><i class="icon_more"></i><span class="blind">더보기</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- EOD : content_wrap -->
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+<!-- EOD : footer -->
+</div>
+<script>
+    // 로그인후 유저 학습 과정
+    function socialWikiBanner() {
+
+        var socialWikiSlider = $(".social-wiki-Slider");
+
+        socialWikiSlider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            autoplay: true,
+            customDots: true,
+            speed: 1000,
+            prevArrow: '.social-wiki-control .btn-social-wiki-prev',
+            nextArrow: '.social-wiki-control .btn-social-wiki-next',
+            focusOnSelect: true,
+            dots: true,
+            dotsClass: 'control_paging',
+            customPaging: function (slider, i) {
+                return  '<span class="now_num">' + (numberPad(i + 1, 2)) + '</span>' + '<em class="slash">/</em>' + '<span class="all_num">' + numberPad(slider.slideCount, 2) + '</span>';
+            },
+        });
+    }
+
+    socialWikiBanner();
+</script>
+</body>
+</html>

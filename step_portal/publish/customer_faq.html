@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template11/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template11/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template11/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template11/wbCommon.js"></script>
+    <script src="/js/template11/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template11/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template11/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <!-- content_wrap -->
+        <div class="content_wrap">
+
+            <!-- searchBox -->
+            <div class="searchBox none">
+                <div class="textBox">
+                    <div class="textBoxIn">
+                        <div class="inputBox">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                        </div>
+                        <button type="button">
+                            <span class="blind">검색</span>
+                            <i class="icon_search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- EOD : searchBox -->
+
+            <!-- tab_arrowBox -->
+            <div class="tab_arrowBox">
+                <!-- tab_arrow -->
+                <ul class="tab_arrow" role="tablist">
+                    <li class="active"><a href="javascript:void(0);"><span>수강신청</span></a></li>
+                    <li><a href="javascript:void(0);"><span>학습방법</span></a></li>
+                    <li><a href="javascript:void(0);"><span>시험 및 과제</span></a></li>
+                    <li><a href="javascript:void(0);"><span>LMS분양</span></a></li>
+                    <li><a href="javascript:void(0);"><span>가상훈련보급</span></a></li>
+                </ul>
+                <!-- EOD : tab_arrow -->
+            </div>
+            <!-- EOD : tab_arrowBox -->
+
+            <!-- faq -->
+            <div class="faq">
+                <ul class="faq_list">
+                    <li>
+                        <div class="faqBox">
+                            <a href="javascript:void(0);">과제는 왜3일 전까지 제출해야하나요?</a>
+                            <div class="faq_contents">
+                                <p>리포트는 온라인 튜터의 채점을 통해 점수로 반영하고 있습니다.</p>
+                                <p>리포트를 3일 전에 제출하여 리포트 반려 시 (내용미비, 첨부파일 미첨부 등) 재제출의 기회를 드리고자 함입니다.</p>
+                                <p>리포트는 [임시저장] 시 학습 기간 내에 재제출이 가능하며 학습기간이 종료된 후에는 재제출하실 수 없습니다.</p>
+                                <p>학습종료일 3일 전까지 꼭 제출완료하시어 수료에 어려움이 없으시길 바랍니다.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="faqBox">
+                            <a href="javascript:void(0);">리포트는 온라인 튜터의 채점을 통해 점수로 반영하고 있습니다. 리포트는 온라인 튜터의 채점을 통해 점수로 반영하고 있습니다. 리포트는 온라인 튜터의 채점을 통해
+                                점수로 반영하고 있습니다.</a>
+                            <div class="faq_contents">
+                                <p>리포트는 온라인 튜터의 채점을 통해 점수로 반영하고 있습니다.</p>
+                                <p>리포트를 3일 전에 제출하여 리포트 반려 시 (내용미비, 첨부파일 미첨부 등) 재제출의 기회를 드리고자 함입니다.</p>
+                                <p>리포트는 [임시저장] 시 학습 기간 내에 재제출이 가능하며 학습기간이 종료된 후에는 재제출하실 수 없습니다.</p>
+                                <p>학습종료일 3일 전까지 꼭 제출완료하시어 수료에 어려움이 없으시길 바랍니다.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- no_data -->
+
+                    <li class="no_data">
+                        <img src="/images/template9/resp/default/icon/icon_no_data_faq.png" alt="" />
+                        <p class="txt">게시된 FAQ가 없습니다.</p>
+                    </li>
+
+                    <!-- EOD : no_data -->
+                </ul>
+            </div>
+            <!-- EOD : faq -->
+
+            <script>
+
+                /* faq 스크립트 */
+
+                $(document).on('click',".faqBox > a",function(){
+                    if($(this).closest("li").hasClass("active")){
+                        $(".faq_list li").removeClass("active");
+                        $(".faq_list .faq_contents").slideUp(450);
+                    }else{
+                        $(".faq_list li").removeClass("active");
+                        $(".faq_list .faq_contents").slideUp(450);
+                        $(this).closest("li").addClass("active");
+                        $(this).siblings(".faq_contents").slideDown(450);
+                    }
+                });
+
+                /* EOD : faq 스크립트 */
+
+            </script>
+
+            <!-- pagination -->
+            <div class="pagination">
+                <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                <a class="active" href="javascript:void(0);">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+                <a href="javascript:void(0);">5</a>
+                <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+            </div>
+            <!-- EOD : pagination -->
+
+        </div>
+        <!-- EOD : content_wrap -->
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>

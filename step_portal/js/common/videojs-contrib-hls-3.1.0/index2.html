@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>videojs-contrib-hls embed</title>  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.10.2/alt/video-js-cdn.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.10.2/video.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/3.0.2/videojs-contrib-hls.js"></script>
+</head>
+<body>
+  <h1>Video.js Example Embed</h1>
+
+  <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto"  
+  data-setup='{}'>
+<!--     <source src="http://119.203.167.26:1935/vod/_definst_/mp4:/contents/oceans.mp4/playlist.m3u8" type="application/x-mpegURL"> -->
+	<source src="rtmp://119.203.167.26:1935/vod/contents/mp4:/oceans.mp4" type="rtmp/mp4" />
+  </video>
+  <!-- 26 -->
+  <script>
+  var videoPlayer = null;
+var isFirstPlay = true;    
+	if(isFirstPlay)
+	{ 	
+	
+		videoPlayer = videojs(document.getElementById('my_video_1'), {
+		    controls: true,
+		    preload: 'none',
+		    width : "640",
+		    height : "500",
+	//			poster : "http://video-js.zencoder.com/oceans-clip.png",
+		}, function() {
+		// This is functionally the same as the previous example.
+		
+			this.on('play', function() {
+	
+	        	var duration_time =  Math.floor(this.duration());
+		        var current_time =  Math.floor(this.currentTime());
+		    	
+	         	if(isFirstPlay)
+	         	{
+	         		if(current_time > 0 && (current_time == duration_time ))
+	         		{
+		            	jQuery('#continue_button').removeAttr("disabled");
+		          	}
+			        
+					isFirstPlay = false;
+	         	}
+	        });
+	      //일시정지
+	        this.on('pause', function() {});
+	        
+	      //학습이 끝까지 완료되었을 경우
+	        this.on('ended', function() {});
+		}	
+);
+	}
+	
+//     var p_cntnts_url = "rtmp://firehose.cul.columbia.edu:1935/vod/mp4:sample.mp4";
+//     videoPlayer.src(p_cntnts_url); //기본
+  </script>
+  
+</body>
+</html>

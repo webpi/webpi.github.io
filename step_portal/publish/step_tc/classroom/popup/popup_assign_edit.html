@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>강의실</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        첨삭하기
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template4/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <!-- windowPopBoxIn -->
+        <div class="windowPopBoxIn">
+
+            <!-- tableScroll -->
+            <div class="tableScroll mobH">
+                <!-- table_veti -->
+                <table class="table_veti mt0">
+                    <caption>과제유형,과제명,제출일 , 제출자로 구성된 과제 상세</caption>
+                    <colgroup>
+                        <col width="15%">
+                        <col width="*">
+                        <col width="35%">
+                        <col width="15%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <td>과제유형</td>
+                        <td>과제명</td>
+                        <td>제출일</td>
+                        <td>제출자</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ac">유형A</td>
+                            <td class="ac">과제A</td>
+                            <td class="ac">2020-05-01 ~ 2020-05-01</td>
+                            <td class="ac">홍길동</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_veti -->
+            </div>
+            <!-- EOD : tableScroll -->
+
+            <!-- mobS / 모바일에서만 보이는 영역 -->
+            <div class="mobS">
+                <!-- table_hori -->
+                <table class="table_hori mt0">
+                    <caption>과제유형,과제명,제출기간으로 구성된 과제 상세</caption>
+                    <colgroup>
+                        <col width="35%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>과제유형</th>
+                        <td>유형A</td>
+                    </tr>
+                    <tr>
+                        <th>과제명</th>
+                        <td>과제A</td>
+                    </tr>
+                    <tr>
+                        <th>제출기간</th>
+                        <td>2020.05.01 ~ 2020.05.01</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_hori -->
+            </div>
+            <!-- EOD : mobS -->
+
+            <h3>과제</h3>
+            <p class="txt_default mt0">
+                이야기를 하다가 저 사람한테 내 의도가 제대로 전달되지 않고 있다고 느낄 때 상대방에게 이해력 향상을 구할
+                것이 아니라 자신의 전달 능력을 개선해야 하는 것이 비즈니스 프로페셔널들의 방식입니다. 명확한 의사
+                전달을 위한 PAC 사고의 3가지 요령에 대해 작성하시기 바랍니다.
+            </p>
+
+            <!-- table_hori -->
+            <div class="tableScroll">
+                <table class="table_hori mob_block">
+                    <caption>첨부파일 , 모범답안 , 채점기준내용으로 이루어진 과제 상세</caption>
+                    <colgroup>
+                        <col width="18%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">첨부파일</th>
+                            <td>
+                                <div class="file_area mt10">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</a></li>
+                                        <li><a href="javascript:void(0);">집합훈련 원격 대체 온라인 강의실2.zip [8259kb]</a></li>
+                                        <!-- noData
+                                        <li><span class="no_data">첨부파일이 없습니다.</span></span></li>
+                                        -->
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">모범답안</th>
+                            <td>
+                                의사전달과 리더십 [의사전달 개념, 의사전달 중요성, 의사전달 기능, 의사전달
+                                원칙, 의사전달 과정, 의사전달 유형, 의사전달 고려사항, 의사전달 장애, 의사전달
+                                개선, 의사전달 소개, 의사전달]
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">채점기준내용</th>
+                            <td>
+                                다양한 예시를 통하여 답안을 작성
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : table_hori -->
+
+
+            <h3>답안작성</h3>
+
+            <div class="inputBox Full">
+                <textarea class="txt_count" disabled>이야기를 하다가 저 사람한테 내 의도가 제대로 전달되지 않고 있다고 느낄 때 상대방에게 이해력 향상을 구할것이 아니라 자신의 전달 능력을 개선해야 하는 것이 비즈니스 프로페셔널들의 방식입니다. 명확한 의사 전달을 위한 PAC 사고의 3가지 요령에 대해 작성하시기 바랍니다.</textarea>
+            </div>
+            <div class="file_area">
+                <ul>
+                    <li><a href="javascript:void(0);">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</a></li>
+                    <li><a href="javascript:void(0);">집합훈련 원격 대체 온라인 강의실2.zip [8259kb]</a></li>
+                    <!-- noData
+                    <li><span class="no_data">첨부파일이 없습니다.</span></span></li>
+                    -->
+                </ul>
+            </div>
+
+            <h3>강사 첨삭</h3>
+
+            <!-- table_hori -->
+            <div class="tableScroll">
+                <table class="table_hori mt0 mob_block">
+                    <caption>채점여부 , 강사총평 , 재응시 사유로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="18%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">모사율</th>
+                            <td>
+                                <strong class="txt_blue01">50</strong>%
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">모사답안여부</th>
+                            <td>
+                                모사 확정
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">반려일</th>
+                            <td>
+                                2020-05-15
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">반려사유</th>
+                            <td>
+                                반려사유를 작성합니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨삭여부</th>
+                            <td>
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="confirm01" value="confirm" name="score_confirm" checked="checked">
+                                        <label for="confirm01">첨삭완료</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="confirm02" value="retry" name="score_confirm">
+                                        <label for="confirm02">반려</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨삭지도</th>
+                            <td>
+                                <div class="inputBox Full">
+                                    <textarea>과제 내용 잘 확인했습니다. PAC 사고의 3가지 요령에 대해 명확하고 구체적으로 서술하였습니다. 참 잘했습니다.</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="control">
+                            <th scope="row">반려사유</th>
+                            <td>
+                                <div class="inputBox Full">
+                                    <input type="text" placeholder="반려사유를 작성합니다.">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">점수</th>
+                            <td>
+                                <div class="inputBox">
+                                    <input type="text" class="score_input"> <span class="vertiM">점</span>
+                                </div>
+                                <!-- 비활성화
+                                <div class="inputBox">
+                                    <input type="text" class="score_input" disabled="disabled"> <span class="vertiM">점</span>
+                                </div>
+                                -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- EOD : table_hori -->
+
+            <script>
+
+                $("input[name=score_confirm]").change(function() {
+
+                    var radioValue = $(this).val();
+
+                    if (radioValue == "retry") {
+
+                        $(this).closest("table").find("tr.control").css('display','table-row');
+
+                    } else {
+
+                        $(this).closest("table").find("tr.control").css('display','none');
+
+                    }
+                });
+
+            </script>
+
+        </div>
+        <!-- EOD : windowPopBoxIn -->
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+
+        <button type="button" class="btn_m_blue" onclick="window.close(); return false;">저장</button>
+        <button type="button" class="btn_m_black" onclick="window.close(); return false;">닫기</button>
+
+        <div class="rightBox">
+            <button type="button" class="btn_m_black" onclick="window.close(); return false;">다음과제</button>
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

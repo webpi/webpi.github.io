@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- header -->
+<section class="headerInclude"></section>
+<!-- EOD : header -->
+
+<!-- sub_visual -->
+<section class="sub_visual sub_visual05">
+    <!-- sub_visualIn -->
+    <div class="sub_visualIn">
+        <p class="location">마이페이지</p>
+
+        <!-- customer_area -->
+        <div class="customer_area">
+            <!-- customer_areaIn -->
+            <div class="customer_areaIn">
+                <!-- customer_areaBox -->
+                <div class="customer_areaBox">
+                    <!-- infoBox -->
+                    <div class="infoBox">
+                        <p class="tit">고객센터</p>
+                        <a href="javascript:void(0)" class="btn_link"><span class="txt">원격지원서비스</span><i class="icon_arrow"></i></a>
+                        <p class="num">041.580.4500</p>
+                        <p class="num">041.580.4506</p>
+                        <p class="mail">e-koreatech@koreatech.ac.kr</p>
+                    </div>
+                    <!-- EOD : infoBox -->
+                    <!-- timeBox -->
+                    <div class="timeBox">
+                        <ul>
+                            <li>평일 09:00 ~ 18:00</li>
+                            <li>점심시간 12:00 ~ 13:00</li>
+                        </ul>
+                    </div>
+                    <!-- EOD : timeBox -->
+                </div>
+                <!-- EOD : customer_areaBox -->
+            </div>
+            <!-- customer_areaIn -->
+        </div>
+        <!-- EOD : customer_area -->
+    </div>
+    <!-- EOD : sub_visualIn -->
+</section>
+<!-- EOD : sub_visual -->
+
+<!-- sub_navBox -->
+<nav class="sub_navBox">
+    <!-- sub_navBoxIn  -->
+    <div class="sub_navBoxIn">
+        <div class="content_wrap">
+            <!-- sub_nav -->
+            <ul class="sub_nav">
+                <li><a href="mypage_home.html"><span>나의 홈</span></a></li>
+                <li><a href="mypage_status.html"><span>학습자 학습현황</span></a></li>
+                <li><a href="mypage_board.html"><span>과정게시판 관리</span></a></li>
+                <li><a href="mypage_qa.html"><span>과정Q&A 관리</span></a></li>
+                <li><a href="mypage_score.html"><span>채점관리</span></a></li>
+                <li><a href="mypage_project.html"><span>팀 프로젝트</span></a></li>
+                <li><a href="mypage_seminar.html"><span>라이브 세미나</span></a></li>
+                <li class="active"><a href="mypage_grate.html"><span>평가 우수사례</span></a></li>
+                <li><a href="mypage_survey.html"><span>설문</span></a></li>
+            </ul>
+            <!-- EOD : sub_nav -->
+        </div>
+    </div>
+    <!-- EOD: sub_navBoxIn -->
+</nav>
+<!-- EOD : sub_navBox -->
+
+
+
+<!-- contentLayout -->
+<div class="sub_contentLayout" id="content">
+    <div class="content_wrap">
+
+        <h3><span>평가 우수사례</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+        <!-- table_hori -->
+        <table class="table_hori write">
+            <caption>과정선택 , 제목 , 내용 , 첨부파일로 이루어진 평가우수사례 작성 테이블</caption>
+            <colgroup>
+                <col width="16%">
+                <col width="*">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>과정선택</th>
+                <td>
+                    <div class="selectBox">
+                        <label for="select_year"><span>2020</span></label>
+                        <select id="select_year">
+                            <option>2020</option>
+                            <option>2019</option>
+                        </select>
+                    </div>
+
+                    <div class="selectBox long">
+                        <label for="select_process"><span>한국교육기술대학교 온라인강의 과정1</span></label>
+                        <select id="select_process">
+                            <option>한국교육기술대학교 온라인강의 과정1</option>
+                            <option>한국교육기술대학교 온라인강의 과정2</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr class="mobB">
+                <th class="mobH">제목</th>
+                <td colspan="2">
+                    <div class="inputBox Full">
+                        <input type="text" placeholder="제목">
+                    </div>
+                </td>
+            </tr>
+            <tr class="mobB">
+                <th class="mobH">내용</th>
+                <td colspan="2">
+                    <div class="inputBox Full">
+                        <textarea placeholder="내용"></textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><span>첨부파일</span></th>
+                <td>
+                    <div class="fileBox">
+                        <button type="button" class="btn_s_blue">파일찾기</button>
+                        <ul class="fileList">
+                            <li>
+                                <div class="file">
+                                    <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                                    <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file">
+                                    <span class="txt">집합훈련 원격 대체 온라인 강의실2.zip [853kb]</span>
+                                    <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- EOD : table_hori -->
+
+        <!-- btnBox -->
+        <div class="btnBox">
+            <div class="rightBox">
+                <a href="mypage_grate.html"  class="btn_m_blue">저장</a>
+                <a href="mypage_grate.html"  class="btn_m_black">취소</a>
+            </div>
+        </div>
+        <!-- EOD : btnBox -->
+
+    </div>
+</div>
+<!-- EOD : contentLayout -->
+
+<!-- footer -->
+<section class="footerInclude"></section>
+<!-- EOD : footer -->
+
+
+</body>
+</html>
+

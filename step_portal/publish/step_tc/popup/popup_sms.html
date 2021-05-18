@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/template4/resp/skin/skin_blue.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<section class="windowPop">
+    <div class="windowPopH">
+        SMS 발송
+        <a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/classroom/template3/resp/default/icon_popup_close.png"></a>
+    </div>
+
+    <!-- windowPopBox -->
+    <div class="windowPopBox">
+        <div class="windowPopBoxIn">
+
+            <!-- smsBox -->
+            <div class="smsBox">
+                <!-- smsBoxL -->
+                <div class="smsBoxL">
+
+                    <div class="tableScroll">
+                        <table class="table_hori mt0">
+                            <caption>문자유형 , 수신자로 이루어진 문자 상세</caption>
+                            <colgroup>
+                                <col width="14%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>문자유형</th>
+                                    <td>
+                                        <ul class="radioList">
+                                            <li>
+                                                <input type="radio" id="radio01_01" name="radioGroup">
+                                                <label for="radio01_01">SMS</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="radio01_02" name="radioGroup">
+                                                <label for="radio01_02">LMS</label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>수신자</th>
+                                    <td>
+                                        <ul class="sendBox">
+                                            <li>
+                                                <span>박아름 (010-1234-5678)</span><a href="javascript:void(0)" class="btn_del" title="수신자 제거" ><i class="icon_close"></i></a>
+                                            </li>
+                                            <li>
+                                                <span>홍길동 (010-1234-5678)</span><a href="javascript:void(0)" class="btn_del" title="수신자 제거" ><i class="icon_close"></i></a>
+                                            </li>
+                                            <li>
+                                                <span>강학생 (010-1234-5678)</span><a href="javascript:void(0)" class="btn_del" title="수신자 제거" ><i class="icon_close"></i></a>
+                                            </li>
+                                        </ul>
+                                        <p class="txt_default">총 <strong class="txt_point">0</strong>명</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <!-- EOD : smsBoxL -->
+                <!-- smsBoxR -->
+                <div class="smsBoxR">
+
+                    <div class="sms_phone">
+                        <div class="sms_phoneIn">
+
+                            <div class="textBox">
+                                <div class="inputBox Full">
+                                    <textarea placeholder="메시지를 입력하세요." class="txt_count"></textarea>
+                                </div>
+                                <div class="textCount">
+                                    <span class="num">0</span> / <small>80</small>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn_s_blue_gra">전송</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- EOD : smsBoxR -->
+            </div>
+            <!-- EOD : smsBox -->
+
+            <script>
+
+                $(document).ready(function(){
+
+
+                    var count = $(".table_hori .sendBox li").length;
+
+                    $(".table_hori .txt_point").text(count);
+
+
+                });
+
+                $(document).on('click', ".sendBox .btn_del", function (e) {
+
+                    e.preventDefault();
+
+                    var stat = $(this).closest("ul").siblings("p").find(".txt_point").text();
+                    var num = parseInt(stat,10);
+
+                    num--;
+
+                    $(this).closest("ul").siblings("p").find(".txt_point").text(num);
+                    $(this).closest("li").remove();
+
+                });
+
+
+                $('.txt_count').keyup(function (e){
+
+                    var content = $(this).val();
+                    var count = $(this).parent(".inputBox").siblings(".textCount");
+
+                    count.find(".num").text(content.length);
+
+                    if (content.length > 80){
+
+                        alert("최대 80자까지 입력 가능합니다.");
+                        $(this).val(content.substring(0, 80));
+                        count.html("<span class='num'>80</span> / <small>80</small>");
+                    }
+
+                });
+
+            </script>
+
+
+        </div>
+    </div>
+    <!-- EOD : windowPopBox -->
+
+    <div class="windowPopBtn">
+        <button type="button" class="btn_m_blue" onclick="window.close(); return false;">닫기</button>
+    </div>
+    <!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+

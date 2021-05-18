@@ -1,0 +1,810 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- learningHeader -->
+<div class="learningHeader">
+    <div class="title">
+        <h2><span>빅데이터 수집시스템 개발 제목 길이 테스트 제목 길이 테스트 제목 길이 테스트 제목 길이 테스트 제목 길이 테스트 제목 길이 테스트 제목 길이 테스트 제목 길이 테스트</span></h2>
+        <div class="title_btnBox">
+            <a href="javascript:void(0)" class="menu_error" onclick="popupS('#popup01','show','800','auto');"><i class="icon_bell"></i><span>콘텐츠<br>오류신고</span></a>
+            <a href="javascript:void(0)" class="question_btn" onclick="popupS('#popup04','show','800','auto');"><i class="icon_question"></i><span>학습문의</span></a>
+            <a href="javascript:void(0)" class="menu_btn"><i class="icon_list"></i><span>INDEX</span></a>
+            <a href="javascript:void(0)" class="close_btn"><i class="icon_close"></i></a>
+        </div>
+    </div>
+</div>
+<!-- EOD : learningHeader -->
+
+<div class="learningContent">
+    <!-- learningBtnBox -->
+    <div class="learningBtnBox">
+        <a href="javascript:void(0)" class="full_btn"><i class="icon_learning_menu"></i></a>
+    </div>
+    <!-- EOD : learningBtnBox -->
+    <!-- learning -->
+    <div class="learning" id="contentsLearning">
+        <!-- contents -->
+        <div class="contents">
+            <!-- videoArea -->
+            <div class="videoArea">
+                <div class="videoBox">
+
+                    동영상 Iframe 위치
+
+                </div>
+            </div>
+            <!-- EOD : videoArea -->
+        </div>
+        <!-- EOD : contents -->
+    </div>
+    <!-- EOD : learning -->
+</div>
+
+
+<!-- videoBtnBox -->
+<div class="videoBtnBox" id="contentsMoving">
+    <a href="javascript:void(0)" class="btnVideoPrev">
+        <span class="circle">
+            <i class="icon_prev_arrow"></i>
+        </span>
+        <span class="txt">이전</span>
+    </a>
+
+    <span class="videoPaging">01 / 25</span>
+
+    <a href="javascript:void(0)" class="btnVideoNext">
+        <span class="txt">다음</span>
+        <span class="circle">
+            <i class="icon_next_arrow"></i>
+        </span>
+    </a>
+</div>
+<!-- EOD : videoBtnBox -->
+
+<!-- learning_menu -->
+<div class="learning_menu">
+    <!-- learning_menu_Header -->
+    <div class="learning_menu_Header">
+        <ul class="learning_menu_HeaderIn">
+            <li>
+                <a href="javascript:void(0)" onclick="popupS('#popup01','show','800','auto');"><i class="icon_bell"></i><span>콘텐츠<br>오류신고</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="question_btn" onclick="popupS('#popup04','show','800','auto');"><i class="icon_question"></i><span>학습문의</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="menu_btn"><i class="icon_close"></i><span>INDEX</span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- EOD : learning_menu_Header -->
+    <!-- learning_menu_List -->
+    <div class="learning_menu_List">
+        <table>
+            <tbody>
+                <tr class="info">
+                    <td>
+                        <div class="learningBox">
+                            <div class="info">
+                                <div class="infoL">
+                                    <span class="le_class">1차시</span>
+                                    <span class="le_state complete">학습완료</span>
+                                </div>
+                                <div class="infoR">
+                                    <a href="javascript:void(0)" class="download">
+                                        <i class="icon_download"></i>
+                                        <span class="blind">강의 자료 다운로드</span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="tree_show">
+                                        <i class="icon_tree_btn"></i>
+                                        <span class="blind">상세 학습 보기</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="tit">
+                                데이터 수집과 분석을 위한 파이썬 개발환경 구축
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit complete">
+                                <div class="tit_name">인트로</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark" onclick="popupS('#popup02','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit complete">
+                                <div class="tit_name">미리보기</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark" onclick="popupS('#popup02','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit ing">
+                                <div class="tit_name">빅데이터 수집 방법</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit this">
+                                <div class="tit_name">웹페이지를 구성하는 기술</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit">
+                                <div class="tit_name">심화학습</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit">
+                                <div class="tit_name">생략테스트생략테스트생략테스트생략테스트생략테스트생략테스트</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- 현재 학습중인 차시 -->
+                <tr class="info active">
+                    <td>
+                        <div class="learningBox">
+                            <div class="info">
+                                <div class="infoL">
+                                    <span class="le_class">2차시</span>
+                                    <span class="le_state ing">학습중</span>
+                                </div>
+                                <div class="infoR">
+                                    <a href="javascript:void(0)" class="download">
+                                        <i class="icon_download"></i>
+                                        <span class="blind">강의 자료 다운로드</span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="tree_show">
+                                        <i class="icon_tree_btn"></i>
+                                        <span class="blind">상세 학습 보기</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="tit">
+                                데이터 수집과 분석을 위한 파이썬 개발환경 구축
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="active">
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit complete">
+                                <div class="tit_name">인트로</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark" onclick="popupS('#popup02','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="active">
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit complete">
+                                <div class="tit_name">미리보기</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark" onclick="popupS('#popup02','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="active">
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit ing">
+                                <div class="tit_name">빅데이터 수집 방법</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="active">
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit this">
+                                <div class="tit_name">웹페이지를 구성하는 기술</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="info">
+                    <td>
+                        <div class="learningBox">
+                            <div class="info">
+                                <div class="infoL">
+                                    <span class="le_class">3차시</span>
+                                    <span class="le_state wait">학습대기</span>
+                                </div>
+                                <div class="infoR">
+                                    <a href="javascript:void(0)" class="download">
+                                        <i class="icon_download"></i>
+                                        <span class="blind">강의 자료 다운로드</span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="tree_show">
+                                        <i class="icon_tree_btn"></i>
+                                        <span class="blind">상세 학습 보기</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="tit">
+                                데이터 수집과 분석을 위한 파이썬 개발환경 구축
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit ing">
+                                <div class="tit_name">빅데이터 수집 방법</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit this">
+                                <div class="tit_name">웹페이지를 구성하는 기술</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="info">
+                    <td>
+                        <div class="learningBox">
+                            <div class="info">
+                                <div class="infoL">
+                                    <span class="le_class">4차시</span>
+                                    <span class="le_state wait">학습대기</span>
+                                </div>
+                                <div class="infoR">
+                                    <a href="javascript:void(0)" class="download">
+                                        <i class="icon_download"></i>
+                                        <span class="blind">강의 자료 다운로드</span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="tree_show">
+                                        <i class="icon_tree_btn"></i>
+                                        <span class="blind">상세 학습 보기</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="tit">
+                                데이터 수집과 분석을 위한 파이썬 개발환경 구축
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit ing">
+                                <div class="tit_name">빅데이터 수집 방법</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit this">
+                                <div class="tit_name">웹페이지를 구성하는 기술</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="info">
+                    <td>
+                        <div class="learningBox">
+                            <div class="info">
+                                <div class="infoL">
+                                    <span class="le_class">5차시</span>
+                                    <span class="le_state wait">학습대기</span>
+                                </div>
+                                <div class="infoR">
+                                    <a href="javascript:void(0)" class="download">
+                                        <i class="icon_download"></i>
+                                        <span class="blind">강의 자료 다운로드</span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="tree_show">
+                                        <i class="icon_tree_btn"></i>
+                                        <span class="blind">상세 학습 보기</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="tit">
+                                데이터 수집과 분석을 위한 파이썬 개발환경 구축
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit ing">
+                                <div class="tit_name">빅데이터 수집 방법</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="learning_dep2">
+                            <a href="javascript:void(0)" class="tit">
+                                <div class="tit_name">웹페이지를 구성하는 기술</div>
+                            </a>
+                            <a href="javascript:void(0)" class="le_bookmark active" onclick="popupS('#popup03','show','800','auto');">
+                                <span class="blind">학습 메모</span>
+                                <i class="icon_bookmark"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- EOD : learning_menu_List -->
+</div>
+<!-- EOD : learning_menu -->
+
+<!-- popup_wrap / 오류신고 팝업 -->
+<section class="popup_wrap" id="popup01">
+    <!-- popup_Box -->
+    <div class="popup_Box">
+        <!-- popup_BoxIn -->
+        <div class="popup_BoxIn">
+            <div class="popupH">콘텐츠 오류신고<a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup01','close');" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a></div>
+            <div class="popupCBox">
+                <div class="popupCBoxIn">
+                    <table class="table_hori">
+                        <caption>차시 , 페이지 , 제목 , 내용 , 첨부파일로 이루어져 있는 오류신고 상세</caption>
+                        <colgroup>
+                            <col width="80px">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>차시</th>
+                            <td>
+                                웹 페이지의 콘텐츠 같이보기
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>페이지</th>
+                            <td>
+                                인트로
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="asterisk">제목</span></th>
+                            <td colspan="2">
+                                <div class="inputBox Full">
+                                    <input type="text" placeholder="제목" title="제목쓰기">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="asterisk">내용</span></th>
+                            <td colspan="2">
+                                <div class="inputBox Full">
+                                    <textarea placeholder="내용" title="내용쓰기">
+1. 기기(PC/모바일) :
+2. 브라우저(크롬/엣지/익스플로러 등) :
+3. 내용 :
+                                    </textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span>첨부파일</span></th>
+                            <td>
+                                <div class="fileBox">
+                                    <button type="button" class="btn_s_blue">파일찾기</button>
+                                    <ul class="fileList">
+                                        <li>
+                                            <div class="file">
+                                                <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                                                <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="popupF">
+                <button type="button" class="btn_m_blue" onclick="popupS('#popup01','close');">저장</button>
+                <button type="button" class="btn_m_white" onclick="popupS('#popup01','close');">취소</button>
+            </div>
+        </div>
+        <!-- popup_BoxIn -->
+    </div>
+    <!-- EOD : popup_Box -->
+    <div class="popup_bg" onclick="popupS('#popup01','close');"></div>
+</section>
+<!-- EOD : popup_wrap -->
+
+<!-- popup_wrap / 학습메모 작성 -->
+<section class="popup_wrap" id="popup02">
+    <!-- popup_Box -->
+    <div class="popup_Box">
+        <!-- popup_BoxIn -->
+        <div class="popup_BoxIn">
+            <div class="popupH">학습메모<a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup02','close');" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a></div>
+            <div class="popupCBox">
+                <div class="popupCBoxIn">
+                    <table class="table_hori">
+                        <caption>제목,내용으로 이루어져 있는 학습메모 상세</caption>
+                        <colgroup>
+                            <col width="50px">
+                            <col width="*%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th><span class="asterisk">제목</span></th>
+                            <td colspan="2">
+                                <div class="inputBox Full">
+                                    <input type="text" placeholder="제목">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="asterisk">내용</span></th>
+                            <td colspan="2">
+                                <div class="inputBox Full">
+                                    <textarea placeholder="내용"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="popupF">
+                <button type="button" class="btn_m_blue" onclick="popupS('#popup02','close');">저장</button>
+                <button type="button" class="btn_m_white" onclick="popupS('#popup02','close');">취소</button>
+            </div>
+        </div>
+        <!-- popup_BoxIn -->
+    </div>
+    <!-- EOD : popup_Box -->
+    <div class="popup_bg" onclick="popupS('#popup02','close');"></div>
+</section>
+<!-- EOD : popup_wrap -->
+
+<!-- popup_wrap / 학습메모 저장된 데이터 -->
+<section class="popup_wrap" id="popup03">
+    <!-- popup_Box -->
+    <div class="popup_Box">
+        <!-- popup_BoxIn -->
+        <div class="popup_BoxIn">
+            <div class="popupH">학습메모<a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup03','close');" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a></div>
+            <div class="popupCBox">
+                <div class="popupCBoxIn">
+                    <table class="table_hori">
+                        <caption>제목,내용으로 이루어져 있는 학습메모 상세</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th><span class="asterisk">제목</span></th>
+                            <td colspan="2">
+                                개인정보의 이해
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="asterisk">내용</span></th>
+                            <td colspan="2">
+                                저장된 내용입니다.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="popupF">
+                <button type="button" class="btn_m_blue" onclick="popupS('#popup03','close');">확인</button>
+            </div>
+        </div>
+        <!-- popup_BoxIn -->
+    </div>
+    <!-- EOD : popup_Box -->
+    <div class="popup_bg" onclick="popupS('#popup03','close');"></div>
+</section>
+<!-- EOD : popup_wrap -->
+
+
+<!-- popup_wrap / 학습문의 팝업 -->
+<section class="popup_wrap" id="popup04">
+    <!-- popup_Box -->
+    <div class="popup_Box">
+        <!-- popup_BoxIn -->
+        <div class="popup_BoxIn">
+            <div class="popupH">학습문의<a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup04','close');" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a></div>
+            <div class="popupCBox">
+                <div class="popupCBoxIn">
+                    <table class="table_hori">
+                        <caption>분류,제목,내용,첨부파일,비밀글로 이루어져 있는 학습문의 상세</caption>
+                        <colgroup>
+                            <col width="80px">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span class="asterisk">분류</span></th>
+                                <td colspan="2">
+                                    <div class="inputBox Full">
+                                        <input type="text">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="asterisk">제목</span></th>
+                                <td colspan="2">
+                                    <div class="inputBox Full">
+                                        <input type="text" placeholder="제목">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="asterisk">내용</span></th>
+                                <td colspan="2">
+                                    <div class="inputBox Full">
+                                        <textarea placeholder="내용"></textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>첨부파일</span></th>
+                                <td>
+                                    <div class="fileBox">
+                                        <button type="button" class="btn_s_blue">파일찾기</button>
+                                        <ul class="fileList">
+                                            <li>
+                                                <div class="file">
+                                                    <span class="txt">집합훈련 원격 대체 온라인 강의실.zip [8259kb]</span>
+                                                    <a href="javascript:void(0)" class="file_del" title="첨부파일 제거"><i class="icon_close"></i><span class="blind"></span></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>비밀글</span></th>
+                                <td>
+                                    <div class="checkBox">
+                                        <input type="checkbox" id="chk_verti01">
+                                        <label for="chk_verti01">사용</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="popupF">
+                <button type="button" class="btn_m_blue" onclick="popupS('#popup04','close');">저장</button>
+                <button type="button" class="btn_m_white" onclick="popupS('#popup04','close');">취소</button>
+            </div>
+        </div>
+        <!-- popup_BoxIn -->
+    </div>
+    <!-- EOD : popup_Box -->
+    <div class="popup_bg" onclick="popupS('#popup04','close');"></div>
+</section>
+<!-- EOD : popup_wrap -->
+
+<script>
+
+    $(document).ready(function(){
+
+        pageW = $("body").innerWidth();
+        headerH = $(".learningHeader").innerHeight();
+        footerH = $(".videoBtnBox").innerHeight();
+        listH = $(window).height() - headerH;
+        windowH = $(window).height() - headerH - footerH;
+
+        $(".learning_menu_List").css('height',listH);
+
+        /* 타블렛 이하 사이즈시에 클래스 추가 */
+
+        if(pageW < 1200){
+
+            $("body").addClass("mob");
+            $(".learningContent").css('height',$(window).height());
+
+        }else{
+
+            $(".learningContent").css('height',windowH);
+
+        }
+
+    })
+
+    $(window).resize(function(){
+
+        pageW = $("body").innerWidth();
+        headerH = $(".learningHeader").innerHeight();
+        footerH = $(".videoBtnBox").innerHeight();
+        listH = $(window).height() - headerH;
+        windowH = $(window).height() - headerH - footerH;
+
+        $(".learning_menu_List").css('height',listH);
+        $(".learningContent").css('height',windowH);
+
+    });
+
+
+    $(document).on('click','.full_btn',function(e){
+
+        if($("body").hasClass("mob")){
+
+            $("body").removeClass("mob");
+            $(".learningContent").css('height',windowH);
+
+        }else{
+
+            $("body").addClass("mob");
+            $(".learningContent").css('height',$(window).height());
+
+        }
+
+    });
+
+
+    /* 메뉴 show & hide 스크립트 */
+
+    $(document).on('click',".menu_btn",function(e){
+
+        if($(".learning_menu").hasClass("active")){
+
+            $(".learning_menu").removeClass("active");
+
+        }else{
+
+            $(".learning_menu").addClass("active");
+
+        }
+
+    });
+
+
+    /* 메뉴 상세 과정 show & hide 스크립트 */
+
+    $(document).on('click',".learningBox .tit , .learningBox .tree_show",function(e) {
+
+        var info = $(this).closest('tr');
+        var show = info.next('tr').css('display');
+        var all_list = $('.learning_menu_List').find("tr");
+        var list = info.nextUntil('.info');
+
+        if(show === 'none'){
+
+            all_list.removeClass('active');
+            info.addClass('active');
+            list.addClass('active');
+
+        }else{
+            ;
+            all_list.removeClass('active');
+            info.removeClass('active')
+            list.removeClass('active');
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
+

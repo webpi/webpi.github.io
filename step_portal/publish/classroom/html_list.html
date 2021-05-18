@@ -1,0 +1,451 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>강의실 / publish List</title>
+    <style type="text/css">
+        * {margin:0; padding:0;}
+        html,body { background:#fff; }
+        body {font-family:"NanumSquare", sans-serif; padding: 20px; font-weight:500; }
+        table {width: 100%; min-width: 1000px; color: #333; border-collapse: collapse; border-top: 1px solid #bbb; border-left: 1px solid #bbb;}
+        th, td {border-right: 1px solid #bbb; border-bottom: 1px solid #bbb; font-size: 14px;}
+        th {line-height: 30px; background: #eee;}
+        td {padding: 5px 10px 5px 10px; line-height: 20px; vertical-align: middle;}
+        .info {margin-bottom: 40px;}
+        .info th {padding-left: 10px;padding-right: 10px;text-align: left;	background: none;}
+        .info td {font-size: 15px;text-align: left;font-weight: bold; padding: 10px;}
+        a {color: red;text-decoration: none;}
+        .txt_red { color:red; }
+        a:hover {text-decoration: underline;}
+        .comp {background: #ffe6e9;}
+        .modify {background: #dcffee;}
+        .ing {background: #fffdc2;}
+        .add {background: #e1f4fe;}
+        .del {background: #f2f2f2;}
+        .ac { text-align:center; }
+        h2 { font-size:20px; margin:0 0 10px 0; }
+        h3 { font-size:16px; margin:0 0 5px 0; font-weight:500; }
+        strong { font-weight:600; }
+    </style>
+</head>
+<body>
+<table class="info">
+    <colgroup>
+        <col width="*">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+        <col width="20%">
+    </colgroup>
+    <thead>
+    <tr>
+        <th>프로젝트명</th>
+        <th colspan="5">진행현황</th>
+        <th>최근 업데이트</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>STEP > 강의실</td>
+        <td class="ing">진행중</td>
+        <td>완료</td>
+        <td class="modify">수정</td>
+        <td class="add">추가</td>
+        <td class="del">삭제</td>
+        <td>2020.11.26</td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="fixedHead" style="margin:0 0 50px 0;">
+    <div class="box">
+        <table>
+            <colgroup>
+                <col width="10%">
+                <col width="10%">
+                <col width="*">
+                <col width="10%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>NO</th>
+                <th>DATE</th>
+                <th>REMARKS</th>
+                <th>ISSUE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="">
+                <td class="ac">1</td>
+                <td class="ac"></td>
+                <td>
+                    <strong>
+                        - 추후 개정이력 생성 예정
+                    </strong>
+                </td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="fixedHead" style="margin:0 0 50px 0;">
+    <div class="box">
+        <table>
+            <colgroup>
+                <col width="12%">
+                <col width="12%">
+                <col width="12%">
+                <col width="10%">
+                <col width="15%">
+                <col width="10%">
+                <col width="*">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>1DEPTH</th>
+                <th>2DEPTH</th>
+                <th>3DEPTH</th>
+                <th>유형</th>
+                <th>URL</th>
+                <th>DATE</th>
+                <th>REMARKS</th>
+            </tr>
+            </thead>
+            <tbody  class="comp">
+                <tr>
+                    <td class="" rowspan="41">강의실</td>
+                    <td>강의실 홈</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="index.html" target="_blank">index.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>강의계획서</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="lecture_plan.html" target="_blank">lecture_plan.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>진도</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="lecture_attend.html" target="_blank">lecture_attend.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="6">시험</td>
+                    <td>시험</td>
+                    <td></td>
+                    <td><a href="lecture_exam.html" target="_blank">lecture_exam.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>otp 확인</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_otp.html" target="_blank">popup_otp.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>시험 응시하기</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_exam_info.html" target="_blank">popup_exam_info.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>응시환경 점검</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_exam_test.html" target="_blank">popup_exam_test.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>시험 보기</td>
+                    <td>팝업 </td>
+                    <td><a href="popup/popup_exam_test.html" target="_blank">popup_exam_test.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>시험 결과 확인</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_exam_result.html" target="_blank">popup_exam_result.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">과제</td>
+                    <td>과제</td>
+                    <td></td>
+                    <td><a href="lecture_assign.html" target="_blank">lecture_assign.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>과제 제출하기</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_assign.html" target="_blank">popup_assign.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>과제 결과확인</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_assign_result.html" target="_blank">popup_assign_result.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="5">토론</td>
+                    <td>목록</td>
+                    <td></td>
+                    <td><a href="lecture_debate.html" target="_blank">lecture_debate.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>의견 리스트</td>
+                    <td></td>
+                    <td><a href="lecture_debate_detail_list.html" target="_blank">lecture_debate_detail_list.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>참여 결과</td>
+                    <td></td>
+                    <td><a href="lecture_debate_detail_result.html" target="_blank">lecture_debate_detail_result.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>의견 상세</td>
+                    <td></td>
+                    <td><a href="lecture_debate_detail_view.html" target="_blank">lecture_debate_detail_view.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>의견 쓰기</td>
+                    <td></td>
+                    <td><a href="lecture_debate_detail_write.html" target="_blank">lecture_debate_detail_write.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="11">팀프로젝트</td>
+                    <td>목록</td>
+                    <td></td>
+                    <td><a href="lecture_team.html" target="_blank">lecture_team.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>상세</td>
+                    <td></td>
+                    <td><a href="lecture_team_detail.html" target="_blank">lecture_team_detail.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>프로젝트 방</td>
+                    <td>게시판</td>
+                    <td><a href="lecture_team_list.html" target="_blank">lecture_team_list.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>프로젝트 방</td>
+                    <td>게시판 > 상세</td>
+                    <td><a href="lecture_team_list_view.html" target="_blank">lecture_team_list_view.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>프로젝트 방</td>
+                    <td>게시판 > 작성</td>
+                    <td><a href="lecture_team_list_write.html" target="_blank">lecture_team_list_write.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>프로젝트 방</td>
+                    <td>과제물</td>
+                    <td><a href="lecture_team_assign.html" target="_blank">lecture_team_assign.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>프로젝트 방</td>
+                    <td>팀원평가</td>
+                    <td><a href="lecture_team_eval.html" target="_blank">lecture_team_eval.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>프로젝트 방</td>
+                    <td>팀 구성원</td>
+                    <td><a href="lecture_team_info.html" target="_blank">lecture_team_info.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>프로젝트 방</td>
+                    <td>팀 구성원 > 팀원 추가</td>
+                    <td><a href="popup/popup_lecture_add.html" target="_blank">popup_lecture_add.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>화상채팅방 목록</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_video_chat.html.html" target="_blank">popup_video_chat.html.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>화상채팅방 개설</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_video_chat_write.html" target="_blank">popup_video_chat_write.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">라이브세미나</td>
+                    <td>목록</td>
+                    <td></td>
+                    <td><a href="lecture_seminar.html" target="_blank">lecture_seminar.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>불참사유</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_serminar_notattend.html" target="_blank">popup_serminar_notattend.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">설문</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="lecture_survey.html" target="_blank">lecture_survey.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>설문참여</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_survey.html" target="_blank">popup_survey.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                     <td>결과확인</td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_survey_result.html" target="_blank">popup_survey_result.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td>성적확인</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="lecture_record.html" target="_blank">lecture_record.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">공지사항/자료실</td>
+                    <td>목록</td>
+                    <td></td>
+                    <td><a href="lecture_notice.html" target="_blank">lecture_notice.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>상세</td>
+                    <td></td>
+                    <td><a href="lecture_notice_view.html" target="_blank">lecture_notice_view.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">학습문의</td>
+                    <td>목록</td>
+                    <td></td>
+                    <td><a href="lecture_question.html" target="_blank">lecture_question.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>쓰기/수정</td>
+                    <td></td>
+                    <td><a href="lecture_question_write.html" target="_blank">lecture_question_write.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td>상세</td>
+                    <td></td>
+                    <td><a href="lecture_question_view.html" target="_blank">lecture_question_view.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">학습창</td>
+                    <td></td>
+                    <td>팝업</td>
+                    <td><a href="popup/learning_window.html" target="_blank">learning_window.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>팝업</td>
+                    <td><a href="popup/popup_learning_window.html" target="_blank">popup_learning_window.html</a></td>
+                    <td><strong></strong></td>
+                    <td><strong></strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>

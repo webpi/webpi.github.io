@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>강의실</title>
+  <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+  <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+  <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+  <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+  <link href="/css/classroom/template3/skin/skin_blueClass.css" rel="stylesheet">
+  <script src="/js/jquery-1.8.3.min.js"></script>
+  <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+  <script src="/js/classroom/template3/wbCommon.js"></script>
+  <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+  <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+  <script src="/js/classroom/template3/slick.js"></script>
+
+  <!-- ie9 이하 적용 -->
+  <!--[if lt IE 9]>
+  <script src="/js/html5.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+  <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+  <!-- headerInclude -->
+  <section class="headerInclude"></section>
+  <!-- EOD : headerInclude -->
+
+  <!-- contentLayout -->
+  <section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+      <!-- lnb -->
+      <section class="lnbInclude"></section>
+      <!-- EOD : lnb -->
+
+      <!-- contentArea -->
+      <div class="contentArea" id="contentArea">
+        <h2><span>설문</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+        <!-- layout_boxs -->
+        <div class="layout_boxs mt0">
+          <p class="mt0 txt_info">과정에 대한 설문에 참여해주세요.</p>
+
+          <!-- 기존 구조 -->
+
+<!--          <div class="tableScroll mobH">-->
+<!--            <table class="table_veti mt20">-->
+<!--              <caption>구분,설문지명,설문기간,참여상태로 구성된 설문 상세</caption>-->
+<!--              <colgroup>-->
+<!--                <col width="15%">-->
+<!--                <col width="*">-->
+<!--                <col width="20%">-->
+<!--                <col width="25%">-->
+<!--              </colgroup>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <td>구분</td>-->
+<!--                  <td>설문지명</td>-->
+<!--                  <td>설문기간</td>-->
+<!--                  <td>참여상태</td>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td class="ac">과정만족도</td>-->
+<!--                <td class="ac">2020년도 과정만족도 설문</td>-->
+<!--                <td class="ac">2020.05.01 00:20 ~ 2020.05.01 00:20</td>-->
+<!--                <td class="ac">-->
+<!--                  <span class="txt_blue01 vertiM mr5">참여완료</span>-->
+<!--                  <button class="btn_s_black" onclick="window.open('popup/popup_survey_result.html','','width=1000, height=800');">결과확인</button>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="ac">과정만족도2</td>-->
+<!--                <td class="ac">2020년도 과정만족도2 설문</td>-->
+<!--                <td class="ac">2020.05.01 00:20 ~ 2020.05.01 00:20</td>-->
+<!--                <td class="ac">-->
+<!--                  <span class="vertiM mr5">미참여</span>-->
+<!--                  <button class="btn_s_blue" onclick="window.open('popup/popup_survey.html','','width=1000, height=800');">참여하기</button>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              &lt;!&ndash; noData-->
+<!--                <tr>-->
+<!--                  <td class="ac" colspan="4">-->
+<!--                    <div class="noData tb">-->
+<!--                      <div class="noDataBox">-->
+<!--                        <span class="ico"></span>-->
+<!--                        <span class="txt">등록된 설문이 없습니다.</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </td>-->
+<!--                </tr>-->
+<!--              &ndash;&gt;-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--          </div>-->
+
+<!--          <ul class="attend_list exam mobS">-->
+<!--            <li>-->
+<!--              <div class="order">-->
+<!--                <div class="oderC"><strong class="txt_blue01">[과정만족도] 2020년도 과정만족도 설문</strong></div>-->
+<!--              </div>-->
+<!--              <ul>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">설문기간</div>-->
+<!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">참여상태</div>-->
+<!--                    <div class="exam_boxR"><span class="txt_blue01">참여완료</span></div>-->
+<!--                  </div>-->
+<!--                  <div class="btn_center">-->
+<!--                    <button class="btn_s_black" onclick="window.open('popup/popup_survey_result.html','','width=1000, height=800');">결과확인</button>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--              <div class="order">-->
+<!--                <div class="oderC"><strong class="txt_blue01">[과정만족도] 2020년도 과정만족도 설문02</strong></div>-->
+<!--              </div>-->
+<!--              <ul>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">설문기간</div>-->
+<!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">참여상태</div>-->
+<!--                    <div class="exam_boxR">미참여</div>-->
+<!--                  </div>-->
+<!--                  <div class="btn_center">-->
+<!--                    <button class="btn_s_blue" onclick="window.open('popup/popup_assign.html','','width=1000, height=800');">참여하기</button>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+
+<!--          </ul>-->
+<!--          </li>-->
+
+<!--          &lt;!&ndash; noData-->
+<!--          <li>-->
+<!--            <div class="noData attend01">-->
+<!--              <div class="noDataBox">-->
+<!--                <span class="ico"></span>-->
+<!--                <span class="txt">등록된 설문이 없습니다.</span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          &ndash;&gt;-->
+<!--          </ul>-->
+
+          <!-- EOD : 기존 구조 -->
+
+          <!-- 신규 구조 -->
+          <!-- tableScroll -->
+          <div class="tableScroll">
+            <!-- table_block -->
+            <table class="table_block mt20 table-debate">
+              <caption>구분,설문지명,설문기간,참여상태,참여/결과확인으로 구성된 설문 상세</caption>
+              <colgroup>
+                <col width="15%">
+                <col width="*">
+                <col width="20%">
+                <col width="10%">
+                <col width="15%">
+              </colgroup>
+              <thead>
+              <tr>
+                <td scope="col">구분</td>
+                <td scope="col">설문지명</td>
+                <td scope="col">설문기간</td>
+                <td scope="col">참여상태</td>
+                <td scope="col">참여/결과확인</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="ac">
+                  <span class="mob_boxR">과정만족도</span>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">설문지명</span>
+                    <span class="mob_boxR">2020년도 과정만족도 설문</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">설문기간</span>
+                    <span class="mob_boxR">2020.05.01 00:20 ~<br/>2020.05.01 00:20</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">참여상태</span>
+                    <span class="mob_boxR"><span class="txt_blue01 vertiM mr5">참여완료</span></span>
+                  </div>
+                </td>
+                <td class="mob_ac"><button class="btn_s_black" onclick="window.open('popup/popup_survey_result.html','','width=1000, height=800');">결과확인</button></td>
+              </tr>
+              <tr>
+                <td class="ac">
+                  <span class="mob_boxR">과정만족도2</span>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">설문지명</span>
+                    <span class="mob_boxR">2019년도 과정만족도 설문</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">설문기간</span>
+                    <span class="mob_boxR">2020.05.01 00:20 ~<br/>2020.05.01 00:20</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">참여상태</span>
+                    <span class="mob_boxR"><span class="vertiM mr5">미참여</span></span>
+                  </div>
+                </td>
+                <td class="mob_ac"><button class="btn_s_blue" onclick="window.open('popup/popup_survey.html','','width=1000, height=800');">참여하기</button></td>
+              </tr>
+              </tbody>
+            </table>
+            <!-- EOD : table_block -->
+          </div>
+          <!-- EOD : tableScroll -->
+          <!-- 신규 구조 -->
+
+        </div>
+        <!-- EOD : layout_boxs -->
+      </div>
+      <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+  </section>
+  <!-- EOD : contentLayout -->
+
+
+</body>
+</html>

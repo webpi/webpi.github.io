@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>진도</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <div class="floatingBox mb10">
+                    <div class="floatingBoxR">
+                        <button type="button" class="btn_s_black toogleBtn" onclick="all_toggle(this)"><span>전체열기</span><i class="icon_arrow_down"></i></button>
+                    </div>
+                </div>
+
+                <!-- tableScroll -->
+                <div class="tableScroll mobH">
+                    <table class="table_veti mt0">
+                        <caption>차시,학습목차,학습완료 현황,학습시간,강의보기로 구성된 진도/출석 상세</caption>
+                        <colgroup>
+                            <col width="10%"/>
+                            <col width="*"/>
+                            <col width="15%"/>
+                            <col width="10%"/>
+                            <col width="15%"/>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td>차시</td>
+                            <td>학습목차</td>
+                            <td>학습완료 현황</td>
+                            <td>학습시간</td>
+                            <td>강의보기</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="dep1">
+                            <td class="ac"><strong class="txt_blue01">1차시</strong></td>
+                            <td colspan="2">
+                                <div class="round_List">
+                                    <div class="round_name">
+                                        <a href="javascript:void(0)" onclick="detail_show(this)" title="상세 차시 목록 보기">
+                                            <strong class="txt_blue01">데이터 수집과 분석을 위한 파이썬 개발 환경 구축</strong>
+                                            <i class="icon icon_arrow_down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="ac"><strong class="txt_blue01">00:20:00</strong></td>
+                            <td class="ac"><button class="btn_s_black">강의자료</button></td>
+                        </tr>
+                        <tr class="dep2">
+                            <td colspan="2"><strong>암호화폐(비트코인)</strong></td>
+                            <td class="ac">
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_course_com.html','','width=600, height=750');">
+                                        <span class="txt">수강완료 3명</span>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="ac">00:20:00</td>
+                            <td class="ac"><button class="btn_s_blue">강의보기</button></td>
+                        </tr>
+                        <tr class="dep2">
+                            <td colspan="2"><strong>블록체인의 개념과 원리</strong></td>
+                            <td class="ac">
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_course_com.html','','width=600, height=750');">
+                                        <span class="txt">수강완료 24명</span>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="ac">00:20:00</td>
+                            <td class="ac"><button class="btn_s_blue">강의보기</button></td>
+                        </tr>
+                        <tr class="dep1">
+                            <td class="ac"><strong class="txt_blue01">2차시</strong></td>
+                            <td colspan="2">
+                                <div class="round_List">
+                                    <div class="round_name">
+                                        <a href="javascript:void(0)" onclick="detail_show(this)" title="상세 차시 목록 보기">
+                                            <strong class="txt_blue01">암호화폐(비트코인)</strong>
+                                            <i class="icon icon_arrow_down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="ac"><strong class="txt_blue01">00:20:00</strong></td>
+                            <td class="ac">-</td>
+                        </tr>
+                        <tr class="dep2">
+                            <td colspan="2"><strong>암호화폐(비트코인)</strong></td>
+                            <td class="ac">
+                                <div class="linkBox arrow">
+                                    <a href="javascript:void(0)" onclick="window.open('popup/popup_course_com.html','','width=600, height=750');">
+                                        <span class="txt">수강완료 32명</span>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="ac">00:20:00</td>
+                            <td class="ac"><button class="btn_s_blue">강의보기</button></td>
+                        </tr>
+                        <!-- noData
+                        <tr>
+                          <td class="ac" colspan="7">
+                            <div class="noData tb">
+                              <div class="noDataBox">
+                                <span class="ico"></span>
+                                <span class="txt">게시된 글이 없습니다.</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <ul class="attend_list mobS">
+                    <li>
+                        <div class="order">
+                            <div class="oderL"><strong class="txt_blue01">1차시</strong></div>
+                            <div class="oderC">
+                                <div class="round_List">
+                                    <div class="round_name">
+                                        <a href="javascript:void(0)" onclick="mob_detail_show(this)" title="상세 차시 목록 보기">
+                                            <strong class="txt_blue01">데이터 수집과 분석을 위한 파이썬 개발 환경 구축</strong>
+                                            <i class="icon icon_arrow_down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="hide">
+                            <li>
+                                <strong class="tit">암호화폐(비트코인)</strong>
+                                <span class="txt">
+                                    <div class="linkBox arrow">
+                                        <a href="javascript:void(0)" onclick="window.open('popup/popup_course_com.html','','width=600, height=750');">
+                                            <span class="txt">수강완료 3명</span>
+                                        </a>
+                                    </div>
+                                </span>
+                                <span class="txt"><strong>학습시간</strong> 00:20:00</span>
+                                <div class="btn_center">
+                                    <button class="btn_s_blue">강의보기</button>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">블록체인의 개념과 원리</strong>
+                                <span class="txt">
+                                    <div class="linkBox arrow">
+                                        <a href="javascript:void(0)" onclick="window.open('popup/popup_course_com.html','','width=600, height=750');">
+                                            <span class="txt">수강완료 24명</span>
+                                        </a>
+                                    </div>
+                                </span>
+                                <span class="txt"><strong>학습시간</strong> 00:20:00</span>
+                                <div class="btn_center">
+                                    <button class="btn_s_blue">강의보기</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="order">
+                            <div class="oderL"><strong class="txt_blue01">2차시</strong></div>
+                            <div class="oderC">
+                                <div class="round_List">
+                                    <div class="round_name">
+                                        <a href="javascript:void(0)" onclick="mob_detail_show(this)" title="상세 차시 목록 보기">
+                                            <strong class="txt_blue01">빅데이터 수집 개요 (웹 크롤링,공공DB, SNS)</strong>
+                                            <i class="icon icon_arrow_down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="hide">
+                            <li>
+                                <strong class="tit">암호화폐(비트코인)</strong>
+                                <span class="txt">
+                                    <div class="linkBox arrow">
+                                        <a href="javascript:void(0)" onclick="window.open('popup/popup_course_com.html','','width=600, height=750');">
+                                            <span class="txt">수강완료 32명</span>
+                                        </a>
+                                    </div>
+                                </span>
+                                <span class="txt"><strong>학습시간</strong> 00:20:00</span>
+                                <div class="btn_center">
+                                    <button class="btn_s_blue">강의보기</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- noData
+                    <li>
+                      <div class="noData attend01">
+                        <div class="noDataBox">
+                          <span class="ico"></span>
+                          <span class="txt">게시된 글이 없습니다.</span>
+                        </div>
+                      </div>
+                    </li>
+                    -->
+                </ul>
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+
+
+        <script>
+
+            /* 전체 닫기 & 열기 스크립트 */
+
+            function all_toggle(obj){
+
+                tN = $(obj);
+                pcList = $(obj).closest(".floatingBox").siblings('.tableScroll');
+                mobList = $(obj).closest(".floatingBox").siblings(".attend_list");
+
+
+                if(tN.hasClass("active")){
+
+                    $(obj).find('span').text('전체열기');
+                    $(obj).removeClass('active');
+
+                    pcList.removeClass("active");
+                    pcList.find('tbody tr.dep1').removeClass('active');
+                    pcList.find('tbody tr.dep2').hide();
+
+                    mobList.removeClass("active");
+                    mobList.find('.order').removeClass("active");
+                    mobList.find('ul').hide();
+
+                }else{
+
+                    $(obj).find('span').text('전체닫기');
+                    $(obj).addClass('active');
+
+                    pcList.addClass("active");
+                    pcList.find('tbody tr.dep1').addClass('active');
+                    pcList.find('tbody tr.dep2').show();
+
+                    mobList.addClass("active");
+                    mobList.find('.order').addClass("active");
+                    mobList.find('ul').show();
+
+                }
+            }
+
+
+            /* 차시 open & hide 스크립트 */
+
+            function detail_show(obj){
+
+                tN = $(obj).closest("tr");
+                tNLen = $(obj).closest("tr").length;
+
+                if(tN.hasClass("active")){
+
+                    tN.removeClass("active");
+                    tN.nextUntil(".dep1").hide();
+
+                }else{
+
+                    tN.addClass("active");
+                    tN.nextUntil(".dep1").show();
+
+                }
+            }
+
+            function mob_detail_show(obj){
+
+                tN = $(obj).closest(".order");
+
+                if(tN.hasClass("active")){
+
+                    tN.removeClass("active");
+                    tN.siblings('ul').hide();
+
+                }else{
+
+                    tN.addClass("active");
+                    tN.siblings('ul').show();
+
+                }
+            }
+
+        </script>
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

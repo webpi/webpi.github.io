@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- header -->
+<header class="header headerInclude"></header>
+<!-- EOD : header -->
+
+<!-- sub_visual -->
+<section class="sub_visual sub_visual05">
+    <!-- sub_visualIn -->
+    <div class="sub_visualIn">
+        <p class="location">마이페이지</p>
+
+        <!-- customer_area -->
+        <div class="customer_area">
+            <!-- customer_areaIn -->
+            <div class="customer_areaIn">
+                <!-- customer_areaBox -->
+                <div class="customer_areaBox">
+                    <!-- infoBox -->
+                    <div class="infoBox">
+                        <p class="tit">고객센터</p>
+                        <a href="javascript:void(0)" class="btn_link"><span class="txt">원격지원서비스</span><i class="icon_arrow"></i></a>
+                        <p class="num">041.580.4500</p>
+                        <p class="num">041.580.4506</p>
+                        <p class="mail">e-koreatech@koreatech.ac.kr</p>
+                    </div>
+                    <!-- EOD : infoBox -->
+                    <!-- timeBox -->
+                    <div class="timeBox">
+                        <ul>
+                            <li>평일 09:00 ~ 18:00</li>
+                            <li>점심시간 12:00 ~ 13:00</li>
+                        </ul>
+                    </div>
+                    <!-- EOD : timeBox -->
+                </div>
+                <!-- EOD : customer_areaBox -->
+            </div>
+            <!-- customer_areaIn -->
+        </div>
+        <!-- EOD : customer_area -->
+    </div>
+    <!-- EOD : sub_visualIn -->
+</section>
+<!-- EOD : sub_visual -->
+
+<!-- sub_navBox -->
+<nav class="sub_navBox">
+    <!-- sub_navBoxIn  -->
+    <div class="sub_navBoxIn">
+        <div class="content_wrap">
+            <!-- sub_nav -->
+            <ul class="sub_nav">
+                <li><a href="mypage_home.html"><span>나의 홈</span></a></li>
+                <li><a href="mypage_status.html"><span>학습자 학습현황</span></a></li>
+                <li><a href="mypage_board.html"><span>과정게시판 관리</span></a></li>
+                <li><a href="mypage_qa.html"><span>과정Q&A 관리</span></a></li>
+                <li><a href="mypage_score.html"><span>채점관리</span></a></li>
+                <li><a href="mypage_project.html"><span>팀 프로젝트</span></a></li>
+                <li><a href="mypage_seminar.html"><span>라이브 세미나</span></a></li>
+                <li class="active"><a href="mypage_grate.html"><span>평가 우수사례</span></a></li>
+                <li><a href="mypage_survey.html"><span>설문</span></a></li>
+            </ul>
+            <!-- EOD : sub_nav -->
+        </div>
+    </div>
+    <!-- EOD: sub_navBoxIn -->
+</nav>
+<!-- EOD : sub_navBox -->
+
+<!-- contentLayout -->
+<div class="sub_contentLayout" id="content">
+    <div class="content_wrap">
+
+        <h3><span>평가 우수사례</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+        <!-- searchWrap -->
+        <div class="searchWrap">
+            <ul>
+                <li>
+                    <div class="dataBox">
+                        <span class="label"><span class="labelIn">교육년도</span></span>
+                        <div class="selectBox">
+                            <label for="select_year"><span>2020</span></label>
+                            <select id="select_year">
+                                <option>2020</option>
+                                <option>2019</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dataBox">
+                        <span class="label"><span class="labelIn">과정명</span></span>
+                        <div class="selectBox">
+                            <label for="select_process"><span>과정명</span></label>
+                            <select id="select_process">
+                                <option>한국교육기술대학교 온라인강의 과정</option>
+                                <option>한국교육기술대학교 온라인강의 과정</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dataBox">
+                        <span class="label"><span class="labelIn">검색</span></span>
+                        <div class="selectBox">
+                            <label for="select_type"><span>제목</span></label>
+                            <select id="select_type">
+                                <option>제목</option>
+                                <option>제목+내용</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search_area">
+                        <div class="search_areaIn">
+                            <input type="text">
+                        </div>
+                        <button type="button" class="btn_s_blue">검색</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- EOD : searchWrap -->
+
+        <!-- tableScroll -->
+        <div class="tableScroll">
+            <!-- table_normal -->
+            <table class="table_normal">
+                <caption>NO,교육년도,과정명,제목,첨부파일,작성자,등록일,조회로 이루어진 평가 우수사례 게시판</caption>
+                <colgroup>
+                    <col width="9%">
+                    <col class="mobH" width="10%">
+                    <col class="mobH" width="15%">
+                    <col width="*">
+                    <col class="mobH" width="9%">
+                    <col class="mobH" width="9%">
+                    <col class="mobH" width="12%">
+                    <col class="mobH" width="10%">
+                </colgroup>
+                <thead>
+                    <tr class="mobH">
+                        <th scope="col">NO</th>
+                        <th scope="col">교육년도</th>
+                        <th scope="col">과정명</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">첨부파일</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">등록일</th>
+                        <th scope="col">조회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td class="mobH">2020년</td>
+                        <td class="al mobH">한국교육기술대학교 온라인강의 과정</td>
+                        <td class="al">
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <div class="mobBox Top">
+                                <ul>
+                                    <li>2020년</li>
+                                    <li>한국교육기술대학교 온라인강의 과정</li>
+                                </ul>
+                            </div>
+                            <!-- EOD -->
+                            <div class="linkBox">
+                                <a href="mypage_board_view.html"><span class="txt">수강신청 관련 안내 드립니다.</span></a>
+                            </div>
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <ul class="mobBox">
+                                <li>등록일 2020.02.04</li>
+                                <li>작성자 홍길동</li>
+                                <li>조회 13</li>
+                                <li>
+                                    <div class="iconBox">
+                                        <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        </td>
+                        <td class="mobH">
+                            <div class="iconBox">
+                                <span class="icon_file"><span class="blind">첨부파일</span></span>
+                            </div>
+                        </td>
+                        <td class="mobH">홍길동</td>
+                        <td class="mobH">2020.02.04</td>
+                        <td class="mobH">13</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="mobH">2019년</td>
+                        <td class="al mobH">한국교육기술대학교 온라인강의 과정</td>
+                        <td class="al">
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <div class="mobBox Top">
+                                <ul>
+                                    <li>2019년</li>
+                                    <li>한국교육기술대학교 온라인강의 과정</li>
+                                </ul>
+                            </div>
+                            <!-- EOD -->
+                            <div class="linkBox">
+                                <a href="mypage_board_view.html"><span class="txt">시스템 점검 공지</span></a>
+                            </div>
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <ul class="mobBox">
+                                <li>등록일 2020.01.10</li>
+                                <li>작성자 홍길동</li>
+                                <li>조회 20</li>
+                                <li>
+                                    <div class="iconBox">
+                                        <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        </td>
+                        <td class="mobH">
+                            <div class="iconBox">
+                                <span class="icon_file"><span class="blind">첨부파일</span></span>
+                            </div>
+                        </td>
+                        <td class="mobH">홍길동</td>
+                        <td class="mobH">2020.01.10</td>
+                        <td class="mobH">20</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="mobH">2019년</td>
+                        <td class="al mobH">한국교육기술대학교 온라인강의 과정</td>
+                        <td class="al">
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <div class="mobBox Top">
+                                <ul>
+                                    <li>2019년</li>
+                                    <li>한국교육기술대학교 온라인강의 과정</li>
+                                </ul>
+                            </div>
+                            <!-- EOD -->
+                            <div class="linkBox">
+                                <a href="mypage_board_view.html"><span class="txt">입과를 축하합니다.</span></a>
+                            </div>
+                            <!-- 모바일에서만 출력되는 데이터 영역 -->
+                            <ul class="mobBox">
+                                <li>등록일 2020.01.15</li>
+                                <li>작성자 홍길동</li>
+                                <li>조회 13</li>
+                                <li>
+                                    <div class="iconBox">
+                                        <span class="icon_file"><span class="blind">첨부파일</span></span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- EOD : 모바일에서만 출력되는 데이터 영역 -->
+                        </td>
+                        <td class="mobH"></td>
+                        <td class="mobH">홍길동</td>
+                        <td class="mobH">2020.01.05</td>
+                        <td class="mobH">13</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="no_dataBox">
+                            <img src="/images/template4/resp/default/icon/icon_no_data_board.png" alt="">
+                            <p class="txt">게시된 글이 없습니다.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- EOD : table_normal -->
+        </div>
+        <!-- EOD : tableScroll -->
+
+        <div class="btnBox">
+            <div class="rightBox">
+                <a href="mypage_grate_write.html" class="btn_m_blue">등록</a>
+            </div>
+        </div>
+
+        <!-- pagination -->
+        <div class="pagination">
+            <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+            <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+            <a class="active" href="javascript:void(0);">1</a>
+            <a href="javascript:void(0);">2</a>
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>
+            <a href="javascript:void(0);">5</a>
+            <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+            <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+        </div>
+        <!-- EOD : pagination -->
+
+    </div>
+</div>
+<!-- EOD : contentLayout -->
+
+<!-- footer -->
+<footer class="footer footerInclude"></footer>
+<!-- EOD : footer -->
+</body>
+</html>
+

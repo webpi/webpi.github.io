@@ -1,0 +1,670 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>출석</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <!-- btnBox -->
+                <div class="btnBox mg0 mob_ac">
+                    <div class="rightBox">
+                        <button type="button" class="btn_m_blue" onclick="location.href='lecture_attend.html'">시간표로 돌아가기</button>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <table class="table_hori">
+                        <caption>과목명 , 교육일자 / 강의시간로 이루어진 테이블</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">과목명</th>
+                                <td>아파치 플룸(Apache Flume)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">교육일자 / 강의시간</th>
+                                <td>2020.02.20 / 1교시</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- EOD : tableScroll -->
+
+                <!-- table_hori -->
+                <table class="table_hori">
+                    <caption>제한시간 , 인증번호로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="25%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>제한시간</th>
+                            <td>
+                                <div class="inputBox vertiM width_s">
+                                    <input type="text" value="120">
+                                </div>
+                                <span class="vertiM">초</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>인증번호</th>
+                            <td>
+                                <div class="inputBox width_s">
+                                    <input type="text" value="58392">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_hori -->
+
+                <!-- table_hori -->
+                <table class="table_hori">
+                    <caption>제한시간 , 인증번호로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="25%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>제한시간</th>
+                        <td>
+                            <span class="txt_blue01 vertiM">101</span>
+                            <span class="vertiM">초</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>인증번호</th>
+                        <td>
+                            <div class="inputBox width_s">
+                                <input type="text" value="58392" readonly="readonly">
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_hori -->
+
+                <!-- table_hori -->
+                <table class="table_hori">
+                    <caption>제한시간 , 인증번호로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="25%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>제한시간</th>
+                        <td>
+                            <div class="inputBox vertiM width_s">
+                                <input type="text" value="120" readonly="readonly">
+                            </div>
+                            <span class="vertiM">초</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>인증번호</th>
+                        <td>
+                            <div class="inputBox width_s">
+                                <input type="text" value="58392" readonly="readonly">
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : table_hori -->
+
+                <!-- btnBox -->
+                <div class="btnBox mb0 mob_ac">
+                    <div class="rightBox">
+                        <button type="button" class="btn_m_blue">학생체크 시작</button>
+                        <button type="button" class="btn_m_black">수동체크 시작</button>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+                <!-- btnBox -->
+                <div class="btnBox mb0 mob_ac">
+                    <div class="rightBox">
+                        <button type="button" class="btn_m_black">새로고침</button>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+                <!-- btnBox -->
+                <div class="btnBox mb0 mob_ac">
+                    <div class="rightBox">
+                        <button type="button" class="btn_m_black">새로고침</button>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+                <!-- btnBox -->
+                <div class="btnBox mb0 mob_ac">
+                    <div class="rightBox">
+                        <button type="button" class="btn_m_blue">저장</button>
+                        <button type="button" class="btn_m_black">초기화</button>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+                <!-- btnBox -->
+                <div class="btnBox mb0 mob_ac">
+                    <div class="rightBox">
+                        <button type="button" class="btn_m_black" onclick="popupS('#popup01','show','400','auto');">qr코드 생성</button>
+                    </div>
+                </div>
+                <!-- EOD : btnBox -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+
+            <!-- attend_area -->
+            <div class="attend_area">
+                <!-- attendBox -->
+                <ul class="attendBox">
+                    <li class="type01">
+                        <span class="tit">전체</span>
+                        <span class="attend_num">50</span>
+                    </li>
+                    <li class="type02">
+                        <span class="tit">출석</span>
+                        <span class="attend_num">20</span>
+                    </li>
+                    <li class="type03">
+                        <span class="tit">결석</span>
+                        <span class="attend_num">20</span>
+                    </li>
+                    <li class="type04">
+                        <span class="tit">지각</span>
+                        <span class="attend_num">20</span>
+                    </li>
+                    <li class="type05">
+                        <span class="tit">조퇴</span>
+                        <span class="attend_num">20</span>
+                    </li>
+                </ul>
+                <!-- EOD : attendBox -->
+            </div>
+            <!-- EOD : attend_area -->
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs">
+
+                <!-- ul_table -->
+                <div class="ul_table col02 auto">
+                    <!-- ul_listed header -->
+                    <div class="ul_listed header">
+                        <ul>
+                            <li>
+                                <div class="th num">
+                                    No
+                                </div>
+                                <div class="th info">
+                                    이름 / 아이디
+                                </div>
+                                <div class="th attend">
+                                    출결상태
+                                </div>
+                            </li>
+                            <li class="mobH">
+                                <div class="th num">
+                                    No
+                                </div>
+                                <div class="th info">
+                                    이름 / 아이디
+                                </div>
+                                <div class="th attend">
+                                    출결상태
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- EOD : ul_listed header -->
+
+                    <!-- ul_listed  -->
+                    <div class="ul_listed">
+                        <ul>
+                            <li>
+                                <div class="td num">
+                                    1
+                                </div>
+                                <div class="td info">
+                                    홍길동
+                                    <p class="txt_default mt0">hong@step.co.kr</p>
+                                </div>
+                                <div class="td attend">
+                                    <p class="txt_default mg0">
+                                         <strong class="txt_red01 vertiM">출석</strong><span class="vertiM">(00:00:00)</span>
+                                    </p>
+                                    <button type="button" class="btn_s_black" onclick="window.open('popup/popup_absent_reason.html','','width=500, height=500');">사유</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td num">
+                                   2
+                                </div>
+                                <div class="td info">
+                                    <div>
+                                        홍길동
+                                        <p class="txt_default mt0">hong@step.co.kr</p>
+                                    </div>
+                                </div>
+                                <div class="td attend">
+                                    <strong class="txt_red01">출석</strong> (00:00:00)
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td num">
+                                  3
+                                </div>
+                                <div class="td info">
+                                    홍길동
+                                    <p class="txt_default mt0">hong@step.co.kr</p>
+                                </div>
+                                <div class="td attend">
+                                    <strong class="txt_blue02 vertiM">조퇴</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td num">
+                                  4
+                                </div>
+                                <div class="td info">
+                                    홍길동
+                                    <p class="txt_default mt0">hong@step.co.kr</p>
+                                </div>
+                                <div class="td attend">
+                                    <strong class="txt_blue02 vertiM">조퇴</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td num">
+                                    5
+                                </div>
+                                <div class="td info">
+                                    홍길동
+                                    <p class="txt_default mt0">hong@step.co.kr</p>
+                                </div>
+                                <div class="td attend">
+                                    <strong class="txt_green01 vertiM">지각</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td num">
+                                    6
+                                </div>
+                                <div class="td info">
+                                    홍길동
+                                    <p class="txt_default mt0">hong@step.co.kr</p>
+                                </div>
+                                <div class="td attend">
+                                    <strong class="txt_black vertiM">결석</strong>
+                                    <button type="button" class="btn_s_black" onclick="window.open('popup/popup_absent_reason.html','','width=500, height=500');">사유</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td num">
+                                    7
+                                </div>
+                                <div class="td info">
+                                    홍길동
+                                    <p class="txt_default mt0">hong@step.co.kr</p>
+                                </div>
+                                <div class="td attend">
+                                    <strong class="txt_black vertiM">결석</strong>
+                                    <button type="button" class="btn_s_black" onclick="window.open('popup/popup_absent_reason.html','','width=500, height=500');">사유</button>
+                                </div>
+                            </li>
+                            <!-- no_Data 케이스
+                            <li class="no_dataBox">
+                                <p class="txt">학생이 없습니다.</p>
+                            </li>
+                             EOD : no_Data 케이스 -->
+                        </ul>
+                    </div>
+                    <!-- EOD : ul_listed  -->
+                </div>
+                <!-- EOD : ul_table -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+
+                <!-- tableScroll  -->
+                <table class="table_attend">
+                    <caption>NO,이름,아이디,출결상태로 이루어진 테이블</caption>
+                    <colgroup>
+                        <col width="8%">
+                        <col width="25%">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr class="mobH">
+                            <td>No</td>
+                            <td>이름/아이디</td>
+                            <td>출결상태</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mobH">34</td>
+                            <td class="info"><span class="name">홍길동</span><span class="id">hong@step.co.kr</span></td>
+                            <td class="radio">
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio01_01" name="radioGroup01" >
+                                        <label for="radio01_01">출석</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio01_02" name="radioGroup01" >
+                                        <label for="radio01_02">조퇴</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio01_03" name="radioGroup01">
+                                        <label for="radio01_03">지각</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio01_04" name="radioGroup01">
+                                        <label for="radio01_04">결석</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mobH">33</td>
+                            <td class="info"><span class="name">홍길동</span><span class="id">hong@step.co.kr</span></td>
+                            <td class="radio">
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio02_01" name="radioGroup02" >
+                                        <label for="radio02_01">출석</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio02_02" name="radioGroup02" >
+                                        <label for="radio02_02">조퇴</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio02_03" name="radioGroup02">
+                                        <label for="radio02_03">지각</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio02_04" name="radioGroup02">
+                                        <label for="radio02_04">결석</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mobH">32</td>
+                            <td class="info"><span class="name">홍길동</span><span class="id">hong@step.co.kr</span></td>
+                            <td class="radio">
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio03_01" name="radioGroup03" >
+                                        <label for="radio03_01">출석</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio03_02" name="radioGroup03" >
+                                        <label for="radio03_02">조퇴</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio03_03" name="radioGroup03">
+                                        <label for="radio03_03">지각</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio03_04" name="radioGroup03">
+                                        <label for="radio03_04">결석</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mobH">31</td>
+                            <td class="info"><span class="name">홍길동</span><span class="id">hong@step.co.kr</span></td>
+                            <td class="radio">
+                                <ul class="radioList">
+                                    <li>
+                                        <input type="radio" id="radio04_01" name="radioGroup04" >
+                                        <label for="radio04_01">출석</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio04_02" name="radioGroup04" >
+                                        <label for="radio04_02">조퇴</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio04_03" name="radioGroup04">
+                                        <label for="radio04_03">지각</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="radio04_04" name="radioGroup04">
+                                        <label for="radio04_04">결석</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="no_dataBox">
+                                <p class="txt">학생이 없습니다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- EOD : tableScroll -->
+
+                <!-- pagination -->
+                <div class="pagination">
+                    <a class="d_prev" href="javascript:void(0);" title="제일 처음으로"></a>
+                    <a class="prev" href="javascript:void(0);" title="이전 페이지로"></a>
+                    <a class="active" href="javascript:void(0);">1</a>
+                    <a href="javascript:void(0);">2</a>
+                    <a href="javascript:void(0);">3</a>
+                    <a href="javascript:void(0);">4</a>
+                    <a href="javascript:void(0);">5</a>
+                    <a class="next" href="javascript:void(0);" title="다음 페이지로"></a>
+                    <a class="d_next" href="javascript:void(0);" title="제일 마지막으로"></a>
+                </div>
+                <!-- EOD : pagination -->
+
+                <!-- ul_table -->
+                <div class="ul_table col04">
+                    <!-- ul_listed header -->
+                    <div class="ul_listed header">
+                        <ul>
+                            <li>
+                                <div class="th">
+                                    이름
+                                </div>
+                                <div class="th">
+                                    출석
+                                </div>
+                            </li>
+                            <li>
+                                <div class="th">
+                                    이름
+                                </div>
+                                <div class="th">
+                                    출석
+                                </div>
+                            </li>
+                            <li class="mobH">
+                                <div class="th">
+                                    이름
+                                </div>
+                                <div class="th">
+                                    출석
+                                </div>
+                            </li>
+                            <li class="mobH">
+                                <div class="th">
+                                    이름
+                                </div>
+                                <div class="th">
+                                    출석
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- EOD : ul_listed header -->
+
+                    <!-- ul_listed  -->
+                    <div class="ul_listed">
+                        <ul>
+                            <li>
+                                <div class="td">
+                                   <span class="txt">강학생</span>
+                                </div>
+                                <div class="td">
+                                    <span class="txt_red01">X</span><span class="blind">결석</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td">
+                                    <span classd="txt">강학생</span>
+                                </div>
+                                <div class="td">
+                                    <td class="ac"><span class="txt_blue02">O</span><span class="blind">출석</span></td>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td">
+                                    <span classd="txt">강학생</span>
+                                </div>
+                                <div class="td">
+                                    <span class="txt_red01">X</span><span class="blind">결석</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td">
+                                    <span classd="txt">강학생</span>
+                                </div>
+                                <div class="td">
+                                    <td class="ac"><span class="txt_blue02">O</span><span class="blind">출석</span></td>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td">
+                                    <span classd="txt">강학생</span>
+                                </div>
+                                <div class="td">
+                                    <span class="txt_red01">X</span><span class="blind">결석</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="td">
+                                    <span classd="txt">강학생</span>
+                                </div>
+                                <div class="td">
+                                    <td class="ac"><span class="txt_blue02">O</span><span class="blind">출석</span></td>
+                                </div>
+                            </li>
+                            <!-- no_Data 케이스
+                            <li class="no_dataBox">
+                                <p class="txt">학생이 없습니다.</p>
+                            </li>
+                            EOD : no_Data 케이스 -->
+                        </ul>
+                    </div>
+                    <!-- EOD : ul_listed  -->
+                </div>
+                <!-- EOD : ul_table -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+<!-- popup_wrap -->
+<section class="popup_wrap" id="popup01">
+    <!-- popup_Box -->
+    <div class="popup_Box">
+        <!-- popup_BoxIn -->
+        <div class="popup_BoxIn">
+            <div class="popupH">출석 QR코드 <a href="javascript:void(0);" class="popup_close" onclick="popupS('#popup01','close');" title="닫기"><img src="/images/template4/resp/default/icon/icon_popup_close.png"></a></div>
+            <div class="popupCBox">
+                <div class="popupCBoxIn">
+
+                    <div class="ac">
+
+                      <img src="/images/classroom/template4/resp/default/sample_QRCode_200.png">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="popupF">
+                <button type="button" class="btn_m_blue" onclick="popupS('#popup01','close');">확인</button>
+            </div>
+        </div>
+        <!-- popup_BoxIn -->
+    </div>
+    <!-- EOD : popup_Box -->
+    <div class="popup_bg" onclick="popupS('#popup01','close');"></div>
+</section>
+<!-- EOD : popup_wrap -->
+
+
+</body>
+</html>

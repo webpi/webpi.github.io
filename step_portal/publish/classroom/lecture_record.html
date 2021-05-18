@@ -1,0 +1,568 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <link href="/css/classroom/template3/skin/skin_blueClass.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+  <!-- headerInclude -->
+  <section class="headerInclude"></section>
+  <!-- EOD : headerInclude -->
+
+  <!-- contentLayout -->
+  <section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+      <!-- lnb -->
+      <section class="lnbInclude"></section>
+      <!-- EOD : lnb -->
+
+      <!-- contentArea -->
+      <div class="contentArea" id="contentArea">
+        <h2><span>성적확인</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+        <!-- layout_boxs -->
+        <div class="layout_boxs mt0">
+<!--          <p class="mt0 txt_info">집체훈련 과정의 출석 점수는 과정 수강 종료 후 일괄 반영됩니다.</p>-->
+
+          <!-- 기존 구조 -->
+<!--          <table class="table_veti mt20">-->
+<!--            <caption>평가항목, 반영비율(%), 수료기준, 취득점수, 이수현황으로 구성된 성적확인 상세</caption>-->
+<!--            <colgroup>-->
+<!--              <col width="20%">-->
+<!--              <col width="*">-->
+<!--              <col width="20%">-->
+<!--              <col width="20%">-->
+<!--              <col width="20%">-->
+<!--            </colgroup>-->
+<!--            <thead>-->
+<!--              <tr>-->
+<!--                <td>평가항목</td>-->
+<!--                <td>반영비율(%)</td>-->
+<!--                <td>수료기준</td>-->
+<!--                <td class="tb_point">취득점수</td>-->
+<!--                <td class="tb_point">이수현황</td>-->
+<!--              </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--              <tr>-->
+<!--                <td class="ac">진도</td>-->
+<!--                <td class="ac">0%</td>-->
+<!--                <td class="ac">80점</td>-->
+<!--                <td class="ac"><strong class="score_num02">100</strong>점</td>-->
+<!--                <td class="ac"><strong class="txt_blue01">미완료</strong></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="ac">중간평가</td>-->
+<!--                <td class="ac">30%</td>-->
+<!--                <td class="ac">60점</td>-->
+<!--                <td class="ac"><strong class="score_num03">65</strong>점</td>-->
+<!--                <td class="ac"><strong class="txt_gray01">완료</strong></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="ac">최종평가</td>-->
+<!--                <td class="ac">30%</td>-->
+<!--                <td class="ac">60점</td>-->
+<!--                <td class="ac">-</td>-->
+<!--                <td class="ac"><strong class="txt_blue01">미완료</strong></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="ac">과제</td>-->
+<!--                <td class="ac">20%</td>-->
+<!--                <td class="ac">60점</td>-->
+<!--                <td class="ac"><strong class="score_num03">80</strong>점</td>-->
+<!--                <td class="ac"><strong class="txt_gray01">완료</strong></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="ac">설문</td>-->
+<!--                <td class="ac">-</td>-->
+<!--                <td class="ac">-</td>-->
+<!--                <td class="ac">-</td>-->
+<!--                <td class="ac"><strong class="txt_gray01">참여</strong></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="ac" colspan="3">총점</td>-->
+<!--                <td class="ac"><strong class="score_num02">49.9</strong>점</td>-->
+<!--                <td class="ac"></td>-->
+<!--              </tr>-->
+<!--            </tbody>-->
+<!--          </table>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; EOD : layout_boxs &ndash;&gt;-->
+
+<!--        &lt;!&ndash; layout_boxs &ndash;&gt;-->
+<!--        <div class="layout_boxs">-->
+<!--          <h3 class="mt0">시험 상세</h3>-->
+<!--          <div class="tableScroll mobH">-->
+<!--            <table class="table_veti">-->
+<!--              <caption>구분,시험기간,문항수,응시상태,채점상태,점수로 구성된 시험 상세</caption>-->
+<!--              <colgroup>-->
+<!--                <col width="12%">-->
+<!--                <col width="*">-->
+<!--                <col width="9%">-->
+<!--                <col width="12%">-->
+<!--                <col width="20%">-->
+<!--                <col width="9%">-->
+<!--              </colgroup>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <td>구분</td>-->
+<!--                  <td>시험기간</td>-->
+<!--                  <td>문항수</td>-->
+<!--                  <td>응시상태</td>-->
+<!--                  <td>채점상태</td>-->
+<!--                  <td>점수</td>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--                <tr>-->
+<!--                  <td class="ac">중간평가</td>-->
+<!--                  <td class="ac">2020.05.01 00:20 ~ 2020.05.01 00:20</td>-->
+<!--                  <td class="ac">10</td>-->
+<!--                  <td class="ac">-->
+<!--                    <span class="txt_blue01 vertiM mr5">응시완료</span>-->
+<!--                  </td>-->
+<!--                  <td class="ac">-->
+<!--                    <span class="txt_blue01 mr5">채점완료</span>2020.05.01-->
+<!--                  </td>-->
+<!--                  <td class="ac"><strong class="txt_blue01">100</strong>점</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                  <td class="ac">최종평가</td>-->
+<!--                  <td class="ac">2020.05.01 00:20 ~ 2020.05.01 00:20</td>-->
+<!--                  <td class="ac">10</td>-->
+<!--                  <td class="ac">-->
+<!--                    <span class="vertiM mr5">미응시</span>-->
+<!--                  </td>-->
+<!--                  <td class="ac">-</td>-->
+<!--                  <td class="ac">-</td>-->
+<!--                </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--          </div>-->
+
+<!--          <ul class="attend_list exam mobS">-->
+<!--            <li>-->
+<!--              <div class="order">-->
+<!--                <div class="oderC"><strong class="txt_blue01">중간평가</strong></div>-->
+<!--              </div>-->
+<!--              <ul>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">응시기간</div>-->
+<!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">문항수</div>-->
+<!--                    <div class="exam_boxR">10</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">응시상태</div>-->
+<!--                    <div class="exam_boxR"><span class="txt_blue01">응시완료</span></div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">채점상태</div>-->
+<!--                    <div class="exam_boxR"><span class="txt_blue01">채점완료</span> 2020.01.15</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">점수</div>-->
+<!--                    <div class="exam_boxR"><strong class="txt_blue01">60</strong>점</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--              <div class="order">-->
+<!--                <div class="oderC"><strong class="txt_blue01">최종평가</strong></div>-->
+<!--              </div>-->
+<!--              <ul>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">응시기간</div>-->
+<!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">문항수</div>-->
+<!--                    <div class="exam_boxR">10</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">응시상태</div>-->
+<!--                    <div class="exam_boxR">미응시</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">채점상태</div>-->
+<!--                    <div class="exam_boxR">-</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">점수</div>-->
+<!--                    <div class="exam_boxR"><strong class="txt_blue01">60</strong>점</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+<!--          </ul>-->
+          <!-- 기존 구조 -->
+
+          <!-- 신규 구조 -->
+          <!-- tableScroll -->
+          <div class="tableScroll">
+            <!-- table_block -->
+            <table class="table_block mt20 no_btn table-debate">
+              <caption>구분,시험기간,문항수,응시상태,채점상태,점수로 구성된 시험 상세</caption>
+              <colgroup>
+                <col width="12%">
+                <col width="*">
+                <col width="9%">
+                <col width="12%">
+                <col width="20%">
+                <col width="9%">
+              </colgroup>
+              <thead>
+              <tr>
+                <td scope="col">구분</td>
+                <td scope="col">시험기간</td>
+                <td scope="col">문항수</td>
+                <td scope="col">응시상태</td>
+                <td scope="col">채점상태</td>
+                <td scope="col">점수</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="ac">
+                  <span class="mob_boxR">중간평가</span>
+                 </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">시험기간</span>
+                    <span class="mob_boxR">2020.05.01 00:20 ~ 2020.05.01 00:20</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">문항수</span>
+                    <span class="mob_boxR">10</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">응시상태</span>
+                    <span class="mob_boxR"><span class="txt_blue01 vertiM mr5">응시완료</span></span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">채점상태</span>
+                    <span class="mob_boxR"><span class="txt_blue01 mr5">채점완료</span>2020.05.01</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">점수</span>
+                    <span class="mob_boxR"><strong class="txt_blue01">100</strong>점</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="ac">
+                  <span class="mob_boxR">최종평가</span>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">시험기간</span>
+                    <span class="mob_boxR">2020.05.01 00:20 ~ 2020.05.01 00:20</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">문항수</span>
+                    <span class="mob_boxR">10</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">응시상태</span>
+                    <span class="mob_boxR">미응시</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">채점상태</span>
+                    <span class="mob_boxR">-</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">점수</span>
+                    <span class="mob_boxR">-</span>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <!-- EOD : table_block -->
+          </div>
+          <!-- EOD : tableScroll -->
+          <!-- 신규 구조 -->
+
+        </div>
+        <!-- EOD : layout_boxs -->
+
+        <!-- layout_boxs -->
+        <div class="layout_boxs">
+          <h3 class="mt0">과제 상세</h3>
+
+          <!-- 기존 구조 -->
+<!--          <div class="tableScroll mobH">-->
+<!--            <table class="table_veti">-->
+<!--              <caption>구분,시험기간,응시상태,채점상태,점수로 구성된 과제 상세</caption>-->
+<!--              <colgroup>-->
+<!--                <col width="12%">-->
+<!--                <col width="*">-->
+<!--                <col width="12%">-->
+<!--                <col width="20%">-->
+<!--                <col width="9%">-->
+<!--              </colgroup>-->
+<!--              <thead>-->
+<!--              <tr>-->
+<!--                <td>구분</td>-->
+<!--                <td>시험기간</td>-->
+<!--                <td>응시상태</td>-->
+<!--                <td>채점상태</td>-->
+<!--                <td>점수</td>-->
+<!--              </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td class="ac">중간평가</td>-->
+<!--                <td class="ac">2020.05.01 00:20 ~ 2020.05.01 00:20</td>-->
+<!--                <td class="ac">-->
+<!--                  <span class="txt_blue01 vertiM mr5">응시완료</span>-->
+<!--                </td>-->
+<!--                <td class="ac">-->
+<!--                  <span class="txt_blue01 mr5">채점완료</span>2020.05.01-->
+<!--                </td>-->
+<!--                <td class="ac"><strong class="txt_blue01">100</strong>점</td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="ac">최종평가</td>-->
+<!--                <td class="ac">2020.05.01 00:20 ~ 2020.05.01 00:20</td>-->
+<!--                <td class="ac">-->
+<!--                  <span class="vertiM mr5">미응시</span>-->
+<!--                </td>-->
+<!--                <td class="ac">-</td>-->
+<!--                <td class="ac">-</td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--          </div>-->
+
+<!--          <ul class="attend_list exam mobS">-->
+<!--            <li>-->
+<!--              <div class="order">-->
+<!--                <div class="oderC"><strong class="txt_blue01">중간평가</strong></div>-->
+<!--              </div>-->
+<!--              <ul>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">응시기간</div>-->
+<!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">응시상태</div>-->
+<!--                    <div class="exam_boxR"><span class="txt_blue01">응시완료</span></div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">채점상태</div>-->
+<!--                    <div class="exam_boxR"><span class="txt_blue01">채점완료</span> 2020.01.15</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">점수</div>-->
+<!--                    <div class="exam_boxR"><strong class="txt_blue01">60</strong>점</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+
+<!--            <li>-->
+<!--              <div class="order">-->
+<!--                <div class="oderC"><strong class="txt_blue01">최종평가</strong></div>-->
+<!--              </div>-->
+<!--              <ul>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">응시기간</div>-->
+<!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">응시상태</div>-->
+<!--                    <div class="exam_boxR">미응시</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">채점상태</div>-->
+<!--                    <div class="exam_boxR">-</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <div class="exam_box">-->
+<!--                    <div class="exam_boxL">점수</div>-->
+<!--                    <div class="exam_boxR"><strong class="txt_blue01">60</strong>점</div>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+<!--          </ul>-->
+          <!-- 기존 구조 -->
+
+          <!-- 신규 구조 -->
+          <!-- tableScroll -->
+          <div class="tableScroll">
+            <!-- table_block -->
+            <table class="table_block mt20 no_btn table-debate">
+              <caption>구분,시험기간,응시상태,채점상태,점수로 구성된 과제 상세</caption>
+              <colgroup>
+                <col width="12%">
+                <col width="*">
+                <col width="12%">
+                <col width="20%">
+                <col width="9%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <td scope="col">구분</td>
+                  <td scope="col">시험기간</td>
+                  <td scope="col">응시상태</td>
+                  <td scope="col">채점상태</td>
+                  <td scope="col">점수</td>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="ac">
+                  <span class="mob_boxR">중간평가</span>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">시험기간</span>
+                    <span class="mob_boxR">2020.05.01 00:20 ~ 2020.05.01 00:20</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">응시상태</span>
+                    <span class="mob_boxR"><span class="txt_blue01 vertiM mr5">응시완료</span></span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">채점상태</span>
+                    <span class="mob_boxR"><span class="txt_blue01 mr5">채점완료</span>2020.05.01</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">점수</span>
+                    <span class="mob_boxR"><strong class="txt_blue01">100</strong>점</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="ac">
+                  <span class="mob_boxR">최종평가</span>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">시험기간</span>
+                    <span class="mob_boxR">2020.05.01 00:20 ~ 2020.05.01 00:20</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">응시상태</span>
+                    <span class="mob_boxR">미응시</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">채점상태</span>
+                    <span class="mob_boxR">-</span>
+                  </div>
+                </td>
+                <td class="ac">
+                  <div class="mobBox">
+                    <span class="mob_boxL">점수</span>
+                    <span class="mob_boxR">-</span>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <!-- EOD : table_block -->
+          </div>
+          <!-- EOD : tableScroll -->
+          <!-- 신규 구조 -->
+        </div>
+        <!-- EOD : layout_boxs -->
+
+      </div>
+      <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+  </section>
+  <!-- EOD : contentLayout -->
+
+
+</body>
+</html>

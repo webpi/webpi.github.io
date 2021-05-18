@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>STEP</title>
+    <link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css">
+    <link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/template4/wbCommon.js"></script>
+    <script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header class="header headerInclude"></header>
+    <!-- EOD : header -->
+
+    <!-- lnb -->
+    <section class="lnbInclude"></section>
+    <!-- EOD : lnb -->
+
+    <!-- contentLayout -->
+    <div class="sub_contentLayout" id="content">
+        <div class="content_wrap">
+
+            <h3><span>토론</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h3>
+
+            <!-- searchWrap -->
+            <div class="searchWrap">
+                <ul>
+                    <li>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">과정명</span></span>
+                            <div class="selectBox type02">
+                                <label for="select_process01"><span>온라인 일괄 복사 테스트1 (2020.11.02 ~ 2020.12.31)</span></label>
+                                <select id="select_process01">
+                                    <option>온라인 일괄 복사 테스트1 (2020.11.02 ~ 2020.12.31)</option>
+                                    <option>브랜디드러닝과정등록 (2020.01.01 ~ 2020.12.31)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dataBox">
+                            <span class="label"><span class="labelIn">검색</span></span>
+                            <div class="selectBox">
+                                <label for="select_search01_1"><span>토론유형</span></label>
+                                <select id="select_search01_1">
+                                    <option>토론유형1</option>
+                                    <option>토론유형2</option>
+                                    <option>토론유형3</option>
+                                </select>
+                            </div>
+                            <div class="selectBox">
+                                <label for="select_search02_2"><span>상태</span></label>
+                                <select id="select_search02_2">
+                                    <option>상태1</option>
+                                    <option>상태2</option>
+                                    <option>상태3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- EOD : searchWrap -->
+
+            <!-- table_block type03 -->
+            <table class="table_block type03 mt40">
+                <caption>No , 토론 주제 , 상태 , 참여현황 , 채점현황 , 바로가기로 이루어진 토론 목록</caption>
+                <colgroup>
+                    <col width="8%">
+                    <col width="*">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="12%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td rowspan="2">No</td>
+                        <td rowspan="2">토론주제</td>
+                        <td rowspan="2">상태</td>
+                        <td colspan="2">참여현황</td>
+                        <td colspan="2">채점현황</td>
+                        <td rowspan="2">바로가기</td>
+                    </tr>
+                    <tr>
+                        <td class="bl">참여</td>
+                        <td>불참</td>
+                        <td>채점완료</td>
+                        <td>미채점</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ac">
+                            <ul class="mob_dash_list">
+                                <li class="mobH">2</li>
+                                <li class="mobS">
+                                    <span class="label_s_red">찬반토론</span>
+                                    <span class="txt_default vertiM">일반토의 주제입니다.</span>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="mobH">
+                            <div class="mobBox">
+                                <span class="mob_boxL">토론 주제</span>
+                                <span class="mob_boxR">
+                                    <span class="label_s_red">찬반토론</span>
+                                    <p class="txt_default mt0">일반토의 주제입니다.</p>
+                                </span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">상태</span>
+                                <span class="mob_boxR"><span class="txt_point">진행</span></span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">참여현황 참여</span>
+                                <span class="mob_boxR">20</span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">참여현황 불참</span>
+                                <span class="mob_boxR"><span class="txt_red">10</span></span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">채점현황 채점완료</span>
+                                <span class="mob_boxR">0</span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">채점현황 미채점</span>
+                                <span class="mob_boxR"><span class="txt_red">20</span></span>
+                            </div>
+                        </td>
+                        <td class="ac"><button class="btn_s_blue" onclick="location.href='classroom/lecture_debate.html'">바로가기</button></td>
+                    </tr>
+                    <tr>
+                        <td class="ac">
+                            <ul class="mob_dash_list">
+                                <li class="mobH">1</li>
+                                <li class="mobS">
+                                    <span class="label_s_blue">일반토의</span>
+                                    <span class="txt_default vertiM">일반토의 주제입니다. 일반토의 주제입니다. 일반토의 주제입니다. 일반토의 주제입니다.</span>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="mobH">
+                            <div class="mobBox">
+                                <span class="mob_boxL">토론 주제</span>
+                                <span class="mob_boxR">
+                                    <span class="label_s_blue">일반토의</span>
+                                    <p class="txt_default mt0">일반토의 주제입니다. 일반토의 주제입니다. 일반토의 주제입니다. 일반토의 주제입니다.</p>
+                                </span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">상태</span>
+                                <span class="mob_boxR"><span class="vertiM">종료</span></span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">참여현황 참여</span>
+                                <span class="mob_boxR">30</span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">참여현황 불참</span>
+                                <span class="mob_boxR"><span class="txt_red">0</span></span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">채점현황 채점완료</span>
+                                <span class="mob_boxR">30</span>
+                            </div>
+                        </td>
+                        <td class="ac">
+                            <div class="mobBox">
+                                <span class="mob_boxL">채점현황 미채점</span>
+                                <span class="mob_boxR"><span class="txt_red">10</span></span>
+                            </div>
+                        </td>
+                        <td class="ac"><button class="btn_s_blue" onclick="location.href='classroom/lecture_debate.html'">바로가기</button></td>
+                    </tr>
+
+                    <!-- no_data -->
+
+    <!--                <tr>-->
+    <!--                    <td class="ac no_dataBox" colspan="8">-->
+    <!--                        <img src="/images/template9/resp/default/icon/icon_no_data_board.png" alt="">-->
+    <!--                        <p class="txt">등록된 토론이 없습니다.</p>-->
+    <!--                    </td>-->
+    <!--                </tr>-->
+
+                    <!-- no_data -->
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+    <!-- EOD : contentLayout -->
+
+    <!-- footer -->
+    <footer class="footer footerInclude"></footer>
+    <!-- EOD : footer -->
+</div>
+</body>
+</html>

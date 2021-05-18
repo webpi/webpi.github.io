@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>토론</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+
+                <p class="mt0 txt_info">
+                    토론기간 내에 토론에 참여하셔야 합니다.<br/>
+                    토론기간 종료 후 [결과확인] 버튼을 클릭하면, 참여한 토론주제의 채점 결과를 확인할 수 있습니다.
+                </p>
+
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_block -->
+                    <table class="table_block mt20 type03 table-debate">
+                        <caption>토론 주제 , 토론기간 , 참여현황 , 채점상태 , 점수 , 참여하기로 이루어진 토론 목록</caption>
+                        <colgroup>
+                            <col width="*">
+                            <col width="15%">
+                            <col width="8%">
+                            <col width="8%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="8%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td rowspan="2">토론주제</td>
+                                <td rowspan="2">토론기간</td>
+                                <td colspan="2">참여현황</td>
+                                <td rowspan="2">채점상태</td>
+                                <td rowspan="2">점수</td>
+                                <td rowspan="2">참여하기</td>
+                            </tr>
+                            <tr>
+                                <td class="bl">게시글</td>
+                                <td>댓글</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="al">
+                                    <span class="mob_boxR">
+                                        <span class="label_s_blue">찬반토론</span>
+                                        <span class="txt_default mt0">찬반토론주제입니다.</span>
+                                    </span>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">토론기간</span>
+                                        <span class="mob_boxR">2020.05.01 ~ 2020.05.03</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여현황 게시글</span>
+                                        <span class="mob_boxR">0</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여현황 댓글</span>
+                                        <span class="mob_boxR">0</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">채점상태</span>
+                                        <span class="mob_boxR">미채점</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR">-</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxR">
+                                            <button class="btn_s_blue" onclick="location.href='lecture_debate_detail_list.html'">참여하기</button>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="al">
+                                    <span class="mob_boxR">
+                                        <span class="label_s_black">일반토의</span>
+                                        <span class="txt_default mt0">토론주제입니다.</span>
+                                    </span>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">토론기간</span>
+                                        <span class="mob_boxR">2020.05.01 ~ 2020.05.03</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여현황 게시글</span>
+                                        <span class="mob_boxR">2</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여현황 댓글</span>
+                                        <span class="mob_boxR">5</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">채점상태</span>
+                                        <span class="mob_boxR">미채점</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR">-</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxR">
+                                            <button class="btn_s_blue" onclick="location.href='lecture_debate_detail_list.html'">참여하기</button>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="al">
+                                    <span class="mob_boxR">
+                                        <span class="label_s_black">일반토의</span>
+                                        <span class="txt_default mt0">토론주제입니다.</span>
+                                    </span>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">토론기간</span>
+                                        <span class="mob_boxR">2020.05.01 ~ 2020.05.03</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여현황 게시글</span>
+                                        <span class="mob_boxR">2</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">참여현황 댓글</span>
+                                        <span class="mob_boxR">6</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">채점상태</span>
+                                        <span class="mob_boxR">채점완료 <br>
+                                            <span class="txt_blue01">2020.07.20</span>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR">80점</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxR">
+                                            <button class="btn_s_blue" onclick="location.href='lecture_debate_detail_result.html'">결과확인</button>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- no_data -->
+<!--                            <tr>-->
+<!--                                <td colspan="7" class="no_dataBox">-->
+<!--                                    <img src="/images/classroom/template3/resp/default/icon_nodata.png" alt="">-->
+<!--                                    <p class="txt">등록된 토론주제가 없습니다.</p>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+                            <!-- EOD : no_data -->
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_block -->
+                </div>
+                <!-- EOD : tableScroll -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+	<title>STEP</title>
+	<link href="/css/template4/resp/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/template4/resp/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/template4/resp/slick.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/template4/resp/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/css/template4/resp/wbUser.css" rel="stylesheet" type="text/css" media="all">
+	<script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/template4/jquery-ui-1.8.2.js"></script>
+	<script src="/js/template4/wbCommon.js"></script>
+	<script src="/js/template4/jquery.mCustomScrollbar.js"></script>
+	<script src="/js/template4/jquery.scrolling-tabs.js"></script>
+	<script src="/js/template4/slick.js"></script>
+
+	<!-- ie9 이하 적용 -->
+	<!--[if lt IE 9]>
+		<script src="/js/html5.js"></script>
+		<script src="/js/respond.min.js"></script>
+	<![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+
+
+<section class="windowPop">
+	<div class="windowPopH">
+		과제물 선택
+		<a class="windowPop_close" onclick="window.close(); return false;" href="javascript:void(0);" title="닫기"><img src="/images/template9/resp/default/icon/icon_popup_close.png"></a>
+	</div>
+
+	<!-- windowPopBox -->
+	<div class="windowPopBox">
+		<div class="windowPopBoxIn">
+
+			<!-- 자동배정 -->
+			<div class="team_memberBox">
+				<table class="table_veti mt0">
+					<caption>선택</caption>
+					<colgroup>
+						<col width="12%">
+						<col width="12%">
+						<col width="*">
+						<col width="12%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>팀명</th>
+							<th>팀장</th>
+							<th>팀원</th>
+							<th>구성원 수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="ac">A팀</td>
+							<td class="ac">홍길동</td>
+							<td>가학생,나학생,다학생,라학생,마학생,바학생,사학생,아학생,자학생</td>
+							<td class="ac">10</td>
+						</tr>
+						<tr>
+							<td class="ac">B팀</td>
+							<td class="ac">홍길동</td>
+							<td>가학생,나학생,다학생,라학생,마학생,바학생,사학생,아학생,자학생</td>
+							<td class="ac">10</td>
+						</tr>
+						<tr>
+							<td class="ac">C팀</td>
+							<td class="ac">홍길동</td>
+							<td>가학생,나학생,다학생,라학생,마학생,바학생,사학생,아학생,자학생</td>
+							<td class="ac">10</td>
+						</tr>
+						<tr>
+							<td class="ac">D팀</td>
+							<td class="ac">홍길동</td>
+							<td>가학생,나학생,다학생,라학생,마학생,바학생,사학생,아학생,자학생</td>
+							<td class="ac">10</td>
+						</tr>
+						<tr>
+							<td class="ac">E팀</td>
+							<td class="ac">홍길동</td>
+							<td>가학생,나학생,다학생,라학생,마학생,바학생,사학생,아학생,자학생</td>
+							<td class="ac">10</td>
+						</tr>
+						<tr>
+							<td class="ac">F팀</td>
+							<td class="ac">홍길동</td>
+							<td>가학생,나학생,다학생,라학생,마학생,바학생,사학생,아학생,자학생</td>
+							<td class="ac">10</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- EOD : 자동 배정 -->
+
+			<!-- 수동배정 --><br/><br/>
+			<div class="team_memberBox">
+				<table class="table_veti mt0">
+					<caption>선택</caption>
+					<colgroup>
+						<col width="12%">
+						<col width="12%">
+						<col width="*">
+						<col width="12%">
+						<col width="12%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>팀명</th>
+							<th>팀장</th>
+							<th>팀원</th>
+							<th>구성원 수</th>
+							<th>선택하기</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="ac">A팀</td>
+							<td class="ac"></td>
+							<td></td>
+							<td class="ac">10</td>
+							<td class="ac"><button class="btn_s_blue">선택하기</button></td>
+						</tr>
+						<tr>
+							<td class="ac">B팀</td>
+							<td class="ac"></td>
+							<td></td>
+							<td class="ac">10</td>
+							<td class="ac"><button class="btn_s_blue">선택하기</button></td>
+						</tr>
+						<tr>
+							<td class="ac">C팀</td>
+							<td class="ac"></td>
+							<td></td>
+							<td class="ac">10</td>
+							<td class="ac"><button class="btn_s_blue">선택하기</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h4>팀 구성원 선택하기</h4>
+			<div class="team_add">
+				<div class="team_add_L">
+					<p class="tit">전체 학습자(80)</p>
+					<div class="team_add_search">
+						<span>검색</span>
+						<div class="search"><input type="text"/></div>
+						<button class="btn_s_blue">검색</button>
+					</div>
+
+					<div class="chk_team active">
+						<input type="checkbox" id="chkAll">
+						<label for="chkAll">이름 / 아이디</label>
+					</div>
+
+					<div class="team_listBox">
+						<ul class="team_list">
+							<li>
+								<div class="chk_team">
+									<input type="checkbox" id="teamChk01">
+									<label for="teamChk01">김학생<br/>hsna@step.or.kr</label>
+								</div>
+							</li>
+							<li>
+								<div class="chk_team">
+									<input type="checkbox" id="teamChk02">
+									<label for="teamChk02">박학생<br/>hsna@step.or.kr</label>
+								</div>
+							</li>
+							<li>
+								<div class="chk_team">
+									<input type="checkbox" id="teamChk03">
+									<label for="teamChk03">이학생<br/>lee@step.or.kr</label>
+								</div>
+							</li>
+							<li>
+								<div class="chk_team">
+									<input type="checkbox" id="teamChk04">
+									<label for="teamChk04">최학생<br/>choi@step.or.kr</label>
+								</div>
+							</li>
+							<li>
+								<div class="chk_team">
+									<input type="checkbox" id="teamChk05">
+									<label for="teamChk05">정학생<br/>jeong@step.or.kr</label>
+								</div>
+							</li>
+							<li>
+								<div class="chk_team">
+									<input type="checkbox" id="teamChk06">
+									<label for="teamChk06">강학생<br/>kang@step.or.kr</label>
+								</div>
+							</li>
+							<li>
+								<div class="chk_team">
+									<input type="checkbox" id="teamChk07">
+									<label for="teamChk07">김학생<br/>hsna@step.or.kr</label>
+								</div>
+							</li>
+							<li>
+								<div class="chk_team">
+									<input type="checkbox" id="teamChk08">
+									<label for="teamChk08">박학생<br/>hsna@step.or.kr</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="team_add_C">
+					<a href="javascript:void(0)" class="team_add_btn01"></a>
+					<a href="javascript:void(0)" class="team_add_btn02"></a>
+				</div>
+				<div class="team_add_R">
+					<p class="tit">팀원(1)</p>
+					<div class="team_add_info">
+						<div class="team_add_infoL">
+
+							<ul class="radioList">
+								<li>
+									<input type="radio" id="radio01_01" name="radioGroup">
+									<label for="radio01_01">팀장</label>
+								</li>
+							</ul>
+
+						</div>
+						<div class="team_add_infoR">
+							<div class="team_add_infoBox">
+								<ul class="team_add_name">
+									<li>나학생 (hsna@step.or.kr)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="team_add_info type02">
+						<div class="team_add_infoL">
+
+							<ul class="radioList">
+								<li>
+									<input type="radio" id="radio01_02" name="radioGroup">
+									<label for="radio01_02">팀원</label>
+								</li>
+							</ul>
+
+						</div>
+						<div class="team_add_infoR">
+							<div class="team_add_infoBox">
+								<ul class="team_add_name">
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+									<li>나학생 (hsna@step.or.kr)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(function(){
+					teamArea();
+				});
+
+				$(window).resize(function(){
+					teamArea();
+				});
+
+				function teamArea(){
+					teamH = $(".windowPopBox").outerHeight() - ($("h3").outerHeight() + $(".team_add_L .tit").outerHeight() + $(".team_add_search").outerHeight() + 25);
+					$(".team_add").find(".team_listBox").eq(0).css("height", (teamH - $(".chk_team.active").outerHeight()) + "px");
+					$(".team_add").find(".team_add_info.type02").css("height", (teamH-10) + "px");
+					$(".team_add").find(".team_add_info.type02 .team_add_infoBox").css("height", (teamH-60) + "px");
+				}
+			</script>
+			<!-- EOD : 수동 배정 -->
+
+
+		</div>
+	</div>
+
+	<div class="windowPopBtn">
+		<button type="button" class="btn_m_blue">저장</button>
+		<button type="button" class="btn_m_white" onclick="window.close(); return false;">확인</button>
+	</div>
+	<!-- EOD : windowPopBox -->
+</section>
+
+
+</body>
+</html>
+        						      			

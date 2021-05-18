@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>강의실</title>
+    <link href="/css/classroom/template3/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/classroom/template3/jquery.scrolling-tabs.css" rel="stylesheet">
+    <link href="/css/classroom/template3/slick.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbCommon.css" rel="stylesheet">
+    <link href="/css/classroom/template3/wbUser.css" rel="stylesheet">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template3/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template3/wbCommon.js"></script>
+    <script src="/js/classroom/template3/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template3/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template3/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>과제</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs mt0">
+                <p class="mt0 txt_info">제출기한 내에 과제를 제출하셔야 합니다.<br/>채점이 완료된 과제의 [결과확인] 버튼을 클릭하면, 제출한 과제의 채점 결과를 확인할 수 있습니다.</p>
+
+                <!-- 기존 구조 -->
+                <!--          <div class="tableScroll mobH">-->
+                <!--            <table class="table_veti mt20">-->
+                <!--                <caption>구분,제출기간,문항수,제출상태,채점상태,점수로 구성된 시험 상세</caption>-->
+                <!--                <colgroup>-->
+                <!--                  <col width="12%">-->
+                <!--                  <col width="*">-->
+                <!--                  <col width="25%">-->
+                <!--                  <col width="20%">-->
+                <!--                  <col width="10%">-->
+                <!--                </colgroup>-->
+                <!--                <thead>-->
+                <!--                <tr>-->
+                <!--                  <td>구분</td>-->
+                <!--                  <td>제출기간</td>-->
+                <!--                  <td>제출상태</td>-->
+                <!--                  <td>채점상태</td>-->
+                <!--                  <td>점수</td>-->
+                <!--                </tr>-->
+                <!--              </thead>-->
+                <!--              <tbody>-->
+                <!--              <tr>-->
+                <!--                <td class="ac">과제물A</td>-->
+                <!--                <td class="ac">2020.05.01 00:20 ~<br/>2020.05.01 00:20</td>-->
+                <!--                <td class="ac">-->
+                <!--                  <span class="txt_blue01 vertiM mr5">제출완료</span>-->
+                <!--                  <button class="btn_s_black" onclick="window.open('popup/popup_assign_result.html','','width=1000, height=800');">결과확인</button>-->
+                <!--                </td>-->
+                <!--                <td class="ac">-->
+                <!--                  <span class="txt_blue01 mr5">채점완료</span>2020.05.01-->
+                <!--                </td>-->
+                <!--                <td class="ac"><strong class="txt_blue01">100</strong>점</td>-->
+                <!--              </tr>-->
+                <!--              <tr>-->
+                <!--                <td class="ac">과제물B</td>-->
+                <!--                <td class="ac">2020.05.01 00:20 ~<br/>2020.05.01 00:20</td>-->
+                <!--                <td class="ac">-->
+                <!--                  <span class="txt_blue01 vertiM mr5">제출완료</span>-->
+                <!--                  <button class="btn_s_blue" onclick="window.open('popup/popup_assign.html','','width=1000, height=800');">수정하기</button>-->
+                <!--                </td>-->
+                <!--                <td class="ac">-</td>-->
+                <!--                <td class="ac">-</td>-->
+                <!--              </tr>-->
+                <!--              <tr>-->
+                <!--                <td class="ac">과제물C</td>-->
+                <!--                <td class="ac">2020.05.01 00:20 ~<br/>2020.05.01 00:20</td>-->
+                <!--                <td class="ac">-->
+                <!--                  <span class="vertiM mr5">미제출</span>-->
+                <!--                  <button class="btn_s_blue" onclick="window.open('popup/popup_assign.html','','width=1000, height=800');">제출하기</button>-->
+                <!--                </td>-->
+                <!--                <td class="ac">-</td>-->
+                <!--                <td class="ac">-</td>-->
+                <!--              </tr>-->
+                <!--              &lt;!&ndash; noData-->
+                <!--              <tr>-->
+                <!--                <td class="ac" colspan="5">-->
+                <!--                  <div class="noData tb">-->
+                <!--                    <div class="noDataBox">-->
+                <!--                      <span class="ico"></span>-->
+                <!--                      <span class="txt">등록된 과제가 없습니다.</span>-->
+                <!--                    </div>-->
+                <!--                  </div>-->
+                <!--                </td>-->
+                <!--              </tr>-->
+                <!--              &ndash;&gt;-->
+                <!--              </tbody>-->
+                <!--            </table>-->
+                <!--          </div>-->
+
+                <!--          <ul class="attend_list exam mobS">-->
+                <!--            <li>-->
+                <!--              <div class="order">-->
+                <!--                <div class="oderC"><strong class="txt_blue01">과제물A</strong></div>-->
+                <!--              </div>-->
+                <!--              <ul>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">제출기간</div>-->
+                <!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">제출상태</div>-->
+                <!--                    <div class="exam_boxR"><span class="txt_blue01">제출완료</span></div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">채점상태</div>-->
+                <!--                    <div class="exam_boxR"><span class="txt_blue01">채점완료</span> 2020.01.15</div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">점수</div>-->
+                <!--                    <div class="exam_boxR"><strong class="txt_blue01">60</strong>점</div>-->
+                <!--                  </div>-->
+                <!--                  <div class="btn_center">-->
+                <!--                    <button class="btn_s_black" onclick="window.open('popup/popup_assign_result.html','','width=1000, height=800');">결과확인</button>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--              </ul>-->
+                <!--            </li>-->
+
+                <!--            <li>-->
+                <!--              <div class="order">-->
+                <!--                <div class="oderC"><strong class="txt_blue01">과제물B</strong></div>-->
+                <!--              </div>-->
+                <!--              <ul>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">제출기간</div>-->
+                <!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">제출상태</div>-->
+                <!--                    <div class="exam_boxR"><span class="txt_blue01">제출완료</span></div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">채점상태</div>-->
+                <!--                    <div class="exam_boxR">-</div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">점수</div>-->
+                <!--                    <div class="exam_boxR">-</div>-->
+                <!--                  </div>-->
+                <!--                  <div class="btn_center">-->
+                <!--                    <button class="btn_s_blue" onclick="window.open('popup/popup_assign.html','','width=1000, height=800');">수정하기</button>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--              </ul>-->
+                <!--            </li>-->
+
+                <!--            <li>-->
+                <!--              <div class="order">-->
+                <!--                <div class="oderC"><strong class="txt_blue01">최종평가</strong></div>-->
+                <!--              </div>-->
+                <!--              <ul>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">제출기간</div>-->
+                <!--                    <div class="exam_boxR">2020.01.15 00:00 ~ 2020.02.14 00:00</div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">제출상태</div>-->
+                <!--                    <div class="exam_boxR">미제출</div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">채점상태</div>-->
+                <!--                    <div class="exam_boxR">-</div>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <div class="exam_box">-->
+                <!--                    <div class="exam_boxL">점수</div>-->
+                <!--                    <div class="exam_boxR">-</div>-->
+                <!--                  </div>-->
+                <!--                  <div class="btn_center">-->
+                <!--                    <button class="btn_s_blue" onclick="window.open('popup/popup_assign.html','','width=1000, height=800');">제출하기</button>-->
+                <!--                  </div>-->
+                <!--                </li>-->
+                <!--              </ul>-->
+                <!--            </li>-->
+
+                <!--          </ul>-->
+                <!--          </li>-->
+
+                <!--          &lt;!&ndash; noData-->
+                <!--          <li>-->
+                <!--            <div class="noData attend01">-->
+                <!--              <div class="noDataBox">-->
+                <!--                <span class="ico"></span>-->
+                <!--                <span class="txt">등록된 시험이 없습니다.</span>-->
+                <!--              </div>-->
+                <!--            </div>-->
+                <!--          </li>-->
+                <!--          &ndash;&gt;-->
+                <!--          </ul>-->
+                <!-- 기존 구조 -->
+
+                <!-- 신규 구조 -->
+                <!-- tableScroll -->
+                <div class="tableScroll">
+                    <!-- table_block -->
+                    <table class="table_block mt20 table-debate">
+                        <caption>구분,제출기간,제출상태,채점상태,점수,제출/결과확인으로 구성된 과제 상세</caption>
+                        <colgroup>
+                            <col width="12%">
+                            <col width="*">
+                            <col width="12%">
+                            <col width="20%">
+                            <col width="10%">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td>구분</td>
+                            <td>제출기간</td>
+                            <td>제출상태</td>
+                            <td>채점상태</td>
+                            <td>점수</td>
+                            <td>제출/결과확인</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="ac">
+                                <span class="mob_boxR">과제물A</span>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">제출기간</span>
+                                    <span class="mob_boxR">2020.05.01 00:20 ~<br/>2020.05.01 00:20</span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">제출상태</span>
+                                    <span class="mob_boxR"><span class="txt_blue01 vertiM mr5">제출완료</span></span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">채점상태</span>
+                                    <span class="mob_boxR"><span class="txt_blue01 mr5">채점완료</span>2020.05.01</span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">점수</span>
+                                    <span class="mob_boxR"><strong class="txt_blue01">100</strong>점</span>
+                                </div>
+                            </td>
+                            <td class="mob_ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxR">
+                                        <button class="btn_s_black" onclick="window.open('popup/popup_assign_result.html','','width=1000, height=800');">결과확인</button>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac">
+                                <span class="mob_boxR">과제물B</span>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">제출기간</span>
+                                    <span class="mob_boxR">2020.05.01 00:20 ~<br/>2020.05.01 00:20</span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">제출상태</span>
+                                    <span class="mob_boxR"><span class="txt_blue01 vertiM mr5">제출완료</span></span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">채점상태</span>
+                                    <span class="mob_boxR">-</span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">점수</span>
+                                    <span class="mob_boxR">-</span>
+                                </div>
+                            </td>
+                            <td class="mob_ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxR">
+                                        <button class="btn_s_blue" onclick="window.open('popup/popup_assign.html','','width=1000, height=800');">수정하기</button>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ac">
+                                <span class="mob_boxR">과제물C</span>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">제출기간</span>
+                                    <span class="mob_boxR">2020.05.01 00:20 ~<br/>2020.05.01 00:20</span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">제출상태</span>
+                                    <span class="mob_boxR"><span class="vertiM mr5">미제출</span></span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">채점상태</span>
+                                    <span class="mob_boxR">-</span>
+                                </div>
+                            </td>
+                            <td class="ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxL">점수</span>
+                                    <span class="mob_boxR">-</span>
+                                </div>
+                            </td>
+                            <td class="mob_ac">
+                                <div class="mobBox">
+                                    <span class="mob_boxR">
+                                        <button class="btn_s_blue" onclick="window.open('popup/popup_assign.html','','width=1000, height=800');">제출하기</button>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- EOD : table_block -->
+                </div>
+                <!-- EOD : tableScroll -->
+                <!-- 신규 구조 -->
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>

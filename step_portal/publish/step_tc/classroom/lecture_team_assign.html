@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>STEP</title>
+    <link href="/css/classroom/template4/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/jquery.scrolling-tabs.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbCommon.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/classroom/template4/wbUser.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/classroom/template4/jquery-ui-1.8.2.js"></script>
+    <script src="/js/classroom/template4/wbCommon.js"></script>
+    <script src="/js/classroom/template4/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/classroom/template4/jquery.scrolling-tabs.js"></script>
+    <script src="/js/classroom/template4/slick.js"></script>
+
+    <!-- ie9 이하 적용 -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- EOD : ie9 이하 적용 -->
+</head>
+<body>
+
+<!-- headerInclude -->
+<section class="headerInclude"></section>
+<!-- EOD : headerInclude -->
+
+<!-- contentLayout -->
+<section class="contentLayout">
+    <!-- contentLayoutIn -->
+    <div class="contentLayoutIn">
+
+        <!-- lnb -->
+        <section class="lnbInclude"></section>
+        <!-- EOD : lnb -->
+
+        <!-- contentArea -->
+        <div class="contentArea" id="contentArea">
+            <h2><span>팀 프로젝트</span><a href="javascript:void(0)" class="icon_q"><span class="blind">메뉴 사용방법 안내 팝업 호출</span></a></h2>
+            <!-- layout_boxs -->
+            <div class="layout_boxs">
+
+                <!-- team_info_wrap -->
+                <div class="team_info_wrap">
+                    <ul class="team_info_area">
+                        <li><span class="team">A팀</span></li>
+                        <li><strong class="label">과제</strong><span class="data">개별제출</span></li>
+                        <li><strong class="label">팀장</strong><span class="data">홍길동</span></li>
+                    </ul>
+                    <div class="team_info_member">
+                        <strong>팀원</strong><span>가학생, 나학생, 다학생, 라학생, 마학생, 바학생, 사학생, 아학생, 자학생 </span>
+                    </div>
+                </div>
+                <!-- EOD : team_info_wrap -->
+
+                <div class="btn_rights">
+                    <button type="button" class="btn_sr_white" onclick="location.href='lecture_team.html'">팀 목록</button>
+                </div>
+
+                <!-- tab_arrowBox -->
+                <div class="tab_arrowBox">
+                    <!-- tab_arrow -->
+                    <ul class="tab_arrow" role="tablist">
+                        <li><a href="lecture_team_list.html"><span>게시판</span></a></li>
+                        <li class="active"><a href="lecture_team_assign.html"><span>과제물</span></a></li>
+                        <li><a href="lecture_team_eval.html"><span>팀원평가</span></a></li>
+                        <li><a href="lecture_team_info.html"><span>팀 구성원</span></a></li>
+                    </ul>
+                    <!-- EOD : tab_arrow -->
+                </div>
+                <!-- EOD : tab_arrowBox -->
+
+                <!-- floatBox -->
+                <div class="floatBox">
+                    <div class="floatBoxL">
+                        <div class="countBox Bot">
+                            총 <strong>3</strong>명
+                        </div>
+                    </div>
+                    <div class="floatBoxR">
+                        <a href="javascript:void(0)" class="btn_s_blue">정답파일 다운로드</a>
+                    </div>
+                </div>
+                <!-- EOD : floatBox -->
+
+                <div class="scroll_tab_type mt20">
+                    <table class="table_block">
+                        <caption>이름,제출상태,첨삭상태,점수,첨삭하기로 구성된 과제물 상세</caption>
+                        <colgroup>
+                            <col width="16%">
+                            <col width="24%">
+                            <col width="24%">
+                            <col width="*">
+                            <col width="24%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td scope="col">이름</td>
+                            <td scope="col">제출상태</td>
+                            <td scope="col">첨삭상태</td>
+                            <td scope="col">점수</td>
+                            <td scope="col">첨삭하기</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ac">홍길동<span class="icon_leader"></span></td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01 mr5">제출완료</span>2020.05.01</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01 mr5">첨삭완료</span>2020.05.01</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR"><strong class="txt_blue01">100</strong>점</span>
+                                    </div>
+                                </td>
+                                <td class="ac mob_ac">
+                                    <button class="btn_s_black">결과보기</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">가학생</td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01 mr5">제출완료</span>2020.05.01</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01 mr5">첨삭완료</span>2020.05.01</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR"><strong class="txt_blue01">85</strong>점</span>
+                                    </div>
+                                </td>
+                                <td class="ac mob_ac">
+                                    <button class="btn_s_black">결과보기</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">나학생</td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR">재제출</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01 mr5">반려</span> 2020.07.31</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR">-</span>
+                                    </div>
+                                </td>
+                                <td class="ac mob_ac">
+                                    <button class="btn_s_blue">첨삭하기</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">다학생</td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR">미제출</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01 mr5">미첨삭</span></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR">-</span>
+                                    </div>
+                                </td>
+                                <td class="ac mob_ac">
+                                    <button class="btn_s_blue">첨삭하기</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ac">라학생</td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">제출상태</span>
+                                        <span class="mob_boxR">미제출</span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">첨삭상태</span>
+                                        <span class="mob_boxR"><span class="txt_blue01 mr5">미첨삭</span></span>
+                                    </div>
+                                </td>
+                                <td class="ac">
+                                    <div class="mobBox">
+                                        <span class="mob_boxL">점수</span>
+                                        <span class="mob_boxR">-</span>
+                                    </div>
+                                </td>
+                                <td class="ac mob_ac"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <!-- EOD : layout_boxs -->
+        </div>
+        <!-- EOD : contentArea -->
+    </div>
+    <!-- EOD : contentLayoutIn -->
+</section>
+<!-- EOD : contentLayout -->
+
+
+</body>
+</html>
