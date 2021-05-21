@@ -189,6 +189,137 @@
     }
 }
 
+// 히스토리
+.section-history {
+    margin-top: 40px;
+
+    .history-main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        
+        .tit-h2 {
+            position: relative;
+            padding-bottom: 15px;
+            text-align: center;
+
+            @include fontSize(24px);
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 40px;
+                margin-left: -20px;
+                border-bottom: 2px solid #444;
+            }
+        }
+
+        .history-main-list {
+            position: relative;
+            margin-top: 30px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 24px;
+                left: 50%;
+                bottom: 0;
+                width: 1px;
+                background: #e1e1e1;
+            }
+
+            @include flexbox();
+            @include flex-wrap(wrap);
+            @include align-items(flex-start);
+
+            .history-main-item {
+                position: relative;
+                padding: 24px;
+                width: calc(50% - 24px);
+
+                @include flex(none);
+                @include box-sizing();
+                @include border-style(2px, 1px, 1px, 1px, solid, $pc1 #eaeaea #eaeaea #eaeaea);
+
+                .year {
+                    @include fontSize(18px);
+                }
+
+                .main-item-conts {
+                    margin-top: 15px;
+
+                    p {
+                        margin-top: 15px;
+                        line-height: 1.5;
+
+                        @include fontSize(15px);
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+                
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 16px;
+                    border: 2px solid $pc1;
+                    border-radius: 100px;
+                    background: #fff;
+                    
+                    @include size(20px);
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: -10px;
+                    top: 18px;
+                }
+
+                &:nth-child(odd) {
+                    margin-top: 60px;
+
+                    &:before {
+                        right: -38px;
+                    }
+
+                    &:after {
+                        right: -10px;
+
+                        @include triangle(right, 10px, 20px, #eaeaea);
+                    }
+                }
+
+                &:nth-child(even) {
+                    margin: 160px 0 -100px 48px;
+
+                    &:before {
+                        left: -37px;
+                    }
+
+                    &:after {
+                        left: -10px;
+
+                        @include triangle(left, 10px, 20px, #eaeaea);
+                    }
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
 #portfolio-section {
     .section-wrap {
         margin: 0 -15px -30px;
