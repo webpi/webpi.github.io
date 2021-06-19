@@ -340,7 +340,7 @@ function getConfig(userId){
 		id : 'starplayer',
 		videoContainer : 'video-container',
 		controllerContainer : 'controller-container',
-		controllerUrl: "https://webpi.github.io/step_portal/JS/common/starplayer/kedi.bin",
+		controllerUrl: "https://webpi.github.io/step_portal/js/common/starplayer/kedi.bin",
 		controllerParams : init(),
 		visible : false
 	};
