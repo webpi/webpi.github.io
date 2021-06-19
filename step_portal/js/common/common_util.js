@@ -583,28 +583,28 @@ function displayWorkProgress(type) {
 		workProgressBox.style.display	= "block";
 		workProgressBox.style.width	= "100%";
 		workProgressBox.style.height	= "100%";
-		workProgressBox.style.background	= "url("+ctx+"/images/common/mngs/bg_dim_30.png) 0 0 repeat";
+		workProgressBox.style.background	= "url("+ctx+"https://webpi.github.io/step_portal/images/common/mngs/bg_dim_30.png) 0 0 repeat";
 		workProgressBox.style.zIndex="99999999";
         
 		var boxContent = "";
 
 	if(type == "APPLICATOIN"){
 			boxContent += " <div class='loadingBox' style='display: inline-block; position: absolute; top: 50%; left: 50%; margin-top: -55px; margin-left: -100px;'>";
-			boxContent += " 	<img src=\""+ctx+"/images/common/mngs/loading_application.gif\" alt=\'loading'>";
+			boxContent += " 	<img src=\""+ctx+"https://webpi.github.io/step_portal/images/common/mngs/loading_application.gif\" alt=\'loading'>";
 			boxContent += " </div>";
 
 		}else{
 			boxContent += "<div class='comm-loading'>";
-			boxContent += " 	<img src=\""+ctx+"/images/common/mngs/loading.gif\" alt='로딩중' class='comm-loading-spin'>";
+			boxContent += " 	<img src=\""+ctx+"https://webpi.github.io/step_portal/images/common/mngs/loading.gif\" alt='로딩중' class='comm-loading-spin'>";
 			boxContent += "</div>";
 		}
 
 		// boxContent += " <div class='loadingBox' style='display: inline-block; position: absolute; top: 50%; left: 50%; margin-top: -55px; margin-left: -100px;'>";
 		//
 		// if(type == "APPLICATOIN"){
-		// 	boxContent += " 	<img src=\""+ctx+"/images/common/mngs/loading_application.gif\" alt=\''>";
+		// 	boxContent += " 	<img src=\""+ctx+"https://webpi.github.io/step_portal/images/common/mngs/loading_application.gif\" alt=\''>";
 		// }else{
-		// 	boxContent += " 	<img src=\""+ctx+"/images/common/mngs/loading01.gif\" alt=\''>";
+		// 	boxContent += " 	<img src=\""+ctx+"https://webpi.github.io/step_portal/images/common/mngs/loading01.gif\" alt=\''>";
 		// }
 		//
 		// boxContent += " </div>";
@@ -648,7 +648,7 @@ function displayWorkProgress2() {
 		var boxContent = "";
 
 		boxContent += "<div class='comm-loading'>";
-		boxContent += " 	<img src=\""+ctx+"/images/common/mngs/loading.gif\" alt='로딩중' class='comm-loading-spin'>";
+		boxContent += " 	<img src=\""+ctx+"https://webpi.github.io/step_portal/images/common/mngs/loading.gif\" alt='로딩중' class='comm-loading-spin'>";
 		boxContent += "</div>";
 
 			// + "<table style='width: 100%; height: 100%;'>"
@@ -659,11 +659,11 @@ function displayWorkProgress2() {
 			// + "        id='workPregress'"
 			// + "        width='"+workProgressBoxWidth+"' height='"+workProgressBoxHeight+"'>"
 			// + "    <param name='allowScriptAccess' value='always' />"
-			// + "    <param name='movie' value='/images/back/common/loading.swf' />"
+			// + "    <param name='movie' value='https://webpi.github.io/step_portal/images/back/common/loading.swf' />"
 			// + "    <param name='quality' value='high' />"
 			// + "    <param name='scale' value='exactfit' />"
 			// + "    <param name='wmode' value='transparent' />"
-			// + "    <embed src='/images/back/common/loading.swf' "
+			// + "    <embed src='https://webpi.github.io/step_portal/images/back/common/loading.swf' "
 			// + "        wmode='transparent' scale='exactfit' quality='high'"
 			// + "        width='"+workProgressBoxWidth+"' height='"+workProgressBoxHeight+"'"
 			// + "        id='workProgress' name='workProgress' allowScriptAccess='always'"

@@ -1,8 +1,8 @@
 // 사용예시 alert(IMAGE["required"][jslang]);
 var IMAGE = {
 localepath  	: {"ko":"/images",
-	       		   "en":"/images/locale/en",
-	               "zh":"/images/locale/zh"}
+	       		   "en":"https://webpi.github.io/step_portal/images/locale/en",
+	               "zh":"https://webpi.github.io/step_portal/images/locale/zh"}
 };
 
 // 사용예시 alert(MESSAGE["required"][jslang]);

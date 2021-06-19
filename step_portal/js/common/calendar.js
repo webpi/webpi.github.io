@@ -30,10 +30,10 @@
 *******************************************************************************/
 
 // Calendar	이미지 경로
-var	calendarImgPath			= "/images/common/calendar/"; 
+var	calendarImgPath			= "https://webpi.github.io/step_portal/images/common/calendar/"; 
 
 // Calendar	Box	HTML 경로
-var	calendarBoxHtml			= "/js/common/calendar_box.jsp";
+var	calendarBoxHtml			= "https://webpi.github.io/step_portal/JS/common/calendar_box.jsp";
 
 // Calendar 타이틀 배경색
 //var calendarTitleBgColor	= "#1C538A";

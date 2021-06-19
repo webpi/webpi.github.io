@@ -343,7 +343,7 @@
 						});
 						fSpan.append(fDown);
 
-						fDel = $('<a href="javascript:void(0)">&nbsp;<img src="'+ f.cntxtPath + '/images/pc/template/common/btn_delete_s.gif" alt="삭제" /></a>').bind('click',function(){
+						fDel = $('<a href="javascript:void(0)">&nbsp;<img src="'+ f.cntxtPath + 'https://webpi.github.io/step_portal/images/pc/template/common/btn_delete_s.gif" alt="삭제" /></a>').bind('click',function(){
 							$("input[name='p_delfile']").val($("input[name='p_delfile']").val()+obj.FILE_ID+",");//file을 지정하는 jsp페이지에 hidden값으로 넣어준다.
 							f.cnt = f.cnt-1;
 							$('.fileView_'+s).show();

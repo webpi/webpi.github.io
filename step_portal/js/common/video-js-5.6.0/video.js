@@ -19495,7 +19495,7 @@ var _pluginsJs = _dereq_('./plugins.js');
 
 var _pluginsJs2 = _interopRequireDefault(_pluginsJs);
 
-var _srcJsUtilsMergeOptionsJs = _dereq_('../../src/js/utils/merge-options.js');
+var _srcJsUtilsMergeOptionsJs = _dereq_('../../srchttps://webpi.github.io/step_portal/JS/utils/merge-options.js');
 
 var _srcJsUtilsMergeOptionsJs2 = _interopRequireDefault(_srcJsUtilsMergeOptionsJs);
 
@@ -20247,7 +20247,7 @@ if (typeof define === 'function' && define['amd']) {
 exports['default'] = videojs;
 module.exports = exports['default'];
 
-},{"../../src/js/utils/merge-options.js":137,"./component":66,"./event-target":98,"./extend.js":99,"./player":107,"./plugins.js":108,"./setup":112,"./tech/flash.js":115,"./tech/html5.js":116,"./tech/tech.js":118,"./tracks/text-track.js":127,"./utils/browser.js":128,"./utils/create-deprecation-proxy.js":130,"./utils/dom.js":131,"./utils/events.js":132,"./utils/fn.js":133,"./utils/format-time.js":134,"./utils/log.js":136,"./utils/stylesheet.js":138,"./utils/time-ranges.js":139,"./utils/url.js":141,"global/document":1,"lodash-compat/object/merge":40,"object.assign":45,"xhr":55}]},{},[142])(142)
+},{"../../srchttps://webpi.github.io/step_portal/JS/utils/merge-options.js":137,"./component":66,"./event-target":98,"./extend.js":99,"./player":107,"./plugins.js":108,"./setup":112,"./tech/flash.js":115,"./tech/html5.js":116,"./tech/tech.js":118,"./tracks/text-track.js":127,"./utils/browser.js":128,"./utils/create-deprecation-proxy.js":130,"./utils/dom.js":131,"./utils/events.js":132,"./utils/fn.js":133,"./utils/format-time.js":134,"./utils/log.js":136,"./utils/stylesheet.js":138,"./utils/time-ranges.js":139,"./utils/url.js":141,"global/document":1,"lodash-compat/object/merge":40,"object.assign":45,"xhr":55}]},{},[142])(142)
 });
 
 

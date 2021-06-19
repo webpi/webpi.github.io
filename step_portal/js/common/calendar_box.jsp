@@ -7,7 +7,7 @@
 	<script type="text/javascript">
 	    var jslang = "<%=LocaleUtils.getCurrentLocale(request)%>";
 	</script>
-    <script type="text/javascript" src="<c:url value='/js/common/multiLangSet.js'/>"></script>
+    <script type="text/javascript" src="<c:url value='https://webpi.github.io/step_portal/JS/common/multiLangSet.js'/>"></script>
 	<script language="javascript" src="common.js"></script>
 	<script language="javascript" src="calendar.js"></script>
 </head>
