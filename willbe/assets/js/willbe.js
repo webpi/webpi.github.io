@@ -153,7 +153,7 @@ function technologSlider() {
     sliderPause.show();
   });
 
-  sectionSlider.on("mousedown", function () {
+  sectionSlider.on("mousedown click tab touchstart touchend", function () {
     $(".scroll-container").slick("slickSetOption", "swipe", false, false);
   });
 } technologSlider();
