@@ -1,7 +1,7 @@
 // common
 var headerElm = $("#header");
 
-// mobile header
+// 모바일 셀렉터
 var btnMobile = $(".js-btnMobile");
 var headerMobile = $(".js-headerMobile");
 var btnHeaderMobileClse = $(".header-mobile .btn-header-mobile-clse");
@@ -32,7 +32,7 @@ $(document).on("click", function(e) {
   }
 });
 
-// 메인 full page scroll
+// 메인 셀렉터
 var scrollContainer = $(".scroll-container");
 
 // 메인 slick
@@ -47,7 +47,7 @@ scrollContainer.slick({
   dots: false
 });
 
-// 마우스 휠 이전/다음 적용
+// 마우스 휠 slick 이전, 다음 적용
 scrollContainer.on("wheel", (function(e) {
   e.preventDefault();
   if (e.originalEvent.deltaY < 0) {
@@ -102,8 +102,8 @@ if ($(".scroll-container .js-CountUp").length) {
 
 // 현재 메인 숫자 애니
 scrollContainer.on('beforeChange', function(event, slick, currentSlide) {
-  var sdfgg = scrollContainer.slick("getSlick").currentSlide + 1;
-  $(".scroll-paging .scroll-paging-current .cnt").text(numberPad(sdfgg));
+  var currentSlideCount = scrollContainer.slick("getSlick").currentSlide + 1;
+  $(".scroll-paging .scroll-paging-current .cnt").text(numberPad(currentSlideCount));
   if ($(".section2").hasClass("slick-current")) {
     countUpLearner();
   } else if ($(".section3").hasClass("slick-current")) {
@@ -158,11 +158,6 @@ function technologSlider() {
   });
 } technologSlider();
 
-// 한자리 숫자 0 붙이기
-function numberPad(n) {
-  return n > 9 ? "" + n: "0" + n;
-}
-
 // 상단으로 가기
 function btnTop() {
   $(".js-btnTop").on("click", function (e) {
@@ -185,8 +180,8 @@ function downFile(uri, name) {
   link.click();
   link.remove();
 }
-document.getElementById("js-btnDownload").addEventListener("click", function () {
-  downFile("https://webpi.github.io/willbe/assets/etc/윌비소프트_회사소개서.pdf", "윌비소프트_회사소개서.pdf");
+$(".js-btnDownload").on("click", function () {
+  downFile("/assets/etc/윌비소프트_회사소개서.pdf", "윌비소프트_회사소개서.pdf");
 });
 
 // header fixed
@@ -204,6 +199,11 @@ function headerFixed() {
     headerElm.removeClass("is-fixed");
   }
 } headerFixed();
+
+// 한자리 숫자 0 붙이기
+function numberPad(n) {
+  return n > 9 ? "" + n: "0" + n;
+}
 
 // resize
 window.addEventListener("resize", function(){
