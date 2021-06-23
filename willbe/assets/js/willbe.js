@@ -228,11 +228,11 @@ window.addEventListener("scroll", function(){
     var subHeaderHeight = $(".sub .sub-header").height();
 
     if (scrollTop > subHeaderHeight) {
-      $("#aside").fadeIn();
+      $("#aside.aside-sub").fadeIn();
     } else {
-      $("#aside").fadeOut();
+      $("#aside.aside-sub").fadeOut();
     }
   } else {
-    $("#aside").show();
+    $("#aside.aside-sub").show();
   }
 });
