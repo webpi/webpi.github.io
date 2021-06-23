@@ -181,7 +181,7 @@ function downFile(uri, name) {
   link.remove();
 }
 $(".js-btnDownload").on("click", function () {
-  downFile("/assets/etc/윌비소프트_회사소개서.pdf", "윌비소프트_회사소개서.pdf");
+  downFile("https://webpi.github.io/willbe/assets/etc/윌비소프트_회사소개서.pdf", "윌비소프트_회사소개서.pdf");
 });
 
 // header fixed
