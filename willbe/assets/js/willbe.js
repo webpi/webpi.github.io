@@ -1,39 +1,9 @@
 // common
 var headerElm = $("#header");
-
-// 모바일 셀렉터
+var scrollContainer = $(".scroll-container");
 var btnMobile = $(".js-btnMobile");
 var headerMobile = $(".js-headerMobile");
 var btnHeaderMobileClse = $(".header-mobile .btn-header-mobile-clse");
-
-// 모바일 메뉴 열기
-btnMobile.on("click", function (e) {
-  e.stopPropagation();
-
-  if (!headerMobile.hasClass("is-active")) {
-    headerMobile.show(100)
-    headerMobile.addClass("is-active");
-  }
-});
-
-// 모바일 메뉴 닫기
-function headerMobileClse() {
-  headerMobile.removeClass("is-active");
-  headerMobile.hide(300);
-}
-btnHeaderMobileClse.on("click", function () {
-  if (headerMobile.hasClass("is-active")) {
-    headerMobileClse();
-  }
-});
-$(document).on("click", function(e) {
-  if (!headerMobile.has(e.target).hasClass("is-active")) {
-    headerMobileClse();
-  }
-});
-
-// 메인 셀렉터
-var scrollContainer = $(".scroll-container");
 
 // 메인 slick
 scrollContainer.slick({
@@ -41,7 +11,7 @@ scrollContainer.slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   variableWidth: true,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 5000,
   arrows: false,
   dots: false
@@ -154,9 +124,14 @@ function technologSlider() {
   });
 
   sectionSlider.on("mousedown click tab touchstart touchend", function () {
-    $(".scroll-container").slick("slickSetOption", "swipe", false, false);
+    scrollContainer.slick("slickSetOption", "swipe", false, false);
   });
 } technologSlider();
+
+// 한자리 숫자 0 붙이기
+function numberPad(n) {
+  return n > 9 ? "" + n: "0" + n;
+}
 
 // 상단으로 가기
 function btnTop() {
@@ -200,10 +175,31 @@ function headerFixed() {
   }
 } headerFixed();
 
-// 한자리 숫자 0 붙이기
-function numberPad(n) {
-  return n > 9 ? "" + n: "0" + n;
+// 모바일 메뉴 열기
+btnMobile.on("click", function (e) {
+  e.stopPropagation();
+
+  if (!headerMobile.hasClass("is-active")) {
+    headerMobile.show(100)
+    headerMobile.addClass("is-active");
+  }
+});
+
+// 모바일 메뉴 닫기
+function headerMobileClse() {
+  headerMobile.removeClass("is-active");
+  headerMobile.hide(300);
 }
+btnHeaderMobileClse.on("click", function () {
+  if (headerMobile.hasClass("is-active")) {
+    headerMobileClse();
+  }
+});
+$(document).on("click", function(e) {
+  if (!headerMobile.has(e.target).hasClass("is-active")) {
+    headerMobileClse();
+  }
+});
 
 // resize
 window.addEventListener("resize", function(){
@@ -221,6 +217,22 @@ window.addEventListener("resize", function(){
 
 // scroll
 window.addEventListener("scroll", function(){
+  var windowWidth = $(window).width();
+  var scrollTop = $(window).scrollTop();
+
   // header fixed
   headerFixed()
+
+  // 상단으로
+  if (windowWidth < 1367) {
+    var subHeaderHeight = $(".sub .sub-header").height();
+
+    if (scrollTop > subHeaderHeight) {
+      $("#aside").fadeIn();
+    } else {
+      $("#aside").fadeOut();
+    }
+  } else {
+    $("#aside").show();
+  }
 });
