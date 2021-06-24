@@ -11,7 +11,7 @@ scrollContainer.slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   variableWidth: true,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 5000,
   arrows: false,
   dots: false
@@ -95,7 +95,7 @@ function technologSlider() {
     dots: false,
     arrows: false,
   }).on("afterChange", function(event, slick) {
-    $(".scroll-container").slick("slickSetOption", "swipe", true, false);
+    scrollContainer.slick("slickSetOption", "swipe", true, false);
   });
 
   var sliderPause = $(".technolog-slider .btn-technolog-slider-pause");
@@ -123,10 +123,41 @@ function technologSlider() {
     sliderPause.show();
   });
 
-  sectionSlider.on("mousedown click tab touchstart touchend", function () {
+  sectionSlider.on("mousedown click tab touchstart touchmove", function () {
     scrollContainer.slick("slickSetOption", "swipe", false, false);
   });
 } technologSlider();
+
+// work 애니메이션
+function fadeUpani() {
+  // 대상
+  var fadeItem = $(".js-fadeUpItem");
+  
+  // 대상 위치 확인 후 실행
+  function checkItem() {
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var windowBottomPosition = (scrollTop + windowHeight);
+
+    $.each(fadeItem, function() {
+      var _this = $(this);
+      var elementHeight = _this.outerHeight();
+      var elementTopPosition = _this.offset().top;
+      var elementBottomPosition = (elementTopPosition + elementHeight);
+
+      if ((elementBottomPosition >= scrollTop) &&
+        (elementTopPosition <= windowBottomPosition)) {
+        _this.addClass("fade-up");
+      } else {
+        _this.removeClass("fade-up");
+      }
+    });
+  }
+
+  // init
+  $(window).on("scroll resize", checkItem);
+  $(window).trigger("scroll");
+} fadeUpani();
 
 // 한자리 숫자 0 붙이기
 function numberPad(n) {
@@ -222,6 +253,7 @@ window.addEventListener("scroll", function(){
 
   // header fixed
   headerFixed()
+
 
   // 상단으로
   if (windowWidth < 1367) {
