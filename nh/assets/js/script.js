@@ -128,7 +128,9 @@ window.addEventListener("resize", function() {
   gnbClse();
 
   // 알림 닫기
-  noticeClse();
+  if (windowWidth != lastWindowWidth){
+    noticeClse();
+  }
 });
 
 // scroll
