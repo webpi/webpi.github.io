@@ -113,6 +113,7 @@ function noticeClse() {
 // });
 
 // resize
+var lastWindowWidth = $(window).width();
 window.addEventListener("resize", function() {
   var windowWidth = $(window).width();
 
