@@ -167,14 +167,9 @@ function numberPad(n) {
 // 상단으로 가기
 function btnTop() {
   $(".js-btnTop").on("click", function (e) {
-    if ("" !== this.hash) {
-      e.preventDefault();
-
-      var h = this.hash;
-      $("html, body").animate({
-        scrollTop: $(h).offset().top
-      }, 400);
-    }
+    $("html, body").stop().animate({
+      scrollTop: "0"
+    }, 300);
   });
 } btnTop();
 
@@ -254,7 +249,6 @@ window.addEventListener("scroll", function(){
   // header fixed
   headerFixed()
 
-
   // 상단으로
   if (windowWidth < 1367) {
     var subHeaderHeight = $(".sub .sub-header").height();
@@ -266,5 +260,21 @@ window.addEventListener("scroll", function(){
     }
   } else {
     $("#aside.aside-sub").show();
+  }
+
+  // 퀵메뉴 스크롤 끝 위치 변경
+  var scrollEnd = $(document).height() - $(window).height();
+  if(windowWidth > 1366) {
+    if (scrollEnd === scrollTop) {
+      $("#aside.aside-sub").css("bottom", 138);
+    } else {
+      $("#aside.aside-sub").css("bottom", 0);
+    }
+  } else {
+    if (scrollEnd === scrollTop) {
+      $("#aside.aside-sub").css("bottom", 90);
+    } else {
+      $("#aside.aside-sub").css("bottom", 0);
+    }
   }
 });
