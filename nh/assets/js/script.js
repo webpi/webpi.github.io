@@ -86,7 +86,6 @@ noticeBtn.on("click", function() {
 $notice.on("focusin", function() {
   $notice.addClass("is-active");
 });
-
 btnNoticeMobile.on("click", function() {
   var scrollTop = $(window).scrollTop();
   var notceTop = scrollTop + 80;
@@ -96,6 +95,9 @@ btnNoticeMobile.on("click", function() {
 
   // gnb 닫기
   gnbClse();
+});
+$(document).on("click", ".notice.is-zoom .btn-notice-clse", function() {
+  noticeClse();
 });
 function noticeClse() {
   $notice.removeClass("is-active");
