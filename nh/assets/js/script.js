@@ -26,7 +26,7 @@ btnGnbAll.on("click", function() {
   if (windowWidth > 1024) {
     $gnb.toggleClass("is-normal is-all");
   } else {
-    $gnb.fadeToggle(200);
+    $gnb.slideToggle(300);
   }
 });
 
@@ -51,7 +51,7 @@ function gnbClse() {
   if($gnb.hasClass("is-all")) {
     $gnb.removeClass("is-all").addClass("is-normal");
   } else if($gnb.hasClass("is-mobile")) {
-    $gnb.fadeOut(200);
+    $gnb.hide();
   }
 
   $gnb.removeAttr("style");
