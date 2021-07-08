@@ -83,7 +83,7 @@ function gnbMobile() {
 noticeBtn.on("click", function() {
     $notice.toggleClass("is-active");
 });
-$notice.on("focusin", function() {
+$(".notice .notice-items-box").on("focus", function() {
   $notice.addClass("is-active");
 });
 btnNoticeMobile.on("click", function() {
@@ -115,6 +115,20 @@ function noticeClse() {
 // });
 
 // resize
+
+//
+
+// 학습중인 과정 테이블
+function myClassroom() {
+  var btnBoardMore = $(document).find(".board .js-btnListView");
+
+  btnBoardMore.on("click", function() {
+    $(this).toggleClass("is-active");
+    $(this).closest("tbody").find(".btn-list-view").toggleClass("is-on");
+    $(this).closest("tbody").find(".tr-list-box").slideToggle(200);
+  });
+} myClassroom();
+
 var lastWindowWidth = $(window).width();
 window.addEventListener("resize", function() {
   var windowWidth = $(window).width();

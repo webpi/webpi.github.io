@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>농협경제지주</title>
+    <title>농협경제지주 - 나의 강의실 - 사업자/소속 관리</title>
         <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="shortcut icon" href="https://webpi.github.io/nh/assets/images/comm/favicon.ico">
@@ -137,52 +137,104 @@
 
     <!-- container -->
     <main id="container">
-        <section class="section-index">
-            <div class="index-wrap">
-                <div class="index-top">
-                    <h2 class="title">
-                        <span class="ir">악성가축질병을 예방하고 지속가능한 축산업을 육성하기 위한 축산관련 종사자 교육</span>
-                    </h2>
+        <section class="section-myclassroom">
+            <div class="sub-wrap">
+                <div class="sub-top">
+                    <h2 class="title">나의 강의실</h2>
+
+                    <ul class="location">
+                        <li class="location-home"><a href="index.html">Home</a></li>
+                        <li>나의 강의실</li>
+                        <li><a href="my_classroom_home.html" class="is-active">강의실 홈</a></li>
+                    </ul>
+                    
+                    <ul class="lnb">
+                        <li><a href="my_classroom_home.html" class="btn-lnb">강의실 홈</a></li>
+                        <li><a href="my_classroom_online.html" class="btn-lnb">학습중인 과정</a></li>
+                        <li><a href="my_classroom_history.html" class="btn-lnb">수료내역</a></li>
+                        <li><a href="my_classroom_manager.html" class="btn-lnb is-active">사업자/소속 관리</a></li>
+                    </ul>
+                </div> 
+
+                <div class="myclassroom-contents">
+                    <h3 class="title">사업자/소속 관리</h3>
+
+                    <div class="myclassroom-contents-wrap">
+                        <div class="tab">
+                            <a href="my_classroom_manager.html" class="btn-tab">소속관리</a>
+                            <a href="my_classroom_business.html" class="btn-tab is-active">사업자관리</a>
+                        </div>
+
+                        <article class="myclassroom-manager-business">
+                            <h4 class="title">사업자정보</h4>
+
+                            <div class="myclassroom-manager-required"><em class="required">*</em> 는 필수 입력항목 입니다.</div>
+
+                            <!-- form 및 관련요소 삭제 가능 -->
+                            <form>
+                                <fieldset>
+                                    <legend><span>사업자 등록</span></legend>
+
+                                    <div class="board-wrap">
+                                        <table class="board-form">
+                                            <caption><span>사업자 등록 상세 입력</span></caption>
+                                            <colgroup>
+                                                <col style="width: 180px;">
+                                                <col>
+                                            </colgroup>
+                                            <tr>
+                                                <th scope="row">구분 <em class="required">*</em></th>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <span class="input-radio">
+                                                            <input type="radio" id="id-radio" name="radio1">
+                                                            <label for="id-radio" class="input-label">개인사업자</label>"
+                                                        </span>
+
+                                                        <span class="input-radio">
+                                                            <input type="radio" id="id-radio2" name="radio1">
+                                                            <label for="id-radio2" class="input-label">법인사업자</label>"
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <label for="id-corpname">사업자명 <em class="required">*</em></label>
+                                                </th>
+                                                <td>
+                                                    <input type="text" id="id-corpname" class="input-text">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <label for="id-corpnumber">사업자등록번호 <em class="required">*</em> <br>(법인등록번호)</label>
+                                                </th>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <input type="text" id="id-corpnumber" class="input-text ctr" style="width: 110px;">
+                                                        <span class="dash">-</span>
+                                                        <input type="text" title="중간번호" class="input-text ctr" style="width: 110px;">
+                                                        <span class="dash">-</span>
+                                                        <input type="text" title="끝번호" class="input-text ctr" style="width: 210px;">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="myclassroom-manager-button">
+                                        <div class="form-group">
+                                            <a href="my_classroom_business_regi.html" class="btn-medium-border">취소</a>
+
+                                            <button type="button" class="btn-medium">등록</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </article>
+                    </div>
                 </div>
-
-                <div class="index-contents">
-                    <article class="index-contents-box bg1">
-                        <div class="index-contents-box-in">
-                            <h3 class="title">신규교육 신청</h3>
-
-                            <p class="dsc">축산업, 가축거래상인, 축산차량종사자의 <br>인·허가를 위한 신규교육을 수강하세요.</p>
-
-                            <a href="#" class="btn-go"><span>바로가기</span></a>
-                        </div>
-                    </article>
-
-                    <article class="index-contents-box bg2">
-                        <div class="index-contents-box-in">
-                            <h3 class="title">보수교육 신청</h3>
-
-                            <p class="dsc">보수교육 대상 여부를 확인하고, <br>보수교육을 수강하세요.</p>
-
-                            <a href="#" class="btn-go"><span>바로가기</span></a>
-                        </div>
-                    </article>
-
-                    <article class="index-contents-box bg3">
-                        <div class="index-contents-box-in">
-                            <h3 class="title">나의 강의실</h3>
-
-                            <p class="dsc">현재 수강 중인 과정과 수강 완료 과정을 <br>확인하고 수료증을 발급 받으세요.</p>
-
-                            <a href="#" class="btn-go"><span>바로가기</span></a>
-                        </div>
-                    </article>
-                </div>
-
-                <article class="index-menu">
-                    <a href="#" class="index-menu-item ico-paper">수료증 발급</a>
-                    <a href="#" class="index-menu-item ico-guide">지침 시달</a>
-                    <a href="#" class="index-menu-item ico-schedule">집합교육일정</a>
-                    <a href="#" class="index-menu-item ico-qna">자주묻는 질문</a>
-                </article>
 
                 <!-- 퀵메뉴 -->
                 <aside class="sidebar">
