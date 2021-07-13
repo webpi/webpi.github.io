@@ -572,4 +572,42 @@
             }
         }
     }
+
+     // 히스토리
+     .cpn-history {
+        .history-main-list {
+            @include flex-direction(column);
+
+            &:before {
+                display: none;
+            }
+
+            .history-main-item {
+                width: 100%;
+                padding: 12px;
+
+                @include flex(none);
+
+                &:before {
+                    display: none !important;
+                }
+
+                &:after {
+                    display: none !important;
+                }
+
+                &:nth-child(odd) {
+                    margin: 10px 0 0 0;
+                }
+
+                &:nth-child(even) {
+                    margin: 10px 0 0 0;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }        
+    }
 }
