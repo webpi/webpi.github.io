@@ -7,12 +7,12 @@
     <title>농협경제지주 - 나의 강의실 - 사업자/소속 관리</title>
         <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="shortcut icon" href="https://webpi.github.io/nh/assets/images/comm/favicon.ico">
-    <script src="https://webpi.github.io/nh/assets/js/comm/jquery/jquery-3.6.0.min.js"></script>
-    <link rel="preload" href="https://webpi.github.io/nh/assets/fonts/notosanskr/notosanskrregular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="https://webpi.github.io/nh/assets/fonts/notosanskr/notosanskrregular.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="https://webpi.github.io/nh/assets/fonts/notosanskr/notosanskrregular.svg" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://webpi.github.io/nh/assets/css/nh.css">
+    <link rel="shortcut icon" href="./assets/images/comm/favicon.ico">
+    <script src="./assets/js/comm/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.svg" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/nh.css">
 </head>
 <body>
 <!-- 건너띄기 -->
@@ -26,11 +26,11 @@
     <header id="header" class="header">
         <div class="header-wrap">
     <div class="header-in">
-        <h1 class="ci"><a href="index.htm"><img src="https://webpi.github.io/nh/assets/images/comm/ci.png" alt="농협경제지주" class="img"></a></h1>
+        <h1 class="ci"><a href="index.html"><img src="./assets/images/comm/ci.png" alt="농협경제지주" class="img"></a></h1>
 
         <div class="menu">
-            <a href="#" class="btn-menu btn-menu-login">로그인</a>
-            <a href="#" class="btn-menu btn-menu-sign">회원가입</a>
+            <a href="login.html" class="btn-menu btn-menu-login">로그인</a>
+            <a href="join.html" class="btn-menu btn-menu-sign">회원가입</a>
             <button type="button" class="btn-menu btn-menu-noti"><span class="ir">알림</span></button>
             <button type="button" class="btn-menu btn-menu-all">
                 <span><em class="ir">전체메뉴</em></span>
@@ -64,24 +64,25 @@
             </div>
 
             <div class="gnb-col">
-                <strong class="gnb-tit">교육신청</strong>
+                <!-- 활성화 페이지 is-on 클래스 추가-->
+                <strong class="gnb-tit is-on">교육신청</strong>
 
                 <div class="gnb-sub">
                     <ul class="gnb-sub-wrap">
                         <li>
-                            신규교육
+                            <a href="edu_app_new.html" class="btn-gnb">신규교육</a>
         
                             <ul>
-                                <li><a href="#" class="btn-gnb">- 온라인교육</a></li>
-                                <li><a href="#" class="btn-gnb">- 집합교육</a></li>
+                                <li><a href="edu_app_new_online.html" class="btn-gnb">- 온라인교육</a></li>
+                                <li><a href="edu_app_new_group.html" class="btn-gnb">- 집합교육</a></li>
                             </ul>
                         </li>
                         <li>
-                            보수교육
+                            <a href="edu_app_conservative.html" class="btn-gnb">보수교육</a>
 
                             <ul>
-                                <li><a href="#" class="btn-gnb">- 온라인교육</a></li>
-                                <li><a href="#" class="btn-gnb">- 집합교육</a></li>
+                                <li><a href="edu_app_conservative_online.html" class="btn-gnb">- 온라인교육</a></li>
+                                <li><a href="edu_app_conservative_online.group.html" class="btn-gnb">- 집합교육</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -93,7 +94,7 @@
 
                 <div class="gnb-sub">
                     <ul class="gnb-sub-wrap">
-                        <li><a href="#" class="btn-gnb">수료이력조회/출력</a></li>
+                        <li><a href="completion_history.html" class="btn-gnb">수료이력조회/출력</a></li>
                     </ul>
                 </div>
             </div>
@@ -103,10 +104,10 @@
 
                 <div class="gnb-sub">
                     <ul class="gnb-sub-wrap">
-                        <li><a href="#" class="btn-gnb">사업소개</a></li>
-                        <li><a href="#" class="btn-gnb">교육운영지침</a></li>
-                        <li><a href="#" class="btn-gnb">법적근기</a></li>
-                        <li><a href="#" class="btn-gnb">교육운영기관</a></li>
+                        <li><a href="intro_edu.html" class="btn-gnb">교육소개</a></li>
+                        <li><a href="intro_guide.html" class="btn-gnb">교육안내</a></li>
+                        <li><a href="intro_legalbasis.html" class="btn-gnb">법적근거</a></li>
+                        <li><a href="intro_agency.html" class="btn-gnb">교육운영기관</a></li>
                     </ul>
                 </div>
             </div>
@@ -116,18 +117,18 @@
 
                 <div class="gnb-sub">
                     <ul class="gnb-sub-wrap">
-                        <li><a href="#" class="btn-gnb">공지사항</a></li>
-                        <li><a href="#" class="btn-gnb">자주묻는질문</a></li>
-                        <li><a href="#" class="btn-gnb">묻고답하기</a></li>
-                        <li><a href="#" class="btn-gnb">자료실</a></li>
+                        <li><a href="notice.html" class="btn-gnb">공지사항</a></li>
+                        <li><a href="faq.html" class="btn-gnb">자주묻는질문</a></li>
+                        <li><a href="qna.html" class="btn-gnb">묻고답하기</a></li>
+                        <li><a href="pds.html" class="btn-gnb">자료실</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="gnb-user">
-            <a href="#" class="btn-menu-login">로그인</a>
-            <a href="#" class="btn-menu-sign">회원가입</a>
+            <a href="login.html" class="btn-menu-login">로그인</a>
+            <a href="join.html" class="btn-menu-sign">회원가입</a>
         </div>
     </div>
 </nav>
@@ -143,7 +144,7 @@
                     <h2 class="title">나의 강의실</h2>
 
                     <ul class="location">
-                        <li class="location-home">index.htmlHome</a></li>
+                        <li class="location-home"><a href="/">Home</a></li>
                         <li>나의 강의실</li>
                         <li><a href="my_classroom_home.html" class="is-active">강의실 홈</a></li>
                     </ul>
@@ -184,14 +185,14 @@
                                                     <tr>
                                                         <th scope="col">인허가개수</th>
                                                         <th scope="col">업종</th>
-                                                        <th scope="col">주소</th>
+                                                        <th scope="col" class="is-mobile">주소</th>
                                                         <th scope="col">관리자</th>
                                                         <th scope="col">관리</th>
                                                     </tr>
                                                     <tr>
                                                         <td>405000004020160004</td>
                                                         <td>가축거래상인</td>
-                                                        <td></td>
+                                                        <td class="is-mobile"></td>
                                                         <td>홍길순</td>
                                                         <td>
                                                             <button type="button" class="btn-default btn-color1">지정</button>
@@ -200,7 +201,7 @@
                                                     <tr>
                                                         <td>405000004020160003</td>
                                                         <td>가축사육업</td>
-                                                        <td></td>
+                                                        <td class="is-mobile"></td>
                                                         <td>홍길자</td>
                                                         <td>
                                                             <button type="button" class="btn-default btn-color1">지정</button>
@@ -209,7 +210,7 @@
                                                     <tr>
                                                         <td>405000004020160002</td>
                                                         <td>종축업</td>
-                                                        <td></td>
+                                                        <td class="is-mobile"></td>
                                                         <td>홍길순</td>
                                                         <td>
                                                             <button type="button" class="btn-default btn-color1">지정</button>
@@ -218,7 +219,7 @@
                                                     <tr>
                                                         <td>405000004020160001</td>
                                                         <td>축산차량등록제</td>
-                                                        <td></td>
+                                                        <td class="is-mobile"></td>
                                                         <td>미지정</td>
                                                         <td>
                                                             <button type="button" class="btn-default btn-color1">지정</button>
@@ -289,7 +290,7 @@
                         <p class="summary">축산관련 종사자교육 SMART2.0 오픈 안내</p>
                     </a>
 
-                    <button type="button" class="btn-box-clse"><img src="https://webpi.github.io/nh/assets/images/comm/ico_clse_small.png" alt="삭제"></button>
+                    <button type="button" class="btn-box-clse"><img src="./assets/images/comm/ico_clse_small.png" alt="삭제"></button>
                 </li>
                 <li>
                     <a href="#" class="notice-items-box">
@@ -298,7 +299,7 @@
                         <p class="summary">축산관련 종사자교육 시행규칙 개정에 따른 교육 변경 안내</p>
                     </a>
 
-                    <button type="button" class="btn-box-clse"><img src="https://webpi.github.io/nh/assets/images/comm/ico_clse_small.png" alt="삭제"></button>
+                    <button type="button" class="btn-box-clse"><img src="./assets/images/comm/ico_clse_small.png" alt="삭제"></button>
                 </li>
                 <li>
                     <a href="#" class="notice-items-box">
@@ -307,7 +308,7 @@
                         <p class="summary">축산관련 종사자교육 및 신청방법 안내를 드립니다.</p>
                     </a>
 
-                    <button type="button" class="btn-box-clse"><img src="https://webpi.github.io/nh/assets/images/comm/ico_clse_small.png" alt="삭제"></button>
+                    <button type="button" class="btn-box-clse"><img src="./assets/images/comm/ico_clse_small.png" alt="삭제"></button>
                 </li>
                 <li>
                     <a href="#" class="notice-items-box">
@@ -316,7 +317,7 @@
                         <p class="summary">시간과 장소에 구애받지 않고 온라인으로 수강하세요!</p>
                     </a>
 
-                    <button type="button" class="btn-box-clse"><img src="https://webpi.github.io/nh/assets/images/comm/ico_clse_small.png" alt="삭제"></button>
+                    <button type="button" class="btn-box-clse"><img src="./assets/images/comm/ico_clse_small.png" alt="삭제"></button>
                 </li>
             </ul>
 
@@ -355,7 +356,7 @@
 
             <p class="copyright">COPYRIGHT (C) 2021 MIFAFF. ALL RIGHTS RESERVED.</p>
 
-            <a href="/" class="footer-ci"><img src="https://webpi.github.io/nh/assets/images/comm/ci_gray.png" alt="농협경제지주"></a>
+            <a href="/" class="footer-ci"><img src="./assets/images/comm/ci_gray.png" alt="농협경제지주"></a>
         </div>
     </div>
 </div>
@@ -398,7 +399,7 @@
 <!-- // 팝업 인허가증 추가 -->
 
 <!-- script -->
-<script src="https://webpi.github.io/nh/assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>
 <!-- // script -->
 
 <!-- 팝업 확인용 -->

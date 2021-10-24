@@ -129,6 +129,16 @@ function myClassroom() {
   });
 } myClassroom();
 
+// 아코디언
+function accordion() {
+  var btnAccordion = $(".accordion .js-btnAccordion");
+
+  btnAccordion.on("click", function() {
+    $(this).closest(".accordion-item").toggleClass("is-on");
+    $(this).closest(".accordion-item").find(".conts").slideToggle(200);
+  });
+} accordion();
+
 var lastWindowWidth = $(window).width();
 window.addEventListener("resize", function() {
   var windowWidth = $(window).width();

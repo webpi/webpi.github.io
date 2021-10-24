@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협경제지주 - 팝업모음</title>
+        <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="./assets/images/comm/favicon.ico">
+    <script src="./assets/js/comm/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.svg" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/nh.css">
+
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .pop-layer,
+        .pop-learning {
+            position: static;
+            margin-bottom: 40px;
+            
+            display: flex !important;
+        }
+        
+        .pop-layer:before,
+        .pop-learning:before {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 팝업 온라인교육 -->
+<div class="pop-layer pop-online-learning modal" style="display: none;">
+    <div class="pop-wrap">
+        <div class="pop-head">
+            <strong class="title">온라인교육</strong>
+        </div>
+
+        <div class="pop-container">
+            <div class="pop-in">
+                <p class="msg"><span>현재 학습 중인 과정이 있습니다.</span></p>
+                
+                <div class="info">
+                    <ul>
+                        <li><strong>과정명</strong> 농가 신규 교육(온라인)</li>
+                        <li><strong>과정구분</strong> 신규교육</li>
+                        <li><strong>학습기간</strong> 2021.06.01 ~ 2021.06.30</li>
+                    </ul>
+                </div>
+
+                <strong class="msg2">이어서 학습하시겠습니까?</strong>
+
+                <div class="form-group">
+                    <button type="button" class="btn-medium-border">메인으로</button>
+                    <button type="button" class="btn-medium">학습하기</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+    </div>
+</div>
+<!-- // 팝업 온라인교육 -->
+
+<!-- 팝업 온라인교육 -->
+<div class="pop-layer pop-online-learning modal" style="display: none;">
+    <div class="pop-wrap">
+        <div class="pop-head">
+            <strong class="title">온라인교육</strong>
+        </div>
+
+        <div class="pop-container">
+            <div class="pop-in">
+                <p class="msg"><span>홍길동님은 현재 보수교육 이수기간입니다.​</span></p>
+                
+                <div class="info">
+                    <ul>
+                        <li><strong>교육구분</strong> 차량종사자 보수교육(6시간)​</li>
+                        <li><strong>보수교육기간</strong> 2021.06.01 ~ 2021.06.30</li>
+                    </ul>
+                </div>
+
+                <strong class="msg2">보수교육을 신청하시겠습니까?​</strong>
+
+                <div class="form-group">
+                    <button type="button" class="btn-medium-border">메인으로</button>
+                    <button type="button" class="btn-medium">신청하기</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+    </div>
+</div>
+<!-- // 팝업 온라인교육 -->
+
+<!-- 팝업 신규 허가제 교육 수요등록 -->
+<div class="pop-layer pop-searchtype2 pop-new-permit modal" style="display: none;">
+    <div class="pop-wrap">
+        <div class="pop-head">
+            <strong class="title">신규 허가제 교육 수요등록</strong>
+        </div>
+
+        <div class="pop-container">
+            <div class="pop-in">
+                <p class="pop-new-permit-tit">희망지역과 희망년월을 선택해주시기 바랍니다.</p>
+
+                <ul class="pop-new-permit-list">
+                    <li>희망 월 선택은 현재 월 기준으로 3개월 까지 가능하며, 입력 후 수정도 가능합니다.</li>
+                    <li>입력 후 3개월동안 신규 허가제 교육개설 시마다 귀하의 핸드폰으로 교육개설 안내 문자메시지가 발송됩니다.</li>
+                    <li>핸드폰 사정에 의해 문자를 받지 못 하실 수도 있습니다.</li>
+                    <li>수요등록은 1건만 가능하며, 신규로 등록할 경우 기존 내역은 삭제됩니다.</li>
+                </ul>
+
+                <div class="search-form search-type2">
+                    <!-- 불필요시 form, fieldset, legend 삭제 -->
+                    <form>
+                        <fieldset>
+                            <legend><span>수요등록 검색</span></legend>
+
+                            <div class="search-form-in">
+                                <div class="box">
+                                    <label for="area">희망지역</label>
+                                    
+                                    <select id="area" class="select-default">
+                                        <option>전체</option>
+                                    </select>
+                                </div>
+
+                                <div class="box">
+                                    <label for="ym">희망년월</label>
+
+                                    <select id="ym" class="select-default">
+                                        <option>전체</option>
+                                    </select>
+                                </div>
+
+                                <button type="button" class="btn-medium btn-search-submit"><span>검색</span></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="board-wrap">
+                    <table class="board">
+                        <caption><span>수요등록 목록</span></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">희망지역</th>
+                                <th scope="col">희망년월</th>
+                                <th scope="col">신청일자</th>
+                                <th scope="col">관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>충북</td>
+                                <td>2021.09</td>
+                                <td>2021.06</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>충북</td>
+                                <td>2021.09</td>
+                                <td>2021.06</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>충북</td>
+                                <td>2021.09</td>
+                                <td>2021.06</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">삭제</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="pop-button">
+                <button type="button" class="btn-medium-border">닫기</button>
+            </div>
+        </div>
+
+        <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+    </div>          
+</div>
+<!-- // 팝업 신규 허가제 교육 수요등록 -->
+
+<!-- 팝업 대표자명 선택 dim처리 불필요 modal 클래스 삭제 -->
+<div class="pop-layer pop-searchtype2 modal" style="display: none;">
+    <div class="pop-wrap">
+        <div class="pop-head">
+            <strong class="title">대표자명 선택</strong>
+        </div>
+
+        <div class="pop-container">
+            <div class="pop-in">
+                <div class="search-form search-type2">
+                    <!-- 불필요시 form, fieldset, legend 삭제 -->
+                    <form>
+                        <fieldset>
+                            <legend><span>대표자명 검색</span></legend>
+
+                            <div class="search-form-in">
+                                <div class="box">
+                                    <label for="name">이름</label>
+                                    <input type="text" id="name" class="input-text" style="width: 160px;">
+                                </div>
+
+                                <div class="box">
+                                    <label for="id">아이디</label>
+                                    <input type="text" id="id" placeholder="검색어를 입력해주세요." class="input-text" style="width: 300px;">
+                                </div>
+
+                                <button type="button" class="btn-medium btn-search-submit">검색</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="board-wrap">
+                    <table class="board">
+                        <caption><span>대표자명 목록</span></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">지역</th>
+                                <th scope="col">아이디</th>
+                                <th scope="col">선택</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>홍길자</td>
+                                <td>cow1234</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>홍길자</td>
+                                <td>cow1234</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>홍길자</td>
+                                <td>cow1234</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>홍길자</td>
+                                <td>cow1234</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>홍길자</td>
+                                <td>cow1234</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pop-more">
+                    <button type="button" class="btn-pop-more">더보기</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+    </div>
+</div>
+<!-- // 팝업 대표자명 선택 -->
+
+<!-- 팝업 인허가증 추가 modal 클래스 삭제 -->
+<div class="pop-layer pop-license modal" style="display: none;">
+    <div class="pop-wrap">
+        <div class="pop-head">
+            <strong class="title">인허가증 추가</strong>
+        </div>
+
+        <div class="pop-container">
+            <div class="pop-in">
+                <!-- 불필요시 form, fieldset, legend 삭제 -->
+                <form>
+                    <fieldset>
+                        <legend><span>인허가번호 입력</span></legend>
+
+                        <label for="number">인허가번호 입력</label>
+                
+                        <input type="text" id="number" placeholder="추가하실 인허가번호를 입력해 주세요." class="input-text">
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="pop-button">
+                <button type="button" class="btn-medium-border">취소</button>
+                <button type="button" class="btn-medium">등록</button>
+            </div>
+        </div>
+
+        <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+    </div>
+</div>
+<!-- // 팝업 인허가증 추가 -->
+
+
+<!-- 팝업 권유교육기관 선택 -->
+<div class="pop-layer pop-board modal" style="display: none;">
+    <div class="pop-wrap">
+        <div class="pop-head">
+            <strong class="title">보수교육 현황​</strong>
+        </div>
+
+        <div class="pop-container">
+            <div class="pop-in">
+                <div class="board-wrap">
+                    <table class="board">
+                        <caption><span>보수교육 현황​ 목록</span></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">인허가번호</th>
+                                <th scope="col" class="is-mobile">업종</th>
+                                <th scope="col">관리자</th>
+                                <th scope="col">보수교육기간</th>
+                                <th scope="col">수료여부</th>
+                                <th scope="col" class="is-mobile">수료일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>405000004020160001​</td>
+                                <td class="is-mobile">가축거래상인​</td>
+                                <td>홍길동​</td>
+                                <td>2021.06.01 ~ 2022.06.01​</td>
+                                <td>미수료​</td>
+                                <td class="is-mobile">-</td>
+                            </tr>
+                            <tr>
+                                <td>405000004020160002​</td>
+                                <td class="is-mobile">가축사육업</td>
+                                <td>김철수​</td>
+                                <td>2021.06.01 ~ 2022.06.01​</td>
+                                <td>수료​</td>
+                                <td class="is-mobile">2021.06.20​</td>
+                            </tr>
+                            <tr>
+                                <td>405000004020160003​</td>
+                                <td class="is-mobile">가축거래상인​</td>
+                                <td>홍길동​</td>
+                                <td>2021.06.01 ~ 2022.06.01​</td>
+                                <td>미수료​</td>
+                                <td class="is-mobile">-</td>
+                            </tr>
+                            <tr>
+                                <td>405000004020160004​</td>
+                                <td class="is-mobile">축산차량등록제​</td>
+                                <td>김직원​</td>
+                                <td>2021.06.01 ~ 2022.06.01​</td>
+                                <td>수료​</td>
+                                <td class="is-mobile">2021.06.20​</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pop-more">
+                    <button type="button" class="btn-pop-more">더보기</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+    </div>
+</div>
+<!-- // 팝업 권유교육기관 선택 -->
+
+<!-- 팝업 권유교육기관 선택 -->
+<div class="pop-layer pop-searchtype2 modal" style="display: none;">
+    <div class="pop-wrap">
+        <div class="pop-head">
+            <strong class="title">권유교육기관 선택</strong>
+        </div>
+
+        <div class="pop-container">
+            <div class="pop-in">
+                <div class="search-form search-type2">
+                    <!-- 불필요시 form, fieldset, legend 삭제 -->
+                    <form>
+                        <fieldset>
+                            <legend><span>권유교육기관 검색</span></legend>
+
+                            <div class="search-form-in">
+                                <div class="box">
+                                    <label for="id-area">지역</label>
+                                    
+                                    <select id="id-area" class="select-default">
+                                        <option>전체</option>
+                                    </select>
+                                </div>
+
+                                <div class="box">
+                                    <label for="id-name">기관명</label>
+                                    <input type="text" id="id-name" placeholder="검색어를 입력해주세요." class="input-text">
+                                </div>
+
+                                <button type="button" class="btn-medium btn-search-submit"><span>검색</span></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="board-wrap">
+                    <table class="board">
+                        <caption><span>권유교육기관 목록</span></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">지역</th>
+                                <th scope="col">교육기관</th>
+                                <th scope="col" class="is-mobile">주소</th>
+                                <th scope="col">선택</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>경기</td>
+                                <td>수원축산농협</td>
+                                <td class="is-mobile">경기도 수원시 수원축산농협</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>경기</td>
+                                <td>수원축산농협</td>
+                                <td class="is-mobile">경기도 수원시 수원축산농협</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>경기</td>
+                                <td>수원축산농협</td>
+                                <td class="is-mobile">경기도 수원시 수원축산농협</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>경기</td>
+                                <td>수원축산농협</td>
+                                <td class="is-mobile">경기도 수원시 수원축산농협</td>
+                                <td>
+                                    <button type="button" class="btn-default btn-color1">선택</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pop-more">
+                    <button type="button" class="btn-pop-more">더보기</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+    </div>
+</div>
+<!-- // 팝업 권유교육기관 선택 -->
+
+<!-- 학습창 -->
+<div class="pop-learning" style="display: none;">
+    <div class="pop-wrap">
+        <div class="pop-container">
+            <div class="pop-in">
+                <img src="./assets/images/img_pop_learning.jpg" alt="학습창 이미지">
+            </div>
+        </div>
+
+        <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+    </div>
+</div>
+<!-- // 학습창 -->
+</body>
+</html>
