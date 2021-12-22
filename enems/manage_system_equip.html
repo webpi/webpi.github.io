@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대동금속주식회사 관리</title>
+        <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="./assets/images/comm/favicon.ico">
+    <script src="./assets/js/comm/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/enems.css">
+</head>
+<body>
+<!-- 건너띄기 -->
+<div id="skip">
+    <a href="#container">본문 바로가기</a>
+</div>
+<!-- // 건너띄기 -->
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" class="header">
+        <div class="header-wrap">
+    <h1 class="ci"><a href=".html"><img src="./assets/images/comm/img_ci.png" alt="대동금속주식회사 daedong metals"></a></h1>
+
+    <h2 class="title">Daedong Metals Monitoring System</h2>
+
+    <div class="util">
+        <span class="date">2021년 10월 29일 오후 02:43:52</span>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </div>
+</div>
+    </header>
+    <!-- // header -->
+
+    <!-- container -->
+    <main id="container">
+        <section class="section-manage">
+            <div class="manage-wrap">
+                <!-- gnb -->
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#" class="btn-gnb btn-map">맵형</a>
+                        </li>
+                        <li>
+                            <a href="graph.html" class="btn-gnb btn-graph">그래프형</a>
+                        </li>
+                        <li class="is-active">
+                            <a href="manage_history_elec.html" class="btn-gnb btn-manage">관리</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- // gnb -->
+
+                <div class="manage-main">    
+                    <!-- lnb -->
+                    <div class="lnb">
+                        <!-- 활성화 is-on 클래스 추가 -->
+                        <div class="lnb-item">
+                            <button type="button" class="btn-lnb">운영이력</button>
+
+                            <ul class="lnb-sub">
+                                <li>
+                                    <!-- 활성화 is-active 클래스 추가 -->
+                                    <a href="manage_history_elec.html" class="btn-lnb-sub">전기</a>
+                                </li>
+                                <li><a href="manage_history_dust.html" class="btn-lnb-sub">미세먼지</a></li>
+                                <li><a href="manage_history_price.html" class="btn-lnb-sub">요금단가</a></li>
+                                <li><a href="manage_history_log.html" class="btn-lnb-sub">연동이력(로그)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <button type="button" class="btn-lnb">성과분석</button>
+
+                            <ul class="lnb-sub">
+                                <li><a href="manage_analysis_elec.html" class="btn-lnb-sub">전기</a></li>
+                                <li><a href="manage_analysis_dust.html" class="btn-lnb-sub">미세먼지</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <a href="manage_alarm.html" class="btn-lnb">알람정보</a>
+                        </div>
+
+                        <div class="lnb-item is-active">
+                            <button type="button" class="btn-lnb">시스템 환경설정</button>
+
+                            <ul class="lnb-sub">
+                                <li><a href="manage_system_user.html" class="btn-lnb-sub">사용자정보</a></li>
+                                <li><a href="manage_system_building.html" class="btn-lnb-sub">건물정보</a></li>
+                                <li><a href="manage_system_equip.html" class="btn-lnb-sub is-active">설비정보</a></li>
+                                <li><a href="manage_system_alarm.html" class="btn-lnb-sub">알람정책관리</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <a href="manage_notice.html" class="btn-lnb">공지사항</a>
+                        </div>
+                    </div>    
+                    <!-- // lnb -->        
+                    
+                    <div class="manage-contents">
+                        <h2 class="title">설비정보</h2>
+
+                        <div class="manage-box">
+                            <div class="search-board">
+                                <form>
+                                    <fieldset>
+                                        <legend><span>설비정보 검색</span></legend>
+
+                                        <div class="search-board-rgt search-board-item">
+                                            <ul>
+                                                <li>
+                                                    <input type="text" title="검색" class="input-text" style="width: 300px;">
+                                                </li>
+                                            </ul>
+
+                                            <button type="button" class="btn-search">검색</button>
+                                        </div>        
+                                    </fieldset>
+                                </form>                                
+                            </div>
+
+                            <div class="board-wrap">
+                                <table class="board-medium">
+                                    <caption><span>설비정보 목록</span></caption>
+                                    <colgroup>
+                                        <col style=" width: 200px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col style=" width: 120px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">사진</th>
+                                            <th scope="col">관리번호</th>
+                                            <th scope="col">건물명</th>
+                                            <th scope="col">설치장소</th>
+                                            <th scope="col">시설종류</th>
+                                            <th scope="col">장치명</th>
+                                            <th scope="col">디바이스ID</th>
+                                            <th scope="col">제조사</th>
+                                            <th scope="col">제조년일</th>
+                                            <th scope="col">설치일</th>
+                                            <th scope="col">연락처</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="photo-small">
+                                                    <img src="./assets/images/building/img_building1.jpg" alt="외부 사진">
+                                                </span>
+                                            </td>
+                                            <td>F001</td>
+                                            <td>1동</td>
+                                            <td>B1F</td>
+                                            <td>공조</td>
+                                            <td>냉난방기</td>
+                                            <td>-</td>
+                                            <td>KT테크</td>
+                                            <td>2021-01-23</td>
+                                            <td>2021-01-23</td>
+                                            <td>031-452-2548</td>
+                                            <td>
+                                                <a href="#" class="
+                                                btn-building-edit">수정</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="photo-small">
+                                                    <img src="./assets/images/building/img_building1.jpg" alt="외부 사진">
+                                                </span>
+                                            </td>
+                                            <td>F001</td>
+                                            <td>1동</td>
+                                            <td>B1F</td>
+                                            <td>공조</td>
+                                            <td>냉난방기</td>
+                                            <td>-</td>
+                                            <td>KT테크</td>
+                                            <td>2021-01-23</td>
+                                            <td>2021-01-23</td>
+                                            <td>031-452-2548</td>
+                                            <td>
+                                                <a href="#" class="
+                                                btn-building-edit">수정</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="photo-small">
+                                                    <img src="./assets/images/building/img_building1.jpg" alt="외부 사진">
+                                                </span>
+                                            </td>
+                                            <td>F001</td>
+                                            <td>1동</td>
+                                            <td>B1F</td>
+                                            <td>공조</td>
+                                            <td>냉난방기</td>
+                                            <td>-</td>
+                                            <td>KT테크</td>
+                                            <td>2021-01-23</td>
+                                            <td>2021-01-23</td>
+                                            <td>031-452-2548</td>
+                                            <td>
+                                                <a href="#" class="
+                                                btn-building-edit">수정</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="photo-small">
+                                                    <img src="./assets/images/building/img_building1.jpg" alt="외부 사진">
+                                                </span>
+                                            </td>
+                                            <td>F001</td>
+                                            <td>1동</td>
+                                            <td>B1F</td>
+                                            <td>공조</td>
+                                            <td>냉난방기</td>
+                                            <td>-</td>
+                                            <td>KT테크</td>
+                                            <td>2021-01-23</td>
+                                            <td>2021-01-23</td>
+                                            <td>031-452-2548</td>
+                                            <td>
+                                                <a href="#" class="
+                                                btn-building-edit">수정</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="photo-small">
+                                                    <img src="./assets/images/building/img_building1.jpg" alt="외부 사진">
+                                                </span>
+                                            </td>
+                                            <td>F001</td>
+                                            <td>1동</td>
+                                            <td>B1F</td>
+                                            <td>공조</td>
+                                            <td>냉난방기</td>
+                                            <td>-</td>
+                                            <td>KT테크</td>
+                                            <td>2021-01-23</td>
+                                            <td>2021-01-23</td>
+                                            <td>031-452-2548</td>
+                                            <td>
+                                                <a href="#" class="
+                                                btn-building-edit">수정</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="manage-box-button">
+                                <button type="button" class="btn-default btn-medium btn-color1">신규등록</button>
+                            </div>
+
+                            <!-- paging -->
+                            <div class="paging">
+                                <a href="#" class="btn-paging-quick btn-paging-first"><span class="ir">처음</span></a>
+                                <a href="#" class="btn-paging-quick btn-paging-prev"><span class="ir">이전</span></a>
+                                <a href="#" class="btn-paging is-active">1</a>
+                                <a href="#" class="btn-paging">2</a>
+                                <a href="#" class="btn-paging">3</a>
+                                <a href="#" class="btn-paging">4</a>
+                                <a href="#" class="btn-paging">5</a>
+                                <a href="#" class="btn-paging-quick btn-paging-next"><span class="ir">다음</span></a>
+                                <a href="#" class="btn-paging-quick btn-paging-last"><span class="ir">마지막</span></a>
+                            </div>
+                            <!-- // paging -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- // container -->
+</div>
+
+<!-- 설비정보 등록 팝업 -->
+<div class="pop-layer pop-equip-reg" style="display: none;">
+    <div class="pop-head">
+        설비정보 등록
+
+        <button type="button" class="btn-check-number">관리번호확인</button>
+    </div>
+
+    <div class="pop-body">
+        <form>
+            <fieldset>
+                <legend><span>설비정보 등록하기</span></legend>
+
+                <table class="board-pop-input">
+                    <caption><span>설비정보 상세 입력</span></caption>
+                    <colgroup>
+                        <col style=" width: 160px;">
+                        <col>
+                        <col style=" width: 160px;">
+                        <col>
+                    </colgroup>
+                    <tr>
+                        <th scope="row">
+                            <label for="id-num">관리번호</label>
+                        </th>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" id="id-num" class="input-text" style="width: 112px;">
+                                
+                                <button type="button" class="btn-dup">중복확인</button>
+                            </div>
+                        </td>
+                        <th scope="row">
+                            <label for="id-building"><em class="ico-required">*</em> 시설종류</label>
+                        </th>
+                        <td>
+                            <div class="form-group">
+                                <select id="id-building" class="select-default" style="width: 112px;">
+                                    <option>선택</option>
+                                </select>
+
+                                <button type="button" class="btn-facility-reg">시설등록</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="id-bname">건물명</label>
+                        </th>
+                        <td>
+                            <select id="id-bname" class="select-default" style="width: calc(100% - 30px);">
+                                <option>선택</option>
+                            </select>
+                        </td>
+                        <th scope="row">
+                            <label for="id-id">디바이스ID</label>
+                        </th>
+                        <td>
+                            <input type="text" id="id-id" class="input-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="id-device">장치명</label>
+                        </th>
+                        <td colspan="3">
+                            <input type="text" id="id-device" class="input-text" style="width: 201px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="id-made">제조사</label>
+                        </th>
+                        <td>
+                            <input type="text" id="id-made" class="input-text">
+                        </td>
+                        <th scope="row">
+                            <label for="id-area">설치장소</label>
+                        </th>
+                        <td>
+                            <input type="text" id="id-area" class="input-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="id-tel"><em class="ico-required">*</em> 제조사연락처</label>
+                        </th>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" id="id-tel" class="input-text" style="width: 60px;">
+                                <input type="text" title="중간자리" class="input-text" style="width: 60px;">
+                                <input type="text" title="끝자리" class="input-text" style="width: 60px;">
+                            </div>
+                        </td>
+                        <th scope="row">
+                            <label for="id-volume"><em class="ico-required">*</em> 설비용량</label>
+                        </th>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" id="id-volume" class="input-text" style="width: 122px;">
+
+                                <select class="select-default" title="선택" style="width: 72px; min-width: auto;">
+                                    <option>선택</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="id-photo">환경관리대상</label>
+                        </th>
+                        <td>
+                            <div class="form-group">
+                                <span class="form-radio">
+                                    <input type="radio" id="id-radio01" name="rdo" class="form-radio-input">
+                                    <label for="id-radio01" class="form-radio-label">미대상</label>
+                                </span>
+
+                                <span class="form-radio">
+                                    <input type="radio" id="id-radio02" name="rdo" class="form-radio-input">
+                                    <label for="id-radio02" class="form-radio-label">대상</label>
+                                </span>
+                            </div>
+                        </td>
+                        <th scope="row">
+                            <label for="id-date">설치일자</label>
+                        </th>
+                        <td>
+                            <input type="text" id="id-date" class="input-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">환경설정값</th>
+                        <td>온도 25도 / 전력량 152kW</td>
+                        <th scope="row">
+                            <label for="id-year">제조년도</label>
+                        </th>
+                        <td>
+                            <input type="text" id="id-year" class="input-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="id-photo">설비사진</label>
+                        </th>
+                        <td colspan="3">
+                            <div class="form-file">
+                                <span class="form-file-box">
+                                    <input type="file" id="id-photo" class="input-file">
+                                    <input type="text" value="c:/" title="파일위치" class="input-text" style="width: 201px;">
+                                    <button type="button" class="btn-form-file">찾아보기</button>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="board-pop-button">
+                    <button type="button" class="btn-default btn-medium btn-color1">저장</button>
+                    <button type="button" class="btn-default btn-medium">취소</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+</div>
+<!-- // 건물정보 등록 팝업 -->
+
+<!-- 시설물 등록 -->
+<div class="pop-layer pop-facility-reg" style="display: none;">
+    <div class="pop-head">시설물 등록</div>
+
+    <div class="pop-body">
+        <form>
+            <fieldset>
+                <legend><span>시설물 등록하기</span></legend>
+
+                <div class="facility-wrap">
+                    <div class="facility-input">
+                        <label for="id-add" class="tit">추가시설 입력</label>
+
+                        <div class="facility-input-box">
+                            <input type="text" id="id-add" class="input-text">
+                        </div>
+                    </div>
+
+                    <div class="facility-button">
+                        <button type="button" class="btn-facility-add"><span>등록</span></button>
+                        <button type="button" class="btn-facility-del"><span>삭제</span></button>
+                    </div>
+
+                    <div class="facility-list">
+                        <strong class="tit">등록시설</strong>
+
+                        <ul>
+                            <li>공조시설</li>
+                            <li>수도</li>
+                            <li>냉난방</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="board-pop-button">
+                    <button type="button" class="btn-default btn-medium btn-color1">저장</button>
+                    <button type="button" class="btn-default btn-medium">취소</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <button type="button" class="btn-pop-clse"><span class="ir">닫기</span></button>
+</div>
+<!-- // 시설물 등록 -->
+
+<!-- script -->
+<script src="./assets/js/script.js"></script>
+<!-- // script -->
+
+<!-- 등록 팝업 확인용 -->
+<script>
+    var btnPop = document.querySelector(".manage-box-button .btn-medium");
+    var popEquipReg = document.querySelector(".pop-equip-reg");
+    var btnFacilityReg = document.querySelector(".btn-facility-reg");
+    var popFacilityReg = document.querySelector(".pop-facility-reg");
+    var btnPopClse = document.querySelectorAll(".pop-layer .btn-pop-clse");
+
+    btnPop.addEventListener("click", function() {
+        popEquipReg.style.display = "block";
+    });
+
+    btnFacilityReg.addEventListener("click", function() {
+        popFacilityReg.style.display = "block";
+    });
+
+    btnPopClse.forEach(function(item) {
+        item.addEventListener("click", function() {
+            this.closest(".pop-layer").style.display = "none";
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대동금속주식회사 그래프형</title>
+        <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="./assets/images/comm/favicon.ico">
+    <script src="./assets/js/comm/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/enems.css">
+</head>
+<body>
+<!-- 건너띄기 -->
+<div id="skip">
+    <a href="#container">본문 바로가기</a>
+</div>
+<!-- // 건너띄기 -->
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" class="header">
+        <div class="header-wrap">
+    <h1 class="ci"><a href=".html"><img src="./assets/images/comm/img_ci.png" alt="대동금속주식회사 daedong metals"></a></h1>
+
+    <h2 class="title">Daedong Metals Monitoring System</h2>
+
+    <div class="util">
+        <span class="date">2021년 10월 29일 오후 02:43:52</span>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </div>
+</div>
+    </header>
+    <!-- // header -->
+
+    <!-- container -->
+    <main id="container">
+        <section class="section-graph">
+            <div class="graph-wrap">
+                <!-- gnb -->
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#" class="btn-gnb btn-map">맵형</a>
+                        </li>
+                        <li class="is-active">
+                            <a href="graph.html" class="btn-gnb btn-graph">그래프형</a>
+                        </li>
+                        <li>
+                            <a href="manage_history_elec.html" class="btn-gnb btn-manage">관리</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- // gnb -->
+
+                <div class="graph-main">                  
+                    <div class="graph-info">
+                        <div class="graph-info-box">
+                            <div class="graph-info-use">
+                                <h3 class="title">전력사용현황</h3>
+
+                                <table class="graph-info-board">
+                                    <caption><span>전력사용현황 상세 내용</span></caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">금일</th>
+                                            <th scope="col">금월</th>
+                                            <th scope="col">증감<br><span>(전년동월대비)</span></th>
+                                            <th scope="col">금월예상</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tit">사용량<br>(kWh)</td>
+                                            <td>1.133</td>
+                                            <td>1.133</td>
+                                            <td>1.133</td>
+                                            <td>1.1333</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">사용요금<br>(원)</td>
+                                            <td>1.129</td>
+                                            <td>1.129</td>
+                                            <td>1.129</td>
+                                            <td>1.129</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">전압(V)</td>
+                                            <td></td>
+                                            <td>400</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">전료(mA)</td>
+                                            <td></td>
+                                            <td>20</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="graph-info-price">
+                                <h4 class="title">실시간 요금 단가</h4>
+
+                                <table class="graph-info-board">
+                                    <caption><span>실시간 요금 단가 상세 내용</span></caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">경부하</th>
+                                            <th scope="col">중부하</th>
+                                            <th scope="col">최대부하</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tit">요금단가<br><span>(원)</span></td>
+                                            <td>1.133</td>
+                                            <td>35.114</td>
+                                            <td>1.211</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="graph-info-box">
+                            <div class="graph-info-dust">
+
+                                <h3 class="title">미세먼지(㎍/㎥)</h3>
+
+                                <table class="graph-info-board">
+                                    <caption><span>미세먼지 상세 내용</span></caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">금일</th>
+                                            <th scope="col">금월</th>
+                                            <th scope="col">증감</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tit">허용기준</td>
+                                            <td>33</td>
+                                            <td>114</td>
+                                            <td>11</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">미세먼지</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">최대값</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="graph-contents">
+                        <div class="graph-top">
+                            <ul>
+                                <li class="index-top-item index-top-ultradust">
+                                    <strong class="name">초미세먼지</strong>
+                                    <span class="unit">(PM2.5) [㎍/㎥]</span>
+
+                                    <em class="value">19</em>
+                                </li>
+                                <li class="index-top-item index-top-dust">
+                                    <strong class="name">미세먼지</strong>
+                                    <span class="unit">(PM10) [㎍/㎥]</span>
+
+                                    <em class="value">32</em>
+                                </li>
+                                <li class="index-top-item index-top-ozone">
+                                    <strong class="name">오존 <span>(O3)</span></strong>
+                                    <span class="unit">[ppm]</span>
+
+                                    <em class="value">0.006</em>
+                                </li>
+                                <li class="index-top-item index-top-temp">
+                                    <strong class="name">온도 <span>[℃]</span></strong>
+
+                                    <em class="value">15</em>
+                                </li>
+                                <li class="index-top-item index-top-humidity">
+                                    <strong class="name">습도 <span>[%]</span></strong>
+
+                                    <em class="value">43</em>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="graph-group">
+                            <div class="graph-group-box">
+                                <div class="graph-group-head">
+                                    <h4 class="title">전력사용량</h4>
+
+                                    <div class="status">
+                                        <span><img src="./assets/images/ico_power_on.png" alt="활성"></span>
+                                    </div>
+
+                                    <em class="name">1호기</em>
+                                </div>
+
+                                <div class="graph-group-chart">
+                                    <img src="./assets/images/index_graph1.png" alt="전력사용량 차트">
+                                </div>
+                            </div>
+
+                            <div class="graph-group-box">
+                                <div class="graph-group-head">
+                                    <h4 class="title">미세먼지</h4>
+
+                                    <div class="status">
+                                        <span><img src="./assets/images/ico_dust_on.png" alt="활성"></span>
+                                    </div>
+
+                                    <em class="name">1호기</em>
+                                </div>
+
+                                <div class="graph-graph-chart">
+                                    <img src="./assets/images/index_graph2.png" alt="미세먼지 차트">
+                                </div>
+                            </div>
+
+                            <div class="graph-group-box graph-group-alarm">
+                                <div class="graph-group-head">
+                                    <h4 class="title">알람정보</h4>
+
+                                    <div class="status">
+                                        <span><img src="./assets/images/ico_alarm_on.png" alt="활성"></span>
+                                    </div>
+                                </div>
+
+                                <div class="graph-group-chart">
+                                    <div class="board-wrap">
+                                        <table class="board">
+                                            <caption><span>알람정보 목록</span></caption>
+                                            <colgroup>
+                                                <col>
+                                                <col style="width: 14%;">
+                                                <col style="width: 14%;">
+                                                <col style="width: 14%;">
+                                                <col style="width: 14%;">
+                                                <col style="width: 14%;">
+                                                <col style="width: 14%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">시간</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">관제</th>
+                                                    <th scope="col">내용</th>
+                                                    <th scope="col">측정</th>
+                                                    <th scope="col">허용기준</th>
+                                                    <th scope="col">결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2021-10-23 16:45:00</td>
+                                                    <td>집진1호기</td>
+                                                    <td>미세먼지</td>
+                                                    <td>허용치초과</td>
+                                                    <td>12ppm</td>
+                                                    <td>10ppm</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- // container -->
+</div>
+
+<!-- script -->
+<script src="./assets/js/script.js"></script>
+<!-- // script -->
+</body>
+</html>

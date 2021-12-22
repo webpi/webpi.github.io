@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대동금속주식회사 관리</title>
+        <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="./assets/images/comm/favicon.ico">
+    <script src="./assets/js/comm/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/enems.css">
+</head>
+<body>
+<!-- 건너띄기 -->
+<div id="skip">
+    <a href="#container">본문 바로가기</a>
+</div>
+<!-- // 건너띄기 -->
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" class="header">
+        <div class="header-wrap">
+    <h1 class="ci"><a href=".html"><img src="./assets/images/comm/img_ci.png" alt="대동금속주식회사 daedong metals"></a></h1>
+
+    <h2 class="title">Daedong Metals Monitoring System</h2>
+
+    <div class="util">
+        <span class="date">2021년 10월 29일 오후 02:43:52</span>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </div>
+</div>
+    </header>
+    <!-- // header -->
+
+    <!-- container -->
+    <main id="container">
+        <section class="section-manage">
+            <div class="manage-wrap">
+                <!-- gnb -->
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#" class="btn-gnb btn-map">맵형</a>
+                        </li>
+                        <li>
+                            <a href="graph.html" class="btn-gnb btn-graph">그래프형</a>
+                        </li>
+                        <li class="is-active">
+                            <a href="manage_history_elec.html" class="btn-gnb btn-manage">관리</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- // gnb -->
+
+                <div class="manage-main">    
+                    <!-- lnb -->
+                    <div class="lnb">
+                        <!-- 서브 활성화 is-on 클래스 추가 / 해당 페이지 is-active 추가 -->
+                        <div class="lnb-item is-active">
+                            <button type="button" class="btn-lnb">운영이력</button>
+
+                            <ul class="lnb-sub">
+                                <li>
+                                    <!-- 활성화 is-active 클래스 추가 -->
+                                    <a href="manage_history_elec.html" class="btn-lnb-sub">전기</a>
+                                </li>
+                                <li><a href="manage_history_dust.html" class="btn-lnb-sub">미세먼지</a></li>
+                                <li><a href="manage_history_price.html" class="btn-lnb-sub">요금단가</a></li>
+                                <li><a href="manage_history_log.html" class="btn-lnb-sub is-active">연동이력(로그)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <button type="button" class="btn-lnb">성과분석</button>
+
+                            <ul class="lnb-sub">
+                                <li><a href="manage_analysis_elec.html" class="btn-lnb-sub">전기</a></li>
+                                <li><a href="manage_analysis_dust.html" class="btn-lnb-sub">미세먼지</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <a href="manage_alarm.html" class="btn-lnb">알람정보</a>
+                        </div>
+
+                        <div class="lnb-item">
+                            <button type="button" class="btn-lnb">시스템 환경설정</button>
+
+                            <ul class="lnb-sub">
+                                <li><a href="manage_system_user.html" class="btn-lnb-sub">사용자정보</a></li>
+                                <li><a href="manage_system_building.html" class="btn-lnb-sub">건물정보</a></li>
+                                <li><a href="manage_system_equip.html" class="btn-lnb-sub">설비정보</a></li>
+                                <li><a href="manage_system_alarm.html" class="btn-lnb-sub">알람정책관리</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <a href="manage_notice.html" class="btn-lnb">공지사항</a>
+                        </div>
+                    </div>    
+                    <!-- // lnb -->        
+                    
+                    <div class="manage-contents">
+                        <h2 class="title">연동이력(로그)</h2>
+
+                        <div class="manage-box">
+                            <div class="search-board">
+                                <form>
+                                    <fieldset>
+                                        <legend><span>연동이력(로그) 검색</span></legend>
+
+                                        <div class="search-board-lft search-board-item">
+                                            <ul>
+                                                <li>
+                                                    <label for="id-slt" class="tit">건물선택</label>
+                                                    
+                                                    <select id="id-slt" class="select-default">
+                                                        <option>전체</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label for="id-slt2" class="tit">설비명</label>
+                                                    
+                                                    <select id="id-slt2" class="select-default">
+                                                        <option>전체</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </div>          
+
+                                        <div class="search-board-rgt search-board-item">
+                                            <ul>
+                                                <li>
+                                                    <label for="id-date" class="tit">날짜선택</label>
+
+                                                    <input type="text" id="id-date" class="input-text align-ctr" style="width: 100px;">
+                                                    <span class="wave">~</span>
+                                                    <input type="text" title="종료날짜" class="input-text align-ctr" style="width: 100px;">
+                                                </li>
+                                            </ul>
+
+                                            <button type="button" class="btn-search">검색</button>
+                                        </div>        
+                                    </fieldset>
+                                </form>                                
+                            </div>
+
+                            <div class="board-wrap">
+                                <table class="board-medium">
+                                    <caption><span>연동이력(로그) 목록</span></caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">관리번호</th>
+                                            <th scope="col">건물명</th>
+                                            <th scope="col">시설장소</th>
+                                            <th scope="col">시설종류</th>
+                                            <th scope="col">장치명</th>
+                                            <th scope="col">디바이스ID</th>
+                                            <th scope="col">연동결과</th>
+                                            <th scope="col">연동일시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>F001</td>
+                                            <td>A동</td>
+                                            <td>B1F</td>
+                                            <td>집진기</td>
+                                            <td>집진1호기</td>
+                                            <td>asd0826763jhk</td>
+                                            <td></td>
+                                            <td>2021-01-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F002</td>
+                                            <td>A동</td>
+                                            <td>B1F</td>
+                                            <td>공조</td>
+                                            <td>냉난방기</td>
+                                            <td>asd0826763jhk</td>
+                                            <td></td>
+                                            <td>2021-01-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F003</td>
+                                            <td>A동</td>
+                                            <td>B1F</td>
+                                            <td>집진기</td>
+                                            <td>집진2호기</td>
+                                            <td>asd0826763jhk</td>
+                                            <td></td>
+                                            <td>2021-01-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F004</td>
+                                            <td>A동</td>
+                                            <td>B1F</td>
+                                            <td>집진기</td>
+                                            <td>집진1호기</td>
+                                            <td>asd0826763jhk</td>
+                                            <td></td>
+                                            <td>2021-01-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F005</td>
+                                            <td>A동</td>
+                                            <td>외부</td>
+                                            <td>변압기</td>
+                                            <td>변압기</td>
+                                            <td>asd0826763jhk</td>
+                                            <td></td>
+                                            <td>2021-01-23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- paging -->
+                            <div class="paging">
+                                <a href="#" class="btn-paging-quick btn-paging-first"><span class="ir">처음</span></a>
+                                <a href="#" class="btn-paging-quick btn-paging-prev"><span class="ir">이전</span></a>
+                                <a href="#" class="btn-paging is-active">1</a>
+                                <a href="#" class="btn-paging">2</a>
+                                <a href="#" class="btn-paging">3</a>
+                                <a href="#" class="btn-paging">4</a>
+                                <a href="#" class="btn-paging">5</a>
+                                <a href="#" class="btn-paging-quick btn-paging-next"><span class="ir">다음</span></a>
+                                <a href="#" class="btn-paging-quick btn-paging-last"><span class="ir">마지막</span></a>
+                            </div>
+                            <!-- // paging -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- // container -->
+</div>
+
+<!-- script -->
+<script src="./assets/js/script.js"></script>
+<!-- // script -->
+</body>
+</html>

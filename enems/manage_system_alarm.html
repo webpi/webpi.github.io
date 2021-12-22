@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대동금속주식회사 관리</title>
+        <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="./assets/images/comm/favicon.ico">
+    <script src="./assets/js/comm/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/enems.css">
+</head>
+<body>
+<!-- 건너띄기 -->
+<div id="skip">
+    <a href="#container">본문 바로가기</a>
+</div>
+<!-- // 건너띄기 -->
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" class="header">
+        <div class="header-wrap">
+    <h1 class="ci"><a href=".html"><img src="./assets/images/comm/img_ci.png" alt="대동금속주식회사 daedong metals"></a></h1>
+
+    <h2 class="title">Daedong Metals Monitoring System</h2>
+
+    <div class="util">
+        <span class="date">2021년 10월 29일 오후 02:43:52</span>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </div>
+</div>
+    </header>
+    <!-- // header -->
+
+    <!-- container -->
+    <main id="container">
+        <section class="section-manage">
+            <div class="manage-wrap">
+                <!-- gnb -->
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#" class="btn-gnb btn-map">맵형</a>
+                        </li>
+                        <li>
+                            <a href="graph.html" class="btn-gnb btn-graph">그래프형</a>
+                        </li>
+                        <li class="is-active">
+                            <a href="manage_history_elec.html" class="btn-gnb btn-manage">관리</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- // gnb -->
+
+                <div class="manage-main">    
+                    <!-- lnb -->
+                    <div class="lnb">
+                        <!-- 활성화 is-on 클래스 추가 -->
+                        <div class="lnb-item">
+                            <button type="button" class="btn-lnb">운영이력</button>
+
+                            <ul class="lnb-sub">
+                                <li>
+                                    <!-- 활성화 is-active 클래스 추가 -->
+                                    <a href="manage_history_elec.html" class="btn-lnb-sub">전기</a>
+                                </li>
+                                <li><a href="manage_history_dust.html" class="btn-lnb-sub">미세먼지</a></li>
+                                <li><a href="manage_history_price.html" class="btn-lnb-sub">요금단가</a></li>
+                                <li><a href="manage_history_log.html" class="btn-lnb-sub">연동이력(로그)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <button type="button" class="btn-lnb">성과분석</button>
+
+                            <ul class="lnb-sub">
+                                <li><a href="manage_analysis_elec.html" class="btn-lnb-sub">전기</a></li>
+                                <li><a href="manage_analysis_dust.html" class="btn-lnb-sub">미세먼지</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <a href="manage_alarm.html" class="btn-lnb">알람정보</a>
+                        </div>
+
+                        <div class="lnb-item is-active">
+                            <button type="button" class="btn-lnb">시스템 환경설정</button>
+
+                            <ul class="lnb-sub">
+                                <li><a href="manage_system_user.html" class="btn-lnb-sub">사용자정보</a></li>
+                                <li><a href="manage_system_building.html" class="btn-lnb-sub">건물정보</a></li>
+                                <li><a href="manage_system_equip.html" class="btn-lnb-sub">설비정보</a></li>
+                                <li><a href="manage_system_alarm.html" class="btn-lnb-sub is-active">알람정책관리</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <a href="manage_notice.html" class="btn-lnb">공지사항</a>
+                        </div>
+                    </div>    
+                    <!-- // lnb -->        
+                    
+                    <div class="manage-contents">
+                        <h2 class="title">알람정책관리</h2>
+
+                        <div class="manage-box">
+                            <div class="search-board">
+                                <form>
+                                    <fieldset>
+                                        <legend><span>알람정책관리 검색</span></legend>
+
+                                        <div class="search-board-lft search-board-item">
+                                            <ul>
+                                                <li>
+                                                    <label for="id-slt" class="tit">건물선택</label>
+                                                    
+                                                    <select id="id-slt" class="select-default">
+                                                        <option>전체</option>
+                                                        <option selected>인천코웨이</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </div> 
+                                    </fieldset>
+                                </form>                                
+                            </div>
+
+                            <div class="manage-system-alarm">
+                                <form>
+                                    <fieldset>
+                                        <legend><span>알람정책 입력</span></legend>
+                                        <div class="alarm-list">
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm1" class="tit">요금적용전력</label>
+                                                
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm1" class="input-text" style="width: 202px;">
+                                                </div>
+                                            </div>
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm2" class="tit">목표전력</label>
+                                                
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm2" class="input-text" style="width: 202px;">
+                                                </div>
+                                            </div>
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm3" class="tit">수도 사용량 임계치(톤)</label>
+                                                
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm3" class="input-text" style="width: 202px;">
+                                                </div>
+                                            </div>
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm4" class="tit">가스 사용량 임계치(톤)</label>
+                                                
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm4" class="input-text" style="width: 202px;">
+                                                </div>
+                                            </div>
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm5" class="tit">온도 상한값(℃)</label>
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm5" class="input-text" style="width: 202px;">
+                                                </div>
+
+                                                <label for="id-alarm6" class="tit">온도 하한값(℃)</label>
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm6" class="input-text" style="width: 202px;">
+                                                </div>
+                                            </div>
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm7" class="tit">습도 상한값(%)</label>
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm7" class="input-text" style="width: 202px;">
+                                                </div>
+
+                                                <label for="id-alarm8" class="tit">습도 하한값(%)</label>
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm8" class="input-text" style="width: 202px;">
+                                                </div>
+                                            </div>
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm9" class="tit">미세먼지 상한값(㎍/m³)</label>
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm9" class="input-text" style="width: 202px;">
+                                                </div>
+
+                                                <label for="id-alarm10" class="tit">미세먼지 하한값(㎍/m³)</label>
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm10" class="input-text" style="width: 202px;">
+                                                </div>
+                                            </div>
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm11" class="tit">초미세먼지 상한값(㎍/m³)</label>
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm11" class="input-text" style="width: 202px;">
+                                                </div>
+
+                                                <label for="id-alarm12" class="tit">초미세먼지 하한값(㎍/m³)</label>
+                                                <div class="alarm-list-input">
+                                                    <input type="text" id="id-alarm12" class="input-text" style="width: 202px;">
+                                                </div>
+                                            </div>
+                                            <div class="alarm-list-row">
+                                                <label for="id-alarm13" class="tit">비밀번호</label>
+
+                                                <div class="alarm-list-input">
+                                                    <input type="password" id="id-alarm13" class="input-text" style="width: 202px;">
+
+                                                    <span class="alarm-list-input-noti">설정값 변경시 비밀번호를 입력하신 후 저장 버튼을 누르세요.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="manage-box-button">
+                                            <button type="button" class="btn-default btn-medium btn-color1">저장</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- // container -->
+</div>
+
+<!-- script -->
+<script src="./assets/js/script.js"></script>
+<!-- // script -->
+</body>
+</html>

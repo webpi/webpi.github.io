@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대동금속주식회사 관리</title>
+        <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="./assets/images/comm/favicon.ico">
+    <script src="./assets/js/comm/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/notosanskr/notosanskrregular.woff" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/enems.css">
+</head>
+<body>
+<!-- 건너띄기 -->
+<div id="skip">
+    <a href="#container">본문 바로가기</a>
+</div>
+<!-- // 건너띄기 -->
+
+<div id="wrap">
+    <!-- header -->
+    <header id="header" class="header">
+        <div class="header-wrap">
+    <h1 class="ci"><a href=".html"><img src="./assets/images/comm/img_ci.png" alt="대동금속주식회사 daedong metals"></a></h1>
+
+    <h2 class="title">Daedong Metals Monitoring System</h2>
+
+    <div class="util">
+        <span class="date">2021년 10월 29일 오후 02:43:52</span>
+        <button type="button" class="btn-logout">로그아웃</button>
+    </div>
+</div>
+    </header>
+    <!-- // header -->
+
+    <!-- container -->
+    <main id="container">
+        <section class="section-manage">
+            <div class="manage-wrap">
+                <!-- gnb -->
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#" class="btn-gnb btn-map">맵형</a>
+                        </li>
+                        <li>
+                            <a href="graph.html" class="btn-gnb btn-graph">그래프형</a>
+                        </li>
+                        <li class="is-active">
+                            <a href="manage_history_elec.html" class="btn-gnb btn-manage">관리</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- // gnb -->
+
+                <div class="manage-main">    
+                    <!-- lnb -->
+                    <div class="lnb">
+                        <!-- 활성화 is-on 클래스 추가 -->
+                        <div class="lnb-item">
+                            <button type="button" class="btn-lnb">운영이력</button>
+
+                            <ul class="lnb-sub">
+                                <li>
+                                    <!-- 활성화 is-active 클래스 추가 -->
+                                    <a href="manage_history_elec.html" class="btn-lnb-sub">전기</a>
+                                </li>
+                                <li><a href="manage_history_dust.html" class="btn-lnb-sub">미세먼지</a></li>
+                                <li><a href="manage_history_price.html" class="btn-lnb-sub">요금단가</a></li>
+                                <li><a href="manage_history_log.html" class="btn-lnb-sub">연동이력(로그)</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- 서브 활성화 is-on 클래스 추가 / 해당 페이지 is-active 추가 -->
+                        <div class="lnb-item is-active">
+                            <button type="button" class="btn-lnb">성과분석</button>
+
+                            <ul class="lnb-sub">
+                                <li><a href="manage_analysis_elec.html" class="btn-lnb-sub">전기</a></li>
+                                <li><a href="manage_analysis_dust.html" class="btn-lnb-sub is-active">미세먼지</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <a href="manage_alarm.html" class="btn-lnb">알람정보</a>
+                        </div>
+
+                        <div class="lnb-item">
+                            <button type="button" class="btn-lnb">시스템 환경설정</button>
+
+                            <ul class="lnb-sub">
+                                <li><a href="manage_system_user.html" class="btn-lnb-sub">사용자정보</a></li>
+                                <li><a href="manage_system_building.html" class="btn-lnb-sub">건물정보</a></li>
+                                <li><a href="manage_system_equip.html" class="btn-lnb-sub">설비정보</a></li>
+                                <li><a href="manage_system_alarm.html" class="btn-lnb-sub">알람정책관리</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="lnb-item">
+                            <a href="manage_notice.html" class="btn-lnb">공지사항</a>
+                        </div>
+                    </div>    
+                    <!-- // lnb -->        
+                    
+                    <div class="manage-contents">
+                        <h2 class="title">미세먼지통계</h2>
+
+                        <button type="button" class="btn-excel-dowm"><span>Excel Down</span></button>
+
+                        <div class="manage-group">
+                            <div class="manage-group-box">
+                                <article class="manage-group-item">
+                                    <div class="search-chart">
+                                        <form>
+                                            <fieldset>
+                                                <legend><span>차트 검색</span></legend>
+                                                <div class="search-chart-wrap">
+                                                    <div class="search-chart-item">
+                                                        <strong class="label">보기설정</strong>
+            
+                                                        <div class="form-group">
+                                                            <span class="form-radio">
+                                                                <input type="radio" id="id-radio01" name="rdo" class="form-radio-input">
+                                                                <label for="id-radio01" class="form-radio-label">시간별</label>
+                                                            </span>
+    
+                                                            <span class="form-radio">
+                                                                <input type="radio" id="id-radio02" name="rdo" class="form-radio-input">
+                                                                <label for="id-radio02" class="form-radio-label">일별</label>
+                                                            </span>
+    
+                                                            <span class="form-radio">
+                                                                <input type="radio" id="id-radio03" name="rdo" class="form-radio-input">
+                                                                <label for="id-radio03" class="form-radio-label">월별</label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="search-chart-item search-chart-date">
+                                                        <label for="id-date" class="label">날짜선택</label>
+        
+                                                        <input type="text" id="id-date" class="input-text align-ctr" style="width: 100px;">
+                                                        <span class="wave">~</span>
+                                                        <input type="text" title="종료날짜" class="input-text align-ctr" style="width: 100px;">
+    
+                                                        <button type="button" class="btn-search">검색</button>
+                                                    </div>
+    
+                                                    <div class="search-chart-item">
+                                                        <input type="text" title="입력" class="input-text align-ctr" style="width: 52px;">
+    
+                                                        <button type="button" class="btn-search">호기</button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+
+                                    <div class="manage-group-chart">
+                                        <img src="./assets/images/img_chart3.png" alt="차트 샘플">
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="manage-group-box">
+                                <article class="manage-group-item">
+                                    <div class="chart-list">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide chart-list-item">
+                                                    <img src="./assets/images/img_chart4.jpg" alt="1호기">
+                                                </div>
+
+                                                <div class="swiper-slide chart-list-item">
+                                                    <img src="./assets/images/img_chart4_2.jpg" alt="2호기">
+                                                </div>
+
+                                                <div class="swiper-slide chart-list-item">
+                                                    <img src="./assets/images/img_chart4_3.jpg" alt="3호기">
+                                                </div>
+
+                                                <div class="swiper-slide chart-list-item">
+                                                    <img src="./assets/images/img_chart4_4.jpg" alt="4호기">
+                                                </div>
+
+                                                <div class="swiper-slide chart-list-item"></div>
+                                                
+                                                <div class="swiper-slide chart-list-item"></div>
+
+                                                <div class="swiper-slide chart-list-item"></div>
+
+                                                <div class="swiper-slide chart-list-item"></div>
+
+                                                <div class="swiper-slide chart-list-item"></div>
+
+                                                <div class="swiper-slide chart-list-item"></div>
+                                            </div>
+
+                                            <button type="button" class="swiper-button-prev btn-swiper-prev"><span class="ir">이전</span></button>
+                                            <button type="button" class="swiper-button-next btn-swiper-next"><span class="ir">다음</span></button>
+
+                                            <div class="swiper-scrollbar"></div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- // container -->
+</div>
+
+<!-- script -->
+<script src="./assets/js/script.js"></script>
+<!-- // script -->
+
+<script>
+    var swiper = new Swiper(".chart-list .swiper", {
+       slidesPerView: "auto",
+       // spaceBetween: 25,
+       scrollbar: {
+           el: ".swiper-scrollbar",
+           hide: false,
+           draggable: true
+       },
+       navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+       },
+       autoplay: {
+           delay: 2000,
+           disableOnInteraction: true,
+       },
+     });
+</script>
+</body>
+</html>
