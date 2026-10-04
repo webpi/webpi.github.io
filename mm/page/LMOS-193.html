@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>LMOS-193</title>
+	<meta name="title" content="은행보다 머니무브">
+    <meta name="author" content="MONEYMOVE (머니무브)">
+    <meta name="application-name" content="MONEYMOVE (머니무브)">
+    <meta name="description" content="MONEYMOVE (머니무브), 금융, 온라인투자연계금융업,대출,투자">
+    <meta name="keywords" content="MONEYMOVE (머니무브), 머니무브금융, P2P투자, P2P대출, P2P금융, 직장인 신용대출, 중금리 대출, 분산투자,투자, P2P 투자, P2P 투자한도, P2P 대출, P2P 대출한도, 신용대출, 직장인신용대출, P2P 투자방법, 재테크, 펀딩, 온라인투자, 온라인투자연계금융업, 머니무브법, P2P 금융, 핀테크, 소액투자, 소액대출, 피투피대출, 피투피금융, 온라인대출, 온라인금융, 간편대출, 직장인대출">
+    <meta property="og:title" content="MONEYMOVE 금융서비스">
+    <meta property="og:url" content="https://www.moneymove.ai">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../resource/images/common/moneymove_sns.jpg">
+    <meta property="og:description" content="<은행하지말고 MONEYMOVE하자>">
+    <meta name="facebook-domain-verification" content="xudmrbsmja3uvckcherurpsxsx723b">
+    <meta name="naver-site-verification" content="09a056506047ca896918bd776a7772496c73023a">
+    <meta name="google-site-verification" content="N_2EOJ7Yx3XE6sTvPo2mSGRsZcqfH9aqm152biZ5gMc">
+    <link rel="apple-touch-icon" href="../resource/images/common/on2_home.png">
+    <link rel="icon" type="image/png" href="../resource/images/common/moneymove_favicon16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../resource/images/common/moneymove_favicon32x32.png" sizes="32x32">
+	<link rel="stylesheet" type="text/css" href="../resource/css/common.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../resource/css/layout.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../resource/css/swiper.min.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../resource/css/content.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../resource/css/response.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<script src="../resource/js/jquery.min.js"></script>
+	<script src="../resource/js/jquery-ui.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.src.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+	<script src="../resource/js/skrollr.js"></script>
+	<script src="../resource/js/swiper.min.js"></script>
+	<script src="../resource/js/circle-progress.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+	<script src="../resource/js/common.js"></script>
+</head>
+
+<body>
+	<!-- 웹 접근성 skip navigation -->
+	<div class="skip-navigation">
+		<a href="#gnb">전체 메뉴 바로가기</a>
+		<a href="#content">본문 바로가기</a>
+	</div>
+
+	<!-- wrap -->
+	<div class="wrap">
+		<!-- header -->
+		<header class="header">
+			<div class="con-inner">
+                <h1 class="logo"><a href="index.html"><span class="blind">머니무브</span></a></h1>
+
+                <nav id="gnb" aria-label="메인 메뉴">
+                    <h2 class="blind">메인 메뉴</h2>
+
+                    <button type="button" class="btn-m-menu" area-expanded="false">
+                        <span><span class="blind">모바일 메뉴 보기</span></span>
+                    </button>
+
+                    <div class="main-menu">
+                        <div class="menu-inner">
+                            <ul class="menu-list">
+                                <li class="has-sub">
+									<a href="index_invest.html">투자</a>
+
+									<ul class="sub-menu">
+										<li><a href="LMOS-66.html">투자하기</a></li>
+									</ul>
+								</li>
+								<li><a href="index_borrower.html">대출</a></li>
+								<li class="has-sub"><a>마켓</a>
+									<ul class="sub-menu">
+										<li><a href="LMOS-84.html">구매하기</a></li>
+										<li><a href="LMOS-77.html">판매하기</a></li>
+									</ul>
+								</li>
+								<!-- <li class="has-sub"><a href="LMOS-153.html">공시 지표</a>
+									<ul class="sub-menu">
+										<li><a href="LMOS-153.html">공시지표</a></li>
+										<li><a href="LMT-185.html">이용안내</a></li>
+										<li><a href="LMOS-156.html">FAQ</a></li>
+										<li><a href="#">문의하기</a></li>
+									</ul>
+								</li> -->
+								<li class="has-sub"><a href="LMT-185.html">이용안내</a>
+									<ul class="sub-menu">
+										<li><a href="LMT-185.html">이용안내</a></li>
+										<li><a href="LMOS-150.html">공지사항</a></li>
+                                        <li><a href="LMT-terms.html">전체약관</a></li>
+										<!-- <li><a href="LMOS-150.html">공지사항</a></li>
+										<li><a href="LMOS-151.html">언론보도</a></li> -->
+									</ul>
+								</li>
+								<li class="has-sub"><a href="LMOS-149.html">회사소개</a>
+									<ul class="sub-menu">
+										<li><a href="LMOS-149.html">회사소개</a></li>
+										<li><a href="LMOS-153.html">공시지표</a></li>
+										<!-- <li><a href="LMOS-150.html">공지사항</a></li>
+										<li><a href="LMOS-151.html">언론보도</a></li> -->
+									</ul>
+								</li>
+                            </ul>
+                            <!-- <button type="button" class="btn-logout"><span>Logout</span></button> -->
+                        </div>
+
+                        <!-- 모바일 전용 -->
+                        <div class="menu-top">
+                            <!-- 로그인 전 -->
+                            <!-- <a href="#" class="hello">안녕하세요</a> -->
+                            <!-- <div class="my-info">
+                                <a href="LMOS-8.html" class="join">회원가입</a>
+                                <a href="LMOS-183.html" class="login">로그인</a>
+                            </div> -->
+                            <!-- //로그인 전 -->
+                            <!-- 로그인 후 -->
+                            <div class="my-info">
+                                <a href="LMOS-114.html" class="setting">내 정보 관리</a>
+                                <a href="#" class="logout">로그아웃</a>
+                            </div>
+                            <!-- //로그인 후 -->
+                        </div>
+                        <!-- //모바일 전용 -->
+
+                        <div class="header-side">
+                            <!-- 로그인 전 -->
+                            <!-- <a href="LMOS-8.html" class="btn-info">회원가입</a>
+                            <a href="LMOS-183.html" class="btn-info">로그인</a> -->
+                            <!-- //로그인 전 -->
+
+                            <!-- 로그인 후 -->
+                            <div class="header-myinfo my">
+                                <div class="btn-myinfo">
+                                    <a role="button">
+                                        <span>마이페이지</span>
+                                    </a>
+                                </div>
+
+                                <div class="ly-myinfo-menu">
+                                    <ul class="link-menu">
+										<!-- 투자회원이 아닐때 -->
+										<!-- <li><a href="LMT-224.html">투자회원가입</a></li> -->
+										<!-- // 투자회원이 아닐때-->
+
+										<!-- 투자회원일때 -->
+                                        <li><a href="LMT-224.html">투자현황</a></li>
+                                        <li><a href="LMT-229.html">채권현황</a></li>
+                                        <li><a href="LMOS-123-1.html">마켓현황</a></li>
+                                        <li><a href="LMOS-131.html">상환내역</a></li>
+                                        <li><a href="LMOS-218.html">투자내역</a></li>
+										<li><a href="LMOS-140.html">투자 입출금 내역</a></li>
+                                        <li><a href="LMOS-139.html">채권공지</a></li>
+										<!-- // 투자회원일때 ->
+
+										<!-- 대출회원이 아닐때 -->
+										<!-- <li><a href="LMT-15.html">대출신청하기</a></li> -->
+										<!-- // 대출회원이 아닐때 -->
+
+										<!-- 대출 회원일때 -->
+										<li><a href="LMOS-106.html">대출관리</a></li>
+										<!-- // 대출 회원일때 -->
+
+										<li><a href="LMOS-189.html">내 신용정보</a></li>
+                                        <li><a href="LMOS-141.html">내 정보 관리</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="header-myinfo log">
+                                <div class="btn-myinfo">
+                                    <a role="button" class="startup">
+                                        <span>홍길동님</span>
+                                    </a>
+                                </div>
+
+                                <div class="ly-myinfo-menu">
+                                    <ul class="link-menu">
+                                        <li><a href="#">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //로그인 후 -->
+                        </div>
+
+                        <button type="button" class="btn-close"><span class="blind">메뉴 닫기</span></button>
+                    </div>
+                </nav>
+            </div>
+		</header>
+		<!-- //header -->
+
+		<div id="content" role="main" class="">
+			<div class="con-inner">
+				<div class="lnb-area">
+					<h2 class="tit">마이페이지</h2>
+
+					<div class="lnb">
+						<div class="lnb-tit">대출</div>
+
+						<ul>
+							<li class="on">
+								<a href="LMOS-239.html">대출 신청현황</a>
+							</li>
+							<li>
+								<a href="LMOS-106.html">대출관리</a>
+							</li>
+							<!-- <li>
+								<a href="LMOS-113.html">입/출금 내역</a>
+							</li> -->
+							<li>
+								<a href="LMOS-189.html">내 신용정보</a>
+							</li>
+							<li>
+								<a href="LMOS-114.html">내 정보 관리</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //lnb -->
+				</div>
+				<!-- //lnb-area -->
+
+				<div class="basic-form">
+					<div class="tit-area">
+						<p><strong class="c-blue">홍길동</strong> 고객님의 대출 신청 현황</p>
+
+						<div class="info-box">
+							<div class="step">
+								<ul>
+									<!-- <li class="done"><a href="LMOS-103.html">신청접수</a></li>
+									<li class="done"><a href="LMOS-116.html">심사중</a></li> -->
+									<li>모집 중</li>
+									<li class="on">계약</li>
+									<li>대출금지급</li>
+								</ul>
+							</div>
+							<!-- //step -->
+							<div class="info">
+								<strong>계약마감일시</strong>
+								<p class="c-blue">2021.05.28 00:00</p>
+							</div>
+							<div class="info">
+								<a href="#" class="btn-basic xsmall">대출계약하기</a>
+							</div>
+						</div>
+						<!-- //info-box -->
+					</div>
+					<!-- //tit-area -->
+
+					<div class="table-list accordian table-response type-borrower-1">
+						<table>
+							<colgroup>
+								<col style="width: 13%;">
+								<col style="width: 8%;">
+								<col style="width: 8%;">
+								<col style="width: 6%;">
+								<col style="width: 12%;">
+								<col style="width: 8%;">
+								<col style="width: 12%;">
+								<col style="width: 12%;">
+								<col style="width: 9%;">
+								<col style="width: 9%;">
+								<col style="width: 6%;">
+								<col style="width: 4%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<span class="col-tit">접수번호</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">대출 목적</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">신용평점</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">금리</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">상환방식</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">대출기간(월)</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">대출잔여한도</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">대출 신청금액</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">신청일</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">처리일시</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit">상태</span>
+									</th>
+									<th scope="col">
+										<span class="col-tit"></span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="cell-1"><span class="item-data fs-ss c-blue">TK_210917_1000000000</span></td>
+									<td class="cell-2"><span class="item-data">자동차구입</span></td>
+									<td class="cell-unit"><span class="item-data">950</span></td>
+									<td class="cell-3">
+										<span class="item-data">2.51 %</span>
+										<span class="value-m">원리금균등분할</span>
+										<div class="value-m box-blue">
+											<p><span class="label-m">대출잔여한도</span><span>19,991,856 원</span></p>
+											<p><span class="label-m">대출 신청금액</span><span>5,000,000 원</span></p>
+										</div>
+									</td>
+									<td class="cell-4"><span class="item-data">원리금균등분할</span></td>
+									<td class="cell-unit"><span class="item-data">36 개월</span></td>
+									<td class="cell-5"><span class="item-data" th:text="${#numbers.formatDecimal(item.remainLoanAmount, 0, 'COMMA', 0, 'POINT') + ' 원'}">3,000,000 원</span></td>
+									<td class="cell-6"><span class="item-data"></span>10,000,000 원</td>
+									<td class="cell-unit"><span class="item-data">2022-02-14</span></td>
+									<td class="cell-unit"><span class="item-data">2022-02-14 13:18:08</span></td>
+									<td class="cell-7"><span class="item-data">계약중</span></td>
+									<td class="cell-8">
+										<span class="arr"></span>
+									</td>
+
+								</tr>
+								<tr class="detail">
+									<td colspan="12" class="detail">
+										<div class="tab-list tab-2" role="tablist" aria-label="채권 정보">
+											<button id="tab2-1" role="tab" class="tab-item on"
+												aria-controls="tab-panel2-1" aria-selected="true">
+												신용 정보
+											</button>
+											<button id="tab2-2" role="tab" class="tab-item" aria-controls="tab-panel2-2"
+												aria-selected="false">
+												예상 상환 스케줄
+											</button>
+										</div>
+
+										<div class="detail-tab-cont on" id="tab-panel2-1" role="tabpane2-1" aria-labelledby="tab2-1">
+
+											<div class="detail-tit">
+												<p>신용정보</p>
+											</div>
+
+											<div class="detail-box box-1">
+											<div class="col-2">
+												<div class="col">
+													<div class="tbl">
+														<div class="tr">
+															<div class="td">
+																NICE신용평점
+
+																<div class="tooltip">
+																	<button><span class="blind">툴팁</span></button>
+
+																	<div class="tooltip-box">
+																		개인신용평가 점수제 NICE 신용평점.
+																	</div>
+																</div>
+															</div>
+															<div class="td">
+																<strong>923</strong>
+															</div>
+														</div>
+														<div class="tr">
+															<div class="td">
+																LM SCORE
+
+																<div class="tooltip">
+																	<button><span class="blind">툴팁</span></button>
+
+																	<div class="tooltip-box">
+																		부실률을 예측한 머니무브 자체 AI신용평가 점수입니다.
+
+																		<br>1000점에 가까울수록 연체 가능성이 낮은 채권입니다.
+																	</div>
+																</div>
+															</div>
+															<div class="td">
+																<strong>9.0</strong> %
+															</div>
+														</div>
+														<div class="tr">
+															<div class="td">1년 내 연체 횟수
+																<div class="tooltip">
+																	<button><span class="blind">툴팁</span></button>
+
+																	<div class="tooltip-box">
+																		대출 신청일 기준 직전 1년간 10만원 이상 + 5일 이상 연속 연체된 건수의
+																		총합입니다.
+																	</div>
+																</div>
+															</div>
+															<div class="td">
+																<strong>0</strong> 건
+															</div>
+														</div>
+														<div class="tr">
+															<div class="td">1년 내 누적 연체일 수
+															</div>
+															<div class="td">
+																<strong>0</strong> 일
+															</div>
+														</div>
+														<div class="tr">
+															<div class="td">5년 내 채무불이행 기록
+																<div class="tooltip">
+																	<button><span class="blind">툴팁</span></button>
+
+																	<div class="tooltip-box">
+																		미해제된 개인회생, 파산, 채무불이행 기록 보유 여부입니다.
+																	</div>
+																</div>
+															</div>
+															<div class="td">
+																<strong>없음</strong>
+															</div>
+														</div>
+													</div>
+													<!-- //tbl -->
+												</div>
+												<!-- //col -->
+												<div class="col">
+													<div id="chart1" class="chart" data-highcharts-chart="0" style="overflow: hidden;"></div>
+
+													<div class="txt-sub">※ 최근 1년간 월별 점수 변화</div>
+												</div>
+												<!-- //col -->
+											</div>
+										</div>
+											<!-- //detail-box -->
+
+											<div class="col-2 col-box">
+												<div class="col">
+													<div class="detail-tit">
+														<p>소득정보</p>
+													</div>
+													<!-- //detail-tit -->
+													<div class="detail-box">
+														<div class="tbl">
+															<div class="tr">
+																<div class="td">연소득</div>
+																<div class="td">
+																	<strong>000,000,000</strong> 원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">직종</div>
+																<div class="td">
+																	<strong>회사원</strong>
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">현직장 재직기간</div>
+																<div class="td">
+																	<strong>0년 6개월</strong>
+																</div>
+															</div>
+														</div>
+														<!-- //tbl -->
+													</div>
+													<!-- //detail-box -->
+												</div>
+												<!-- //col -->
+												<div class="col">
+													<div class="detail-tit">
+														<p>카드사용 정보</p>
+													</div>
+													<!-- //detail-tit -->
+													<div class="detail-box">
+														<div class="tbl">
+															<div class="tr">
+																<div class="td">월평균 사용금액</div>
+																<div class="td">
+																	<strong>125</strong>만원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">연간 평균 신용카드 소진율
+
+																	<div class="tooltip">
+																		<button><span class="blind">툴팁</span></button>
+																		<div class="tooltip-box">
+																			대출 신청일 기준 이전 1년간의 전체 카드 한도 대비 이용금액의 비율이며,
+																			소진율이 증가할수록 통계적으로 부실이 일어날 가능성이 증가합니다.
+																		</div>
+																	</div>
+																</div>
+																<div class="td">
+																	<strong>20</strong> %
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">전월 신용카드 소진율
+																	<div class="tooltip">
+																		<button><span class="blind">툴팁</span></button>
+
+																		<div class="tooltip-box">
+																			대출 신청일 기준 이전 1개월간의 전체 신용카드 한도 대비 이용금액의
+																			비율입니다.
+																		</div>
+																	</div>
+																</div>
+																<div class="td">
+																	<strong>18.9</strong>%
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">
+																	현금서비스 이용 건수
+
+																	<div class="tooltip">
+																		<button><span class="blind">툴팁</span></button>
+																		<div class="tooltip-box">
+																			대출 신청일 기준 잔액이 0원 이상인 현금서비스 총 이용 건수입니다.
+																		</div>
+																	</div>
+																</div>
+																<div class="td">
+																	<strong>0</strong> 건
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">
+																	현금서비스 이용 금액
+																</div>
+																<div class="td">
+																	<strong>0</strong> 만원
+																</div>
+															</div>
+														</div>
+														<!-- //tbl -->
+													</div>
+													<!-- //detail-box -->
+												</div>
+												<!-- //col -->
+											</div>
+											<!-- //col-2 -->
+
+											<div class="detail-tit">
+												<p>부채정보</p>
+											</div>
+											<!-- //detail-tit -->
+											<div class="detail-box">
+												<div class="col-2">
+													<div class="col">
+														<div class="tbl">
+															<div class="tr">
+																<div class="td">은행대출</div>
+																<div class="td">
+																	<strong>0</strong> 원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">보험대출</div>
+																<div class="td">
+																	<strong>0</strong> 원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">카드대출</div>
+																<div class="td">
+																	<strong>0</strong> 원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">저축은행대출</div>
+																<div class="td">
+																	<strong>0</strong> 원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">기타</div>
+																<div class="td">
+																	<strong>0</strong> 원
+																</div>
+															</div>
+														</div>
+														<!-- //tbl -->
+													</div>
+													<!-- //col -->
+													<div class="col">
+														<div class="tbl">
+															<div class="tr">
+																<div class="td">대부업대출</div>
+																<div class="td">
+																	<strong>0</strong> 원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">머니무브대출</div>
+																<div class="td">
+																	<strong>0</strong> 원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">
+																	온투업 연계대출
+
+																	<div class="tooltip">
+                                                                        <button><span class="blind">툴팁</span></button>
+                                                                        <div class="tooltip-box">
+                                                                            온투업 대출 잔액은 중앙기록관리기관을 통해 전달받은 데이터를 기반으로 하며, 렌딧을 포함한 모든 온라인투자연계금융업자를 통해 지급된 대출의 잔액입니다.
+                                                                        </div>
+                                                                    </div>
+																</div>
+																<div class="td">
+																	<strong>125</strong>만원
+																</div>
+															</div>
+															<div class="tr">
+																<div class="td">
+																	온투업 연계대출 상환금액
+
+																	<div class="tooltip">
+                                                                        <button><span class="blind">툴팁</span></button>
+                                                                        <div class="tooltip-box">
+                                                                            온투업 연계대출 상환금액은 중앙기록관리기관을 통해 조회된 온라인투자연계금융업자로부터 연계대출을 받은 후 상환한 내역입니다.
+                                                                        </div>
+                                                                    </div>
+																</div>
+																<div class="td">
+																	<strong>5,000</strong>만원
+																</div>
+															</div>
+														</div>
+														<!-- //tbl -->
+													</div>
+													<!-- //col -->
+												</div>
+												<!-- //col-total -->
+											</div>
+										</div>
+										<!-- //tab-panel1-1 -->
+
+										<div class="detail-tab-cont on" id="tab-panel2-2" role="tabpane2-2"
+											aria-labelledby="tab2-2" style="display: none;">
+											<div class="table-list table-scroll">
+												<table>
+													<colgroup>
+														<col style="width: 20%;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">
+																<span class="col-tit">회차</span>
+															</th>
+															<th scope="col">
+																<span class="col-tit">예상 지급일</span>
+															</th>
+															<th scope="col">
+																<span class="col-tit">원금</span>
+															</th>
+															<th scope="col">
+																<span class="col-tit">이자</span>
+															</th>
+															<th scope="col">
+																<span class="col-tit">납입 금액</span>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1회차</td>
+															<td>2022-03-05</td>
+															<td>4,866,130 원</td>
+															<td>133,870 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>2회차</td>
+															<td>2022-04-05</td>
+															<td>4,731,979 원</td>
+															<td>134,150 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>3회차</td>
+															<td>2022-05-05</td>
+															<td>4,597,548 원</td>
+															<td>134,431 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>4회차</td>
+															<td>2022-06-05</td>
+															<td>4,462,836 원</td>
+															<td>134,712 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>5회차</td>
+															<td>2022-07-05</td>
+															<td>4,327,842 원</td>
+															<td>134,994 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>6회차</td>
+															<td>2022-08-05</td>
+															<td>4,192,565 원</td>
+															<td>135,276 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>7회차</td>
+															<td>2022-09-05</td>
+															<td>4,057,006 원</td>
+															<td>135,559 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>8회차</td>
+															<td>2022-10-05</td>
+															<td>3,921,163 원</td>
+															<td>135,843 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>9회차</td>
+															<td>2022-11-05</td>
+															<td>3,785,036 원</td>
+															<td>136,127 원</td>
+															<td>144,329 원</td>
+														</tr>
+														<tr>
+															<td>10회차</td>
+															<td>2022-12-05</td>
+															<td>3,648,624 원</td>
+															<td>136,412 원</td>
+															<td>144,329 원</td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr>
+															<th colspan="2">총합계</th>
+															<td>5,000,000 원</td>
+															<td>195,837 원</td>
+															<td>5,195,837 원</td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //table-list -->
+
+				</div>
+				<!-- //basic-form -->
+
+			</div>
+
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footer-borrower">
+                <div class="con-inner">
+                    <strong class="footer-headline">과도한 대출은 신용에 영향을 미칠 수 있습니다. 대출받기 전 꼭 필요한지 생각해보세요.</strong>
+
+                    <ul class="footer-guide">
+                        <li>대출한도: 200만 원 ~ 5,000만 원</li>
+                        <li>대출금리: 최저 연 2.5% ~ 최고 연 16.9%</li>
+                        <li>연체금리: 약정금리 + 3%(최대 19.9%)</li>
+                        <li>상환기간: 3개월 ~ 36개월</li>
+                        <li>이자부과시기: 매월 후취</li>
+                        <li>상환방식: 원리금균등분할상환, 만기일시상환</li>
+                        <li>중도상환수수료 없음, 전액중도상환만 가능</li>
+                    </ul>
+
+                    <strong class="footer-compliance">준법감시인 심사필 제 01 2205 02 (22.05.09)</strong>
+
+                    <ul class="rel-link">
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/01_privacy_policy.pdf" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/02_customer_rights.pdf" target="_blank">고객권리안내문</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/03_loan_stc.pdf" target="_blank">연계대출기본약관</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/04_invest_stc.pdf" target="_blank">연계투자기본약관</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/05_service_stc.pdf" target="_blank">온라인서비스이용약관</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/06_eft_stc.pdf " target="_blank">전자금융거래기본약관</a></li>
+                        <!-- <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/07_market_stc.pdf " target="_blank">마켓이용약관</a></li> -->
+                        <!-- <li><a href="LMOS-161.html">개인정보보호정책</a></li>
+                        <li><a href="LMOS-162.html">윤리강령</a></li>
+                        <li><a href="LMOS-167.html">인재채용</a></li>
+                        <li class="line"><a href="LMOS-163.html">영리목적 광고성 정보거부 등</a></li>
+                        <li><a href="LMOS-159.html">이용약관</a></li>
+                        <li><a href="LMOS-164.html">고객확인제도</a></li>
+                        <li class="line"><a href="LMOS-165.html">투자이용약관</a></li>
+                        <li><a href="LMOS-166.html">투자설명서</a></li> -->
+                    </ul>
+
+                    <ul class="footer-customer">
+                        <li><span>고객센터</span> <a href="tel:02-1566-3895">1566-3895</a> (오전 09시 - 오후 06시)</li>
+                        <li><span>email</span> : <a href="mailto:ask@on2.ai">ask@on2.ai</a></li>
+                    </ul>
+
+                    <div class="footer-info">
+                        <ul class="footer-info-item">
+                            <li><span>㈜렌딩머신</span></li>
+                            <li>대표 : 이상규</li>
+                            <li>사업자등록번호 : 120-87-78972</li>
+                            <li>온라인투자연계금융업 2021-34</li>
+                        </ul>
+
+                        <address>주소 : 서울특별시 강남구 논현로150길 23, 3층 (연호빌딩)</address>
+                    </div>
+                </div>
+            </div>
+		</footer>
+		<!-- //footer-->
+	</div>
+	<!-- //wrap-->
+
+	<!-- 대출조건 팝업 -->
+	<div class="layer-popup" id="popup1">
+		<div class="layer-wrap">
+			<p class="layer-tit"></p>
+			<div class="layer-cont">
+				<div class="msg-area">
+					<span class="msg-icon"></span>
+					<p class="msg-txt">대출조건</p>
+					<p class="msg-txt-subs">
+						아래 조건으로 대출계약을 진행합니다.
+					</p>
+				</div>
+
+				<div class="box-table">
+					<table>
+						<colgroup>
+							<col style="width: 50%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>대출 신청금액</th>
+								<td>
+									<strong>9,000,000</strong>원
+								</td>
+							</tr>
+							<tr>
+								<th><strong>대출 승인금액</strong></th>
+								<td>
+									<strong>8,000,000</strong>원
+								</td>
+							</tr>
+							<tr>
+								<th>상환기간</th>
+								<td>
+									<strong>36</strong>개월
+								</td>
+							</tr>
+							<tr>
+								<th>금리</th>
+								<td>
+									<strong>6.07</strong>%
+								</td>
+							</tr>
+							<tr>
+								<th>월 상환액</th>
+								<td>
+									<strong>50,000</strong>원
+								</td>
+							</tr>
+							<tr>
+								<th>플랫폼 수수료</th>
+								<td>
+									<strong>33,000</strong>원
+								</td>
+							</tr>
+							<tr>
+								<th>상환방식</th>
+								<td>
+									<strong>원리금균등분할상환</strong>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //box-table -->
+				<div class="txt-subs-area">
+					<strong class="fs-s">온라인 연계대출 유의사항 고지</strong>
+					<p class="fs-s">투자자로부터 대출금이 모금되지 않는 경우 대출이 거절 처리될 수 있으며, 대출금 모집 이후에는 취소할 수 없습니다. </p>
+				</div>
+				<!-- //txt-subs-area -->
+				<div class="bottom-area">
+					<div class="btn-area">
+						<button type="button" class="btn-basic">대출계약 진행하기</button>
+						<!-- 가입가능해지만 disabled 클래스 삭제-->
+					</div>
+				</div>
+				<!-- //bottom-area -->
+			</div>
+			<button type="button" class="ly-close"><span class="blind">닫기</span></button>
+		</div>
+	</div>
+
+	<script>
+		//비활성화 탭안의 차트 사이즈 문제로 인한 함수
+		var chartArr = []
+
+		function chartRefresh() {
+			chartArr.forEach(function (tar, idx) {
+				chartArr[idx].reflow();
+			})
+		}
+
+		$(function () {
+			var c1 = Highcharts.chart('chart1', optionsLine);
+			chartArr.push(c1);
+			var series = {
+				data: [700, 710, 730, 720, 760, 770, 800, 810, 850, 810, 820, 850],
+				categories: ["2020.01", "2020.02", "2020.03", "2020.04", "2020.05", "2020.06", "2020.07",
+					"2020.08", "2020.09", "2020.10", "2020.11", "2020.13"
+				],
+			};
+			c1.series[0].update({
+				data: series.data
+			});
+			c1.xAxis[0].setCategories(series.categories);
+
+			c1.reflowNow = function () {
+				this.containerHeight = this.options.chart.height || window.window.HighchartsAdapter.adapterRun(
+					this.renderTo, 'height');
+				this.containerWidth = this.options.chart.width || window.window.HighchartsAdapter.adapterRun(this
+					.renderTo, 'width');
+				this.setSize(this.containerWidth, this.containerHeight, false);
+				this.hasUserSize = null;
+			}
+		});
+	</script>
+
+
+
+	<!-- 확인용 -->
+	<a class="open-layer" id="btn_popup1" data-target="popup1" aria-controls="popup1"></a>
+	<script>
+		document.querySelectorAll(".info-box .step > ul > li")[0].addEventListener("click", function() {
+			location.href = "LMOS-239.html";
+		});
+		document.querySelectorAll(".info-box .step > ul > li")[1].addEventListener("click", function() {
+			location.href = "LMOS-193.html";
+		});
+		document.querySelectorAll(".info-box .step > ul > li")[2].addEventListener("click", function() {
+			location.href = "LMOS-240.html";
+		});
+
+		document.querySelector("a.btn-basic.xsmall").addEventListener("click", function(e) {
+			e.preventDefault();
+			openPopup($("#btn_popup1"));
+		});
+
+		document.querySelector("#popup1 .btn-basic").addEventListener("click", function() {
+			location.href= "LMOS-195.html";
+		});
+	</script>
+</body>
+
+</html>

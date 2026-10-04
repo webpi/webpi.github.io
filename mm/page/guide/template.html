@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="../../resource/css/common.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<script src="../../resource/js/jquery.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.src.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+	<script src="../../resource/js/common.js"></script>
+
+	<style>
+		.style-guide{padding:20px 30px}
+		.style-guide h2{font-size:20px}
+		.style-guide .guide-tit{margin:30px 0 10px; padding:0 10px; line-height:26px; background:#222; color:#fff; font-size:14px;}
+		.style-guide .guide-sub-tit{padding:5px; background:#e5e5e5; font-weight:500}
+		.style-guide .guide-item{padding:20px;}
+		.style-guide .guide-item.flex{display:flex;}
+		.style-guide .guide-item .flex-item{margin-right:30px;}
+		.custom-radio + label{margin-right:15px;}
+		.radio-tab{width:50%;}
+	</style>
+
+</head>
+<body>
+	<div class="style-guide">
+		<h1>design Guide</h1>
+
+		<h2 class="guide-tit">Tab</h2>
+		<p class="guide-sub-tit">Tab(event)</p>
+		<div class="guide-item">
+			<div class="tab-list" role="tablist" aria-label="설명">
+				<button type="button" id="tab1" role="tab" class="tab-item" aria-controls="tab-panel1" aria-selected="false">
+					Tab1
+				</button>
+				<button type="button" id="tab2" role="tab" class="tab-item" aria-controls="tab-panel2" aria-selected="false">
+					Tab1
+				</button>
+				<button type="button" id="tab3" role="tab" class="tab-item" aria-controls="tab-panel3" aria-selected="false">
+					Tab1
+				</button>
+			</div>
+			<div class="detail-tab-cont" id="tab-panel1" role="tabpanel" aria-labelledby="tab1">
+				Tab contents 1
+			</div>
+			<div class="detail-tab-cont" id="tab-panel2" role="tabpane2" aria-labelledby="tab2">
+				Tab contents 2
+			</div>
+			<div class="detail-tab-cont" id="tab-panel3" role="tabpane3" aria-labelledby="tab3">
+				Tab contents 3
+			</div>
+		</div>
+
+		<div class="guide-item">
+			<div class="tab-list tab-2" role="tablist" aria-label="설명">
+				<button id="tab11" role="tab" class="tab-item" aria-controls="tab-panel11" aria-selected="false">
+					Tab1
+				</button>
+				<button id="tab12" role="tab" class="tab-item" aria-controls="tab-panel12" aria-selected="false">
+					Tab1
+				</button>
+			</div>
+			<div class="detail-tab-cont" id="tab-panel11" role="tabpane1l" aria-labelledby="tab1">
+				Tab contents 1
+			</div>
+			<div class="detail-tab-cont" id="tab-panel12" role="tabpanel2" aria-labelledby="tab2">
+				Tab contents 2
+			</div>
+		</div>
+
+		<p class="guide-sub-tit">Tab style link list</p>
+		<div class="guide-item">
+			<div class="link-tab-list">
+				<a href="#" class="link-item on">링크1</a>
+				<a href="#" class="link-item">링크2</a>
+			</div>
+		</div>
+
+		<h2 class="guide-tit">pagination</h2>
+		<div class="guide-item">
+			<div class="pagination">
+				<button type="button" class="btn-prev disabled"><span class="blind">이전</span></button>
+				<button type="button" class="num active">1</button>
+				<button type="button" class="num">2</button>
+				<button type="button" class="num">3</button>
+				<button type="button" class="num">4</button>
+				<button type="button" class="num">5</button>
+				<button type="button" class="btn-next"><span class="blind">다음</span></button>
+			</div>
+		</div>
+
+		<h2 class="guide-tit">tags</h2>
+		<div class="guide-item ">
+			<div class="item-tags">
+				<span class="tag active">tag1</span>
+				<span class="tag">tag2</span>
+			</div>
+		</div>
+
+		<h2 class="guide-tit">file</h2>
+		<div class="guide-item">
+			<div class="upload-list">
+
+				<ul>
+					<li>
+						<span class="file-name">크래커나인 IR자료.pdf</span>
+						<button type="button" class="btn-devare"><span class="blind">삭제</span></button>
+					</li>
+					<li>
+						<span class="file-name">크래커나인 IR자료.pdf</span>
+						<button type="button" class="btn-devare"><span class="blind">삭제</span></button>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<h2 class="guide-tit">selected-box</h2>
+		<div class="guide-item">
+			<ul class="selected-list">
+				<li>
+					<span class="item-name">다기능 소재</span>
+					<button type="button" class="btn-devare"><span class="blind">삭제</span></button>
+				</li>
+				<li>
+					<span class="item-name">다기능 소재</span>
+					<button type="button" class="btn-devare"><span class="blind">삭제</span></button>
+				</li>
+			</ul>
+		</div>
+
+		<h2 class="guide-tit">alert 텍스트</h2>
+		<div class="guide-item">
+			<p class="alert-txt">사용가능(안전한 비밀번호 입니다.)</p>
+			<p class="alert-txt fail">영문+숫자+특수 문자 8자이하며, 연속되거나 반복되는 숫자를 사용하였습니다.</p>
+		</div>
+
+		<h2 class="guide-tit">안내 텍스트</h2>
+		<div class="guide-item">
+			<p class="help-txt">사용가능(안전한 비밀번호 입니다.) 영문+숫자+특수 문자 8자이하며, 연속되거나 반복되는 숫자를 사용하였습니다.사용가능(안전한 비밀번호 입니다.) 영문+숫자+특수 문자 8자이하며, 연속되거나 반복되는 숫자를 사용하였습니다.사용가능(안전한 비밀번호 입니다.) 영문+숫자+특수 문자 8자이하며, 연속되거나 반복되는 숫자를 사용하였습니다.사용가능(안전한 비밀번호 입니다.) 영문+숫자+특수 문자 8자이하며, 연속되거나 반복되는 숫자를 사용하였습니다.</p>
+		</div>
+		<div class="guide-item">
+			<p class="help-txt dark">영문+숫자+특수 문자 8자이하며, 연속되거나 반복되는 숫자를 사용하였습니다.</p>
+		</div>
+		<div class="guide-item">
+			<p class="help-txt green">영문+숫자+특수 문자 8자이하며, 연속되거나 반복되는 숫자를 사용하였습니다.</p>
+		</div>
+		<div class="guide-item">
+			<p class="help-txt caution">영문+숫자+특수 문자 8자이하며, 연속되거나 반복되는 숫자를 사용하였습니다.</p>
+		</div>
+
+		<h2 class="guide-tit">메세지 아이콘</h2>
+		<div class="guide-item flex">
+			<div class="flex-item">
+				<span class="msg-icon"></span>
+			</div>
+			<div class="flex-item">
+				<span class="msg-icon caution"></span>
+			</div>
+		</div>
+
+		<h2 class="guide-tit">alert 메세지</h2>
+		<div class="guide-item">
+			<div class="alert" role="alert">
+					<strong>계좌인증 실패 - </strong>계좌번호 확인
+					<button type="button" class="btn-close"></button>
+			</div>
+			<div class="alert help" role="alert">
+					금리·한도 조회만으로는 신용점수에 영향을 주지 않습니다.
+			</div>
+		</div>
+
+
+		<h2 class="guide-tit">슬라이드</h2>
+		<div class="guide-item">
+			<div class="sliderbar" id="slider1">
+				<p>
+					<label for="price">LD등급</label>
+					<input type="text" readonly>
+				</p>
+				<div class="bar"></div>
+			</div>
+		</div>
+		<div class="guide-item">
+			<div class="sliderbar" id="slider2">
+				<p>
+					<label for="price">투자기간</label>
+					<input type="text" readonly>
+				</p>
+				<div class="bar"></div>
+			</div>
+		</div>
+		<div class="guide-item">
+			<div class="sliderbar" id="slider3">
+				<p>
+					<label for="price">금리</label>
+					<input type="text" readonly>
+				</p>
+				<div class="bar"></div>
+			</div>
+		</div>
+
+		<script>
+		//슬라이드1
+		$( "#slider1 > .bar" ).slider({
+			range:true,
+			min: 0,
+			max: 7,
+			values: [ 3, 5 ],
+			create: function() {
+				sliderHandler1($(this), $(this).slider("values"));
+			},
+			slide: function( event, ui ) {
+				sliderHandler1($(this), ui.values);
+			},
+			stop: function( event, ui ) {
+				sliderHandler1($(this), ui.values, "stop 콜백");
+			}
+
+		});
+		function sliderHandler1($this, ui, slideEnd){
+			var valueArr = ["LD1", "LD2", "LD3", "LD4", "LD5", "LD6", "LD7", "LD8+"]
+			var _v1 = ui[0]; //최소값
+			var _v2 = ui[1]; //최대값
+			$this.parent().find(" > p > input").val(_v1 + " - " +_v2 );
+			if(slideEnd){
+				console.log("슬라이드 이벤트 완료");
+			}
+		}
+
+		//슬라이드2
+		$( "#slider2 > .bar" ).slider({
+			range:true,
+			min: 6,
+			max: 36,
+			values: [ 10, 20 ],
+			create: function() {
+				sliderHandler2($(this), $(this).slider("values"));
+			},
+			slide: function( event, ui ) {
+				sliderHandler2($(this), ui.values);
+			},
+			stop: function( event, ui ) {
+				sliderHandler2($(this), ui.values, "stop 콜백");
+			}
+
+		});
+		function sliderHandler2($this, ui, slideEnd){
+			var _v1 = ui[0]; //최소값
+			var _v2 = ui[1]; //최대값
+			$this.parent().find(" > p > input").val(_v1 + "개월 - " + _v2+"개월" );
+			if(slideEnd){
+				console.log("슬라이드 이벤트 완료");
+			}
+		}
+
+		//슬라이드3
+		$( "#slider3 > .bar" ).slider({
+			range:true,
+			min: 4,
+			max: 18,
+			values: [ 7, 12 ],
+			create: function() {
+				sliderHandler3($(this), $(this).slider("values"));
+			},
+			slide: function( event, ui ) {
+				sliderHandler3($(this), ui.values, "slide 콜백");
+			},
+			stop: function( event, ui ) {
+				sliderHandler3($(this), ui.values, "stop 콜백");
+			}
+
+		});
+		function sliderHandler3($this, ui, callback){
+			var _v1 = ui[0]; //최소값
+			var _v2 = ui[1]; //최대값
+			var _v3 = ""; //최대값시 +표시
+			setTimeout(function(){
+				if($this.parent().find(".ui-slider").width() == parseInt($this.parent().find(".ui-slider-handle").eq(1).css("left"),10)) _v3 = "+";
+				$this.parent().find(" > p > input").val(_v1 + "% - " + _v2+"%"+_v3);
+			},1)
+			if(callback){
+				console.log(callback);
+			}
+		}
+		</script>
+
+		<h2 class="guide-tit">chart</h2>
+		<p class="guide-sub-tit">line</p>
+		<div class="guide-item">
+			<div id="chart1" style=""></div>
+		</div>
+
+		<script>
+			var c1 = Highcharts.chart('chart1', optionsLine);
+			var series = {
+				data: [700, 710, 730, 720, 760, 770, 800, 810, 850, 810, 820, 850],
+				categories : ["2020.01", "2020.02", "2020.03", "2020.04", "2020.05", "2020.06", "2020.07", "2020.08", "2020.09", "2020.10", "2020.11", "2020.13"],
+			};
+			c1.series[0].update({data:series.data});
+			c1.xAxis[0].setCategories(series.categories);
+		</script>
+
+		<p class="guide-sub-tit">circle</p>
+		<div class="guide-item">
+			<div id="chart2" style="width:80px; height:80px;"></div>
+		</div>
+
+		<script>
+			var c2 = Highcharts.chart('chart2',optionsCircle);
+			c2.series[0].update({data:[{y: 30}]});
+		</script>
+
+		<h2 class="guide-tit"></h2>
+		<p class="guide-sub-tit"></p>
+		<div class="guide-item">
+
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>

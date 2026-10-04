@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="../../resource/css/common.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/layout.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/content.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/response.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<script src="../../resource/js/jquery.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<style>
+		.style-guide{padding:20px 30px}
+		.style-guide h2{font-size:20px}
+		.style-guide .guide-tit{margin:30px 0 10px; padding:0 10px; line-height:26px; background:#222; color:#fff; font-size:14px;}
+		.style-guide .guide-sub-tit{padding:5px; background:#e5e5e5; font-weight:500}
+		.style-guide .guide-item{padding:20px;}
+		.style-guide .guide-item.flex{display:flex;}
+		.style-guide .guide-item .flex-item{margin-right:30px;}
+		.custom-radio + label{margin-right:15px;}
+		.radio-tab{width:50%;}
+	</style>
+
+</head>
+<body>
+	<div class="style-guide">
+		<h1>form Guide</h1>
+		<h2 class="guide-tit">basic</h2>
+		<div class="guide-item">
+			<p class="w-blind table-tit">내용</p>
+			<div class="table-list table-scroll">
+				<table>
+					<caption>스타트업, 이름(직책), IR 공유일, 자료 정보를 포함한 테이블 입니다.</caption>
+					<colgroup>
+						<col style="width: 11%;">
+						<col style="width: 19%;">
+						<col style="width:14%;">
+						<col style="width:14%;">
+						<col style="width:14%;">
+						<col style="width:14%;">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">
+								<span class="col-tit">지급회차</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">예상 지급일</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">원금</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">이자</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">세금</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">수수료</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">지급 금액</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="">1회차</td>
+							<td class="">21.03.01</td>
+							<td class="">100원</td>
+							<td class="">100원</td>
+							<td class="">-10원</td>
+							<td class="">-3원</td>
+							<td class="">130원</td>
+						</tr>
+						<tr>
+							<td class="">1회차</td>
+							<td class="">21.03.01</td>
+							<td class="">100원</td>
+							<td class="">100원</td>
+							<td class="">-10원</td>
+							<td class="">-3원</td>
+							<td class="">130원</td>
+						</tr>
+					</tbody>
+					<tfoot>
+					<tr>
+							<th colspan="2">총합계</th>
+							<td class="">1,000원</td>
+							<td class="">1,000원</td>
+							<td class="">1,000원</td>
+							<td colspan="2" class="tar">30,000,000원</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<div class="pagination">
+				<button type="button" class="btn-prev disabled"><span class="blind">이전</span></button>
+				<button type="button" class="num active">1</button>
+				<button type="button" class="num">2</button>
+				<button type="button" class="num">3</button>
+				<button type="button" class="num">4</button>
+				<button type="button" class="num">5</button>
+				<button type="button" class="num">6</button>
+				<button type="button" class="num">7</button>
+				<button type="button" class="num">8</button>
+				<button type="button" class="num">9</button>
+				<button type="button" class="num">10</button>
+				<button type="button" class="btn-next "><span class="blind">다음</span></button>
+			</div>
+		</div>
+
+		<h2 class="guide-tit">sort</h2>
+		<div class="guide-item">
+			<p class="w-blind table-tit">내용</p>
+			<div class="table-list sort">
+				<table>
+					<caption>스타트업, 이름(직책), IR 공유일, 자료 정보를 포함한 테이블 입니다.</caption>
+					<colgroup>
+						<col style="width:23%;">
+						<col style="width:16%;">
+						<col style="width:10%;">
+						<col style="width:16%;">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">
+								<span class="col-tit">투자기관</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">투자자(직책)</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">IR 요청일</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">IR 자료 요청 서비스명</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">공유 현황</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">카카오인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+								<button type="button" class="btn-point-line">IR 자료 보내기</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">와이얼라이언스 인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+								<button type="button" class="btn-point-line">IR 자료 보내기</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">넥스트드림엔젤클럽</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+								<button type="button" class="btn-point-line">IR 자료 보내기</button>
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">카카오인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+								<a href="#" download class="file-download">크래커나인 IR 자료(국문).pdf</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">카카오인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">Ryan Kim(Executive Director)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+								<a href="#" download class="file-download">크래커나인 IR 자료(국문).pdf</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">카카오인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+								<a href="#" download class="file-download">크래커나인 IR 자료(국문).pdf</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">카카오인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+								<a href="#" download class="file-download">크래커나인 IR 자료(국문).pdf</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">카카오인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">카카오인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+
+							</td>
+						</tr>
+						<tr>
+							<td class="com-name">
+								<div class="item-row">
+
+									<span class="item-data">카카오인베스트먼트</span>
+								</div>
+							</td>
+							<td class="name"><span class="item-data">John Park(CEO)</span></td>
+							<td class="date">2020.11.05</td>
+							<td class="service"><span class="item-tit">IR 자료요청</span>크래커 나인</td>
+							<td class="file">
+								<a href="#" download class="file-download">크래커나인 IR 자료(국문).pdf</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<button type="button" class="btn-prev disabled"><span class="blind">이전</span></button>
+				<button type="button" class="num active">1</button>
+				<button type="button" class="num">2</button>
+				<button type="button" class="num">3</button>
+				<button type="button" class="num">4</button>
+				<button type="button" class="num">5</button>
+				<button type="button" class="num">6</button>
+				<button type="button" class="num">7</button>
+				<button type="button" class="num">8</button>
+				<button type="button" class="num">9</button>
+				<button type="button" class="num">10</button>
+				<button type="button" class="btn-next "><span class="blind">다음</span></button>
+			</div>
+		</div>
+
+		<h2 class="guide-tit">accordian</h2>
+		<div class="guide-item">
+			<p class="w-blind table-tit">내용</p>
+			<div class="table-list accordian">
+				<table>
+					<caption>스타트업, 이름(직책), IR 공유일, 자료 정보를 포함한 테이블 입니다.</caption>
+					<colgroup>
+						<col style="width:auto;">
+						<col style="width: 10%;">
+						<col style="width: 9%;">
+						<col style="width: 10%;">
+						<col style="width: 10%;">
+						<col style="width: 15%;">
+						<col style="width: 15%;">
+						<col style="width: 8%;">
+						<col style="width: 8%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">
+								<span class="col-tit">접수번호</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">대출 목적</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">금리</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">상환방식</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">대출기간</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">신청일시</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">처리일시</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit">상태</span>
+							</th>
+							<th scope="col">
+								<span class="col-tit"></span>
+							</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr class="on">
+							<td><span class="item-row">1234567890123</span></td>
+							<td><span class="item-row">대환대출</span></td>
+							<td><span class="item-row">10.0%</span></td>
+							<td><span class="item-row">원리금균등분할</span></td>
+							<td><span class="item-row">36개월</span></td>
+							<td><span class="item-row">2021-05-28 00:00:00</span></td>
+							<td><span class="item-row">2021-05-28 00:00:00</span></td>
+							<td><span class="item-row">심사중</span></td>
+							<td>
+								<span class="arr"></span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="9">상세 내용</td>
+						</tr>
+						<tr>
+							<td><span class="item-row">1234567890123</span></td>
+							<td><span class="item-row">대환대출</span></td>
+							<td><span class="item-row">10.0%</span></td>
+							<td><span class="item-row">원리금균등분할</span></td>
+							<td><span class="item-row">36개월</span></td>
+							<td><span class="item-row">2021-05-28 00:00:00</span></td>
+							<td><span class="item-row">2021-05-28 00:00:00</span></td>
+							<td><span class="item-row">심사중</span></td>
+							<td>
+								<span class="arr"></span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="9">상세 내용</td>
+						</tr>
+						<tr>
+							<td><span class="item-row">1234567890123</span></td>
+							<td><span class="item-row">대환대출</span></td>
+							<td><span class="item-row">10.0%</span></td>
+							<td><span class="item-row">원리금균등분할</span></td>
+							<td><span class="item-row">36개월</span></td>
+							<td><span class="item-row">2021-05-28 00:00:00</span></td>
+							<td><span class="item-row">2021-05-28 00:00:00</span></td>
+							<td><span class="item-row">심사중</span></td>
+							<td>
+								<span class="arr"></span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="9">상세 내용</td>
+						</tr>
+						<tr>
+							<td>1234567890123</td>
+							<td>대환대출</td>
+							<td>10.0%</td>
+							<td>원리금균등분할</td>
+							<td>36개월</td>
+							<td>2021-05-28 00:00:00</td>
+							<td>2021-05-28 00:00:00</td>
+							<td>심사중</td>
+							<td>
+								<span class="arr"></span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="9">상세 내용</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="../../resource/js/common.js"></script>
+</body>
+</html>

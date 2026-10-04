@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>LMOS-142-1</title>
+	<meta name="title" content="은행보다 머니무브">
+    <meta name="author" content="MONEYMOVE (머니무브)">
+    <meta name="application-name" content="MONEYMOVE (머니무브)">
+    <meta name="description" content="MONEYMOVE (머니무브), 금융, 온라인투자연계금융업,대출,투자">
+    <meta name="keywords" content="MONEYMOVE (머니무브), 머니무브금융, P2P투자, P2P대출, P2P금융, 직장인 신용대출, 중금리 대출, 분산투자,투자, P2P 투자, P2P 투자한도, P2P 대출, P2P 대출한도, 신용대출, 직장인신용대출, P2P 투자방법, 재테크, 펀딩, 온라인투자, 온라인투자연계금융업, 머니무브법, P2P 금융, 핀테크, 소액투자, 소액대출, 피투피대출, 피투피금융, 온라인대출, 온라인금융, 간편대출, 직장인대출">
+    <meta property="og:title" content="MONEYMOVE 금융서비스">
+    <meta property="og:url" content="https://www.moneymove.ai">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../resource/images/common/moneymove_sns.jpg">
+    <meta property="og:description" content="<은행하지말고 MONEYMOVE하자>">
+    <meta name="facebook-domain-verification" content="xudmrbsmja3uvckcherurpsxsx723b">
+    <meta name="naver-site-verification" content="09a056506047ca896918bd776a7772496c73023a">
+    <meta name="google-site-verification" content="N_2EOJ7Yx3XE6sTvPo2mSGRsZcqfH9aqm152biZ5gMc">
+    <link rel="apple-touch-icon" href="../resource/images/common/on2_home.png">
+    <link rel="icon" type="image/png" href="../resource/images/common/moneymove_favicon16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../resource/images/common/moneymove_favicon32x32.png" sizes="32x32">
+	<link rel="stylesheet" type="text/css" href="../resource/css/common.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../resource/css/layout.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../resource/css/swiper.min.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../resource/css/content.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../resource/css/response.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<script src="../resource/js/jquery.min.js"></script>
+	<script src="../resource/js/jquery-ui.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.src.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+	<script src="../resource/js/skrollr.js"></script>
+	<script src="../resource/js/swiper.min.js"></script>
+	<script src="../resource/js/circle-progress.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+	<script src="../resource/js/common.js"></script>
+</head>
+
+<body>
+	<!-- 웹 접근성 skip navigation -->
+	<div class="skip-navigation">
+		<a href="#gnb">전체 메뉴 바로가기</a>
+		<a href="#content">본문 바로가기</a>
+	</div>
+	<!-- wrap -->
+	<div class="wrap">
+		<!-- header -->
+		<header class="header">
+			<div class="con-inner">
+                <h1 class="logo"><a href="index.html"><span class="blind">머니무브</span></a></h1>
+
+                <nav id="gnb" aria-label="메인 메뉴">
+                    <h2 class="blind">메인 메뉴</h2>
+
+                    <button type="button" class="btn-m-menu" area-expanded="false">
+                        <span><span class="blind">모바일 메뉴 보기</span></span>
+                    </button>
+
+                    <div class="main-menu">
+                        <div class="menu-inner">
+                            <ul class="menu-list">
+                                <li class="has-sub">
+									<a href="index_invest.html">투자</a>
+
+									<ul class="sub-menu">
+										<li><a href="LMOS-66.html">투자하기</a></li>
+									</ul>
+								</li>
+								<li><a href="index_borrower.html">대출</a></li>
+								<li class="has-sub"><a>마켓</a>
+									<ul class="sub-menu">
+										<li><a href="LMOS-84.html">구매하기</a></li>
+										<li><a href="LMOS-77.html">판매하기</a></li>
+									</ul>
+								</li>
+								<!-- <li class="has-sub"><a href="LMOS-153.html">공시 지표</a>
+									<ul class="sub-menu">
+										<li><a href="LMOS-153.html">공시지표</a></li>
+										<li><a href="LMT-185.html">이용안내</a></li>
+										<li><a href="LMOS-156.html">FAQ</a></li>
+										<li><a href="#">문의하기</a></li>
+									</ul>
+								</li> -->
+								<li class="has-sub"><a href="LMT-185.html">이용안내</a>
+									<ul class="sub-menu">
+										<li><a href="LMT-185.html">이용안내</a></li>
+										<li><a href="LMOS-150.html">공지사항</a></li>
+										<li><a href="LMT-terms.html">전체약관</a></li>
+										<!-- <li><a href="LMOS-150.html">공지사항</a></li>
+										<li><a href="LMOS-151.html">언론보도</a></li> -->
+									</ul>
+								</li>
+								<li class="has-sub"><a href="LMOS-149.html">회사소개</a>
+									<ul class="sub-menu">
+										<li><a href="LMOS-149.html">회사소개</a></li>
+										<li><a href="LMOS-153.html">공시지표</a></li>
+										<!-- <li><a href="LMOS-150.html">공지사항</a></li>
+										<li><a href="LMOS-151.html">언론보도</a></li> -->
+									</ul>
+								</li>
+                            </ul>
+                            <!-- <button type="button" class="btn-logout"><span>Logout</span></button> -->
+                        </div>
+
+                        <!-- 모바일 전용 -->
+                        <div class="menu-top">
+                            <!-- 로그인 전 -->
+                            <!-- <a href="#" class="hello">안녕하세요</a>
+                            <div class="my-info">
+                                <a href="LMOS-8.html" class="join">회원가입</a>
+                                <a href="LMOS-183.html" class="login">로그인</a>
+                            </div> -->
+                            <!-- //로그인 전 -->
+
+                            <!-- 로그인 후 -->
+                            <div class="my-info">
+                                <a href="LMOS-141.html" class="setting">내 정보 관리</a>
+                                <a href="#" class="logout">로그아웃</a>
+                            </div>
+                            <!-- //로그인 후 -->
+                        </div>
+                        <!-- //모바일 전용 -->
+
+                        <div class="header-side">
+							<!-- 로그인 전 -->
+							<!-- <a href="LMOS-8.html" class="btn-info">회원가입</a>
+							<a href="LMOS-52.html" class="btn-info">로그인</a> -->
+							<!-- //로그인 전 -->
+
+							<!-- 로그인 후 -->
+							<div class="header-myinfo my">
+								<div class="btn-myinfo">
+									<a role="button">
+										<span>마이페이지</span>
+									</a>
+								</div>
+
+								<div class="ly-myinfo-menu">
+									<ul class="link-menu">
+										<!-- 투자회원이 아닐때 -->
+										<!-- <li><a href="LMT-224.html">투자회원가입</a></li> -->
+										<!-- // 투자회원이 아닐때-->
+
+										<!-- 투자회원일때 -->
+                                        <li><a href="LMT-224.html">투자현황</a></li>
+                                        <li><a href="LMT-229.html">채권현황</a></li>
+                                        <li><a href="LMOS-123-1.html">마켓현황</a></li>
+                                        <li><a href="LMOS-131.html">상환내역</a></li>
+                                        <li><a href="LMOS-218.html">투자내역</a></li>
+										<li><a href="LMOS-140.html">투자 입출금 내역</a></li>
+                                        <li><a href="LMOS-139.html">채권공지</a></li>
+										<!-- // 투자회원일때 -->
+
+										<!-- 대출회원이 아닐때 -->
+										<!-- <li><a href="LMT-15.html">대출신청하기</a></li> -->
+										<!-- // 대출회원이 아닐때 -->
+
+										<!-- 대출 회원일때 -->
+										<li><a href="LMOS-106.html">대출관리</a></li>
+										<!-- // 대출 회원일때 -->
+
+										<li><a href="LMOS-189.html">내 신용정보</a></li>
+                                        <li><a href="LMOS-141.html">내 정보 관리</a></li>
+                                    </ul>
+								</div>
+							</div>
+
+							<div class="header-myinfo log">
+								<div class="btn-myinfo">
+									<a role="button" class="startup" tabindex="0">
+										<span>홍길동님</span>
+									</a>
+								</div>
+
+								<div class="ly-myinfo-menu">
+									<ul class="link-menu">
+										<li><a href="#">로그아웃</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- //로그인 후 -->
+						</div>
+
+						<button type="button" class="btn-close"><span class="blind">메뉴 닫기</span></button>
+                    </div>
+                </nav>
+            </div>
+		</header>
+		<!-- //header -->
+
+		<div id="content" role="main" class="">
+			<div class="con-inner">
+				<div class="lnb-area">
+					<h2 class="tit">마이페이지</h2>
+
+					<div class="lnb">
+						<div class="lnb-tit">투자</div>
+
+						<ul>
+							<li class="nav-link"><a href="LMT-224.html">투자현황</a></li>
+							<li class="nav-link"><a href="LMT-229.html">채권현황</a></li>
+							<li class="nav-link"><a href="LMOS-123-1.html">마켓현황</a></li>
+							<li class="nav-link"><a href="LMOS-131.html">상환내역</a></li>
+							<li class="nav-link"><a href="LMOS-218.html">투자내역</a></li>
+							<li class="nav-link"><a href="LMOS-140.html">투자 입출금 내역</a></li>
+							<li class="nav-link"><a href="LMOS-139.html">채권공지</a></li>
+							<li class="nav-link on"><a href="LMOS-141.html">내 정보 관리</a></li>
+						</ul>
+					</div>
+					<!-- //lnb -->
+				</div>
+				<!-- //lnb-area -->
+
+				<div class="basic-form">
+
+					<div class="box-form wide">
+						<div class="tit-area">
+							<p>내 정보 관리</p>
+						</div>
+						<!-- //tit-area -->
+
+						<div class="form-list">
+							<article class="mypage-myinfo">
+								<div class="myinfo-row">
+									<div class="myinfo-box">
+										<div class="tit">
+											<strong>법인 담당자 정보</strong>
+
+											<div class="tit-unit">
+												<p class="unit-txt fs-ss">휴대전화번호 변경은 본인인증 후 진행됩니다.</p>
+											</div>
+										</div>
+
+										<div class="form-row">
+											<label class="labelBox">
+												<span class="label">성</span>
+												<input type="text" value="">
+											</label>
+										</div>
+
+										<div class="form-row">
+											<label class="labelBox">
+												<span class="label">이름</span>
+												<input type="text" value="">
+											</label>
+										</div>
+										<!-- //form-row -->
+
+										<div class="form-row">
+											<label class="labelBox">
+												<span class="label">휴대전화번호</span> | <span class="control-btn c-blue" data-purpose="phoneNumber">변경</span>
+												<input type="text" value="" readonly>
+											</label>
+										</div>
+									</div>
+
+									<div class="myinfo-box">
+										<div class="tit">
+											<strong>계정정보</strong>
+
+											<div class="tit-unit">
+												<p class="unit-txt fs-ss">비밀번호는 본인인증 후 변경됩니다.</p>
+											</div>
+										</div>
+
+										<div class="form-row">
+											<label class="labelBox">
+												<span class="label">이메일</span>
+												<input type="text" value="abc@abc.com">
+											</label>
+										</div>
+										<!-- //form-row -->
+
+										<div class="form-row">
+											<label class="labelBox">
+												<span class="label">비밀번호</span> | <span class="control-btn c-blue" data-purpose="password">변경</span>
+												<input type="password" value="password" class="password-off" oninput="">
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="myinfo-wrap">
+									<div class="myinfo-tit">
+										<strong>투자 <em>법인투자자</em></strong>
+									</div>
+
+									<div class="myinfo-row">
+										<div class="myinfo-box">
+											<div class="tit">
+												<strong>투자지정계좌</strong>
+											</div>
+
+											<div class="form-row">
+												<label class="labelBox">
+													<span class="label">은행</span> | <span class="control-btn c-blue">변경</span>
+													<input type="text" value="수협은행">
+												</label>
+											</div>
+											<!-- //form-row -->
+
+											<div class="form-row">
+												<label class="labelBox">
+													<span class="label">계좌번호</span>
+													<input type="text" value="123-246-333">
+												</label>
+											</div>
+										</div>
+
+										<div class="myinfo-box">
+											<div class="tit">
+												<strong>투자 예치금계좌(가상계좌)</strong>
+											</div>
+
+											<div class="form-row">
+												<label class="labelBox">
+													<span class="label">은행</span> | <span class="control-btn c-blue">변경</span>
+													<input type="text" value="농협은행">
+												</label>
+											</div>
+											<!-- //form-row -->
+
+											<div class="form-row">
+												<label class="labelBox">
+													<span class="label">계좌번호</span>
+													<input type="text" value="123-246-333">
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="myinfo-row">
+										<div class="myinfo-box">
+											<div class="tit">
+												<strong>투자 추천인 코드</strong>
+											</div>
+
+											<div class="myinfo-box-row">
+												<div class="form-row">
+													<label class="labelBox">
+														<span class="label">추천인 코드</span>
+														<button type="button" class="btn outline">복사하기</button>
+														<input type="text" class="tar" value="TK210917">
+													</label>
+												</div>
+												<!-- //form-row -->
+
+												<div class="form-row">
+													<label class="labelBox">
+														<span class="label">추천인 코드가 포함된 투자신청 링크</span>
+														<button type="button" class="btn outline">복사하기</button>
+														<input type="text" class="tar" value="https://lm.com">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="myinfo-row">
+										<div class="myinfo-box only">
+											<div class="tit">
+												<strong>간편 비밀번호</strong>
+											</div>
+
+											<div class="form-row">
+												<label class="labelBox">
+													<span class="label">간편 비밀번호</span> | <span class="control-btn c-blue" data-purpose="password">변경</span>
+													<input type="password" value="password" class="password-off" oninput="">
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="myinfo-row">
+										<div class="myinfo-box">
+											<div class="tit">
+												<strong>상태알림</strong>
+											</div>
+
+											<div class="form-row">
+												<span class="fs-s">혜택 및 이벤트 안내 받기</span>
+
+												<label class="custom-switch">
+													<input type="checkbox" checked="">
+													<span class="custom-switch-slider"></span>
+												</label>
+
+												<ul class="mt-20 c-gray">
+													<li>주요 공지사항은 수신 동의 여부와 상관없이 발송됩니다.</li>
+													<li>카카오 알림톡 발송 실패 시 문자(SMS)로 발송됩니다.</li>
+												</ul>
+											</div>
+
+											<!-- <div class="tit">
+												<strong>우편물 수령지</strong>
+											</div>
+
+											<div class="form-row">
+												<div class="mt-20">
+													<input type="radio" class="custom-radio" name="radio" id="radio1">
+													<label for="radio1">직장</label>
+													<input type="radio" class="custom-radio" name="radio" id="radio2">
+													<label for="radio2">자택</label>
+												</div>
+											</div> -->
+											<!-- //form-row -->
+										</div>
+										<!-- //col -->
+
+										<div class="myinfo-box">
+											<div class="tit">
+												<strong>법인 회원 탈퇴</strong>
+
+												<div class="tit-unit">
+													<button type="button" class="btn-basic xxsmall outline-dark" id="">탈퇴하기</button>
+												</div>
+											</div>
+
+											<p class="fs-s">현재 투자 및 대출이 진행 중이거나 잔여 예치금이 있는 경우 회원 탈퇴가 불가합니다.</p>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+						<!-- //form-list -->
+					</div>
+					<!-- //box-form -->
+				</div>
+				<!-- //basic-form -->
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footer-invest">
+                <div class="con-inner">
+                    <strong class="footer-headline">투자손실에 대한 책임은 투자자에게 있습니다.</strong>
+
+                    <ul class="footer-guide">
+                        <li>연계투자상품은 원금과 수익이 보장되지 않으며 투자원금의 손실이 발생할 수 있고, 그 손실은 투자자에게 귀속됩니다.</li>
+                        <li>연계투자상품에 관하여 충분한 정보를 제공할 의무가 있으며, 투자자는 반드시 제공받은 정보를 충분히 확인하신 후 투자 결정을 내리시기 바랍니다.</li>
+                    </ul>
+
+                    <strong class="footer-compliance">준법감시인 심사필 제 01 2205 03 (22.05.09)</strong>
+
+                    <ul class="rel-link">
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/01_privacy_policy.pdf" target="_blank">개인정보처리방침</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/02_customer_rights.pdf" target="_blank">고객권리안내문</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/03_loan_stc.pdf" target="_blank">연계대출기본약관</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/04_invest_stc.pdf" target="_blank">연계투자기본약관</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/05_service_stc.pdf" target="_blank">온라인서비스이용약관</a></li>
+                        <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/06_eft_stc.pdf " target="_blank">전자금융거래기본약관</a></li>
+                        <!-- <li><a href="../resource/js/pdfjs/web/viewer.html?file=../../../policy/guide/07_market_stc.pdf " target="_blank">마켓이용약관</a></li> -->
+                        <!-- <li><a href="LMOS-161.html">개인정보보호정책</a></li>
+                        <li><a href="LMOS-162.html">윤리강령</a></li>
+                        <li><a href="LMOS-167.html">인재채용</a></li>
+                        <li class="line"><a href="LMOS-163.html">영리목적 광고성 정보거부 등</a></li>
+                        <li><a href="LMOS-159.html">이용약관</a></li>
+                        <li><a href="LMOS-164.html">고객확인제도</a></li>
+                        <li class="line"><a href="LMOS-165.html">투자이용약관</a></li>
+                        <li><a href="LMOS-166.html">투자설명서</a></li> -->
+                    </ul>
+
+                    <ul class="footer-customer">
+                        <li><span>고객센터</span> <a href="tel:02-1566-3895">1566-3895</a> (오전 09시 - 오후 06시)</li>
+                        <li><span>email</span> : <a href="mailto:ask@on2.ai"> ask@on2.ai</a></li>
+                    </ul>
+
+                    <div class="footer-info">
+                        <ul class="footer-info-item">
+                            <li><span>㈜렌딩머신</span></li>
+                            <li>대표 : 이상규</li>
+                            <li>사업자등록번호 : 120-87-78972</li>
+                            <li>온라인투자연계금융업 2021-34</li>
+                        </ul>
+
+                        <address>주소 : 서울특별시 강남구 논현로150길 23, 3층 (연호빌딩)</address>
+                    </div>
+                </div>
+            </div>
+		</footer>
+		<!-- //footer-->
+	</div>
+	<!-- //wrap-->
+
+
+
+	<!-- 확인용 -->
+	<script>
+		document.querySelector(".btn-basic.xxsmall.outline-dark").addEventListener("click", function() {
+			location.href = "LMOS-221.html";
+		});
+	</script>
+</body>
+
+</html>

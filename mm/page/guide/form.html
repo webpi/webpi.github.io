@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../resource/css/common.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<!-- <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet"> -->
+	<script src="../../resource/js/jquery.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/common.js"></script>
+	<style>
+		.style-guide{padding:20px 30px}
+		.style-guide h2{font-size:20px}
+		.style-guide .guide-tit{margin:30px 0 10px; padding:0 10px; line-height:26px; background:#222; color:#fff; font-size:14px;}
+		.style-guide .guide-sub-tit{padding:5px; background:#e5e5e5; font-weight:500}
+		.style-guide .guide-item{padding:20px;}
+		.style-guide .guide-item.flex{display:flex;}
+		.style-guide .guide-item .flex-item{margin-right:30px;}
+		.custom-radio + label{margin-right:15px;}
+		.radio-tab{width:50%;}
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="style-guide">
+			<h1>form Guide</h1>
+			<h2 class="guide-tit">icon</h2>
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<button type="button" class="ico-like"><span class="blind">좋아요</span></button>
+				</div>
+				<div class="flex-item">
+					<button type="button" class="ico-share"><span class="blind">공유하기</span></button>
+				</div>
+			</div>
+
+			<h2 class="guide-tit">combo box</h2>
+			<p class="guide-sub-tit">checkbox</p>
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<input type="checkbox" class="custom-checkbox" id="chk1" />
+					<label for="chk1">checkbox</label>
+				</div>
+				<div class="flex-item">
+					<input type="checkbox" class="custom-checkbox" id="chk2" checked />
+					<label for="chk2">checkbox</label>
+				</div>
+				<div class="flex-item">
+					<input type="checkbox" class="custom-checkbox" id="chk3" disabled />
+					<label for="chk3">checkbox</label>
+				</div>
+				<div class="flex-item">
+					<input type="checkbox" class="custom-checkbox" id="chk4" checked disabled />
+					<label for="chk4">checkbox</label>
+				</div>
+			</div>
+
+			<p class="guide-sub-tit">checkbox switch</p>
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<label class="custom-switch">
+						<input type="checkbox">
+						<span class="custom-switch-slider"></span>
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="custom-switch">
+						<input type="checkbox" checked>
+						<span class="custom-switch-slider"></span>
+					</label>
+				</div>
+			</div>
+
+			<p class="guide-sub-tit">radio button</p>
+			<div class="guide-item flex">
+				<input type="radio" class="custom-radio" name="radio" id="radio1" />
+				<label for="radio1">radio1</label>
+				<input type="radio" class="custom-radio" name="radio" id="radio2" checked />
+				<label for="radio2">radio2</label>
+				<input type="radio" class="custom-radio" name="radio1" id="radio3" disabled />
+				<label for="radio3">radio3</label>
+				<input type="radio" class="custom-radio" name="radio1" id="radio4" checked disabled />
+				<label for="radio4">radio4</label>
+			</div>
+
+			<p class="guide-sub-tit">tab style radio button</p>
+			<div class="guide-item">
+				<ul class="radio-tab">
+					<li>
+						<input type="radio" name="radiotab" id="radiotab1" class="blind">
+						<label for="radiotab1">선택1</label>
+					</li>
+					<li>
+						<input type="radio" name="radiotab" id="radiotab2" class="blind">
+						<label for="radiotab2">선택2</label>
+					</li>
+					<li>
+						<input type="radio" name="radiotab" id="radiotab3" class="blind">
+						<label for="radiotab3">선택3</label>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="guide-tit">button</h2>
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<button type="button" class="btn-basic">인증 메일 발송</button>
+				</div>
+				<div class="flex-item">
+					<button type="button" class="btn-basic selected">selected</button>
+				</div>
+				<div class="flex-item">
+					<button type="button" class="btn-basic disabled" dlsabled>disabled</button>
+				</div>
+			</div>
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<button type="button" class="btn-basic outline">대출취소</button>
+				</div>
+				<div class="flex-item">
+					<button type="button" class="btn-basic selected outline">selected outline</button>
+				</div>
+				<div class="flex-item">
+					<button type="button" class="btn-basic disabled outline" dlsabled>disabled outline</button>
+				</div>
+			</div>
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<button type="button" class="btn-basic ico-sort">btn-basic ico-sort</button>
+				</div>
+				<div class="flex-item">
+					<button type="button" class="btn-basic ico-tooltip">btn-basic ico-sort</button>
+				</div>
+			</div>
+
+			<h2 class="guide-tit">select</h2>
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<select class="form-control">
+						<option value="5000">0.5만원</option>
+						<option value="10000">1만원</option>
+						<option value="20000">2만원</option>
+						<option value="50000">5만원</option>
+					</select>
+				</div>
+				<div class="flex-item">
+					<select class="form-control xsmall">
+						<option value="5000">0.5만원</option>
+						<option value="10000">1만원</option>
+						<option value="20000">2만원</option>
+						<option value="50000">5만원</option>
+					</select>
+				</div>
+			</div>
+
+			<h2 class="guide-tit">input</h2>
+			<div class="guide-item">
+				<input type="text" title="내용을 입력해주세요" placeholder="내용을 입력해주세요" >
+				<input type="text" title="" value="입력 내용" disabled>
+			</div>
+
+			<h2 class="guide-tit">labelBox</h2>
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label">이름</span>
+						<input type="text" title="이름 입력" placeholder="이름 입력" >
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="labelBox error">
+						<span class="label">error</span>
+						<input type="text" title="이름 입력" placeholder="이름 입력" >
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="labelBox error txt-error">
+						<span class="label">error</span>
+						<input type="text" title="이름 입력" placeholder="이름 입력" >
+						<p class="txt">입력오류 / 숫자만 입력 해주세요</p>
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label">filled</span>
+						<input type="text" title="이름 입력" placeholder="이름 입력" value="890403">
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="labelBox disabled">
+						<span class="label">disabled</span>
+						<input type="text" title="이름 입력" placeholder="이름 입력" value="890403" disabled>
+					</label>
+				</div>
+			</div>
+
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label"></span>
+						<input type="text" title="이름 입력" placeholder="이름 입력" >
+					</label>
+				</div>
+
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label">휴대전화번호</span>
+						<select class="form-control" dir="rtl" title="통신사선택">
+							<option value="" disabled selected hidden data-default>통신사선택</option>
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
+						</select>
+					</label>
+				</div>
+
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label">휴대전화번호</span>
+						<select class="form-control" dir="rtl" title="통신사선택">
+							<option value="" disabled  hidden data-default>통신사선택</option>
+							<option value="selected">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<label class="labelBox unit">
+						<span class="label">금액</span>
+						<input type="number" inputmode="numeric" pattern="[0-9]*" title="금액 입력" >
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="labelBox year">
+						<span class="label">년</span>
+						<input type="number" inputmode="numeric" pattern="[0-9]*" title="년 입력" >
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="labelBox month">
+						<span class="label">월</span>
+						<input type="number" inputmode="numeric" pattern="[0-9]*" title="월 입력" >
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="labelBox day">
+						<span class="label">일</span>
+						<input type="number" inputmode="numeric" pattern="[0-9]*" title="일 입력" >
+					</label>
+				</div>
+			</div>
+
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label">직장명</span>
+						<button type="button" class="btn-search"><span class="blind">직장명 검색</span></button>
+						<input type="text" title="직장명 검색" placeholder="직장명을 검색해 주세요">
+					</label>
+				</div>
+			</div>
+
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label">금액</span>
+						<input type="number" inputmode="numeric" pattern="[0-9]*" title="전화번호 입력" placeholder="전화번호" >
+					</label>
+				</div>
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label">비밀번호</span>
+						<input type="password" title="비밀번호 입력" placeholder="비밀번호 입력">
+					</label>
+				</div>
+			</div>
+
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<div class="labelBox">
+						<input type="file" id="fileAttach" class="blind">
+						<label for="fileAttach"><span>파일선택</span></label>
+						<input type="text" title="주민등록증 앞면 등록하기" placeholder="주민등록증 앞면 등록하기" readonly>
+					</div>
+				</div>
+				<div class="flex-item">
+					<div class="labelBox">
+						<button type="button" class="btn-point-line">파일업로드</button>
+						<input type="text" title="주민등록증 앞면 등록하기" placeholder="주민등록증 앞면 등록하기" value="앞면 등록완료" readonly>
+					</div>
+				</div>
+				<div class="flex-item">
+					<div class="labelBox">
+						<button type="button" class="btn">직접입력</button>
+						<input type="text" title="직장명이 없을 경우, 직접 입력" placeholder="직장명이 없을 경우, 직접 입력해주세요">
+					</div>
+				</div>
+			</div>
+
+			<div class="guide-item flex">
+				<div class="flex-item">
+					<label class="labelBox">
+						<span class="label">이름</span>
+						<textarea placeholder="문의내용 입력"></textarea>
+					</label>
+				</div>
+			</div>
+
+			<h2 class="guide-tit">datepicker</h2>
+			<div class="guide-item">
+				<div class="datepicker">
+					<input type="text" placeholder="YYYY.MM.DD">
+				</div>
+
+				<div class="datepicker xsmall">
+					<input type="text" placeholder="YYYY.MM.DD">
+				</div>
+
+				<div class="datepicker disabled">
+					<input type="text" value="2021.04.01">
+				</div>
+			</div>
+
+			<h2 class="guide-tit">datepicker range</h2>
+			<div class="guide-item">
+				<div class="rangepicker from">
+					<input type="text" placeholder="YYYY.MM.DD">
+				</div>
+
+				<div class="rangepicker to">
+					<input type="text" placeholder="YYYY.MM.DD">
+				</div>
+			</div>
+
+			<h2 class="guide-tit">inputDropbox</h2>
+			<div class="guide-item">
+				<div class="inputDropbox">
+					<input type="text">
+					<span>만원</span>
+					<div class="dropbox-list">
+						<ul>
+							<li><button type="button" value="0">0원</button></li>
+							<li><button type="button" value="1">10,000원</button></li>
+							<li><button type="button" value="2">20,000원</button></li>
+							<li><button type="button" value="4">40,000원</button></li>
+							<li><button type="button" value="5">50,000원</button></li>
+							<li><button type="button" value="10">100,000원</button></li>
+							<li><button type="button" value="20">200,000원</button></li>
+							<li><button type="button" value="40">400,000원</button></li>
+							<li><button type="button" value="60">600,000원</button></li>
+							<li><button type="button" value="100">1,000,000원</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="guide-item">
+				<div class="inputDropbox small">
+					<input type="text">
+					<span>만원</span>
+					<div class="dropbox-list">
+						<ul>
+							<li><button type="button" value="0">0원</button></li>
+							<li><button type="button" value="1">10,000원</button></li>
+							<li><button type="button" value="2">20,000원</button></li>
+							<li><button type="button" value="4">40,000원</button></li>
+							<li><button type="button" value="5">50,000원</button></li>
+							<li><button type="button" value="10">100,000원</button></li>
+							<li><button type="button" value="20">200,000원</button></li>
+							<li><button type="button" value="40">400,000원</button></li>
+							<li><button type="button" value="60">600,000원</button></li>
+							<li><button type="button" value="100">1,000,000원</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="guide-item">
+				<div class="inputDropbox small">
+					<input type="text">
+					<span>%</span>
+					<div class="dropbox-list">
+						<ul>
+							<li><button  type="button" value="0.1">0.1 %</button></li>
+							<li><button  type="button" value="0.2">0.2 %</button></li>
+							<li><button  type="button" value="0.3">0.3 %</button></li>
+							<li><button  type="button" value="0.4">0.4 %</button></li>
+							<li><button  type="button" value="0.5">0.5 %</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="guide-tit">btnDropbox일괄 버튼</h2>
+			<div class="guide-item">
+				<div class="btnDropbox">
+					<button type="button" class="btn-basic outline xsmall">투자금 일괄설정</button>
+					<div class="dropbox-list">
+						<strong class="txt-total">선택한 채권 <span>20</span>개</strong>
+						<span class="txt-sub">투자금액선택</span>
+						<ul>
+							<li><button  type="button" value="0">0원</button></li>
+							<li><button  type="button" value="1">10,000원</button></li>
+							<li><button  type="button" value="2">20,000원</button></li>
+							<li><button  type="button" value="4">40,000원</button></li>
+							<li><button  type="button" value="5">50,000원</button></li>
+							<li><button  type="button" value="10">100,000원</button></li>
+							<li><button  type="button" value="20">200,000원</button></li>
+							<li><button  type="button" value="40">400,000원</button></li>
+							<li><button  type="button" value="60">600,000원</button></li>
+							<li><button  type="button" value="100">1,000,000원</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="guide-tit">input pattern</h2>
+			<div class="guide-item">
+				<!-- 자리수 설정(type=text 이외)  js-maxLength 추가,  maxlength="숫자" -->
+				<input type="number" inputmode="numeric" maxlength="12" title="12자리" placeholder="12자리" class="js-maxLength">
+			</div>
+
+			<div class="guide-item">
+				<!-- 숫자만 일때 js-onlyNumber 클래스, mobile 숫자 키패드만 inputmode="numeric" pattern="\d*" -->
+				<input type="text" inputmode="numeric" pattern="\d*" title="숫자만" placeholder="숫자만" class="js-onlyNumber">
+			</div>
+
+			<div class="guide-item">
+				<!-- 숫자만 일때 js-onlyNumber 클래스, mobile 숫자 키패드만 inputmode="numeric" pattern="\d*" 10자 maxlength="숫자" -->
+				<input type="text" inputmode="numeric" pattern="\d*" maxlength="10" title="숫자만 글자길이 10" placeholder="숫자만 글자길이 10" class="js-onlyNumber">
+			</div>
+
+			<div class="guide-item">
+				<!-- 영어만 일때 js-onlyEn 클래스,  pattern="[A-Za-z]+" -->
+				<input type="text" pattern="[A-Za-z]+" title="영어만" placeholder="영어만" class="js-onlyEn">
+			</div>
+
+			<div class="guide-item">
+				<!-- 영어만 일때 js-onlyEn 클래스,  pattern="[A-Za-z]+*" 12자 maxlength="숫자" -->
+				<input type="text" pattern="[A-Za-z]+" maxlength="12" title="영어만 12자" placeholder="영어만 12자" class="js-onlyEn">
+			</div>
+
+			<div class="guide-item">
+				<!-- 한글만 일때 js-onlyKo 클래스,  pattern="가-힣" -->
+				<input type="text" pattern="[ㄱ-ㅎㅏ-ㅣ가-힣]" title="한글만" placeholder="한글만" class="js-onlyKo">
+			</div>
+
+			<div class="guide-item">
+				<!-- 한글숫자공백,  pattern="[ㄱ-ㅎㅏ가-힣0-9\s]+" -->
+				<input type="text" pattern="[ㄱ-ㅎㅏ가-힣0-9\s]+" title="한글숫자공백" placeholder="한글숫자공백" class="js-onlyKoNumber">
+			</div>
+
+			<div class="guide-item">
+				<!-- 숫자 .,  pattern="[^0-9.]" -->
+				<input type="text" pattern="[^0-9.]" title="숫자와 점" placeholder="숫자와 점" class="js-onlyNumberDot">
+			</div>
+		</div>
+	</div>
+
+	<script src="../../resource/js/jquery.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/common.js"></script>
+
+	<!-- input pattern check -->
+	<script>
+		// 자리수
+		var maxLength = document.querySelectorAll(".js-maxLength");
+		maxLength.forEach(function(item) {
+			// type이 text가 아닐대 maxlength 인식
+			item.addEventListener("input", function() {
+				if (this.value.length > this.maxLength){
+					this.value = this.value.slice(0, this.maxLength);
+				}
+			},false);
+		});
+
+		// 숫자만
+		var inputNumber = document.querySelectorAll(".js-onlyNumber");
+		inputNumber.forEach(function(item) {
+			item.addEventListener("input", function() {
+				this.value = this.value.replace(/[^0-9]/g,'');
+			},false);
+		});
+
+		// 영어만
+		var inputEn = document.querySelectorAll(".js-onlyEn");
+		inputEn.forEach(function(item) {
+			item.addEventListener("input", function() {
+				this.value=this.value.replace(/[^A-Za-z]/gi, '');
+			},false);
+		});
+
+		// 한글만
+		var inputKo = document.querySelectorAll(".js-onlyKo");
+		inputKo.forEach(function(item) {
+			item.addEventListener("input", function() {
+				this.value=this.value.replace(/[^ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');
+			},false);
+		});
+
+		// 한글숫자공백
+		var inputKoNumber = document.querySelectorAll(".js-onlyKoNumber");
+		inputKoNumber.forEach(function(item) {
+			item.addEventListener("input", function() {
+				this.value=this.value.replace(/[^ㄱ-ㅎㅏ-ㅣ가-힣|0-9|\s]/g, '');
+				this.value=this.value.replace(/^\s+|\s+$/gm,'');
+			},false);
+		});
+
+		// 숫자 점
+		var inputNumberDot = document.querySelectorAll(".js-onlyNumberDot");
+		inputNumberDot.forEach(function(item) {
+			item.addEventListener("input", function() {
+				this.value=this.value.replace(/[^0-9.]/g, '');
+			},false);
+		});
+	</script>
+
+	<script>
+		//인풋 셀렉트 포커스 아웃 이벤트
+		$(".inputDropbox > input").focusout(function(){
+			console.log("inputDropbox 아웃 이벤트");
+		});
+
+		$(".btnDropbox > button").focusout(function(){
+			console.log("btnDropbox 아웃 이벤트");
+		});
+	</script>
+</body>
+</html>

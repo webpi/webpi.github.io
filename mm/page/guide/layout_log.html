@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, , maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Layout</title>
+	<link rel="stylesheet" type="text/css" href="../../resource/css/common.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/layout.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/response.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/swiper.min.css?v=bcbb36c55b406e87d529f983d6b0b1cc">
+	<script src="../../resource/js/jquery.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="../../resource/js/swiper.min.js"></script>
+	<script src="../../resource/js/common.js"></script>
+</head>
+<body>
+	<!-- 웹 접근성 skip navigation -->
+	<div class="skip-navigation">
+		<a href="#gnb">전체 메뉴 바로가기</a>
+		<a href="#content">본문 바로가기</a>
+	</div>
+	<!-- wrap -->
+	<div class="wrap">
+		<!-- header -->
+		<header class="header">
+			<div class="con-inner">
+				<h1 class="logo"><a href="#"><span class="blind">KDB NextRound</span></a></h1>
+
+				<nav id="gnb" aria-label="메인 메뉴">
+					<h2 class="blind">메인 메뉴</h2>
+					<button type="button" class="btn-m-menu" area-expanded="false">
+						<span><span class="blind">모바일 메뉴 보기</span></span>
+					</button>
+					<div class="main-menu">
+						<div class="menu-inner">
+
+
+							<ul class="menu-list">
+								<li><a href="#">투자</a></li>
+								<li><a href="#">대출</a></li>
+								<li class="has-sub"><a href="#">마켓</a>
+									<ul class="sub-menu">
+										<li><a href="#">구매하기</a></li>
+										<li><a href="#">판매하기</a></li>
+										<li><a href="#">판매현황</a></li>
+									</ul>
+								</li>
+								<li class="has-sub"><a href="#">공시 지표</a>
+									<ul class="sub-menu">
+										<li><a href="#">공시지표</a></li>
+										<li><a href="#">이용안내</a></li>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">문의하기</a></li>
+									</ul>
+								</li>
+								<li class="has-sub"><a href="#">회사소개</a>
+									<ul class="sub-menu">
+										<li><a href="#">회사소개</a></li>
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">언론보도</a></li>
+									</ul>
+								</li>
+							</ul>
+							<!-- <button type="button" class="btn-logout"><span>Logout</span></button> -->
+							<button type="button" class="btn-close"><span class="blind">메뉴 닫기</span></button>
+						</div>
+
+						<!-- 모바일 전용 -->
+						<div class="menu-top">
+
+							<!-- 로그인 전 -->
+							<!-- <a href="#" class="hello">안녕하세요</a>
+							<div class="my-info">
+								<a href="LMOS-8.html" class="join">회원가입</a>
+								<a href="#" class="login">로그인</a>
+							</div> -->
+							<!-- //로그인 전 -->
+							<!-- 로그인 후 -->
+							<div class="my-info">
+								<a href="#" class="setting">내 정보 관리</a>
+								<a href="#" class="logout">로그아웃</a>
+							</div>
+							<!-- //로그인 후 -->
+						</div>
+						<!-- //모바일 전용 -->
+
+						<!-- pc전용 -->
+						<div class="header-side">
+							<!-- 로그인 전 -->
+							<!-- <a href="#" class="btn-info">회원가입</a>
+							<a href="LMOS-52.html" class="btn-info">로그인</a> -->
+							<!-- //로그인 전 -->
+
+							<!-- 로그인 후 -->
+							<div class="header-myinfo my">
+								<div class="btn-myinfo">
+									<a role="button">
+										<span>My투자</span>
+									</a>
+								</div>
+								<div class="ly-myinfo-menu">
+									<ul class="link-menu">
+										<li><a href="#">투자현황</a></li>
+										<li><a href="#">채권공지</a></li>
+										<li><a href="#">채권현황</a></li>
+										<li><a href="#">입출금</a></li>
+										<li><a href="#">상환내역</a></li>
+										<li><a href="#">채권정보</a></li>
+										<li><a href="#">결제내역</a></li>
+										<li><a href="#">지급스케줄</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="header-myinfo log">
+								<div class="btn-myinfo">
+									<a role="button" class="startup">
+										<span>홍길동님</span>
+									</a>
+								</div>
+								<div class="ly-myinfo-menu">
+									<ul class="link-menu">
+										<li><a href="#">내정보수정</a></li>
+										<li><a href="#">로그아웃</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- //로그인 후 -->
+						</div>
+						<!-- //pc전용 -->
+					</div>
+				</nav>
+
+
+			</div>
+		</header>
+		<!-- //header -->
+		<div id="content" role="main">
+
+		</div>
+		<!-- //content -->
+		<!-- footer -->
+		<footer class="footer">
+			<div class="con-inner">
+				<ul class="rel-link">
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">개인정보보호정책</a></li>
+					<li><a href="#">윤리강령</a></li>
+					<li><a href="#">인재채용</a></li>
+					<li class="line"><a href="#">영리목적 광고성 정보거부 등</a></li>
+					<li><a href="#">고객확인제도</a></li>
+					<li class="line"><a href="#">투자이용약관</a></li>
+					<li><a href="#">투자설명서</a></li>
+				</ul>
+				<address class="company-info">
+					<ul class="address">
+						<li><strong>㈜렌딩머신</strong></li>
+						<li>대표. 이상규</li>
+						<li>사업자등록번호. 147-87-01589</li>
+						<li>주소. 서울특별시 강남구 도산대로 225, 704호(신사동, 현대썬앤빌)</li>
+						<li>TEL. 02-6207-2400</li>
+						<li>FAX. 02-6207-24</li>
+						<li><a href="#">사업자정보확인</a></li>
+					</ul>
+					<ul class="address">
+						<li><strong>㈜렌딩머신대부</strong></li>
+						<li>대표. 이상규</li>
+						<li>사업자등록번호. 250-81-01753</li>
+						<li>대부업. 등록증번호 2020-금감원-1929(P2P연계대부업)</li>
+						<li>주소. 서울특별시 강남구 도산대로 225, 5층(신사동, 현대썬앤빌)</li>
+						<li>TEL. 02-6207-2400</li>
+						<li>FAX. 02-6207-2402</li>
+						<li>등록대부업체 통합조회</li>
+					</ul>
+					<p class="copy">2020 ⓒ MONEYMOVE Corporation. All rights reserved.</p>
+				</address>
+				<address class="bank-info">
+					<p class="p1">대출금리 최고 연 14.36% 이내(연체가산금리 0%)  플랫폼이용료를 제외한 추가 비용 없음. 채무의 조기상환수수료 없음.</p>
+					<p class="p2">이자 외 별도로 중개수수료를 요구하거나 받는 행위는 불법입니다.<br />과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다. 대출 시 귀하의 신용등급이 하락할 수 있습니다.</p>
+					<a href="tel:02-6207-2400" class="call">
+						<strong>02-6207-2400</strong>
+						<span>상담시간 9시~18시 (평일)</span>
+					</a>
+				</address>
+			</div>
+		</footer>
+		 <!-- //footer-->
+	</div> <!-- //wrap-->
+
+</body>
+</html>
